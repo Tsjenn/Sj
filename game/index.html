@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Critter Isles — Full Version</title>
+<meta name="description" content="Critter Isles: a cozy 3D creature-catching adventure. Explore the island, throw orbs, catch all 8 critters.">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 100%; height: 100%; overflow: hidden; font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; background: #9fd8ef; }
+  #game canvas { display: block; }
+
+  .hud { position: fixed; top: 12px; left: 12px; display: flex; gap: 10px; z-index: 5; }
+  .pill {
+    background: rgba(20, 30, 34, .75); color: #fff; border-radius: 999px;
+    padding: 8px 16px; font-weight: 700; font-size: 15px; backdrop-filter: blur(4px);
+  }
+  .pill span { color: #ffd870; }
+  #dex-btn {
+    position: fixed; top: 12px; right: 12px; z-index: 5; cursor: pointer;
+    background: rgba(20, 30, 34, .75); color: #fff; border: none; border-radius: 999px;
+    padding: 8px 18px; font-weight: 700; font-size: 15px;
+  }
+
+  #prompt {
+    display: none; position: fixed; bottom: 120px; left: 50%; transform: translateX(-50%);
+    background: rgba(20, 30, 34, .85); color: #fff; padding: 10px 22px; border-radius: 10px;
+    font-weight: 700; z-index: 5; white-space: nowrap;
+  }
+  #toast {
+    position: fixed; top: 64px; left: 50%; transform: translateX(-50%) translateY(-10px);
+    background: #2A6F6A; color: #fff; padding: 10px 24px; border-radius: 10px;
+    font-weight: 700; z-index: 6; opacity: 0; transition: all .25s; pointer-events: none;
+  }
+  #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  #help {
+    position: fixed; bottom: 12px; left: 12px; z-index: 5; color: #14383f;
+    background: rgba(255,255,255,.65); padding: 8px 14px; border-radius: 10px; font-size: 13px;
+  }
+
+  #dex {
+    display: none; position: fixed; inset: 0; background: rgba(10, 20, 24, .8);
+    z-index: 10; align-items: center; justify-content: center;
+  }
+  #dex.open { display: flex; }
+  .panel {
+    background: #fff; border-radius: 16px; padding: 28px; max-width: 640px; width: 92%;
+    max-height: 84vh; overflow: auto;
+  }
+  .panel h2 { margin-bottom: 14px; color: #14383f; }
+  #dex-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 12px; }
+  .dex-card { border: 2px solid #e2e6e8; border-radius: 12px; padding: 12px; text-align: center; }
+  .dex-card.got { border-color: #2A6F6A; }
+  .dex-card .swatch { width: 44px; height: 44px; border-radius: 50%; margin: 0 auto 8px; }
+  .dex-card .nm { font-weight: 800; }
+  .dex-card .ht { font-size: 11px; color: #6b7280; margin-top: 4px; }
+  .panel button {
+    margin-top: 18px; background: #2A6F6A; border: none; color: #fff; font-weight: 700;
+    padding: 10px 22px; border-radius: 9px; cursor: pointer; font-size: 15px;
+  }
+
+  #win { display: none; position: fixed; inset: 0; background: rgba(10,20,24,.85); z-index: 11; align-items: center; justify-content: center; text-align: center; }
+  #win.open { display: flex; }
+  #win .panel h2 { font-size: 1.8rem; }
+  #win .panel p { color: #4b5563; margin-top: 8px; }
+
+  #touch { display: none; position: fixed; bottom: 16px; right: 16px; z-index: 5; user-select: none; }
+  #touch .row { display: flex; justify-content: center; gap: 8px; margin-top: 8px; }
+  #touch button {
+    width: 58px; height: 58px; border-radius: 50%; border: none; font-size: 22px;
+    background: rgba(20,30,34,.7); color: #fff; touch-action: none;
+  }
+  #t-throw { background: #d85a4a !important; }
+
+  #demo-banner {
+    display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 8;
+    background: #14383f; color: #fff; padding: 10px 16px; font-size: 14px;
+    align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; text-align: center;
+  }
+  #demo-banner a { background: #ffd870; color: #14383f; font-weight: 800; text-decoration: none; padding: 7px 16px; border-radius: 8px; }
+</style>
+</head>
+<body>
+<div id="game"></div>
+
+<div class="hud">
+  <div class="pill">🔵 Orbs: <span id="orbs">10</span></div>
+  <div class="pill">📖 Caught: <span id="caught">0 / 0</span></div>
+</div>
+<button id="dex-btn">Collection (C)</button>
+
+<div id="prompt"></div>
+<div id="toast"></div>
+<div id="help">WASD / arrows to move · SPACE to throw an orb · walk into glowing orbs to restock</div>
+
+<div id="dex">
+  <div class="panel">
+    <h2>Your Collection</h2>
+    <div id="dex-grid"></div>
+    <button id="dex-close">Back to the island</button>
+  </div>
+</div>
+
+<div id="win">
+  <div class="panel">
+    <h2>🏆 You caught them all!</h2>
+    <p>Every critter on the island is in your collection. You're a true Critter Keeper!</p>
+    <button id="win-close">Keep exploring</button>
+  </div>
+</div>
+
+<div id="touch">
+  <div class="row"><button id="t-up">▲</button></div>
+  <div class="row"><button id="t-left">◀</button><button id="t-throw">🎯</button><button id="t-right">▶</button></div>
+  <div class="row"><button id="t-down">▼</button></div>
+</div>
+
+<div id="demo-banner">
+  <span>🎮 You're playing the free demo — 3 of 8 critters, small island.</span>
+  <a id="buy-full" href="#">Get the full game</a>
+</div>
+
+<script>window.GAME_CONFIG = { mode: "full", buyLink: "" };</script>
+<script src="three.min.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

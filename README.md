@@ -25,7 +25,12 @@ Products included (all evergreen — they sell year-round, worldwide):
 1. **Budget & Savings Tracker** (Excel/Google Sheets) — suggested price $9
 2. **Freelancer Invoice Kit** (Excel/Google Sheets) — suggested price $12
 3. **The Focus Planner** (printable PDF, A4 + US Letter) — suggested price $7
-4. **Complete Bundle** (all three) — suggested price $19
+4. **Complete Bundle** (all three templates) — suggested price $19
+5. **Critter Isles** — an original 3D creature-catching browser game (`game/`,
+   sold as `dist/Critter-Isles-Full.zip`) — suggested price $6. A free demo is
+   built into the store at `/play/` so visitors can try before buying. Also list
+   it on [itch.io](https://itch.io) — the biggest indie-game marketplace — for
+   extra reach. All creatures, names, and art are original, so it's yours to sell.
 
 ---
 
@@ -41,7 +46,8 @@ Products included (all evergreen — they sell year-round, worldwide):
 3. Repeat for `dist/Freelancer-Invoice-Kit.zip` (**$12**) and
    `dist/The-Focus-Planner.zip` (**$7**).
 4. Create one more product for the **bundle** (**$19**) and attach all three zips.
-5. Copy each product's short link (looks like `https://yourname.gumroad.com/l/xxxx`).
+5. Upload `dist/Critter-Isles-Full.zip` as a fifth product (**$6**).
+6. Copy each product's short link (looks like `https://yourname.gumroad.com/l/xxxx`).
 
 ### Step 2 — Connect your store
 

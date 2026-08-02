@@ -25,6 +25,13 @@ into Etsy every day with a credit card in hand.
 5. Images sell templates: make 5–8 listing images per product — clean screenshots
    of each sheet/page with a short benefit caption. Canva (free) is enough.
 
+### itch.io (for the game)
+List **Critter Isles** on [itch.io](https://itch.io) — free to list, and it's
+where indie-game buyers already browse. Upload the same zip, embed the browser
+demo, set price $6 (or "$6 or more"). Tag it: `cozy`, `casual`, `creature-collector`,
+`low-poly`, `browser`. Game demos also make perfect short-form video content —
+30 seconds of gameplay is a ready-made TikTok/Reel.
+
 ### Gumroad Discover
 Fill in every field on your Gumroad products (description, tags, category, cover
 image). Gumroad promotes complete listings in its own marketplace — free traffic.

@@ -32,5 +32,9 @@ window.STORE = {
       price: "$19",
       link: "SET-ME-https://yourname.gumroad.com/l/bundle",
     },
+    game: {
+      price: "$6",
+      link: "SET-ME-https://yourname.gumroad.com/l/critter-isles",
+    },
   },
 };
