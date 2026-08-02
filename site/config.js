@@ -40,5 +40,9 @@ window.STORE = {
       price: "$9",
       link: "https://tsjenn.itch.io/wildhaven",
     },
+    music: {
+      price: "$5+",
+      link: "SET-ME-your-bandcamp-or-itch-music-link",
+    },
   },
 };
