@@ -60,7 +60,7 @@ Commit the change. That's the only file you ever need to edit.
 1. Merge this branch into `main`.
 2. In this repo on GitHub: **Settings → Pages → Source: GitHub Actions**.
 3. The included workflow (`.github/workflows/deploy.yml`) publishes the `site/`
-   folder automatically on every push to `main`.
+   folder automatically on every push to the repository's default branch.
 4. Your store is live at `https://<your-username>.github.io/<repo-name>/`.
 
 Optional: buy a domain (~$10/year) and point it at GitHub Pages
