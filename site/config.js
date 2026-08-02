@@ -38,7 +38,7 @@ window.STORE = {
     },
     park: {
       price: "$9",
-      link: "SET-ME-https://tsjenn.itch.io/wildhaven",
+      link: "https://tsjenn.itch.io/wildhaven",
     },
   },
 };
