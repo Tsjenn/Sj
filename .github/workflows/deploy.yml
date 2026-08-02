@@ -3,9 +3,14 @@ name: Deploy store to GitHub Pages
 # Publishes ONLY the site/ folder. Product files in products/ and dist/
 # are never deployed, so paid downloads stay private.
 
+# Deploys run from the repository's DEFAULT branch
+# (claude/passive-income-app-3tbboh): GitHub created the github-pages
+# environment restricted to the default branch, so runs triggered from
+# main are rejected before they start. If the default branch is ever
+# switched to main in Settings, change the branch below to main too.
 on:
   push:
-    branches: [main]
+    branches: [claude/passive-income-app-3tbboh]
   workflow_dispatch:
 
 permissions:
