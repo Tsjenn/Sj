@@ -2,3 +2,4 @@ __pycache__/
 *.pyc
 music/*.wav
 book/pages/
+book/pages2/

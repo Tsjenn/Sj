@@ -13,13 +13,16 @@ Run:  python3 scripts/make_epub.py
 """
 
 import os
+import sys
 import zipfile
 
 from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PAGES_DIR = os.path.join(ROOT, "book", "pages")
-OUT = os.path.join(ROOT, "dist", "Goodnight-Wildhaven.epub")
+# defaults = book one; override:  make_epub.py <pages_dir> <out.epub> <title>
+PAGES_DIR = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "book", "pages")
+OUT = sys.argv[2] if len(sys.argv) > 2 else os.path.join(ROOT, "dist", "Goodnight-Wildhaven.epub")
+TITLE = sys.argv[3] if len(sys.argv) > 3 else "Goodnight, Wildhaven: A Bedtime Story from the Creature Park"
 VP = 1600  # fixed-layout viewport (px)
 
 CONTAINER = """<?xml version="1.0" encoding="UTF-8"?>
@@ -84,8 +87,8 @@ def build():
         opf = """<?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="bookid" prefix="rendition: http://www.idpf.org/vocab/rendition/#">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <dc:identifier id="bookid">urn:uuid:7e5b4875-wildhaven-goodnight-2026</dc:identifier>
-    <dc:title>Goodnight, Wildhaven: A Bedtime Story from the Creature Park</dc:title>
+    <dc:identifier id="bookid">urn:uuid:wildhaven-%s</dc:identifier>
+    <dc:title>%s</dc:title>
     <dc:creator>S. J. Tang</dc:creator>
     <dc:language>en</dc:language>
     <dc:date>2026-08-02</dc:date>
@@ -102,7 +105,7 @@ def build():
     %s
   </spine>
 </package>
-""" % ("\n    ".join(manifest), "\n    ".join(spine))
+""" % (abs(hash(TITLE)), TITLE, "\n    ".join(manifest), "\n    ".join(spine))
         z.writestr("OEBPS/content.opf", opf, zipfile.ZIP_DEFLATED)
 
     print("EPUB:", OUT, os.path.getsize(OUT) // 1024 // 1024, "MB,", len(pages), "pages")
