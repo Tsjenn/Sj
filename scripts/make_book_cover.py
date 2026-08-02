@@ -25,7 +25,7 @@ OUT = os.path.join(ROOT, "marketing", "book")
 DPI = 300
 TRIM = int(8.5 * DPI)          # 2550
 BLEED = int(0.125 * DPI)       # 37
-PAGES = 24
+PAGES = 54
 SPINE = int(PAGES * 0.002252 * DPI)  # ~16 px
 
 F_TITLE = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 230)
@@ -171,7 +171,7 @@ def wrap_cover():
 
     path = os.path.join(OUT, "cover-paperback-wrap.png")
     img.save(path, dpi=(DPI, DPI))
-    print("wrap cover:", path, f"{W}x{H}px (24-page spine)")
+    print("wrap cover:", path, f"{W}x{H}px ({PAGES}-page spine)")
 
 
 if __name__ == "__main__":
