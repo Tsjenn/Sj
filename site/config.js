@@ -42,7 +42,7 @@ window.STORE = {
     },
     music: {
       price: "$5+",
-      link: "SET-ME-your-bandcamp-or-itch-music-link",
+      link: "https://sjsjsj.bandcamp.com/album/sj",
     },
     book: {
       price: "$4.99",
