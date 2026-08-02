@@ -34,7 +34,7 @@ window.STORE = {
     },
     game: {
       price: "$6",
-      link: "SET-ME-https://yourname.gumroad.com/l/critter-isles",
+      link: "https://tsjenn.itch.io/critter-isles",
     },
   },
 };
