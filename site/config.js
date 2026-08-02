@@ -18,7 +18,7 @@ window.STORE = {
   products: {
     budget: {
       price: "$9",
-      link: "SET-ME-https://yourname.gumroad.com/l/budget",
+      link: "https://tangshiuan.gumroad.com/l/klwxce",
     },
     invoice: {
       price: "$12",
