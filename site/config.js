@@ -44,5 +44,9 @@ window.STORE = {
       price: "$5+",
       link: "SET-ME-your-bandcamp-or-itch-music-link",
     },
+    book: {
+      price: "$4.99",
+      link: "https://www.amazon.com/s?k=goodnight+wildhaven+bedtime+story",
+    },
   },
 };
