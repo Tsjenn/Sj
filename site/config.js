@@ -36,5 +36,9 @@ window.STORE = {
       price: "$6",
       link: "https://tsjenn.itch.io/critter-isles",
     },
+    park: {
+      price: "$9",
+      link: "SET-ME-https://tsjenn.itch.io/wildhaven",
+    },
   },
 };

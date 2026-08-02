@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Wildhaven: Creature Park — Full Version</title>
+<meta name="description" content="Wildhaven: catch wild creatures, build your own creature park, welcome visitors and grow to a 5-star sanctuary. A cozy 3D tycoon adventure.">
+<meta name="theme-color" content="#B4652F">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { width: 100%; height: 100%; overflow: hidden; font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; background: #9fd8ef; }
+  #game canvas { display: block; }
+  .hud { position: fixed; top: 10px; left: 10px; display: flex; gap: 8px; z-index: 5; flex-wrap: wrap; max-width: 70vw; }
+  .pill { background: rgba(24,28,32,.78); color: #fff; border-radius: 999px; padding: 7px 14px; font-weight: 700; font-size: 14px; }
+  .pill span { color: #ffd870; }
+  #stars-pill span { color: #ffd870; letter-spacing: 1px; }
+  #top-right { position: fixed; top: 10px; right: 10px; z-index: 5; display: flex; gap: 8px; }
+  .iconbtn { background: rgba(24,28,32,.78); color: #fff; border: none; border-radius: 999px; padding: 8px 14px; font-weight: 700; font-size: 14px; cursor: pointer; }
+
+  #bottombar { position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); z-index: 6; display: flex; gap: 8px; }
+  #bottombar button { background: rgba(24,28,32,.82); color: #fff; border: none; border-radius: 12px; padding: 10px 16px; font-weight: 800; font-size: 14px; cursor: pointer; }
+  #bottombar button.active { background: #B4652F; }
+
+  #build-panel { display: none; position: fixed; bottom: 62px; left: 50%; transform: translateX(-50%); z-index: 6; background: rgba(24,28,32,.9); border-radius: 14px; padding: 10px; max-width: 96vw; overflow-x: auto; white-space: nowrap; }
+  #build-panel.open { display: block; }
+  .chip { display: inline-block; background: #2e3540; color: #fff; border-radius: 10px; padding: 8px 10px; margin-right: 8px; cursor: pointer; text-align: center; font-size: 12px; font-weight: 700; border: 2px solid transparent; vertical-align: top; }
+  .chip .e { font-size: 20px; display: block; }
+  .chip .c { color: #ffd870; }
+  .chip.sel { border-color: #ffd870; background: #B4652F; }
+  .chip.locked { opacity: .45; }
+
+  #prompt { display: none; position: fixed; bottom: 120px; left: 50%; transform: translateX(-50%); background: rgba(24,28,32,.88); color: #fff; padding: 9px 20px; border-radius: 10px; font-weight: 700; z-index: 5; white-space: nowrap; font-size: 14px; }
+  #toast { position: fixed; top: 58px; left: 50%; transform: translateX(-50%) translateY(-8px); background: #2A6F6A; color: #fff; padding: 9px 22px; border-radius: 10px; font-weight: 700; z-index: 7; opacity: 0; transition: all .25s; pointer-events: none; max-width: 90vw; text-align: center; font-size: 14px; }
+  #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  .modal { display: none; position: fixed; inset: 0; background: rgba(10,16,20,.8); z-index: 10; align-items: center; justify-content: center; }
+  .modal.open { display: flex; }
+  .panel { background: #fff; border-radius: 16px; padding: 24px; max-width: 680px; width: 94%; max-height: 84vh; overflow: auto; }
+  .panel h2 { margin-bottom: 12px; color: #14383f; }
+  .panel p { color: #4b5563; margin: 8px 0; font-size: 14px; }
+  #dex-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(128px, 1fr)); gap: 10px; }
+  .dex-card { border: 2px solid #e2e6e8; border-radius: 12px; padding: 10px; text-align: center; }
+  .dex-card.got { border-color: #B4652F; }
+  .dex-card .swatch { width: 40px; height: 40px; border-radius: 50%; margin: 0 auto 6px; }
+  .dex-card .nm { font-weight: 800; font-size: 13px; }
+  .dex-card .ht { font-size: 11px; color: #6b7280; margin-top: 3px; }
+  .panel .btn { margin-top: 16px; background: #B4652F; border: none; color: #fff; font-weight: 700; padding: 10px 22px; border-radius: 9px; cursor: pointer; font-size: 15px; }
+
+  #title-overlay { position: fixed; inset: 0; z-index: 20; background: linear-gradient(180deg, #7cc4e8 0%, #cfe9d8 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; cursor: pointer; }
+  #title-overlay h1 { font-size: clamp(2.2rem, 7vw, 4rem); color: #14383f; letter-spacing: -.02em; }
+  #title-overlay .sub { color: #2A6F6A; font-weight: 700; margin-top: 8px; font-size: clamp(.95rem, 3vw, 1.2rem); }
+  #title-overlay .tap { margin-top: 40px; background: #B4652F; color: #fff; font-weight: 800; padding: 14px 38px; border-radius: 999px; font-size: 1.1rem; box-shadow: 0 6px 20px rgba(0,0,0,.2); }
+  #title-overlay .hint { margin-top: 16px; color: #3F6B5E; font-size: .85rem; }
+
+  #touch { display: none; position: fixed; bottom: 64px; right: 12px; z-index: 5; user-select: none; }
+  #touch .row { display: flex; justify-content: center; gap: 6px; margin-top: 6px; }
+  #touch button { width: 52px; height: 52px; border-radius: 50%; border: none; font-size: 20px; background: rgba(24,28,32,.66); color: #fff; touch-action: none; }
+  #t-throw { background: #d85a4a !important; }
+
+  #demo-banner { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 8; background: #14383f; color: #fff; padding: 8px 14px; font-size: 13px; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; text-align: center; }
+  #demo-banner a { background: #ffd870; color: #14383f; font-weight: 800; text-decoration: none; padding: 6px 14px; border-radius: 8px; }
+  body.demo #bottombar { bottom: 46px; }
+  body.demo #touch { bottom: 100px; }
+</style>
+</head>
+<body>
+<div id="game"></div>
+
+<div id="title-overlay">
+  <h1>🏞️ Wildhaven</h1>
+  <div class="sub">Catch wild creatures · Build your dream park · Grow to 5 stars</div>
+  <div class="tap">▶ Tap to start</div>
+  <div class="hint">Sound on for the full experience 🎵</div>
+</div>
+
+<div class="hud">
+  <div class="pill">🪙 <span id="coins">0</span></div>
+  <div class="pill">🔵 <span id="orbs">0</span></div>
+  <div class="pill">🧑‍🤝‍🧑 <span id="visitors">0</span></div>
+  <div class="pill" id="stars-pill"><span id="stars">☆☆☆☆☆</span></div>
+</div>
+<div id="top-right">
+  <button class="iconbtn" id="mute-btn">🔊</button>
+  <button class="iconbtn" id="help-btn">❓</button>
+</div>
+
+<div id="bottombar">
+  <button id="build-btn">🔨 Build</button>
+  <button id="dex-btn">📖 Creatures</button>
+</div>
+<div id="build-panel"></div>
+
+<div id="prompt"></div>
+<div id="toast"></div>
+
+<div class="modal" id="dex">
+  <div class="panel">
+    <h2>Your Creatures</h2>
+    <p id="dex-summary"></p>
+    <div id="dex-grid"></div>
+    <button class="btn" id="dex-close">Back to the park</button>
+  </div>
+</div>
+
+<div class="modal" id="help">
+  <div class="panel">
+    <h2>How to play</h2>
+    <p>🧭 <b>Explore:</b> WASD / arrow keys to move (touch buttons on mobile). Your park is in the west — wild creatures roam the lands to the east.</p>
+    <p>🔵 <b>Catch:</b> get close to a wild creature and press SPACE (or 🎯) to throw an orb. Grab glowing orb pickups to restock.</p>
+    <p>🏠 <b>House them:</b> caught creatures need a habitat matching their nature (meadow, water, ember, sky, night). Build one and they move in automatically.</p>
+    <p>🪙 <b>Earn:</b> visitors enter through your park gate and pay admission. Creatures on display earn coins over time — even while you're away. Stalls and decorations attract more visitors.</p>
+    <p>⭐ <b>Goal:</b> grow your park to a 5-star rating and complete your creature collection!</p>
+    <button class="btn" id="help-close">Let's go!</button>
+  </div>
+</div>
+
+<div class="modal" id="win">
+  <div class="panel" style="text-align:center">
+    <h2>🏆 Wildhaven is legendary!</h2>
+    <p>Five stars, every creature thriving — your park is the finest sanctuary in the world. Keep building, keeper!</p>
+    <button class="btn" id="win-close">Keep playing</button>
+  </div>
+</div>
+
+<div id="touch">
+  <div class="row"><button id="t-up">▲</button></div>
+  <div class="row"><button id="t-left">◀</button><button id="t-throw">🎯</button><button id="t-right">▶</button></div>
+  <div class="row"><button id="t-down">▼</button></div>
+</div>
+
+<div id="demo-banner">
+  <span>🏞️ Free demo — 4 creatures, starter park. Full game: 10 creatures, all buildings, night species.</span>
+  <a id="buy-full" href="#">Get the full game</a>
+</div>
+
+<script>window.GAME_CONFIG = { mode: "full", buyLink: "" };</script>
+<script>
+  if ("serviceWorker" in navigator && location.protocol === "https:") {
+    navigator.serviceWorker.register("sw.js").catch(function () {});
+  }
+</script>
+<script src="three.min.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
