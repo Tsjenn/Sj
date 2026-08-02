@@ -53,11 +53,15 @@ Problems with your download? Reply to your purchase receipt email.
 """
 
 
+GAME_FILES = ("game.js", "three.min.js", "manifest.webmanifest", "sw.js",
+              "icon-192.png", "icon-512.png")
+
+
 def main():
     # --- demo ---
     os.makedirs(PLAY, exist_ok=True)
-    shutil.copy(os.path.join(GAME, "game.js"), PLAY)
-    shutil.copy(os.path.join(GAME, "three.min.js"), PLAY)
+    for name in GAME_FILES:
+        shutil.copy(os.path.join(GAME, name), PLAY)
     with open(os.path.join(GAME, "index.html")) as f:
         html = f.read()
     assert FULL_CONFIG in html, "full-version config line not found in game/index.html"
@@ -71,14 +75,14 @@ def main():
     os.makedirs(dist, exist_ok=True)
     zpath = os.path.join(dist, "Critter-Isles-Full.zip")
     with zipfile.ZipFile(zpath, "w", zipfile.ZIP_DEFLATED) as z:
-        for name in ("index.html", "game.js", "three.min.js"):
+        for name in ("index.html",) + GAME_FILES:
             z.write(os.path.join(GAME, name), "Critter-Isles/" + name)
         z.writestr("Critter-Isles/README.txt", BUYER_README)
 
     # --- itch.io builds: index.html must be at the ZIP ROOT for browser play ---
     itch_full = os.path.join(dist, "Critter-Isles-itch-full.zip")
     with zipfile.ZipFile(itch_full, "w", zipfile.ZIP_DEFLATED) as z:
-        for name in ("index.html", "game.js", "three.min.js"):
+        for name in ("index.html",) + GAME_FILES:
             z.write(os.path.join(GAME, name), name)
         z.writestr("README.txt", BUYER_README)
 
@@ -88,7 +92,7 @@ def main():
     itch_demo = os.path.join(dist, "Critter-Isles-itch-demo.zip")
     with zipfile.ZipFile(itch_demo, "w", zipfile.ZIP_DEFLATED) as z:
         z.writestr("index.html", itch_demo_html)
-        for name in ("game.js", "three.min.js"):
+        for name in GAME_FILES:
             z.write(os.path.join(GAME, name), name)
 
     print("Packaged demo -> site/play/, full game ->", zpath)

@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Critter Isles — Free Demo</title>
 <meta name="description" content="Critter Isles: a cozy 3D creature-catching adventure. Explore the island, throw orbs, catch all 8 critters.">
+<meta name="theme-color" content="#2A6F6A">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { width: 100%; height: 100%; overflow: hidden; font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; background: #9fd8ef; }
@@ -126,6 +132,13 @@
   var _g = (window.STORE && window.STORE.products && window.STORE.products.game) || {};
   window.GAME_CONFIG = { mode: "demo",
     buyLink: (_g.link && _g.link.indexOf("SET-ME") === -1) ? _g.link : "" };
+</script>
+<script>
+  // Installable app + offline play (only registers on real web hosting,
+  // silently skipped when opened from a downloaded zip as a local file).
+  if ("serviceWorker" in navigator && location.protocol === "https:") {
+    navigator.serviceWorker.register("sw.js").catch(function () {});
+  }
 </script>
 <script src="three.min.js"></script>
 <script src="game.js"></script>
