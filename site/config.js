@@ -46,7 +46,11 @@ window.STORE = {
     },
     book: {
       price: "$4.99",
-      link: "https://www.amazon.com/s?k=goodnight+wildhaven+bedtime+story",
+      link: "https://www.amazon.com/dp/B0HCKYM617",
+    },
+    book2: {
+      price: "$4.99",
+      link: "https://www.amazon.com/dp/B0HCL3YCKJ",
     },
   },
 };
