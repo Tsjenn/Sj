@@ -64,6 +64,13 @@
 
   #demo-banner { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 8; background: #14383f; color: #fff; padding: 8px 14px; font-size: 13px; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; text-align: center; }
   #demo-banner a { background: #ffd870; color: #14383f; font-weight: 800; text-decoration: none; padding: 6px 14px; border-radius: 8px; }
+  .pack { border: 2px solid #e2e6e8; border-radius: 12px; padding: 14px; margin-top: 10px; display: flex; gap: 12px; align-items: center; }
+  .pack.owned { border-color: #2A6F6A; background: #f0f7f6; }
+  .pack .pe { font-size: 30px; }
+  .pack .pn { font-weight: 800; }
+  .pack .pd { font-size: 12.5px; color: #6b7280; }
+  .pack a.buy-pack { margin-left: auto; background: #B4652F; color: #fff; font-weight: 700; text-decoration: none; padding: 8px 14px; border-radius: 8px; white-space: nowrap; }
+  .pack .owned-tag { margin-left: auto; color: #2A6F6A; font-weight: 800; white-space: nowrap; }
   body.demo #bottombar { bottom: 46px; }
   body.demo #touch { bottom: 100px; }
 </style>
@@ -92,6 +99,8 @@
 <div id="bottombar">
   <button id="build-btn">🔨 Build</button>
   <button id="dex-btn">📖 Creatures</button>
+  <button id="shop-btn">🛍️ Shop</button>
+  <button id="friends-btn">🌍 Friends</button>
 </div>
 <div id="build-panel"></div>
 
@@ -125,6 +134,41 @@
     <p>Five stars, every creature thriving — your park is the finest sanctuary in the world. Keep building, keeper!</p>
     <button class="btn" id="win-close">Keep playing</button>
   </div>
+</div>
+
+<div class="modal" id="shop">
+  <div class="panel">
+    <h2>🛍️ Equipment Shop</h2>
+    <p>Premium packs give your park and keeper a whole new look. Buy a pack to
+       receive your unlock code instantly, then enter it below — it works forever,
+       on all your devices.</p>
+    <div id="shop-packs"></div>
+    <div style="margin-top:14px; display:flex; gap:8px; flex-wrap:wrap;">
+      <input id="code-input" placeholder="Enter unlock code…" style="flex:1; min-width:180px; padding:10px 12px; border:2px solid #e2e6e8; border-radius:9px; font-size:15px;">
+      <button class="btn" id="code-btn" style="margin-top:0">Unlock</button>
+    </div>
+    <button class="btn" id="shop-close" style="background:#6b7280">Close</button>
+  </div>
+</div>
+
+<div class="modal" id="friends">
+  <div class="panel">
+    <h2>🌍 Visit Friends' Parks</h2>
+    <p><b>Share your park:</b> copy this code and send it to anyone in the world —
+       chat, email, anywhere. They can walk around your park!</p>
+    <textarea id="my-park-code" readonly rows="3" style="width:100%; padding:10px; border:2px solid #e2e6e8; border-radius:9px; font-size:12px;"></textarea>
+    <button class="btn" id="copy-code-btn" style="margin-top:8px">Copy my park code</button>
+    <p style="margin-top:16px"><b>Visit a friend:</b> paste their park code here.</p>
+    <textarea id="friend-code-input" rows="3" placeholder="Paste a friend's park code…" style="width:100%; padding:10px; border:2px solid #e2e6e8; border-radius:9px; font-size:12px;"></textarea>
+    <div style="display:flex; gap:8px;">
+      <button class="btn" id="visit-btn">Visit their park</button>
+      <button class="btn" id="friends-close" style="background:#6b7280">Close</button>
+    </div>
+  </div>
+</div>
+
+<div id="visit-banner" style="display:none; position:fixed; top:56px; left:50%; transform:translateX(-50%); z-index:8; background:#4a7ad8; color:#fff; padding:10px 18px; border-radius:10px; font-weight:700; font-size:14px;">
+  🌍 Visiting a friend's park — <a href="#" id="visit-return" style="color:#ffd870">return home</a>
 </div>
 
 <div id="touch">

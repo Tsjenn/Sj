@@ -297,8 +297,9 @@
         g.add(stem, head);
       }
     } else if (type === "lamp") {
+      var goldL = save.unlocked && save.unlocked.gold;
       var pole = new THREE.Mesh(new THREE.CylinderGeometry(0.09, 0.12, 2.6, 6),
-        new THREE.MeshLambertMaterial({ color: 0x3a3f45 }));
+        new THREE.MeshLambertMaterial({ color: goldL ? 0xC9A34A : 0x3a3f45 }));
       pole.position.y = 1.3; pole.castShadow = true;
       var lm = new THREE.MeshLambertMaterial({ color: 0xfff2c0, emissive: 0x000000 });
       var bulb = new THREE.Mesh(new THREE.SphereGeometry(0.32, 8, 7), lm);
@@ -306,14 +307,15 @@
       lampMats.push(lm);
       g.add(pole, bulb);
     } else if (type === "fountain") {
+      var goldF = save.unlocked && save.unlocked.gold;
       var basin = new THREE.Mesh(new THREE.CylinderGeometry(2.1, 2.3, 0.6, 12),
-        new THREE.MeshLambertMaterial({ color: 0xb9c0c9 }));
+        new THREE.MeshLambertMaterial({ color: goldF ? 0xC9A34A : 0xb9c0c9 }));
       basin.position.y = 0.3; basin.castShadow = true;
       var waterD = new THREE.Mesh(new THREE.CylinderGeometry(1.8, 1.8, 0.15, 12),
-        new THREE.MeshLambertMaterial({ color: 0x5fb4de }));
+        new THREE.MeshLambertMaterial({ color: goldF ? 0xFFD870 : 0x5fb4de, emissive: goldF ? 0x443300 : 0x000000 }));
       waterD.position.y = 0.62;
       var jet = new THREE.Mesh(new THREE.ConeGeometry(0.35, 1.6, 8),
-        new THREE.MeshLambertMaterial({ color: 0x9fd4ec, transparent: true, opacity: 0.8 }));
+        new THREE.MeshLambertMaterial({ color: goldF ? 0xFFE9A8 : 0x9fd4ec, transparent: true, opacity: 0.8 }));
       jet.position.y = 1.5;
       g.add(basin, waterD, jet);
     } else if (type === "stall" || type === "shop") {
@@ -605,7 +607,7 @@
   }
 
   // ---------------------------------------------------------------- save
-  var save = { coins: 120, orbs: 10, caught: {}, grid: {}, muted: false, lastSeen: 0, won: false, helpSeen: false };
+  var save = { coins: 120, orbs: 10, caught: {}, grid: {}, muted: false, lastSeen: 0, won: false, helpSeen: false, unlocked: {} };
   try {
     var raw = localStorage.getItem(SAVE_KEY);
     if (raw) {
@@ -613,11 +615,51 @@
       for (var k in loaded) save[k] = loaded[k];
     }
   } catch (e) {}
+  save.unlocked = save.unlocked || {};
+  var visiting = null;   // {c: caught, g: grid} of a friend's park while visiting
+  function activeCaught() { return visiting ? visiting.c : save.caught; }
   function persist() {
+    if (visiting) return;               // never save while touring a friend's park
     save.lastSeen = Date.now();
     try { localStorage.setItem(SAVE_KEY, JSON.stringify(save)); } catch (e) {}
   }
   AudioSys.setMuted(!!save.muted);
+
+  // ------------------------------------------------------ premium packs
+  // real-money DLC: buyers get an unlock code with purchase (sold on itch.io);
+  // codes are verified by hash so they aren't readable in the source.
+  function codeHash(s) {
+    var h = 5381;
+    for (var i = 0; i < s.length; i++) h = ((h * 33) + s.charCodeAt(i)) >>> 0;
+    return h.toString(16);
+  }
+  var PACKS = [
+    { id: "gold", e: "✨", name: "Golden Park Pack",
+      desc: "Golden fountains, golden lamps, and a golden keeper's hat.",
+      hash: "a1a5fd8c" },
+    { id: "star", e: "🌠", name: "Starlight Keeper Pack",
+      desc: "A starlight wizard hat and enchanted violet catch orbs.",
+      hash: "e2b2c45" }
+  ];
+  function tryUnlock(code) {
+    var h = codeHash(code.trim().toUpperCase());
+    for (var i = 0; i < PACKS.length; i++) {
+      if (PACKS[i].hash === h) {
+        save.unlocked[PACKS[i].id] = true;
+        persist();
+        return PACKS[i];
+      }
+    }
+    return null;
+  }
+  function applyKeeperCosmetics() {
+    var hat = player.children[2];
+    if (save.unlocked.gold) hat.material = new THREE.MeshLambertMaterial({ color: 0xE8C832, emissive: 0x332200 });
+    if (save.unlocked.star) {
+      hat.material = new THREE.MeshLambertMaterial({ color: 0x9a6ad8, emissive: 0x221133 });
+      orbMat.emissive.setHex(0x8844cc);
+    }
+  }
 
   // grid state: key -> {type, mesh, habitatResidents:[]}
   var grid = {};
@@ -627,9 +669,23 @@
     var mesh = buildBuildingMesh(type, cx, cz);
     scene.add(mesh);
     grid[key] = { type: type, mesh: mesh, cx: cx, cz: cz };
-    save.grid[key] = type;
+    if (!visiting) save.grid[key] = type;
     if (!silent) { AudioSys.placeSfx(); persist(); reassignResidents(); updateEconomy(); }
     return true;
+  }
+  function clearParkMeshes() {
+    for (var key in grid) scene.remove(grid[key].mesh);
+    grid = {};
+  }
+  function buildParkFrom(gridData) {
+    for (var key in gridData) {
+      if (!BUILDINGS_BY_ID[gridData[key]]) continue;
+      var parts = key.split(",");
+      var cx = parseInt(parts[0], 10), cz = parseInt(parts[1], 10);
+      var mesh = buildBuildingMesh(gridData[key], cx, cz);
+      scene.add(mesh);
+      grid[key] = { type: gridData[key], mesh: mesh, cx: cx, cz: cz };
+    }
   }
   function removeBuilding(cx, cz) {
     var key = cellKey(cx, cz);
@@ -664,8 +720,9 @@
     var habs = habitats();
     var capacity = {};
     habs.forEach(function (h) { capacity[cellKey(h.cx, h.cz)] = 2; });
+    var caughtSrc = activeCaught();
     SPECIES.forEach(function (sp) {
-      var count = Math.min(save.caught[sp.id] || 0, 4);
+      var count = Math.min(caughtSrc[sp.id] || 0, 4);
       for (var i = 0; i < count; i++) {
         var placed = false;
         for (var hi = 0; hi < habs.length && !placed; hi++) {
@@ -715,7 +772,7 @@
     return SPECIES.filter(function (s) { return save.caught[s.id]; }).length;
   }
   function checkWin() {
-    if (save.won) return;
+    if (save.won || visiting) return;
     if (starCount >= 5 && caughtSpecies() === SPECIES.length) {
       save.won = true; persist();
       document.getElementById("win").classList.add("open");
@@ -841,6 +898,96 @@
     persist();
   });
 
+  // ------------------------------------------------ shop & friends UI
+  function refreshShop() {
+    var el = document.getElementById("shop-packs");
+    el.innerHTML = "";
+    PACKS.forEach(function (p) {
+      var owned = !!save.unlocked[p.id];
+      var div = document.createElement("div");
+      div.className = "pack" + (owned ? " owned" : "");
+      div.innerHTML = '<div class="pe">' + p.e + '</div>' +
+        '<div><div class="pn">' + p.name + '</div><div class="pd">' + p.desc + "</div></div>" +
+        (owned ? '<div class="owned-tag">✓ Owned</div>' :
+          '<a class="buy-pack" target="_blank" rel="noopener" href="' +
+          (CFG.buyLink || "https://tsjenn.itch.io/wildhaven") + '">Get code</a>');
+      el.appendChild(div);
+    });
+  }
+  document.getElementById("shop-btn").addEventListener("click", function () {
+    AudioSys.clickSfx(); refreshShop();
+    document.getElementById("shop").classList.add("open");
+  });
+  document.getElementById("shop-close").addEventListener("click", function () {
+    document.getElementById("shop").classList.remove("open");
+  });
+  document.getElementById("code-btn").addEventListener("click", function () {
+    var input = document.getElementById("code-input");
+    var pack = tryUnlock(input.value || "");
+    if (pack) {
+      input.value = "";
+      AudioSys.starSfx();
+      toast("🎉 " + pack.name + " unlocked forever!");
+      applyKeeperCosmetics();
+      clearParkMeshes(); buildParkFrom(save.grid);   // re-skin placed buildings
+      reassignResidents(); updateEconomy(); refreshShop();
+    } else {
+      AudioSys.failSfx();
+      toast("That code doesn't look right — check for typos!");
+    }
+  });
+
+  function myParkCode() {
+    return "WH1." + btoa(unescape(encodeURIComponent(
+      JSON.stringify({ g: save.grid, c: save.caught }))));
+  }
+  function parseParkCode(s) {
+    s = (s || "").trim();
+    if (s.indexOf("WH1.") !== 0) return null;
+    try {
+      var d = JSON.parse(decodeURIComponent(escape(atob(s.slice(4)))));
+      if (!d || typeof d.g !== "object" || typeof d.c !== "object") return null;
+      return d;
+    } catch (e) { return null; }
+  }
+  function visitPark(data) {
+    visiting = data;
+    clearParkMeshes();
+    buildParkFrom(data.g);
+    reassignResidents(); updateEconomy();
+    buildMode = false;
+    ui.buildPanel.classList.remove("open");
+    ui.buildBtn.classList.remove("active");
+    player.position.set((PARK.x0 + PARK.x1) / 2, PARK.y, 0);
+    document.getElementById("visit-banner").style.display = "block";
+    document.getElementById("friends").classList.remove("open");
+    toast("🌍 Welcome to your friend's park! Look around.");
+  }
+  document.getElementById("friends-btn").addEventListener("click", function () {
+    AudioSys.clickSfx();
+    document.getElementById("my-park-code").value = myParkCode();
+    document.getElementById("friends").classList.add("open");
+  });
+  document.getElementById("friends-close").addEventListener("click", function () {
+    document.getElementById("friends").classList.remove("open");
+  });
+  document.getElementById("copy-code-btn").addEventListener("click", function () {
+    var ta = document.getElementById("my-park-code");
+    ta.select();
+    try { document.execCommand("copy"); } catch (e) {}
+    if (navigator.clipboard) navigator.clipboard.writeText(ta.value).catch(function () {});
+    toast("Park code copied — send it to a friend anywhere in the world!");
+  });
+  document.getElementById("visit-btn").addEventListener("click", function () {
+    var data = parseParkCode(document.getElementById("friend-code-input").value);
+    if (data) visitPark(data);
+    else toast("That park code doesn't look right — ask your friend to copy it again.");
+  });
+  document.getElementById("visit-return").addEventListener("click", function (e) {
+    e.preventDefault();
+    location.reload();
+  });
+
   // title overlay → start
   var titleEl = document.getElementById("title-overlay");
   var gameStarted = false;
@@ -858,6 +1005,7 @@
     document.getElementById("buy-full").href = CFG.buyLink;
   }
 
+  applyKeeperCosmetics();
   refreshHud();
   updateEconomy();
 
@@ -890,7 +1038,7 @@
   var raycaster = new THREE.Raycaster();
   var pointer = new THREE.Vector2();
   renderer.domElement.addEventListener("pointerdown", function (e) {
-    if (!buildMode || !selectedTool || !gameStarted) return;
+    if (!buildMode || !selectedTool || !gameStarted || visiting) return;
     pointer.x = (e.clientX / innerWidth) * 2 - 1;
     pointer.y = -(e.clientY / innerHeight) * 2 + 1;
     raycaster.setFromCamera(pointer, camera);
@@ -915,6 +1063,7 @@
   // ------------------------------------------------------------ throwing
   var activeThrow = null, nearCritter = null;
   function tryThrow() {
+    if (visiting) { toast("You're visiting! Return home to catch creatures."); return; }
     if (!gameStarted || activeThrow || !nearCritter) return;
     if (save.orbs <= 0) { toast("Out of orbs! Grab the glowing orbs out in the wilds."); return; }
     save.orbs--; refreshHud(); persist();
