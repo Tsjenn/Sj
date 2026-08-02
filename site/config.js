@@ -44,6 +44,10 @@ window.STORE = {
       price: "$9.99",
       link: "https://tsjenn.itch.io/wildhaven-arena",
     },
+    racer: {
+      price: "$9.99",
+      link: "SET-ME-https://tsjenn.itch.io/neon-drift-racers",
+    },
     music: {
       price: "$5+",
       link: "https://sjsjsj.bandcamp.com/album/sj",

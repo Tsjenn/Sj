@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Neon Drift Racers — Full Version</title>
+<meta name="theme-color" content="#12F2E4">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<style>
+  :root {
+    --cyan: #12F2E4;
+    --pink: #FF2FA8;
+    --violet: #8B5CF6;
+    --amber: #FFB020;
+    --ink: #05060F;
+    --panel: rgba(10, 12, 26, .86);
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; height: 100%; overflow: hidden; background: var(--ink); color: #fff;
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; user-select: none; }
+  canvas { display: block; }
+  #fx { position: fixed; inset: 0; pointer-events: none; z-index: 4; }
+  .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-variant-numeric: tabular-nums; }
+
+  /* ---------------------------------------------------------------- HUD */
+  #hud { position: fixed; inset: 0; pointer-events: none; z-index: 6; display: none; }
+  #hud.on { display: block; }
+
+  /* lap progress — top centre */
+  #lapwrap { position: absolute; top: 14px; left: 50%; transform: translateX(-50%);
+    width: min(46vw, 520px); text-align: center; }
+  #lapwrap .lbl { font-size: 10px; letter-spacing: .28em; color: #9fb3d9; font-weight: 700; margin-bottom: 5px; }
+  #lapbar { height: 5px; background: rgba(255,255,255,.14); border-radius: 99px; overflow: hidden; position: relative; }
+  #lapfill { height: 100%; width: 0%; border-radius: 99px;
+    background: linear-gradient(90deg, var(--cyan), var(--violet), var(--pink)); box-shadow: 0 0 12px var(--violet); }
+  #lapdot { position: absolute; top: 50%; width: 11px; height: 11px; margin: -5.5px 0 0 -5.5px; border-radius: 50%;
+    background: #fff; box-shadow: 0 0 10px #fff, 0 0 20px var(--cyan); }
+  #lapmeta { display: flex; justify-content: space-between; margin-top: 6px;
+    font-size: 12px; color: #cfe0ff; font-weight: 800; letter-spacing: .06em; }
+
+  /* minimap — top right */
+  #mapbox { position: absolute; top: 12px; right: 14px; width: 128px; height: 128px;
+    background: rgba(6,8,20,.45); border: 1px solid rgba(255,255,255,.12); border-radius: 12px; backdrop-filter: blur(4px); }
+  #minimap { width: 100%; height: 100%; }
+  #pos { position: absolute; top: 148px; right: 14px; text-align: right; }
+  #pos .p { font-size: 40px; font-weight: 900; line-height: .9; letter-spacing: -.03em;
+    text-shadow: 0 0 18px rgba(18,242,228,.7); }
+  #pos .of { font-size: 11px; color: #9fb3d9; letter-spacing: .18em; font-weight: 700; }
+
+  /* timing — bottom left */
+  #timing { position: absolute; left: 18px; bottom: 18px; }
+  #hudface { width: 62px; height: 62px; border-radius: 50%; margin-bottom: 6px; display: block;
+    border: 2px solid rgba(18,242,228,.75); box-shadow: 0 0 18px rgba(18,242,228,.45); background: #0a0c1a; }
+  #curtime { font-size: 40px; font-weight: 800; letter-spacing: -.02em; line-height: 1;
+    text-shadow: 0 2px 20px rgba(0,0,0,.8); }
+  #besttime { font-size: 13px; color: #9fb3d9; margin-top: 4px; letter-spacing: .05em; }
+  #delta { display: inline-block; margin-top: 7px; font-size: 20px; font-weight: 800; padding: 2px 10px;
+    border-radius: 7px; opacity: 0; transition: opacity .2s; }
+  #delta.up { background: rgba(255,47,168,.22); color: #ff86c8; box-shadow: 0 0 16px rgba(255,47,168,.35); }
+  #delta.dn { background: rgba(18,242,228,.18); color: #7ff6ee; box-shadow: 0 0 16px rgba(18,242,228,.35); }
+  #delta.show { opacity: 1; }
+
+  /* speed + nitro — bottom right */
+  #speedbox { position: absolute; right: 14px; bottom: 14px; width: 210px; height: 166px; }
+  #gauge { position: absolute; top: 0; left: 0; width: 210px; height: 138px; }
+  #spd { position: absolute; right: 16px; bottom: 66px; text-align: right; }
+  #spdnum { font-size: 52px; font-weight: 900; letter-spacing: -.04em; line-height: .86;
+    text-shadow: 0 0 24px rgba(18,242,228,.55); }
+  #spdunit { font-size: 10px; color: #9fb3d9; letter-spacing: .3em; font-weight: 700; }
+  #gear { position: absolute; right: 16px; bottom: 26px; width: 30px; height: 30px; border-radius: 8px;
+    background: rgba(255,47,168,.18); border: 1px solid rgba(255,47,168,.5); color: #ff86c8;
+    font-size: 16px; font-weight: 900; display: grid; place-items: center; }
+  #nitrowrap { position: absolute; left: 0; bottom: 0; width: 210px; }
+  #nitrowrap .lbl { font-size: 9px; letter-spacing: .28em; color: #9fb3d9; font-weight: 700; margin-bottom: 4px; }
+  #nitro { height: 9px; background: rgba(255,255,255,.13); border-radius: 99px; overflow: hidden; }
+  #nitrofill { height: 100%; width: 0%; border-radius: 99px; background: linear-gradient(90deg, var(--amber), var(--pink));
+    box-shadow: 0 0 12px var(--amber); transition: width .08s linear; }
+  #nitro.ready #nitrofill { background: linear-gradient(90deg, #fff, var(--cyan)); box-shadow: 0 0 18px var(--cyan); }
+
+  /* drift charge ring under the car */
+  #driftlbl { position: absolute; left: 50%; bottom: 22%; transform: translateX(-50%); font-size: 22px;
+    font-weight: 900; letter-spacing: .1em; opacity: 0; transition: opacity .15s; text-shadow: 0 0 20px currentColor; }
+  #driftlbl.show { opacity: 1; }
+
+  /* centre messages */
+  #bigmsg { position: absolute; inset: 0; display: grid; place-items: center; pointer-events: none; }
+  #bigtext { font-size: clamp(46px, 12vw, 150px); font-weight: 900; letter-spacing: -.03em; opacity: 0;
+    transform: scale(.7); transition: opacity .18s, transform .18s; text-shadow: 0 0 40px currentColor; }
+  #bigtext.show { opacity: 1; transform: scale(1); }
+  #toast { position: absolute; left: 50%; top: 21%; transform: translateX(-50%); background: rgba(6,8,20,.9);
+    border: 1px solid rgba(255,255,255,.16); padding: 9px 18px; border-radius: 99px; font-weight: 700;
+    font-size: 14px; opacity: 0; transition: opacity .25s; white-space: nowrap; }
+  #toast.show { opacity: 1; }
+
+  /* ------------------------------------------------------------ screens */
+  .screen { position: fixed; inset: 0; z-index: 10; display: none; }
+  .screen.on { display: block; }
+
+  #title { background: radial-gradient(120% 90% at 50% 8%, #241a4d 0%, #0a0a1c 48%, #05060f 100%);
+    text-align: center; cursor: pointer; z-index: 20; }
+  #title.on { display: grid; place-items: center; }
+  #title h1 { margin: 0; font-size: clamp(38px, 9vw, 108px); font-weight: 900; letter-spacing: -.045em; line-height: .95; }
+  #title h1 .a { color: #fff; text-shadow: 0 0 34px rgba(18,242,228,.55); }
+  #title h1 .b { background: linear-gradient(96deg, var(--cyan), var(--violet) 45%, var(--pink));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    filter: drop-shadow(0 0 26px rgba(255,47,168,.45)); }
+  #title p { color: #a9bade; font-size: clamp(13px, 2.4vw, 18px); max-width: 640px; margin: 16px auto 0; line-height: 1.5; }
+  .cta { display: inline-block; margin-top: 30px; padding: 15px 44px; border-radius: 99px; font-weight: 800;
+    font-size: 17px; color: #04121a; background: linear-gradient(96deg, var(--cyan), #7de8ff);
+    box-shadow: 0 0 40px rgba(18,242,228,.5); border: none; cursor: pointer; }
+
+  /* garage */
+  #garage { background: linear-gradient(90deg, rgba(5,6,15,0) 0%, rgba(5,6,15,.35) 40%, rgba(5,6,15,.94) 62%);
+    pointer-events: none; }
+  #gpanel { position: absolute; right: 0; top: 0; bottom: 0; width: min(460px, 94vw); overflow-y: auto;
+    padding: 20px 22px 26px; pointer-events: auto; }
+  #gpanel h2 { margin: 0 0 2px; font-size: 26px; font-weight: 900; letter-spacing: -.02em; }
+  #gpanel .sub { color: #93a6cc; font-size: 12.5px; margin-bottom: 16px; }
+  #gfacewrap { display: flex; gap: 13px; align-items: center; margin-bottom: 16px; padding: 12px;
+    border-radius: 14px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); }
+  #gface { width: 92px; height: 92px; border-radius: 50%; flex: none; background: #0a0c1a;
+    border: 3px solid rgba(18,242,228,.7); box-shadow: 0 0 22px rgba(18,242,228,.4); }
+  #gfacelbl { font-size: 10px; letter-spacing: .26em; color: #7f93bd; font-weight: 800; margin-bottom: 4px; }
+  #gfacenote { font-size: 12px; color: #b9c7e6; line-height: 1.45; }
+  .sec { margin-bottom: 15px; }
+  .sec > .h { font-size: 10px; letter-spacing: .26em; color: #7f93bd; font-weight: 800; margin-bottom: 7px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { padding: 7px 13px; border-radius: 9px; background: rgba(255,255,255,.07); color: #dbe6ff;
+    border: 1px solid rgba(255,255,255,.1); font-size: 13px; font-weight: 700; cursor: pointer; }
+  .chip:hover { background: rgba(255,255,255,.13); }
+  .chip.sel { background: linear-gradient(96deg, rgba(18,242,228,.24), rgba(139,92,246,.24));
+    border-color: var(--cyan); color: #fff; box-shadow: 0 0 14px rgba(18,242,228,.3); }
+  .chip.lock { opacity: .42; cursor: not-allowed; }
+  .sw { width: 30px; height: 30px; border-radius: 8px; border: 2px solid rgba(255,255,255,.16); cursor: pointer; padding: 0; }
+  .sw.sel { border-color: #fff; box-shadow: 0 0 12px rgba(255,255,255,.6); transform: scale(1.09); }
+  .tcard { display: flex; gap: 11px; align-items: center; padding: 9px 11px; border-radius: 12px;
+    background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.09); cursor: pointer; margin-bottom: 6px; }
+  .tcard.sel { border-color: var(--cyan); background: linear-gradient(96deg, rgba(18,242,228,.16), rgba(139,92,246,.13)); }
+  .tcard.lock { opacity: .45; }
+  .tcard .dot { width: 34px; height: 34px; border-radius: 9px; flex: none; }
+  .tcard .nm { font-weight: 800; font-size: 14.5px; }
+  .tcard .mt { font-size: 11.5px; color: #93a6cc; }
+  .tcard .md { margin-left: auto; font-size: 19px; }
+  .btn { width: 100%; padding: 14px; border-radius: 12px; border: none; font-size: 16px; font-weight: 800;
+    cursor: pointer; color: #04121a; background: linear-gradient(96deg, var(--cyan), #7de8ff);
+    box-shadow: 0 0 30px rgba(18,242,228,.4); }
+  .btn.alt { background: rgba(255,255,255,.09); color: #dbe6ff; box-shadow: none; border: 1px solid rgba(255,255,255,.14); }
+  .btn + .btn { margin-top: 8px; }
+
+  /* modal */
+  .modal { position: fixed; inset: 0; background: rgba(3,4,12,.86); z-index: 30; display: none;
+    place-items: center; padding: 18px; backdrop-filter: blur(6px); }
+  .modal.open { display: grid; }
+  .panel { background: var(--panel); border: 1px solid rgba(255,255,255,.14); border-radius: 18px;
+    padding: 24px; max-width: 620px; width: 100%; max-height: 88vh; overflow-y: auto; }
+  .panel h2 { margin: 0 0 12px; font-size: 23px; font-weight: 900; }
+  .panel p { color: #b9c7e6; font-size: 14px; line-height: 1.55; margin: 8px 0; }
+  textarea { width: 100%; background: #060814; color: var(--cyan); border: 1px solid rgba(255,255,255,.16);
+    border-radius: 10px; padding: 10px; font-family: ui-monospace, monospace; font-size: 12px; resize: vertical; }
+  .lb { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 13.5px; }
+  .lb th { text-align: left; font-size: 10px; letter-spacing: .2em; color: #7f93bd; padding: 6px 8px; }
+  .lb td { padding: 8px; border-top: 1px solid rgba(255,255,255,.08); }
+  .lb tr.me td { background: rgba(18,242,228,.1); font-weight: 800; }
+  .lb td.t { font-family: ui-monospace, monospace; text-align: right; }
+
+  /* results */
+  #results .panel { max-width: 560px; text-align: center; }
+  #medal { font-size: 62px; line-height: 1; }
+  #rtime { font-size: 46px; font-weight: 900; letter-spacing: -.03em; margin: 4px 0; }
+  #rsub { color: #9fb3d9; font-size: 14px; margin-bottom: 12px; }
+  #portrait { width: 108px; height: 108px; border-radius: 50%; margin: 0 auto 8px;
+    border: 3px solid rgba(18,242,228,.6); box-shadow: 0 0 26px rgba(18,242,228,.4); }
+  .splits { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; margin: 12px 0; }
+  .splits span { font-size: 11.5px; padding: 4px 9px; border-radius: 7px; background: rgba(255,255,255,.07);
+    font-family: ui-monospace, monospace; }
+
+  /* touch */
+  #touch { position: fixed; inset: 0; z-index: 8; display: none; pointer-events: none; }
+  #touch button { position: absolute; bottom: 0; pointer-events: auto; border: none; color: #fff;
+    background: rgba(255,255,255,.1); backdrop-filter: blur(3px); font-size: 22px; font-weight: 800; }
+  #t-left  { left: 0; width: 24vw; height: 34vh; border-radius: 0 24px 0 0; }
+  #t-right { left: 24vw; width: 24vw; height: 34vh; border-radius: 24px 0 0 0; }
+  #t-drift { right: 0; width: 26vw; height: 20vh; border-radius: 24px 0 0 0; background: rgba(255,47,168,.24); }
+  #t-gas   { right: 0; bottom: 20vh; width: 26vw; height: 20vh; border-radius: 24px 0 0 24px; background: rgba(18,242,228,.22); }
+
+  #demo-banner { position: fixed; left: 0; right: 0; bottom: 0; z-index: 25; display: none;
+    align-items: center; justify-content: center; gap: 14px; padding: 9px 14px;
+    background: rgba(6,8,20,.94); border-top: 1px solid rgba(255,255,255,.14); font-size: 13px; }
+  #demo-banner a { color: #04121a; background: var(--cyan); padding: 7px 15px; border-radius: 99px;
+    font-weight: 800; text-decoration: none; }
+  .iconbtn { background: rgba(10,12,26,.8); color: #fff; border: 1px solid rgba(255,255,255,.14);
+    border-radius: 99px; padding: 8px 14px; font-weight: 700; font-size: 13px; cursor: pointer; }
+  #topright { position: fixed; top: 12px; left: 12px; z-index: 15; display: flex; gap: 7px; }
+  @media (max-width: 640px) {
+    #mapbox { width: 92px; height: 92px; } #pos { top: 110px; } #pos .p { font-size: 30px; }
+    #curtime { font-size: 30px; } #speedbox { width: 168px; height: 140px; } #spdnum { font-size: 40px; }
+    #gauge { width: 168px; height: 110px; } #nitrowrap { width: 168px; } #spd { bottom: 58px; }
+    #lapwrap { width: 40vw; }
+  }
+</style>
+</head>
+<body>
+
+<canvas id="fx"></canvas>
+
+<div id="topright">
+  <button class="iconbtn" id="garage-btn">🔧 Garage</button>
+  <button class="iconbtn" id="online-btn">🌍 Online</button>
+  <button class="iconbtn" id="mute-btn">🔊</button>
+  <button class="iconbtn" id="help-btn">❓</button>
+</div>
+
+<!-- ------------------------------------------------------------------ HUD -->
+<div id="hud">
+  <div id="lapwrap">
+    <div class="lbl">LAP PROGRESS</div>
+    <div id="lapbar"><div id="lapfill"></div><div id="lapdot" style="left:0%"></div></div>
+    <div id="lapmeta"><span id="lapnum" class="mono">LAP 1/3</span><span id="lappct" class="mono">0%</span></div>
+  </div>
+
+  <div id="mapbox"><canvas id="minimap" width="256" height="256"></canvas></div>
+  <div id="pos"><div class="p mono" id="posnum">1</div><div class="of" id="posof">OF 4</div></div>
+
+  <div id="timing">
+    <canvas id="hudface" width="128" height="128"></canvas>
+    <div id="curtime" class="mono">0:00.000</div>
+    <div id="besttime" class="mono">BEST —</div>
+    <div id="delta" class="mono">+0.000</div>
+  </div>
+
+  <div id="speedbox">
+    <svg id="gauge" viewBox="0 0 210 138">
+      <path d="M14 126 A 96 96 0 0 1 196 126" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="9" stroke-linecap="round"/>
+      <path id="gaugefill" d="M14 126 A 96 96 0 0 1 196 126" fill="none" stroke="url(#gg)" stroke-width="9"
+            stroke-linecap="round" stroke-dasharray="286" stroke-dashoffset="286"/>
+      <defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#12F2E4"/><stop offset=".55" stop-color="#8B5CF6"/><stop offset="1" stop-color="#FF2FA8"/>
+      </linearGradient></defs>
+    </svg>
+    <div id="spd"><div id="spdnum" class="mono">0</div><div id="spdunit">KM / H</div></div>
+    <div id="gear" class="mono">1</div>
+    <div id="nitrowrap"><div class="lbl">NITRO</div><div id="nitro"><div id="nitrofill"></div></div></div>
+  </div>
+
+  <div id="driftlbl">DRIFT</div>
+  <div id="bigmsg"><div id="bigtext"></div></div>
+  <div id="toast"></div>
+</div>
+
+<!-- --------------------------------------------------------------- TITLE -->
+<div class="screen on" id="title">
+  <div>
+    <h1><span class="a">NEON</span> <span class="b">DRIFT RACERS</span></h1>
+    <p>Drift the neon city at 300 km/h. Build your driver, chase the perfect lap, and race the world's ghosts with shareable Race Codes.</p>
+    <button class="cta" id="title-go">▶ ENTER THE GARAGE</button>
+  </div>
+</div>
+
+<!-- -------------------------------------------------------------- GARAGE -->
+<div class="screen" id="garage">
+  <div id="gpanel">
+    <h2>GARAGE</h2>
+    <div class="sub">Build your driver. Pick your machine. Take the city.</div>
+
+    <div id="gfacewrap">
+      <canvas id="gface" width="256" height="256"></canvas>
+      <div>
+        <div id="gfacelbl">YOUR DRIVER</div>
+        <div id="gfacenote">Their face reacts live as you race — focused, gritted teeth mid-drift, grinning on boost, wincing off a wall.</div>
+      </div>
+    </div>
+
+    <div class="sec"><div class="h">DRIVER NAME</div>
+      <input id="pname" maxlength="12" placeholder="Your name"
+             style="width:100%;padding:10px;border-radius:10px;background:rgba(255,255,255,.07);
+                    border:1px solid rgba(255,255,255,.14);color:#fff;font-size:14px;font-weight:700">
+    </div>
+
+    <div class="sec"><div class="h">FACE</div><div class="chips" id="c-face"></div></div>
+    <div class="sec"><div class="h">SKIN</div><div class="chips" id="c-skin"></div></div>
+    <div class="sec"><div class="h">HAIR</div><div class="chips" id="c-hair"></div></div>
+    <div class="sec"><div class="h">HAIR COLOUR</div><div class="chips" id="c-haircol"></div></div>
+    <div class="sec"><div class="h">HEADGEAR</div><div class="chips" id="c-gear"></div></div>
+    <div class="sec"><div class="h">RACING SUIT</div><div class="chips" id="c-suit"></div></div>
+    <div class="sec"><div class="h">SUIT TRIM</div><div class="chips" id="c-trim"></div></div>
+
+    <div class="sec"><div class="h">MACHINE</div><div class="chips" id="c-car"></div></div>
+    <div class="sec"><div class="h">PAINT</div><div class="chips" id="c-paint"></div></div>
+
+    <div class="sec"><div class="h">CIRCUIT</div><div id="c-track"></div></div>
+
+    <button class="btn" id="race-btn">🏁 RACE</button>
+    <button class="btn alt" id="ta-btn">⏱️ TIME ATTACK (ghosts only)</button>
+  </div>
+</div>
+
+<!-- ------------------------------------------------------------- RESULTS -->
+<div class="modal" id="results">
+  <div class="panel">
+    <canvas id="portrait" width="216" height="216"></canvas>
+    <div id="medal">🏆</div>
+    <div id="rtime" class="mono">0:00.000</div>
+    <div id="rsub">Best lap</div>
+    <div class="splits" id="rsplits"></div>
+    <table class="lb" id="rlb"><thead><tr><th>#</th><th>RACER</th><th style="text-align:right">BEST LAP</th></tr></thead><tbody></tbody></table>
+    <div style="margin-top:16px">
+      <button class="btn" id="again-btn">🔄 RACE AGAIN</button>
+      <button class="btn alt" id="share-btn">🌍 COPY MY RACE CODE</button>
+      <button class="btn alt" id="togarage-btn">🔧 BACK TO GARAGE</button>
+    </div>
+  </div>
+</div>
+
+<!-- -------------------------------------------------------------- ONLINE -->
+<div class="modal" id="online">
+  <div class="panel">
+    <h2>🌍 Race the World</h2>
+    <p>No servers, no accounts. Your lap becomes a <b>Race Code</b> — send it to anyone on Earth and they race your ghost. Paste theirs to put them on your track.</p>
+    <p style="margin-top:14px"><b>Your Race Code</b></p>
+    <textarea id="my-code" rows="3" readonly></textarea>
+    <button class="btn" id="copy-code" style="margin-top:8px">📋 Copy my Race Code</button>
+    <p style="margin-top:18px"><b>Add a rival</b> — paste their Race Code:</p>
+    <textarea id="their-code" rows="3" placeholder="RC1…"></textarea>
+    <button class="btn" id="add-code" style="margin-top:8px">➕ Add rival ghost</button>
+    <h2 style="margin-top:22px;font-size:18px">🏅 Leaderboard</h2>
+    <table class="lb" id="lb"><thead><tr><th>#</th><th>RACER</th><th>CIRCUIT</th><th style="text-align:right">BEST LAP</th></tr></thead><tbody></tbody></table>
+    <button class="btn alt" id="online-close" style="margin-top:16px">Close</button>
+  </div>
+</div>
+
+<!-- ---------------------------------------------------------------- HELP -->
+<div class="modal" id="help">
+  <div class="panel">
+    <h2>How to race</h2>
+    <p>🏎️ <b>Drive:</b> <b>W</b> / ↑ throttle · <b>S</b> / ↓ brake · <b>A D</b> / ← → steer. <b>R</b> respawns you.</p>
+    <p>💨 <b>Drift &amp; boost — the heart of the game:</b> hold <b>SHIFT</b> (or SPACE) while turning to break traction. The longer you hold the drift, the bigger the charge: <span style="color:#7ff6ee">BLUE</span> → <span style="color:#c58af0">VIOLET</span> → <span style="color:#ff86c8">PINK</span>. Let go to fire the boost. Chaining drifts through every corner is how you win.</p>
+    <p>⚡ <b>Nitro:</b> fills as you drift and slipstream behind rivals. Press <b>SPACE</b> on a full bar for an overtake burst.</p>
+    <p>⏱️ <b>The delta:</b> the number under your lap time is how far ahead (cyan) or behind (pink) your personal best you are, right now. Chase the green.</p>
+    <p>🌍 <b>Race the world:</b> finish a lap and your run becomes a Race Code. Trade codes with anyone — their ghost appears on your track and you race them for real.</p>
+    <button class="btn" id="help-close">LET'S RACE</button>
+  </div>
+</div>
+
+<div id="touch">
+  <button id="t-left">◀</button><button id="t-right">▶</button>
+  <button id="t-gas">GAS</button><button id="t-drift">DRIFT</button>
+</div>
+
+<div id="demo-banner">
+  <span>🏁 Free demo — 1 circuit, 2 machines. Full game: 3 circuits, 6 machines, full driver creator.</span>
+  <a id="buy-full" href="#">Get the full game</a>
+</div>
+
+<script>window.GAME_CONFIG = { mode: "full", buyLink: "" };</script>
+<script src="three.min.js"></script>
+<script src="game.js"></script>
+<script>
+  if ("serviceWorker" in navigator && location.protocol === "https:") {
+    navigator.serviceWorker.register("sw.js").catch(function () {});
+  }
+</script>
+</body>
+</html>
