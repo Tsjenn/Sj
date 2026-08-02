@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clarity Templates — Budget, Invoice & Planner Templates</title>
+<meta name="description" content="Instant-download templates that organize your money, freelance work, and goals. Budget tracker, invoice kit, and printable planner. Works worldwide, any currency.">
+<meta property="og:title" content="Clarity Templates — Budget, Invoice & Planner Templates">
+<meta property="og:description" content="Instant-download templates to organize your money, work, and goals. Any currency, any country.">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --accent: #2A6F6A;
+    --accent-dark: #1E524E;
+    --accent-light: #E4F0EF;
+    --ink: #26282B;
+    --grey: #6B7280;
+    --bg: #FAFAF8;
+    --card: #FFFFFF;
+    --border: #E5E7EB;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  header {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 10;
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+  .logo { font-weight: 800; font-size: 1.25rem; color: var(--accent); text-decoration: none; }
+  .nav a.cta { background: var(--accent); color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: .95rem; }
+  .nav a.cta:hover { background: var(--accent-dark); }
+
+  #setup-banner {
+    display: none;
+    background: #FEF3C7; color: #92400E;
+    padding: 10px 24px; text-align: center; font-size: .9rem;
+  }
+
+  .hero { text-align: center; padding: 84px 0 64px; }
+  .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; font-weight: 800; letter-spacing: -.02em; }
+  .hero h1 span { color: var(--accent); }
+  .hero p { max-width: 640px; margin: 20px auto 0; font-size: 1.15rem; color: var(--grey); }
+  .hero .actions { margin-top: 32px; }
+  .btn {
+    display: inline-block; background: var(--accent); color: #fff;
+    padding: 14px 32px; border-radius: 10px; text-decoration: none;
+    font-weight: 700; font-size: 1.05rem;
+  }
+  .btn:hover { background: var(--accent-dark); }
+  .hero .note { margin-top: 14px; font-size: .85rem; color: var(--grey); }
+
+  .strip { background: var(--accent-light); padding: 28px 0; }
+  .strip .wrap { display: flex; flex-wrap: wrap; gap: 16px 40px; justify-content: center; font-size: .95rem; font-weight: 600; color: var(--accent-dark); }
+
+  section.products { padding: 72px 0; }
+  h2.section { text-align: center; font-size: 2rem; font-weight: 800; letter-spacing: -.01em; }
+  p.section-sub { text-align: center; color: var(--grey); margin: 10px auto 48px; max-width: 560px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+    padding: 28px; display: flex; flex-direction: column;
+  }
+  .card.featured { border: 2px solid var(--accent); position: relative; }
+  .card.featured .badge {
+    position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+    background: var(--accent); color: #fff; font-size: .75rem; font-weight: 700;
+    padding: 3px 14px; border-radius: 999px; white-space: nowrap;
+  }
+  .card .emoji { font-size: 2rem; }
+  .card h3 { margin: 12px 0 4px; font-size: 1.2rem; }
+  .card .price { font-size: 1.6rem; font-weight: 800; color: var(--accent); margin-bottom: 12px; }
+  .card ul { list-style: none; margin: 0 0 20px; flex: 1; }
+  .card li { padding: 5px 0 5px 26px; position: relative; font-size: .93rem; color: #3F4247; }
+  .card li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+  .card .buy {
+    display: block; text-align: center; background: var(--accent); color: #fff;
+    padding: 12px; border-radius: 9px; text-decoration: none; font-weight: 700;
+  }
+  .card .buy:hover { background: var(--accent-dark); }
+  .card .buy.disabled { background: #C7CBD1; pointer-events: none; }
+
+  section.how { background: var(--card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 72px 0; }
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; margin-top: 40px; }
+  .step { text-align: center; }
+  .step .num {
+    width: 44px; height: 44px; border-radius: 50%; background: var(--accent-light);
+    color: var(--accent-dark); font-weight: 800; display: flex; align-items: center;
+    justify-content: center; margin: 0 auto 14px; font-size: 1.1rem;
+  }
+  .step h4 { margin-bottom: 6px; }
+  .step p { font-size: .92rem; color: var(--grey); }
+
+  section.faq { padding: 72px 0; max-width: 760px; margin: 0 auto; }
+  details {
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 18px 22px; margin-bottom: 12px;
+  }
+  summary { font-weight: 700; cursor: pointer; }
+  details p { margin-top: 10px; color: var(--grey); font-size: .95rem; }
+
+  footer { background: var(--ink); color: #B8BCC2; padding: 40px 0; text-align: center; font-size: .9rem; }
+  footer a { color: #fff; }
+</style>
+</head>
+<body>
+
+<div id="setup-banner">
+  ⚠️ Store not live yet: paste your Gumroad payment links into <code>site/config.js</code>. Buy buttons are disabled until then. (Only you see working buttons after that — this banner disappears automatically.)
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#" id="brand">Clarity Templates</a>
+    <a class="cta" href="#products">Browse templates</a>
+  </div>
+</header>
+
+<section class="hero wrap">
+  <h1>Get your money, work &amp; goals <span>organized today</span></h1>
+  <p id="tagline">Instant-download templates that do the setup for you. Open, type your numbers, done — no apps to learn, no subscriptions to pay.</p>
+  <div class="actions"><a class="btn" href="#products">See the templates</a></div>
+  <p class="note">Instant digital download · Works in Excel &amp; Google Sheets · Any currency, any country</p>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <span>⚡ Instant download</span>
+    <span>🌍 Works worldwide</span>
+    <span>💱 Currency-neutral</span>
+    <span>🔁 Free lifetime updates</span>
+    <span>🔒 Secure checkout via Gumroad</span>
+  </div>
+</div>
+
+<section class="products wrap" id="products">
+  <h2 class="section">The templates</h2>
+  <p class="section-sub">Each one is ready in minutes: yellow cells show exactly where to type, everything else calculates itself.</p>
+  <div class="grid">
+
+    <div class="card">
+      <div class="emoji">💰</div>
+      <h3>Budget &amp; Savings Tracker</h3>
+      <div class="price" data-price="budget"></div>
+      <ul>
+        <li>Monthly budget with planned vs. actual</li>
+        <li>Expense log that auto-totals by category</li>
+        <li>Savings goals with progress bars</li>
+        <li>Net &amp; savings-rate summary</li>
+        <li>Excel + Google Sheets compatible</li>
+      </ul>
+      <a class="buy" data-link="budget" href="#">Buy now</a>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🧾</div>
+      <h3>Freelancer Invoice Kit</h3>
+      <div class="price" data-price="invoice"></div>
+      <ul>
+        <li>Professional invoice — print or PDF</li>
+        <li>Auto-calculated totals &amp; tax</li>
+        <li>Invoice log: paid vs. outstanding</li>
+        <li>Client tracker included</li>
+        <li>Excel + Google Sheets compatible</li>
+      </ul>
+      <a class="buy" data-link="invoice" href="#">Buy now</a>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🎯</div>
+      <h3>The Focus Planner</h3>
+      <div class="price" data-price="planner"></div>
+      <ul>
+        <li>Undated — start any day, reuse forever</li>
+        <li>Yearly &amp; monthly goal pages</li>
+        <li>31-day habit tracker grid</li>
+        <li>Weekly planner + reflection pages</li>
+        <li>Printable PDF in A4 &amp; US Letter</li>
+      </ul>
+      <a class="buy" data-link="planner" href="#">Buy now</a>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🎮</div>
+      <h3>Critter Isles <span style="font-size:.75rem; background:var(--accent-light); color:var(--accent-dark); padding:2px 8px; border-radius:999px; vertical-align:middle;">3D game</span></h3>
+      <div class="price" data-price="game"></div>
+      <ul>
+        <li>Cozy 3D creature-catching adventure</li>
+        <li>Explore an island, catch all 8 critters</li>
+        <li>Runs in any browser — no install</li>
+        <li>Desktop &amp; mobile, works offline</li>
+        <li><a href="play/" style="color:var(--accent); font-weight:700">▶ Play the free demo</a></li>
+      </ul>
+      <a class="buy" data-link="game" href="#">Buy the full game</a>
+    </div>
+
+    <div class="card featured">
+      <div class="badge">Best value — save 32%</div>
+      <div class="emoji">📦</div>
+      <h3>Complete Bundle</h3>
+      <div class="price" data-price="bundle"></div>
+      <ul>
+        <li>All three templates included</li>
+        <li>Budget Tracker + Invoice Kit + Planner</li>
+        <li>One payment, lifetime access</li>
+        <li>Free lifetime updates</li>
+      </ul>
+      <a class="buy" data-link="bundle" href="#">Get the bundle</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <h2 class="section">How it works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h4>Buy securely</h4>
+        <p>Checkout is handled by Gumroad — cards, PayPal and more, in your local currency.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h4>Download instantly</h4>
+        <p>Your files arrive by email the moment payment completes. No waiting, no shipping.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h4>Use it in minutes</h4>
+        <p>Every template has a Start Here page and example row — type your numbers and go.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <h2 class="section">Questions, answered</h2>
+  <p class="section-sub"></p>
+  <details>
+    <summary>Do these work with Google Sheets or only Excel?</summary>
+    <p>Both. The spreadsheets open in Microsoft Excel, Google Sheets (upload via Google Drive), LibreOffice, and Apple Numbers. The planner is a standard PDF that any device can open and print.</p>
+  </details>
+  <details>
+    <summary>I'm not in the US — will these work for me?</summary>
+    <p>Yes. All templates are currency-neutral (plain numbers, no fixed currency symbol) and the planner is undated, so they work in any country. The planner PDF ships in both A4 and US Letter sizes.</p>
+  </details>
+  <details>
+    <summary>How do I get my files?</summary>
+    <p>Instantly after purchase — a download link is sent to your email and shown on the confirmation page. You keep lifetime access and can re-download any time.</p>
+  </details>
+  <details>
+    <summary>What if I have a problem with my file?</summary>
+    <p>Reply to your purchase receipt email and we'll make it right — a fixed file or your money back.</p>
+  </details>
+  <details>
+    <summary>Can I share the files with friends?</summary>
+    <p>Each purchase is for your own personal or business use. Sharing or reselling the files isn't permitted — but you can print and reuse them for yourself forever.</p>
+  </details>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong id="brand-footer" style="color:#fff">Clarity Templates</strong></p>
+    <p style="margin-top:6px">Questions? <a id="support-link" href="#">Email us</a></p>
+    <p style="margin-top:14px; font-size:.8rem">© <span id="year"></span> — All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script>
+  (function () {
+    var S = window.STORE || { products: {} };
+    if (S.name) {
+      document.getElementById("brand").textContent = S.name;
+      document.getElementById("brand-footer").textContent = S.name;
+      document.title = S.name + " — Budget, Invoice & Planner Templates";
+    }
+    if (S.tagline) document.getElementById("tagline").textContent = S.tagline;
+    if (S.supportEmail) {
+      document.getElementById("support-link").href = "mailto:" + S.supportEmail;
+    }
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    var anyPlaceholder = false;
+    Object.keys(S.products || {}).forEach(function (key) {
+      var p = S.products[key];
+      var priceEl = document.querySelector('[data-price="' + key + '"]');
+      var linkEl = document.querySelector('[data-link="' + key + '"]');
+      if (priceEl && p.price) priceEl.textContent = p.price;
+      if (linkEl) {
+        if (p.link && p.link.indexOf("SET-ME") === -1) {
+          linkEl.href = p.link;
+        } else {
+          linkEl.classList.add("disabled");
+          linkEl.textContent = "Coming soon";
+          anyPlaceholder = true;
+        }
+      }
+    });
+    if (anyPlaceholder) {
+      document.getElementById("setup-banner").style.display = "block";
+    }
+  })();
+</script>
+</body>
+</html>
