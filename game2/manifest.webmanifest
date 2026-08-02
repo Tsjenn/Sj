@@ -1,0 +1,24 @@
+{
+  "name": "Wildhaven: Creature Park",
+  "short_name": "Wildhaven",
+  "description": "Catch wild creatures, build your own creature park, grow to 5 stars.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#9fd8ef",
+  "theme_color": "#B4652F",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
