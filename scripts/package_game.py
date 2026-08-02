@@ -18,6 +18,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GAME = os.path.join(ROOT, "game")
 PLAY = os.path.join(ROOT, "site", "play")
 
+# Standalone demo config for the itch.io browser embed: no ../config.js
+# dependency, and no upgrade banner (on itch the Buy button is on the page).
+ITCH_DEMO_CONFIG = '<script>window.GAME_CONFIG = { mode: "demo", buyLink: "" };</script>'
+
 DEMO_CONFIG = """<script src="../config.js"></script>
 <script>
   var _g = (window.STORE && window.STORE.products && window.STORE.products.game) || {};
@@ -70,7 +74,25 @@ def main():
         for name in ("index.html", "game.js", "three.min.js"):
             z.write(os.path.join(GAME, name), "Critter-Isles/" + name)
         z.writestr("Critter-Isles/README.txt", BUYER_README)
-    print("Packaged demo -> site/play/ and full game ->", zpath)
+
+    # --- itch.io builds: index.html must be at the ZIP ROOT for browser play ---
+    itch_full = os.path.join(dist, "Critter-Isles-itch-full.zip")
+    with zipfile.ZipFile(itch_full, "w", zipfile.ZIP_DEFLATED) as z:
+        for name in ("index.html", "game.js", "three.min.js"):
+            z.write(os.path.join(GAME, name), name)
+        z.writestr("README.txt", BUYER_README)
+
+    itch_demo_html = html.replace(FULL_CONFIG, ITCH_DEMO_CONFIG)
+    itch_demo_html = itch_demo_html.replace(
+        "Critter Isles — Full Version", "Critter Isles — Demo")
+    itch_demo = os.path.join(dist, "Critter-Isles-itch-demo.zip")
+    with zipfile.ZipFile(itch_demo, "w", zipfile.ZIP_DEFLATED) as z:
+        z.writestr("index.html", itch_demo_html)
+        for name in ("game.js", "three.min.js"):
+            z.write(os.path.join(GAME, name), name)
+
+    print("Packaged demo -> site/play/, full game ->", zpath)
+    print("itch.io builds ->", itch_full, "and", itch_demo)
 
 
 if __name__ == "__main__":
