@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+<title>Rested — Sleep Tracker &amp; Sounds</title>
+<meta name="theme-color" content="#070A14">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Rested">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<style>
+  :root {
+    --bg: #070A14;
+    --card: #111623;
+    --card2: #171D2E;
+    --ink: #E9EDF8;
+    --muted: #8894AE;
+    --dim: #5A6580;
+    --accent: #F2A65A;
+    --accent2: #E8845C;
+    --deep: #3F5FD6;
+    --lightx: #4FB6E0;
+    --rem: #A874EE;
+    --awake: #EDF1FB;
+    --good: #4ED8A0;
+    --bad: #F27272;
+    --line: rgba(255,255,255,.08);
+    --safe-b: env(safe-area-inset-bottom, 0px);
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body {
+    margin: 0; min-height: 100%; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased; overscroll-behavior-y: none;
+  }
+  body { padding-bottom: calc(78px + var(--safe-b)); }
+  .mono { font-variant-numeric: tabular-nums; }
+  button { font-family: inherit; }
+
+  /* ------------------------------------------------------------- shell */
+  .view { display: none; padding: 18px 18px 8px; max-width: 620px; margin: 0 auto; }
+  .view.on { display: block; }
+  .head { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 4px; }
+  h1 { font-size: 34px; font-weight: 800; letter-spacing: -.028em; margin: 6px 0 2px; }
+  .sub { color: var(--muted); font-size: 14px; margin-bottom: 18px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 20px;
+    padding: 18px; margin-bottom: 14px; }
+  .card h3 { margin: 0 0 3px; font-size: 16px; font-weight: 700; }
+  .card .note { color: var(--muted); font-size: 13px; line-height: 1.5; }
+  .lbl { font-size: 11px; letter-spacing: .18em; color: var(--dim); font-weight: 700; text-transform: uppercase; }
+
+  .btn { width: 100%; padding: 16px; border-radius: 16px; border: none; font-size: 16px;
+    font-weight: 700; cursor: pointer; color: #1A1206;
+    background: linear-gradient(96deg, var(--accent), var(--accent2)); }
+  .btn.ghost { background: var(--card2); color: var(--ink); border: 1px solid var(--line); }
+  .btn.sm { padding: 11px 16px; width: auto; font-size: 14px; border-radius: 12px; }
+  .btn + .btn { margin-top: 9px; }
+  .row { display: flex; gap: 9px; align-items: center; }
+  .row.wrap { flex-wrap: wrap; }
+  .spread { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+
+  .chip { padding: 9px 14px; border-radius: 999px; background: var(--card2); color: var(--muted);
+    border: 1px solid var(--line); font-size: 13.5px; font-weight: 600; cursor: pointer; }
+  .chip.on { background: rgba(242,166,90,.16); border-color: var(--accent); color: var(--accent); }
+
+  input[type=time], select {
+    background: var(--card2); color: var(--ink); border: 1px solid var(--line);
+    border-radius: 12px; padding: 11px 13px; font-size: 16px; font-family: inherit;
+    font-variant-numeric: tabular-nums;
+  }
+  input[type=range] { width: 100%; accent-color: var(--accent); }
+  .switch { position: relative; width: 50px; height: 30px; border-radius: 999px;
+    background: var(--card2); border: 1px solid var(--line); cursor: pointer; flex: none; }
+  .switch::after { content: ""; position: absolute; top: 3px; left: 3px; width: 22px; height: 22px;
+    border-radius: 50%; background: var(--dim); transition: .18s; }
+  .switch.on { background: rgba(242,166,90,.25); border-color: var(--accent); }
+  .switch.on::after { left: 23px; background: var(--accent); }
+
+  /* --------------------------------------------------------- tonight */
+  #ring-wrap { display: flex; align-items: center; gap: 20px; }
+  .ringbox { position: relative; width: 132px; height: 132px; flex: none; }
+  .ringbox svg { transform: rotate(-90deg); }
+  .ringbox .mid { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; }
+  .ringbox .val { font-size: 32px; font-weight: 800; letter-spacing: -.03em; line-height: 1; }
+  .ringbox .val span { font-size: 15px; font-weight: 700; }
+  .ringbox .cap { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .bigstat { font-size: 30px; font-weight: 800; letter-spacing: -.02em; line-height: 1.1; }
+  .bigstat small { display: block; font-size: 13px; color: var(--muted); font-weight: 500;
+    letter-spacing: 0; margin-top: 1px; }
+
+  .weekdots { display: flex; justify-content: space-between; gap: 4px; margin: 4px 0 16px; }
+  .wd { flex: 1; text-align: center; }
+  .wd .d { width: 100%; aspect-ratio: 1; max-width: 42px; margin: 0 auto; border-radius: 50%;
+    border: 2px solid var(--line); display: grid; place-items: center; font-size: 12px;
+    color: var(--dim); font-weight: 700; position: relative; }
+  .wd .d.has { border-color: var(--accent); color: var(--ink); }
+  .wd .d.today { box-shadow: 0 0 0 2px rgba(242,166,90,.35); }
+
+  /* ------------------------------------------------------- night mode */
+  #night { position: fixed; inset: 0; background: #000; z-index: 60; display: none;
+    flex-direction: column; align-items: center; justify-content: center; color: #6A7590;
+    transition: opacity .8s; }
+  #night.on { display: flex; }
+  #night.dim { opacity: .30; }
+  #nclock { font-size: clamp(58px, 20vw, 128px); font-weight: 200; letter-spacing: -.03em;
+    font-variant-numeric: tabular-nums; }
+  #nsub { font-size: 14px; margin-top: 4px; }
+  #nwave { width: min(88vw, 480px); height: 70px; margin-top: 26px; opacity: .8; }
+  #nfoot { position: absolute; bottom: calc(28px + var(--safe-b)); text-align: center; font-size: 13px; }
+  #stop-btn { margin-top: 16px; background: rgba(255,255,255,.07); color: #93A0BC;
+    border: 1px solid rgba(255,255,255,.12); border-radius: 999px; padding: 11px 26px;
+    font-size: 14px; font-weight: 700; cursor: pointer; }
+
+  /* ---------------------------------------------------------- alarm */
+  #alarm-screen { position: fixed; inset: 0; z-index: 70; display: none;
+    background: linear-gradient(170deg, #2A1B10, #0A0C16 60%);
+    flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px; }
+  #alarm-screen.on { display: flex; }
+  #alarm-sun { width: 128px; height: 128px; border-radius: 50%;
+    background: radial-gradient(circle at 50% 45%, #FFD9A0, var(--accent) 60%, rgba(242,166,90,0) 72%);
+    animation: pulse 2.6s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { transform: scale(1); opacity: .9 } 50% { transform: scale(1.09); opacity: 1 } }
+
+  /* --------------------------------------------------------- charts */
+  canvas.chart { width: 100%; display: block; }
+  .legend { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 12px; }
+  .legend div { display: flex; align-items: center; gap: 7px; font-size: 13.5px; color: var(--muted); }
+  .legend i { width: 10px; height: 10px; border-radius: 3px; display: block; }
+  .legend b { color: var(--ink); font-variant-numeric: tabular-nums; }
+
+  .segbar { display: flex; background: var(--card2); border-radius: 12px; padding: 3px; gap: 3px; }
+  .segbar button { flex: 1; padding: 9px; border-radius: 9px; border: none; background: transparent;
+    color: var(--muted); font-size: 13.5px; font-weight: 700; cursor: pointer; }
+  .segbar button.on { background: var(--ink); color: #0B0F1A; }
+
+  /* ---------------------------------------------------------- tabbar */
+  #tabs { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+    background: rgba(10,13,22,.93); backdrop-filter: blur(14px); border-top: 1px solid var(--line);
+    display: flex; padding: 8px 6px calc(8px + var(--safe-b)); }
+  #tabs button { flex: 1; background: none; border: none; color: var(--dim); cursor: pointer;
+    display: flex; flex-direction: column; align-items: center; gap: 3px; font-size: 10.5px;
+    font-weight: 700; letter-spacing: .02em; padding: 4px 0; }
+  #tabs button.on { color: var(--accent); }
+  #tabs svg { width: 23px; height: 23px; }
+
+  /* ---------------------------------------------------------- misc */
+  .modal { position: fixed; inset: 0; background: rgba(4,6,12,.86); z-index: 80; display: none;
+    align-items: flex-end; justify-content: center; backdrop-filter: blur(5px); }
+  .modal.on { display: flex; }
+  .sheet { background: var(--card); border: 1px solid var(--line); border-top-left-radius: 24px;
+    border-top-right-radius: 24px; padding: 22px 20px calc(22px + var(--safe-b));
+    width: 100%; max-width: 620px; max-height: 88vh; overflow-y: auto; }
+  .sheet h2 { margin: 0 0 10px; font-size: 21px; font-weight: 800; }
+  .sheet p { color: var(--muted); font-size: 14px; line-height: 1.6; }
+  #toast { position: fixed; left: 50%; top: calc(12px + env(safe-area-inset-top, 0px)); transform: translateX(-50%);
+    background: var(--card2); border: 1px solid var(--line); padding: 11px 18px; border-radius: 999px;
+    font-size: 13.5px; font-weight: 600; z-index: 90; opacity: 0; transition: opacity .25s;
+    pointer-events: none; white-space: nowrap; max-width: 92vw; overflow: hidden; text-overflow: ellipsis; }
+  #toast.on { opacity: 1; }
+  .empty { text-align: center; color: var(--dim); font-size: 14px; padding: 26px 10px; line-height: 1.6; }
+  .insight { display: flex; gap: 12px; align-items: flex-start; padding: 13px 0; border-top: 1px solid var(--line); }
+  .insight:first-child { border-top: none; padding-top: 4px; }
+  .insight .ic { font-size: 20px; line-height: 1.2; flex: none; }
+  .insight .tx { font-size: 14px; line-height: 1.55; }
+  .insight .tx b { color: var(--accent); }
+  .disclaimer { font-size: 11.5px; color: var(--dim); line-height: 1.55; margin-top: 10px; }
+  #premium-banner { display: none; background: linear-gradient(96deg, rgba(242,166,90,.18), rgba(168,116,238,.14));
+    border: 1px solid rgba(242,166,90,.3); border-radius: 18px; padding: 15px 16px; margin-bottom: 14px; }
+</style>
+</head>
+<body>
+
+<!-- ================================================================ TONIGHT -->
+<section class="view on" id="v-sleep">
+  <div id="premium-banner">
+    <div class="spread">
+      <div>
+        <div style="font-weight:800;font-size:15px">Rested Pro</div>
+        <div class="note" style="font-size:12.5px">Unlimited history, all soundscapes, insights</div>
+      </div>
+      <a class="btn sm" id="buy-btn" href="#" style="text-decoration:none;text-align:center">Unlock</a>
+    </div>
+  </div>
+
+  <div class="head">
+    <div>
+      <h1 id="greet">Tonight</h1>
+      <div class="sub" id="greet-sub">Track your night and wake up gently.</div>
+    </div>
+  </div>
+
+  <div class="weekdots" id="weekdots"></div>
+
+  <div class="card" id="last-night" style="display:none">
+    <div class="spread" style="margin-bottom:14px">
+      <h3 style="margin:0">Last night</h3>
+      <button class="chip" id="see-report">Full report</button>
+    </div>
+    <div id="ring-wrap">
+      <div class="ringbox">
+        <svg width="132" height="132" viewBox="0 0 132 132">
+          <circle cx="66" cy="66" r="56" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="11"/>
+          <circle id="qring" cx="66" cy="66" r="56" fill="none" stroke="url(#qg)" stroke-width="11"
+                  stroke-linecap="round" stroke-dasharray="352" stroke-dashoffset="352"/>
+          <defs><linearGradient id="qg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#F2A65A"/><stop offset="1" stop-color="#E8845C"/>
+          </linearGradient></defs>
+        </svg>
+        <div class="mid"><div>
+          <div class="val mono" id="q-val">—<span>%</span></div>
+          <div class="cap">Quality</div>
+        </div></div>
+      </div>
+      <div style="flex:1">
+        <div class="bigstat mono" id="s-inbed">—<small>In bed</small></div>
+        <div class="bigstat mono" id="s-asleep" style="margin-top:12px">—<small>Asleep</small></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="spread">
+      <div>
+        <h3>Alarm</h3>
+        <div class="note" id="alarm-note">Smart window: wakes you in light sleep</div>
+      </div>
+      <input type="time" id="alarm-time" value="07:00">
+    </div>
+    <div class="spread" style="margin-top:16px">
+      <div style="flex:1">
+        <div class="lbl">Smart wake window</div>
+        <div class="note" id="win-lbl">30 minutes before</div>
+      </div>
+      <div class="switch on" id="smart-sw"></div>
+    </div>
+    <input type="range" id="win-range" min="0" max="45" step="5" value="30" style="margin-top:10px">
+    <div class="spread" style="margin-top:14px">
+      <div><div class="lbl">Alarm on</div><div class="note">Turn off to only track sleep</div></div>
+      <div class="switch on" id="alarm-sw"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="spread">
+      <div>
+        <h3>Sleep sound</h3>
+        <div class="note" id="sound-note">Fades out after 30 min</div>
+      </div>
+      <button class="chip" id="pick-sound">None ›</button>
+    </div>
+  </div>
+
+  <button class="btn" id="start-btn">🌙 Start tracking</button>
+  <button class="btn ghost" id="winddown-btn">🫁 Wind down first (4-7-8 breathing)</button>
+  <div class="disclaimer">
+    Rested estimates your sleep from movement and sound picked up by your phone's microphone.
+    It is a wellness tool, not a medical device, and stage estimates are approximate.
+    Audio is analysed on your device and never uploaded.
+  </div>
+</section>
+
+<!-- ================================================================= SOUNDS -->
+<section class="view" id="v-sounds">
+  <h1>Sounds</h1>
+  <div class="sub">Generated live on your phone — no downloads, works offline.</div>
+  <div id="sound-grid"></div>
+  <div class="card">
+    <div class="spread">
+      <div style="flex:1"><div class="lbl">Volume</div></div>
+      <div class="mono" id="vol-val" style="color:var(--muted);font-size:13px">60%</div>
+    </div>
+    <input type="range" id="vol-range" min="0" max="100" value="60" style="margin-top:8px">
+    <div class="spread" style="margin-top:16px">
+      <div style="flex:1"><div class="lbl">Fade out after</div>
+        <div class="note" id="fade-lbl">30 minutes</div></div>
+    </div>
+    <input type="range" id="fade-range" min="0" max="120" step="10" value="30" style="margin-top:8px">
+  </div>
+  <button class="btn ghost" id="stop-sound">■ Stop sound</button>
+</section>
+
+<!-- ================================================================== STATS -->
+<section class="view" id="v-stats">
+  <h1>Statistics</h1>
+  <div class="sub" id="stats-sub">Your patterns over time.</div>
+  <div class="segbar" id="range-seg" style="margin-bottom:16px">
+    <button data-r="7" class="on">Week</button>
+    <button data-r="30">Month</button>
+    <button data-r="90">3 Months</button>
+    <button data-r="0">All</button>
+  </div>
+  <div id="stats-body"></div>
+</section>
+
+<!-- ================================================================ JOURNAL -->
+<section class="view" id="v-you">
+  <h1>You</h1>
+  <div class="sub">What you did yesterday shapes how you slept.</div>
+  <div class="card">
+    <h3>Insights</h3>
+    <div class="note" style="margin-bottom:10px">Found by comparing your own nights.</div>
+    <div id="insights"></div>
+  </div>
+  <div class="card">
+    <h3>Streak</h3>
+    <div class="spread" style="margin-top:8px">
+      <div class="bigstat mono" id="streak-val">0<small>nights tracked in a row</small></div>
+      <div style="font-size:38px" id="streak-emoji">🌙</div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Your data</h3>
+    <div class="note">Everything stays on this device. Export a backup or clear it whenever you like.</div>
+    <div class="row wrap" style="margin-top:12px">
+      <button class="btn ghost sm" id="export-btn">⬇ Export JSON</button>
+      <button class="btn ghost sm" id="import-btn">⬆ Import</button>
+      <button class="btn ghost sm" id="wipe-btn">🗑 Clear all</button>
+    </div>
+  </div>
+  <div class="card">
+    <h3>About the estimates</h3>
+    <div class="note">
+      Rested listens for movement and sound to work out when you were awake, restless or settled,
+      the same way other phone sleep trackers do. It is good at telling asleep from awake, and only
+      approximate at splitting light, deep and dream sleep — those are properly measured with brain
+      activity, which a phone cannot see. Use the trends, not any single number.
+    </div>
+  </div>
+</section>
+
+<!-- =============================================================== REPORT -->
+<div class="modal" id="report">
+  <div class="sheet">
+    <div class="spread" style="margin-bottom:14px">
+      <h2 style="margin:0" id="rep-title">Last night</h2>
+      <button class="chip" id="rep-close">Close</button>
+    </div>
+    <div id="rep-body"></div>
+  </div>
+</div>
+
+<!-- ============================================================ SOUND PICK -->
+<div class="modal" id="soundpick">
+  <div class="sheet">
+    <div class="spread" style="margin-bottom:14px">
+      <h2 style="margin:0">Sleep sound</h2>
+      <button class="chip" id="sp-close">Done</button>
+    </div>
+    <div id="sp-grid"></div>
+  </div>
+</div>
+
+<!-- ============================================================== JOURNAL -->
+<div class="modal" id="tagsheet">
+  <div class="sheet">
+    <h2>How was yesterday?</h2>
+    <p>Tap anything that applied. Over a couple of weeks Rested will show you what actually moves your sleep quality.</p>
+    <div class="row wrap" id="tag-grid" style="margin:14px 0"></div>
+    <div class="lbl" style="margin-bottom:8px">How do you feel this morning?</div>
+    <div class="row" id="mood-grid" style="margin-bottom:18px"></div>
+    <button class="btn" id="tag-save">Save</button>
+  </div>
+</div>
+
+<!-- ============================================================= WIND DOWN -->
+<div class="modal" id="breathe">
+  <div class="sheet" style="text-align:center">
+    <h2>Wind down</h2>
+    <p id="br-phase" style="font-size:16px;color:var(--ink);font-weight:700">Get comfortable</p>
+    <div style="display:grid;place-items:center;margin:22px 0">
+      <div id="br-circle" style="width:150px;height:150px;border-radius:50%;
+        background:radial-gradient(circle,rgba(242,166,90,.5),rgba(242,166,90,.06));
+        transition:transform 1s linear"></div>
+    </div>
+    <p id="br-count" class="mono" style="font-size:28px;color:var(--ink);font-weight:700">—</p>
+    <p>Breathe in for 4, hold for 7, out for 8. Four rounds settles most people.</p>
+    <button class="btn" id="br-start" style="margin-top:8px">Start</button>
+    <button class="btn ghost" id="br-close">Close</button>
+  </div>
+</div>
+
+<!-- ============================================================ NIGHT MODE -->
+<div id="night">
+  <div id="nclock" class="mono">--:--</div>
+  <div id="nsub">Tracking · alarm 07:00</div>
+  <canvas id="nwave" width="960" height="140"></canvas>
+  <div id="nfoot">
+    <div id="nhint">Keep the phone plugged in, screen up, near your pillow.</div>
+    <button id="stop-btn">Stop tracking</button>
+  </div>
+</div>
+
+<!-- ================================================================= ALARM -->
+<div id="alarm-screen">
+  <div id="alarm-sun"></div>
+  <div style="font-size:48px;font-weight:200;margin-top:26px" class="mono" id="al-time">07:00</div>
+  <div style="color:var(--muted);margin-top:6px" id="al-why">Good morning</div>
+  <button class="btn" id="al-stop" style="max-width:260px;margin-top:32px">Stop</button>
+  <button class="btn ghost" id="al-snooze" style="max-width:260px">Snooze 9 min</button>
+</div>
+
+<div id="toast"></div>
+
+<!-- ================================================================= TABS -->
+<nav id="tabs">
+  <button data-v="sleep" class="on">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    Sleep
+  </button>
+  <button data-v="sounds">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a9 9 0 0 1 0 14"/></svg>
+    Sounds
+  </button>
+  <button data-v="stats">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="4" width="3" height="14"/></svg>
+    Stats
+  </button>
+  <button data-v="you">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+    You
+  </button>
+</nav>
+
+<script>window.APP_CONFIG = { mode: "full", buyLink: "" };</script>
+<script src="app.js"></script>
+<script>
+  if ("serviceWorker" in navigator && location.protocol === "https:") {
+    navigator.serviceWorker.register("sw.js").catch(function () {});
+  }
+</script>
+</body>
+</html>

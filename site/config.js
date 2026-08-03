@@ -48,6 +48,10 @@ window.STORE = {
       price: "$9.99",
       link: "https://tsjenn.itch.io/neon-drift-racers-drift-boost-race-the-world",
     },
+    sleep: {
+      price: "$4.99",
+      link: "SET-ME-https://tangshiuan.gumroad.com/l/rested",
+    },
     music: {
       price: "$5+",
       link: "https://sjsjsj.bandcamp.com/album/sj",
