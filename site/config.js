@@ -46,7 +46,7 @@ window.STORE = {
     },
     racer: {
       price: "$9.99",
-      link: "SET-ME-https://tsjenn.itch.io/neon-drift-racers",
+      link: "https://tsjenn.itch.io/neon-drift-racers-drift-boost-race-the-world",
     },
     music: {
       price: "$5+",
