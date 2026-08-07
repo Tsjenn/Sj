@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tsjenn.github.io/Sj/sitemap.xml
