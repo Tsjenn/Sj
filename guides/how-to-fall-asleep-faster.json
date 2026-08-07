@@ -1,0 +1,129 @@
+{
+  "slug": "how-to-fall-asleep-faster",
+  "title": "How to Fall Asleep Faster: 9 Things That Actually Work",
+  "description": "Nine evidence-based ways to fall asleep faster, why most sleep advice fails, and the one habit that matters more than all the others combined.",
+  "date": "2026-08-03",
+  "updated": "2026-08-03",
+  "product": "sleep",
+  "intro": [
+    "Most advice about falling asleep faster is a list of things you already know and already ignore. This one is ordered by how much difference each thing actually makes, so if you only do the first item you will still get most of the benefit.",
+    "Healthy adults take about 10 to 20 minutes to fall asleep. If you regularly take more than 30, something below will probably help. If it takes you under five minutes every single night, that is usually a sign you are short on sleep rather than good at it."
+  ],
+  "sections": [
+    {
+      "h": "1. Fix your wake-up time, not your bedtime",
+      "p": [
+        "This is the one that matters most, and it is the one almost nobody does. Your body decides when to feel sleepy based partly on how long you have been awake and partly on an internal clock that is set by when you see morning light.",
+        "You cannot force yourself to feel sleepy at 10pm. But you <em>can</em> get up at the same time every day, including weekends, and let sleepiness arrive on its own about 16 hours later. Do this for two weeks and your bedtime fixes itself.",
+        "A lie-in on Saturday feels like repayment. It works more like jet lag: shifting your wake time by three hours has roughly the effect of flying across three time zones and back every weekend."
+      ]
+    },
+    {
+      "h": "2. Get light in your eyes early, and take it away late",
+      "p": [
+        "Morning light is the signal that sets your clock. Ten to twenty minutes outside within an hour of waking does more than any supplement, and it works even on an overcast day, because outdoor light on a grey morning is still many times brighter than indoor lighting.",
+        "In the evening, run the reverse. Dim the main lights an hour before bed and use lamps rather than ceiling lights. The point is not to be strict about screens specifically, it is to lower the overall brightness your eyes are taking in."
+      ]
+    },
+    {
+      "h": "3. Let your body cool down",
+      "p": [
+        "You fall asleep as your core temperature drops. Anything that helps that drop helps you fall asleep, and anything that fights it keeps you awake.",
+        "A cool bedroom, somewhere around 18°C or 65°F, suits most people. A warm shower or bath an hour or two before bed sounds contradictory but works well: it brings blood to the skin, and the drop afterwards is steeper than if you had done nothing."
+      ]
+    },
+    {
+      "h": "4. Move your last coffee earlier than feels necessary",
+      "p": [
+        "Caffeine has a half-life of roughly five to six hours, which means a 4pm coffee still has a quarter of its caffeine working in you at midnight. People who insist coffee does not affect their sleep are often right that it does not stop them falling asleep, and wrong about what it is doing to the depth of the night.",
+        "A practical rule: nothing caffeinated after early afternoon. Give it ten days before you judge whether it helped."
+      ]
+    },
+    {
+      "h": "5. Be honest about alcohol",
+      "p": [
+        "Alcohol genuinely does help you fall asleep faster. That is exactly why it is such a trap. It then suppresses dream sleep, and as your body clears it in the second half of the night you get fragmented, shallow sleep and often a 3am wake-up.",
+        "You do not have to give it up to sleep better. Moving it earlier in the evening and reducing the amount does most of the work."
+      ]
+    },
+    {
+      "h": "6. Stop lying in bed awake",
+      "p": [
+        "This one feels wrong and is one of the most effective techniques in clinical practice. If you have been lying awake for roughly 20 minutes and you are frustrated, get up. Go to another room, keep the lights low, do something dull, and go back when you feel sleepy.",
+        "The reason is simple: your brain learns what beds are for. Spend enough hours awake and anxious in bed and the bed itself becomes a cue for being awake and anxious. Getting up protects the association."
+      ]
+    },
+    {
+      "h": "7. Turn the clock around",
+      "p": [
+        "Checking the time when you cannot sleep does exactly one thing: it converts vague tiredness into precise arithmetic about how wrecked you will be tomorrow. That arithmetic is stressful, and stress is the opposite of sleepy.",
+        "Turn the clock away. If you use your phone as an alarm, put it face down and out of reach."
+      ]
+    },
+    {
+      "h": "8. Give your brain something boring to hold",
+      "p": [
+        "Most people cannot fall asleep because their mind is busy, not because their body is not tired. The fix is not to empty your mind, which is impossible on demand, but to occupy it with something too dull to sustain worry.",
+        "Slow breathing is the most reliable version. Breathe in for four seconds, hold for seven, out for eight, and repeat four times. The long exhale nudges your nervous system toward rest, and counting gives your attention somewhere harmless to sit.",
+        "If breathing is not your thing, mentally walking through a very familiar route in exhaustive detail works on the same principle."
+      ],
+      "list": [
+        "Write tomorrow's worries down before bed so your brain stops rehearsing them",
+        "Keep the room dark enough that you cannot see detail",
+        "If noise is the problem, steady sound covers it better than silence"
+      ]
+    },
+    {
+      "h": "9. Only then, worry about the gadgets",
+      "p": [
+        "Trackers, sound machines and apps are useful, but they are the last 10%, not the first. If you are getting five hours because of a 1am bedtime, no app fixes that.",
+        "Where they do earn their place is in showing you patterns you cannot feel. Almost nobody can accurately remember how they slept a week ago, let alone connect it to what they drank on Tuesday. That is a job for something that writes it down."
+      ],
+      "box": {
+        "title": "See what is actually happening at night",
+        "body": "Rested tracks your night with your phone's microphone, wakes you in light sleep instead of mid-cycle, and plays generated rain, ocean and brown noise. Tag your mornings and it works out which habits are really costing you sleep. Free to try, installs from the browser on iPhone and Android.",
+        "label": "Try Rested free",
+        "href": "https://tsjenn.github.io/Sj/sleep/"
+      }
+    },
+    {
+      "h": "What to do tonight",
+      "p": [
+        "If this is too much to act on, do these three and ignore the rest:"
+      ],
+      "steps": [
+        "Set one wake-up time and keep it for two weeks, weekends included.",
+        "Get outside within an hour of waking, for ten minutes.",
+        "Move your last caffeine to early afternoon."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "How long should it take to fall asleep?",
+      "a": "Ten to twenty minutes is typical for a healthy adult. Consistently over 30 minutes suggests something is worth changing. Consistently under five minutes usually means you are sleep-deprived rather than an excellent sleeper."
+    },
+    {
+      "q": "Does counting sheep work?",
+      "a": "Mildly, and only because it is boring. Research suggests imagining a calm, detailed scene works better than counting, because it occupies more of your attention and leaves less room for worry."
+    },
+    {
+      "q": "Is it bad to use my phone in bed?",
+      "a": "The light matters less than people think; the content matters more. A dim screen showing something dull is far less disruptive than a bright one showing something that makes you anxious or keeps you scrolling."
+    },
+    {
+      "q": "Can an app measure my deep sleep?",
+      "a": "Not accurately, and be sceptical of any app that claims otherwise. Phones estimate sleep stages from movement and sound. That works well for when you fell asleep and how broken the night was, and only approximately for splitting light, deep and dream sleep, which properly requires measuring brain activity. Use the trends over weeks rather than any single night's percentages."
+    },
+    {
+      "q": "When should I see a doctor about this?",
+      "a": "If poor sleep persists for more than a few weeks despite changes like these, if you snore heavily or have been told you stop breathing in your sleep, or if daytime sleepiness is affecting your work or driving. This article is general information, not medical advice."
+    }
+  ],
+  "cta": {
+    "title": "More guides",
+    "body": "We write straight, practical guides on sleep and a few other things worth doing properly.",
+    "label": "Browse all guides",
+    "href": "https://tsjenn.github.io/Sj/guides/"
+  }
+}
