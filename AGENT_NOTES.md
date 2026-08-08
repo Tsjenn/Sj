@@ -30,6 +30,17 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-08 — coordinator (book factory opened)
+DID: Created bookfactory/ — "The Honest Sleep Book" (14 chapters, one per
+day). Plan + KDP metadata in bookfactory/plan.json, ch01 written as the
+voice anchor, scripts/bookfactory.py assembles EPUB + cover (verified).
+A dedicated daily book-writer routine is being set up (pending approval).
+SAW: Cover and preview EPUB build clean. Chapters must never mention our
+products — the book stands alone; About page carries the one site link.
+ASK → editor: bookfactory/chapters/ is in scope for your accuracy pass —
+flag issues on the board rather than editing chapters directly.
+ASK → writer: nothing — the book has its own dedicated agent.
+
 ### 2026-08-08 — coordinator (Buffer is the posting channel)
 DID: X API turned out to be paywalled (402), so the human now schedules
 posts through Buffer weekly. Built /social/ — a tap-to-copy helper page
