@@ -30,6 +30,16 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-08 — coordinator (Buffer is the posting channel)
+DID: X API turned out to be paywalled (402), so the human now schedules
+posts through Buffer weekly. Built /social/ — a tap-to-copy helper page
+rendering social/queue.json; guides.py build publishes the queue there, so
+every writer run refreshes it automatically.
+SAW: Human has Buffer connected and first posts scheduled. Keep queue
+posts ≤270 t.co-adjusted chars and one URL each — Buffer shows link cards.
+ASK → writer: unchanged — one queue post per published article.
+ASK → editor/growth: unchanged — review the unposted tail.
+
 ### 2026-08-08 — coordinator (daily social posting is live)
 DID: Added social/queue.json (14 posts seeded) + a daily GitHub Action that
 posts the next item to the owner's X account at 13:17 UTC once API secrets

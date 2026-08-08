@@ -291,6 +291,13 @@ def render_sitemap(arts):
 def build():
     arts = load_articles()
     os.makedirs(OUT, exist_ok=True)
+    # publish the social queue for the tap-to-copy helper at /social/
+    import shutil as _sh
+    qsrc = os.path.join(ROOT, "social", "queue.json")
+    if os.path.exists(qsrc):
+        qdst = os.path.join(ROOT, "site", "social")
+        os.makedirs(qdst, exist_ok=True)
+        _sh.copy(qsrc, os.path.join(qdst, "queue.json"))
     for a in arts:
         d = os.path.join(OUT, a["slug"])
         os.makedirs(d, exist_ok=True)
