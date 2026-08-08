@@ -1,0 +1,103 @@
+{
+  "slug": "sleep-tracking-apps-accuracy",
+  "title": "Can a Phone App Really Track Your Deep Sleep? An Honest Answer",
+  "description": "What phone sleep trackers can genuinely measure, what they only estimate, and how to use one without being misled by its numbers.",
+  "date": "2026-08-08",
+  "updated": "2026-08-08",
+  "product": "sleep",
+  "intro": [
+    "Short answer: no app can measure your deep sleep, and any app that says otherwise is overselling. Longer answer: phone trackers measure something real and useful — it just isn't what the marketing implies. Once you know which numbers to trust, a sleep app goes from a gimmick to a genuinely helpful habit.",
+    "This guide is written by people who build a sleep tracker, which is exactly why we want the record straight. An honest tool used properly beats an oversold one that quietly disappoints you."
+  ],
+  "sections": [
+    {
+      "h": "What sleep stages actually are",
+      "p": [
+        "Through the night you cycle between light sleep, deep sleep (also called slow-wave sleep) and REM — the dreaming stage — in loops of roughly 90 minutes. Deep sleep dominates the first half of the night; REM stretches out toward morning. These stages are defined by patterns of <em>brain activity</em>, measured with electrodes on the scalp in a sleep lab. That measurement is called polysomnography, and it is the only way to truly know which stage you are in.",
+        "Your phone is on the mattress or the nightstand. It has no access to your brain. That single fact settles the accuracy question before any app opens its mouth."
+      ]
+    },
+    {
+      "h": "What your phone can genuinely measure",
+      "p": [
+        "A phone senses two things at night: movement (through vibration reaching the device) and sound (through the microphone). From those, an app can detect with reasonable confidence:"
+      ],
+      "list": [
+        "<strong>When you actually fell asleep</strong> — you stop shifting, the room goes quiet, and the pattern is easy to spot.",
+        "<strong>How long you slept</strong> — the gap between settling and sustained morning movement.",
+        "<strong>How broken the night was</strong> — sustained stirring at 3am looks nothing like a still body.",
+        "<strong>Sleep efficiency</strong> — the share of your time in bed you spent actually asleep, which is one of the most useful numbers in sleep science and needs no brain data at all."
+      ]
+    },
+    {
+      "h": "What it can only estimate — and how the estimate is made",
+      "p": [
+        "Stage breakdowns — the charts of light, deep and REM — are inferences. The logic runs roughly: you barely move in deep sleep, you move a little in light sleep, and your body is still but your breathing changes in REM. Combine that with the known shape of the 90-minute cycle and an app can produce a plausible reconstruction of your night.",
+        "Plausible is the key word. Studies comparing consumer trackers against lab polysomnography consistently find the same pattern: good agreement on asleep-versus-awake, much weaker agreement on which stage you were in at any given minute. That holds for wrist wearables too, which have heart-rate data phones lack. A stage chart is an educated guess drawn in confident colours.",
+        "This is why the deep-sleep number moves so much night to night while you feel the same. The measurement is noisy, not your brain."
+      ]
+    },
+    {
+      "h": "The trap: orthosomnia",
+      "p": [
+        "Sleep researchers coined the term <em>orthosomnia</em> for a pattern they kept seeing: people sleeping worse because their tracker told them they slept badly. You wake feeling fine, the app shows a low score, and by evening you are anxious about tonight's number — which is exactly the state that keeps people awake.",
+        "The fix is not to abandon tracking. It is to change what you look at. A single night's score is weather. The month's trend is climate. Weather is noise; climate is information."
+      ]
+    },
+    {
+      "h": "How to actually use a sleep tracker well",
+      "steps": [
+        "<strong>Trust the timing numbers, hold the stage numbers loosely.</strong> When you fell asleep, how long you slept, how often you woke — solid. The deep-sleep minutes — an estimate.",
+        "<strong>Look at trends over weeks, never single nights.</strong> One bad score means nothing. Fifteen nights of shrinking sleep time means something.",
+        "<strong>Pair the data with a habit journal.</strong> The genuinely useful question is not \"how much deep sleep did I get\" but \"what do my good nights have in common?\" Tag coffee, alcohol, exercise and late screens, then let the pattern emerge from your own data.",
+        "<strong>Judge mornings by how you feel, then check the app</strong> — not the other way round. If you feel rested and the score is low, you are rested.",
+        "<strong>If the data makes you anxious, take a week off.</strong> The tracker should serve you."
+      ]
+    },
+    {
+      "h": "When a bad night is more than a bad night",
+      "p": [
+        "No consumer app — phone or wearable — can diagnose a sleep disorder. If you snore heavily and wake gasping, if a partner says you stop breathing, or if you are exhausted every day despite spending enough hours in bed, that is a conversation for a doctor, and possibly a proper sleep study. An app is a mirror for habits, not a medical instrument.",
+        "For the habit side — falling asleep faster, keeping a consistent schedule — most of what works is behavioural, and we cover the highest-impact changes in <a href=\"https://tsjenn.github.io/Sj/guides/how-to-fall-asleep-faster/\">our guide to falling asleep faster</a>."
+      ],
+      "box": {
+        "title": "Rested: a sleep tracker that tells you the truth",
+        "body": "We built Rested on everything in this article. It tracks your night from your phone, labels stage data as the estimate it is, wakes you gently in light sleep, and finds which of your habits actually move your sleep — all analysed on your device, never uploaded. Try it free in your browser right now.",
+        "href": "https://tsjenn.github.io/Sj/sleep/",
+        "label": "Try Rested free"
+      }
+    }
+  ],
+  "faq": [
+    {
+      "q": "Are wrist wearables more accurate than phone apps?",
+      "a": "Somewhat. A wearable adds heart rate and sometimes blood oxygen, which improves stage estimates — but validation studies still show stage-level accuracy well short of a sleep lab. The asleep-versus-awake numbers are decent on both; the stage charts are estimates on both."
+    },
+    {
+      "q": "Why does my deep sleep vary so much between nights?",
+      "a": "Some of that is real — alcohol, late nights and age all reduce deep sleep — but a lot of it is measurement noise. When a number is inferred from movement, small differences in mattress, position or room sound shift the estimate. Watch the weekly average instead of the nightly value."
+    },
+    {
+      "q": "Is 30 minutes of deep sleep bad?",
+      "a": "Not necessarily, and on a phone app that number is too uncertain to act on by itself. Adults typically spend somewhere around 13–23% of sleep in deep sleep, but the reliable warning signs are how you feel: persistent daytime exhaustion, heavy snoring, or waking unrefreshed for weeks. Those warrant a doctor, whatever the app says."
+    },
+    {
+      "q": "Does the microphone mean the app is recording me?",
+      "a": "It depends on the app, so check the privacy policy. The honest way to build this is to analyse audio in real time on the device and store only activity levels, never recordings. That is how our own app works — nothing you say at night is stored or sent anywhere."
+    },
+    {
+      "q": "Can an app wake me at the best moment?",
+      "a": "This one genuinely works. Waking from light sleep feels easier than being dragged out of deep sleep, and light sleep is exactly the state a movement-based tracker detects best. A smart alarm that watches a 20–30 minute window before your deadline and rings when you stir is using the technology for what it is actually good at."
+    },
+    {
+      "q": "When should I see a doctor instead of an app?",
+      "a": "If you regularly stop breathing in your sleep, snore loudly every night, are exhausted daily despite adequate time in bed, or have struggled to fall or stay asleep for more than three months. Those are medical questions, and no consumer tracker can answer them."
+    }
+  ],
+  "cta": {
+    "title": "More guides like this",
+    "body": "Straight answers on sleep, games and getting organised — written to be worth your time.",
+    "label": "Browse all guides",
+    "href": "https://tsjenn.github.io/Sj/guides/"
+  }
+}

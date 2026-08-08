@@ -22,15 +22,15 @@ window.STORE = {
     },
     invoice: {
       price: "$12",
-      link: "SET-ME-https://yourname.gumroad.com/l/invoice",
+      link: "https://tangshiuan.gumroad.com/l/acroek",
     },
     planner: {
       price: "$7",
-      link: "SET-ME-https://yourname.gumroad.com/l/planner",
+      link: "https://tangshiuan.gumroad.com/l/utqhxl",
     },
     bundle: {
       price: "$19",
-      link: "SET-ME-https://yourname.gumroad.com/l/bundle",
+      link: "https://tangshiuan.gumroad.com/l/brzfl",
     },
     game: {
       price: "$6",
@@ -50,7 +50,7 @@ window.STORE = {
     },
     sleep: {
       price: "$4.99",
-      link: "SET-ME-https://tangshiuan.gumroad.com/l/rested",
+      link: "https://tangshiuan.gumroad.com/l/ycrcl",
     },
     music: {
       price: "$5+",

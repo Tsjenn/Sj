@@ -52,6 +52,23 @@ TOPIC_QUEUE = [
     ("bedtime-books-for-toddlers", "Choosing Bedtime Books That Actually Calm Toddlers Down", "book"),
     ("screen-time-before-bed", "Does Screen Time Before Bed Really Hurt Your Sleep?", "sleep"),
     ("how-to-wake-up-refreshed", "How to Wake Up Refreshed: Why the Alarm Time Matters Less Than You Think", "sleep"),
+    ("smart-alarm-light-sleep", "What a Smart Alarm Actually Does (and When It Helps)", "sleep"),
+    ("brown-noise-vs-white-noise", "Brown Noise vs White Noise: Which Helps You Sleep?", "sleep"),
+    ("how-to-stop-snoozing-alarm", "How to Stop Hitting Snooze: What Works When Willpower Doesn't", "sleep"),
+    ("naps-good-or-bad", "Are Naps Good or Bad? How to Nap Without Wrecking Your Night", "sleep"),
+    ("sleep-debt-recovery", "Sleep Debt: What It Is and How You Actually Pay It Back", "sleep"),
+    ("counting-games-for-toddlers", "Simple Counting Games That Make Numbers Fun for Toddlers", "book2"),
+    ("bedtime-story-routine", "How to Make Bedtime Stories the Easiest Part of the Evening", "book"),
+    ("focus-music-while-working", "Does Music Help You Focus? What to Play and What to Avoid", "music"),
+    ("pomodoro-technique-guide", "The Pomodoro Technique, Minus the Cult: A Practical Guide", "planner"),
+    ("weekly-planning-15-minutes", "The 15-Minute Weekly Plan That Makes Monday Easier", "planner"),
+    ("budgeting-irregular-income", "How to Budget on an Irregular Income (Freelancers, Read This)", "budget"),
+    ("emergency-fund-how-much", "How Big Should Your Emergency Fund Be? A Straight Answer", "budget"),
+    ("invoice-late-payment-what-to-do", "A Client Hasn't Paid Your Invoice: What to Do, Step by Step", "invoice"),
+    ("freelance-rates-how-to-set", "How to Set Freelance Rates Without Guessing", "invoice"),
+    ("relaxing-games-to-unwind", "Relaxing Games to Unwind With After Work (That Respect Your Time)", "park"),
+    ("games-that-save-in-browser", "How Browser Games Save Your Progress (and How Not to Lose It)", "racer"),
+    ("async-multiplayer-explained", "Multiplayer Without Servers: How Code-Based Games Let You Compete Worldwide", "arena"),
 ]
 
 CSS = """

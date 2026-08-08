@@ -1,0 +1,102 @@
+{
+  "slug": "free-browser-games-no-download",
+  "title": "Free Browser Games With No Download: What's Actually Worth Playing",
+  "description": "How to find browser games that are genuinely good, the red flags to avoid, and the game types that work brilliantly with no download at all.",
+  "date": "2026-08-08",
+  "updated": "2026-08-08",
+  "product": "racer",
+  "intro": [
+    "Browser games have quietly become good. The same technology that runs serious web apps now runs full 3D games — real lighting, real physics, real sound — with nothing to install, no launcher, no account, and no 40-gigabyte download. Click a link, play in five seconds.",
+    "The catch is that the genre's reputation is stuck a decade in the past, and the space is flooded with ad-farms that make the good stuff hard to find. This guide is about telling the difference."
+  ],
+  "sections": [
+    {
+      "h": "Why browser games got good",
+      "p": [
+        "Two pieces of technology changed everything. WebGL lets a page use your graphics card directly, which is how a browser tab renders a 3D city at 60 frames per second. The Web Audio API generates and mixes sound in real time. Together they mean a modern browser is, quietly, a capable game console that happens to also do email.",
+        "The practical benefits go beyond convenience. Browser games can't install anything, which shrinks the malware risk that comes with downloading random free executables. They run on whatever you have — an old laptop, a school Chromebook, a phone. And closing the tab actually ends the experience; there's no background updater, no launcher nagging you."
+      ]
+    },
+    {
+      "h": "The red flags of a bad one",
+      "p": [
+        "Most \"free browser games\" sites are advertising businesses that happen to host games. A few signs you should close the tab:"
+      ],
+      "list": [
+        "<strong>An ad before the game loads, and ads between every level.</strong> The game exists to show you ads, and it plays like it.",
+        "<strong>It demands an account before you've played anything.</strong> Good browser games let you play first.",
+        "<strong>\"Free\" but every mechanic pushes you toward a purchase timer.</strong> That's a slot machine wearing a game costume.",
+        "<strong>The same game re-skinned fifty times across the same portal.</strong> Quantity is the business model, not quality.",
+        "<strong>It asks for permissions a game doesn't need</strong> — location, contacts, notifications on load."
+      ]
+    },
+    {
+      "h": "What actually plays well in a browser",
+      "p": [
+        "Not every genre survives the jump. Sprawling 100-hour epics generally don't — but several types are genuinely at their best with no download:"
+      ],
+      "list": [
+        "<strong>Arcade racers.</strong> Short sessions, instant restarts, one-more-lap pull. Perfect fit for a tab.",
+        "<strong>Creature collectors and light RPGs.</strong> Save-in-browser progress plus pick-up-put-down pacing.",
+        "<strong>Puzzle and daily-challenge games.</strong> The entire daily-word-game boom is browser games winning.",
+        "<strong>Building and management sims.</strong> Slow-burn progress that runs happily at desk-break pace.",
+        "<strong>Ghost-race and score-chase competition.</strong> Async multiplayer — racing a friend's recorded run — works with zero servers and no account, which is exactly the browser's sweet spot."
+      ]
+    },
+    {
+      "h": "Full disclosure: we make some",
+      "p": [
+        "This site sells browser games, so treat this section as the maker talking. We build ours around the strengths above: instant load, no account, progress saved in your browser, and competition through shareable codes instead of accounts — you copy a short code, send it to anyone on Earth, and they race your recorded laps or battle your team.",
+        "All four have free demos you can judge in under a minute: <a href=\"https://tsjenn.github.io/Sj/play4/\">Neon Drift Racers</a> (drift-boost arcade racing through a neon city), <a href=\"https://tsjenn.github.io/Sj/play3/\">Wildhaven Arena</a> (catch a team of three and duel by code), <a href=\"https://tsjenn.github.io/Sj/play2/\">Wildhaven: Creature Park</a> (catch creatures, build a park that earns while you're away), and <a href=\"https://tsjenn.github.io/Sj/play/\">Critter Isles</a> (a gentle island collect-a-thon)."
+      ],
+      "box": {
+        "title": "Neon Drift Racers — free demo, no download",
+        "body": "Drift a neon city at 300 km/h, charge boosts through corners, then turn your best lap into a Race Code any friend can race against. Loads in seconds, works offline, installs to your phone if you want it to.",
+        "href": "https://tsjenn.github.io/Sj/play4/",
+        "label": "Play the demo"
+      }
+    },
+    {
+      "h": "Getting the most out of browser games",
+      "steps": [
+        "<strong>Play the demo before you pay for anything</strong> — the whole point of the format is that trying costs nothing.",
+        "<strong>Add favourites to your home screen.</strong> Many browser games are installable: on a phone, Share → Add to Home Screen turns the tab into a full-screen app, often with offline play.",
+        "<strong>Mind your save data.</strong> Browser saves live in the browser. Clearing site data wipes progress, and private windows don't keep saves at all. If a game offers an export or share code, use it as a backup.",
+        "<strong>Use fullscreen.</strong> Most 3D browser games offer it, and it removes the last difference between tab and console.",
+        "<strong>Late-night sessions have a cost</strong> — a bright screen and a racing heart rate at 1am work against you the next day. If that sounds familiar, our guide on <a href=\"https://tsjenn.github.io/Sj/guides/how-to-fall-asleep-faster/\">falling asleep faster</a> is the antidote."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Are browser games safe to play?",
+      "a": "Safer than downloading free executables, because the browser walls the game off from your files — but stick to reputable pages, and treat any game demanding odd permissions or personal details as a red flag. A game never needs your contacts."
+    },
+    {
+      "q": "Why does a browser game ask to keep the screen awake or use the microphone?",
+      "a": "Some permissions have honest uses — a racing game keeping the screen awake, a voice-controlled game using the mic. The test is whether the permission obviously matches the gameplay. If it doesn't, decline it; good games work without."
+    },
+    {
+      "q": "Do browser games work offline?",
+      "a": "Increasingly, yes. Games built as progressive web apps cache themselves on first load, so once installed to your home screen they run with no connection at all — planes and dead zones included."
+    },
+    {
+      "q": "Can I play browser games with friends without making accounts?",
+      "a": "Yes — the best trick in modern browser gaming is code-based competition. The game compresses your run or your team into a short text code; you send it over any chat app, and your friend's game recreates it to race or battle against. No servers, no sign-ups, works between any two people on Earth."
+    },
+    {
+      "q": "Will they run on a cheap laptop or Chromebook?",
+      "a": "Usually. Well-made browser games target modest hardware since they can't assume a gaming PC. If one stutters, close other tabs first — the game shares memory with the rest of your browser."
+    },
+    {
+      "q": "Why do some cost money if browser games are free?",
+      "a": "Same reason any game does — someone made it. The honest model in browser gaming is a free demo plus a one-time price for the full game, rather than \"free\" with ads and manipulative timers. You try before paying, and the paid version respects your time."
+    }
+  ],
+  "cta": {
+    "title": "More guides like this",
+    "body": "Straight answers on sleep, games and getting organised — written to be worth your time.",
+    "label": "Browse all guides",
+    "href": "https://tsjenn.github.io/Sj/guides/"
+  }
+}
