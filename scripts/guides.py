@@ -314,10 +314,85 @@ def build():
     return arts
 
 
+def qa(arts):
+    """Deterministic verification of everything the agents produce.
+
+    Runs automatically at the end of every build, so no agent can push work
+    that fails these checks: an exception here fails the build. This is the
+    fleet's independent verifier — code, not another opinion.
+    """
+    problems = []
+
+    # 1. every internal link in every article must resolve to a real page
+    site_dir = os.path.join(ROOT, "site")
+    link_re = __import__("re").compile(r'href="(https://tsjenn\.github\.io/Sj/([^"#]*))"')
+    for a in arts:
+        blob = json.dumps(a)
+        for full, path in link_re.findall(blob):
+            path = path.rstrip("/")
+            target = os.path.join(site_dir, path, "index.html") if path else os.path.join(site_dir, "index.html")
+            if not os.path.exists(target):
+                problems.append("%s links to %s but site/%s/index.html does not exist"
+                                % (a["slug"], full, path))
+
+    # 2. required fields + sane description length
+    for a in arts:
+        for field in ("slug", "title", "description", "date", "sections"):
+            if not a.get(field):
+                problems.append("%s missing field: %s" % (a.get("slug", "?"), field))
+        if len(a.get("description", "")) > 160:
+            problems.append("%s description is %d chars (>160 hurts search display)"
+                            % (a["slug"], len(a["description"])))
+
+    # 3. social queue: valid, in-limit, no recent duplicates
+    qpath = os.path.join(ROOT, "social", "queue.json")
+    if os.path.exists(qpath):
+        import re as _re
+        with open(qpath) as f:
+            q = json.load(f)
+        seen = []
+        for i, post in enumerate(q.get("posts", [])):
+            tco = len(_re.sub(r"https?://\S+", "x" * 23, post))
+            if tco > 280:
+                problems.append("social post #%d is %d chars t.co-adjusted (>280)" % (i, tco))
+            key = post[:60]
+            if key in seen[-10:]:
+                problems.append("social post #%d duplicates a recent post" % i)
+            seen.append(key)
+
+    # 4. book factory: statuses must match files on disk
+    plan_path = os.path.join(ROOT, "bookfactory", "plan.json")
+    if os.path.exists(plan_path):
+        with open(plan_path) as f:
+            plan = json.load(f)
+        for ch in plan.get("chapters", []):
+            p = os.path.join(ROOT, "bookfactory", "chapters", ch["slug"] + ".md")
+            if ch.get("status") == "done" and not os.path.exists(p):
+                problems.append("book %s marked done but %s.md missing" % (ch["slug"], ch["slug"]))
+            if ch.get("status") != "done" and os.path.exists(p):
+                problems.append("book %s.md exists but status is not 'done' in plan.json" % ch["slug"])
+
+    # 5. sitemap must list every built guide
+    sm_path = os.path.join(site_dir, "sitemap.xml")
+    if os.path.exists(sm_path):
+        with open(sm_path) as f:
+            sm = f.read()
+        for a in arts:
+            if "/guides/%s/" % a["slug"] not in sm:
+                problems.append("sitemap missing guide %s" % a["slug"])
+
+    if problems:
+        print("\nQA FAILED — fix these before publishing:")
+        for p in problems:
+            print("  ✗ " + p)
+        raise SystemExit(1)
+    print("QA passed: links resolve, metadata sane, social queue clean, book plan consistent.")
+
+
 def main():
     cmd = sys.argv[1] if len(sys.argv) > 1 else "build"
     if cmd == "build":
-        build()
+        qa(build())
     elif cmd == "list":
         for a in load_articles():
             print("%-44s %s" % (a["slug"], a["title"]))
