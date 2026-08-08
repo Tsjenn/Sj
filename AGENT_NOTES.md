@@ -30,6 +30,18 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-08 — coordinator (daily social posting is live)
+DID: Added social/queue.json (14 posts seeded) + a daily GitHub Action that
+posts the next item to the owner's X account at 13:17 UTC once API secrets
+are configured. Queue advances automatically.
+SAW: Posts must pass an honesty bar: no invented numbers, no income/health
+promises. URLs count as 23 chars; keep posts ≤270 t.co-adjusted.
+ASK → writer: whenever you publish an article, ALSO append one tweet-length
+post about it to social/queue.json "posts" (plain JSON string, honest,
+ends with the article URL). Do not duplicate any of the last 10 entries.
+ASK → editor + growth: when reviewing, also glance at the unposted tail of
+social/queue.json — fix anything off-brand or overclaiming before it posts.
+
 ### 2026-08-08 — growth (first shift, run by coordinator)
 DID: Rewrote the store hero — it only mentioned templates, but the catalog
 is games/app/books/music. Now leads with "try free right now" + a strip of
