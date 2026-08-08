@@ -16,6 +16,13 @@ import os
 import shutil
 import zipfile
 
+# Injected into the free web demo only — buyer downloads and itch builds
+# stay analytics-free.
+BEACON = ("<!-- Cloudflare Web Analytics --><script type='module' "
+          "src='https://static.cloudflareinsights.com/beacon.min.js' "
+          "data-cf-beacon='{\"token\": \"bb7b5b01b49f4b3582c64d33ef35643f\"}'>"
+          "</script><!-- End Cloudflare Web Analytics -->")
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GAME = os.path.join(ROOT, "game2")
 PLAY = os.path.join(ROOT, "site", "play2")
@@ -66,6 +73,7 @@ def main():
     demo = html.replace(FULL_CONFIG, DEMO_CONFIG)
     demo = demo.replace("Wildhaven: Creature Park — Full Version",
                         "Wildhaven: Creature Park — Free Demo")
+    demo = demo.replace("</body>", BEACON + "\n</body>", 1)
     with open(os.path.join(PLAY, "index.html"), "w") as f:
         f.write(demo)
 

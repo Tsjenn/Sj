@@ -14,6 +14,13 @@ import os
 import shutil
 import zipfile
 
+# Injected into the free web demo only — buyer downloads and itch builds
+# stay analytics-free.
+BEACON = ("<!-- Cloudflare Web Analytics --><script type='module' "
+          "src='https://static.cloudflareinsights.com/beacon.min.js' "
+          "data-cf-beacon='{\"token\": \"bb7b5b01b49f4b3582c64d33ef35643f\"}'>"
+          "</script><!-- End Cloudflare Web Analytics -->")
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APP = os.path.join(ROOT, "sleep")
 PUB = os.path.join(ROOT, "site", "sleep")
@@ -81,7 +88,8 @@ def main():
         html = f.read()
     assert FULL_CONFIG in html, "full-version config line not found in sleep/index.html"
     with open(os.path.join(PUB, "index.html"), "w") as f:
-        f.write(html.replace(FULL_CONFIG, FREE_CONFIG))
+        f.write(html.replace(FULL_CONFIG, FREE_CONFIG)
+                .replace("</body>", BEACON + "\n</body>", 1))
 
     dist = os.path.join(ROOT, "dist")
     os.makedirs(dist, exist_ok=True)

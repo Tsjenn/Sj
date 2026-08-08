@@ -14,6 +14,13 @@ import os
 import shutil
 import zipfile
 
+# Injected into the free web demo only — buyer downloads and itch builds
+# stay analytics-free.
+BEACON = ("<!-- Cloudflare Web Analytics --><script type='module' "
+          "src='https://static.cloudflareinsights.com/beacon.min.js' "
+          "data-cf-beacon='{\"token\": \"bb7b5b01b49f4b3582c64d33ef35643f\"}'>"
+          "</script><!-- End Cloudflare Web Analytics -->")
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GAME = os.path.join(ROOT, "game")
 PLAY = os.path.join(ROOT, "site", "play")
@@ -67,6 +74,7 @@ def main():
     assert FULL_CONFIG in html, "full-version config line not found in game/index.html"
     demo = html.replace(FULL_CONFIG, DEMO_CONFIG)
     demo = demo.replace("Critter Isles — Full Version", "Critter Isles — Free Demo")
+    demo = demo.replace("</body>", BEACON + "\n</body>", 1)
     with open(os.path.join(PLAY, "index.html"), "w") as f:
         f.write(demo)
 
