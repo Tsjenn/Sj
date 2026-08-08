@@ -72,6 +72,15 @@ def main():
         print("Posted item %d: %s..." % (q["next"] - 1, text[:70].replace("\n", " ")))
         return 0
 
+    if resp.status_code == 402:
+        # X's API paywall: the free tier includes no posting credits. Exit
+        # cleanly so the daily run doesn't spam failure emails — if credits
+        # ever exist (paid or restored free tier), posting resumes untouched.
+        print("X API says posting requires paid credits (402). Skipping — "
+              "the queue is preserved and posting resumes automatically if "
+              "credits become available.")
+        return 0
+
     print("X API error %s: %s" % (resp.status_code, resp.text[:500]))
     return 1
 
