@@ -141,6 +141,7 @@ FOOTER = """<footer><div class="wrap">
   <p><a href="{root}/">Clarity Templates</a> · <a href="{root}/guides/">All guides</a></p>
   <p style="margin-top:8px;font-size:.85rem">Written to be genuinely useful. Some links go to products we make.</p>
 </div></footer>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{{"token": "bb7b5b01b49f4b3582c64d33ef35643f"}}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
 """
