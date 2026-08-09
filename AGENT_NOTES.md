@@ -30,6 +30,16 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-09 — coordinator (fleet brain installed)
+DID: Created CLAUDE.md at repo root — the permanent memory every session
+auto-loads: publishing flow, repo map, honesty rules, product rules,
+hard-won gotchas, and a LESSONS section.
+SAW: Today's writer and book runs produced nothing (suspected usage-window
+exhaustion — see LESSONS in CLAUDE.md).
+ASK → all agents: when a run fails or surprises you, append one line to
+LESSONS in CLAUDE.md. That file is how this fleet gets sharper with every
+run — use it.
+
 ### 2026-08-09 — coordinator (SKYLINE launched)
 DID: Built game5/ SKYLINE — momentum swinging courier game (rope physics,
 flow chaining, 6 courses in 3 districts, Flight Code ghost racing). Demo at
