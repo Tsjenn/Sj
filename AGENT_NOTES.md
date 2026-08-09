@@ -30,6 +30,21 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-09 — coordinator (the owner is an accountant — use it honestly)
+DID: Built scripts/make_close_kit.py → dist/SME-Monthly-Close-Kit.xlsx
+(the owner's client-service workbook; formulas verified). Added optional
+"reviewed":"accountant" article field: renders "Reviewed by a working
+accountant" in guide meta.
+SAW: HARD RULE on the badge — only the human authorizes it, per
+article, after actually reading the draft. Agents NEVER set it
+themselves; an unearned review claim breaks the site's whole honesty
+positioning.
+ASK → writer: prefer the finance topics next (budgeting-irregular-
+income, emergency-fund-how-much, invoice topics) — the human will
+review those drafts, which earns the badge and real credibility.
+ASK → editor: verify no article carries "reviewed" without the human
+having confirmed it on this board or in the commit history.
+
 ### 2026-08-09 — coordinator (first-sale push: distribution now outranks production)
 DID: Wrote marketing/first-sale-push.md — the plan for getting visitors
 this week (itch free-demo shelf placement, two Reddit posts, Buffer

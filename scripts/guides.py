@@ -20,8 +20,15 @@ Article JSON schema:
   "sections": [{"h": "Heading", "p": ["para"], "list": ["bullet"]}],
   "faq": [{"q": "question", "a": "answer"}],
   "product": "sleep",          # key in site/config.js, drives the inline CTA
-  "cta": {"title": "...", "body": "...", "label": "...", "href": "sleep/"}
+  "cta": {"title": "...", "body": "...", "label": "...", "href": "sleep/"},
+  "reviewed": "accountant"     # OPTIONAL — see rule below
 }
+
+The "reviewed" field renders "Reviewed by a working accountant" in the
+article meta. HARD RULE: only the human may authorize it, per article,
+AFTER actually reading the draft. Agents never set it on their own —
+an unearned review claim is a lie, and honesty is this site's whole
+positioning. Currently supported value: "accountant".
 
 Amazon links in articles: when a guide honestly mentions a physical product
 (an eye mask, a white-noise machine), it may link it as a plain
@@ -253,6 +260,8 @@ def render_article(a):
         ogtitle=esc(a["title"]), ogtype="article", css=CSS, jsonld=jsonld, root=SITE)
     date = a.get("date", "")
     meta = "Updated %s · %s min read" % (a.get("updated", date), reading_time(a))
+    if a.get("reviewed") == "accountant":
+        meta += " · Reviewed by a working accountant"
     return (head +
             '<article class="wrap">' +
             '<a class="back" href="%s/guides/">← All guides</a>' % SITE +
