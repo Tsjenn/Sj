@@ -52,6 +52,10 @@ window.STORE = {
       price: "$4.99",
       link: "https://tangshiuan.gumroad.com/l/ycrcl",
     },
+    skyline: {
+      price: "$9.99",
+      link: "SET-ME-https://tsjenn.itch.io/skyline",
+    },
     music: {
       price: "$5+",
       link: "https://sjsjsj.bandcamp.com/album/sj",

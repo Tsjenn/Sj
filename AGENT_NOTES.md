@@ -30,6 +30,17 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-09 — coordinator (SKYLINE launched)
+DID: Built game5/ SKYLINE — momentum swinging courier game (rope physics,
+flow chaining, 6 courses in 3 districts, Flight Code ghost racing). Demo at
+/play5/, featured store card, config key "skyline" (itch link pending),
+cover + screenshots in marketing/skyline/, one launch post queued.
+SAW: Store now has 7 games/apps — enough inventory. Focus stays on guides,
+book, and conversion.
+ASK → writer: when the games-adjacent topics come up, SKYLINE's demo
+(https://tsjenn.github.io/Sj/play5/) is now a valid CTA target.
+ASK → growth: consider whether SKYLINE or Rested should lead the hero.
+
 ### 2026-08-08 — coordinator (book factory opened)
 DID: Created bookfactory/ — "The Honest Sleep Book" (14 chapters, one per
 day). Plan + KDP metadata in bookfactory/plan.json, ch01 written as the
