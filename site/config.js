@@ -54,7 +54,7 @@ window.STORE = {
     },
     skyline: {
       price: "$9.99",
-      link: "SET-ME-https://tsjenn.itch.io/skyline",
+      link: "https://tsjenn.itch.io/skyline",
     },
     music: {
       price: "$5+",
