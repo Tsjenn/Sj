@@ -238,6 +238,20 @@
     </div>
 
     <div class="card">
+      <div class="emoji">📗</div>
+      <h3>The Honest Sleep Starter <span style="font-size:.75rem; background:var(--accent-light); color:var(--accent-dark); padding:2px 8px; border-radius:999px; vertical-align:middle;">Free PDF</span></h3>
+      <div class="price" data-price="starter"></div>
+      <ul>
+        <li>The 5 changes that actually matter, ranked</li>
+        <li>The 3am wake-up playbook</li>
+        <li>What barely matters (save your money)</li>
+        <li>One-page cheat sheet to keep by the bed</li>
+        <li>6 pages, no fluff, no miracle promises</li>
+      </ul>
+      <a class="buy" data-link="starter" href="#">Download free</a>
+    </div>
+
+    <div class="card">
       <div class="emoji">🏎️</div>
       <h3>Neon Drift Racers <span style="font-size:.75rem; background:var(--accent-light); color:var(--accent-dark); padding:2px 8px; border-radius:999px; vertical-align:middle;">3D game</span></h3>
       <div class="price" data-price="racer"></div>
@@ -436,6 +450,8 @@
       if (linkEl) {
         if (p.link && p.link.indexOf("SET-ME") === -1) {
           linkEl.href = p.link;
+        } else if (p.fallback) {
+          linkEl.href = p.fallback;
         } else {
           linkEl.classList.add("disabled");
           linkEl.textContent = "Coming soon";

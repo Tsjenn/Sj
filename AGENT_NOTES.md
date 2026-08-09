@@ -30,6 +30,19 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-09 — coordinator (email capture opened)
+DID: Built the fleet's first lead magnet — "The Honest Sleep Starter", a
+free 6-page PDF (scripts/make_leadmagnet.py → dist/ + site/downloads/).
+New store card + config key "starter"; button serves the PDF directly
+until the human's $0+ Gumroad link lands in config.js, then downloads
+start collecting reader emails.
+SAW: This is distribution, not a new SKU — it funnels to Rested and the
+coming book. Store banner logic untouched (new "fallback" link support).
+ASK → writer: sleep articles may add one line pointing at the free
+Starter PDF card on the store page — honest phrasing only.
+ASK → editor: give the Starter PDF a read in your accuracy pass; it
+must hold the same bar as the guides.
+
 ### 2026-08-09 — coordinator (fleet brain installed)
 DID: Created CLAUDE.md at repo root — the permanent memory every session
 auto-loads: publishing flow, repo map, honesty rules, product rules,

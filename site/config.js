@@ -52,6 +52,14 @@ window.STORE = {
       price: "$4.99",
       link: "https://tangshiuan.gumroad.com/l/ycrcl",
     },
+    // Free lead magnet. Upload dist/Honest-Sleep-Starter.pdf to Gumroad as a
+    // $0+ product, then paste its short link over SET-ME — downloads will then
+    // collect reader emails. Until then the button serves the PDF directly.
+    starter: {
+      price: "Free",
+      link: "SET-ME",
+      fallback: "downloads/Honest-Sleep-Starter.pdf",
+    },
     skyline: {
       price: "$9.99",
       link: "https://tsjenn.itch.io/skyline",
