@@ -1,26 +1,118 @@
 {
-  "title": "The Honest Sleep Book",
-  "subtitle": "What Works, What's Marketing, and How to Fix Your Nights in Two Weeks",
-  "author": "S. J. Tang",
-  "price_suggestion": "$3.99",
-  "kdp_description": "Most sleep advice is a list of things you already know and already ignore — and most sleep technology tells you comforting numbers it cannot actually measure. This book is different in one way only: it is honest.\n\nHonest about what actually moves the needle (your wake time, light, and what you do at 3am). Honest about what barely matters (most of what you've been told to feel guilty about). Honest about what your sleep tracker can really see — and the numbers it invents. And honest about when your problem isn't habits at all, and a doctor should be involved.\n\nInside:\n• Why fixing your wake-up time beats every other change combined\n• The 3am playbook: exactly what to do when your mind won't stop\n• How to read a sleep app without being fooled by it\n• Caffeine, alcohol, naps and screens — the real rules, minus the panic\n• A realistic 14-day reset plan you can actually keep\n\nNo miracle cures. No 47-step routines. Just the honest version of what works, in plain language, from someone who builds sleep technology and got tired of the industry's exaggerations.",
-  "kdp_keywords": ["sleep help for adults", "insomnia relief", "how to fall asleep faster", "sleep hygiene", "better sleep habits", "sleep tracker accuracy", "wake up refreshed"],
-  "kdp_categories": "Health, Fitness & Dieting > Sleep Disorders; Self-Help > Stress Management",
-  "status_note": "One chapter per day. When every chapter is 'done', run: python3 scripts/bookfactory.py build",
-  "chapters": [
-    {"n": 1, "slug": "ch01", "title": "The Night You Stopped Trusting Sleep Advice", "brief": "Why most sleep advice fails (it ignores mechanism and blames willpower). What this book promises and refuses to promise. How to use the 14 days. The three honesty rules the whole book follows.", "status": "done"},
-    {"n": 2, "slug": "ch02", "title": "How Sleep Actually Works (in Ten Minutes)", "brief": "Sleep pressure vs body clock — the two-system model in plain words. The ~90-minute cycle, what deep and REM sleep each do, why waking briefly at night is normal. No jargon beyond adenosine and circadian, both explained.", "status": "todo"},
-    {"n": 3, "slug": "ch03", "title": "The Anchor: Why Your Wake Time Runs Everything", "brief": "The single highest-leverage change. Why bedtime cannot be forced but wake time can be chosen. Weekend lie-ins as self-inflicted jet lag. How to pick an anchor time and hold it through the first rough week.", "status": "todo"},
-    {"n": 4, "slug": "ch04", "title": "Light Is the Lever", "brief": "Morning outdoor light as the clock-setter; why cloudy daylight still beats indoor bulbs by an order of magnitude. Evening dimming. The screen question answered honestly: brightness and engagement, not blue-light panic.", "status": "todo"},
-    {"n": 5, "slug": "ch05", "title": "Caffeine and Alcohol: The Two Honest Conversations", "brief": "Caffeine half-life and the afternoon cutoff that actually matters. Alcohol as the great sleep impersonator — sedation vs sleep, the 3am rebound. No moralising; doses and timing, not abstinence lectures.", "status": "todo"},
-    {"n": 6, "slug": "ch06", "title": "The Bedroom: Cool, Dark, Quiet, Boring", "brief": "Temperature as the underrated lever. Darkness done cheaply. Sound: when masking noise helps and when silence wins. Making the bed a one-purpose place. What's worth buying and the expensive things that aren't.", "status": "todo"},
-    {"n": 7, "slug": "ch07", "title": "The Racing Mind", "brief": "Why thoughts get loud exactly when the lights go off. The worry-journal transfer. Cognitive shuffling and breathing patterns that work by mechanism, not magic. Why 'trying to sleep' is the one guaranteed way not to.", "status": "todo"},
-    {"n": 8, "slug": "ch08", "title": "The 3am Playbook", "brief": "The 20-minute rule and stimulus control — the single best-evidenced behavioural tool. Exactly what to do, step by step, when awake at 3am: what to get up for, what light, what activity, when to return. Clock-checking ban.", "status": "todo"},
-    {"n": 9, "slug": "ch09", "title": "Naps, Sleep Debt and Weekends", "brief": "When naps help and when they steal from the night. The 20-minute vs 90-minute nap. What sleep debt really is, what can be repaid and what can't. A weekend pattern that doesn't wreck Monday.", "status": "todo"},
-    {"n": 10, "slug": "ch10", "title": "Your Sleep Tracker Is Half Right", "brief": "What phones and wearables genuinely measure (timing, duration, fragmentation) vs what they estimate (stages). Orthosomnia — sleeping worse because a score said so. The three numbers worth watching; trends over nights.", "status": "todo"},
-    {"n": 11, "slug": "ch11", "title": "Food, Exercise and Timing", "brief": "Exercise as a genuine sleep aid and the evening-timing caveat that's smaller than believed. Late meals, heartburn and the 2-3 hour buffer. Supplements honestly: melatonin's real use case (timing, not sedation), magnesium's thin evidence.", "status": "todo"},
-    {"n": 12, "slug": "ch12", "title": "When It Isn't Habits: Red Flags That Need a Doctor", "brief": "Snoring + gasping = apnea screening, no exceptions. Chronic insomnia and why CBT-I is the gold standard over pills. Restless legs. The clear line between wellness territory and medical territory. This chapter must be unambiguous about seeking care.", "status": "todo"},
-    {"n": 13, "slug": "ch13", "title": "The 14-Day Reset", "brief": "The whole book compressed into a day-by-day plan: what to change on which day, what to expect (including the day-4 dip), how to log progress simply, and what 'success' honestly looks like after two weeks (better, not perfect).", "status": "todo"},
-    {"n": 14, "slug": "ch14", "title": "Keeping It: The Maintenance Mindset", "brief": "Why streak-thinking fails and elastic-thinking survives holidays, illness and babies. The two-night rule for getting back on track. One-page quick reference of every rule in the book. Ending: sleep as something you allow, not achieve.", "status": "todo"}
-  ]
+ "title": "The Honest Sleep Book",
+ "subtitle": "What Works, What's Marketing, and How to Fix Your Nights in Two Weeks",
+ "author": "S. J. Tang",
+ "price_suggestion": "$3.99",
+ "kdp_description": "Most sleep advice is a list of things you already know and already ignore — and most sleep technology tells you comforting numbers it cannot actually measure. This book is different in one way only: it is honest.\n\nHonest about what actually moves the needle (your wake time, light, and what you do at 3am). Honest about what barely matters (most of what you've been told to feel guilty about). Honest about what your sleep tracker can really see — and the numbers it invents. And honest about when your problem isn't habits at all, and a doctor should be involved.\n\nInside:\n• Why fixing your wake-up time beats every other change combined\n• The 3am playbook: exactly what to do when your mind won't stop\n• How to read a sleep app without being fooled by it\n• Caffeine, alcohol, naps and screens — the real rules, minus the panic\n• A realistic 14-day reset plan you can actually keep\n\nNo miracle cures. No 47-step routines. Just the honest version of what works, in plain language, from someone who builds sleep technology and got tired of the industry's exaggerations.",
+ "kdp_keywords": [
+  "sleep help for adults",
+  "insomnia relief",
+  "how to fall asleep faster",
+  "sleep hygiene",
+  "better sleep habits",
+  "sleep tracker accuracy",
+  "wake up refreshed"
+ ],
+ "kdp_categories": "Health, Fitness & Dieting > Sleep Disorders; Self-Help > Stress Management",
+ "status_note": "One chapter per day. When every chapter is 'done', run: python3 scripts/bookfactory.py build",
+ "chapters": [
+  {
+   "n": 1,
+   "slug": "ch01",
+   "title": "The Night You Stopped Trusting Sleep Advice",
+   "brief": "Why most sleep advice fails (it ignores mechanism and blames willpower). What this book promises and refuses to promise. How to use the 14 days. The three honesty rules the whole book follows.",
+   "status": "done"
+  },
+  {
+   "n": 2,
+   "slug": "ch02",
+   "title": "How Sleep Actually Works (in Ten Minutes)",
+   "brief": "Sleep pressure vs body clock — the two-system model in plain words. The ~90-minute cycle, what deep and REM sleep each do, why waking briefly at night is normal. No jargon beyond adenosine and circadian, both explained.",
+   "status": "done"
+  },
+  {
+   "n": 3,
+   "slug": "ch03",
+   "title": "The Anchor: Why Your Wake Time Runs Everything",
+   "brief": "The single highest-leverage change. Why bedtime cannot be forced but wake time can be chosen. Weekend lie-ins as self-inflicted jet lag. How to pick an anchor time and hold it through the first rough week.",
+   "status": "todo"
+  },
+  {
+   "n": 4,
+   "slug": "ch04",
+   "title": "Light Is the Lever",
+   "brief": "Morning outdoor light as the clock-setter; why cloudy daylight still beats indoor bulbs by an order of magnitude. Evening dimming. The screen question answered honestly: brightness and engagement, not blue-light panic.",
+   "status": "todo"
+  },
+  {
+   "n": 5,
+   "slug": "ch05",
+   "title": "Caffeine and Alcohol: The Two Honest Conversations",
+   "brief": "Caffeine half-life and the afternoon cutoff that actually matters. Alcohol as the great sleep impersonator — sedation vs sleep, the 3am rebound. No moralising; doses and timing, not abstinence lectures.",
+   "status": "todo"
+  },
+  {
+   "n": 6,
+   "slug": "ch06",
+   "title": "The Bedroom: Cool, Dark, Quiet, Boring",
+   "brief": "Temperature as the underrated lever. Darkness done cheaply. Sound: when masking noise helps and when silence wins. Making the bed a one-purpose place. What's worth buying and the expensive things that aren't.",
+   "status": "todo"
+  },
+  {
+   "n": 7,
+   "slug": "ch07",
+   "title": "The Racing Mind",
+   "brief": "Why thoughts get loud exactly when the lights go off. The worry-journal transfer. Cognitive shuffling and breathing patterns that work by mechanism, not magic. Why 'trying to sleep' is the one guaranteed way not to.",
+   "status": "todo"
+  },
+  {
+   "n": 8,
+   "slug": "ch08",
+   "title": "The 3am Playbook",
+   "brief": "The 20-minute rule and stimulus control — the single best-evidenced behavioural tool. Exactly what to do, step by step, when awake at 3am: what to get up for, what light, what activity, when to return. Clock-checking ban.",
+   "status": "todo"
+  },
+  {
+   "n": 9,
+   "slug": "ch09",
+   "title": "Naps, Sleep Debt and Weekends",
+   "brief": "When naps help and when they steal from the night. The 20-minute vs 90-minute nap. What sleep debt really is, what can be repaid and what can't. A weekend pattern that doesn't wreck Monday.",
+   "status": "todo"
+  },
+  {
+   "n": 10,
+   "slug": "ch10",
+   "title": "Your Sleep Tracker Is Half Right",
+   "brief": "What phones and wearables genuinely measure (timing, duration, fragmentation) vs what they estimate (stages). Orthosomnia — sleeping worse because a score said so. The three numbers worth watching; trends over nights.",
+   "status": "todo"
+  },
+  {
+   "n": 11,
+   "slug": "ch11",
+   "title": "Food, Exercise and Timing",
+   "brief": "Exercise as a genuine sleep aid and the evening-timing caveat that's smaller than believed. Late meals, heartburn and the 2-3 hour buffer. Supplements honestly: melatonin's real use case (timing, not sedation), magnesium's thin evidence.",
+   "status": "todo"
+  },
+  {
+   "n": 12,
+   "slug": "ch12",
+   "title": "When It Isn't Habits: Red Flags That Need a Doctor",
+   "brief": "Snoring + gasping = apnea screening, no exceptions. Chronic insomnia and why CBT-I is the gold standard over pills. Restless legs. The clear line between wellness territory and medical territory. This chapter must be unambiguous about seeking care.",
+   "status": "todo"
+  },
+  {
+   "n": 13,
+   "slug": "ch13",
+   "title": "The 14-Day Reset",
+   "brief": "The whole book compressed into a day-by-day plan: what to change on which day, what to expect (including the day-4 dip), how to log progress simply, and what 'success' honestly looks like after two weeks (better, not perfect).",
+   "status": "todo"
+  },
+  {
+   "n": 14,
+   "slug": "ch14",
+   "title": "Keeping It: The Maintenance Mindset",
+   "brief": "Why streak-thinking fails and elastic-thinking survives holidays, illness and babies. The two-night rule for getting back on track. One-page quick reference of every rule in the book. Ending: sleep as something you allow, not achieve.",
+   "status": "todo"
+  }
+ ]
 }

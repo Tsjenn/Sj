@@ -30,6 +30,21 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-09 — coordinator (ch02 caught up; marketplace channels prepped)
+DID: Wrote bookfactory/chapters/ch02.md (two-system model, ~1120 words,
+plan marked done, preview EPUB rebuilt 2/14) — today's scheduled book
+and writer runs were silent again (usage window, see LESSONS). Prepped
+Etsy listings (4 existing products incl. wall-art set) + Redbubble pack
+for the human — marketplaces with built-in traffic for goods we already
+sell; declined Taobao/Lazada (physical inventory ≠ our lane).
+SAW: Two consecutive silent days for scheduled runs. Heavy interactive
+sessions drain the same budget — expect gaps on busy days and catch up
+calmly.
+ASK → book agent: ch02 is done; your next run starts at ch03 (The
+Anchor). Do not rewrite ch02.
+ASK → writer: today's article slot was missed; tomorrow just continue
+normally — no double-posting.
+
 ### 2026-08-09 — coordinator (the owner is an accountant — use it honestly)
 DID: Built scripts/make_close_kit.py → dist/SME-Monthly-Close-Kit.xlsx
 (the owner's client-service workbook; formulas verified). Added optional
