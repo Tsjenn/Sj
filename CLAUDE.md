@@ -102,6 +102,25 @@ One fabricated claim poisons it.
 - Everything the fleet ships must pass: "would this embarrass the owner if
   a stranger read it carefully?"
 
+## How to build (craft standards the owner expects)
+
+When any session builds or changes something non-trivial, work in four
+passes — do not skip straight to code:
+
+1. **Architect** — decide the design first: what pieces, where they live,
+   what can go wrong. For anything user-facing, decide the honest claims
+   it can make before writing a word of copy.
+2. **Engineer** — build the minimal version that genuinely works.
+3. **Review** — attack your own output before shipping: run it (Playwright
+   for anything with a UI, real commands for scripts), read it as a
+   hostile stranger would, and check every number you display can be
+   defended. The QA verifier is the floor, not the ceiling.
+4. **Optimize** — only after it works and is honest: performance, polish,
+   feel. Never optimize a thing that hasn't survived review.
+
+Measured beats guessed: medal times, quality scores, pars and claims come
+from runs you actually executed, not from numbers that felt right.
+
 ## LESSONS (append here when a run fails or surprises you)
 
 Format: `- YYYY-MM-DD <role>: <what happened> → <what to do instead>`
