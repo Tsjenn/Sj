@@ -22,6 +22,14 @@ Article JSON schema:
   "product": "sleep",          # key in site/config.js, drives the inline CTA
   "cta": {"title": "...", "body": "...", "label": "...", "href": "sleep/"}
 }
+
+Amazon links in articles: when a guide honestly mentions a physical product
+(an eye mask, a white-noise machine), it may link it as a plain
+https://www.amazon.com/... URL — the page automatically adds the owner's
+affiliate tag (site/config.js amazonTag) and shows the required disclosure.
+Rules: max 2 per article, only products the article would mention anyway,
+never pick a product BECAUSE it pays — the recommendation must survive the
+honesty bar with the link removed.
 """
 
 import html
@@ -140,7 +148,27 @@ HEAD = """<!DOCTYPE html>
 FOOTER = """<footer><div class="wrap">
   <p><a href="{root}/">Clarity Templates</a> · <a href="{root}/guides/">All guides</a></p>
   <p style="margin-top:8px;font-size:.85rem">Written to be genuinely useful. Some links go to products we make.</p>
+  <p id="aff-note" style="margin-top:8px;font-size:.85rem;display:none">As an Amazon Associate we earn from qualifying purchases.</p>
 </div></footer>
+<script src="{root}/config.js"></script>
+<script>
+(function () {{
+  var tag = (window.STORE || {{}}).amazonTag;
+  if (!tag || tag.indexOf("SET-ME") !== -1) return;
+  var n = 0;
+  document.querySelectorAll('article a[href*="amazon.com/"]').forEach(function (a) {{
+    try {{
+      var u = new URL(a.href);
+      if (!/(^|\\.)amazon\\.com$/.test(u.hostname)) return;
+      u.searchParams.set("tag", tag);
+      a.href = u.toString();
+      a.rel = "sponsored noopener";
+      n++;
+    }} catch (e) {{}}
+  }});
+  if (n > 0) document.getElementById("aff-note").style.display = "block";
+}})();
+</script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{{"token": "bb7b5b01b49f4b3582c64d33ef35643f"}}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

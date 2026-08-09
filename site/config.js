@@ -13,6 +13,11 @@ window.STORE = {
   tagline: "Simple tools to organize your money, work, and goals.",
   supportEmail: "tangshiuanjenn@gmail.com",
 
+  // Amazon Associates tag (e.g. "tangshiuan-20"). Once set, guide pages
+  // automatically add it to Amazon product links and show the required
+  // disclosure. SET-ME = affiliate links stay plain, nothing breaks.
+  amazonTag: "SET-ME",
+
   // Displayed prices — set the SAME prices on Gumroad.
   // Gumroad accepts payments worldwide and handles VAT/sales tax for you.
   products: {
