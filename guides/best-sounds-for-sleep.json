@@ -1,0 +1,103 @@
+{
+  "slug": "best-sounds-for-sleep",
+  "title": "Rain, Brown Noise or Silence? The Best Sounds for Sleep",
+  "description": "What sleep sounds actually do, the honest differences between white, pink and brown noise, and when silence beats all of them.",
+  "date": "2026-08-10",
+  "updated": "2026-08-10",
+  "product": "sleep",
+  "intro": [
+    "Here is the honest version up front: sound does not put you to sleep. No frequency, no special noise colour, no rain recording has a sedative effect on the brain. What the right sound does is stop other sounds from waking you — and that turns out to be worth a lot.",
+    "This guide explains what sleep sounds genuinely do, which type suits which problem, and — because an honest guide has to say it — when the best sound for you is none at all."
+  ],
+  "sections": [
+    {
+      "h": "Why sound helps at all",
+      "p": [
+        "Your hearing never switches off. All night, your brain keeps monitoring the room, and it is exquisitely tuned to <em>changes</em>: the door, the motorbike, the neighbour's dog, a partner turning over. A quiet room punctuated by surprises is worse for your night than a moderately noisy room that never changes.",
+        "Steady sound works by smoothing those surprises over. The motorbike still happens, but against a bed of rain noise the jump in volume is smaller, so your brain is less likely to treat it as worth waking for. The technical name is masking, and it is the entire honest case for sleep sounds: not magic, just camouflage for a noisy world."
+      ]
+    },
+    {
+      "h": "White, pink and brown noise — the actual difference",
+      "p": [
+        "The colours describe how energy is spread across frequencies. White noise spreads it evenly, which sounds hissy, like an untuned radio. Pink noise tilts toward lower frequencies and sounds softer, like steady rainfall. Brown noise tilts further still and sounds deep and rumbling, like a waterfall heard from inside a tent.",
+        "Which is best? The research answer is unsatisfying and worth stating plainly: studies on noise and sleep are small and mixed, and no colour has been convincingly shown to beat the others. What the evidence and experience do support is simpler — lower-pitched noise is more comfortable for most people at the volumes you need for masking, which is why brown noise has the devoted following it does.",
+        "So the honest selection rule is: pick the one you can stop noticing. A sound you find even slightly interesting or irritating is a sound your brain keeps attending to, which defeats the point."
+      ]
+    },
+    {
+      "h": "Why rain and ocean recordings work so well",
+      "p": [
+        "Nature sounds are pink-ish noise with a story attached. Rain and surf have the same broadband, steady character that masks disturbances, plus one extra property: your brain has a lifetime of learning that rain on a roof means nothing is required of you. That learned harmlessness matters — the goal is sound your brain confidently ignores.",
+        "One practical warning: cheap looping recordings can backfire. Once you notice the loop point — the same gull every 40 seconds — your brain starts listening <em>for</em> it. Generated or genuinely long recordings avoid the loop problem entirely."
+      ]
+    },
+    {
+      "h": "When silence wins",
+      "p": [
+        "If your bedroom is genuinely quiet and you sleep through the night, adding sound solves a problem you do not have. Silence is the default worth defending: it costs nothing, needs no device, and cannot be set too loud.",
+        "Sound earns its place in three situations: an environment noisier than your night (traffic, thin walls, a snoring partner), a brain that latches onto small sounds when falling asleep, or travel, where an unfamiliar room's noises are all new and therefore all alarming. Outside those, you are decorating.",
+        "A related honest note: people worry about becoming dependent on their noise. What actually happens is milder — you get used to a helpful cue, the way you are used to your own pillow. If that bothers you, use a timer so the sound covers only the falling-asleep window rather than the whole night."
+      ]
+    },
+    {
+      "h": "Setting it up properly",
+      "p": [
+        "Volume is where most people go wrong. The job is to narrow the gap between background and disturbance, not to be loud. Set it to about the level of a quiet conversation — if you have to raise your voice over it, it is too loud, and running loud sound all night is a hearing-health question, especially with earbuds.",
+        "A speaker across the room beats earbuds for comfort and safety; if you share a bed, place it nearer the noise source than the bed. And give any sound a fair trial of several nights before judging — the first night with anything new is worse by definition."
+      ],
+      "list": [
+        "Choose the lowest-pitched sound you can completely ignore",
+        "Volume of a quiet conversation, never louder",
+        "Speaker over earbuds for all-night use",
+        "Use a timer if you only struggle at the falling-asleep stage",
+        "Avoid short loops — generated sound or long recordings only"
+      ],
+      "box": {
+        "title": "Generated soundscapes, no loops, no downloads",
+        "body": "Rested generates rain, ocean, brown noise and four other soundscapes live on your phone — no loop points, works offline, and stops automatically with its smart alarm. It also tracks your night and shows which habits are really costing you sleep. Free to try, installs from the browser.",
+        "label": "Try Rested free",
+        "href": "https://tsjenn.github.io/Sj/sleep/"
+      }
+    },
+    {
+      "h": "What to do tonight",
+      "p": [
+        "The short version:"
+      ],
+      "steps": [
+        "If your room is quiet and your nights are unbroken, change nothing.",
+        "If noise wakes you: pick rain or brown noise, set it to quiet-conversation volume, and run it for three nights before judging.",
+        "If your real problem is falling asleep, sound is a minor tool — the wake-time and light habits in our falling-asleep guide matter far more: https://tsjenn.github.io/Sj/guides/how-to-fall-asleep-faster/"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is brown noise better than white noise?",
+      "a": "No study convincingly crowns either. Brown noise sounds deeper and less hissy, so most people can play it at masking volume without irritation — that comfort, not any special frequency effect, is its real advantage. Pick whichever you stop noticing fastest."
+    },
+    {
+      "q": "Is it safe to play noise all night?",
+      "a": "At sensible volume through a speaker, yes for adults. Keep it around quiet-conversation level; all-night earbuds at high volume are where hearing concerns start. For babies, follow paediatric guidance: modest volume and the device well away from the cot."
+    },
+    {
+      "q": "Will I become dependent on it?",
+      "a": "You may come to prefer it, the same way you prefer your own bed — that is a habit, not an addiction. If it bothers you, use a timer so sound covers only the falling-asleep window, or take occasional nights off. Nothing about steady noise damages your ability to sleep in silence."
+    },
+    {
+      "q": "Do 'special frequencies' or binaural beats do anything extra?",
+      "a": "The evidence for binaural beats and branded frequencies improving sleep is weak and the marketing usually runs far ahead of it. If they relax you, they are working as pleasant audio — which is fine, but ordinary rain noise achieves the same for free."
+    },
+    {
+      "q": "What if sound doesn't fix my wake-ups?",
+      "a": "Then the wake-ups probably are not noise-driven. Frequent waking has other common causes — late caffeine or alcohol, an irregular schedule, or a sleep disorder. If you snore heavily or gasp awake, that is a doctor conversation, not an audio problem. This article is general information, not medical advice."
+    }
+  ],
+  "cta": {
+    "title": "More guides",
+    "body": "We write straight, practical guides on sleep and a few other things worth doing properly — including an honest look at what sleep apps can and cannot measure: https://tsjenn.github.io/Sj/guides/sleep-tracking-apps-accuracy/",
+    "label": "Browse all guides",
+    "href": "https://tsjenn.github.io/Sj/guides/"
+  }
+}
