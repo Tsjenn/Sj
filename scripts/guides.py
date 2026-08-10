@@ -409,7 +409,47 @@ def qa(arts):
             if ch.get("status") != "done" and os.path.exists(p):
                 problems.append("book %s.md exists but status is not 'done' in plan.json" % ch["slug"])
 
-    # 5. sitemap must list every built guide
+    # 5. honesty eval — the one rule above all others, enforced as code.
+    # Deterministic linter over everything agents write for the public:
+    # guide sources, social queue, book chapters, store homepage. Patterns
+    # are phrases an honest shop has no legitimate use for; if a false
+    # positive ever appears, rewrite the sentence — it was probably too
+    # close to the line anyway.
+    import re as _re2
+    BANNED = [
+        (r"guaranteed\s+(income|profit|result|return)", "guaranteed outcome claim"),
+        (r"get\s+rich", "get-rich language"),
+        (r"risk[- ]free", "risk-free claim"),
+        (r"scientifically\s+proven|clinically\s+proven", "unearned proof claim"),
+        (r"cures?\s+(insomnia|anxiety|depression)", "medical cure claim"),
+        (r"100%\s*(win|success|effective)", "impossible success rate"),
+        (r"doctors?\s+hate", "clickbait trope"),
+        (r"passive\s+income\s+guarantee", "income promise"),
+        (r"earn\s+(rm|\$|usd)\s*\d+[,\d]*\s*(per|a|every)\s*(day|week|month)", "specific income promise"),
+    ]
+    surfaces = []
+    for a in arts:
+        surfaces.append(("guide " + a["slug"], json.dumps(a)))
+    if os.path.exists(qpath):
+        with open(qpath) as f:
+            surfaces.append(("social queue", f.read()))
+    ch_dir = os.path.join(ROOT, "bookfactory", "chapters")
+    if os.path.isdir(ch_dir):
+        for fn in sorted(os.listdir(ch_dir)):
+            if fn.endswith(".md"):
+                with open(os.path.join(ch_dir, fn)) as f:
+                    surfaces.append(("book " + fn, f.read()))
+    home = os.path.join(site_dir, "index.html")
+    if os.path.exists(home):
+        with open(home) as f:
+            surfaces.append(("store homepage", f.read()))
+    for name, text in surfaces:
+        for pat, why in BANNED:
+            m = _re2.search(pat, text, _re2.I)
+            if m:
+                problems.append("HONESTY: %s contains %s: %r" % (name, why, m.group(0)))
+
+    # 6. sitemap must list every built guide
     sm_path = os.path.join(site_dir, "sitemap.xml")
     if os.path.exists(sm_path):
         with open(sm_path) as f:
@@ -423,7 +463,8 @@ def qa(arts):
         for p in problems:
             print("  ✗ " + p)
         raise SystemExit(1)
-    print("QA passed: links resolve, metadata sane, social queue clean, book plan consistent.")
+    print("QA passed: links resolve, metadata sane, social queue clean, "
+          "book plan consistent, honesty lint clean.")
 
 
 def main():
