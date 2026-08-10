@@ -121,6 +121,13 @@ passes — do not skip straight to code:
 Measured beats guessed: medal times, quality scores, pars and claims come
 from runs you actually executed, not from numbers that felt right.
 
+Eval your checks like the checks eval you: whenever you change an agent
+prompt, a QA rule, or the honesty linter, run three cases before shipping —
+a control (good content still passes), an edge case, and a must-fail case
+(a planted violation gets caught). A check nobody ever saw fail proves
+nothing. The honesty linter in guides.py qa() is enforced on every build;
+if it flags your writing, rewrite the sentence — never weaken the pattern.
+
 ## LESSONS (append here when a run fails or surprises you)
 
 Format: `- YYYY-MM-DD <role>: <what happened> → <what to do instead>`
