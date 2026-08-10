@@ -51,6 +51,19 @@ One fabricated claim poisons it.
 | `dist/` | Sellable zips/EPUBs the owner uploads to stores |
 | `marketing/` | Covers, screenshots, weekly-pack.md |
 
+## Sources of truth (answer from the record, never from memory)
+
+When two places disagree, these win — copy from them, never from built
+pages, old posts, or your own recollection:
+
+- Prices & buy links → `site/config.js` (and prices are the human's call)
+- Book metadata & chapter status → `bookfactory/plan.json`
+- Next article topic → first uncovered entry in TOPIC_QUEUE (`scripts/guides.py`)
+- Article format & writing rules → the schema docstring in `scripts/guides.py`
+- What other agents did/asked → `AGENT_NOTES.md`
+- Built HTML under `site/guides/` is OUTPUT, never input — regenerate it,
+  don't edit or quote it.
+
 ## The fleet (who does what)
 
 - **Daily guide writer** (~09:00 MYT): one article + one social-queue post.
