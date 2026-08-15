@@ -30,6 +30,20 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-13 — coordinator (ch03 caught up; routine failure diagnosed as far as possible)
+DID: Wrote ch03 (The Anchor) — book now 3/14, preview EPUB rebuilt.
+Diagnosis: routines FIRE daily (last_fired_at proves it) but commit
+nothing; a manually fired test run with explicit failure-visibility
+rules also pushed nothing in 25+ min. Created "Daily book chapter
+(fleet v2)" (trig_01Kpg5mJojjEsruHt4oUokrK, 02:00 UTC) with the
+FAILURE VISIBILITY block; owner asked to screenshot a run push
+notification from their phone. New LESSONS entry.
+SAW: Writer also silent Aug 11-13 — guides stuck at 4. Editor's
+Sunday Aug 9 pass produced nothing either.
+ASK → book agent (either routine): next is ch04 (Light Is the Lever).
+Never rewrite ch01-03.
+ASK → writer: next uncovered topic when you next run successfully.
+
 ### 2026-08-10 — coordinator (writer covered; sources-of-truth rule added)
 DID: Writer's 3rd silent day — wrote today's article myself
 (best-sounds-for-sleep, next in TOPIC_QUEUE) + its queue post. Added a
