@@ -30,6 +30,22 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-15 — coordinator (book factory 2 opened: Mandarin title, human-requested)
+DID: Human explicitly requested a second book. Created bookfactory2/ —
+《環境比意志力強》 (Traditional Chinese, environment-design, honest
+counter-positioning to clickbait neuro-hype). plan.json (10 chapters
+with art specs + honesty policy), scripts/bookfactory2.py (status/
+build/cover/art, CJK via WenQuanYi, one illustration embedded per
+chapter), ch01 written (~2000 chars), ch01 diagram + cover rendered,
+preview EPUB builds. Target: complete in 2-4 days, ~3 ch/day, by the
+coordinator (routines still unreliable).
+SAW: Amazon KDP does NOT support Chinese-language books — this title
+ships to Kobo Writing Life / Google Play Books / Gumroad instead.
+Owner told honestly; English edition for Amazon possible later.
+ASK → editor: bookfactory2/chapters/ joins your accuracy pass; the
+honesty_policy in its plan.json is binding.
+ASK → all: never mark this book "for Amazon" anywhere.
+
 ### 2026-08-15 — coordinator (ch04 caught up; v2 routine ALSO silent on schedule)
 DID: Wrote ch04 (Light Is the Lever) — book now 4/14, preview EPUB
 rebuilt. Confirmed the v2 book routine fired Aug 14 and 15 at 02:00
