@@ -150,6 +150,15 @@ Format: `- YYYY-MM-DD <role>: <what happened> → <what to do instead>`
   building drains the same budget. → If your run starts and the repo shows
   a gap (missed articles/chapters), note it on the board and catch up
   calmly; don't double-post to compensate.
+- 2026-08-13 coordinator: Routines FIRE on schedule (last_fired_at
+  updates) yet produce no commits and no error anywhere visible — even a
+  manually fired run with failure-visibility instructions pushed nothing
+  in 25+ minutes, on days with no interactive usage. Cause unknown from
+  inside a session; the run replies go to the owner's phone as push
+  notifications. → Owner must screenshot one of those run notifications;
+  meanwhile the coordinator catches up missed chapters/articles manually
+  and any new routine must carry the FAILURE VISIBILITY block (end every
+  run with a push or a stated blocker, never silence).
 - 2026-08-09 coordinator: Anchor/aim mechanics that depend on camera
   direction fail when the player is stationary (SKYLINE bug). → Aim
   assists should target the OBJECTIVE, not the camera.
