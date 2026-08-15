@@ -226,7 +226,47 @@ def art_ch01():
     return img
 
 
-ART_FUNCS = {"ch01": art_ch01}
+def art_ch02():
+    """Two cages: impoverished vs enriched environment."""
+    img, d = _canvas()
+    W, H = img.size
+
+    def cage(x0, x1, label):
+        y0, y1 = 220, 700
+        d.rectangle([x0, y0, x1, y1], outline=INK, width=8)
+        for bx in range(int(x0) + 60, int(x1), 90):
+            d.line([(bx, y0), (bx, y1)], fill=(210, 205, 195), width=4)
+        d.text((x0 + (x1 - x0) / 2 - len(label) * 26, y1 + 40), label,
+               font=cjk(52), fill=INK)
+        return y0, y1
+
+    # left: empty cage, single mouse
+    cage(110, 610, "貧乏環境")
+    d.ellipse([320, 610, 400, 660], fill=SOFT)          # mouse body
+    d.ellipse([390, 615, 425, 650], fill=SOFT)          # head
+    d.line([(320, 640), (280, 620)], fill=SOFT, width=8)  # tail
+
+    # right: enriched cage — wheel, ramp, two mice
+    cage(790, 1290, "豐富環境")
+    d.ellipse([840, 400, 1000, 560], outline=ACCENT, width=10)   # wheel
+    for a in range(0, 360, 45):
+        d.line([(920 + 78 * math.cos(math.radians(a)), 480 + 78 * math.sin(math.radians(a))),
+                (920, 480)], fill=ACCENT, width=5)
+    d.line([(1060, 690), (1240, 480)], fill=GREEN, width=14)     # ramp
+    d.line([(1240, 480), (1285, 480)], fill=GREEN, width=14)
+    d.ellipse([1080, 610, 1160, 660], fill=SOFT)
+    d.ellipse([1150, 615, 1185, 650], fill=SOFT)
+    d.ellipse([1180, 440, 1250, 485], fill=SOFT)                 # mouse on ramp
+    d.ellipse([1240, 445, 1272, 477], fill=SOFT)
+
+    d.text((110, H - 190), "動物研究是真的——但牠們是老鼠，不是你。",
+           font=cjk(40), fill=INK)
+    d.text((110, H - 130), "可信的部分：環境改變了牠們反覆做的事。",
+           font=cjk(40), fill=INK)
+    return img
+
+
+ART_FUNCS = {"ch01": art_ch01, "ch02": art_ch02}
 
 
 def build_art(only=None):
