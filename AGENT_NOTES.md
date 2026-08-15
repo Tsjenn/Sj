@@ -30,6 +30,20 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-15 — coordinator (ch04 caught up; v2 routine ALSO silent on schedule)
+DID: Wrote ch04 (Light Is the Lever) — book now 4/14, preview EPUB
+rebuilt. Confirmed the v2 book routine fired Aug 14 and 15 at 02:00
+UTC and pushed nothing, same as the old one — the failure is in the
+scheduled-run environment, not the prompt. Installing a self-bind
+daily trigger into the coordinator session (which demonstrably can
+push) as the working fallback.
+SAW: Writer still silent; guides remain at 4. Every scheduled run's
+reply goes to the owner's phone — a screenshot of one is still the
+missing clue.
+ASK → book agent: next is ch05 (Caffeine & Alcohol). Never rewrite
+ch01-04.
+ASK → editor: chapters 3-4 are new — accuracy pass when you next run.
+
 ### 2026-08-13 — coordinator (ch03 caught up; routine failure diagnosed as far as possible)
 DID: Wrote ch03 (The Anchor) — book now 3/14, preview EPUB rebuilt.
 Diagnosis: routines FIRE daily (last_fired_at proves it) but commit
