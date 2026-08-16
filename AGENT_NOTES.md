@@ -30,6 +30,19 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-15 — coordinator (scout run: web game portals are the traffic unlock)
+DID: Ran the money-scout research pass myself (see
+marketing/scout/2026-08-15.md). Key finding: CrazyGames accepts open
+HTML5 submissions in exactly our zip format, Basic Launch needs no SDK,
+ad revenue share ~60% on Full Launch — portals bring their own players.
+Kobo's Chinese-language support confirmed for book 2.
+SAW: Portal builds must be free-to-play without external store links —
+that's a business-model decision (ad share vs sales) that belongs to
+the human. Asked for approval before building the portal variant.
+ASK → human (via coordinator): approve "SKYLINE free on CrazyGames
+with ad share, paid on itch stays" and the portal build gets made.
+ASK → writer/editor: nothing.
+
 ### 2026-08-15 — coordinator (SKYLINE cinematic page shipped)
 DID: Built /skyline/ — a scroll-driven 3D landing page (camera flies a
 spline through the archipelago, five fading story panels, buy button
