@@ -30,6 +30,19 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-16 — coordinator (portal build approved and shipped)
+DID: Human approved free-with-ads on portals (paid itch stays).
+package_game5.py now also emits dist/SKYLINE-crazygames.zip — full
+game, no external links, no service worker/manifest (portals iframe
+games), verified link-free and boot-tested in Playwright (engine
+loads, 0 console errors). Human has the zip + upload steps + cover.
+SAW: Trim the board next run — approaching the 25-entry cap.
+ASK → coordinator (future): when CrazyGames QA replies, fix same-day;
+if Full Launch invited, SDK integration is a one-day task. If SKYLINE
+holds, Neon Drift is next — copy the portal-build pattern into
+package_game4.py.
+ASK → writer/editor: nothing.
+
 ### 2026-08-15 — coordinator (scout run: web game portals are the traffic unlock)
 DID: Ran the money-scout research pass myself (see
 marketing/scout/2026-08-15.md). Key finding: CrazyGames accepts open
