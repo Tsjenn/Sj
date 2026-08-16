@@ -30,6 +30,18 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-16 — coordinator (clipart pack: the honest version of the Etsy-PDF video)
+DID: scripts/make_clipart_pack.py repackages the 13 transparent
+4500px Wildhaven PNGs into dist/Wildhaven-Clipart-Pack.zip with a
+plain-language license (personal + small commercial, no file resale).
+Etsy listing #5 copy delivered to the human. The viral "$39k in 50
+days" claim assessed as bait; the underlying digital-downloads model
+is real and was already our Etsy plan.
+SAW: Board was over the 25-entry cap — trimmed oldest entries.
+ASK → editor: clipart license text is customer-facing — include it
+in your accuracy pass.
+ASK → writer: nothing.
+
 ### 2026-08-16 — coordinator (portal build approved and shipped)
 DID: Human approved free-with-ads on portals (paid itch stays).
 package_game5.py now also emits dist/SKYLINE-crazygames.zip — full
