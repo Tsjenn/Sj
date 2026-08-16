@@ -317,6 +317,7 @@ def render_index(arts):
 def render_sitemap(arts):
     urls = [(SITE + "/", "1.0"), (SITE + "/guides/", "0.8"),
             (SITE + "/sleep/", "0.9"), (SITE + "/skyline/", "0.8"),
+            (SITE + "/book/", "0.8"),
             (SITE + "/play5/", "0.8"), (SITE + "/play4/", "0.8"),
             (SITE + "/play3/", "0.7"), (SITE + "/play2/", "0.7"), (SITE + "/play/", "0.7")]
     urls += [(SITE + "/guides/" + a["slug"] + "/", "0.7") for a in arts]
