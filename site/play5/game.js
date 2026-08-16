@@ -181,15 +181,16 @@
 
   function buildCity() {
     var rnd = seededRand(77);
+    var rnd2 = seededRand(913);  // decoration-only stream — keeps the main
+                                 // sequence (tower layout, medal-time world) intact
     var texA = windowTexture(0.7), texB = windowTexture(0.35);
     var geo = new THREE.BoxGeometry(1, 1, 1);
-    var mats = [
-      new THREE.MeshLambertMaterial({ map: texA, color: 0x9A8AB8 }),
-      new THREE.MeshLambertMaterial({ map: texB, color: 0x7A6E9E }),
-      new THREE.MeshLambertMaterial({ map: texA, color: 0xB89A96 })
-    ];
+    var bodyCols = [0x9A8AB8, 0x7A6E9E, 0xB89A96];
     var capMat = new THREE.MeshBasicMaterial({ color: 0xFFC46B });
     var capMat2 = new THREE.MeshBasicMaterial({ color: 0x59E0C8 });
+    var neonMats = [0xFF5FA2, 0x59E0C8, 0xFFC46B].map(function (c) {
+      return new THREE.MeshBasicMaterial({ color: c });
+    });
 
     for (var gx = -6; gx <= 6; gx++) {
       for (var gz = -6; gz <= 6; gz++) {
@@ -200,12 +201,27 @@
         if (d2 > WORLD * WORLD) continue;
         var h = 34 + rnd() * 96 * (1 - Math.sqrt(d2) / (WORLD * 1.4));
         var w = 14 + rnd() * 16, dep = 14 + rnd() * 16;
-        var b = new THREE.Mesh(geo, mats[Math.floor(rnd() * mats.length)]);
+        // window texture tiled to the tower's real proportions, so lit
+        // windows stay window-sized on every building instead of
+        // stretching into blurry blocks on tall towers
+        var tex = (rnd2() < 0.6 ? texA : texB).clone();
+        tex.repeat.set(Math.max(1, Math.round(w / 9)), Math.max(1, Math.round(h / 13)));
+        tex.needsUpdate = true;
+        var b = new THREE.Mesh(geo, new THREE.MeshLambertMaterial({
+          map: tex, color: bodyCols[Math.floor(rnd() * bodyCols.length)] }));
         b.scale.set(w, h, dep);
         b.position.set(x, h / 2, z);
-        var reps = Math.max(1, Math.round(h / 26));
         cityGroup.add(b);
         towers.push({ x: x, z: z, hw: w / 2, hd: dep / 2, top: h });
+        // neon edge strip on some towers — the dusk-city signage glow
+        // (rnd2 only: must not disturb the layout-defining sequence)
+        if (rnd2() < 0.4) {
+          var strip = new THREE.Mesh(geo, neonMats[Math.floor(rnd2() * neonMats.length)]);
+          var sx = rnd2() < 0.5 ? -1 : 1, sz = rnd2() < 0.5 ? -1 : 1;
+          strip.scale.set(0.55, h * (0.55 + rnd2() * 0.35), 0.55);
+          strip.position.set(x + sx * (w / 2 + 0.1), h * 0.48, z + sz * (dep / 2 + 0.1));
+          cityGroup.add(strip);
+        }
         // rooftop cap light + anchor
         if (rnd() < 0.75) {
           var cap = new THREE.Mesh(geo, rnd() < 0.5 ? capMat : capMat2);
