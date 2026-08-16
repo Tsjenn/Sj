@@ -93,6 +93,23 @@ def main():
             z.write(os.path.join(GAME, name), name)
         z.writestr("README.txt", BUYER_README)
 
+    # CrazyGames portal build: full game, free-with-ads model (owner-approved
+    # 2026-08-16). Portal rules: no external links, and no service worker /
+    # PWA bits (portals iframe the game; a SW would cache at their origin).
+    portal_html = html  # full mode, buyLink "" — already link-free
+    portal_html = portal_html.replace(
+        '<link rel="manifest" href="manifest.webmanifest">\n', "")
+    portal_html = portal_html.replace(
+        '  if ("serviceWorker" in navigator && location.protocol === "https:") {\n'
+        '    navigator.serviceWorker.register("sw.js").catch(function () {});',
+        "  if (false) {")
+    assert "serviceWorker" not in portal_html, "sw registration not fully stripped"
+    portal = os.path.join(dist, "SKYLINE-crazygames.zip")
+    with zipfile.ZipFile(portal, "w", zipfile.ZIP_DEFLATED) as z:
+        z.writestr("index.html", portal_html)
+        for name in ("game.js", "three.min.js", "icon-192.png", "icon-512.png"):
+            z.write(os.path.join(GAME, name), name)
+
     itch_demo_html = html.replace(FULL_CONFIG, ITCH_DEMO_CONFIG)
     itch_demo_html = itch_demo_html.replace(
         "SKYLINE — Full Version", "SKYLINE — Demo")
@@ -104,6 +121,7 @@ def main():
 
     print("Packaged demo -> site/play5/, buyer zip ->", zpath)
     print("itch builds ->", itch_full, "and", itch_demo)
+    print("portal build ->", portal)
 
 
 if __name__ == "__main__":
