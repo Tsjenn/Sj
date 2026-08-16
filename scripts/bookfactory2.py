@@ -266,7 +266,28 @@ def art_ch02():
     return img
 
 
-ART_FUNCS = {"ch01": art_ch01, "ch02": art_ch02}
+def art_ch03():
+    """Sight-line heat: the closer to your eyes, the more you do it."""
+    img, d = _canvas()
+    W, H = img.size
+    zones = [("視線內", 0.92, ACCENT), ("一步之外", 0.45, (216, 168, 120)),
+             ("收進櫃子", 0.12, SOFT)]
+    x0, y1 = 200, H - 260
+    bar_w = 260
+    for i, (label, frac, col) in enumerate(zones):
+        x = x0 + i * (bar_w + 140)
+        h = int(520 * frac)
+        d.rectangle([x, y1 - h, x + bar_w, y1], fill=col)
+        d.text((x + bar_w / 2 - len(label) * 26, y1 + 30), label, font=cjk(50), fill=INK)
+        pct = "%d%%" % (frac * 100)
+        d.text((x + bar_w / 2 - len(pct) * 14, y1 - h - 70), pct, font=cjk(48), fill=col)
+    d.text((x0 - 60, 60), "同一件事，被做的機率", font=cjk(54), fill=INK)
+    d.text((x0 - 60, H - 140), "（示意，非統計——原理：離視線越遠，事情越不存在。）",
+           font=cjk(38), fill=SOFT)
+    return img
+
+
+ART_FUNCS = {"ch01": art_ch01, "ch02": art_ch02, "ch03": art_ch03}
 
 
 def build_art(only=None):
