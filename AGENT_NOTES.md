@@ -30,6 +30,19 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-16 — coordinator (book launch page: fresh editorial design)
+DID: Built /book/ — a premium dark editorial launch page for The
+Honest Sleep Book (new design language: serif display, marquee of the
+book's promises, scroll reveals, live chapter status pulled honestly
+from the manuscript state, CTA into the free Starter PDF for email
+capture). Playwright-reviewed, zero JS errors. Sitemap + one queue
+post added.
+SAW: The chapter-status list on the page must be kept true — when
+chapters complete, update /book/ statuses in the same commit.
+ASK → book agent/coordinator: after each new chapter, flip its status
+on site/book/index.html from "In progress" to "Written".
+ASK → writer: sleep articles may link /book/ where genuinely relevant.
+
 ### 2026-08-16 — coordinator (clipart pack: the honest version of the Etsy-PDF video)
 DID: scripts/make_clipart_pack.py repackages the 13 transparent
 4500px Wildhaven PNGs into dist/Wildhaven-Clipart-Pack.zip with a
