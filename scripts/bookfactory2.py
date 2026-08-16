@@ -287,7 +287,33 @@ def art_ch03():
     return img
 
 
-ART_FUNCS = {"ch01": art_ch01, "ch02": art_ch02, "ch03": art_ch03}
+def art_ch04():
+    """Staircase of friction: each added step loses people."""
+    img, d = _canvas()
+    W, H = img.size
+    steps = [("直接可做", 1.0), ("多一步", 0.62), ("多兩步", 0.34), ("多三步", 0.15)]
+    x0, y_base = 170, H - 250
+    sw, sh = 250, 120
+    for i, (label, frac) in enumerate(steps):
+        x = x0 + i * (sw + 60)
+        y_top = y_base - i * sh
+        d.rectangle([x, y_top, x + sw, y_base + 60], fill=(235, 228, 214))
+        d.rectangle([x, y_top, x + sw, y_top + 14], fill=SOFT)
+        bar_h = int(300 * frac)
+        d.rectangle([x + sw / 2 - 60, y_top - 40 - bar_h, x + sw / 2 + 60, y_top - 40],
+                    fill=ACCENT if i == 0 else (216, 168, 120) if i == 1 else SOFT)
+        pct = "%d%%" % (frac * 100)
+        d.text((x + sw / 2 - len(pct) * 14, y_top - 40 - bar_h - 66), pct,
+               font=cjk(46), fill=INK)
+        d.text((x + sw / 2 - len(label) * 24, y_base + 90), label, font=cjk(46), fill=INK)
+    d.text((x0 - 40, 60), "還會去做這件事的人", font=cjk(54), fill=INK)
+    d.text((x0 - 40, H - 110), "（示意，非統計——每多一步麻煩，就有一批人在那一步放棄。）",
+           font=cjk(36), fill=SOFT)
+    return img
+
+
+ART_FUNCS = {"ch01": art_ch01, "ch02": art_ch02, "ch03": art_ch03,
+             "ch04": art_ch04}
 
 
 def build_art(only=None):
