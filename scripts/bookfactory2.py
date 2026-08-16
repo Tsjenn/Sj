@@ -312,8 +312,150 @@ def art_ch04():
     return img
 
 
+def art_ch05():
+    """Fork in the road: the default path is paved; choice needs a climb."""
+    img, d = _canvas()
+    W, H = img.size
+    # paved default path: wide, smooth curve
+    d.line([(120, H - 200), (620, H - 320), (1120, H - 300), (W - 80, H - 340)],
+           fill=ACCENT, width=44, joint="curve")
+    d.text((W - 560, H - 300), "預設路（不用想）", font=cjk(48), fill=ACCENT)
+    # deliberate path: narrow, uphill steps
+    pts = [(620, H - 320), (760, H - 470), (900, H - 560), (1060, H - 680), (1240, H - 760)]
+    d.line(pts, fill=SOFT, width=12, joint="curve")
+    for x, y in pts[1:]:
+        d.line([(x - 26, y), (x + 26, y)], fill=SOFT, width=8)
+    d.text((880, H - 850), "刻意選擇（要花力氣）", font=cjk(48), fill=SOFT)
+    d.ellipse([580, H - 360, 660, H - 280], fill=INK)  # the walker at the fork
+    d.text((120, 70), "人不是選了預設，是沒有選——它就發生了。", font=cjk(50), fill=INK)
+    return img
+
+
+def art_ch06():
+    """Phone home screen zones: tools up front, slot machines far away."""
+    img, d = _canvas()
+    W, H = img.size
+
+    def phone(x, label, sub, cols):
+        pw, ph = 380, 720
+        y = 130
+        d.rounded_rectangle([x, y, x + pw, y + ph], 40, outline=INK, width=8)
+        for r in range(4):
+            for c in range(3):
+                ix = x + 46 + c * 106
+                iy = y + 60 + r * 116
+                col = cols[min(r, len(cols) - 1)]
+                d.rounded_rectangle([ix, iy, ix + 80, iy + 80], 18, fill=col)
+        d.text((x + pw / 2 - len(label) * 26, y + ph + 28), label, font=cjk(50), fill=INK)
+        d.text((x + pw / 2 - len(sub) * 17, y + ph + 96), sub, font=cjk(34), fill=SOFT)
+
+    phone(170, "首頁：工具", "地圖、相機、筆記、銀行", [GREEN, GREEN, (200, 195, 182), (200, 195, 182)])
+    phone(830, "第三頁資料夾", "社群、短影片——要找才有", [(200, 195, 182), (200, 195, 182), ACCENT, ACCENT])
+    d.text((170, 40), "同一支手機，兩種預設。", font=cjk(52), fill=INK)
+    return img
+
+
+def art_ch07():
+    """Bedroom floor plan: bed, light path, phone charging outside."""
+    img, d = _canvas()
+    W, H = img.size
+    # room
+    d.rectangle([180, 160, 900, 820], outline=INK, width=10)
+    # bed
+    d.rounded_rectangle([240, 300, 560, 740], 24, fill=(226, 218, 202), outline=INK, width=6)
+    d.rectangle([240, 300, 560, 400], fill=(210, 200, 184))
+    d.text((310, 500), "床＝睡覺", font=cjk(52), fill=INK)
+    # window with morning light arrows
+    d.rectangle([640, 150, 850, 176], fill=ACCENT)
+    for ax in (660, 730, 800):
+        d.line([(ax, 190), (ax - 30, 300)], fill=(232, 185, 122), width=8)
+    d.text((610, 210), "早上拉開窗簾", font=cjk(38), fill=ACCENT)
+    # door + phone charging outside
+    d.rectangle([900, 560, 916, 720], fill=INK)
+    d.rounded_rectangle([1010, 590, 1120, 700], 16, outline=SOFT, width=8)
+    d.line([(1065, 700), (1065, 760)], fill=SOFT, width=8)
+    d.text((960, 780), "手機在房門外充電", font=cjk(42), fill=SOFT)
+    d.text((180, 60), "臥室只做一件事。", font=cjk(54), fill=INK)
+    d.text((180, H - 120), "暗、涼、安靜——床上不滑手機，大腦才記得床是用來睡的。",
+           font=cjk(38), fill=SOFT)
+    return img
+
+
+def art_ch08():
+    """Desk before/after: many objects vs one task."""
+    img, d = _canvas()
+    W, H = img.size
+
+    def desk(x, label, items):
+        dw = 500
+        d.rectangle([x, 420, x + dw, 460], fill=(196, 120, 86))
+        d.line([(x + 40, 460), (x + 40, 700)], fill=(196, 120, 86), width=16)
+        d.line([(x + dw - 40, 460), (x + dw - 40, 700)], fill=(196, 120, 86), width=16)
+        for ix, iy, iw, ih, col in items:
+            d.rectangle([x + ix, 420 - ih, x + ix + iw, 420], fill=col)
+        d.text((x + dw / 2 - len(label) * 26, 740), label, font=cjk(50), fill=INK)
+
+    import random as _r
+    r = _r.Random(7)
+    clutter = [(20 + i * 62, 0, 52, r.randint(40, 150),
+                (SOFT if i % 2 else (216, 168, 120))) for i in range(8)]
+    desk(140, "八個開著的分頁", clutter)
+    desk(780, "一件事", [(200, 0, 110, 70, ACCENT)])
+    d.text((140, 80), "視線裡的每樣東西，都是大腦裡一個開著的分頁。", font=cjk(48), fill=INK)
+    return img
+
+
+def art_ch09():
+    """Kitchen counter: visible fruit vs cupboard snacks."""
+    img, d = _canvas()
+    W, H = img.size
+    # counter
+    d.rectangle([120, 560, W - 120, 620], fill=(226, 218, 202))
+    d.rectangle([120, 620, W - 120, 640], fill=(210, 200, 184))
+    # fruit bowl on counter
+    d.ellipse([260, 470, 560, 590], fill=(235, 228, 214), outline=INK, width=6)
+    for fx, fy, col in [(320, 460, ACCENT), (390, 435, GREEN), (460, 455, (216, 168, 120)),
+                        (350, 415, GREEN), (430, 420, ACCENT)]:
+        d.ellipse([fx, fy, fx + 70, fy + 70], fill=col)
+    d.text((280, 660), "檯面上：一眼看到", font=cjk(44), fill=ACCENT)
+    # high cupboard with closed snacks
+    d.rectangle([880, 140, 1280, 380], outline=INK, width=8)
+    d.line([(1080, 140), (1080, 380)], fill=INK, width=8)
+    d.ellipse([950, 230, 1010, 290], outline=SOFT, width=8)
+    d.ellipse([1150, 230, 1210, 290], outline=SOFT, width=8)
+    d.text((880, 410), "高櫃裡：要特地想起", font=cjk(44), fill=SOFT)
+    d.text((120, 60), "誰在檯面上，誰就被吃掉。", font=cjk(54), fill=INK)
+    return img
+
+
+def art_ch10():
+    """14-day calendar: one small change per day."""
+    img, d = _canvas()
+    W, H = img.size
+    labels = ["換手機充電位", "拉開窗簾", "水果上檯面", "零食進高櫃", "首頁只留工具",
+              "運動服擺床邊", "登出短影片", "桌面清到剩一件", "書放枕頭上", "外送App搬家",
+              "遙控器抽電池", "購物清單", "檯面歸零", "檢查表回顧"]
+    x0, y0 = 130, 200
+    cw, chh = 300, 170
+    for i in range(14):
+        r_, c = divmod(i, 5)
+        x = x0 + c * (cw + 30)
+        y = y0 + r_ * (chh + 40)
+        done = i < 7
+        d.rounded_rectangle([x, y, x + cw, y + chh], 18,
+                            fill=(246, 240, 228) if done else PAPER,
+                            outline=ACCENT if done else SOFT, width=6)
+        d.text((x + 20, y + 14), "第%d天" % (i + 1), font=cjk(38),
+               fill=ACCENT if done else SOFT)
+        d.text((x + 20, y + 78), labels[i], font=cjk(36), fill=INK)
+    d.text((x0, 70), "十四天，每天十五分鐘，一次只改一處。", font=cjk(52), fill=INK)
+    return img
+
+
 ART_FUNCS = {"ch01": art_ch01, "ch02": art_ch02, "ch03": art_ch03,
-             "ch04": art_ch04}
+             "ch04": art_ch04, "ch05": art_ch05, "ch06": art_ch06,
+             "ch07": art_ch07, "ch08": art_ch08, "ch09": art_ch09,
+             "ch10": art_ch10}
 
 
 def build_art(only=None):
