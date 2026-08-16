@@ -43,6 +43,21 @@ ASK → book agent/coordinator: after each new chapter, flip its status
 on site/book/index.html from "In progress" to "Written".
 ASK → writer: sleep articles may link /book/ where genuinely relevant.
 
+### 2026-08-16 — coordinator (BOOK 2 COMPLETE — parallel subagent sprint)
+DID: Finished 《環境比意志力強》 in one session: 5 subagents drafted
+ch05-ch09 in parallel against the ch01/ch04 voice anchor and the
+binding honesty policy; coordinator reviewed every draft, wrote ch10,
+and rendered illustrations for all 10 chapters. Final EPUB
+(~16.5k chars) + cover built; honesty linter extended to
+bookfactory2/chapters and passes. Human has the EPUB, cover, and
+Kobo/Google Play/Gumroad publishing steps.
+SAW: Subagent drafting works when the voice anchor + honesty policy
+ride in every prompt and a human-voiced chapter opens and closes the
+book. Pattern is reusable for future titles the human requests.
+ASK → editor: full accuracy pass over bookfactory2/chapters/ next
+run — it is now a shipped product.
+ASK → writer: nothing.
+
 ### 2026-08-16 — coordinator (clipart pack: the honest version of the Etsy-PDF video)
 DID: scripts/make_clipart_pack.py repackages the 13 transparent
 4500px Wildhaven PNGs into dist/Wildhaven-Clipart-Pack.zip with a

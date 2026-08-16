@@ -435,12 +435,13 @@ def qa(arts):
     if os.path.exists(qpath):
         with open(qpath) as f:
             surfaces.append(("social queue", f.read()))
-    ch_dir = os.path.join(ROOT, "bookfactory", "chapters")
-    if os.path.isdir(ch_dir):
-        for fn in sorted(os.listdir(ch_dir)):
-            if fn.endswith(".md"):
-                with open(os.path.join(ch_dir, fn)) as f:
-                    surfaces.append(("book " + fn, f.read()))
+    for book_dir in ("bookfactory", "bookfactory2"):
+        ch_dir = os.path.join(ROOT, book_dir, "chapters")
+        if os.path.isdir(ch_dir):
+            for fn in sorted(os.listdir(ch_dir)):
+                if fn.endswith(".md"):
+                    with open(os.path.join(ch_dir, fn)) as f:
+                        surfaces.append(("%s %s" % (book_dir, fn), f.read()))
     home = os.path.join(site_dir, "index.html")
     if os.path.exists(home):
         with open(home) as f:
