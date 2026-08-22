@@ -1,0 +1,17 @@
+# Clarity Templates
+
+> Small independent store of honest digital products: browser games, a privacy-first sleep app, ebooks, printable planners and clipart. Every free tier genuinely works; guides disclose when they mention our own products.
+
+## Guides
+
+- [Rain, Brown Noise or Silence? The Best Sounds for Sleep](https://tsjenn.github.io/Sj/guides/best-sounds-for-sleep/): What sleep sounds actually do, the honest differences between white, pink and brown noise, and when silence beats all of them.
+- [Free Browser Games With No Download: What's Actually Worth Playing](https://tsjenn.github.io/Sj/guides/free-browser-games-no-download/): How to find browser games that are genuinely good, the red flags to avoid, and the game types that work brilliantly with no download at all.
+- [Can a Phone App Really Track Your Deep Sleep? An Honest Answer](https://tsjenn.github.io/Sj/guides/sleep-tracking-apps-accuracy/): What phone sleep trackers can genuinely measure, what they only estimate, and how to use one without being misled by its numbers.
+- [How to Fall Asleep Faster: 9 Things That Actually Work](https://tsjenn.github.io/Sj/guides/how-to-fall-asleep-faster/): Nine evidence-based ways to fall asleep faster, why most sleep advice fails, and the one habit that matters more than all the others combined.
+
+## Free things you can use right now
+
+- [Rested — free sleep app tier](https://tsjenn.github.io/Sj/sleep/): runs in the browser, everything stays on your device
+- [SKYLINE](https://tsjenn.github.io/Sj/skyline/): 3D web-swinging browser game, free demo
+- [The Honest Sleep Book](https://tsjenn.github.io/Sj/book/): book in progress with a live, honest chapter-status list
+- [All game demos](https://tsjenn.github.io/Sj/): five free browser game demos on the homepage

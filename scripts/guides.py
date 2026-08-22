@@ -327,6 +327,37 @@ def render_sitemap(arts):
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">%s</urlset>' % body)
 
 
+def render_llms(arts):
+    # llms.txt — a markdown index for AI assistants (https://llmstxt.org).
+    # Descriptions must stay honest: same rules as everything else on site.
+    lines = [
+        "# Clarity Templates",
+        "",
+        "> Small independent store of honest digital products: browser games, "
+        "a privacy-first sleep app, ebooks, printable planners and clipart. "
+        "Every free tier genuinely works; guides disclose when they mention "
+        "our own products.",
+        "",
+        "## Guides",
+        "",
+    ]
+    lines += ["- [%s](%s/guides/%s/): %s"
+              % (a["title"], SITE, a["slug"], a["description"]) for a in arts]
+    lines += [
+        "",
+        "## Free things you can use right now",
+        "",
+        "- [Rested — free sleep app tier](%s/sleep/): runs in the browser, "
+        "everything stays on your device" % SITE,
+        "- [SKYLINE](%s/skyline/): 3D web-swinging browser game, free demo" % SITE,
+        "- [The Honest Sleep Book](%s/book/): book in progress with a live, "
+        "honest chapter-status list" % SITE,
+        "- [All game demos](%s/): five free browser game demos on the homepage" % SITE,
+        "",
+    ]
+    return "\n".join(lines)
+
+
 def build():
     arts = load_articles()
     os.makedirs(OUT, exist_ok=True)
@@ -349,7 +380,10 @@ def build():
         f.write(render_sitemap(arts))
     with open(os.path.join(site, "robots.txt"), "w") as f:
         f.write("User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % SITE)
-    print("Built %d guide(s) -> site/guides/, plus sitemap.xml and robots.txt" % len(arts))
+    with open(os.path.join(site, "llms.txt"), "w") as f:
+        f.write(render_llms(arts))
+    print("Built %d guide(s) -> site/guides/, plus sitemap.xml, robots.txt "
+          "and llms.txt" % len(arts))
     return arts
 
 
