@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Critter Drop</title>
+<meta name="description" content="Drop and merge the critters — two of a kind make a bigger one. Don't overflow the jar!">
+<style>
+  html, body { margin:0; padding:0; height:100%; overflow:hidden; background:#FBEFD9;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-user-select:none; user-select:none; touch-action:manipulation; }
+  #c { display:block; width:100vw; height:100vh; }
+  .ui { position:fixed; left:0; right:0; text-align:center; color:#5A4C5C; pointer-events:none; }
+  #score { top:max(2.4vh, env(safe-area-inset-top)); font-size:min(11vw,54px); font-weight:800;
+    text-shadow:0 2px 0 rgba(255,255,255,.5); }
+  #chain { top:calc(max(2.4vh, env(safe-area-inset-top)) + min(12vw,60px)); font-size:min(5vw,22px);
+    font-weight:700; color:#E0806A; opacity:0; transition:opacity .2s; }
+  #hint { bottom:max(4vh, env(safe-area-inset-bottom)); font-size:min(4.6vw,20px); font-weight:600;
+    animation:pulse 1.6s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity:.5; transform:scale(1); }
+    50% { opacity:.95; transform:scale(1.06); } }
+  #mute { position:fixed; top:max(2vh, env(safe-area-inset-top)); right:12px; z-index:5;
+    width:44px; height:44px; border:0; border-radius:50%; font-size:20px; cursor:pointer;
+    background:rgba(90,76,92,.16); color:#5A4C5C; }
+  #over { position:fixed; inset:0; display:none; align-items:center; justify-content:center;
+    background:rgba(58,44,52,.5); }
+  #panel { background:#FFF7E8; color:#3A2C34; border-radius:22px; padding:30px 34px; text-align:center;
+    width:min(84vw,340px); box-shadow:0 18px 50px rgba(40,26,30,.35); }
+  #panel h1 { margin:0 0 4px; font-size:1.5rem; }
+  #panel .big { font-size:3.4rem; font-weight:800; line-height:1.1; }
+  #panel .best { color:#9a8878; font-weight:700; margin-bottom:16px; }
+  #panel button { display:block; width:100%; border:0; border-radius:12px; padding:15px;
+    font-size:1.05rem; font-weight:800; cursor:pointer; margin-top:10px; min-height:48px; }
+  #revive { background:#8B7CF0; color:#fff; display:none; }
+  #again { background:#F4A96A; color:#3A2C34; }
+  #share { background:transparent; color:#3A2C34; border:2px solid #3A2C34 !important; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div class="ui" id="score">0</div>
+<div class="ui" id="chain"></div>
+<div class="ui" id="hint">Drag to aim · release to drop</div>
+<button id="mute">🔊</button>
+<div id="over"><div id="panel">
+  <h1>The jar overflowed!</h1>
+  <div class="big" id="final">0</div>
+  <div class="best" id="best">best 0</div>
+  <button id="revive">🎬 Watch ad — pop the smalls</button>
+  <button id="again">🫙 Drop again</button>
+  <button id="share">📋 Share my score</button>
+</div></div>
+<script src="game.js"></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "bb7b5b01b49f4b3582c64d33ef35643f"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

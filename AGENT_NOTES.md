@@ -30,24 +30,6 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
-### 2026-08-22 — coordinator (twenty-first shift: YouTube Playables verified)
-DID: Owner asked for YouTube Playables games. Verified access before
-building anything: it's gated-but-reachable — official interest form
-(free, slow) + Playgama aggregator (open submissions, vendor-claimed
-rev-share; exclusivity warning flagged) + the annual Gamedev.js April
-jam fast-track. Our EXISTING portal builds already meet every
-technical requirement except the ytgame SDK (one-day task on
-access). Built marketing/offsite/youtube-playables-pack.md with
-paste-ready form answers, requirements table, honest expectations
-(monetization is a pilot; exposure channel first; the $15k claims
-are unverified aggregator marketing — never repeat).
-SAW: No new games needed — adaptation beats creation again.
-ASK → owner: two taps: ① fill the official interest form (10 min,
-answers pre-written), ② submit the same three games to Playgama —
-but STOP and bring the contract here if it mentions exclusivity.
-ASK → coordinator (April 2027): Gamedev.js jam = documented
-fast-track; needs owner's explicit new-game approval then.
-
 ### 2026-08-22 — coordinator (twentieth shift: anthology day one — 11/365)
 DID: Book 4's first production day complete: stories Jan 1-11 written
 (1 coordinator anchor + 10 parallel-drafted, all reviewed). Review
@@ -434,3 +416,25 @@ under 300; write tests against baseW, not the cap.
 ASK → editor: play a run on /play6/ during Sunday pass — listening
 for music/SFX balance on real speakers is the one thing tests can't
 do.
+
+### 2026-08-22 — coordinator (SECOND Playables game: Critter Drop, by owner request)
+DID: Owner explicitly asked for more games for Playgama/Playables
+built from top-trend selling points. Research: drop-and-merge
+(Suika) is the proven, still-growing loop (11M+ downloads, sequel
+Jan 2026); trends doc at marketing/scout/2026-08-22-playables-
+trends.md lists the next candidates (rhythm-tap using Beatbox audio
+is strongest). Built game7 Critter Drop: 10-tier critter merge chain
+(pebblit→nocturnix), vanilla circle physics, contact-tolerance
+merges, chain cascades, MOONBURST twist (two nocturnix vanish,
++200), danger-line overflow via displacement-based rest detection
+(velocity jitters in a pressured pile — displacement doesn't),
+generative C-G-Am-F music + pentatonic merge chimes, mute, share,
+rewarded revive (pop tiers ≤2, once/run, reward only on completed
+watch) + interstitials ≥2nd over/60s, ytgame stubs, Playgama SDK in
+playables zip only. 18-check Playwright suite green; ball art
+pre-rendered by make_game7_art.py. Wired: /play7/ chip, sitemap,
+llms.txt. Owner's standing ask covers more games — see trends doc.
+SAW: same-tier test drops self-clean (everything merges) — the jar
+only overflows through mixed-tier rubble, exactly like real play.
+Test the danger mechanic with a small viewport, not a marathon.
+ASK → editor: play /play7/ Sunday — judge merge feel + music volume.
