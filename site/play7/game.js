@@ -365,21 +365,135 @@
   }
 
   /* ----------------------------------------------------------------- draw */
+  function hx(a) {
+    return [parseInt(a.slice(1, 3), 16), parseInt(a.slice(3, 5), 16), parseInt(a.slice(5, 7), 16)];
+  }
+  function mixh(a, b, f) {
+    var pa = hx(a), pb = hx(b);
+    return "rgb(" + pa.map(function (v, i) { return Math.round(v + (pb[i] - v) * f); }).join(",") + ")";
+  }
+  // the meadow day cycle — advances with score, like a long afternoon
+  var PHASES = [
+    { top: "#BFE3F2", bot: "#FBEFD9", day: 1 },     // morning meadow
+    { top: "#F7C989", bot: "#FBE3C4", day: 0.78 },  // golden hour
+    { top: "#8E7FB8", bot: "#E5C3BE", day: 0.3 },   // dusk
+    { top: "#565B8E", bot: "#33375C", day: 0.06 },  // moonlit night...
+    { top: "#3E4370", bot: "#262A4A", day: 0.04 }   // ...held deep, then dawn
+  ];
+  var clouds = [], motes = [], flies = [];
+  (function () {
+    for (var i = 0; i < 4; i++) {
+      clouds.push({ x: (i * 173 + 40) % 600, y: 0.05 + i * 0.045, s: 20 + (i % 3) * 9, v: 0.1 + i * 0.045 });
+    }
+    for (i = 0; i < 14; i++) {
+      motes.push({ x: (i * 131 + 17) % 600, y: (i * 257 + 60) % 600, v: 0.14 + (i % 5) * 0.05, ph: i * 1.3 });
+    }
+    for (i = 0; i < 7; i++) {
+      flies.push({ x: (i * 197 + 60) % 600, y: (i * 149 + 90) % 600, ph: i * 2.1 });
+    }
+  })();
+  function phaseInfo() {
+    var ph = (score % 60) / 60 * PHASES.length;
+    var i = Math.floor(ph) % PHASES.length, j = (i + 1) % PHASES.length, f = ph - Math.floor(ph);
+    return { top: mixh(PHASES[i].top, PHASES[j].top, f),
+      bot: mixh(PHASES[i].bot, PHASES[j].bot, f),
+      day: PHASES[i].day + (PHASES[j].day - PHASES[i].day) * f };
+  }
   function bg() {
+    var p = phaseInfo();
     var g = cx.createLinearGradient(0, 0, 0, H);
-    g.addColorStop(0, "#FBEFD9");
-    g.addColorStop(1, "#F3D9C0");
+    g.addColorStop(0, p.top);
+    g.addColorStop(1, p.bot);
     cx.fillStyle = g; cx.fillRect(0, 0, W, H);
-    // soft side rails + floor
-    cx.fillStyle = "rgba(90,76,92,0.10)";
-    cx.fillRect(0, DANGER, WALL, H - DANGER);
-    cx.fillRect(W - WALL, DANGER, WALL, H - DANGER);
+    document.body.classList.toggle("night", p.day < 0.4);
+
+    // sun / moon (upper-left, clear of the NEXT preview and gift button)
+    var cxp = W * 0.16, cyp = H * 0.085;
+    if (p.day > 0.3) {
+      cx.globalAlpha = Math.min(1, (p.day - 0.3) / 0.4);
+      var rg = cx.createRadialGradient(cxp, cyp, 6, cxp, cyp, 64);
+      rg.addColorStop(0, "rgba(255,236,170,0.8)");
+      rg.addColorStop(1, "rgba(255,236,170,0)");
+      cx.fillStyle = rg; cx.fillRect(cxp - 64, cyp - 64, 128, 128);
+      cx.fillStyle = "#FFE9A8";
+      cx.beginPath(); cx.arc(cxp, cyp, 24, 0, 6.29); cx.fill();
+    } else {
+      cx.globalAlpha = Math.min(1, (0.3 - p.day) / 0.25);
+      cx.fillStyle = "#EDEBE0";
+      cx.beginPath(); cx.arc(cxp, cyp, 20, 0, 6.29); cx.fill();
+      cx.fillStyle = "rgba(60,60,80,0.14)";
+      cx.beginPath(); cx.arc(cxp - 6, cyp - 3, 5, 0, 6.29); cx.fill();
+      cx.beginPath(); cx.arc(cxp + 5, cyp + 6, 3, 0, 6.29); cx.fill();
+    }
+    cx.globalAlpha = 1;
+
+    var i2, c;
+    if (p.day < 0.45) {                          // stars, twinkling
+      for (i2 = 0; i2 < 22; i2++) {
+        cx.globalAlpha = (0.45 - p.day) * 1.8 * (0.5 + 0.5 * Math.sin(t * 2 + i2 * 1.7));
+        cx.fillStyle = "#FFF4E4";
+        cx.fillRect((i2 * 727) % W, (i2 * 331) % (H * 0.4), 2, 2);
+      }
+      cx.globalAlpha = 1;
+    }
+    for (i2 = 0; i2 < clouds.length; i2++) {     // drifting clouds (day)
+      c = clouds[i2];
+      c.x += c.v;
+      if (c.x > W + 90) c.x = -90;
+      cx.globalAlpha = 0.1 + 0.45 * p.day;
+      cx.fillStyle = "#FFFFFF";
+      cx.beginPath();
+      cx.arc(c.x, c.y * H, c.s, 0, 6.29);
+      cx.arc(c.x + c.s * 0.9, c.y * H + 4, c.s * 0.7, 0, 6.29);
+      cx.arc(c.x - c.s * 0.9, c.y * H + 5, c.s * 0.66, 0, 6.29);
+      cx.fill();
+    }
+    cx.globalAlpha = 1;
+    // rolling hills behind the pile
+    cx.fillStyle = "rgba(60,50,70," + (0.10 + 0.06 * (1 - p.day)) + ")";
+    cx.beginPath(); cx.ellipse(W * 0.2, H * 1.02, W * 0.55, H * 0.16, 0, 3.14, 6.29); cx.fill();
+    cx.fillStyle = "rgba(60,50,70," + (0.16 + 0.08 * (1 - p.day)) + ")";
+    cx.beginPath(); cx.ellipse(W * 0.85, H * 1.04, W * 0.6, H * 0.14, 0, 3.14, 6.29); cx.fill();
+    // pollen motes by day, fireflies by night
+    for (i2 = 0; i2 < motes.length; i2++) {
+      c = motes[i2];
+      c.y -= c.v; c.x += Math.sin(t * 0.7 + c.ph) * 0.3;
+      if (c.y < -6) { c.y = H + 6; c.x = (c.x + 97) % W; }
+      cx.globalAlpha = 0.16 * p.day;
+      cx.fillStyle = "#FFF4D6";
+      cx.beginPath(); cx.arc(c.x % W, c.y, 2.4, 0, 6.29); cx.fill();
+    }
+    if (p.day < 0.4) {
+      for (i2 = 0; i2 < flies.length; i2++) {
+        c = flies[i2];
+        var fx2 = (c.x + Math.sin(t * 0.5 + c.ph) * 40) % W;
+        var fy2 = (c.y + Math.cos(t * 0.35 + c.ph * 2) * 30) % (H * 0.8);
+        cx.globalAlpha = (0.4 - p.day) * 2 * (0.35 + 0.65 * Math.abs(Math.sin(t * 1.6 + c.ph * 3)));
+        cx.fillStyle = "#D8F0A0";
+        cx.beginPath(); cx.arc(fx2, fy2, 2.6, 0, 6.29); cx.fill();
+      }
+    }
+    cx.globalAlpha = 1;
+    // the glass jar: translucent side walls with a gloss line
+    var gw = Math.max(14, W * 0.035);
+    var lg = cx.createLinearGradient(0, 0, gw, 0);
+    lg.addColorStop(0, "rgba(255,255,255,0.20)");
+    lg.addColorStop(1, "rgba(255,255,255,0)");
+    cx.fillStyle = lg; cx.fillRect(0, DANGER, gw, H - DANGER);
+    lg = cx.createLinearGradient(W, 0, W - gw, 0);
+    lg.addColorStop(0, "rgba(255,255,255,0.20)");
+    lg.addColorStop(1, "rgba(255,255,255,0)");
+    cx.fillStyle = lg; cx.fillRect(W - gw, DANGER, gw, H - DANGER);
+    cx.fillStyle = "rgba(255,255,255,0.35)";
+    cx.fillRect(3, DANGER, 2, H - DANGER);
+    cx.fillRect(W - 5, DANGER, 2, H - DANGER);
+    cx.fillStyle = "rgba(90,76,92,0.12)";
     cx.fillRect(0, H - FLOOR, W, FLOOR);
     // danger line
     var hot = dangerT > 0.3;
     cx.strokeStyle = hot
       ? "rgba(224,90,80," + (0.5 + 0.4 * Math.sin(t * 12)) + ")"
-      : "rgba(90,76,92,0.25)";
+      : (p.day < 0.4 ? "rgba(255,244,228,0.35)" : "rgba(90,76,92,0.25)");
     cx.lineWidth = hot ? 3 : 2;
     cx.setLineDash([10, 8]);
     cx.beginPath(); cx.moveTo(0, DANGER); cx.lineTo(W, DANGER); cx.stroke();
