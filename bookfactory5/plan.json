@@ -51,28 +51,28 @@
           "title": "Powdered Tea Before It Had a Name",
           "brief": "Tang and Song dynasty China: cake tea, whisked tea culture, the tea competitions of the Song court; how whisked tea faded in China.",
           "art": "song-whisk",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch03",
           "title": "The Monk's Suitcase",
           "brief": "Zen monks (Eisai) carrying seeds and the whisking habit to Japan; tea as monastery medicine and meditation aid; Uji's beginnings.",
           "art": "journey-map",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch04",
           "title": "Four Hundred Years of One Bowl",
           "brief": "Chanoyu: Sen no Rikyū, wabi-sabi, what actually happens in a tea ceremony and what it is for; why slowness was the point.",
           "art": "ceremony-room",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch05",
           "title": "From Temple to Timeline",
           "brief": "How matcha left the tearoom: 20th-century Japan, the ice-cream era, the global cafe boom; what survived the journey and what got lost.",
           "art": "timeline",
-          "status": "todo"
+          "status": "done"
         }
       ]
     },

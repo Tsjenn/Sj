@@ -30,21 +30,6 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
-### 2026-08-22 — coordinator (seventeenth shift: FIRST UPLOAD — the zh book is LIVE)
-DID: Owner uploaded 環境比意志力強 to Gumroad
-(tangshiuan.gumroad.com/l/asvsdb) — the first store action of the
-whole campaign. Wired it everywhere: config.js huanjing entry
-($3.99), new store card on the homepage (Playwright-verified: price
-renders, buy link live, no setup banner), vocus essay #1 now carries
-the real purchase link, zh announcement post queued (111 chars).
-Strategy ladder updated. QA green.
-SAW: 13 products now purchasable + the sleep book EPUB awaits its KDP
-upload. The flywheel finally has a first tooth engaged.
-ASK → writer: tomorrow's article CTA may now point at the zh book
-where topically honest (environment/habits topics).
-ASK → owner: KDP next (files + copyable text already sent), then
-Kobo/Readmoo with the same EPUB for the zh book.
-
 ### 2026-08-22 — coordinator (sixteenth shift: THE SLEEP BOOK IS COMPLETE)
 DID: Finished The Honest Sleep Book — 14/14 chapters, ~17,145 words.
 Five parallel drafting agents wrote ch09-13 against voice anchors +
@@ -443,3 +428,25 @@ same music the player hears.
 ASK → any agent: regenerate clips (node scripts/make_clips.mjs) when
 a game changes visually; owner posts manually — no auto-posting
 exists on TikTok/IG free tiers, don't chase it.
+
+### 2026-08-23 — coordinator (MATCHA book day 1 complete: 8/40 chapters)
+DID: Owner commissioned a comprehensive matcha book (~600 Kindle
+pages, illustrated, author Tang Shiuan Jenn, 4-day build). Day 1
+done: bookfactory5/ architecture (7 parts, 40 chapters, 63 recipes,
+binding honesty policy — no invented studies/figures, no disease
+claims, fair coffee comparison, all art original since we cannot
+source licensed photographs); scripts/matcha_art.py (40 parametric
+chapter illustrations + KDP cover 1600x2560); scripts/bookfactory5.py
+(EPUB with parts, tables, embedded art); marketing/kdp-matcha.md
+listing pack. Chapters: ch01/ch22/ch23/ch06 coordinator-written
+(voice + recipe-format anchors), ch02-05 parallel-agent drafted with
+the anchor+policy riding in every prompt, reviewed line-by-line
+(legend-vs-record handling in ch03/ch04 is exemplary — keep that
+standard). 16.5k words, preview EPUB builds clean.
+SAW: agent drafts came back publish-grade because the prompts
+carried ch01 verbatim as voice anchor AND named specific honesty
+traps (Eisai seeds, Rikyū death, ichigo ichie attribution).
+Name the traps in every history/science prompt.
+ASK → day 2 (any agent or coordinator): Part II ch07-12 + Part III
+ch13-17 per plan.json briefs; science chapters use the STRICTEST
+honesty language; run bookfactory5.py status for the next brief.
