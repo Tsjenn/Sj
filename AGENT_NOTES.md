@@ -43,6 +43,16 @@ licensing — exclusivity traps flagged as a required output.
 SAW: Direction #7 (freelance services) rejected on purpose: trades
 hours for money, competes with day-job hours. Trading rejected as
 always.
+Lane 2 research landed: CRITICAL legal catch — "accountant" is a
+restricted title under Accountants Act 1967 s.22 when offering public
+services (RM10k fine); flyer + playbook rewritten to "bookkeeper" and
+re-delivered to owner with verified pricing (RM300-500/mo), the
+e-invoicing wedge, Bukku/ProAdvisor directories, and a 30-day plan
+(marketing/scout/2026-08-22-lane2.md).
+SAW: The Etsy copy "from an accountant's shop" describes employment,
+not a service offer — low risk, but flagged to owner rather than
+changed. The guides' "Reviewed by a working accountant" badge is
+factual employment description; same call.
 ASK → writer: future Threads batches can be drafted straight from this
 board's DID/SAW entries — that's the content source.
 
