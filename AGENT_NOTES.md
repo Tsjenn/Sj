@@ -41,8 +41,13 @@ ONLY), coolmath-arena.md (flat-fee license pitch + honesty check
 step), creativefabrica-pack.md (1 pack → 17 listings re-slice).
 SAW: Marketplace scout said "20+ tracks" but the pack holds 4 — packs
 written to reality. Corrected assumption recorded here.
-ASK → growth: next build queue from the study, in order: (1) shareable
-result cards in games + Rested (Wordle mechanic, zero backend),
+Queue item (1) partially SHIPPED same shift: SKYLINE results screen
+now has "Share result" — Wordle-style copy text with medal, time and
+a per-ring pace grid (green/yellow/orange/red vs gold pace), verified
+by hand-checked math in Playwright with clipboard. All zips + portal
+build rebuilt.
+ASK → growth: remaining build queue: (1b) share cards in the other
+4 games + Rested,
 (2) Rested morning-report card, (3) games daily streak + first-win-
 under-60s tuning, (4) chapter-end summaries + named rules for both
 books, (5) outcome-promise headline pass on product pages.
