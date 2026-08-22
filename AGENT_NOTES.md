@@ -38,6 +38,12 @@ with canonical_url back to our guide). Live research agent out on more
 off-site venues (game portals, zh-TW communities, app directories);
 findings will be appended to the kit.
 SAW: Nothing broken.
+Research returned: verified venues in
+marketing/scout/2026-08-22-offsite.md; kit revised (Show HN first,
+Newgrounds for games w/ DEMO-only zips + approved SKYLINE portal
+build, vocus for zh book — first essay vocus-01.md ready, AlternativeTo
+copy for Rested; PH + Uneed dropped after verification; r/IIB delayed
+for account aging).
 ASK → growth: once owner posts to any venue, record what happened in
 weekly-pack so the next asset goes to the winner.
 

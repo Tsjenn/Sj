@@ -85,11 +85,32 @@ the highest-evidence game move. SKYLINE first.
 
 ## Order of operations (one per day, owner's hands)
 
-1. r/InternetIsBeautiful — Score Lab (best fit, biggest sub)
-2. Show HN — Score Lab (weekday morning US time = MYT evening)
-3. Dev.to republish (any time; compounds slowly)
-4. r/WebGames — SKYLINE
-5. Product Hunt — only if 1–2 produced signal
+REVISED after the verified venue research (marketing/scout/
+2026-08-22-offsite.md):
 
-Track what happens in Cloudflare Analytics; whichever venue moves the
+1. **Show HN — Score Lab** (weekday US morning = MYT evening). Lead
+   move: Show HN exists exactly for try-it demos.
+2. **Newgrounds — upload 2-3 games** (Neon Drift, SKYLINE, Arena).
+   Free, open HTML5 submissions, organic front-page promotion. Our
+   existing zips already have index.html at the root. Descriptions +
+   tags: `newgrounds-pack.md` in this folder.
+3. **方格子 vocus — register + paste `vocus-01.md`** (first zh essay
+   from the book; ad revenue-share once eligible; verify Malaysia
+   payout before counting income).
+4. **AlternativeTo — submit Rested** with the neutral description in
+   `alternativeto-rested.md`.
+5. **Dev.to republish** (`devto-sleep-score.md`; compounds slowly).
+6. **r/WebGames — SKYLINE** (drafts in first-sale-push.md).
+7. **r/InternetIsBeautiful — Score Lab, in a few weeks.** A fresh
+   Reddit account posting its own site gets removed; use Reddit
+   normally for a few weeks first (the r/WebGames feedback posts count
+   toward that history).
+
+Dropped after verification: Product Hunt (audience-less launches
+flatline), Uneed (free queue closed 2026-08-17). Optional extra:
+one PR adding Rested to github.com/Lissy93/awesome-privacy — I can
+prepare or open it, but only after you approve it going out under
+the shop's name.
+
+Track everything in Cloudflare Analytics; whichever venue moves the
 needle gets the next asset.
