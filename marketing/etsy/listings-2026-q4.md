@@ -38,8 +38,8 @@ Sticker Clipart for Crafts, Cards and Classroom
 13 original animal characters as 4500 × 4500 px transparent PNGs —
 big enough for shirts and posters, clean enough for tiny stickers.
 Instant download. The license is written in plain words: personal
-projects freely, physical items you make up to 500 copies per design,
-no reselling the files themselves. The full license text ships in the
+projects freely, physical items you make and sell up to 500 items in
+total, no reselling the files themselves. The full license text ships in the
 download so you know exactly where you stand.
 
 ---
