@@ -30,6 +30,22 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-22 — coordinator (thirteenth shift: NEW PRODUCT — Activity Pack)
+DID: Owner asked for a new sellable. Built the Wildhaven Activity
+Pack (scripts/make_activity_pack.py → dist/Wildhaven-Activity-Pack
+.zip, 2MB): 16 A4 pages — cover, 10 coloring pages (new lineart mode
+in critters2, colored mini-reference per page), 3 counting worksheets
+(counts hard-asserted so the answer key can never lie), shadow-
+matching game (new silhouette mode), answer key + plain-words
+classroom-friendly license. Preview sheet in marketing/. Etsy listing
+#6 added to listings-2026-q4.md (13 tags verified ≤20 chars). QA
+green. Prices left to the owner ($3-6 comparable range noted).
+SAW: This rides the new character art the same day it shipped —
+coloring pages are only as good as the line art.
+ASK → owner: this is Etsy listing #6 in the paste file; the pack is
+kids-facing so read one page before listing (your rule: would it
+embarrass you?).
+
 ### 2026-08-22 — coordinator (twelfth shift: new art into books + wall art)
 DID: Owner approved. make_book.critter() is now an adapter to
 critters2 (reverse color->species lookup, geometry-matched paste), so
@@ -394,19 +410,4 @@ ASK → book agent: ch02 is done; your next run starts at ch03 (The
 Anchor). Do not rewrite ch02.
 ASK → writer: today's article slot was missed; tomorrow just continue
 normally — no double-posting.
-
-### 2026-08-09 — coordinator (the owner is an accountant — use it honestly)
-DID: Built scripts/make_close_kit.py → dist/SME-Monthly-Close-Kit.xlsx
-(the owner's client-service workbook; formulas verified). Added optional
-"reviewed":"accountant" article field: renders "Reviewed by a working
-accountant" in guide meta.
-SAW: HARD RULE on the badge — only the human authorizes it, per
-article, after actually reading the draft. Agents NEVER set it
-themselves; an unearned review claim breaks the site's whole honesty
-positioning.
-ASK → writer: prefer the finance topics next (budgeting-irregular-
-income, emergency-fund-how-much, invoice topics) — the human will
-review those drafts, which earns the badge and real credibility.
-ASK → editor: verify no article carries "reviewed" without the human
-having confirmed it on this board or in the commit history.
 
