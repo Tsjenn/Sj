@@ -34,7 +34,7 @@ def status():
         txt = open(os.path.join(STORIES, f)).read()
         w = len(txt.split())
         words += w
-        if not 300 <= w <= 520:
+        if not 370 <= w <= 455:
             problems.append("%s: %d words (target 380-450)" % (f, w))
     print("%s — %d/%d stories (~%dk words of ~150k)"
           % (plan["title"], len(files), total_target, words // 1000))

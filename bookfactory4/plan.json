@@ -13,21 +13,70 @@
   "cast": "rotate the ten critters (Flufftail, Pebblit, Aquaphin, Emberling, Mossback, Bubbletide, Zephyrix, Cinderpup, Glimmerwing, Nocturnix) plus recurring minor friends; every critter leads roughly 36 stories across the year",
   "endings": "the last two sentences always wind DOWN: quiet, warm, eyes closing",
   "language": "read-aloud friendly: rhythm over vocabulary, ages 3-8",
-  "no_repeats": "each story's central object/event must be new that month (tracked in month manifests)"
+  "no_repeats": "each story's central object/event must be new that month (tracked in month manifests)",
+  "pronoun_canon": "Fixed forever: Flufftail she, Pebblit he, Aquaphin she, Emberling she, Mossback he, Bubbletide she, Zephyrix she, Cinderpup he, Glimmerwing she, Nocturnix she. Every drafting prompt must include this line."
  },
  "months": [
-  {"m": 1, "theme": "Winterlight — lanterns, snow, warm dens", "stories": 31},
-  {"m": 2, "theme": "Friendship small and large", "stories": 28},
-  {"m": 3, "theme": "Waking gardens — first green things", "stories": 31},
-  {"m": 4, "theme": "Rain music — puddles, streams, storms passing", "stories": 30},
-  {"m": 5, "theme": "Meadow days — picnics, kites, bees", "stories": 31},
-  {"m": 6, "theme": "The long light — midsummer evenings", "stories": 30},
-  {"m": 7, "theme": "Water summer — ponds, boats, the shore", "stories": 31},
-  {"m": 8, "theme": "Harvest beginnings — orchards, honey, markets", "stories": 31},
-  {"m": 9, "theme": "Falling leaves — change met gently", "stories": 30},
-  {"m": 10, "theme": "Cozy dark — lamps early, shadows friendly", "stories": 31},
-  {"m": 11, "theme": "Gratitude and gathering", "stories": 30},
-  {"m": 12, "theme": "The quiet festival — year's end, stars, rest", "stories": 31}
+  {
+   "m": 1,
+   "theme": "Winterlight — lanterns, snow, warm dens",
+   "stories": 31
+  },
+  {
+   "m": 2,
+   "theme": "Friendship small and large",
+   "stories": 28
+  },
+  {
+   "m": 3,
+   "theme": "Waking gardens — first green things",
+   "stories": 31
+  },
+  {
+   "m": 4,
+   "theme": "Rain music — puddles, streams, storms passing",
+   "stories": 30
+  },
+  {
+   "m": 5,
+   "theme": "Meadow days — picnics, kites, bees",
+   "stories": 31
+  },
+  {
+   "m": 6,
+   "theme": "The long light — midsummer evenings",
+   "stories": 30
+  },
+  {
+   "m": 7,
+   "theme": "Water summer — ponds, boats, the shore",
+   "stories": 31
+  },
+  {
+   "m": 8,
+   "theme": "Harvest beginnings — orchards, honey, markets",
+   "stories": 31
+  },
+  {
+   "m": 9,
+   "theme": "Falling leaves — change met gently",
+   "stories": 30
+  },
+  {
+   "m": 10,
+   "theme": "Cozy dark — lamps early, shadows friendly",
+   "stories": 31
+  },
+  {
+   "m": 11,
+   "theme": "Gratitude and gathering",
+   "stories": 30
+  },
+  {
+   "m": 12,
+   "theme": "The quiet festival — year's end, stars, rest",
+   "stories": 31
+  }
  ],
  "art": "Spot illustrations from critters2.py sprinkled through (each month opener gets a scene; each story gets the lead critter's portrait at its head — generated, so zero marginal cost). Cover: night-sky Wildhaven with the cast asleep.",
  "production": "Parallel batches: ~10 stories/day drafted by agents against the voice anchor + month manifest, coordinator reviews every story for the ending rule and no-repeats, then commits. ~5-6 weeks to 365. Stories live in bookfactory4/stories/MM-DD-slug.md. scripts/bookfactory4.py status counts progress; build assembles the EPUB.",

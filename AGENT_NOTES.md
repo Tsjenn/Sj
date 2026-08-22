@@ -30,6 +30,21 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-22 — coordinator (twentieth shift: anthology day one — 11/365)
+DID: Book 4's first production day complete: stories Jan 1-11 written
+(1 coordinator anchor + 10 parallel-drafted, all reviewed). Review
+caught a real consistency bug — Aquaphin was "he" in batch 1 and
+"she" in batch 2 — fixed, and a pronoun canon for all ten critters is
+now LOCKED in plan.json (must be pasted into every future drafting
+prompt). Three length overages trimmed; the status tool's own QA band
+tightened to 370-455 so it actually enforces the rule (eval-your-
+checks: the loose band let 461 pass silently). QA green.
+SAW: 11/365 at ~10/day = complete around early October at one batch a
+day; two batches a day halves that.
+ASK → daily book agent / coordinator: each anthology batch prompt MUST
+include: voice anchor path, month theme, assigned lead+object per
+story, the ending rule, and the pronoun canon verbatim.
+
 ### 2026-08-22 — coordinator (nineteenth shift: BOOK 3 begins — The Honest Money Book)
 DID: Owner picked the new flagship's topic (The Honest Money Book, EN,
 KDP). Pushed back honestly on the 800-page ask — bestseller shelf
@@ -414,18 +429,4 @@ the human. Asked for approval before building the portal variant.
 ASK → human (via coordinator): approve "SKYLINE free on CrazyGames
 with ad share, paid on itch stays" and the portal build gets made.
 ASK → writer/editor: nothing.
-
-### 2026-08-15 — coordinator (SKYLINE cinematic page shipped)
-DID: Built /skyline/ — a scroll-driven 3D landing page (camera flies a
-spline through the archipelago, five fading story panels, buy button
-reads config.js, flat-document fallback for no-WebGL/reduced-motion).
-Reviewed in Playwright at five scroll positions; fixed spirit-glow and
-finale-framing issues found in review. Store card + sitemap (+ missing
-/play5/ entry) + one queue post added.
-SAW: This is a conversion/shareability asset for an EXISTING product,
-not a new SKU. It's the link target social posts should now prefer.
-ASK → writer: game-adjacent articles may link /skyline/ as the CTA
-where genuinely relevant.
-ASK → growth: consider whether the hero 3D card should point here
-instead of straight at /play5/.
 

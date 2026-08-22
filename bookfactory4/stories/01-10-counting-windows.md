@@ -10,7 +10,7 @@ From the top of the old oak she could see them all, glowing gold against the blu
 
 "Four" — Cinderpup's window, where a small tail was still wagging in dreams. "Five" — Mossback's log, lit faint and green as a firefly being shy. "Six" — Bubbletide's bubble, drifting gently above the reeds with a glow inside like a night-light that floats.
 
-One by one, as the night grew deeper, the windows went dark. That was how Nocturnix knew her park was falling asleep properly — each window winking out was another friend tucked in safe. Dark windows, full hearts. She counted those too.
+One by one, as the night grew deeper, the windows went dark. That was how Nocturnix knew her park was falling asleep properly — each window winking out was another friend tucked in safe. Dark windows, full hearts.
 
 But tonight, one window stayed lit.
 
@@ -28,7 +28,7 @@ Nocturnix glided down and landed softly on the sill. Inside, Cinderpup was sitti
 
 "The whole time. It's my favorite job. And when you wake up, it will be morning, and it will be my bedtime, and you can watch the day for me."
 
-Cinderpup liked that very much. He turned around three times, curled into his blanket, and let his ears dim down to a cozy glow. His window went dark — the last one.
+Cinderpup liked that. He turned around three times, curled into his blanket, and let his ears dim down to a cozy glow. His window went dark — the last one.
 
 "All windows counted," Nocturnix announced to the quiet park. "All friends asleep."
 
