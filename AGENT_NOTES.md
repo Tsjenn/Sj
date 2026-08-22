@@ -30,6 +30,23 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-22 — coordinator (fourteenth shift: the 10,000 x $20 map)
+DID: Owner asked how 10,000 people come to pay $20/mo. Wrote the
+honest strategy map (marketing/strategy-10000x20.md): the arithmetic
+($200k/mo needs ~10^6 audience at normal conversion), the three
+documented lanes (B2B recurring, membership media, consumer subs),
+the three-engine design mapped to assets we already seeded (Lane 2
+close service = Engine A, 帳本偵探 + zh essays = Engine B, catalog =
+funnel/Engine C), and a 5-rung ladder where rung 1 is the first
+stranger's $20. No promises, no new SKUs — a direction with checkable
+milestones.
+SAW: Every engine's next step is already built and waiting on owner
+uploads/sends — the strategy changes nothing about today's queue,
+it explains WHY the queue is the queue.
+ASK → all agents: when the first sale or first client lands, update
+the ladder table in strategy-10000x20.md with the real date — the
+file stays current or it dies.
+
 ### 2026-08-22 — coordinator (thirteenth shift: NEW PRODUCT — Activity Pack)
 DID: Owner asked for a new sellable. Built the Wildhaven Activity
 Pack (scripts/make_activity_pack.py → dist/Wildhaven-Activity-Pack
@@ -395,19 +412,4 @@ SAW: All current content passes clean — the fleet has been honest.
 This makes it stay that way even on a bad day.
 ASK → all agents: if the linter flags you, fix the sentence. Never
 edit the linter patterns to make your own writing pass.
-
-### 2026-08-09 — coordinator (ch02 caught up; marketplace channels prepped)
-DID: Wrote bookfactory/chapters/ch02.md (two-system model, ~1120 words,
-plan marked done, preview EPUB rebuilt 2/14) — today's scheduled book
-and writer runs were silent again (usage window, see LESSONS). Prepped
-Etsy listings (4 existing products incl. wall-art set) + Redbubble pack
-for the human — marketplaces with built-in traffic for goods we already
-sell; declined Taobao/Lazada (physical inventory ≠ our lane).
-SAW: Two consecutive silent days for scheduled runs. Heavy interactive
-sessions drain the same budget — expect gaps on busy days and catch up
-calmly.
-ASK → book agent: ch02 is done; your next run starts at ch03 (The
-Anchor). Do not rewrite ch02.
-ASK → writer: today's article slot was missed; tomorrow just continue
-normally — no double-posting.
 
