@@ -1,0 +1,303 @@
+{
+ "title": "The Honest Money Book",
+ "subtitle": "No Get-Rich Promises. How Money Actually Works, and How to Stop Losing It.",
+ "author": "S. J. Tang",
+ "series": "The Honest Books (with The Honest Sleep Book)",
+ "target": "~28 chapters. Opener ch01 runs short by design (~1,700 words); body chapters 2,800-3,200 words each -> 80-90k words total (~300 pages). One chapter per day; assembled and edited at the end.",
+ "price_suggestion": "US$6.99 ebook — final price is the owner's decision",
+ "positioning": "The anti-guru money book. Every money bestseller shelf splits into hype (promises) and textbooks (unread). This book takes the sleep book's formula: mechanism over miracle, ranked by leverage, honest about the edges, says 'licensed adviser' where a book must stop. Its emotional core: the reader who is tired of being sold to.",
+ "honesty_policy": "BINDING, stricter than the sleep book because money harms faster: (1) General financial education only — never personalized financial, investment, tax, insurance or legal advice; every chapter that approaches a decision names the professional to consult. (2) NO return promises, no 'you will be rich', no projected wealth numbers presented as outcomes; compounding examples are labeled arithmetic illustrations, never forecasts. (3) Index-fund material presented as the widely documented mainstream consensus WITH its caveats (past performance, market risk, decades-long horizon), not as a tip. (4) No invented statistics, studies, or researcher names. (5) Scam chapters describe documented patterns; never name private individuals. (6) No shame: the book's stance is that scams work on smart people and debt is math, not sin. (7) Author bio states finance-career experience factually; never uses restricted professional titles in a service-offering sense.",
+ "named_rules": "Bestseller mechanic: each key chapter coins ONE ownable, quotable rule, listed in chapter entries as 'rule'. The one-page system in ch27 collects them all.",
+ "art": "One mechanism diagram per chapter, same editorial style as sleepbook_art.py (paper/ink/gold). 'art' field describes each diagram; scripts/moneybook_art.py to mirror the sleep pipeline.",
+ "voice_anchor": "ch01 of this book + The Honest Sleep Book ch01 (same voice: direct, warm, mechanism-first, dry humor, second person, chapters tee the next).",
+ "parts": [
+  "I. The Lies (why money advice fails you)",
+  "II. The Engine (the only equation that matters)",
+  "III. Earning (the big lever)",
+  "IV. Growing (the boring miracle)",
+  "V. Defending (scams, fees, leaks)",
+  "VI. Keeping It Human (enough, and the one-page system)"
+ ],
+ "chapters": [
+  {
+   "n": 1,
+   "slug": "ch01",
+   "part": 1,
+   "title": "The Night You Almost Bought the Course",
+   "rule": "If the seller earns from your hope, the product is your hope.",
+   "art": "Funnel diagram: where guru money actually flows (course buyers -> guru), vs where they say it flows",
+   "brief": "Voice anchor. The 11:47pm checkout page moment. The guru economy's real business model (selling shovels vs digging). The book's three promises: mechanism over miracle, ranked by leverage, honest about where a book must stop. What this book will never say to the reader.",
+   "status": "done"
+  },
+  {
+   "n": 2,
+   "slug": "ch02",
+   "part": 1,
+   "title": "How Money Actually Works (in Ten Minutes)",
+   "rule": "Money has four jobs: arrive, stay, grow, survive.",
+   "art": "The four-tank diagram: income flowing through spending, savings, growth, protection",
+   "brief": "The whole machine in one chapter: income, spending, the gap, where the gap goes (buffer -> growth), and what attacks it (fees, inflation, scams). Every later chapter is one component. Honest scope: this book covers the machine everyone shares, not the tax code of any one country.",
+   "status": "todo"
+  },
+  {
+   "n": 3,
+   "slug": "ch03",
+   "part": 1,
+   "title": "The Anatomy of a Scam",
+   "rule": "Urgency plus exclusivity plus guaranteed returns equals exit, every time.",
+   "art": "The four-move flowchart every scam shares: hook, trust, urgency, extraction",
+   "brief": "Every scam is the same play in different costumes: documented patterns (investment 'platforms', signal groups, romance-investment hybrids, job-task scams). The four moves. Why the demo account always wins. What guaranteed returns mathematically imply. Ends with the promise that ch22 is the field guide.",
+   "status": "todo"
+  },
+  {
+   "n": 4,
+   "slug": "ch04",
+   "part": 1,
+   "title": "Why Smart People Fall",
+   "rule": "Scams don't beat your intelligence; they route around it through your feelings.",
+   "art": "Two channels into the brain: the slow reasoning path vs the fast fear/greed/urgency path",
+   "brief": "The psychology, without shame: authority costumes, social proof, sunk costs, the recovery-scam second strike. Loneliness and hope as attack surfaces. The honest tell: being smart makes people MORE confident they can't be fooled. One rule of thumb: any pressure to decide now is the decision.",
+   "status": "todo"
+  },
+  {
+   "n": 5,
+   "slug": "ch05",
+   "part": 2,
+   "title": "The Only Equation That Matters",
+   "rule": "Wealth is the gap between income and spending, run through time.",
+   "art": "The gap diagram: two lines (income, spending) and the shaded area that is everything",
+   "brief": "Income minus spending. Everything else is a footnote to widening that gap and pointing it somewhere useful. Why small persistent gaps beat occasional windfalls. The honest math of 'saving 10%'. No austerity lecture: the gap is engineered, not suffered.",
+   "status": "todo"
+  },
+  {
+   "n": 6,
+   "slug": "ch06",
+   "part": 2,
+   "title": "Pay Yourself First (Make It Automatic)",
+   "rule": "Willpower is a terrible banker; automation never has a bad month.",
+   "art": "Payday flow: the transfer that happens before you wake vs the 'save what's left' leak",
+   "brief": "The environment-design insight applied to money: move the decision out of daily willpower. Standing transfer on payday. Separate accounts as walls. Start with any percent; the habit outranks the amount at first.",
+   "status": "todo"
+  },
+  {
+   "n": 7,
+   "slug": "ch07",
+   "part": 2,
+   "title": "The No Fund",
+   "rule": "An emergency fund isn't for emergencies only — it's the price of saying no.",
+   "art": "Ladder of months (1-6) with what each rung lets you refuse",
+   "brief": "The emergency fund reframed as freedom to refuse: bad jobs, bad loans, panic selling, family pressure. How many months, honestly (a range, life-dependent). Where it lives (boring, reachable, not invested). The psychological return outranks the interest rate.",
+   "status": "todo"
+  },
+  {
+   "n": 8,
+   "slug": "ch08",
+   "part": 2,
+   "title": "Spending, Honestly",
+   "rule": "You don't have a spending problem; you have an invisible-spending problem.",
+   "art": "The iceberg: visible purchases above, subscriptions/fees/drips below the waterline",
+   "brief": "No latte-shaming. The real leaks: unexamined recurring charges, convenience premiums, status spending that buys nothing you value. The 'would I buy this again today?' audit. Spending aligned with actual values is the goal — a book can't tell you your values.",
+   "status": "todo"
+  },
+  {
+   "n": 9,
+   "slug": "ch09",
+   "part": 2,
+   "title": "Debt: Interest Is Direction",
+   "rule": "Interest is a current: it either pushes your boat or pulls it backward.",
+   "art": "Two arrows over time: debt compounding against you vs savings compounding for you",
+   "brief": "Debt as math, not sin. The honest hierarchy: crushing-rate consumer debt first, always. Minimum-payment arithmetic shown plainly. Avalanche vs snowball honestly (math favors one, psychology often the other; finishing beats optimal). When debt is a tool (rare, boring cases). Licensed help for drowning — named plainly.",
+   "status": "todo"
+  },
+  {
+   "n": 10,
+   "slug": "ch10",
+   "part": 2,
+   "title": "A Budget That Survives Real Life",
+   "rule": "The best budget is the one still alive in March.",
+   "art": "Three-bucket flow: needs, wants, future — and nothing tracked to the cent",
+   "brief": "Why detailed category budgets die by February (they're streaks — the sleep book's lesson). Three buckets. Automate the future bucket (ch06), cap the wants bucket, stop itemizing. The two-night rule ported to money: one blown month = two honest weeks back, no restart-from-zero.",
+   "status": "todo"
+  },
+  {
+   "n": 11,
+   "slug": "ch11",
+   "part": 3,
+   "title": "Income Is the Big Lever",
+   "rule": "You can only cut spending to zero; income has no ceiling — leverage lives there.",
+   "art": "Leverage bars, sleep-book style: raise/skills/switch tall and gold; cancel-netflix in the grey tail",
+   "brief": "Part III opener: frugality has a floor. The honest ranking of income moves: switching employers, negotiating, skill compounding, side income — with honest effort/probability notes. Sets up the next three chapters.",
+   "status": "todo"
+  },
+  {
+   "n": 12,
+   "slug": "ch12",
+   "part": 3,
+   "title": "Skills Compound Faster Than Money",
+   "rule": "Early on, the best-returning account is between your ears.",
+   "art": "Two curves from age 25: salary path with skill investment vs without; gap dwarfs any savings rate",
+   "brief": "The arithmetic of a raise vs a savings rate at typical incomes. Which skills compound (ones markets pay for and stack). Learning in public. Credentials honestly: sometimes gates, often theater — how to tell. No course-selling irony: most of it is free.",
+   "status": "todo"
+  },
+  {
+   "n": 13,
+   "slug": "ch13",
+   "part": 3,
+   "title": "Side Income Without the Hustle Lies",
+   "rule": "A side income is a small business: real customers, real hours, real math.",
+   "art": "The honest funnel: 100 who start -> the few who reach real income; labeled with time, not luck",
+   "brief": "The anti-passive-income chapter, written from experience. 'Passive' income's honest lifecycle: active building, slow compounding, occasional payoff. Time-for-money vs asset-building. The gap between one sale and a living, in months and years. When a side income is worth it anyway (skills, options, dignity).",
+   "status": "todo"
+  },
+  {
+   "n": 14,
+   "slug": "ch14",
+   "part": 3,
+   "title": "The Ten-Minute Conversation Worth Years of Saving",
+   "rule": "The most profitable words in your career are calm, researched, and slightly uncomfortable.",
+   "art": "Scale diagram: one negotiation's compounding effect vs a year of coupon-clipping",
+   "brief": "Negotiation for people who hate negotiating: market data, the script, the silence, the alternatives (BATNA in plain words). Raises compound (every future % builds on the new base). Honest about power: sometimes the answer is no and the move is ch11's 'switch'.",
+   "status": "todo"
+  },
+  {
+   "n": 15,
+   "slug": "ch15",
+   "part": 4,
+   "title": "Compounding: The Boring Miracle",
+   "rule": "Compounding is a snowball that spends its first decade looking like a snowflake.",
+   "art": "The hockey-stick curve with the flat decade honestly labeled 'this part feels like nothing'",
+   "brief": "Part IV opener. The arithmetic shown honestly (labeled illustration, not forecast). Why humans can't feel exponential growth. Time in, not timing. The two saboteurs: interruptions and fees (teeing ch18). Rule of 72 as a mental tool with its limits stated.",
+   "status": "todo"
+  },
+  {
+   "n": 16,
+   "slug": "ch16",
+   "part": 4,
+   "title": "Why You Can't Beat the Market (and Don't Need To)",
+   "rule": "The market is millions of professionals pricing all day; your edge is not caring about beating them.",
+   "art": "Coin-flip tournament diagram: why some 'winning' funds always exist, and why that proves nothing",
+   "brief": "The documented consensus stated honestly: most professional stock-pickers underperform broad markets over long periods after fees. Survivorship: the funds that died don't appear in ads. Why 'my friend picked a winner' is lottery logic. The liberation: average IS the win, which tees ch17.",
+   "status": "todo"
+  },
+  {
+   "n": 17,
+   "slug": "ch17",
+   "part": 4,
+   "title": "The Honest Default: Owning Everything",
+   "rule": "Buy the haystack, not the needle.",
+   "art": "One share of everything: a broad index as thousands of tiny slices in one simple box",
+   "brief": "Index funds as education, never advice: what they are, why costs stay low, why diversification is the only free lunch. ALL the honest caveats: markets fall (sometimes for years), horizons are decades, past performance proves nothing, and a book cannot know your situation — a licensed adviser in YOUR country can. No fund names, no allocations, no 'you should'.",
+   "status": "todo"
+  },
+  {
+   "n": 18,
+   "slug": "ch18",
+   "part": 4,
+   "title": "Fees: The Quiet Thief",
+   "rule": "A one-percent fee doesn't cost one percent; over decades it costs a room of your house.",
+   "art": "Two identical growth curves diverging under 0.1% vs 2% fees; the wedge shaded gold",
+   "brief": "The arithmetic of fees over decades, shown plainly as labeled illustration. Where fees hide: funds, platforms, insurance-linked products, currency spreads. The one number to always ask for. Commission-driven 'advice' honestly explained — who pays the adviser decides whose adviser they are.",
+   "status": "todo"
+  },
+  {
+   "n": 19,
+   "slug": "ch19",
+   "part": 4,
+   "title": "Risk, Honestly",
+   "rule": "Volatility is the toll; permanent loss is the crash — know which one you're afraid of.",
+   "art": "Two charts: a jagged line ending higher (volatility) vs a line to zero (permanent loss)",
+   "brief": "The two different things called 'risk'. Why volatility hurts feelings and permanent loss hurts futures (concentration, leverage, scams, forced selling). Sleep-at-night sizing. Sequence honesty: the same average return arrives in different orders. Risk questionnaires vs the honest question: what would make you sell in a panic?",
+   "status": "todo"
+  },
+  {
+   "n": 20,
+   "slug": "ch20",
+   "part": 4,
+   "title": "When Not to Invest",
+   "rule": "Investing money you'll need soon isn't investing; it's gambling with a deadline.",
+   "art": "Decision gate: debt rate check, buffer check, horizon check — three gates before the market",
+   "brief": "The chapter hype never writes: crushing-rate debt first, buffer first, near-term money (house deposit, school fees) stays boring, never invest what you can't leave alone for years, never on borrowed money, never in what you can't explain to a friend. FOMO markets honestly: missing out is a survivable condition.",
+   "status": "todo"
+  },
+  {
+   "n": 21,
+   "slug": "ch21",
+   "part": 5,
+   "title": "Insurance: Buying Certainty",
+   "rule": "Insure the losses that would end you; self-insure the ones that would annoy you.",
+   "art": "Two-axis map: probability vs severity, with the 'insure this corner' zone marked",
+   "brief": "Part V opener. Insurance as bought certainty, not investment. The honest split: catastrophic risks (insure) vs small risks (buffer absorbs). Insurance-investment hybrids honestly: two products stapled together, usually with ch18's fee problem. Coverage questions for a licensed agent — named as such.",
+   "status": "todo"
+  },
+  {
+   "n": 22,
+   "slug": "ch22",
+   "part": 5,
+   "title": "The Scam Field Guide",
+   "rule": "You never lose money to strangers; you lose it to 'friends' three weeks old.",
+   "art": "Spotter's chart: six documented scam species with their identifying marks",
+   "brief": "The ch03 anatomy applied: investment platforms with withdrawal 'taxes', signal groups, romance-investment ('pig-butchering' as documented pattern), job-task scams, recovery scams, impersonated authority. For each: the tell, the script, the exit. What to do the moment after (banks, police, no shame, no chasing losses). The second-strike warning repeated because it works on the grieving.",
+   "status": "todo"
+  },
+  {
+   "n": 23,
+   "slug": "ch23",
+   "part": 5,
+   "title": "Family, Friends and Money",
+   "rule": "A loan to family is a gift with paperwork and resentment attached — decide which one you're giving.",
+   "art": "Fork diagram: the request -> gift you can afford / documented loan / honest no — and the fourth path (silent yes) crossed out",
+   "brief": "The chapter every Asian household needs and no guru writes: obligation, face, guilt. Scripts for the honest no. The gift-not-loan reframe. Guarantoring honestly: co-signing is taking the loan. Protecting the buffer from love. Warm, not cold: generosity budgeted on purpose beats generosity extracted.",
+   "status": "todo"
+  },
+  {
+   "n": 24,
+   "slug": "ch24",
+   "part": 5,
+   "title": "The Raise You Never Feel",
+   "rule": "Lifestyle inflation is spending's default setting; contentment has to be configured manually.",
+   "art": "Two staircases: income rising with spending in lockstep (gap never grows) vs spending on a delay",
+   "brief": "Why gaps don't widen even as income doubles: the ratchet. Hedonic adaptation in plain words. The 50%-of-every-raise rule as a named tool. Status honestly: the audience you're performing wealth for isn't watching. Deliberate upgrades (buy the good chair) vs drift.",
+   "status": "todo"
+  },
+  {
+   "n": 25,
+   "slug": "ch25",
+   "part": 6,
+   "title": "Money and Your Mind",
+   "rule": "Checking your balance is like checking the clock at 3am — information that only feeds arousal.",
+   "art": "The checking loop: anxiety -> checking -> volatility -> anxiety; where to cut the circle",
+   "brief": "Part VI opener. Money anxiety and money avoidance as the two failure modes (both are about feelings, not numbers). The sleep book's arousal lesson ported: automation reduces decisions, decisions reduce anxiety. Scheduled money dates vs constant checking. When money stress needs a human professional — normalized, ch12-of-sleep-book style.",
+   "status": "todo"
+  },
+  {
+   "n": 26,
+   "slug": "ch26",
+   "part": 6,
+   "title": "Enough",
+   "rule": "Enough is a number you choose; more is a number that chooses you.",
+   "art": "An asymptote: satisfaction curve flattening while the 'more' line runs off the page",
+   "brief": "The chapter the industry can't write because enough ends the customer. Defining your number (a life, costed honestly). Positional vs absolute wealth. The treadmill documented gently. What money is FOR: options, time, safety, generosity — the reader's list, not the author's.",
+   "status": "todo"
+  },
+  {
+   "n": 27,
+   "slug": "ch27",
+   "part": 6,
+   "title": "The One-Page Money System",
+   "rule": "A system you can explain in one page is a system that survives you being busy.",
+   "art": "The one-page flow: payday -> automatic splits -> buffer/growth/spending -> quarterly 30-minute review",
+   "brief": "Everything operationalized: the payday flow, the three buckets, the automation checklist, the quarterly review agenda (30 minutes), the annual questions, all 27 named rules collected in one list. Deliberately boring. The reader should be able to photograph two pages and run their money life.",
+   "status": "todo"
+  },
+  {
+   "n": 28,
+   "slug": "ch28",
+   "part": 6,
+   "title": "Keeping It: Money as Tending, Not Chasing",
+   "rule": "You don't chase wealth; you keep the leaks sealed and let time do the heavy lifting.",
+   "art": "A garden, not a race: small tended plot compounding vs the sprint track going nowhere",
+   "brief": "The finale, mirroring the sleep book's: elastic beats streaks with money too (blown months, windfalls, setbacks — the two-week rule back). Life will bend the system; the measure is the return. Scam-proofing as permanent posture. Ending: money as something you tend so it can quietly buy the only thing it's for — your time back. Last line echoes the series: you don't chase it; you allow it to accumulate.",
+   "status": "todo"
+  }
+ ]
+}

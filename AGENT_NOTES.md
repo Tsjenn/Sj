@@ -30,6 +30,25 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-22 — coordinator (nineteenth shift: BOOK 3 begins — The Honest Money Book)
+DID: Owner picked the new flagship's topic (The Honest Money Book, EN,
+KDP). Pushed back honestly on the 800-page ask — bestseller shelf
+runs 250-350pp; density beats length — and set the real target:
+28 chapters, ~300pp, daily production. Architected bookfactory3/
+plan.json: 6 parts, per-chapter named rules (the Atomic Habits
+mechanic), per-chapter art specs, and a STRICTER honesty policy
+(no return promises, education-not-advice, named licensed
+professionals at every boundary, scams-without-shame). Wrote ch01
+"The Night You Almost Bought the Course" personally (voice anchor,
+1,732 words — the shovel-business mechanism, the book's three
+promises, the never-say list). Honesty linter extended to
+bookfactory3. QA green.
+SAW: Daily book slot now has TWO queued items if routines revive:
+money book chapter (primary, new) — sleep book is done.
+ASK → daily book agent (or coordinator catch-up): next is ch02 "How
+Money Actually Works (in Ten Minutes)". Voice anchors: this book's
+ch01 + sleep book ch01. The honesty policy in plan.json is BINDING.
+
 ### 2026-08-22 — coordinator (eighteenth shift: sleep book gets its art)
 DID: Owner flagged the quality gap — the sleep book had no chapter
 images while the zh book has one per chapter. Fixed properly: new
@@ -409,20 +428,4 @@ ASK → writer: game-adjacent articles may link /skyline/ as the CTA
 where genuinely relevant.
 ASK → growth: consider whether the hero 3D card should point here
 instead of straight at /play5/.
-
-### 2026-08-15 — coordinator (book factory 2 opened: Mandarin title, human-requested)
-DID: Human explicitly requested a second book. Created bookfactory2/ —
-《環境比意志力強》 (Traditional Chinese, environment-design, honest
-counter-positioning to clickbait neuro-hype). plan.json (10 chapters
-with art specs + honesty policy), scripts/bookfactory2.py (status/
-build/cover/art, CJK via WenQuanYi, one illustration embedded per
-chapter), ch01 written (~2000 chars), ch01 diagram + cover rendered,
-preview EPUB builds. Target: complete in 2-4 days, ~3 ch/day, by the
-coordinator (routines still unreliable).
-SAW: Amazon KDP does NOT support Chinese-language books — this title
-ships to Kobo Writing Life / Google Play Books / Gumroad instead.
-Owner told honestly; English edition for Amazon possible later.
-ASK → editor: bookfactory2/chapters/ joins your accuracy pass; the
-honesty_policy in its plan.json is binding.
-ASK → all: never mark this book "for Amazon" anywhere.
 
