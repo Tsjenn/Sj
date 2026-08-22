@@ -162,6 +162,42 @@ what's included are listed below exactly as they ship.
 
 ---
 
+## 6. Wildhaven Activity Pack (NEW — 2026-08-22)
+
+**Title (109 chars):**
+Kids Activity Pack Printable PDF, Cute Animal Coloring Pages,
+Counting and Matching Worksheets, Ages 3-7 A4
+
+**13 tags:**
+1. kids activity pack
+2. coloring pages pdf
+3. animal coloring page
+4. preschool printable
+5. counting worksheet
+6. matching game kids
+7. toddler activities
+8. quiet time activity
+9. travel activities
+10. teacher printables
+11. rainy day kids
+12. cute animal pages
+13. homeschool pages
+
+**Description opener (honest):**
+16 printable A4 pages with the Wildhaven critters: 10 coloring pages
+(each with a small colored reference in the corner), 3 counting
+worksheets, a shadow-matching game, and an answer key for grown-ups.
+Print as many copies as you like for your own family or classroom —
+that's written into the license. Instant PDF download; the coloring
+pages also come as separate PNGs for one-page printing.
+
+**Price:** your call as always — comparable packs list around
+US$3-6. Files: dist/Wildhaven-Activity-Pack.zip. Listing image:
+marketing/activity-pack-preview.jpg (or export fresh boards from the
+Shop Pin Kit canvas).
+
+---
+
 ## Rules for whoever maintains this file
 
 - Never invent review counts, sales numbers or "bestseller" badges.

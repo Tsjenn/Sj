@@ -29,6 +29,22 @@ def _light(c, t=0.35):
     return _mix(c, (255, 255, 255), t)
 
 
+MODE = "color"   # "color" | "lineart" | "silhouette"
+
+
+def _map_fill(fill):
+    if fill is None or MODE == "color":
+        return fill
+    if MODE == "silhouette":
+        return (30, 26, 32, 255) if (len(fill) < 4 or fill[3] > 120) else None
+    # lineart: keep dark strokes (ink, pupils), turn every light fill white,
+    # drop translucent overlays (blush, glow) entirely
+    if len(fill) == 4 and fill[3] < 200:
+        return None
+    lum = 0.299 * fill[0] + 0.587 * fill[1] + 0.114 * fill[2]
+    return fill if lum < 90 else (255, 255, 255, 255)
+
+
 class Ctx:
     def __init__(self, px):
         self.S = px * SS
@@ -38,21 +54,31 @@ class Ctx:
 
     def E(self, x0, y0, x1, y1, fill, outline=None, ow=0):
         u = self.u
+        fill = _map_fill(fill)
+        if fill is None:
+            return
         self.d.ellipse([x0 * u, y0 * u, x1 * u, y1 * u], fill=fill,
                        outline=outline, width=int(ow * u))
 
     def P(self, pts, fill, outline=None, ow=0):
         u = self.u
+        fill = _map_fill(fill)
+        if fill is None:
+            return
         self.d.polygon([(x * u, y * u) for x, y in pts], fill=fill,
                        outline=outline, width=max(1, int(ow * u)))
 
     def A(self, x0, y0, x1, y1, a0, a1, fill, w):
         u = self.u
+        fill = _map_fill(fill) or (30, 26, 32, 255)
         self.d.arc([x0 * u, y0 * u, x1 * u, y1 * u], a0, a1, fill=fill,
                    width=max(2, int(w * u)))
 
     def L(self, pts, fill, w):
         u = self.u
+        fill = _map_fill(fill)
+        if fill is None:
+            return
         self.d.line([(x * u, y * u) for x, y in pts], fill=fill,
                     width=max(2, int(w * u)), joint="curve")
 
@@ -132,14 +158,16 @@ def shaded_ball(c, cx, cy, r, col, squash=1.0):
 FORCE_CLOSED = False
 
 
-def render(species, px=900, eyes_closed=False):
-    global FORCE_CLOSED
+def render(species, px=900, eyes_closed=False, mode="color"):
+    global FORCE_CLOSED, MODE
     FORCE_CLOSED = eyes_closed
+    MODE = mode
     try:
         c = Ctx(px)
         DRAW[species](c)
     finally:
         FORCE_CLOSED = False
+        MODE = "color"
     return c.out(px)
 
 
