@@ -319,6 +319,7 @@ def render_sitemap(arts):
             (SITE + "/sleep/", "0.9"), (SITE + "/skyline/", "0.8"),
             (SITE + "/book/", "0.8"), (SITE + "/score-lab/", "0.8"),
             (SITE + "/beatbox/", "0.8"),
+            (SITE + "/play7/", "0.8"),
             (SITE + "/play6/", "0.8"),
             (SITE + "/play5/", "0.8"), (SITE + "/play4/", "0.8"),
             (SITE + "/play3/", "0.7"), (SITE + "/play2/", "0.7"), (SITE + "/play/", "0.7")]
@@ -358,6 +359,8 @@ def render_llms(arts):
         "stage, each plays a layer, every combination stays in tune" % SITE,
         "- [Critter Tower](%s/play6/): one-thumb stacking game — tap to drop, "
         "perfect drops grow the tower" % SITE,
+        "- [Critter Drop](%s/play7/): drop-and-merge game — two of a kind "
+        "combine into a bigger critter, don't overflow the jar" % SITE,
         "- [The Honest Sleep Book](%s/book/): book in progress with a live, "
         "honest chapter-status list" % SITE,
         "- [All game demos](%s/): five free browser game demos on the homepage" % SITE,

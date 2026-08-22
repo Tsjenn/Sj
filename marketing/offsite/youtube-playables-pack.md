@@ -15,9 +15,10 @@ Paste-ready answers (adjust to the actual fields):
 - Portfolio: https://tsjenn.github.io/Sj/ (five HTML5 games,
   playable instantly in browser)
 - Best single link: https://tsjenn.github.io/Sj/play6/ (Critter Tower)
-- Games proposed: Critter Tower (NEW — one-thumb stacker built to
-  Playables spec: 138KB zip, instant load, touch-first, ytgame SDK
-  hooks already stubbed in code), SKYLINE (3D web-swinging, medal times),
+- Games proposed: Critter Tower (one-thumb stacker built to Playables
+  spec: instant load, touch-first, ytgame SDK hooks stubbed), Critter
+  Drop (NEW — drop-and-merge with 10-tier critter chain, generative
+  music, same spec), SKYLINE (3D web-swinging, medal times),
   Neon Drift Racers (top-down drift racing), Wildhaven Arena
   (creature battle strategy)
 - Tech: self-contained HTML5, vanilla JS + Three.js, zips 160-260KB
