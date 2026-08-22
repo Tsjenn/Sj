@@ -22,7 +22,7 @@
   // ------------------------------------------------------------------ store
   var DEFAULTS = {
     nights: [], alarm: "07:00", smart: true, alarmOn: true, window: 30,
-    sound: "none", volume: 60, fade: 30, seenIntro: false
+    sound: "none", volume: 60, fade: 30, seenIntro: false, plan: null
   };
   var db;
   try { db = JSON.parse(localStorage.getItem("rested") || "null"); } catch (e) { db = null; }
@@ -815,6 +815,7 @@
      ====================================================================== */
   function render() {
     renderTonight();
+    renderPlan();
     renderStats();
     renderYou();
   }
@@ -1007,6 +1008,93 @@
       return '<div class="insight"><div class="ic">' + o[0] + '</div><div class="tx">' + o[1] + "</div></div>";
     }).join("");
   }
+
+  /* ======================================================================
+     WELCOME + PLAN
+     The three-answer first-run plan. Pure arithmetic on the user's own
+     answers, computed and stored locally — the card says so.
+     ====================================================================== */
+  function hmToMin(hm) {
+    var p = hm.split(":"); return (+p[0]) * 60 + (+p[1]);
+  }
+  function minToHM(m) {
+    m = ((m % 1440) + 1440) % 1440;
+    var h = Math.floor(m / 60), mm = m % 60;
+    return (h < 10 ? "0" : "") + h + ":" + (mm < 10 ? "0" : "") + mm;
+  }
+  function fmt12(hm) {
+    var m = hmToMin(hm), h = Math.floor(m / 60), mm = m % 60;
+    var ap = h >= 12 ? "pm" : "am"; h = h % 12; if (h === 0) h = 12;
+    return h + (mm ? ":" + (mm < 10 ? "0" : "") + mm : "") + ap;
+  }
+  function planTimes(p) {
+    var wake = hmToMin(p.wake);
+    var lightsOff = wake - (450 + p.latency);      // 7.5h asleep + their latency
+    var windDown = lightsOff - 45;
+    var caffeine = lightsOff - 540;                 // 9h before lights-off
+    return { lightsOff: minToHM(lightsOff), windDown: minToHM(windDown), caffeine: minToHM(caffeine) };
+  }
+  function renderPlan() {
+    var card = $("plan-card");
+    if (!db.plan) { card.style.display = "none"; return; }
+    var t = planTimes(db.plan);
+    var goalLine = {
+      fall: "Your goal: falling asleep faster. The single biggest lever is a dim, boring last hour — the wind-down time below is where it starts.",
+      fresh: "Your goal: waking fresher. The lever is the same wake time every day, weekends included — your alarm is already set to it.",
+      learn: "Your goal: understanding your sleep. Track tonight; the Insights tab compares this plan with what your nights actually do."
+    }[db.plan.goal];
+    card.style.display = "";
+    $("plan-body").innerHTML =
+      '<div class="insight"><div class="ic">☕</div><div class="tx">Last caffeine by <b>' + fmt12(t.caffeine) + "</b></div></div>" +
+      '<div class="insight"><div class="ic">🌆</div><div class="tx">Wind down from <b>' + fmt12(t.windDown) + "</b> — lamps, not ceiling lights</div></div>" +
+      '<div class="insight"><div class="ic">🛏️</div><div class="tx">Lights off around <b>' + fmt12(t.lightsOff) + "</b> for 7½ h asleep by <b>" + fmt12(db.plan.wake) + "</b></div></div>" +
+      '<div class="insight"><div class="ic">🎯</div><div class="tx">' + goalLine + "</div></div>";
+  }
+  function chipGroup(id) {
+    var box = $(id);
+    Array.prototype.forEach.call(box.querySelectorAll(".chip"), function (b) {
+      b.addEventListener("click", function () {
+        Array.prototype.forEach.call(box.querySelectorAll(".chip"), function (x) { x.classList.remove("on"); });
+        b.classList.add("on");
+      });
+    });
+  }
+  function chipValue(id) {
+    var on = $(id).querySelector(".chip.on");
+    return on ? on.dataset.v : null;
+  }
+  chipGroup("w-lat"); chipGroup("w-goal");
+  function openWelcome() {
+    if (db.plan) {
+      $("w-wake").value = db.plan.wake;
+      Array.prototype.forEach.call($("w-lat").querySelectorAll(".chip"), function (b) {
+        b.classList.toggle("on", +b.dataset.v === db.plan.latency);
+      });
+      Array.prototype.forEach.call($("w-goal").querySelectorAll(".chip"), function (b) {
+        b.classList.toggle("on", b.dataset.v === db.plan.goal);
+      });
+    }
+    $("welcome").classList.add("on");
+  }
+  $("w-done").addEventListener("click", function () {
+    db.plan = {
+      wake: $("w-wake").value || "07:00",
+      latency: +(chipValue("w-lat") || 22),
+      goal: chipValue("w-goal") || "learn"
+    };
+    db.alarm = db.plan.wake;
+    db.seenIntro = true;
+    save();
+    $("welcome").classList.remove("on");
+    render();
+    toast("Plan set — it lives only on this device.");
+  });
+  $("w-skip").addEventListener("click", function () {
+    db.seenIntro = true; save();
+    $("welcome").classList.remove("on");
+  });
+  $("plan-edit").addEventListener("click", openWelcome);
+  if (!db.seenIntro) openWelcome();
 
   /* ======================================================================
      REPORT + JOURNAL

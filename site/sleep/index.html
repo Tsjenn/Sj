@@ -194,6 +194,16 @@
 
   <div class="weekdots" id="weekdots"></div>
 
+  <div class="card" id="plan-card" style="display:none">
+    <div class="spread">
+      <h3 id="plan-title">Tonight's plan</h3>
+      <button class="chip" id="plan-edit">Edit</button>
+    </div>
+    <div id="plan-body" style="margin-top:10px"></div>
+    <div class="note" style="margin-top:10px">Honest arithmetic from your three answers — not a measurement.
+    Track nights and the Insights tab compares this plan with what actually happens.</div>
+  </div>
+
   <div class="card" id="last-night" style="display:none">
     <div class="spread" style="margin-bottom:14px">
       <h3 style="margin:0">Last night</h3>
@@ -330,6 +340,31 @@
     </div>
   </div>
 </section>
+
+<!-- ============================================================== WELCOME -->
+<div class="modal" id="welcome">
+  <div class="sheet">
+    <h2>Three taps, then a plan</h2>
+    <p style="margin:8px 0 18px">Rested works before your first tracked night. Answer three things and get tonight's plan — computed on your device, stored on your device.</p>
+    <h3 style="margin-bottom:8px">When must you wake on workdays?</h3>
+    <input type="time" id="w-wake" value="07:00" style="margin-bottom:18px">
+    <h3 style="margin-bottom:8px">How long do you usually take to fall asleep?</h3>
+    <div class="row wrap" id="w-lat" style="margin-bottom:18px">
+      <button class="chip" data-v="10">Under 15 min</button>
+      <button class="chip on" data-v="22">15–30 min</button>
+      <button class="chip" data-v="45">30–60 min</button>
+      <button class="chip" data-v="70">Over an hour</button>
+    </div>
+    <h3 style="margin-bottom:8px">What matters most to you?</h3>
+    <div class="row wrap" id="w-goal" style="margin-bottom:22px">
+      <button class="chip on" data-v="fall">Fall asleep faster</button>
+      <button class="chip" data-v="fresh">Wake up fresher</button>
+      <button class="chip" data-v="learn">Understand my sleep</button>
+    </div>
+    <button class="btn" id="w-done">Show my plan</button>
+    <button class="btn ghost" id="w-skip" style="margin-top:8px">Maybe later</button>
+  </div>
+</div>
 
 <!-- =============================================================== REPORT -->
 <div class="modal" id="report">
