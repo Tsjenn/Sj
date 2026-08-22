@@ -362,7 +362,7 @@
             "Matcha mille-crêpe (no-oven)"
           ],
           "art": "cakes",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch35",
@@ -375,7 +375,7 @@
             "Matcha pudding cups"
           ],
           "art": "chilled",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch36",
@@ -387,7 +387,7 @@
             "Matcha ice pops"
           ],
           "art": "frozen",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch37",
@@ -400,7 +400,7 @@
             "Matcha chia pudding"
           ],
           "art": "breakfast",
-          "status": "todo"
+          "status": "done"
         }
       ]
     },
@@ -413,7 +413,7 @@
           "title": "What to Serve Beside the Bowl",
           "brief": "Pairing: wagashi logic (sweet before bitter), Malaysian and Western pairings that work, building a small tea moment for guests.",
           "art": "pairing",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch39",
