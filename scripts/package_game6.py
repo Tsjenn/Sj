@@ -3,9 +3,12 @@
 
 - site/play6/                          free web version on the store site
   (Cloudflare beacon injected — site pages only, per fleet rules)
-- dist/Critter-Tower-playables.zip     YouTube Playables / portal build:
-  index.html at zip root, NO analytics, no external calls
-- dist/Critter-Tower-itch.zip          itch.io browser-embed build
+- dist/Critter-Tower-playables.zip     Playgama submission build (their
+  route to YouTube Playables): bundles the Playgama Bridge SDK
+  (game6/vendor/, LGPL) + config, sends game_ready on init as their
+  QA tool requires. index.html at zip root, NO analytics.
+- dist/Critter-Tower-itch.zip          itch.io browser-embed build,
+  vanilla (no SDK), no external calls
 
 Critter Tower is a free game by design: its job is discovery
 (Playables, portals) and feeding the Wildhaven world. No paid tier.
@@ -53,11 +56,24 @@ def main():
 
     # ---- clean builds (no analytics, index at zip root)
     assert "cloudflareinsights" not in html and "cloudflareinsights" not in js
-    for zname in ("Critter-Tower-playables.zip", "Critter-Tower-itch.zip"):
+    vendor = os.path.join(GAME, "vendor")
+    playgama_html = html.replace(
+        '<script src="game.js"></script>',
+        '<script src="playgama-bridge.js"></script>\n'
+        '<script src="game.js"></script>')
+    assert 'src="playgama-bridge.js"' in playgama_html
+
+    for zname, zhtml, with_sdk in (
+            ("Critter-Tower-playables.zip", playgama_html, True),
+            ("Critter-Tower-itch.zip", html, False)):
         zpath = os.path.join(DIST, zname)
         with zipfile.ZipFile(zpath, "w", zipfile.ZIP_DEFLATED) as z:
-            z.writestr("index.html", html)
+            z.writestr("index.html", zhtml)
             z.writestr("game.js", js)
+            if with_sdk:
+                for n in ("playgama-bridge.js", "playgama-bridge-config.json",
+                          "PLAYGAMA-BRIDGE-LICENSE"):
+                    z.write(os.path.join(vendor, n), n)
             for n in imgs:
                 z.write(os.path.join(GAME, "img", n), "img/" + n)
         print("build:", zpath, os.path.getsize(zpath) // 1024, "KB")
