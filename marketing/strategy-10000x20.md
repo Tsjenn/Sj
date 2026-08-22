@@ -62,7 +62,7 @@ front door.
 
 | Rung | Meaning | Est. via | Status |
 |------|---------|----------|--------|
-| 1 | First $20 from a stranger | any store sale / first client deposit | ← WE ARE HERE (uploads pending) |
+| 1 | First $20 from a stranger | any store sale / first client deposit | ← WE ARE HERE — 環境比意志力強 LISTED on Gumroad 2026-08-22 (first owner upload!) |
 | 2 | 10 × $20 equivalent (~$200/mo) | 1 bookkeeping client, or steady store month | Engine A: one WhatsApp round |
 | 3 | 100 × $20 (~$2k/mo) | 5-6 clients + store trickle | plausible within months of rung 2 |
 | 4 | 1,000 × $20 (~$20k/mo) | ~30 clients + membership hundreds + catalog | the solo ceiling; years, honestly |
