@@ -1,0 +1,368 @@
+{
+  "title": "The Amah's Daughter",
+  "subtitle": "A Novel of Secrets, Love, and War in Old Malaya",
+  "author": "Tang Shiuan Jenn",
+  "target_words": 150000,
+  "content_policy": {
+    "fiction": "This is a work of fiction. All principal characters, the Tan household, and their fates are invented. No character is based on a real private person, and no real historical individual appears as a speaking character.",
+    "history": "The historical backdrop must be accurate in its broad strokes and dates: Malacca under British rule in the 1930s; the Japanese invasion of Malaya beginning 8 December 1941; Malacca occupied from mid-January 1942; the fall of Singapore 15 February 1942; mass screenings and killings of Chinese civilians in early 1942 (referenced with gravity, never with invented statistics); the occupation until August 1945; the Malayan Emergency declared June 1948; merdeka on 31 August 1957. Do not invent precise casualty figures, named massacres, or documentary claims.",
+    "violence": "War is depicted honestly but never gratuitously. Executions and atrocities happen off-page; the book shows the before and the after, not the act. No sexual violence is depicted or threatened on the page.",
+    "marketing": "Never claim the story is true, 'inspired by a true story', or based on real events beyond its historical setting. The honesty of this business does not bend for genre convention.",
+    "language": "Malay, Hokkien, Baba Malay and Cantonese terms are used accurately and glossed lightly in the flow of the text on first use (amah, majie, kasut manek, kebaya, bibik, kopitiam, merdeka). No mock accents; dialect is carried by rhythm and word choice, not phonetic spelling."
+  },
+  "style_rules": {
+    "voice": "Third person limited, past tense. 1930s-1950s chapters follow Mei Foong; 2005 chapters follow Su-Lin. Warm, sensory, restrained — emotion earned through objects and gestures, not adjectives. Chapter openings land in a concrete scene within two sentences.",
+    "chapters": "Each chapter 3800-4400 words (epilogue 2000-2500), ends on a turn — a small reveal, a decision, a door opening or closing. No cliffhanger tricks; momentum comes from wanting to know what a choice costs.",
+    "objects": "The book's memory lives in objects: one beaded slipper, an English biscuit tin of letters, a jade ring, a wedding photograph with a face folded out of frame, a red thread. Objects introduced in the past must be found or explained in the present timeline.",
+    "no_products": "The novel never mentions the author's other books or any URL."
+  },
+  "characters": {
+    "Mei Foong": "Ho Mei Foong, b. 1922 Guangdong, brought to Malacca in 1934 aged twelve by the amah Ah Yoke, who calls her a dead sister's child. Quick, watchful, proud in secret. The novel's heart. Dies 2004, leaving the shophouse to Su-Lin.",
+    "Ah Yoke": "Ho Ah Yoke, a Cantonese majie — a black-and-white sworn spinster amah of the Tan household. Stern, scrupulous, bound by an oath she made to a dying woman. Keeper of secret one.",
+    "Boon Siew": "Tan Boon Siew, b. 1920, only son and heir of the household. Educated at the Malacca High School, gentle, stubborn about fairness. Loves Mei Foong. Taken in the screening of 1942; does not return.",
+    "Bee Nio": "Tan Bee Nio, b. 1923, daughter of the house. Vain in girlhood, brave in war, complicit afterwards. Marries Dr. Lim Cheng Hoe in early 1940. Her stillbirth in 1943 opens the door to the lie.",
+    "Tan Hock Lye": "Patriarch. Rubber, tin shares, two lorries, one Bentley he cannot drive. Proud, transactional, capable of remorse that arrives years late. Learns the truth in 1948 and deeds the shophouse to Mei Foong in silence.",
+    "Neo Guat Eng": "The Bibik, matriarch, Straits-born nyonya. Runs the house by kueh and decree. Erased her younger sister Guat Kim from the family for eloping with a Eurasian clerk in 1921. Never learns who Mei Foong is until the end of her life.",
+    "Guat Kim": "The erased sister. Died in Guangdong 1933; on her deathbed gave her daughter Mei Foong to her friend Ah Yoke with one instruction: raise her near her blood, never tell. Secret one: Mei Foong is the Bibik's niece, cousin to Boon Siew and Bee Nio.",
+    "Siew Ean": "Khoo Siew Ean of Ipoh, tin heiress betrothed to Boon Siew 1940. Not a villain — a sharp, lonely girl in an arranged cage. Released from the betrothal by the war; reappears 1950 as an unexpected ally.",
+    "Dr Lim": "Lim Cheng Hoe, Bee Nio's husband. Straits-born doctor, decent to the bone. Keeps the household alive through the occupation; keeps the lie because it protects a child.",
+    "Mei Lan": "The baby, b. November 1942, daughter of Mei Foong and Boon Siew — the true Tan blood heir. Raised from 1943 as Lim Mei Lan, Bee Nio's daughter. In 2005 she is 62, Su-Lin's grandmother, and does not know.",
+    "Su-Lin": "Tan Su-Lin, b. 1971, KL architect, granddaughter of Mei Lan. Recently un-engaged, professionally adrift. Inherits the Heeren Street shophouse in 2005 from 'Great-Aunt Foong', a woman the family called an old servant.",
+    "Uncle Raju": "R. Raju, b. 1925, retired kopitiam owner two doors from the shophouse, the street's living memory. Su-Lin's guide in 2005.",
+    "Hafiz": "Ariff Hafiz, conservation contractor in Malacca, 2005 timeline. Patient, funny, reads buildings like letters. Slow-burn second-chance love for Su-Lin — kept light, never the point of the book."
+  },
+  "secrets": {
+    "one": "Mei Foong is the Bibik's own niece, hidden in the household as a servant's child. Known to Ah Yoke from the start; the reader and Mei Foong learn it in ch14; the patriarch learns it in ch27-28 (1948); Su-Lin assembles it from the letters and the Bibik's papers across ch25-31.",
+    "two": "Mei Foong and Boon Siew exchanged private vows before the Guan Yin altar in February 1942, after Singapore fell, witnessed by Ah Yoke; the wedding photograph with the folded-out bride is theirs. Happens in ch15; Su-Lin understands whose photograph it is across ch17-25.",
+    "three": "Mei Lan, raised as Bee Nio's daughter, is Mei Foong's and Boon Siew's child. The exchange happens in ch20; five keepers sworn (Mei Foong, Ah Yoke, Bee Nio, Dr Lim; later Siew Ean guesses); the patriarch NEVER learns this one. Su-Lin finds the birth paper in ch17 and authenticates it in ch25; Mei Lan learns in ch31 and speaks it at the grave in ch33.",
+    "four": "The shophouse was deeded to Mei Foong in 1948 by the patriarch — his only act of repair (ch28). The deed's copy in the tin is what makes Su-Lin's 2005 inheritance legal and strange."
+  },
+  "art_palette": {
+    "indigo": "#1F3A5F",
+    "rust": "#A64B2A",
+    "cream": "#F5EEDC",
+    "gold": "#C9A84C",
+    "jade": "#4E7C59",
+    "ink": "#22283A"
+  },
+  "parts": [
+    {
+      "n": 1,
+      "title": "The House of Seven Doors",
+      "chapters": [
+        {
+          "id": "ch01",
+          "title": "The Tin",
+          "timeline": "2005",
+          "art": "tin",
+          "status": "done",
+          "brief": "PROLOGUE-CHAPTER, 2005. Su-Lin, 34, drives from KL to Malacca in a storm to take the keys of a shophouse on Heeren Street left to her by 'Great-Aunt Foong', a woman she met perhaps four times, whom the family always called an old servant of her great-grandparents' house. Lawyer's office; family puzzlement on the phone (her mother: 'she was nobody, an amah's daughter'). First entry into the dust-sheeted shophouse: air well, ancestral hall, smell of camphor. In a locked camphor chest she finds an English biscuit tin: letters tied in red thread, one beaded slipper (left foot), a jade ring, and a wedding photograph of a young man in a high-collared suit beside a bride whose face has been folded back out of the frame. On the back, in Chinese: 'For Mei Lan, when she asks.' Mei Lan is her grandmother's name. End: Su-Lin phones her grandmother; the line is quiet; her grandmother says 'I have never owned a beaded slipper' and hangs up. Establish 2005 voice: dry, modern, a little bruised (broken engagement referenced once, lightly)."
+        },
+        {
+          "id": "ch02",
+          "title": "Two Girls at the Gate",
+          "timeline": "1934",
+          "art": "gate",
+          "status": "done",
+          "brief": "Malacca, June 1934. Ah Yoke, in the black-and-white of the majie, arrives at the Tan mansion on Heeren Street with a twelve-year-old girl and one rattan case. POV Mei Foong: first sight of the house of seven doors, the Bibik's inspection (she looks at Mei Foong one beat too long — plant it, explain nothing), the kitchen court, the rule: the girl may stay if she earns her rice. First meeting with Bee Nio (eleven, imperious, secretly delighted to have someone new) and Boon Siew (fourteen, feeding the caged merbok bird, shares its banana with Mei Foong through the bars of the stair — the book's first gift). Establish house geography precisely for later: front hall, ancestral hall, air wells one and two, kitchen court, the amahs' back stair, the door to Jonker side lane. End: Ah Yoke unpacks a red-thread bundle and hides it at the bottom of her case; Mei Foong pretends to be asleep."
+        },
+        {
+          "id": "ch03",
+          "title": "The Order of the House",
+          "timeline": "1934-35",
+          "art": "kitchen",
+          "status": "done",
+          "brief": "The household as a working machine, POV Mei Foong learning it: kueh-making under the Bibik (pounding rice flour, pandan, the hierarchy of aunts), laundry, the patriarch's breakfast ritual, the difference between front-hall Malacca and kitchen-court Malacca. Mei Foong's quickness noticed: she learns Baba Malay fast, mends kasut manek beadwork better than the seamstress. Bee Nio claims her as 'my girl' — half friendship, half ownership; the ambiguity is the chapter's spine. Boon Siew teaches both girls to ride the delivery bicycle in the back lane, against all rules; Mei Foong falls, laughs for the first time since Guangdong. End: the Bibik watches Mei Foong pounding flour with her sister's exact wrist-turn and drops a bowl; calls it clumsiness. Ah Yoke and the Bibik exchange one look across the court. Nothing is said."
+        },
+        {
+          "id": "ch04",
+          "title": "Lessons Through a Wall",
+          "timeline": "1936",
+          "art": "letters_school",
+          "status": "done",
+          "brief": "Boon Siew at the High School; Bee Nio gets a convent-school education; Mei Foong gets none — so Boon Siew, indignant at the unfairness, teaches her letters at the kitchen table with Bee Nio's cast-off primers, evenings, with Ah Yoke sewing chaperone in the corner. Mei Foong is faster than both Tan children; hide the pride, show the hunger — she copies characters into the margins of butcher paper. The English word-lists, the romanized Malay, the abacus. Bee Nio alternately joins and sabotages, jealous of sharing either of them. First stirring between Mei Foong and Boon Siew: age-appropriate, wordless — he starts leaving the newspaper where she can reach it. End: the patriarch discovers the lessons; instead of anger, calculation: a girl who can read invoices is useful. Mei Foong becomes, quietly, the house's account-checker — and learns the family's money."
+        },
+        {
+          "id": "ch05",
+          "title": "The Merbok Cage",
+          "timeline": "1937",
+          "art": "birdcage",
+          "status": "done",
+          "brief": "Set-piece chapter around Cheng Beng (tomb-sweeping) and the arrival of news from China — the Japanese war on the mainland tightening; fund-raising drives in Malacca's Chinese community; the patriarch donates conspicuously, the kitchen court donates secretly and more painfully. Boon Siew, seventeen, argues at dinner that Malaya will not be spared; his father calls it schoolboy talk. Mei Foong and Boon Siew's first true private conversation, on the back stair at night, about cages: the merbok sings because it cannot do anything else. He says he will not live like the bird; she says the bird eats every day — the book's central argument in miniature. Bee Nio catches them talking; says nothing; files it. End: Ah Yoke, combing Mei Foong's hair, tells her the story of two sisters in Guangdong, 'one who stayed and one who ran' — stops mid-story and never finishes it. Mei Foong, fifteen, memorizes every word."
+        },
+        {
+          "id": "ch06",
+          "title": "What the Water Took",
+          "timeline": "1937-38",
+          "art": "monsoon",
+          "status": "done",
+          "brief": "Monsoon flood year. The godown on the river floods; account books must be saved; Mei Foong works three days beside Boon Siew and the clerks, and her neat figures save the firm a lawsuit over ruined rubber sheets. The patriarch rewards her publicly with two dollars — and, unknowingly, wounds her by praising 'the amah's girl' as proof anyone can be trained. Bee Nio's betrothal talk begins (she is fifteen): matchmakers, photographs, the Bibik in her element. Bee Nio confides real terror to Mei Foong at night — first true sisterly beat between them; they sleep top-to-toe like children. Boon Siew gives Mei Foong his fountain pen 'for the accounts'; she gives it back; he leaves it in the account drawer where only she works. It stays there. End: news photograph of Nanking in the Chinese paper; the men go silent in the front hall; in the kitchen Ah Yoke buys a second bag of rice 'for later' — the first stone of the war-hoard."
+        },
+        {
+          "id": "ch07",
+          "title": "A Name Written in Water",
+          "timeline": "1938",
+          "art": "temple",
+          "status": "done",
+          "brief": "Mei Foong turns sixteen. Temple visit at Cheng Hoon Teng for her birthday — Ah Yoke's one indulgence each year. There Ah Yoke has the abbess write a name-paper for Mei Foong's dead mother without a surname; Mei Foong notices the omission, asks; Ah Yoke: 'Some names are prayers, some are debts.' Meanwhile Boon Siew, eighteen, is put to work in the family firm; hates the rubber-price gambling, loves the ships; secretly writes to the Straits Times under a pen name arguing for Malayan self-sufficiency — Mei Foong is the only one who knows, because she posts the letters. Their alliance becomes intimacy of the mind: coded jokes in the margins of the accounts. Bee Nio's match is fixed: Dr. Lim Cheng Hoe, a Straits-born doctor — she rages, then meets him at the formal tea and is disarmed by his terrible jokes. End: the Bibik orders the seamstress to begin Bee Nio's wedding kasut manek; Mei Foong is set to bead the pair — a year's work; 'make them perfect; a bride walks her whole life in her first steps.'"
+        },
+        {
+          "id": "ch08",
+          "title": "The Beaded Slippers",
+          "timeline": "1939",
+          "art": "slipper",
+          "status": "done",
+          "brief": "The year of the slippers, told through the beading: Mei Foong works the peony-and-phoenix pattern bead by bead through 1939 as war news darkens (Europe in September; Malacca debates whether it matters). Structure the chapter in four beading sessions across the year, each with a scene: (1) Bee Nio tries on the unfinished right slipper, dances, breaks a thread, weeps over nothing — bridal nerves as class privilege Mei Foong will never have; (2) Boon Siew watches Mei Foong bead by lamplight; the first almost-touch, interrupted by Ah Yoke deliberately dropping a pan; Ah Yoke afterwards, harshly: 'The son of the house is a door you cannot walk through. I know the price of that door.' — closest she comes to telling; (3) the patriarch and the radio: Volunteers drilling on the padang, he scoffs, buys more rubber land; (4) finishing the second slipper at four in the morning, Mei Foong beads, hidden inside the lining where no one will ever see, two characters: mei (plum) and siew — a private, unspoken vow-in-thread. End: slippers presented in their camphor box; the Bibik inspects them under the lamp and says only 'My sister beaded like this,' and leaves the room. Mei Foong stands very still."
+        },
+        {
+          "id": "ch09",
+          "title": "The Photograph",
+          "timeline": "2005",
+          "art": "photo",
+          "status": "done",
+          "brief": "2005. Su-Lin stays a weekend in the shophouse she meant to sell. Cleaning, she maps the house — as an architect she reads it: blocked door to the back lane, a bricked niche in the ancestral hall, water damage of some old flood in the godown papers. Meets Uncle Raju (kopitiam two doors down, 80, remembers everything and pretends to remember more): he identifies the man in the wedding photograph instantly — 'Tan Boon Siew, the old Towkay's son. Died in the war. There was no wedding, girl. He died betrothed to an Ipoh Khoo.' First contradiction: then whose bride is in the photo? Su-Lin notices the bride's slippered feet: beaded, peony-and-phoenix — the pattern of the single slipper in the tin. Her mother phones pressing her to list the property; a developer has already called the family. Hafiz appears — contractor sent by the heritage trust to assess the roof; friction then reluctant respect; he shows her the roof beam's carpenter marks: 'Houses sign their letters. You just have to read.' End: Su-Lin unties the red thread and starts reading the letters in date order. The first is from 1941 and begins: 'Tonight I write what I cannot say aloud in this house.'"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "title": "Lanterns Before the Storm",
+      "chapters": [
+        {
+          "id": "ch10",
+          "title": "The Wedding of Bee Nio",
+          "timeline": "1940",
+          "art": "wedding",
+          "status": "done",
+          "brief": "Full Peranakan wedding set-piece, early 1940: twelve-day ceremony compressed into its most sensory days — the lap chai exchange, the hair-combing, the bridal chamber, the slippers' first steps. POV Mei Foong working the wedding from the kitchen side: the labor under the beauty. Bee Nio, terrified and magnificent, pulls Mei Foong into the bridal chamber at dawn: 'You made my feet brave.' Dr. Lim proves kind on the day itself — small acts. Meanwhile the matchmaker who arranged Bee Nio turns her eye to Boon Siew: the Khoo family of Ipoh, tin money, a daughter Siew Ean. The patriarch is dazzled by the merger logic; Boon Siew refuses in private to Mei Foong, cannot refuse in public. End: at the wedding's last night, under the lanterns in the air well, Boon Siew tells Mei Foong plainly, for the first time, without touching her: 'When I marry, it will be a marriage of my own accounting.' Ah Yoke overhears; that night she takes the red-thread bundle from her case, looks at it a long time, puts it back."
+        },
+        {
+          "id": "ch11",
+          "title": "The Betrothal",
+          "timeline": "1940",
+          "art": "teacups",
+          "status": "done",
+          "brief": "Boon Siew's betrothal to Khoo Siew Ean is fixed over his silence — the machinery of two families closing over one man. Ipoh visit: grand Khoo house, tin-dredge money, and Siew Ean herself — 19, sharp, collects gramophone records, sees instantly that Boon Siew's heart is a locked room and tells him so with terrifying calm: 'I am not asking to live in it. I am asking not to be lied to.' Make her real; the reader must like her. Mei Foong at home, beading nothing now, teaches herself bookkeeping from a correspondence course paid for with her saved wedding-work dollars. War creeps in: Volunteers, air-raid drills treated as theatre, rubber prices booming — the boom feels like safety and is the opposite. End: Boon Siew returns from Ipoh; before the whole household, correct and formal, hands Mei Foong the accounts ledger 'Miss Ho' — and inside it, a folded page: the Straits Times has printed his letter under his pen name, with her posting mark. Their secret has a name in print. The betrothal date is set for spring 1942."
+        },
+        {
+          "id": "ch12",
+          "title": "What the Sea Brought",
+          "timeline": "1941",
+          "art": "harbour",
+          "status": "done",
+          "brief": "1941 tightening: Japanese assets frozen, drills stop being funny, the harbour fills with strange cargo and rumors. The patriarch finally believes — too late to be graceful: hoards rice behind a false godown wall, converts cash to gold taels sewn into mattresses (Mei Foong keeps the secret inventory; this ledger matters in ch38). Ah Yoke drills the kitchen court in dispersal: which children run where. Dr. Lim volunteers with the Medical Auxiliary Service; Bee Nio, pregnant with her first, is sent to be safer in the country house at Ayer Keroh — refuses, stays; first sign of the steel under her vanity. Boon Siew and Mei Foong's love becomes explicit and impossible in one scene: caught by rain in the godown checking stores, one hour of truth — he will break the betrothal after the New Year, face the consequences, emigrate to Singapore with her if it comes to disowning. She refuses to cost him his family; he says family is what you build, not what you inherit. No kiss; her choice; hold the line. End: 8 December 1941, dawn — the wireless: landings at Kota Bharu. The house of seven doors goes silent around one radio."
+        },
+        {
+          "id": "ch13",
+          "title": "Sixty-Nine Days",
+          "timeline": "Dec 1941 - Jan 1942",
+          "art": "blackout",
+          "status": "done",
+          "brief": "The collapse, day-counted like a fever chart: Penang abandoned (the wound of the European evacuation — the moment Malaya understands it is alone), refugees southbound through Malacca, the family lorries requisitioned, blackout paper on seven doors' worth of windows. The Khoos wire from Ipoh: betrothal postponed 'until conditions permit' — Siew Ean adds a private line to Boon Siew: 'Locked rooms survive wars. Good luck.' Boon Siew runs rice and medicine with the Medical Auxiliary as bombs hit the town; Mei Foong runs the household books as prices go mad; Ah Yoke's hoard becomes the street's lifeline, shared by exact ration. In the worst night, Boon Siew and Mei Foong shelter under the ancestral altar table with the household; he holds her hand in the dark where no one can see; nobody sleeps; the Bibik prays aloud to ancestors and, once, to her sister by name — Guat Kim — the first time the name is spoken in the book. Mei Foong feels the floor tilt: that is the name Ah Yoke never finishes. End: mid-January 1942 — soldiers on bicycles in Heeren Street. Malacca changes flags without a battle. The silence is worse than the bombs."
+        },
+        {
+          "id": "ch14",
+          "title": "The Red Thread",
+          "timeline": "Jan 1942",
+          "art": "redthread",
+          "status": "todo",
+          "brief": "THE HINGE. Occupation begins: registrations, bows at checkpoints, the house 'hosting' a Japanese billeting officer's inspections. Ah Yoke, feverish with pneumonia caught in the flood-shelter nights, believes she is dying, and pays her debt: tells Mei Foong everything. Full reveal of secret one, told as Guangdong flashback in Ah Yoke's voice: the Bibik's younger sister Neo Guat Kim, disowned in 1921 for loving a Eurasian clerk, the elopement that failed, his death, her shame-exile in Guangdong where the majie sisterhood took her in; her daughter, born 1922: Ho Mei Foong — surname borrowed from Ah Yoke herself. The deathbed oath 1933: raise her near her blood; never tell, lest the Bibik's shame land on the child. The red-thread bundle opened at last: Guat Kim's one letter to her sister (never sent), a baby's lock of hair, and a beaded slipper THUMBNAIL — a child's single slipper Guat Kim beaded for the daughter she knew she would not raise. Mei Foong, 19, learns she has been a servant in her own family's house for eight years; that Boon Siew is her cousin — in Baba custom a marriageable match, if only anyone could ever be told. Ah Yoke survives the fever. The secret now has two keepers. End: Mei Foong stands in the ancestral hall at night before the tablets of ancestors that are hers, and bows — alone, in the dark, claiming nothing."
+        },
+        {
+          "id": "ch15",
+          "title": "The Vow",
+          "timeline": "Feb 1942",
+          "art": "altar",
+          "status": "todo",
+          "brief": "Singapore falls, 15 February — the impossible made fact; Malacca hears it by radio and by the traffic of the victorious. In the terror-lull before the screenings reach Malacca, Boon Siew forces the question: the world that forbade them is gone or going; he will not die politely betrothed to a stranger. The private wedding: before the Guan Yin altar at dawn, witnessed by Ah Yoke (who now, knowing what she knows, chooses to bless rather than bar it — her second oath outranked by her first love for the girl), tea offered to heaven and earth in place of parents, the jade ring (Guat Kim's, from the red-thread bundle — Ah Yoke's wedding gift and silent restitution). The photograph: taken by the Jonker Street studio man for a hoarded dollar, one print only — Mei Foong in Bee Nio's borrowed kebaya and THE beaded slippers, 'so some part of the house walks with us.' This is the folded photograph of ch01. One night as husband and wife in the godown room. Write it restrained and true. End: morning; posters go up in the street — all Chinese males 15 to 50 to report to the padang for screening."
+        },
+        {
+          "id": "ch16",
+          "title": "The Screening",
+          "timeline": "Feb-Mar 1942",
+          "art": "padang",
+          "status": "todo",
+          "brief": "The hardest chapter; write with restraint and zero invented statistics. The padang: queues, hoods, informers, stamps on shirts. POV alternates Mei Foong at the house (the women's war: waiting) and Boon Siew in the queue. Dr. Lim is stamped and released — his medical use protects him. Boon Siew is recognized: his printed letters under the pen name have been traced by a collaborator clerk who once lost a lawsuit to the Tans' accounts (the ch06 lawsuit — the past collects). He is put on the lorry. NO rescue scene, no melodrama: the lorry leaves; the chapter stays with the ones standing in the road. The patriarch spends a fortune in gold taels on intermediaries; buys only the information that there is nothing to buy. Ah Yoke walks to every temple in Malacca. Mei Foong does not weep in front of the house; she goes to the account room and closes the ledger he gave her. End: weeks later, a released neighbor brings Boon Siew's fountain pen, passed hand to hand out of the holding camp with a message memorized: 'Tell Miss Ho the accounts are in her name now.' It is both love letter and death notice. Nothing else ever comes back."
+        },
+        {
+          "id": "ch17",
+          "title": "The Letters",
+          "timeline": "2005",
+          "art": "lamplight",
+          "status": "todo",
+          "brief": "2005. Su-Lin has read as far as the screening. The letters are Mei Foong's — written TO Boon Siew after his death, one or two a year, 1942 to 1990s, never sendable, the tin as postbox to the dead: this reframes everything Su-Lin thought she knew. Emotional whiplash chapter — grief at sixty years' distance. Research beats: Uncle Raju confirms the collaborator clerk's name was spat on in the street until 1950; the Malacca museum archivist shows Su-Lin the screening's historical record — the book handles real history through documents, carefully. Su-Lin's grandmother Mei Lan calls back unprompted: cool, controlled: 'Whatever is in that house, it is not ours. Foong was staff. Sell it.' — too controlled; Su-Lin hears fear. Hafiz thread: roof work begins; he finds the bricked niche in the ancestral hall wall (planted ch09) is NOT original — 1940s brick. They agree to open it when the trust approves; Su-Lin, at midnight, cannot wait and opens it alone. End: inside the niche — a lacquered box: a child's single beaded slipper (tiny, matching thumbnail pattern), and a birth paper in Chinese dated November 1942 with the mother's name Ho Mei Foong and the child's name: Mei Lan. Su-Lin sits down on the floor of the dark hall."
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "title": "The Years of the Rising Sun",
+      "chapters": [
+        {
+          "id": "ch18",
+          "title": "Rice and Ash",
+          "timeline": "1942",
+          "art": "ration",
+          "status": "todo",
+          "brief": "Occupation life settles into administered hunger: banana money, ration queues, the house of seven doors billeting inspections, the firm 'supervised' by a Japanese administrator who is neither monster nor friend — bored, corrupt, survivable; write him precisely. Mei Foong discovers she is pregnant; tells only Ah Yoke. The calculus of an unwed pregnancy (her marriage exists before heaven, not before law) in an occupied town: danger from every direction. Bee Nio, also pregnant, and Mei Foong grow close over shared sickness and shared secrets half-told — Bee Nio guesses the father, and in the book's most important early-grief scene, chooses loyalty: 'My brother's accounts,' she says, and takes Mei Foong's hand. Bee Nio, Dr. Lim, Ah Yoke: the circle of protection forms. The cover: Mei Foong is sent 'for safety' to the Ayer Keroh country house with Ah Yoke, out of the billeting officer's sight. End: the Bibik, packing dried longans for the country house with her own hands — tenderness she can only show in food — says to Mei Foong: 'Come back with a strong child. This house is short of blood.' She does not know what she is saying. Mei Foong carries it like a stone. CONTINUITY (from ch12): Bee Nio was four months pregnant in Nov 1941; that FIRST pregnancy was lost in the terror-spring of 1942 — acknowledge it in one restrained paragraph. Her ch18 pregnancy is her SECOND, conceived mid-1942, and is the one that ends at month eight in 1943 (ch19)."
+        },
+        {
+          "id": "ch19",
+          "title": "Two Cradles",
+          "timeline": "Nov 1942 - 1943",
+          "art": "cradles",
+          "status": "todo",
+          "brief": "Ayer Keroh: Mei Lan born November 1942, delivered by Ah Yoke — a hard birth, a healthy girl with Boon Siew's unmistakable brow. Quiet chapter of hidden motherhood: rubber-estate fringe life, tapping-knife economies, the child growing under a false story (a war-widow cousin's baby). In Malacca, Bee Nio's pregnancy goes wrong in month eight; Dr. Lim delivers his own stillborn son in the occupied hospital — write his composure breaking in one line only. Bee Nio's grief is a house with the roof gone. The Bibik ages a decade. Dr. Lim comes to Ayer Keroh 'to check on the household' — sees Mei Lan, does the arithmetic of brow and dates in one glance and says nothing for three months. End: 1943 hardening — the administrator hints the Tans' women should not be scattered ('irregular households attract lists'); the country house is no longer safe; Mei Foong must return to Malacca, and a baby with no lawful father is a document that cannot survive a checkpoint. Dr. Lim, leaving, finally speaks: 'There is a way every one of you survives this. You will hate it. Come back as my patient.'"
+        },
+        {
+          "id": "ch20",
+          "title": "The Exchange",
+          "timeline": "1943",
+          "art": "exchange",
+          "status": "todo",
+          "brief": "THE CENTRAL SACRIFICE, and it must be Mei Foong's choice, not something done to her. Dr. Lim's proposal laid out plainly: register Mei Lan as his and Bee Nio's daughter — born at the country house, the stillbirth never registered in the chaos; the paperwork of an occupied town can be made to say so. The child becomes untouchable: doctor's daughter, Tan grandchild, fed, documented, safe. The cost: Mei Foong becomes her daughter's amah — near her every day, mother never. One night of decision, structured as Mei Foong arguing with every ghost: with Guat Kim (who was erased FOR love), with Boon Siew ('family is what you build'), with Ah Yoke who made and kept this same bargain for eight years and says, evenly: 'It can be done. I am proof. I am also the price. Look at me and choose with open eyes.' Bee Nio and Mei Foong's scene: Bee Nio does not pretend it is small; 'I cannot give you back my brother. I can keep his daughter alive. Let me owe you what cannot be owed.' The vows of the five (Mei Foong, Ah Yoke, Bee Nio, Dr. Lim — and the Bibik is NOT told; she receives a granddaughter as heaven's repayment and her joy is the chapter's cruelest kindness). Reader learns secret two fully here via the photograph being hidden: Mei Foong folds her own face out of the wedding print — 'a bride no one may name' — and seals tin, photo, slipper. End: registration day; the administrator stamps the paper without looking up; Mei Lan becomes Lim Mei Lan; in the street outside, Mei Foong carries her daughter home as staff."
+        },
+        {
+          "id": "ch21",
+          "title": "Amah",
+          "timeline": "1943-44",
+          "art": "amah",
+          "status": "todo",
+          "brief": "The long middle of the lie, lived daily: Mei Foong as amah in the Lim household within the Tan compound; the exquisite specific pains — Mei Lan's first word is for Bee Nio; her first fever is nursed by Mei Foong through three nights and the thanks go elsewhere; the Bibik teaching 'her granddaughter's' hands the kueh her real grandmother's line always made. Balance with real tenderness: Bee Nio never once treats Mei Foong as staff in private; a marriage of two mothers negotiated in glances; Dr. Lim quietly teaches Mei Foong dispensary skills — she becomes half a nurse (matters in ch24, ch32). Occupation pressure tightens: shortages, a neighbor's son taken for the railway, the administrator extracting 'gifts'. Ah Yoke ages; her hands fail for fine work; Mei Foong beads for hire at night under one lamp — the trade that will one day be her living. End: New Year 1944 group photograph ordered by the Bibik 'because who knows'; everyone arranged by rank; Mei Foong placed standing at the edge, behind her own daughter's chair. The shutter falls. (Su-Lin finds this print in ch36 and finally understands the composition.)"
+        },
+        {
+          "id": "ch22",
+          "title": "The Man from Ipoh",
+          "timeline": "1944",
+          "art": "gramophone",
+          "status": "todo",
+          "brief": "Siew Ean re-enters: the Khoo tin family broken by the occupation (dredges seized), she arrives in Malacca escorting her opium-ruined father to relatives, proud in a mended dress. She and Mei Foong meet over accounts — Siew Ean recognizes the fountain pen on the ledger instantly. Scene of two women who loved differently the same dead man: Siew Ean, who was owed a husband and got a war, could destroy everything with one sentence about betrothal law and doesn't; instead: 'He kept no locked room from you, then. Good. It was a fair marriage he escaped.' — she becomes the fifth keeper of part of the truth (guesses the child; says nothing; her silence is her wedding gift). The women's economy of 1944: pawned gramophone records, tuition taught in kitchens, the Bibik selling jewellery through Ah Yoke to feed three households and calling it 'lending'. End: Allied bombers photographed high over the strait; the administrator grows nervous and greedier — he has begun to keep his own escape ledger, and he asks Mei Foong, the accounts girl, to keep it for him. She now holds a collaborator's confession in her handwriting. Dangerous asset; plant for ch24."
+        },
+        {
+          "id": "ch23",
+          "title": "The Hungry Year",
+          "timeline": "1944-45",
+          "art": "tapioca",
+          "status": "todo",
+          "brief": "The worst stretch: banana money worthless by the sack, tapioca replacing rice replacing hope; sickness sweeps the street; Dr. Lim's clinic pays itself in eggs and gratitude. Deaths held at arm's length until one lands: AH YOKE dies — quietly, in her sleep, in the amahs' room, having outlived her oath. Full-dress majie funeral by her sisterhood, white and black; Mei Foong discovers she has inherited the red-thread bundle, formally now, and the sisterhood's respect: to them she is Ah Yoke's daughter in all but registry, 'the amah's daughter', said with honor — reclaim the title, this is where the book's title lands. Grief braided with continuation: Mei Lan, three, at the funeral asks Mei Foong 'Why do you cry the most?' and Bee Nio answers for her, steady: 'Because Ah Yoke raised her. As she helps raise you.' Truth, in its only permitted clothing. End: rumors of landings, of surrender, of anything; the administrator burns papers in the courtyard for a day and a night — but his private ledger is not in the fire; it is in the account room, and Mei Foong moves it behind the loose brick of the ancestral-hall niche (the niche of ch17 — begin its history)."
+        },
+        {
+          "id": "ch24",
+          "title": "Between Flags",
+          "timeline": "Aug-Sep 1945",
+          "art": "twoflags",
+          "status": "todo",
+          "brief": "Surrender: the strange weeks between the Emperor's broadcast and the British return — no law but rumor; collaborators settle accounts or run; the administrator comes at night for his ledger, desperate, half-apologetic, dangerous. Standoff in the ancestral hall: Mei Foong, alone with him, trades the ledger for the one thing she wants — the registry office's duplicate file of 1943 (Mei Lan's true birth paper trail) which he, as supervisor, could always have used against them. Burn HIS leverage, keep hers: she hands him a ledger copied in her hand minus the pages that would hang the street's innocents, and keeps the original. He runs north; the book does not follow him. The true birth paper goes into the niche with the tin — she cannot destroy the only proof her daughter was ever hers. The British return to cheering Malacca; Dr. Lim weeps at the first Red Cross rice; the Bibik hangs out the old flag and the new grief: Boon Siew is now officially, formally, listed among those who will not return. A memorial tablet joins the ancestral altar. End: Mei Foong, cleaning the new tablet no one may know is her husband's, places before it — inside the offering box where only she looks — the second wedding photograph's negative and the jade ring on its cord. The war is over; her war of silence is not."
+        },
+        {
+          "id": "ch25",
+          "title": "The Niche",
+          "timeline": "2005",
+          "art": "niche",
+          "status": "todo",
+          "brief": "2005. Aftermath of the ch17 discovery: Su-Lin has the birth paper authenticated (paper, ink, registry format — Hafiz's conservation contacts; procedural, believable). It is real. Her grandmother Mei Lan is Mei Foong's daughter; her great-grandmother is not her blood; the family tree is a managed fiction. Su-Lin's mother, told a careful half of it, panics about inheritance optics and the developer deal; ugly family lunch in KL where Su-Lin realizes the family's money-first instinct is itself an inheritance from the patriarch. Contrast beat: Uncle Raju tells the street's memory of 'Sister Foong' — forty years of beading kasut manek for Malacca brides from that shophouse, the amah who became the street's craftswoman; hundreds of brides walked in her shoes; 'Your family called her staff. The street called her sifu.' Su-Lin stops answering the developer's calls. Hafiz and Su-Lin restore the merbok cage they find in the air well — she buys no bird: 'the cage stays open' — motif paid. End: the letters resume after a wartime gap with one dated September 1945 that begins: 'The flags have changed again. I am still your amah. Our daughter called another woman Mother today, and I said nothing, and the saying-nothing is the loudest thing I have ever done.' Su-Lin decides: her grandmother has to know. She books two rooms in Malacca and dials."
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "title": "The White Ants' Nest",
+      "chapters": [
+        {
+          "id": "ch26",
+          "title": "Everything Back But the Dead",
+          "timeline": "1946-47",
+          "art": "rebuilding",
+          "status": "todo",
+          "brief": "Postwar rebuilding: claims tribunals, worthless banana notes in drawers kept 'as evidence against hope', the firm restarted on the hidden gold that survived (Mei Foong's wartime inventory ledger makes the family's case to the tribunal — again the quiet indispensable one). The patriarch returns from his wartime half-paralysis of spirit into hard work and harder silence; grief has made him smaller and meaner about control, and he fixes on Mei Lan, four, the household's one light, spoiling her possessively. Bee Nio and Dr. Lim try for another child; loss again (write in one restrained paragraph); Bee Nio pours everything into Mei Lan — and the first friction of the two-mother marriage appears: Bee Nio begins, without malice, to crowd Mei Foong out of decisions (school, clothes, church or temple), because guilt makes ownership. Mei Foong absorbs it; her letters to Boon Siew (one per chapter beat now) grow shorter and harder. End: talk of unions and strikes on the estates; a new phrase in the newspapers: 'the Emergency', not yet declared but coming; and the Bibik's health begins its long decline — she starts calling Mei Foong by the wrong name: 'Kim'. Nobody corrects her. Mei Foong answers to it."
+        },
+        {
+          "id": "ch27",
+          "title": "What the Bibik Knew",
+          "timeline": "1948",
+          "art": "kueh",
+          "status": "todo",
+          "brief": "The Bibik's last season, and the book's quietest reveal: dying matriarchs stop pretending. Through kueh-teaching afternoons with 'granddaughter' Mei Lan and 'Kim' at her elbow, the Bibik tells stories of two sisters in a Malacca kitchen forty years before — and it becomes clear, obliquely then explicitly, that she has known or half-known for YEARS who Mei Foong is: the wrist-turn (ch03), the beading (ch08), the face. Deathbed scene, only the two of them: 'I punished my sister for choosing wrong. Heaven punished me by making her daughter the best of my house and sealing my mouth with shame. You will not hear me say sorry, girl. Hear me say: the recipes are yours. They were always coming back to you.' She dies without ever learning Mei Lan's parentage — layered irony: she guessed the wrong secret's half, missed the greater one, DID sense 'this house is short of blood' was answered. Grand Peranakan funeral. End: the patriarch, sorting his dead wife's papers, finds HER hidden drawer: Guat Kim's unsent letters that the Bibik had intercepted decades ago and kept — including one that names her daughter, Mei Foong, by name and birth date. The patriarch, alone at his desk, does forty years of arithmetic in one night."
+        },
+        {
+          "id": "ch28",
+          "title": "The Deed",
+          "timeline": "1948",
+          "art": "deed",
+          "status": "todo",
+          "brief": "The patriarch confronts Mei Foong — expecting denial, gets quiet confirmation of secret one ONLY (she guards secret three with her life; he never learns Mei Lan is Boon Siew's). His ledger-brain audit of his own life: fourteen years of his wife's niece scrubbing his floors, saving his firm — thrice — while he tipped her two dollars. He cannot apologize any better than his wife could; he repairs in the only currency he trusts: property. Deeds her, quietly, the Heeren Street shophouse (a rental property of the firm two doors from the kopitiam — establish THIS is the shophouse of 2005; the mansion itself is not it), 'in recognition of service', papers drawn so the family cannot easily challenge. Emergency declared June 1948 as backdrop: roadblocks, national registration, identity cards — a nation of documents, ironic against a woman whose whole life is a falsified document. Offer scene: he also offers, stiffly, to acknowledge her publicly as kin. SHE refuses — public truth now would tug the thread that unravels Mei Lan's paternity timing; she chooses the lie again, this time with power, from strength; second sacrifice, mirror of ch20. End: Mei Foong moves into her own house at 26, first thing she has ever owned; first night alone under her own roof; she unpacks the tin, and adds to it the deed. 'Dear husband — I have an address now. You may send word.'"
+        },
+        {
+          "id": "ch29",
+          "title": "The Amah's Shop",
+          "timeline": "1949-52",
+          "art": "shopfront",
+          "status": "todo",
+          "brief": "Time-braided chapter of the shop years: Mei Foong builds the beading business (apprentices from the majie network; brides from three states; the peony-and-phoenix becomes 'the Malacca pattern' locally) while remaining daily amah to Mei Lan, now at school and sharp as her father — the double life at its most textured and functional. Emergency texture: curfews, a bride's rural wedding needs travel passes; an apprentice's brother detained then released; keep politics at street level, no factions romanticized. Siew Ean returns for good — schoolteacher in Malacca now, becomes Mei Foong's true friend and the shop's bookkeeper; their spiky, loyal, joking middle-aged friendship is the reader's reward-oxygen after Part III. Mei Lan, ten, begins choosing the shop over the mansion after school; loves beadwork; has her mother's exact hands and everyone sees it and no one may say it; one scene where the girl asks 'Auntie Foong, why do I bead like you?' — and Bee Nio, arriving to collect her, hears, freezes in the doorway, waits for the answer. Mei Foong: 'Because I taught you. That is what teachers are for.' The two mothers' eyes meet; Bee Nio's guilt-crowding (ch26) thaws; the marriage of two mothers is renegotiated as alliance again. End: Dr. Lim's heart episode — a warning, not death; Mei Lan's world wobbles; and the patriarch, aging, begins quietly rewriting his will."
+        },
+        {
+          "id": "ch30",
+          "title": "The Question",
+          "timeline": "1955-57",
+          "art": "merdeka",
+          "status": "todo",
+          "brief": "The run to merdeka braided with Mei Lan, 13-15: elections, Tunku on the wireless, the word 'Malayan' being invented street by street — the book's historical arc lands: cages opening. Mei Lan grows into questions: why does Auntie Foong keep one child-sized slipper on her altar shelf; why is there no photograph of Uncle Boon Siew's face in the mansion but one pen kept like a relic in the shop; why does Grandma-in-heaven's tablet list a name, Guat Kim, no one explains. Teenage Mei Lan investigates her own family with a teenager's blunt instruments and gets close enough to frighten all three parents — the near-miss chapter: she finds the 1944 group photograph, reads its composition wrong ('Poor Auntie Foong, they made you stand'), and her innocent conclusion wounds Mei Foong worse than discovery would. Family council of the keepers (Mei Foong, Bee Nio, Dr. Lim, Siew Ean): tell her at 21? at marriage? never? No consensus; the patriarch, not consulted, settles it from outside: announces he is moving the family firm and household to Kuala Lumpur — modern country, modern capital; Mei Lan will finish school there. Separation. End: Merdeka night, 31 August 1957 — the street outside the shophouse full of flags and fireworks; the family's last Malacca night before KL; Mei Lan falls asleep on the shop floor among the beads; Mei Foong watches the new flag go up over a free Malaya, her daughter asleep at her feet, and writes: 'The country got its name back tonight. I am still waiting to be introduced.'"
+        },
+        {
+          "id": "ch31",
+          "title": "Two Rooms in Malacca",
+          "timeline": "2005",
+          "art": "tworooms",
+          "status": "todo",
+          "brief": "2005. Su-Lin's grandmother Mei Lan, 62, comes to Malacca — not because Su-Lin persuaded her; because Su-Lin sent one photograph by post: the child's beaded slipper. Mei Lan arrives armored in efficiency, planning to 'sort this nonsense in a day'. The chapter is the two women in the shophouse among the objects: Mei Lan touches nothing, then touches everything; she remembers this shop — the smell of beads and starch, 'I had an amah I loved here; the family let her go when we moved; I cried for a month; nobody would speak of her after.' The half-truths of 1957 from the other side. Su-Lin lays out the documents like an architect's set of drawings: birth paper, deed, folded photograph, letters — and cannot make herself narrate the conclusion; instead she reads aloud the September 1945 letter (ch25). Mei Lan listens to the end without moving. Then: 'Read the first one again. The one from 1941.' — she has begun doing the arithmetic herself. End: Mei Lan asks for the night alone in the shophouse with the tin; Su-Lin walks Jonker Street with Hafiz until 3 a.m.; the light in the shophouse window burns all night. At dawn Mei Lan opens the door and says: 'I remember her hands. Take me to where she is buried.'"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "title": "What the Tin Held",
+      "chapters": [
+        {
+          "id": "ch32",
+          "title": "The Long Watch",
+          "timeline": "1958-1990s",
+          "art": "watch",
+          "status": "todo",
+          "brief": "The last historical chapter: Mei Foong's remaining decades compressed with grace, told through the letters themselves (epistolary spine, scenes between): the KL years' visits shrinking; Bee Nio and Mei Foong's old-age alliance — Bee Nio dies 1979 holding Mei Foong's hand, last words paying the unpayable: 'I return your daughter. Tell her yourself. I was never brave enough.' — permission granted, never used: Dr. Lim follows 1983; the patriarch long gone (1961, his will's strange kindness: a trust for 'the education of the descendants of my son' that only Mei Foong understands). Mei Lan's own life seen from far: marriage, Su-Lin's mother born, then Su-Lin — Mei Foong attends the full-moon party of her own great-granddaughter as 'an old family friend', holds the baby once, and that night writes 'For Mei Lan, when she asks' on the photograph and seals the tin's final order. Her dying is one paragraph, 2004, among her apprentices, having outlived every keeper; the lawyer's instruction and the bequest to the great-granddaughter with an architect's eyes 'because houses need someone who reads them'. End with her final letter: 'Dear husband — I am the last account open. I am closing the books. Our daughter is a grandmother. The slippers never fit anyone else. I checked.'"
+        },
+        {
+          "id": "ch33",
+          "title": "The Grave",
+          "timeline": "2005",
+          "art": "grave",
+          "status": "todo",
+          "brief": "2005. Bukit Cina cemetery at morning: Su-Lin and Mei Lan find Mei Foong's grave — placed, by her own arrangement, at the far edge of the Tan family cluster: near, never inside; the pattern of her whole life legible in cemetery geography, and Mei Lan reads it aloud and breaks — the chapter where sixty-two years of unexplained textures (the amah who loved her, the coldness about the past, her own hands' skill at beadwork she abandoned at fifteen) resolve into grief with a name. Kneeling rites improvised: Mei Lan pours tea as a daughter. Secret three fully spoken between the living for the first time: 'She was my mother. Your great-grandmother. Say it so I can hear it outside my own head.' Aftermath practicalities becoming meaning: what to do with the truth — legal name corrections are impossible-ish and beside the point; Mei Lan chooses the truth's own register: the ancestral tablet. They commission one: Ho Mei Foong, wife of Tan Boon Siew — placing it beside his memorial tablet at last (the marriage becomes 'real' in the only court that ever mattered to the two of them). End: Mei Lan takes from her handbag, wrapped in a KL bank's plastic, the thing she has kept without knowing why since 1957: the OTHER adult beaded slipper — right foot. 'The family said pack only what is mine. I stole it from her shop the night we left. It is the only thing I ever stole.' The pair, reunited on the altar shelf."
+        },
+        {
+          "id": "ch34",
+          "title": "The Family Meeting",
+          "timeline": "2005",
+          "art": "meeting",
+          "status": "todo",
+          "brief": "The cost-of-truth chapter — the genre demands the family reckon, not just weep: KL, the extended Tans assembled expecting a property decision, receiving instead a genealogy. Range of reactions written honestly: Su-Lin's mother's horror softening as the story outlasts her objections; an uncle who hears only inheritance threat (the 1961 education trust suddenly has a legal meaning — Mei Lan waives claims cleanly: 'I am not here to audit the dead'); a young cousin who cannot see the scandal at all ('so great-great-grandma was awesome and we treated her like staff? That's the scandal.') — generational relief valve. Decision on the shophouse: not sold; Su-Lin will restore it under the heritage trust as a working kasut manek atelier and small house-museum of the street's craft — Mei Foong's apprentices' lineage traced; two old women from the sisterhood found who still bead; the practical machinery of memory. Hafiz thread resolves at its right weight: partnership on the restoration first, the unhurried beginning of the rest — one scene, no declarations, two kopitiam coffees and drawings spread on the table. End: the mother, alone with Su-Lin, produces her own confession object: the fountain pen — passed down to her as 'grandfather's lucky pen' with the story sanded off; objects find their way home."
+        },
+        {
+          "id": "ch35",
+          "title": "The House That Reads Letters",
+          "timeline": "2005-06",
+          "art": "restoration",
+          "status": "todo",
+          "brief": "Restoration chapter — the architect's chapter, Su-Lin's competence finally pointed at something she loves: lime plaster, air-well light, the roof beams' carpenter marks logged; the niche preserved behind glass with the tin displayed open — the house made to tell the truth at last, curated by the great-granddaughter of the woman it sheltered. Interleave final letters as she catalogues them (the 1957 merdeka letter lands here for the reader in full). Mei Lan comes down monthly; takes up beadwork again at 63; her hands remember the Malacca pattern in three sessions — inheritance of the body outlasting every document. Opening day of the atelier-museum: the street comes; Uncle Raju cuts the ribbon and takes credit for everything; the sisterhood's two old beaders install at the window table like queens. Su-Lin hangs the wedding photograph — unfolded, both faces — over the altar shelf with the paired slippers. End: at closing time, alone, Su-Lin adds the last object to the case: her own contribution, a new letter, written to Mei Foong, beginning 'Dear Great-Grandmother — the accounts are in my name now.' Door locked, lights off, one lamp left burning over the photograph — deliberate echo of every lamp in the book."
+        },
+        {
+          "id": "ch36",
+          "title": "Epilogue: The Amah's Daughter",
+          "timeline": "2006",
+          "art": "epilogue",
+          "status": "todo",
+          "brief": "Short epilogue, 2000-2500 words, double meaning of the title landed: Merdeka Day 2006, one year on: the atelier thriving modestly; a bride from Ipoh — by chance a Khoo — collects her wedding kasut manek and walks her first steps in the shop as brides have for sixty years. Mei Lan, beading at the window, is asked by the bride's mother: 'You are the owner's grandmother?' — 'No,' she says, counting beads, 'I am the amah's daughter,' — said with entire pride, title reclaimed for the last time. Su-Lin narrates the final image: the merbok cage in the air well, door wired permanently open, where a wild merbok now comes and goes as it pleases and sings anyway. Final line returns to the tin, closed now, its work done: some inheritances are money, some are houses; the good ones are instructions. Keep it tight; no new revelations; land the plane softly."
+        }
+      ]
+    }
+  ]
+}
