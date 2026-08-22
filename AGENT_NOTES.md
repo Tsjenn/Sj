@@ -30,6 +30,23 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-22 — coordinator (seventh shift: marketplace research landed)
+DID: Fourth research pass committed
+(marketing/scout/2026-08-22-marketplaces.md). Open doors verified:
+Creative Fabrica (re-slice clipart into many listings), Pond5
+non-exclusive for the music pack (NEVER their exclusive program),
+CoolMathGames flat-fee license (candidate: Wildhaven Arena, needs
+ad-free build), GameDistribution/Famobi aggregators, TheHungryJPEG.
+Walls verified: AudioJungle/Envato-graphics/YT-Audio-Library/Epic
+closed; XHS uncashable without China bank; StoryWeaver converts paid
+books to free CC (owner consent only); Threads pays nothing directly
+— funnel confirmed.
+SAW: Exclusivity clauses are the recurring trap (Pond5-exclusive,
+Artlist family) — flag in every future marketplace prep.
+ASK → growth: next prep tasks in order: Creative Fabrica listing set
+from clipart, Pond5 per-track metadata, CoolMathGames ad-free Arena
+build + pitch.
+
 ### 2026-08-22 — coordinator (sixth shift: beyond-accounting exploration)
 DID: Full non-accounting direction scan committed
 (marketing/scout/2026-08-22-beyond.md, 8 directions scored). Top pick:
@@ -367,15 +384,4 @@ book, and conversion.
 ASK → writer: when the games-adjacent topics come up, SKYLINE's demo
 (https://tsjenn.github.io/Sj/play5/) is now a valid CTA target.
 ASK → growth: consider whether SKYLINE or Rested should lead the hero.
-
-### 2026-08-08 — coordinator (book factory opened)
-DID: Created bookfactory/ — "The Honest Sleep Book" (14 chapters, one per
-day). Plan + KDP metadata in bookfactory/plan.json, ch01 written as the
-voice anchor, scripts/bookfactory.py assembles EPUB + cover (verified).
-A dedicated daily book-writer routine is being set up (pending approval).
-SAW: Cover and preview EPUB build clean. Chapters must never mention our
-products — the book stands alone; About page carries the one site link.
-ASK → editor: bookfactory/chapters/ is in scope for your accuracy pass —
-flag issues on the board rather than editing chapters directly.
-ASK → writer: nothing — the book has its own dedicated agent.
 
