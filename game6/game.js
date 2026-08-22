@@ -439,6 +439,55 @@
     }
   }
 
+  // living sky extras: butterflies by day, shooting stars at night
+  var flutters = [], meteors = [];
+  (function () {
+    var cols = ["#F8DC7C", "#C0A0E8", "#F49E68"];
+    for (var i = 0; i < 3; i++) {
+      flutters.push({ x: (i * 251 + 80) % 600, y: 0.2 + i * 0.13,
+        v: 0.35 + i * 0.14, ph: i * 2.4, col: cols[i] });
+    }
+  })();
+  function skyLife(day) {
+    var i, f;
+    if (day > 0.45) {
+      for (i = 0; i < flutters.length; i++) {
+        f = flutters[i];
+        f.x += f.v;
+        if (f.x > W + 30) f.x = -30;
+        var fy = f.y * H + Math.sin(t * 1.4 + f.ph) * 18;
+        var flap = Math.abs(Math.sin(t * 9 + f.ph));
+        cx.globalAlpha = (day - 0.45) * 1.6;
+        cx.fillStyle = f.col;
+        cx.beginPath();
+        cx.ellipse(f.x - 4, fy, 5, 3 + flap * 4, -0.5, 0, 6.29); cx.fill();
+        cx.beginPath();
+        cx.ellipse(f.x + 4, fy, 5, 3 + flap * 4, 0.5, 0, 6.29); cx.fill();
+        cx.globalAlpha = 1;
+      }
+    }
+    if (day < 0.3) {
+      if (Math.random() < 0.006) {
+        meteors.push({ x: W * (0.3 + Math.random() * 0.7), y: H * 0.05 + Math.random() * H * 0.15,
+          vx: -(5 + Math.random() * 3), vy: 2 + Math.random() * 1.5, life: 1 });
+      }
+      for (i = meteors.length - 1; i >= 0; i--) {
+        f = meteors[i];
+        f.x += f.vx; f.y += f.vy; f.life -= 0.03;
+        if (f.life <= 0) { meteors.splice(i, 1); continue; }
+        cx.globalAlpha = f.life * (0.3 - day) * 3;
+        cx.strokeStyle = "#FFF4E4"; cx.lineWidth = 2;
+        cx.beginPath();
+        cx.moveTo(f.x, f.y);
+        cx.lineTo(f.x - f.vx * 5, f.y - f.vy * 5);
+        cx.stroke();
+        cx.globalAlpha = 1;
+      }
+    } else {
+      meteors.length = 0;
+    }
+  }
+
   function drawTitle() {
     var size = Math.min(W * 0.14, 58);
     var by = H * 0.3 + Math.sin(t * 1.8) * 5;
@@ -470,6 +519,7 @@
     if (shake) cx.translate((Math.random() - 0.5) * shake, (Math.random() - 0.5) * shake);
     var ph = skyPhase();
     sky(ph);
+    skyLife(ph.day);
 
     for (var i = 0; i < stack.length; i++) {
       var b = stack[i];
