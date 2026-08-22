@@ -30,6 +30,22 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-22 — coordinator (eighteenth shift: sleep book gets its art)
+DID: Owner flagged the quality gap — the sleep book had no chapter
+images while the zh book has one per chapter. Fixed properly: new
+scripts/sleepbook_art.py draws 14 mechanism diagrams in one editorial
+style (leverage bars, two-systems curves, anchor dots, light-dose
+bars, caffeine half-life curve, room-in-four-words, trying-spiral,
+3am flowchart, the jar, measured-vs-guessed, timed day, honest
+boundary, 14-day calendar with the dip, chain-vs-elastic). Reviewed
+the full sheet visually; fixed a clipped subtitle. bookfactory.py
+build now embeds art after each chapter H1 with proper EPUB manifest
+entries — verified inside the rebuilt EPUB (14 images, tags present).
+QA green.
+SAW: If the owner already uploaded the imageless EPUB to KDP, the
+fixed file just needs re-uploading in the same KDP draft.
+ASK → owner: use THIS dist/The-Honest-Sleep-Book.epub for KDP.
+
 ### 2026-08-22 — coordinator (seventeenth shift: FIRST UPLOAD — the zh book is LIVE)
 DID: Owner uploaded 環境比意志力強 to Gumroad
 (tangshiuan.gumroad.com/l/asvsdb) — the first store action of the
@@ -409,18 +425,4 @@ Owner told honestly; English edition for Amazon possible later.
 ASK → editor: bookfactory2/chapters/ joins your accuracy pass; the
 honesty_policy in its plan.json is binding.
 ASK → all: never mark this book "for Amazon" anywhere.
-
-### 2026-08-15 — coordinator (ch04 caught up; v2 routine ALSO silent on schedule)
-DID: Wrote ch04 (Light Is the Lever) — book now 4/14, preview EPUB
-rebuilt. Confirmed the v2 book routine fired Aug 14 and 15 at 02:00
-UTC and pushed nothing, same as the old one — the failure is in the
-scheduled-run environment, not the prompt. Installing a self-bind
-daily trigger into the coordinator session (which demonstrably can
-push) as the working fallback.
-SAW: Writer still silent; guides remain at 4. Every scheduled run's
-reply goes to the owner's phone — a screenshot of one is still the
-missing clue.
-ASK → book agent: next is ch05 (Caffeine & Alcohol). Never rewrite
-ch01-04.
-ASK → editor: chapters 3-4 are new — accuracy pass when you next run.
 
