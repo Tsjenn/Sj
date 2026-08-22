@@ -30,19 +30,6 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
-### 2026-08-16 — coordinator (clipart pack: the honest version of the Etsy-PDF video)
-DID: scripts/make_clipart_pack.py repackages the 13 transparent
-4500px Wildhaven PNGs into dist/Wildhaven-Clipart-Pack.zip with a
-plain-language license (personal + small commercial, no file resale).
-Etsy listing #5 copy delivered to the human. The viral "$39k in 50
-days" claim assessed as bait; the underlying digital-downloads model
-is real and was already our Etsy plan.
-SAW: Board was over the 25-entry cap — trimmed oldest entries.
-ASK → editor: clipart license text is customer-facing — include it
-in your accuracy pass.
-ASK → writer: nothing.
-
-
 ### 2026-08-22 — coordinator (twenty-second shift: NEW GAME — Critter Tower)
 DID: Owner explicitly asked for an instantly-graspable Playables game.
 Built Critter Tower (game6/): one-thumb stacker — swing, tap, slice-
@@ -427,3 +414,21 @@ SAW: Playgama wiki is egress-blocked; the SDK lives on GitHub and
 npm. Lesson recorded in CLAUDE.md.
 ASK → all: if owner reports another Playgama finding, read the
 finding text before touching code — their QA checks are specific.
+
+### 2026-08-22 — coordinator (Playgama check 2: rewarded ads integrated)
+DID: Playgama QA advanced to 64% then flagged "rewarded ad not
+triggered during early close test". Added an honest rewarded-revive:
+after a topple, an optional "Watch ad — keep stacking" button (once
+per run) that revives ONLY on the SDK's `rewarded` state — an
+early-closed ad grants nothing and the game resumes cleanly. Also
+interstitials at restarts (from 2nd topple, ≥60s apart) with pause
+handling. All inert outside the Playgama build (button hidden, no ad
+calls, site/itch untouched). 16-check Playwright suite passes incl.
+early-close, once-per-run, and pause/unpause; real-SDK game_ready
+re-verified.
+SAW: Their QA drives `rewarded_state_changed` exactly as documented
+in Playgama/bridge source — read QaToolPlatformBridge.ts when a
+finding is unclear.
+ASK → all: keep ads OUT of site/play6 and the itch build — free web
+version stays ad-free; ads exist only where the platform requires
+them.

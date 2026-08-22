@@ -71,6 +71,7 @@
     stack = [{ x: W / 2, w: baseW, n: 0 }];
     debris = []; particles = []; floats = [];
     score = 0; combo = 0; cam = 0; camTarget = 0;
+    reviveUsed = false;
     newMoving();
     setScore();
   }
@@ -138,12 +139,64 @@
 
   function gameOver() {
     state = "over";
+    overs++;
     thud(); shake = 12;
     if (score > best) { best = score; saveBest(); }
     document.getElementById("final").textContent = score;
     document.getElementById("best").textContent = "best " + best;
+    document.getElementById("revive").style.display =
+      (rewardedAvailable() && !reviveUsed) ? "block" : "none";
     document.getElementById("over").style.display = "flex";
     sdk(function () { YT && YT.engagement && YT.engagement.sendScore && YT.engagement.sendScore({ value: score }); });
+  }
+
+  /* ------------------------------------------------ ads (Playgama build) */
+  // The Bridge SDK ships only in the Playgama zip; everywhere else these
+  // are inert: no button, no ad calls. Reward is granted ONLY on the
+  // SDK's "rewarded" state — an early-closed ad revives nothing.
+  var reviveUsed = false, adGotReward = false, lastInterstitial = 0, overs = 0;
+  function bridgeAds() {
+    var b = window.bridge;
+    return (b && b.advertisement) ? b.advertisement : null;
+  }
+  function rewardedAvailable() {
+    try { var a = bridgeAds(); return !!(a && a.isRewardedSupported); } catch (e) { return false; }
+  }
+  function revive() {
+    reviveUsed = true;
+    var top = stack[stack.length - 1];
+    top.w = Math.max(top.w, baseW * 0.55);       // enough width to keep playing
+    document.getElementById("over").style.display = "none";
+    state = "play";
+    newMoving();
+  }
+  function initAds() {
+    var a = bridgeAds();
+    if (!a || typeof a.on !== "function") return;
+    a.on("rewarded_state_changed", function (s) {
+      if (s === "opened") { paused = true; }
+      if (s === "rewarded") { adGotReward = true; }
+      if (s === "closed" || s === "failed") {
+        paused = false;
+        if (adGotReward) { adGotReward = false; revive(); }
+      }
+    });
+    a.on("interstitial_state_changed", function (s) {
+      if (s === "opened") { paused = true; }
+      if (s === "closed" || s === "failed") { paused = false; }
+    });
+  }
+  function maybeInterstitial() {
+    // natural pause: between runs, from the 2nd topple on, >=60s apart
+    try {
+      var a = bridgeAds();
+      if (!a || !a.isInterstitialSupported) return;
+      var now = Date.now();
+      if (overs >= 2 && now - lastInterstitial > 60000) {
+        lastInterstitial = now;
+        a.showInterstitial();
+      }
+    } catch (e) {}
   }
 
   function burst(x, y, col, n) {
@@ -262,6 +315,11 @@
   document.getElementById("again").addEventListener("click", function () {
     document.getElementById("over").style.display = "none";
     state = "play"; reset();
+    maybeInterstitial();
+  });
+  document.getElementById("revive").addEventListener("click", function () {
+    var a = bridgeAds();
+    if (a && rewardedAvailable() && !reviveUsed) { adGotReward = false; a.showRewarded(); }
   });
   document.getElementById("share").addEventListener("click", function () {
     var txt = "🏗️ Critter Tower — I stacked " + score + " critters high!\n" +
@@ -287,12 +345,14 @@
   if (window.bridge && typeof window.bridge.initialize === "function") {
     window.bridge.initialize().then(function () {
       sdk(function () { window.bridge.platform.sendMessage("game_ready"); });
+      sdk(initAds);
     }).catch(function () {});
   }
 
   window.DEV = {
     state: function () { return { state: state, score: score, best: best, combo: combo,
-      stack: stack.length, topW: Math.round(stack[stack.length - 1].w), loaded: loaded }; },
+      stack: stack.length, topW: Math.round(stack[stack.length - 1].w), loaded: loaded,
+      paused: paused, reviveUsed: reviveUsed, overs: overs }; },
     drop: drop,
     topX: function () { return stack[stack.length - 1].x; },
     dropAt: function (x) {
