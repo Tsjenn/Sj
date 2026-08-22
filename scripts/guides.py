@@ -474,8 +474,9 @@ def qa(arts):
     if os.path.exists(qpath):
         with open(qpath) as f:
             surfaces.append(("social queue", f.read()))
-    for book_dir in ("bookfactory", "bookfactory2", "bookfactory3"):
-        ch_dir = os.path.join(ROOT, book_dir, "chapters")
+    for book_dir, sub in (("bookfactory", "chapters"), ("bookfactory2", "chapters"),
+                          ("bookfactory3", "chapters"), ("bookfactory4", "stories")):
+        ch_dir = os.path.join(ROOT, book_dir, sub)
         if os.path.isdir(ch_dir):
             for fn in sorted(os.listdir(ch_dir)):
                 if fn.endswith(".md"):
