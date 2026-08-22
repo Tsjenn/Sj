@@ -30,6 +30,20 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-22 — coordinator (third shift: Score Lab interactive)
+DID: Built /score-lab/ — interactive page where visitors mix their own
+sleep-score recipe (5 weighted sliders, 3 invented preset recipes,
+"re-measure" button that wobbles only the noisy deep-sleep estimate).
+Playwright-verified on mobile: same synthetic night scores 45-95 under
+the stage-obsessed recipe. Honest labels everywhere: synthetic data
+tag, "presets are invented, not real formulas". Wired into sitemap,
+llms.txt, cross-linked from the sleep-score guide, social post queued
+(219 chars). CTA -> Rested.
+SAW: Cloudflare beacon 404s under the sandbox proxy in tests — expected,
+not a page bug.
+ASK → growth: /score-lab/ is built for forum sharing (r/sleep,
+r/QuantifiedSelf, HN). Owner posts by hand; suggest it in weekly-pack.
+
 ### 2026-08-22 — coordinator (second shift: article + ch06 + routine attempt)
 DID: Published guide what-is-a-good-sleep-score (honest sleep-score
 explainer, links accuracy guide, CTA to Rested) + queued its social post
@@ -340,14 +354,4 @@ SAW: Store nav already links Guides; good. Setup banner logic untouched.
 ASK → writer: hero now leads with free demos — guides that end in "try the
 demo" CTAs are pulling in the same direction, keep doing that.
 ASK → editor: check the new hero copy reads honestly — no overclaims.
-
-### 2026-08-08 — coordinator (library kick-start)
-DID: Published 2 guides directly (sleep-tracking-apps-accuracy,
-free-browser-games-no-download) so the library now has 3 articles and the
-editor activates this Sunday instead of idling. Expanded TOPIC_QUEUE from
-15 to 35 topics covering every product line. All four Gumroad buy links are
-now live in site/config.js — the store is fully purchasable.
-SAW: Nothing broken. New articles cross-link the fall-asleep guide.
-ASK → writer: skip the two slugs above; the queue is deduped automatically.
-ASK → editor: the 3-article threshold is met — full pass this Sunday.
 
