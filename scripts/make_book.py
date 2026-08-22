@@ -120,32 +120,19 @@ def fountain(d, cx, y, s=1.0):
 
 
 def critter(d, cx, cy, u, body, accent, feature=None, eyes_closed=False):
-    ink = (34, 34, 34)
-    if feature == "flame":
-        d.polygon([(cx + 30 * u, cy + 20 * u), (cx + 78 * u, cy - 6 * u), (cx + 58 * u, cy + 44 * u)], fill=(255, 178, 74))
-    d.ellipse([cx - 34 * u, cy - 8 * u, cx + 34 * u, cy + 56 * u], fill=body)
-    d.ellipse([cx - 26 * u, cy + 8 * u, cx + 26 * u, cy + 52 * u], fill=accent)
-    if feature == "shell":
-        d.pieslice([cx - 40 * u, cy - 20 * u, cx + 40 * u, cy + 52 * u], 180, 360, fill=accent)
-    if feature in (None, "ears", "flame"):
-        d.polygon([(cx - 22 * u, cy - 40 * u), (cx - 12 * u, cy - 78 * u), (cx - 2 * u, cy - 40 * u)], fill=body)
-        d.polygon([(cx + 2 * u, cy - 40 * u), (cx + 12 * u, cy - 78 * u), (cx + 22 * u, cy - 40 * u)], fill=body)
-    if feature == "wings":
-        d.polygon([(cx - 34 * u, cy - 10 * u), (cx - 86 * u, cy - 44 * u), (cx - 40 * u, cy + 16 * u)], fill=accent)
-        d.polygon([(cx + 34 * u, cy - 10 * u), (cx + 86 * u, cy - 44 * u), (cx + 40 * u, cy + 16 * u)], fill=accent)
-    if feature == "fin":
-        d.polygon([(cx - 10 * u, cy - 44 * u), (cx + 10 * u, cy - 44 * u), (cx, cy - 82 * u)], fill=accent)
-    d.ellipse([cx - 32 * u, cy - 52 * u, cx + 32 * u, cy + 8 * u], fill=body)
-    if eyes_closed:
-        w = max(3, int(3 * u))
-        d.arc([cx - 18 * u, cy - 32 * u, cx - 5 * u, cy - 20 * u], 0, 180, fill=ink, width=w)
-        d.arc([cx + 5 * u, cy - 32 * u, cx + 18 * u, cy - 20 * u], 0, 180, fill=ink, width=w)
-    else:
-        d.ellipse([cx - 17 * u, cy - 32 * u, cx - 6 * u, cy - 19 * u], fill=ink)
-        d.ellipse([cx + 6 * u, cy - 32 * u, cx + 17 * u, cy - 19 * u], fill=ink)
-        d.ellipse([cx - 14 * u, cy - 29 * u, cx - 10 * u, cy - 25 * u], fill=(255, 255, 255))
-        d.ellipse([cx + 9 * u, cy - 29 * u, cx + 13 * u, cy - 25 * u], fill=(255, 255, 255))
-    d.arc([cx - 9 * u, cy - 18 * u, cx + 9 * u, cy - 6 * u], 20, 160, fill=ink, width=max(3, int(2 * u)))
+    """Draw a critter using the second-generation renderer (critters2).
+
+    Signature kept from the original flat-shape version so every page
+    builder keeps working; colors are used only to look up the species.
+    """
+    import critters2
+    sp = _SPECIES_BY_COLORS.get((tuple(body), tuple(accent), feature))
+    if sp is None:
+        sp = "flufftail"
+    P = int(150 * u)
+    art = critters2.render(sp, P, eyes_closed=eyes_closed)
+    img = d._image
+    img.paste(art, (int(cx - P / 2), int(cy - 11 * u - P / 2)), art)
 
 
 CRITTERS = {
@@ -159,6 +146,10 @@ CRITTERS = {
     "cinderpup": ((184, 74, 58), (255, 166, 74), "flame"),
     "glimmerwing": ((154, 106, 216), (230, 208, 255), "wings"),
     "nocturnix": ((58, 63, 107), (143, 208, 255), "wings"),
+}
+
+_SPECIES_BY_COLORS = {
+    (tuple(b), tuple(a), f): sp for sp, (b, a, f) in CRITTERS.items()
 }
 
 _pages = []

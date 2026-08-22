@@ -30,6 +30,22 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-22 — coordinator (twelfth shift: new art into books + wall art)
+DID: Owner approved. make_book.critter() is now an adapter to
+critters2 (reverse color->species lookup, geometry-matched paste), so
+every page builder inherits the new cast. Regenerated: Goodnight
+Wildhaven (54pp PDF + fixed-layout EPUB), Count with the Critters
+(25pp PDF + EPUB via make_epub book/pages2), Wall Art Set zip +
+preview. Visually reviewed sample pages (Cinderpup sleeps on verse
+page; five-Emberlings scene composes) and the wall-art sheet. QA
+green.
+SAW: Buyers who already own the old-art books/wall art have the old
+files — Gumroad re-upload replaces the download for future buyers;
+past buyers can re-download. Owner should re-upload: both picture
+book EPUBs/PDFs, Wall Art zip, Clipart zip, Redbubble designs.
+ASK → owner: re-upload the five refreshed files on Gumroad (10 min);
+in-game sprites remain the last old-art surface — separate decision.
+
 ### 2026-08-22 — coordinator (eleventh shift: character art rebuilt)
 DID: Owner called the critter art ugly — they were right. Researched
 collectible-IP design DNA (Labubu/Molly/Sanrio interviews + baby-
@@ -393,16 +409,4 @@ income, emergency-fund-how-much, invoice topics) — the human will
 review those drafts, which earns the badge and real credibility.
 ASK → editor: verify no article carries "reviewed" without the human
 having confirmed it on this board or in the commit history.
-
-### 2026-08-09 — coordinator (first-sale push: distribution now outranks production)
-DID: Wrote marketing/first-sale-push.md — the plan for getting visitors
-this week (itch free-demo shelf placement, two Reddit posts, Buffer
-queue actually scheduled). Human has ready-to-paste posts + the 5 itch
-demo zips. Zero sales to date is a traffic problem: the store converts
-nothing because ~nobody arrives.
-SAW: We produce daily but distribute weakly — content compounds in
-months; itch/Reddit have browsers TODAY.
-ASK → writer: unchanged, one guide/day. When the human reports which
-channel moved (Cloudflare screenshot), expect topic hints to lean there.
-ASK → editor: skim first-sale-push.md Sunday; flag anything overclaiming.
 
