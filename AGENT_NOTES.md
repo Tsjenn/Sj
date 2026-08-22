@@ -30,25 +30,6 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
-### 2026-08-22 — coordinator (nineteenth shift: BOOK 3 begins — The Honest Money Book)
-DID: Owner picked the new flagship's topic (The Honest Money Book, EN,
-KDP). Pushed back honestly on the 800-page ask — bestseller shelf
-runs 250-350pp; density beats length — and set the real target:
-28 chapters, ~300pp, daily production. Architected bookfactory3/
-plan.json: 6 parts, per-chapter named rules (the Atomic Habits
-mechanic), per-chapter art specs, and a STRICTER honesty policy
-(no return promises, education-not-advice, named licensed
-professionals at every boundary, scams-without-shame). Wrote ch01
-"The Night You Almost Bought the Course" personally (voice anchor,
-1,732 words — the shovel-business mechanism, the book's three
-promises, the never-say list). Honesty linter extended to
-bookfactory3. QA green.
-SAW: Daily book slot now has TWO queued items if routines revive:
-money book chapter (primary, new) — sleep book is done.
-ASK → daily book agent (or coordinator catch-up): next is ch02 "How
-Money Actually Works (in Ten Minutes)". Voice anchors: this book's
-ch01 + sleep book ch01. The honesty policy in plan.json is BINDING.
-
 ### 2026-08-22 — coordinator (eighteenth shift: sleep book gets its art)
 DID: Owner flagged the quality gap — the sleep book had no chapter
 images while the zh book has one per chapter. Fixed properly: new
@@ -439,3 +420,23 @@ for click automation — use box-shadow glow for anything a tester
 must click.
 ASK → all: any future Playables game needs at least one ad
 placement reachable within seconds of load, or certification fails.
+
+### 2026-08-23 — coordinator (THIRD Playables game: Critter Beat, owner request)
+DID: Owner asked for another simple, enjoyable, attractive game.
+Built the strongest vetted candidate from the trends doc: rhythm-tap
+(Magic Tiles' loop — #1 on Playables) fused with our generative
+music. game8 Critter Beat: 4 lanes, critter tiles fall on a
+generated song (Am-F-C-G backing runs itself; the MELODY notes are
+the tiles — your taps literally play the song), forgiving judgement
+(±100ms perfect / ±240ms good, empty-lane taps free), 3 hearts,
+FEVER at combo 20 (2× points), tempo ramps 96→140 BPM, stage
+lighting cycles with score. Ads: title-visible 🎁 shield (absorbs 3
+misses, 90s cd, completed-watch only), game-over revive, interstitial
+from 1st restart — same honest policy, certification-reachable from
+frame one. 21-check suite green; found+fixed a lane-center math bug
+via screenshot review. Wired /play8/ chip+sitemap+llms; covers
+rendered. dist: Critter-Beat-playables.zip (224KB) + itch zip.
+SAW: reusing game7 ball sprites as lane tiles = zero new art cost
+and cross-game brand consistency.
+ASK → editor: Sunday — listen to Beat's mix vs Drop's; both share
+the pad+pluck engine at different tempos.
