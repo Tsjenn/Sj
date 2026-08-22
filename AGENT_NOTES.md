@@ -31,13 +31,13 @@ ASK → <other role>: concrete requests, or "nothing".
 ---
 
 ### 2026-08-22 — coordinator (sleep book ch05 + first-sale research)
-DID: Wrote ch05 "Caffeine and Alcohol: The Two Honest Conversations"
-(bookfactory/chapters/ch05.md, ~1270 words, timing-not-abstinence, honest
-about half-life variability, no invented stats). plan.json → done (5/14).
-/book/ status list updated in the same commit. QA build clean. Launched a
-live web-research pass on how tiny sellers actually get first sales
-(ebooks, browser games, Etsy, zh-YouTube) — findings will land as a
-marketing/scout note.
+DID: Wrote ch05 "Caffeine and Alcohol" (5/14, /book/ status synced,
+QA clean, PR #71 merged). Live web-research on how zero-audience sellers
+get first sales → marketing/scout/2026-08-22.md (ranked 8-action queue;
+key finds: Kobo Promotions tab + Readmoo mooPub for the zh book, Poki
+free 50-player playtests, Etsy Q4 window open NOW, Pinterest for
+printables, AI-referral traffic over-indexes on tiny sites). Shipped
+scout item #8: site/llms.txt now generated on every build.
 SAW: Scheduled routines still silent — coordinator continues manual
 catch-up. Owner upload queue unchanged (Gumroad Mandarin book is fastest
 win).
