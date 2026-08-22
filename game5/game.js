@@ -643,6 +643,7 @@
       el.textContent = "R" + (i + 1) + " " + (s / 1000).toFixed(1);
       sp.appendChild(el);
     });
+    lastRun = { c: c, ms: ms, splits: splits.slice(), medal: medal };
     big("DELIVERED", 1300, "#FFC46B");
     setTimeout(function () { $("results").classList.add("open"); }, 1000);
   }
@@ -758,6 +759,29 @@
   $("free-btn").addEventListener("click", startFree);
   $("r-again").addEventListener("click", function () { $("results").classList.remove("open"); startRun(course); });
   $("r-menu").addEventListener("click", function () { $("menu-btn").click(); });
+  // Wordle-style shareable result: medal, time, and a per-ring pace grid
+  // (each ring's cumulative split vs the course's gold/silver/bronze pace).
+  function shareText(c, ms, sp, medal) {
+    var grid = sp.map(function (s, i) {
+      var frac = (i + 1) / sp.length, t = s / 1000;
+      return t <= c.gold * frac ? "🟩" : t <= c.silver * frac ? "🟨"
+        : t <= c.bronze * frac ? "🟧" : "🟥";
+    }).join("");
+    return "SKYLINE " + c.icon + " " + c.name + "\n" +
+      medal + " " + fmtT(ms / 1000) + " · " + grid + "\n" +
+      "Swing it free → tsjenn.github.io/Sj/skyline/";
+  }
+  var lastRun = null;
+  $("r-share").addEventListener("click", function () {
+    if (!lastRun) return;
+    var txt = shareText(lastRun.c, lastRun.ms, lastRun.splits, lastRun.medal);
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(txt).then(function () {
+        big("COPIED — PASTE ANYWHERE", 1200, "#59E0C8");
+      }).catch(function () {});
+    }
+  });
+
   $("r-code").addEventListener("click", function () {
     var code = myCode();
     if (code && navigator.clipboard) navigator.clipboard.writeText(code).catch(function () {});
@@ -920,6 +944,8 @@
 
   /* ------------------------------------------------------------- DEV API */
   window.DEV = {
+    shareText: shareText,
+    setLastRun: function (r) { lastRun = r; },
     state: function () {
       return { mode: mode, pos: [Math.round(pos.x), Math.round(pos.y), Math.round(pos.z)],
         speed: Math.round(vel.length()), roped: roped, ring: ringIdx,
