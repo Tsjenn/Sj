@@ -75,6 +75,9 @@ def md_to_xhtml(md):
 
 
 CSS = """
+p.art { text-align: center; margin: 1em 0; }
+p.art img { max-width: 100%; }
+
 body { font-family: serif; line-height: 1.6; margin: 1em; }
 h1 { font-size: 1.5em; line-height: 1.25; margin: 1.4em 0 0.8em; }
 h2 { font-size: 1.15em; margin: 1.4em 0 0.4em; }
@@ -196,6 +199,7 @@ def build():
     uid = "urn:uuid:%08x-hsb1-4000-8000-%012x" % (abs(hash(plan["title"])) % 2**32,
                                                   abs(hash(plan["subtitle"])) % 2**48)
     manifest, spine, files = [], [], {}
+    art_files = {}
 
     # title page + about page
     tp = ('<div class="tp"><h1>%s</h1><p class="sub">%s</p><p class="auth">%s</p></div>'
@@ -213,7 +217,17 @@ def build():
     toc_items = []
     for ch, md in chs:
         name = ch["slug"] + ".xhtml"
-        files[name] = XHTML % (esc(ch["title"]), md_to_xhtml(md))
+        body = md_to_xhtml(md)
+        art_src = os.path.join(ROOT, "book", "sleep-art", ch["slug"] + ".png")
+        if os.path.exists(art_src):
+            art_name = "art-" + ch["slug"] + ".png"
+            art_files[art_name] = art_src
+            h1_end = body.find("</h1>")
+            if h1_end != -1:
+                body = (body[:h1_end + 5]
+                        + '<p class="art"><img src="%s" alt="%s — diagram"/></p>'
+                        % (art_name, esc(ch["title"])) + body[h1_end + 5:])
+        files[name] = XHTML % (esc(ch["title"]), body)
         toc_items.append('<li><a href="%s">%s</a></li>' % (name, esc(ch["title"])))
 
     nav = ('<nav epub:type="toc" id="toc"><h1>Contents</h1><ol>'
@@ -242,10 +256,14 @@ def build():
 <item id="css" href="style.css" media-type="text/css"/>
 <item id="cover-img" href="cover.jpg" media-type="image/jpeg" properties="cover-image"/>
 %s
+%s
 </manifest>
 <spine>%s</spine>
 </package>""" % (uid, esc(plan["title"] + ": " + plan["subtitle"]), esc(plan["author"]),
-                 "\n".join(manifest), "".join(spine))
+                 "\n".join(manifest),
+                 "\n".join('<item id="a%d" href="%s" media-type="image/png"/>' % (i, n)
+                           for i, n in enumerate(art_files)),
+                 "".join(spine))
 
     with zipfile.ZipFile(epub_path, "w") as z:
         z.writestr("mimetype", "application/epub+zip", compress_type=zipfile.ZIP_STORED)
@@ -257,6 +275,8 @@ def build():
         z.writestr("OEBPS/package.opf", opf)
         z.writestr("OEBPS/style.css", CSS)
         z.write(cover_path, "OEBPS/cover.jpg")
+        for n, src in art_files.items():
+            z.write(src, "OEBPS/" + n)
         for name, content in files.items():
             z.writestr("OEBPS/" + name, content)
 
