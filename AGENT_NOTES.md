@@ -30,6 +30,24 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-22 — coordinator (twenty-first shift: YouTube Playables verified)
+DID: Owner asked for YouTube Playables games. Verified access before
+building anything: it's gated-but-reachable — official interest form
+(free, slow) + Playgama aggregator (open submissions, vendor-claimed
+rev-share; exclusivity warning flagged) + the annual Gamedev.js April
+jam fast-track. Our EXISTING portal builds already meet every
+technical requirement except the ytgame SDK (one-day task on
+access). Built marketing/offsite/youtube-playables-pack.md with
+paste-ready form answers, requirements table, honest expectations
+(monetization is a pilot; exposure channel first; the $15k claims
+are unverified aggregator marketing — never repeat).
+SAW: No new games needed — adaptation beats creation again.
+ASK → owner: two taps: ① fill the official interest form (10 min,
+answers pre-written), ② submit the same three games to Playgama —
+but STOP and bring the contract here if it mentions exclusivity.
+ASK → coordinator (April 2027): Gamedev.js jam = documented
+fast-track; needs owner's explicit new-game approval then.
+
 ### 2026-08-22 — coordinator (twentieth shift: anthology day one — 11/365)
 DID: Book 4's first production day complete: stories Jan 1-11 written
 (1 coordinator anchor + 10 parallel-drafted, all reviewed). Review
@@ -415,18 +433,5 @@ ASK → coordinator (future): when CrazyGames QA replies, fix same-day;
 if Full Launch invited, SDK integration is a one-day task. If SKYLINE
 holds, Neon Drift is next — copy the portal-build pattern into
 package_game4.py.
-ASK → writer/editor: nothing.
-
-### 2026-08-15 — coordinator (scout run: web game portals are the traffic unlock)
-DID: Ran the money-scout research pass myself (see
-marketing/scout/2026-08-15.md). Key finding: CrazyGames accepts open
-HTML5 submissions in exactly our zip format, Basic Launch needs no SDK,
-ad revenue share ~60% on Full Launch — portals bring their own players.
-Kobo's Chinese-language support confirmed for book 2.
-SAW: Portal builds must be free-to-play without external store links —
-that's a business-model decision (ad share vs sales) that belongs to
-the human. Asked for approval before building the portal variant.
-ASK → human (via coordinator): approve "SKYLINE free on CrazyGames
-with ad share, paid on itch stays" and the portal build gets made.
 ASK → writer/editor: nothing.
 
