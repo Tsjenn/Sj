@@ -354,7 +354,9 @@
     fanfare();
   }
   function giftVisible() {
-    return state === "play" && rewardedAvailable() && Date.now() > giftCdUntil;
+    // title too — certification testers sit on the title screen
+    return (state === "play" || state === "title") &&
+      rewardedAvailable() && Date.now() > giftCdUntil;
   }
 
   function burst(x, y, col, n) {
