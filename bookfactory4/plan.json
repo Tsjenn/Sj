@@ -1,0 +1,36 @@
+{
+ "title": "A Story for Every Night",
+ "subtitle": "365 Goodnight Tales from Wildhaven",
+ "author": "S. J. Tang",
+ "language": "en",
+ "format_note": "Anthology — the one Kindle category where 800+ pages is the honest selling point ('a story for every night of the year'). 365 stories x 380-450 words ≈ 150k words ≈ 800+ pages with per-story art and layout. Reflowable EPUB (text-led with spot images), NOT fixed-layout.",
+ "price_suggestion": "US$7.99 — final price is the owner's decision",
+ "positioning": "The bedtime anthology parents keep on the nightstand all year: tonight's story is always exactly one story long. Gentle, sleep-positive, zero cliffhangers, zero moralizing lectures. Set in the Wildhaven world (the critters from our games and picture books) so the cast compounds.",
+ "honesty_policy": "BINDING: stories never mention products, apps, URLs or the store. Every story ends settled and sleepy — no cliffhangers, no fear beats near the end, no unresolved danger. No moralizing that shames a child (messiness, fear, mistakes are met with warmth). No invented 'ancient legends say' framing presented as real-world fact. Cover and description promise exactly what's inside: 365 original stories, length honesty (short stories, ~2 minutes each).",
+ "story_rules": {
+  "length": "380-450 words each — a 2-3 minute read-aloud",
+  "structure": "tiny problem or wonder -> gentle turn -> settled, sleepy ending in Wildhaven",
+  "cast": "rotate the ten critters (Flufftail, Pebblit, Aquaphin, Emberling, Mossback, Bubbletide, Zephyrix, Cinderpup, Glimmerwing, Nocturnix) plus recurring minor friends; every critter leads roughly 36 stories across the year",
+  "endings": "the last two sentences always wind DOWN: quiet, warm, eyes closing",
+  "language": "read-aloud friendly: rhythm over vocabulary, ages 3-8",
+  "no_repeats": "each story's central object/event must be new that month (tracked in month manifests)"
+ },
+ "months": [
+  {"m": 1, "theme": "Winterlight — lanterns, snow, warm dens", "stories": 31},
+  {"m": 2, "theme": "Friendship small and large", "stories": 28},
+  {"m": 3, "theme": "Waking gardens — first green things", "stories": 31},
+  {"m": 4, "theme": "Rain music — puddles, streams, storms passing", "stories": 30},
+  {"m": 5, "theme": "Meadow days — picnics, kites, bees", "stories": 31},
+  {"m": 6, "theme": "The long light — midsummer evenings", "stories": 30},
+  {"m": 7, "theme": "Water summer — ponds, boats, the shore", "stories": 31},
+  {"m": 8, "theme": "Harvest beginnings — orchards, honey, markets", "stories": 31},
+  {"m": 9, "theme": "Falling leaves — change met gently", "stories": 30},
+  {"m": 10, "theme": "Cozy dark — lamps early, shadows friendly", "stories": 31},
+  {"m": 11, "theme": "Gratitude and gathering", "stories": 30},
+  {"m": 12, "theme": "The quiet festival — year's end, stars, rest", "stories": 31}
+ ],
+ "art": "Spot illustrations from critters2.py sprinkled through (each month opener gets a scene; each story gets the lead critter's portrait at its head — generated, so zero marginal cost). Cover: night-sky Wildhaven with the cast asleep.",
+ "production": "Parallel batches: ~10 stories/day drafted by agents against the voice anchor + month manifest, coordinator reviews every story for the ending rule and no-repeats, then commits. ~5-6 weeks to 365. Stories live in bookfactory4/stories/MM-DD-slug.md. scripts/bookfactory4.py status counts progress; build assembles the EPUB.",
+ "voice_anchor": "stories/01-01-the-first-lantern.md (coordinator-written) — read before drafting any batch.",
+ "status": "architecture complete; production begins with month 1"
+}
