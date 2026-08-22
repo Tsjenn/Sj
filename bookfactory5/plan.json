@@ -1,0 +1,435 @@
+{
+  "title": "MATCHA",
+  "subtitle": "The Whole Story of the Whisked Leaf — History, Craft, Science, and 60+ Recipes",
+  "author": "Tang Shiuan Jenn",
+  "language": "en",
+  "price_note": "price is the human's decision",
+  "target": "comprehensive reference + recipe book; ~140,000 words (~500-600 Kindle pages); reflowable EPUB with an illustration in every chapter",
+  "build_days": {
+    "day1": "architecture, art pipeline, cover, Part I + recipe-format chapters (ch22-23)",
+    "day2": "Part II (craft) + Part III (science, strictest honesty)",
+    "day3": "Part V drinks (41 recipes across ch24-31)",
+    "day4": "Part VI bakes (26 recipes) + Parts IV & VII + full QA + EPUB"
+  },
+  "honesty_policy": [
+    "No invented studies, statistics, or citations. Health chapters state only well-established general knowledge (caffeine content ranges, L-theanine, catechins/EGCG exist in green tea) in plain language, and say plainly what is uncertain.",
+    "No disease-treatment claims, no weight-loss promises, no 'detox'.",
+    "The matcha-vs-coffee chapter is a fair comparison, not a hit piece: it says who might prefer each and why, and admits taste is personal.",
+    "Recipes are written from sound culinary ratios and say 'ovens and brands vary — taste and adjust'. No 'guaranteed' results.",
+    "Commercial chapters describe the boom qualitatively and with widely known public facts; no revenue figures we cannot verify.",
+    "All artwork is original. No photographs unless the author supplies her own."
+  ],
+  "style_rules": [
+    "Warm, clear, unhurried voice — a knowledgeable friend at a tea counter, never a lecture.",
+    "Every chapter opens with a small scene or image in words, then earns its information.",
+    "Recipes: intro paragraph (why this one is worth making), ingredient list with metric + US cups, numbered steps, 'the tricky part' note, one variation.",
+    "Chinese/Japanese terms given with kanji/hanzi on first use (抹茶, 茶筅, 薄茶, 濃茶) then romanized after.",
+    "No products, no URLs, no self-promotion inside the book — it stands alone."
+  ],
+  "art_palette": {
+    "deep": "#3E5A3A",
+    "leaf": "#7BA05B",
+    "light": "#A8C686",
+    "cream": "#F7F3E8",
+    "ink": "#2E3528",
+    "gold": "#C9A84C"
+  },
+  "parts": [
+    {
+      "n": 1,
+      "title": "The Leaf That Became a Ritual",
+      "chapters": [
+        {
+          "id": "ch01",
+          "title": "A Bowl of Green",
+          "brief": "Opening: what matcha actually is (whole leaf, ground, suspended — not steeped), why that one fact explains everything else in this book; how to read this book.",
+          "art": "chawan-hero",
+          "status": "done"
+        },
+        {
+          "id": "ch02",
+          "title": "Powdered Tea Before It Had a Name",
+          "brief": "Tang and Song dynasty China: cake tea, whisked tea culture, the tea competitions of the Song court; how whisked tea faded in China.",
+          "art": "song-whisk",
+          "status": "todo"
+        },
+        {
+          "id": "ch03",
+          "title": "The Monk's Suitcase",
+          "brief": "Zen monks (Eisai) carrying seeds and the whisking habit to Japan; tea as monastery medicine and meditation aid; Uji's beginnings.",
+          "art": "journey-map",
+          "status": "todo"
+        },
+        {
+          "id": "ch04",
+          "title": "Four Hundred Years of One Bowl",
+          "brief": "Chanoyu: Sen no Rikyū, wabi-sabi, what actually happens in a tea ceremony and what it is for; why slowness was the point.",
+          "art": "ceremony-room",
+          "status": "todo"
+        },
+        {
+          "id": "ch05",
+          "title": "From Temple to Timeline",
+          "brief": "How matcha left the tearoom: 20th-century Japan, the ice-cream era, the global cafe boom; what survived the journey and what got lost.",
+          "art": "timeline",
+          "status": "todo"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "title": "From Shade to Stone",
+      "chapters": [
+        {
+          "id": "ch06",
+          "title": "One Plant, Many Teas",
+          "brief": "Camellia sinensis; how green, black, oolong and matcha all come from one leaf; what makes tencha different from everything else.",
+          "art": "leaf-family",
+          "status": "done"
+        },
+        {
+          "id": "ch07",
+          "title": "Three Weeks in the Dark",
+          "brief": "Shading: why covering the plants changes the chemistry (chlorophyll up, catechin bitterness down, umami up); kabuse vs full shade.",
+          "art": "shade-field",
+          "status": "todo"
+        },
+        {
+          "id": "ch08",
+          "title": "The Harvest That Cannot Wait",
+          "brief": "First flush, hand-plucking standards, steaming within hours, drying into tencha; why timing decides grade before grinding begins.",
+          "art": "harvest",
+          "status": "todo"
+        },
+        {
+          "id": "ch09",
+          "title": "Thirty Grams an Hour",
+          "brief": "Granite stone mills: why they are still used, heat and particle size, what machine grinding does differently; the feel of real matcha powder.",
+          "art": "stone-mill",
+          "status": "todo"
+        },
+        {
+          "id": "ch10",
+          "title": "What 'Ceremonial Grade' Really Means",
+          "brief": "The truth about grading: no legal standard exists; how to actually judge quality (color, aroma, origin, price logic) instead of label words.",
+          "art": "grade-chart",
+          "status": "todo"
+        },
+        {
+          "id": "ch11",
+          "title": "Uji, Nishio, and Beyond",
+          "brief": "Terroir: the classic Japanese regions, their styles; new producers (Kagoshima, and honest words about Chinese and other origins).",
+          "art": "region-map",
+          "status": "todo"
+        },
+        {
+          "id": "ch12",
+          "title": "Buying and Keeping the Green",
+          "brief": "A practical buying checklist; storage (air, light, heat, time), why matcha dies faster than coffee, how much to buy at once.",
+          "art": "storage",
+          "status": "todo"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "title": "The Quiet Chemistry",
+      "chapters": [
+        {
+          "id": "ch13",
+          "title": "What Is Actually in the Bowl",
+          "brief": "Because you drink the whole leaf: caffeine, L-theanine, catechins, chlorophyll, fiber, in plain language; suspension vs infusion.",
+          "art": "molecule-bowl",
+          "status": "todo"
+        },
+        {
+          "id": "ch14",
+          "title": "The Calm Caffeine",
+          "brief": "Caffeine ranges honestly compared (cup of coffee vs bowl of matcha); L-theanine and why many people describe steadier focus; what is well-supported vs anecdotal.",
+          "art": "focus-curve",
+          "status": "todo"
+        },
+        {
+          "id": "ch15",
+          "title": "Antioxidants Without the Hype",
+          "brief": "What catechins/EGCG are; what 'antioxidant' actually means; why we refuse to promise disease prevention; how to read matcha health headlines.",
+          "art": "leaf-cells",
+          "status": "todo"
+        },
+        {
+          "id": "ch16",
+          "title": "Matcha or Coffee? An Honest Comparison",
+          "brief": "Fair fight: energy curve, acidity and stomach comfort, ritual and speed, cost, taste learning curve; who is happier with which; both is allowed.",
+          "art": "versus",
+          "status": "todo"
+        },
+        {
+          "id": "ch17",
+          "title": "Who Should Go Gently",
+          "brief": "Honest cautions: caffeine sensitivity, pregnancy guidance to consult professionals, iron absorption timing, quality concerns with cheap powder.",
+          "art": "gentle-care",
+          "status": "todo"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "title": "The Green Gold Rush",
+      "chapters": [
+        {
+          "id": "ch18",
+          "title": "How the Latte Carried the Leaf",
+          "brief": "Why the matcha latte, not the pure bowl, conquered the world: milk softens bitterness, color photographs beautifully, cafes needed a green flagship.",
+          "art": "latte-art",
+          "status": "todo"
+        },
+        {
+          "id": "ch19",
+          "title": "The Business of Green",
+          "brief": "Qualitative industry picture: supply pressure on Japanese farms, the premiumization ladder, cafe economics of a matcha menu, why supply is the story to watch.",
+          "art": "supply-chain",
+          "status": "todo"
+        },
+        {
+          "id": "ch20",
+          "title": "Reading the Label Like an Insider",
+          "brief": "Consumer defense: marketing words vs meaningful facts, price-per-gram logic, when 'culinary grade' is exactly right, red flags.",
+          "art": "label-lens",
+          "status": "todo"
+        },
+        {
+          "id": "ch21",
+          "title": "The Ten-Ringgit Bowl",
+          "brief": "Home economics of matcha: cost per serving vs cafe prices, a starter kit that is actually enough, where spending more stops mattering.",
+          "art": "home-econ",
+          "status": "todo"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "title": "The Drinks",
+      "chapters": [
+        {
+          "id": "ch22",
+          "title": "Tools, Water, and the Whisk",
+          "brief": "Chawan, chasen, chashaku honestly ranked by necessity; sifting; water temperature; the M and W whisking motions; koicha vs usucha.",
+          "art": "tools",
+          "status": "done"
+        },
+        {
+          "id": "ch23",
+          "title": "The Perfect Basic Bowl",
+          "brief": "Usucha step by step with troubleshooting table (bitter? clumpy? flat foam?); koicha for the brave; this chapter is the foundation for all 60+ recipes.",
+          "art": "usucha-steps",
+          "status": "done"
+        },
+        {
+          "id": "ch24",
+          "title": "Hot Lattes",
+          "recipes": [
+            "Classic matcha latte",
+            "Oat-milk silk latte",
+            "Honey cloud latte",
+            "Spiced (ginger-cardamom) latte",
+            "White-chocolate matcha",
+            "Hōjicha-matcha half-and-half"
+          ],
+          "art": "hot-latte",
+          "status": "todo"
+        },
+        {
+          "id": "ch25",
+          "title": "Iced and Cold-Whisked",
+          "recipes": [
+            "Iced shaken matcha",
+            "Iced latte with cold foam",
+            "Coconut iced matcha",
+            "Cold-brew style overnight matcha",
+            "Matcha lemonade",
+            "Yuzu-matcha cooler"
+          ],
+          "art": "iced",
+          "status": "todo"
+        },
+        {
+          "id": "ch26",
+          "title": "Sparkling and Refreshers",
+          "recipes": [
+            "Matcha tonic",
+            "Sparkling yuzu matcha",
+            "Cucumber-mint matcha spritz",
+            "Matcha ginger ale",
+            "Green apple matcha fizz"
+          ],
+          "art": "sparkling",
+          "status": "todo"
+        },
+        {
+          "id": "ch27",
+          "title": "Smoothies and Shakes",
+          "recipes": [
+            "Banana matcha smoothie",
+            "Mango-matcha lassi",
+            "Avocado matcha shake",
+            "Berry matcha smoothie bowl",
+            "Protein matcha shake"
+          ],
+          "art": "smoothie",
+          "status": "todo"
+        },
+        {
+          "id": "ch28",
+          "title": "Dessert Drinks",
+          "recipes": [
+            "Matcha affogato (over vanilla ice cream)",
+            "Matcha hot chocolate",
+            "Matcha milkshake",
+            "Matcha bubble tea at home",
+            "Matcha condensed-milk Vietnamese style"
+          ],
+          "art": "dessert-drink",
+          "status": "todo"
+        },
+        {
+          "id": "ch29",
+          "title": "Seasonal Specials",
+          "recipes": [
+            "Sakura-matcha latte (spring)",
+            "Watermelon matcha cooler (summer)",
+            "Roasted sweet potato matcha (autumn)",
+            "Peppermint matcha (winter)",
+            "Chinese New Year red date matcha"
+          ],
+          "art": "seasons",
+          "status": "todo"
+        },
+        {
+          "id": "ch30",
+          "title": "Evening Bowls (Low and No Caffeine Hours)",
+          "recipes": [
+            "Half-measure evening usucha",
+            "Matcha golden milk (with turmeric)",
+            "Warm matcha oat nightcap",
+            "Barley-tea matcha blend"
+          ],
+          "art": "evening",
+          "status": "todo"
+        },
+        {
+          "id": "ch31",
+          "title": "When It Tastes Wrong",
+          "brief": "Troubleshooting chapter: bitterness causes ranked, clumping, fishy/stale notes, water problems, milk curdling in iced drinks; fix tables.",
+          "art": "troubleshoot",
+          "status": "todo"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "title": "The Bakes",
+      "chapters": [
+        {
+          "id": "ch32",
+          "title": "Baking with a Delicate Powder",
+          "brief": "Why matcha fades in the oven, culinary grade is correct here, sifting into dry mix, color protection, how much per 100g flour.",
+          "art": "baking-basics",
+          "status": "todo"
+        },
+        {
+          "id": "ch33",
+          "title": "Cookies and Small Bakes",
+          "recipes": [
+            "Matcha shortbread",
+            "White-chocolate matcha cookies",
+            "Matcha crinkles",
+            "Matcha madeleines",
+            "Matcha sablés",
+            "Matcha biscotti"
+          ],
+          "art": "cookies",
+          "status": "todo"
+        },
+        {
+          "id": "ch34",
+          "title": "Cakes",
+          "recipes": [
+            "Matcha pound cake",
+            "Matcha chiffon",
+            "Matcha roll cake (Swiss roll)",
+            "Matcha-azuki layer cake",
+            "Matcha basque burnt cheesecake",
+            "Matcha mille-crêpe (no-oven)"
+          ],
+          "art": "cakes",
+          "status": "todo"
+        },
+        {
+          "id": "ch35",
+          "title": "No-Bake and Chilled",
+          "recipes": [
+            "Matcha tiramisu",
+            "No-bake matcha cheesecake",
+            "Matcha panna cotta",
+            "Matcha nama chocolate",
+            "Matcha pudding cups"
+          ],
+          "art": "chilled",
+          "status": "todo"
+        },
+        {
+          "id": "ch36",
+          "title": "Frozen",
+          "recipes": [
+            "Matcha ice cream (no-churn)",
+            "Matcha kakigōri syrup",
+            "Matcha frozen yogurt",
+            "Matcha ice pops"
+          ],
+          "art": "frozen",
+          "status": "todo"
+        },
+        {
+          "id": "ch37",
+          "title": "Breakfast Greens",
+          "recipes": [
+            "Matcha pancakes",
+            "Matcha overnight oats",
+            "Matcha granola",
+            "Matcha french toast",
+            "Matcha chia pudding"
+          ],
+          "art": "breakfast",
+          "status": "todo"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "title": "Living With Matcha",
+      "chapters": [
+        {
+          "id": "ch38",
+          "title": "What to Serve Beside the Bowl",
+          "brief": "Pairing: wagashi logic (sweet before bitter), Malaysian and Western pairings that work, building a small tea moment for guests.",
+          "art": "pairing",
+          "status": "todo"
+        },
+        {
+          "id": "ch39",
+          "title": "A Small Ceremony of Your Own",
+          "brief": "A 15-minute home ritual honoring the tradition without pretending to be a tea master; attention as the ingredient; closing the loop to ch01.",
+          "art": "home-ceremony",
+          "status": "todo"
+        },
+        {
+          "id": "ch40",
+          "title": "Glossary, FAQ, and Where to Go Deeper",
+          "brief": "Terms (with kanji), 25 real questions answered short, further-reading signposts by topic area (kinds of sources, not URLs).",
+          "art": "glossary",
+          "status": "todo"
+        }
+      ]
+    }
+  ]
+}
