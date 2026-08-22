@@ -289,7 +289,7 @@
             "Matcha condensed-milk Vietnamese style"
           ],
           "art": "dessert-drink",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch29",
@@ -302,7 +302,7 @@
             "Chinese New Year red date matcha"
           ],
           "art": "seasons",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch30",
@@ -314,14 +314,14 @@
             "Barley-tea matcha blend"
           ],
           "art": "evening",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch31",
           "title": "When It Tastes Wrong",
           "brief": "Troubleshooting chapter: bitterness causes ranked, clumping, fishy/stale notes, water problems, milk curdling in iced drinks; fix tables.",
           "art": "troubleshoot",
-          "status": "todo"
+          "status": "done"
         }
       ]
     },
@@ -334,7 +334,7 @@
           "title": "Baking with a Delicate Powder",
           "brief": "Why matcha fades in the oven, culinary grade is correct here, sifting into dry mix, color protection, how much per 100g flour.",
           "art": "baking-basics",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch33",
@@ -348,7 +348,7 @@
             "Matcha biscotti"
           ],
           "art": "cookies",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch34",
@@ -420,7 +420,7 @@
           "title": "A Small Ceremony of Your Own",
           "brief": "A 15-minute home ritual honoring the tradition without pretending to be a tea master; attention as the ingredient; closing the loop to ch01.",
           "art": "home-ceremony",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch40",
