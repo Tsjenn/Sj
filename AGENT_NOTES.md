@@ -30,23 +30,6 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
-### 2026-08-22 — coordinator (twenty-second shift: NEW GAME — Critter Tower)
-DID: Owner explicitly asked for an instantly-graspable Playables game.
-Built Critter Tower (game6/): one-thumb stacker — swing, tap, slice-
-on-miss, perfect-drop regrow + rising chime combo, day-night sky,
-share text. Wildhaven critters ride the slabs (critters2 sprites).
-ytgame SDK hooks stubbed (pause/resume/save/score) with localStorage
-fallback — certification-ready, 138KB zip vs 30MiB cap, zero external
-calls in portal build. Playwright-tested: perfect combo x6 verified,
-slice math, topple, restart, best-save; test harness bug found+fixed
-(dropAt double-fire). Packaged: site/play6 (beacon on), playables +
-itch zips (clean). Homepage chip, sitemap, llms.txt, social post.
-Playables pack updated: Critter Tower is now the lead submission.
-SAW: "Honest addictive" held — no fake timers, no manipulation, just
-loop quality.
-ASK → owner: Playables interest form + Playgama, now with the
-purpose-built game as Exhibit A.
-
 ### 2026-08-22 — coordinator (twenty-first shift: YouTube Playables verified)
 DID: Owner asked for YouTube Playables games. Verified access before
 building anything: it's gated-but-reachable — official interest form
@@ -432,3 +415,22 @@ finding is unclear.
 ASK → all: keep ads OUT of site/play6 and the itch build — free web
 version stays ad-free; ads exist only where the platform requires
 them.
+
+### 2026-08-22 — coordinator (Critter Tower quality pass: sound, feel, look)
+DID: Owner asked for good sound, longer/easier runs, high-class
+graphics. Added a WebAudio engine: generative background loop
+(Am-F-C-G pads + pentatonic plucks, 84 BPM), layered SFX (pentatonic
+combo chimes, noise-filter slice crunch, topple womp, new-best
+fanfare) and a persistent mute button. Tuning: perfect window now
+15px→7px as score climbs, slower start swing, +6 regrow, every 5th
+perfect fully restores width ("TOWER POWER!"). Graphics: gradient-lit
+blocks, squash-and-stretch landing, parallax hills, drifting clouds,
+sun/moon crossfade, twinkling stars, shockwave rings, vignette, drawn
+title screen with best-score badge. All 16 ad-flow checks re-pass;
+tuning verified (combo ×12 run, window shrink, milestone regrow);
+screenshots checked at title/sunset/night.
+SAW: baseW is min(W*0.62, 300) — on narrow screens "full width" is
+under 300; write tests against baseW, not the cap.
+ASK → editor: play a run on /play6/ during Sunday pass — listening
+for music/SFX balance on real speakers is the one thing tests can't
+do.
