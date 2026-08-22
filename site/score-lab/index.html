@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Sleep Score Lab — build your own score, watch the truth wobble</title>
+<meta name="description" content="Sleep scores are recipes, not measurements. Mix your own recipe and watch the same night score 60 or 90. An honest interactive demo.">
+<link rel="canonical" href="https://tsjenn.github.io/Sj/score-lab/">
+<meta property="og:title" content="The Sleep Score Lab">
+<meta property="og:description" content="Same night. Your recipe. Watch one identical night score 60 or 90 depending on the weights — because sleep scores are recipes, not measurements.">
+<meta property="og:type" content="website">
+<style>
+:root{--accent:#2A6F6A;--accent-dark:#1E524E;--accent-light:#E4F0EF;--ink:#26282B;
+--grey:#6B7280;--bg:#FAFAF8;--card:#FFFFFF;--border:#E5E7EB;--warn:#B45309}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+color:var(--ink);background:var(--bg);line-height:1.65}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{background:var(--card);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;max-width:1080px;margin:0 auto}
+.logo{font-weight:800;font-size:1.15rem;color:var(--accent);text-decoration:none}
+.nav a.link{color:var(--grey);text-decoration:none;font-size:.95rem}
+h1{font-size:clamp(1.7rem,5vw,2.5rem);line-height:1.2;margin:36px 0 12px}
+.lede{color:var(--grey);font-size:1.08rem;margin-bottom:28px}
+.night{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 22px;margin-bottom:26px}
+.night h2{font-size:1.02rem;margin-bottom:12px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.fact{background:var(--accent-light);border-radius:8px;padding:10px 12px}
+.fact b{display:block;font-size:1.15rem}
+.fact span{font-size:.8rem;color:var(--grey)}
+.tag{display:inline-block;background:#FEF3C7;color:var(--warn);border-radius:6px;padding:2px 8px;font-size:.75rem;font-weight:600;margin-left:8px;vertical-align:middle}
+.scorebox{position:sticky;top:0;z-index:5;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 22px;margin-bottom:22px;display:flex;align-items:center;gap:18px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.bignum{font-size:3.2rem;font-weight:800;min-width:110px;text-align:center;font-variant-numeric:tabular-nums}
+.verdict{font-weight:700}
+.scorebox p{font-size:.88rem;color:var(--grey)}
+.mixer{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 22px;margin-bottom:26px}
+.mixer h2{font-size:1.02rem;margin-bottom:4px}
+.mixer .sub{font-size:.86rem;color:var(--grey);margin-bottom:16px}
+.row{display:grid;grid-template-columns:150px 1fr 52px;gap:12px;align-items:center;margin-bottom:12px}
+.row label{font-size:.92rem}
+.row output{font-size:.88rem;color:var(--grey);text-align:right;font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:var(--accent);height:28px}
+.presets{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 2px}
+.presets button{border:1px solid var(--border);background:var(--bg);border-radius:8px;padding:10px 14px;font-size:.9rem;cursor:pointer;min-height:44px}
+.presets button:hover{border-color:var(--accent)}
+.note{font-size:.85rem;color:var(--grey);margin-top:14px}
+.prose{margin:30px 0}
+.prose h2{font-size:1.3rem;margin:26px 0 10px}
+.prose p{margin-bottom:14px}
+a{color:var(--accent)} a:hover{color:var(--accent-dark)}
+.cta{background:var(--accent);color:#fff;border-radius:12px;padding:24px;margin:34px 0}
+.cta h2{font-size:1.2rem;margin-bottom:8px}
+.cta p{margin-bottom:14px;color:#DCEBEA}
+.cta a{display:inline-block;background:#fff;color:var(--accent-dark);font-weight:700;text-decoration:none;border-radius:8px;padding:12px 20px}
+footer{color:var(--grey);font-size:.85rem;padding:30px 20px 50px;text-align:center}
+</style>
+</head>
+<body>
+<header><div class="nav">
+  <a class="logo" href="../">Clarity Templates</a>
+  <a class="link" href="../guides/what-is-a-good-sleep-score/">Read the full guide →</a>
+</div></header>
+
+<div class="wrap">
+<h1>The Sleep Score Lab</h1>
+<p class="lede">Every sleep app turns your night into one number using a recipe it invented. Tonight, you're the app. Below is <strong>one fixed night of sleep</strong> — it never changes. Mix your own recipe and watch its "score" swing.</p>
+
+<div class="night">
+  <h2>The night (identical for every recipe) <span class="tag">example night — synthetic data</span></h2>
+  <div class="facts">
+    <div class="fact"><b>6h 50m</b><span>total sleep</span></div>
+    <div class="fact"><b>21 min</b><span>to fall asleep</span></div>
+    <div class="fact"><b>3 wakings</b><span>24 min awake</span></div>
+    <div class="fact"><b>89%</b><span>efficiency</span></div>
+    <div class="fact"><b id="deepVal">14%</b><span>"deep sleep" (estimate)</span></div>
+  </div>
+</div>
+
+<div class="scorebox">
+  <div class="bignum" id="score">–</div>
+  <div>
+    <div class="verdict" id="verdict"></div>
+    <p>Same night, every time. Only the recipe moves.</p>
+  </div>
+</div>
+
+<div class="mixer">
+  <h2>Your recipe</h2>
+  <p class="sub">Slide the weights — how much should each ingredient count? (They're normalised to 100%.)</p>
+  <div class="row"><label for="wDur">Sleep duration</label><input type="range" id="wDur" min="0" max="100" value="40"><output id="oDur"></output></div>
+  <div class="row"><label for="wEff">Efficiency</label><input type="range" id="wEff" min="0" max="100" value="25"><output id="oEff"></output></div>
+  <div class="row"><label for="wLat">Fell asleep fast</label><input type="range" id="wLat" min="0" max="100" value="10"><output id="oLat"></output></div>
+  <div class="row"><label for="wWake">Unbroken night</label><input type="range" id="wWake" min="0" max="100" value="10"><output id="oWake"></output></div>
+  <div class="row"><label for="wDeep">"Deep sleep" estimate</label><input type="range" id="wDeep" min="0" max="100" value="15"><output id="oDeep"></output></div>
+
+  <div class="presets">
+    <button id="pA" type="button">Recipe A: duration-first</button>
+    <button id="pB" type="button">Recipe B: stage-obsessed</button>
+    <button id="pC" type="button">Recipe C: efficiency-first</button>
+    <button id="reroll" type="button">Re-measure the night</button>
+  </div>
+  <p class="note" id="rerollNote">"Re-measure" re-estimates only the deep-sleep percentage — because stage estimates from consumer trackers are noisy, the number wobbles between measurements <em>of the same night</em>. Watch what it does to a stage-heavy score.</p>
+  <p class="note">The three preset recipes are invented for this demo. They are not any real company's formula — real formulas are secret, which is rather the point.</p>
+</div>
+
+<div class="prose">
+  <h2>What you just proved</h2>
+  <p>You took one unchanging night and made it score anywhere from around 40 to the mid-90s by moving sliders. No sleep was harmed or improved. That is exactly what happens when the same night is scored by two different apps: different recipe, different number, same you.</p>
+  <p>And the "re-measure" button shows the second problem: some ingredients (stage estimates) are noisy guesses, so a recipe that leans on them produces a score that jumps around even when your sleep doesn't. If your score dropped seven points and you feel fine — this is usually why.</p>
+  <h2>What's actually worth watching</h2>
+  <p>Two of the ingredients need no guessing and no recipe: <strong>total sleep time</strong> and <strong>efficiency</strong>. They come from asleep-versus-awake detection, which consumer trackers genuinely do well. Watch those two lines, compare yourself only to your own recent average, and let the headline number be entertainment. The full reasoning is in our guide: <a href="../guides/what-is-a-good-sleep-score/">What is a good sleep score?</a></p>
+</div>
+
+<div class="cta">
+  <h2>Want a tracker that shows its work?</h2>
+  <p>Rested is our free sleep app. It runs in your browser, keeps everything on your device, and labels honestly what is measured and what is only estimated.</p>
+  <a href="../sleep/">Try Rested free</a>
+</div>
+</div>
+
+<footer>Clarity Templates — honest tools, honestly described. <a href="../">Store</a> · <a href="../guides/">Guides</a></footer>
+
+<script>
+(function(){
+  // The fixed night. Subscores are 0-100, derived once from the facts above.
+  var night = {
+    durH: 6.833,      // 6h50m
+    latMin: 21,
+    wakeMin: 24,
+    eff: 89,
+    deepPct: 14       // the noisy estimate; re-roll perturbs only this
+  };
+  function clamp(x){ return Math.max(0, Math.min(100, x)); }
+  function subscores(n){
+    return {
+      dur:  clamp((n.durH / 8) * 100),                 // 8h = 100
+      eff:  clamp((n.eff - 60) / 35 * 100),            // 60%→0, 95%→100
+      lat:  clamp(100 - (n.latMin - 5) * 3),           // 5min→100, ~38min→0
+      wake: clamp(100 - n.wakeMin * 2.5),              // 0min→100, 40min→0
+      deep: clamp((n.deepPct / 20) * 100)              // 20% of night = 100
+    };
+  }
+  var ids = ["Dur","Eff","Lat","Wake","Deep"];
+  function weights(){
+    var w = {}, sum = 0;
+    ids.forEach(function(k){ w[k] = +document.getElementById("w"+k).value; sum += w[k]; });
+    if (sum === 0) { w.Dur = 1; sum = 1; }
+    ids.forEach(function(k){ w[k] = w[k] / sum; });
+    return w;
+  }
+  function render(){
+    var s = subscores(night), w = weights();
+    var score = Math.round(s.dur*w.Dur + s.eff*w.Eff + s.lat*w.Lat + s.wake*w.Wake + s.deep*w.Deep);
+    document.getElementById("score").textContent = score;
+    document.getElementById("verdict").textContent =
+      score >= 80 ? "“Great sleep!” says this recipe." :
+      score >= 60 ? "“Fair sleep,” shrugs this recipe." :
+                    "“Poor sleep,” scolds this recipe.";
+    var sum = 0; ids.forEach(function(k){ sum += +document.getElementById("w"+k).value; });
+    ids.forEach(function(k){
+      var pct = sum ? Math.round(+document.getElementById("w"+k).value / sum * 100) : 0;
+      document.getElementById("o"+k).textContent = pct + "%";
+    });
+    document.getElementById("deepVal").textContent = night.deepPct + "%";
+  }
+  ids.forEach(function(k){ document.getElementById("w"+k).addEventListener("input", render); });
+  function preset(vals){ ids.forEach(function(k,i){ document.getElementById("w"+k).value = vals[i]; }); render(); }
+  document.getElementById("pA").addEventListener("click", function(){ preset([100,0,0,0,0]); });
+  document.getElementById("pB").addEventListener("click", function(){ preset([0,0,5,5,90]); });
+  document.getElementById("pC").addEventListener("click", function(){ preset([0,90,5,5,0]); });
+  document.getElementById("reroll").addEventListener("click", function(){
+    // stage estimates wobble between measurements of the same night: ±6 points around 14
+    night.deepPct = Math.max(6, Math.min(22, Math.round(8 + Math.random() * 14)));
+    render();
+  });
+  render();
+})();
+</script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "bb7b5b01b49f4b3582c64d33ef35643f"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

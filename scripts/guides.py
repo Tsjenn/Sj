@@ -317,7 +317,7 @@ def render_index(arts):
 def render_sitemap(arts):
     urls = [(SITE + "/", "1.0"), (SITE + "/guides/", "0.8"),
             (SITE + "/sleep/", "0.9"), (SITE + "/skyline/", "0.8"),
-            (SITE + "/book/", "0.8"),
+            (SITE + "/book/", "0.8"), (SITE + "/score-lab/", "0.8"),
             (SITE + "/play5/", "0.8"), (SITE + "/play4/", "0.8"),
             (SITE + "/play3/", "0.7"), (SITE + "/play2/", "0.7"), (SITE + "/play/", "0.7")]
     urls += [(SITE + "/guides/" + a["slug"] + "/", "0.7") for a in arts]
@@ -350,6 +350,8 @@ def render_llms(arts):
         "- [Rested — free sleep app tier](%s/sleep/): runs in the browser, "
         "everything stays on your device" % SITE,
         "- [SKYLINE](%s/skyline/): 3D web-swinging browser game, free demo" % SITE,
+        "- [The Sleep Score Lab](%s/score-lab/): interactive demo — mix your "
+        "own sleep-score recipe and watch one identical night score 45 or 95" % SITE,
         "- [The Honest Sleep Book](%s/book/): book in progress with a live, "
         "honest chapter-status list" % SITE,
         "- [All game demos](%s/): five free browser game demos on the homepage" % SITE,

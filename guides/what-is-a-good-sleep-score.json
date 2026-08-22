@@ -14,7 +14,7 @@
       "h": "A sleep score is a recipe, not a reading",
       "p": [
         "There is no medical definition of a sleep score. Each app takes a handful of things it can detect — how long you slept, how long you took to fall asleep, how often you stirred, estimated stages, sometimes heart rate — weights them however its designers chose, and bakes the result into a single number out of 100. Change the recipe, change the score. The same night can earn a 72 in one app and an 88 in another, and neither is wrong, because neither is a measurement of anything.",
-        "That's the first practical rule: <strong>never compare scores across apps</strong>, and treat any single night's number loosely. The score is a summary of estimates, and some of those estimates — stage breakdowns especially — are educated guesses, as we explained in our guide to <a href=\"../sleep-tracking-apps-accuracy/\">sleep tracker accuracy</a>."
+        "That's the first practical rule: <strong>never compare scores across apps</strong>, and treat any single night's number loosely. The score is a summary of estimates, and some of those estimates — stage breakdowns especially — are educated guesses, as we explained in our guide to <a href=\"../sleep-tracking-apps-accuracy/\">sleep tracker accuracy</a>. Want to feel this in your hands? In our interactive <a href=\"../../score-lab/\">Sleep Score Lab</a> you mix the recipe yourself and watch one identical night score 45 or 95."
       ]
     },
     {
