@@ -1,0 +1,78 @@
+{
+  "slug": "what-is-a-good-sleep-score",
+  "title": "What Is a Good Sleep Score? How to Read Yours Properly",
+  "description": "What sleep scores actually measure, why 82 last night doesn't mean what you think, and the two numbers worth watching instead.",
+  "date": "2026-08-22",
+  "updated": "2026-08-22",
+  "product": "sleep",
+  "intro": [
+    "You woke up feeling fine, and your app says 68. Or you woke up wrecked and it awarded you an 84. Before you let a number set the mood for your morning, it's worth knowing what a sleep score actually is — because it is not a measurement. It is a recipe, and every company keeps its own.",
+    "We build a sleep tracker ourselves, so this is us explaining our own industry's favourite number honestly: where scores come from, why they wobble, and which parts of them deserve your attention."
+  ],
+  "sections": [
+    {
+      "h": "A sleep score is a recipe, not a reading",
+      "p": [
+        "There is no medical definition of a sleep score. Each app takes a handful of things it can detect — how long you slept, how long you took to fall asleep, how often you stirred, estimated stages, sometimes heart rate — weights them however its designers chose, and bakes the result into a single number out of 100. Change the recipe, change the score. The same night can earn a 72 in one app and an 88 in another, and neither is wrong, because neither is a measurement of anything.",
+        "That's the first practical rule: <strong>never compare scores across apps</strong>, and treat any single night's number loosely. The score is a summary of estimates, and some of those estimates — stage breakdowns especially — are educated guesses, as we explained in our guide to <a href=\"../sleep-tracking-apps-accuracy/\">sleep tracker accuracy</a>."
+      ]
+    },
+    {
+      "h": "So what counts as \"good\"?",
+      "p": [
+        "Within one app, used every night, on the same phone or watch, the score does carry signal. Most apps calibrate so that roughly 80 and above means the night looked solid to their recipe, 60–79 means middling, and below 60 means short or badly broken. Those bands are conventions, not clinical thresholds — but as conventions go they are honest enough.",
+        "The trustworthy way to use the number is relative, not absolute: your own average over a couple of weeks, and the direction it drifts. A run of 62s from someone who normally scores 80 says something real changed. A single 62 says almost nothing."
+      ]
+    },
+    {
+      "h": "Why the score moves when your life didn't",
+      "p": [
+        "A score built on noisy inputs inherits the noise. Stage estimates wobble night to night even when you sleep identically; a partner turning over adds \"restlessness\" your body never felt; an evening drink flatters the first half of the night and the score misses the payback. This is a general truth about composite numbers: when the ingredients barely vary or can't be measured well, the total varies for reasons that have nothing to do with you.",
+        "So the seven-point drop from Tuesday to Wednesday is usually measurement noise, not a health event. If you wouldn't act on it, don't mourn it."
+      ]
+    },
+    {
+      "h": "The two numbers worth watching instead",
+      "p": [
+        "Buried under the headline score, most apps report two figures that need no brain-reading and no secret recipe:"
+      ],
+      "list": [
+        "<strong>Total sleep time</strong> — the single most decision-relevant number a tracker produces. If it is consistently under seven hours, no score interpretation is needed; the fix is a schedule, not a setting.",
+        "<strong>Sleep efficiency</strong> — the share of your time in bed spent actually asleep. Consistently above roughly 85% is the sign of a well-matched bedtime; far below it usually means you're in bed longer than your body currently needs, which is fixable."
+      ]
+    },
+    {
+      "h": "Why those two beat the headline number",
+      "p": [
+        "Both come from asleep-versus-awake detection, which is the part consumer trackers genuinely do well — no stage guessing, no secret weighting. If you only glance at two lines on the morning screen, make it those."
+      ]
+    },
+    {
+      "h": "When to ignore the score entirely",
+      "p": [
+        "How you feel by mid-morning — not at the alarm, which is foggy for everyone — outranks any score. Feeling consistently fine on \"bad\" scores means the recipe doesn't fit you; feeling consistently exhausted on \"good\" scores means the tracker is missing something a number can't see, and persistent exhaustion despite adequate hours is a conversation for a doctor, not an app.",
+        "And if checking the score has started to feel like receiving a grade — if a low number makes you anxious about the coming night — stop looking for a few weeks. Sleep responds badly to being watched that closely; researchers have even coined a name, orthosomnia, for sleep made worse by chasing perfect tracker data."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is a sleep score of 75 good?",
+      "a": "In most apps' conventions, 75 is a decent, middling night. But the number only means something against your own average in the same app. Compare you to you, not to a stranger's screenshot."
+    },
+    {
+      "q": "Why is my sleep score different from my partner's app?",
+      "a": "Different companies use different recipes — different inputs, different weights, different calibration. The same night genuinely can score 72 in one app and 88 in another. Neither is the truth; both are summaries."
+    },
+    {
+      "q": "Can I improve my sleep score directly?",
+      "a": "Chasing the score itself leads to odd behaviour, like lying still while awake to look asleep. Improve the inputs instead — a consistent wake time, enough hours, a dark and cool room — and the score follows on its own."
+    }
+  ],
+  "cta": {
+    "title": "A tracker that tells you the truth",
+    "body": "Rested is our free sleep app: it runs in your browser, keeps everything on your device, and reports what it can actually measure — honestly labelled, including what's only an estimate.",
+    "label": "Try Rested free",
+    "href": "sleep/"
+  }
+}
