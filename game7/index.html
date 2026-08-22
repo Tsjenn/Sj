@@ -22,6 +22,12 @@
   #mute { position:fixed; top:max(2vh, env(safe-area-inset-top)); right:12px; z-index:5;
     width:44px; height:44px; border:0; border-radius:50%; font-size:20px; cursor:pointer;
     background:rgba(90,76,92,.16); color:#5A4C5C; }
+  #gift { position:fixed; top:calc(max(2vh, env(safe-area-inset-top)) + 132px); right:12px;
+    z-index:5; display:none; width:52px; height:52px; border:0; border-radius:50%;
+    font-size:24px; cursor:pointer; background:#8B7CF0; color:#fff;
+    animation:glow 1.6s ease-in-out infinite; }
+  @keyframes glow { 0%,100% { box-shadow:0 4px 14px rgba(139,124,240,.35); }
+    50% { box-shadow:0 4px 22px rgba(139,124,240,.85); } }
   #over { position:fixed; inset:0; display:none; align-items:center; justify-content:center;
     background:rgba(58,44,52,.5); }
   #panel { background:#FFF7E8; color:#3A2C34; border-radius:22px; padding:30px 34px; text-align:center;
@@ -42,6 +48,7 @@
 <div class="ui" id="chain"></div>
 <div class="ui" id="hint">Drag to aim · release to drop</div>
 <button id="mute">🔊</button>
+<button id="gift" title="Watch an ad — your next critter becomes a big one">🎁</button>
 <div id="over"><div id="panel">
   <h1>The jar overflowed!</h1>
   <div class="big" id="final">0</div>

@@ -30,21 +30,6 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
-### 2026-08-22 — coordinator (twentieth shift: anthology day one — 11/365)
-DID: Book 4's first production day complete: stories Jan 1-11 written
-(1 coordinator anchor + 10 parallel-drafted, all reviewed). Review
-caught a real consistency bug — Aquaphin was "he" in batch 1 and
-"she" in batch 2 — fixed, and a pronoun canon for all ten critters is
-now LOCKED in plan.json (must be pasted into every future drafting
-prompt). Three length overages trimmed; the status tool's own QA band
-tightened to 370-455 so it actually enforces the rule (eval-your-
-checks: the loose band let 461 pass silently). QA green.
-SAW: 11/365 at ~10/day = complete around early October at one batch a
-day; two batches a day halves that.
-ASK → daily book agent / coordinator: each anthology batch prompt MUST
-include: voice anchor path, month theme, assigned lead+object per
-story, the ending rule, and the pronoun canon verbatim.
-
 ### 2026-08-22 — coordinator (nineteenth shift: BOOK 3 begins — The Honest Money Book)
 DID: Owner picked the new flagship's topic (The Honest Money Book, EN,
 KDP). Pushed back honestly on the 800-page ask — bestseller shelf
@@ -438,3 +423,19 @@ SAW: same-tier test drops self-clean (everything merges) — the jar
 only overflows through mixed-tier rubble, exactly like real play.
 Test the danger mechanic with a small viewport, not a marathon.
 ASK → editor: play /play7/ Sunday — judge merge feel + music volume.
+
+### 2026-08-22 — coordinator (Critter Drop: certification-reachable ads)
+DID: Playgama certification flagged "No advertising is implemented"
+on Critter Drop — both placements were locked behind a game over
+that takes minutes to reach in this game, so their checker never saw
+an ad call. Added a mid-run rewarded GIFT button (🎁, top-right,
+only when SDK reports rewarded support): watch an ad and the NEXT
+critter becomes a big one (tier ≥6). Honest pacing: 90s cooldown,
+granted only on completed watch, early close grants nothing and
+keeps the button available. Interstitial gate moved to first restart
+(still ≥60s). Suite now 24 checks, all green. Gotcha: a CSS pulse
+animation using transform made the button perpetually "not stable"
+for click automation — use box-shadow glow for anything a tester
+must click.
+ASK → all: any future Playables game needs at least one ad
+placement reachable within seconds of load, or certification fails.
