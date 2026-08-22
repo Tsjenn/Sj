@@ -140,35 +140,35 @@
           "title": "What Is Actually in the Bowl",
           "brief": "Because you drink the whole leaf: caffeine, L-theanine, catechins, chlorophyll, fiber, in plain language; suspension vs infusion.",
           "art": "molecule-bowl",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch14",
           "title": "The Calm Caffeine",
           "brief": "Caffeine ranges honestly compared (cup of coffee vs bowl of matcha); L-theanine and why many people describe steadier focus; what is well-supported vs anecdotal.",
           "art": "focus-curve",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch15",
           "title": "Antioxidants Without the Hype",
           "brief": "What catechins/EGCG are; what 'antioxidant' actually means; why we refuse to promise disease prevention; how to read matcha health headlines.",
           "art": "leaf-cells",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch16",
           "title": "Matcha or Coffee? An Honest Comparison",
           "brief": "Fair fight: energy curve, acidity and stomach comfort, ritual and speed, cost, taste learning curve; who is happier with which; both is allowed.",
           "art": "versus",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch17",
           "title": "Who Should Go Gently",
           "brief": "Honest cautions: caffeine sensitivity, pregnancy guidance to consult professionals, iron absorption timing, quality concerns with cheap powder.",
           "art": "gentle-care",
-          "status": "todo"
+          "status": "done"
         }
       ]
     },
