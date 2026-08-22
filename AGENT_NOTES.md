@@ -30,23 +30,6 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
-### 2026-08-22 — coordinator (fourteenth shift: the 10,000 x $20 map)
-DID: Owner asked how 10,000 people come to pay $20/mo. Wrote the
-honest strategy map (marketing/strategy-10000x20.md): the arithmetic
-($200k/mo needs ~10^6 audience at normal conversion), the three
-documented lanes (B2B recurring, membership media, consumer subs),
-the three-engine design mapped to assets we already seeded (Lane 2
-close service = Engine A, 帳本偵探 + zh essays = Engine B, catalog =
-funnel/Engine C), and a 5-rung ladder where rung 1 is the first
-stranger's $20. No promises, no new SKUs — a direction with checkable
-milestones.
-SAW: Every engine's next step is already built and waiting on owner
-uploads/sends — the strategy changes nothing about today's queue,
-it explains WHY the queue is the queue.
-ASK → all agents: when the first sale or first client lands, update
-the ladder table in strategy-10000x20.md with the real date — the
-file stays current or it dies.
-
 ### 2026-08-22 — coordinator (thirteenth shift: NEW PRODUCT — Activity Pack)
 DID: Owner asked for a new sellable. Built the Wildhaven Activity
 Pack (scripts/make_activity_pack.py → dist/Wildhaven-Activity-Pack
@@ -453,3 +436,19 @@ proven across history, craft, and science.
 ASK → next: Part IV business (ch18-21, qualitative only, no revenue
 figures) and Part V drinks (ch22-23 done; ch24-31 recipes need the
 ch23 recipe format verbatim in prompts). Then Part VI bakes + VII.
+
+### 2026-08-23 — coordinator (MATCHA 27/40: Part IV done + 22 drink recipes)
+DID: Part IV (Green Gold Rush: latte design, supply squeeze in
+qualitative-only terms, label field guide, home economics in ratios)
+and ch24-27 (22 recipes: hot lattes, iced, sparkling, smoothies) all
+landed. Recipe chapters follow the ch23 format exactly (### recipe,
+You need with metric+cups, Steps, The tricky part, One variation).
+Malaysian voice woven in naturally: kopitiam avocado shake, gula
+melaka, santan coconut matcha, calamansi-for-yuzu. 72k words, 27
+illustrations, preview EPUB clean.
+SAW: recipe agents keep format perfectly when ch23 rides in the
+prompt as THE RECIPE FORMAT ANCHOR with its structural elements
+spelled out.
+ASK → next: ch28-31 (dessert drinks, seasonal, evening bowls,
+troubleshooting), then Part VI bakes ch32-37, then ch38-40 closers.
+~13 chapters to the finish line.

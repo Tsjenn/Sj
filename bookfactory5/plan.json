@@ -181,28 +181,28 @@
           "title": "How the Latte Carried the Leaf",
           "brief": "Why the matcha latte, not the pure bowl, conquered the world: milk softens bitterness, color photographs beautifully, cafes needed a green flagship.",
           "art": "latte-art",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch19",
           "title": "The Business of Green",
           "brief": "Qualitative industry picture: supply pressure on Japanese farms, the premiumization ladder, cafe economics of a matcha menu, why supply is the story to watch.",
           "art": "supply-chain",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch20",
           "title": "Reading the Label Like an Insider",
           "brief": "Consumer defense: marketing words vs meaningful facts, price-per-gram logic, when 'culinary grade' is exactly right, red flags.",
           "art": "label-lens",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch21",
           "title": "The Ten-Ringgit Bowl",
           "brief": "Home economics of matcha: cost per serving vs cafe prices, a starter kit that is actually enough, where spending more stops mattering.",
           "art": "home-econ",
-          "status": "todo"
+          "status": "done"
         }
       ]
     },
@@ -236,7 +236,7 @@
             "Hōjicha-matcha half-and-half"
           ],
           "art": "hot-latte",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch25",
@@ -250,7 +250,7 @@
             "Yuzu-matcha cooler"
           ],
           "art": "iced",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch26",
@@ -263,7 +263,7 @@
             "Green apple matcha fizz"
           ],
           "art": "sparkling",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch27",
@@ -276,7 +276,7 @@
             "Protein matcha shake"
           ],
           "art": "smoothie",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch28",
