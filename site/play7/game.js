@@ -294,6 +294,7 @@
   // SDK ships only in the Playgama zip; inert everywhere else. Reward is
   // granted ONLY on the SDK's "rewarded" state.
   var reviveUsed = false, adGotReward = false, lastInterstitial = 0, overs = 0;
+  var adPurpose = "revive", giftCdUntil = 0;
   function bridgeAds() {
     var b = window.bridge;
     return (b && b.advertisement) ? b.advertisement : null;
@@ -321,7 +322,10 @@
       if (s === "rewarded") { adGotReward = true; }
       if (s === "closed" || s === "failed") {
         paused = false;
-        if (adGotReward) { adGotReward = false; revive(); }
+        if (adGotReward) {
+          adGotReward = false;
+          if (adPurpose === "gift") { giftGrant(); } else { revive(); }
+        }
       }
     });
     a.on("interstitial_state_changed", function (s) {
@@ -330,15 +334,27 @@
     });
   }
   function maybeInterstitial() {
+    // between runs only, never more than one a minute
     try {
       var a = bridgeAds();
       if (!a || !a.isInterstitialSupported) return;
       var now = Date.now();
-      if (overs >= 2 && now - lastInterstitial > 60000) {
+      if (overs >= 1 && now - lastInterstitial > 60000) {
         lastInterstitial = now;
         a.showInterstitial();
       }
     } catch (e) {}
+  }
+  // mid-run rewarded gift: the NEXT critter becomes a big one.
+  // Optional, 90s cooldown, granted only on a completed watch.
+  function giftGrant() {
+    nextTier = Math.max(nextTier, 6);
+    giftCdUntil = Date.now() + 90000;
+    floats.push({ x: W / 2, y: H * 0.35, txt: "BIG CRITTER INCOMING!", a: 1, s: 1.6 });
+    fanfare();
+  }
+  function giftVisible() {
+    return state === "play" && rewardedAvailable() && Date.now() > giftCdUntil;
   }
 
   function burst(x, y, col, n) {
@@ -417,6 +433,7 @@
       for (var bi = 0; bi < balls.length; bi++) balls[bi].py = balls[bi].y;
       physics(); checkDanger();
     }
+    document.getElementById("gift").style.display = giftVisible() ? "block" : "none";
 
     bg();
     var i;
@@ -518,7 +535,16 @@
   document.getElementById("revive").addEventListener("click", function () {
     click();
     var a = bridgeAds();
-    if (a && rewardedAvailable() && !reviveUsed) { adGotReward = false; a.showRewarded(); }
+    if (a && rewardedAvailable() && !reviveUsed) {
+      adPurpose = "revive"; adGotReward = false; a.showRewarded();
+    }
+  });
+  document.getElementById("gift").addEventListener("click", function () {
+    click();
+    var a = bridgeAds();
+    if (a && giftVisible()) {
+      adPurpose = "gift"; adGotReward = false; a.showRewarded();
+    }
   });
   document.getElementById("share").addEventListener("click", function () {
     click();
@@ -551,7 +577,8 @@
   window.DEV = {
     state: function () { return { state: state, score: score, best: best, balls: balls.length,
       tiers: balls.map(function (b2) { return b2.tier; }), loaded: loaded, paused: paused,
-      reviveUsed: reviveUsed, overs: overs, dangerT: Math.round(dangerT * 100) / 100 }; },
+      reviveUsed: reviveUsed, overs: overs, dangerT: Math.round(dangerT * 100) / 100,
+      nextTier: nextTier, giftReady: giftVisible() }; },
     dropAt: function (x, tier) {
       if (state === "title") { state = "play"; document.getElementById("hint").style.display = "none"; }
       if (tier !== undefined) curTier = tier;
