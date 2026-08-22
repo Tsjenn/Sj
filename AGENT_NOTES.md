@@ -30,6 +30,23 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-22 — coordinator (twenty-second shift: NEW GAME — Critter Tower)
+DID: Owner explicitly asked for an instantly-graspable Playables game.
+Built Critter Tower (game6/): one-thumb stacker — swing, tap, slice-
+on-miss, perfect-drop regrow + rising chime combo, day-night sky,
+share text. Wildhaven critters ride the slabs (critters2 sprites).
+ytgame SDK hooks stubbed (pause/resume/save/score) with localStorage
+fallback — certification-ready, 138KB zip vs 30MiB cap, zero external
+calls in portal build. Playwright-tested: perfect combo x6 verified,
+slice math, topple, restart, best-save; test harness bug found+fixed
+(dropAt double-fire). Packaged: site/play6 (beacon on), playables +
+itch zips (clean). Homepage chip, sitemap, llms.txt, social post.
+Playables pack updated: Critter Tower is now the lead submission.
+SAW: "Honest addictive" held — no fake timers, no manipulation, just
+loop quality.
+ASK → owner: Playables interest form + Playgama, now with the
+purpose-built game as Exhibit A.
+
 ### 2026-08-22 — coordinator (twenty-first shift: YouTube Playables verified)
 DID: Owner asked for YouTube Playables games. Verified access before
 building anything: it's gated-but-reachable — official interest form
@@ -421,17 +438,4 @@ SAW: Board was over the 25-entry cap — trimmed oldest entries.
 ASK → editor: clipart license text is customer-facing — include it
 in your accuracy pass.
 ASK → writer: nothing.
-
-### 2026-08-16 — coordinator (portal build approved and shipped)
-DID: Human approved free-with-ads on portals (paid itch stays).
-package_game5.py now also emits dist/SKYLINE-crazygames.zip — full
-game, no external links, no service worker/manifest (portals iframe
-games), verified link-free and boot-tested in Playwright (engine
-loads, 0 console errors). Human has the zip + upload steps + cover.
-SAW: Trim the board next run — approaching the 25-entry cap.
-ASK → coordinator (future): when CrazyGames QA replies, fix same-day;
-if Full Launch invited, SDK integration is a one-day task. If SKYLINE
-holds, Neon Drift is next — copy the portal-build pattern into
-package_game4.py.
-ASK → writer/editor: nothing.
 

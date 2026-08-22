@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Critter Tower</title>
+<meta name="description" content="Tap to stack the critters. Perfect drops grow the tower — how high can you go?">
+<style>
+  html, body { margin:0; padding:0; height:100%; overflow:hidden; background:#20243A;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-user-select:none; user-select:none; touch-action:manipulation; }
+  #c { display:block; width:100vw; height:100vh; }
+  .ui { position:fixed; left:0; right:0; text-align:center; color:#FFF4E4; pointer-events:none; }
+  #score { top:max(3vh, env(safe-area-inset-top)); font-size:min(13vw,64px); font-weight:800;
+    text-shadow:0 3px 0 rgba(0,0,0,.25); }
+  #combo { top:calc(max(3vh, env(safe-area-inset-top)) + min(14vw,70px)); font-size:min(5vw,22px);
+    font-weight:700; color:#FFC46B; opacity:0; transition:opacity .2s; }
+  #over { position:fixed; inset:0; display:none; align-items:center; justify-content:center;
+    background:rgba(16,18,32,.55); }
+  #panel { background:#FFF4E4; color:#20243A; border-radius:22px; padding:30px 34px; text-align:center;
+    width:min(84vw,340px); }
+  #panel h1 { margin:0 0 4px; font-size:1.6rem; }
+  #panel .big { font-size:3.4rem; font-weight:800; line-height:1.1; }
+  #panel .best { color:#8a8070; font-weight:700; margin-bottom:16px; }
+  #panel button { display:block; width:100%; border:0; border-radius:12px; padding:15px;
+    font-size:1.05rem; font-weight:800; cursor:pointer; margin-top:10px; min-height:48px; }
+  #again { background:#FFC46B; color:#20243A; }
+  #share { background:transparent; color:#20243A; border:2px solid #20243A !important; }
+  #hint { bottom:max(4vh, env(safe-area-inset-bottom)); font-size:min(4.6vw,20px); font-weight:600;
+    opacity:.85; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div class="ui" id="score">0</div>
+<div class="ui" id="combo"></div>
+<div class="ui" id="hint">Tap to drop</div>
+<div id="over"><div id="panel">
+  <h1>Tower toppled!</h1>
+  <div class="big" id="final">0</div>
+  <div class="best" id="best">best 0</div>
+  <button id="again">🏗️ Stack again</button>
+  <button id="share">📋 Share my tower</button>
+</div></div>
+<script src="game.js"></script>
+</body>
+</html>
