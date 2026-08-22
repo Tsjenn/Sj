@@ -4,6 +4,7 @@
 
 ## Guides
 
+- [What Is a Good Sleep Score? How to Read Yours Properly](https://tsjenn.github.io/Sj/guides/what-is-a-good-sleep-score/): What sleep scores actually measure, why 82 last night doesn't mean what you think, and the two numbers worth watching instead.
 - [Rain, Brown Noise or Silence? The Best Sounds for Sleep](https://tsjenn.github.io/Sj/guides/best-sounds-for-sleep/): What sleep sounds actually do, the honest differences between white, pink and brown noise, and when silence beats all of them.
 - [Free Browser Games With No Download: What's Actually Worth Playing](https://tsjenn.github.io/Sj/guides/free-browser-games-no-download/): How to find browser games that are genuinely good, the red flags to avoid, and the game types that work brilliantly with no download at all.
 - [Can a Phone App Really Track Your Deep Sleep? An Honest Answer](https://tsjenn.github.io/Sj/guides/sleep-tracking-apps-accuracy/): What phone sleep trackers can genuinely measure, what they only estimate, and how to use one without being misled by its numbers.
