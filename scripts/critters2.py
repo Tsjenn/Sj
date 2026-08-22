@@ -66,6 +66,7 @@ OW = 1.6   # outline weight in units
 def face(c, cx, cy, w, mood="smile", eyes_closed=False, eye_dx=0.0,
          iris=(66, 48, 54), fang=True, blush=(250, 150, 150, 90)):
     """The family face: huge low-set glossy eyes, tiny grin, one fang."""
+    eyes_closed = eyes_closed or FORCE_CLOSED
     ew = w * 0.30                 # eye width relative to face width
     eh = ew * 1.18
     ey = cy + w * 0.05            # low on the face (neoteny)
@@ -128,9 +129,17 @@ def shaded_ball(c, cx, cy, r, col, squash=1.0):
         _light(col, 0.28))
 
 
-def render(species, px=900):
-    c = Ctx(px)
-    DRAW[species](c)
+FORCE_CLOSED = False
+
+
+def render(species, px=900, eyes_closed=False):
+    global FORCE_CLOSED
+    FORCE_CLOSED = eyes_closed
+    try:
+        c = Ctx(px)
+        DRAW[species](c)
+    finally:
+        FORCE_CLOSED = False
     return c.out(px)
 
 
