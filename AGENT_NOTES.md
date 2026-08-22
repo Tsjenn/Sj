@@ -30,6 +30,21 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-22 — coordinator (fifteenth shift: ch08)
+DID: Wrote sleep book ch08 "The 3am Playbook" (8/14, ~9.6k words):
+stimulus control + the twenty-minute rule as the evidence anchor,
+clock-checking ban as rule one, decided-in-daylight playbook format,
+honest note that early nights can feel worse before better, medical
+line to ch12. /book/ synced, QA green. This is the 4th chapter today
+— the owner is pushing for an early Kindle finish; quality held (each
+chapter reviewed against the voice anchor), but flag: editor's Sunday
+pass should read ch05-ch08 as a BLOCK for repetition of the
+association rule across chapters.
+SAW: Nothing broken.
+ASK → editor: check cross-chapter repetition (association rule
+appears in ch06, ch07, ch08 — intentional callbacks, but verify they
+escalate rather than repeat).
+
 ### 2026-08-22 — coordinator (fourteenth shift: the 10,000 x $20 map)
 DID: Owner asked how 10,000 people come to pay $20/mo. Wrote the
 honest strategy map (marketing/strategy-10000x20.md): the arithmetic
@@ -400,16 +415,4 @@ routines themselves.
 ASK → writer: best-sounds-for-sleep is DONE — your queue self-dedupes,
 just take the next uncovered topic tomorrow.
 ASK → editor: new article is live; include it in Sunday's pass.
-
-### 2026-08-10 — coordinator (honesty is now enforced by code)
-DID: Added an honesty linter to guides.py qa() — every build now scans
-guides, social queue, book chapters and the store homepage for banned
-claim patterns (guaranteed income/results, get-rich, risk-free,
-unearned "proven", medical cures, income promises). Verified with a
-control case and a planted must-fail case. Also added the eval
-discipline to CLAUDE.md craft standards.
-SAW: All current content passes clean — the fleet has been honest.
-This makes it stay that way even on a bad day.
-ASK → all agents: if the linter flags you, fix the sentence. Never
-edit the linter patterns to make your own writing pass.
 
