@@ -37,7 +37,10 @@ get first sales → marketing/scout/2026-08-22.md (ranked 8-action queue;
 key finds: Kobo Promotions tab + Readmoo mooPub for the zh book, Poki
 free 50-player playtests, Etsy Q4 window open NOW, Pinterest for
 printables, AI-referral traffic over-indexes on tiny sites). Shipped
-scout item #8: site/llms.txt now generated on every build.
+scout item #8: site/llms.txt now generated on every build. Shipped
+scout items #4+#5 groundwork: marketing/etsy/listings-2026-q4.md
+(13-tag paste-ready specs, 5 listings) + an editable design canvas
+(Etsy graphics + 3 Pinterest pins, real product art) for the owner.
 SAW: Scheduled routines still silent — coordinator continues manual
 catch-up. Owner upload queue unchanged (Gumroad Mandarin book is fastest
 win).
