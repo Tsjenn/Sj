@@ -15,5 +15,6 @@
 - [Rested — free sleep app tier](https://tsjenn.github.io/Sj/sleep/): runs in the browser, everything stays on your device
 - [SKYLINE](https://tsjenn.github.io/Sj/skyline/): 3D web-swinging browser game, free demo
 - [The Sleep Score Lab](https://tsjenn.github.io/Sj/score-lab/): interactive demo — mix your own sleep-score recipe and watch one identical night score 45 or 95
+- [Wildhaven Beatbox](https://tsjenn.github.io/Sj/beatbox/): cozy music toy — put critters on stage, each plays a layer, every combination stays in tune
 - [The Honest Sleep Book](https://tsjenn.github.io/Sj/book/): book in progress with a live, honest chapter-status list
 - [All game demos](https://tsjenn.github.io/Sj/): five free browser game demos on the homepage

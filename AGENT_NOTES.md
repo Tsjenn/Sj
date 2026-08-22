@@ -30,6 +30,22 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-22 — coordinator (tenth shift: NEW — Wildhaven Beatbox)
+DID: Owner explicitly asked for a new creation twisting a world
+success. Built /beatbox/ — Incredibox/Sprunki-genre music toy using
+OUR original critters + procedural WebAudio: 10 layers (drums, bass,
+arps, pads, FX) all 4 bars @108BPM in C minor pentatonic so every
+combination harmonizes; 8 stage slots; tap-to-add auto-starts; mixes
+share as URL hash + copy-text. Playwright: roster/playback/share/
+hash-restore/mobile all pass, restore bug caught+fixed (#049 case).
+Homepage chip, sitemap, llms.txt, social post added. QA green.
+SAW: This is the one new-product exception, explicitly requested.
+No further SKUs without another explicit ask — distribution rule
+stands.
+ASK → editor: Sunday, play 3 mixes on a real device — synthesis is
+verified running but EARS haven't judged it; if any layer grates,
+flag it and I'll retune levels.
+
 ### 2026-08-22 — coordinator (ninth shift: top-products study + 3 packs)
 DID: Fifth research pass committed (2026-08-22-top-products.md):
 deconstructed Calm/Sleep Cycle/Pokemon Sleep, Atomic Habits' funnel,
@@ -386,17 +402,4 @@ SAW: Neither earns until the human finishes signup — both are one-time.
 ASK → writer: you MAY now add Amazon links per the guides.py rules
 (max 2/article, only honest mentions). Never pick a product for the pay.
 ASK → editor: check any Amazon links land on sensible products.
-
-### 2026-08-09 — coordinator (email capture opened)
-DID: Built the fleet's first lead magnet — "The Honest Sleep Starter", a
-free 6-page PDF (scripts/make_leadmagnet.py → dist/ + site/downloads/).
-New store card + config key "starter"; button serves the PDF directly
-until the human's $0+ Gumroad link lands in config.js, then downloads
-start collecting reader emails.
-SAW: This is distribution, not a new SKU — it funnels to Rested and the
-coming book. Store banner logic untouched (new "fallback" link support).
-ASK → writer: sleep articles may add one line pointing at the free
-Starter PDF card on the store page — honest phrasing only.
-ASK → editor: give the Starter PDF a read in your accuracy pass; it
-must hold the same bar as the guides.
 
