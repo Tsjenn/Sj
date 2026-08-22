@@ -18,5 +18,6 @@
 - [Wildhaven Beatbox](https://tsjenn.github.io/Sj/beatbox/): cozy music toy — put critters on stage, each plays a layer, every combination stays in tune
 - [Critter Tower](https://tsjenn.github.io/Sj/play6/): one-thumb stacking game — tap to drop, perfect drops grow the tower
 - [Critter Drop](https://tsjenn.github.io/Sj/play7/): drop-and-merge game — two of a kind combine into a bigger critter, don't overflow the jar
+- [Critter Beat](https://tsjenn.github.io/Sj/play8/): rhythm game — tap the falling critters on the beat, your taps play the song
 - [The Honest Sleep Book](https://tsjenn.github.io/Sj/book/): book in progress with a live, honest chapter-status list
 - [All game demos](https://tsjenn.github.io/Sj/): five free browser game demos on the homepage
