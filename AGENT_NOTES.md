@@ -30,6 +30,132 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-23 — coordinator (THIRD Playables game: Critter Beat, owner request)
+DID: Owner asked for another simple, enjoyable, attractive game.
+Built the strongest vetted candidate from the trends doc: rhythm-tap
+(Magic Tiles' loop — #1 on Playables) fused with our generative
+music. game8 Critter Beat: 4 lanes, critter tiles fall on a
+generated song (Am-F-C-G backing runs itself; the MELODY notes are
+the tiles — your taps literally play the song), forgiving judgement
+(±100ms perfect / ±240ms good, empty-lane taps free), 3 hearts,
+FEVER at combo 20 (2× points), tempo ramps 96→140 BPM, stage
+lighting cycles with score. Ads: title-visible 🎁 shield (absorbs 3
+misses, 90s cd, completed-watch only), game-over revive, interstitial
+from 1st restart — same honest policy, certification-reachable from
+frame one. 21-check suite green; found+fixed a lane-center math bug
+via screenshot review. Wired /play8/ chip+sitemap+llms; covers
+rendered. dist: Critter-Beat-playables.zip (224KB) + itch zip.
+SAW: reusing game7 ball sprites as lane tiles = zero new art cost
+and cross-game brand consistency.
+ASK → editor: Sunday — listen to Beat's mix vs Drop's; both share
+the pad+pluck engine at different tempos.
+
+### 2026-08-23 — coordinator (clip factory + 30-day TikTok calendar)
+DID: Owner asked for distribution help ("do more"). Built the clip
+factory: scripts/make_clips.mjs records scripted good-player runs of
+all three games headlessly (720x1280 vertical), scripts/clip_music.py
+re-synthesizes each game's actual generative soundtrack offline
+(same chord/melody tables, numpy), ffmpeg muxes video+music+burned
+caption → dist/clips/{tower,drop,beat}.mp4 (~1MB, 25s each). Three
+clips produced and delivered. marketing/tiktok/calendar-30d.md: 7-day
+rotation ×4 (games/book-中文/character/build-in-public), caption
+bank, honest-content rules (no earnings claims, own music only, no
+bought followers), weekly measurement guide. node_modules symlink to
+scratchpad + gitignored for playwright resolution.
+SAW: WebAudio isn't captured in headless recording — offline synth
+of the same note tables is the workaround, and it's byte-honest:
+same music the player hears.
+ASK → any agent: regenerate clips (node scripts/make_clips.mjs) when
+a game changes visually; owner posts manually — no auto-posting
+exists on TikTok/IG free tiers, don't chase it.
+
+### 2026-08-23 — coordinator (MATCHA book day 1 complete: 8/40 chapters)
+DID: Owner commissioned a comprehensive matcha book (~600 Kindle
+pages, illustrated, author Tang Shiuan Jenn, 4-day build). Day 1
+done: bookfactory5/ architecture (7 parts, 40 chapters, 63 recipes,
+binding honesty policy — no invented studies/figures, no disease
+claims, fair coffee comparison, all art original since we cannot
+source licensed photographs); scripts/matcha_art.py (40 parametric
+chapter illustrations + KDP cover 1600x2560); scripts/bookfactory5.py
+(EPUB with parts, tables, embedded art); marketing/kdp-matcha.md
+listing pack. Chapters: ch01/ch22/ch23/ch06 coordinator-written
+(voice + recipe-format anchors), ch02-05 parallel-agent drafted with
+the anchor+policy riding in every prompt, reviewed line-by-line
+(legend-vs-record handling in ch03/ch04 is exemplary — keep that
+standard). 16.5k words, preview EPUB builds clean.
+SAW: agent drafts came back publish-grade because the prompts
+carried ch01 verbatim as voice anchor AND named specific honesty
+traps (Eisai seeds, Rikyū death, ichigo ichie attribution).
+Name the traps in every history/science prompt.
+ASK → day 2 (any agent or coordinator): Part II ch07-12 + Part III
+ch13-17 per plan.json briefs; science chapters use the STRICTEST
+honesty language; run bookfactory5.py status for the next brief.
+
+### 2026-08-23 — coordinator (MATCHA Part II complete: 14/40, 34.8k words)
+DID: Day 2 ran same-day. Part II (From Shade to Stone) drafted in
+parallel and landed: ch07 shading (honzu vs cloth fair, all figures
+as ranges), ch08 harvest (hand vs machine honest, oxidation clock,
+tencha furnace), ch09 stone mills (machine grinding defended where
+it belongs), ch10 grading truth (no legal definition; six tests that
+can't be marketed to), ch11 regions (Uji labeling convention
+presented fairly as tradition-marker not scandal; process-not-
+passport for world origins), ch12 buying/storage (four enemies,
+honest 4-8 week open-tin window, fridge condensation rule). Preview
+EPUB 14/40, 34.8k words, all art embedded.
+SAW: chapter-specific honesty traps in prompts keep producing
+publish-grade drafts; the extraction-by-title JSONL walker is the
+reliable way to land agent chapters.
+ASK → next shift: Part III science (ch13-17) needs the STRICTEST
+language — no study citations, ranges only, cautions chapter (ch17)
+must recommend consulting professionals. Then Part IV. Recipes
+(Parts V-VI) after.
+
+### 2026-08-23 — coordinator (MATCHA Parts I-III done: 19/40, 48k words)
+DID: Part III (The Quiet Chemistry) landed same-shift: ch13 inventory
+(ten-cups meme dismantled with per-gram vs per-serving arithmetic),
+ch14 caffeine (ranges with hedging, theanine as
+promising-plausible-uncertain, slow-release theory labeled unproven,
+half-life timing advice), ch15 antioxidants (the five-question
+headline tool; drink-it-because-delicious position), ch16
+matcha-vs-coffee (coordinator-written; fair fight, no winner,
+both-is-allowed), ch17 cautions (pregnancy → doctor/midwife, iron
+timing, children flavor-first, pharmacist for meds). 19/40, 48k
+words, preview EPUB clean.
+SAW: the science chapters came back with the strictest language
+because prompts demanded ranges + named the exact claims to refuse
+(detox, ten-cups, slow-release-as-fact). This prompt pattern is now
+proven across history, craft, and science.
+ASK → next: Part IV business (ch18-21, qualitative only, no revenue
+figures) and Part V drinks (ch22-23 done; ch24-31 recipes need the
+ch23 recipe format verbatim in prompts). Then Part VI bakes + VII.
+
+### 2026-08-23 — coordinator (MATCHA 27/40: Part IV done + 22 drink recipes)
+DID: Part IV (Green Gold Rush: latte design, supply squeeze in
+qualitative-only terms, label field guide, home economics in ratios)
+and ch24-27 (22 recipes: hot lattes, iced, sparkling, smoothies) all
+landed. Recipe chapters follow the ch23 format exactly (### recipe,
+You need with metric+cups, Steps, The tricky part, One variation).
+Malaysian voice woven in naturally: kopitiam avocado shake, gula
+melaka, santan coconut matcha, calamansi-for-yuzu. 72k words, 27
+illustrations, preview EPUB clean.
+SAW: recipe agents keep format perfectly when ch23 rides in the
+prompt as THE RECIPE FORMAT ANCHOR with its structural elements
+spelled out.
+ASK → next: ch28-31 (dessert drinks, seasonal, evening bowls,
+troubleshooting), then Part VI bakes ch32-37, then ch38-40 closers.
+~13 chapters to the finish line.
+### 2026-08-22 — coordinator
+DID: MATCHA book COMPLETE, 40/40 chapters — dist/Matcha.epub (~112k words,
+40 illustrations) + dist/Matcha-cover.jpg, built day 1 of the 4-day
+commission. Landed ch28-40 today (13 chapters): all drink/bake recipes,
+pairing, home ritual, glossary+25-question FAQ. Every draft cross-checked
+against earlier chapters; fixed wrong citations, a currency slip, an
+inflated count, softened caffeine phrasing, removed owner's city from
+ch38. KDP pack ready at marketing/kdp-matcha.md.
+SAW: nothing broken; QA green throughout.
+ASK → all roles: book chapters never mention products/URLs — keep it that
+way if editing bookfactory5/.
+
 ### 2026-08-22 — coordinator (thirteenth shift: NEW PRODUCT — Activity Pack)
 DID: Owner asked for a new sellable. Built the Wildhaven Activity
 Pack (scripts/make_activity_pack.py → dist/Wildhaven-Activity-Pack
@@ -321,134 +447,3 @@ SAW: same-tier test drops self-clean (everything merges) — the jar
 only overflows through mixed-tier rubble, exactly like real play.
 Test the danger mechanic with a small viewport, not a marathon.
 ASK → editor: play /play7/ Sunday — judge merge feel + music volume.
-
-### 2026-08-22 — coordinator (Critter Drop: certification-reachable ads)
-DID: Playgama certification flagged "No advertising is implemented"
-on Critter Drop — both placements were locked behind a game over
-that takes minutes to reach in this game, so their checker never saw
-an ad call. Added a mid-run rewarded GIFT button (🎁, top-right,
-only when SDK reports rewarded support): watch an ad and the NEXT
-critter becomes a big one (tier ≥6). Honest pacing: 90s cooldown,
-granted only on completed watch, early close grants nothing and
-keeps the button available. Interstitial gate moved to first restart
-(still ≥60s). Suite now 24 checks, all green. Gotcha: a CSS pulse
-animation using transform made the button perpetually "not stable"
-for click automation — use box-shadow glow for anything a tester
-must click.
-ASK → all: any future Playables game needs at least one ad
-placement reachable within seconds of load, or certification fails.
-
-### 2026-08-23 — coordinator (THIRD Playables game: Critter Beat, owner request)
-DID: Owner asked for another simple, enjoyable, attractive game.
-Built the strongest vetted candidate from the trends doc: rhythm-tap
-(Magic Tiles' loop — #1 on Playables) fused with our generative
-music. game8 Critter Beat: 4 lanes, critter tiles fall on a
-generated song (Am-F-C-G backing runs itself; the MELODY notes are
-the tiles — your taps literally play the song), forgiving judgement
-(±100ms perfect / ±240ms good, empty-lane taps free), 3 hearts,
-FEVER at combo 20 (2× points), tempo ramps 96→140 BPM, stage
-lighting cycles with score. Ads: title-visible 🎁 shield (absorbs 3
-misses, 90s cd, completed-watch only), game-over revive, interstitial
-from 1st restart — same honest policy, certification-reachable from
-frame one. 21-check suite green; found+fixed a lane-center math bug
-via screenshot review. Wired /play8/ chip+sitemap+llms; covers
-rendered. dist: Critter-Beat-playables.zip (224KB) + itch zip.
-SAW: reusing game7 ball sprites as lane tiles = zero new art cost
-and cross-game brand consistency.
-ASK → editor: Sunday — listen to Beat's mix vs Drop's; both share
-the pad+pluck engine at different tempos.
-
-### 2026-08-23 — coordinator (clip factory + 30-day TikTok calendar)
-DID: Owner asked for distribution help ("do more"). Built the clip
-factory: scripts/make_clips.mjs records scripted good-player runs of
-all three games headlessly (720x1280 vertical), scripts/clip_music.py
-re-synthesizes each game's actual generative soundtrack offline
-(same chord/melody tables, numpy), ffmpeg muxes video+music+burned
-caption → dist/clips/{tower,drop,beat}.mp4 (~1MB, 25s each). Three
-clips produced and delivered. marketing/tiktok/calendar-30d.md: 7-day
-rotation ×4 (games/book-中文/character/build-in-public), caption
-bank, honest-content rules (no earnings claims, own music only, no
-bought followers), weekly measurement guide. node_modules symlink to
-scratchpad + gitignored for playwright resolution.
-SAW: WebAudio isn't captured in headless recording — offline synth
-of the same note tables is the workaround, and it's byte-honest:
-same music the player hears.
-ASK → any agent: regenerate clips (node scripts/make_clips.mjs) when
-a game changes visually; owner posts manually — no auto-posting
-exists on TikTok/IG free tiers, don't chase it.
-
-### 2026-08-23 — coordinator (MATCHA book day 1 complete: 8/40 chapters)
-DID: Owner commissioned a comprehensive matcha book (~600 Kindle
-pages, illustrated, author Tang Shiuan Jenn, 4-day build). Day 1
-done: bookfactory5/ architecture (7 parts, 40 chapters, 63 recipes,
-binding honesty policy — no invented studies/figures, no disease
-claims, fair coffee comparison, all art original since we cannot
-source licensed photographs); scripts/matcha_art.py (40 parametric
-chapter illustrations + KDP cover 1600x2560); scripts/bookfactory5.py
-(EPUB with parts, tables, embedded art); marketing/kdp-matcha.md
-listing pack. Chapters: ch01/ch22/ch23/ch06 coordinator-written
-(voice + recipe-format anchors), ch02-05 parallel-agent drafted with
-the anchor+policy riding in every prompt, reviewed line-by-line
-(legend-vs-record handling in ch03/ch04 is exemplary — keep that
-standard). 16.5k words, preview EPUB builds clean.
-SAW: agent drafts came back publish-grade because the prompts
-carried ch01 verbatim as voice anchor AND named specific honesty
-traps (Eisai seeds, Rikyū death, ichigo ichie attribution).
-Name the traps in every history/science prompt.
-ASK → day 2 (any agent or coordinator): Part II ch07-12 + Part III
-ch13-17 per plan.json briefs; science chapters use the STRICTEST
-honesty language; run bookfactory5.py status for the next brief.
-
-### 2026-08-23 — coordinator (MATCHA Part II complete: 14/40, 34.8k words)
-DID: Day 2 ran same-day. Part II (From Shade to Stone) drafted in
-parallel and landed: ch07 shading (honzu vs cloth fair, all figures
-as ranges), ch08 harvest (hand vs machine honest, oxidation clock,
-tencha furnace), ch09 stone mills (machine grinding defended where
-it belongs), ch10 grading truth (no legal definition; six tests that
-can't be marketed to), ch11 regions (Uji labeling convention
-presented fairly as tradition-marker not scandal; process-not-
-passport for world origins), ch12 buying/storage (four enemies,
-honest 4-8 week open-tin window, fridge condensation rule). Preview
-EPUB 14/40, 34.8k words, all art embedded.
-SAW: chapter-specific honesty traps in prompts keep producing
-publish-grade drafts; the extraction-by-title JSONL walker is the
-reliable way to land agent chapters.
-ASK → next shift: Part III science (ch13-17) needs the STRICTEST
-language — no study citations, ranges only, cautions chapter (ch17)
-must recommend consulting professionals. Then Part IV. Recipes
-(Parts V-VI) after.
-
-### 2026-08-23 — coordinator (MATCHA Parts I-III done: 19/40, 48k words)
-DID: Part III (The Quiet Chemistry) landed same-shift: ch13 inventory
-(ten-cups meme dismantled with per-gram vs per-serving arithmetic),
-ch14 caffeine (ranges with hedging, theanine as
-promising-plausible-uncertain, slow-release theory labeled unproven,
-half-life timing advice), ch15 antioxidants (the five-question
-headline tool; drink-it-because-delicious position), ch16
-matcha-vs-coffee (coordinator-written; fair fight, no winner,
-both-is-allowed), ch17 cautions (pregnancy → doctor/midwife, iron
-timing, children flavor-first, pharmacist for meds). 19/40, 48k
-words, preview EPUB clean.
-SAW: the science chapters came back with the strictest language
-because prompts demanded ranges + named the exact claims to refuse
-(detox, ten-cups, slow-release-as-fact). This prompt pattern is now
-proven across history, craft, and science.
-ASK → next: Part IV business (ch18-21, qualitative only, no revenue
-figures) and Part V drinks (ch22-23 done; ch24-31 recipes need the
-ch23 recipe format verbatim in prompts). Then Part VI bakes + VII.
-
-### 2026-08-23 — coordinator (MATCHA 27/40: Part IV done + 22 drink recipes)
-DID: Part IV (Green Gold Rush: latte design, supply squeeze in
-qualitative-only terms, label field guide, home economics in ratios)
-and ch24-27 (22 recipes: hot lattes, iced, sparkling, smoothies) all
-landed. Recipe chapters follow the ch23 format exactly (### recipe,
-You need with metric+cups, Steps, The tricky part, One variation).
-Malaysian voice woven in naturally: kopitiam avocado shake, gula
-melaka, santan coconut matcha, calamansi-for-yuzu. 72k words, 27
-illustrations, preview EPUB clean.
-SAW: recipe agents keep format perfectly when ch23 rides in the
-prompt as THE RECIPE FORMAT ANCHOR with its structural elements
-spelled out.
-ASK → next: ch28-31 (dessert drinks, seasonal, evening bowls,
-troubleshooting), then Part VI bakes ch32-37, then ch38-40 closers.
-~13 chapters to the finish line.
