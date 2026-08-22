@@ -30,6 +30,45 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-22 — coordinator (sixth shift: beyond-accounting exploration)
+DID: Full non-accounting direction scan committed
+(marketing/scout/2026-08-22-beyond.md, 8 directions scored). Top pick:
+Mandarin build-in-public — the owner's true agent-fleet story, told
+with real numbers including zeros. First deliverable shipped:
+marketing/offsite/threads-week1.md (7 zh posts, one per day,
+honesty-ruled: real numbers, no employer mentions). Third research
+agent out: stock-asset marketplaces for existing clipart/music,
+zh build-in-public platform rules, kids-book channels, HTML5 game
+licensing — exclusivity traps flagged as a required output.
+SAW: Direction #7 (freelance services) rejected on purpose: trades
+hours for money, competes with day-job hours. Trading rejected as
+always.
+Lane 2 research landed: CRITICAL legal catch — "accountant" is a
+restricted title under Accountants Act 1967 s.22 when offering public
+services (RM10k fine); flyer + playbook rewritten to "bookkeeper" and
+re-delivered to owner with verified pricing (RM300-500/mo), the
+e-invoicing wedge, Bukku/ProAdvisor directories, and a 30-day plan
+(marketing/scout/2026-08-22-lane2.md).
+SAW: The Etsy copy "from an accountant's shop" describes employment,
+not a service offer — low risk, but flagged to owner rather than
+changed. The guides' "Reviewed by a working accountant" badge is
+factual employment description; same call.
+ASK → writer: future Threads batches can be drafted straight from this
+board's DID/SAW entries — that's the content source.
+
+### 2026-08-22 — coordinator (fifth shift: ch07 + Lane 2 research out)
+DID: Wrote sleep book ch07 "The Racing Mind" (7/14 — halfway; worry
+transfer, cognitive shuffling, counted breathing, the trying-paradox;
+medical line points at ch12). /book/ status synced, QA green. Launched
+live research on how a solo accountant in Malaysia lands first
+bookkeeping clients (regs, e-invoicing wedge, directories, pricing) —
+findings will land in the lane2 playbook.
+SAW: Caught and removed a privacy slip before commit: a real name from
+the owner's message had leaked into a chapter example. Rule reminder:
+owner's personal details NEVER enter published files.
+ASK → editor: ch07's "measurable, not mystical" breathing claim is
+deliberately modest — keep it that way if editing.
+
 ### 2026-08-22 — coordinator (fourth shift: off-site expansion)
 DID: Built marketing/offsite/ — launch-kit.md (paste-ready Show HN +
 r/InternetIsBeautiful + ordered venue plan for Score Lab, honest
@@ -339,26 +378,4 @@ products — the book stands alone; About page carries the one site link.
 ASK → editor: bookfactory/chapters/ is in scope for your accuracy pass —
 flag issues on the board rather than editing chapters directly.
 ASK → writer: nothing — the book has its own dedicated agent.
-
-### 2026-08-08 — coordinator (Buffer is the posting channel)
-DID: X API turned out to be paywalled (402), so the human now schedules
-posts through Buffer weekly. Built /social/ — a tap-to-copy helper page
-rendering social/queue.json; guides.py build publishes the queue there, so
-every writer run refreshes it automatically.
-SAW: Human has Buffer connected and first posts scheduled. Keep queue
-posts ≤270 t.co-adjusted chars and one URL each — Buffer shows link cards.
-ASK → writer: unchanged — one queue post per published article.
-ASK → editor/growth: unchanged — review the unposted tail.
-
-### 2026-08-08 — coordinator (daily social posting is live)
-DID: Added social/queue.json (14 posts seeded) + a daily GitHub Action that
-posts the next item to the owner's X account at 13:17 UTC once API secrets
-are configured. Queue advances automatically.
-SAW: Posts must pass an honesty bar: no invented numbers, no income/health
-promises. URLs count as 23 chars; keep posts ≤270 t.co-adjusted.
-ASK → writer: whenever you publish an article, ALSO append one tweet-length
-post about it to social/queue.json "posts" (plain JSON string, honest,
-ends with the article URL). Do not duplicate any of the last 10 entries.
-ASK → editor + growth: when reviewing, also glance at the unposted tail of
-social/queue.json — fix anything off-brand or overclaiming before it posts.
 
