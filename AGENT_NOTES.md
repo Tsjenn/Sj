@@ -30,26 +30,6 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
-### 2026-08-22 — coordinator (sixteenth shift: THE SLEEP BOOK IS COMPLETE)
-DID: Finished The Honest Sleep Book — 14/14 chapters, ~17,145 words.
-Five parallel drafting agents wrote ch09-13 against voice anchors +
-binding honesty policy; coordinator wrote ch14 finale personally and
-reviewed every draft (edits applied: caffeine wording harmonized to
-"cutoff", ch11 cross-reference fixed, ch12 blockquote entity fixed,
-ch13 pronoun + self-reference claims corrected; ch09's jar metaphor
-verified against ch02 before acceptance). plan.json all done; /book/
-page shows all 14 Written + "Manuscript complete"; EPUB + cover built
-(dist/The-Honest-Sleep-Book.epub); completion post queued (226
-chars). QA green.
-SAW: Both books the fleet has written are now COMPLETE and unlisted.
-The entire catalog is finished inventory.
-ASK → editor: Sunday full-manuscript pass — read ch01-14 as one book:
-repetition audit (association rule, jar, anchor), tone drift check,
-and verify every medical line points at ch12.
-ASK → owner: KDP upload (EPUB + JPG cover, tick AI-content
-disclosure, $3.99 or your call) — plus the Mandarin book's Gumroad
-ten minutes. Two finished books, zero listed.
-
 ### 2026-08-22 — coordinator (fifteenth shift: ch08)
 DID: Wrote sleep book ch08 "The 3am Playbook" (8/14, ~9.6k words):
 stimulus control + the twenty-minute rule as the evidence anchor,
@@ -450,3 +430,22 @@ Name the traps in every history/science prompt.
 ASK → day 2 (any agent or coordinator): Part II ch07-12 + Part III
 ch13-17 per plan.json briefs; science chapters use the STRICTEST
 honesty language; run bookfactory5.py status for the next brief.
+
+### 2026-08-23 — coordinator (MATCHA Part II complete: 14/40, 34.8k words)
+DID: Day 2 ran same-day. Part II (From Shade to Stone) drafted in
+parallel and landed: ch07 shading (honzu vs cloth fair, all figures
+as ranges), ch08 harvest (hand vs machine honest, oxidation clock,
+tencha furnace), ch09 stone mills (machine grinding defended where
+it belongs), ch10 grading truth (no legal definition; six tests that
+can't be marketed to), ch11 regions (Uji labeling convention
+presented fairly as tradition-marker not scandal; process-not-
+passport for world origins), ch12 buying/storage (four enemies,
+honest 4-8 week open-tin window, fridge condensation rule). Preview
+EPUB 14/40, 34.8k words, all art embedded.
+SAW: chapter-specific honesty traps in prompts keep producing
+publish-grade drafts; the extraction-by-title JSONL walker is the
+reliable way to land agent chapters.
+ASK → next shift: Part III science (ch13-17) needs the STRICTEST
+language — no study citations, ranges only, cautions chapter (ch17)
+must recommend consulting professionals. Then Part IV. Recipes
+(Parts V-VI) after.

@@ -92,42 +92,42 @@
           "title": "Three Weeks in the Dark",
           "brief": "Shading: why covering the plants changes the chemistry (chlorophyll up, catechin bitterness down, umami up); kabuse vs full shade.",
           "art": "shade-field",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch08",
           "title": "The Harvest That Cannot Wait",
           "brief": "First flush, hand-plucking standards, steaming within hours, drying into tencha; why timing decides grade before grinding begins.",
           "art": "harvest",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch09",
           "title": "Thirty Grams an Hour",
           "brief": "Granite stone mills: why they are still used, heat and particle size, what machine grinding does differently; the feel of real matcha powder.",
           "art": "stone-mill",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch10",
           "title": "What 'Ceremonial Grade' Really Means",
           "brief": "The truth about grading: no legal standard exists; how to actually judge quality (color, aroma, origin, price logic) instead of label words.",
           "art": "grade-chart",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch11",
           "title": "Uji, Nishio, and Beyond",
           "brief": "Terroir: the classic Japanese regions, their styles; new producers (Kagoshima, and honest words about Chinese and other origins).",
           "art": "region-map",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch12",
           "title": "Buying and Keeping the Green",
           "brief": "A practical buying checklist; storage (air, light, heat, time), why matcha dies faster than coffee, how much to buy at once.",
           "art": "storage",
-          "status": "todo"
+          "status": "done"
         }
       ]
     },
