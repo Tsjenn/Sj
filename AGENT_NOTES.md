@@ -30,6 +30,19 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-16 — coordinator (clipart pack: the honest version of the Etsy-PDF video)
+DID: scripts/make_clipart_pack.py repackages the 13 transparent
+4500px Wildhaven PNGs into dist/Wildhaven-Clipart-Pack.zip with a
+plain-language license (personal + small commercial, no file resale).
+Etsy listing #5 copy delivered to the human. The viral "$39k in 50
+days" claim assessed as bait; the underlying digital-downloads model
+is real and was already our Etsy plan.
+SAW: Board was over the 25-entry cap — trimmed oldest entries.
+ASK → editor: clipart license text is customer-facing — include it
+in your accuracy pass.
+ASK → writer: nothing.
+
+
 ### 2026-08-22 — coordinator (twenty-second shift: NEW GAME — Critter Tower)
 DID: Owner explicitly asked for an instantly-graspable Playables game.
 Built Critter Tower (game6/): one-thumb stacker — swing, tap, slice-
@@ -399,43 +412,18 @@ win).
 ASK → editor: on Sunday, read ch05 against ch12's medical-line rule —
 the "drinking to sleep" paragraph must point at ch12, verify tone.
 
-### 2026-08-16 — coordinator (book launch page: fresh editorial design)
-DID: Built /book/ — a premium dark editorial launch page for The
-Honest Sleep Book (new design language: serif display, marquee of the
-book's promises, scroll reveals, live chapter status pulled honestly
-from the manuscript state, CTA into the free Starter PDF for email
-capture). Playwright-reviewed, zero JS errors. Sitemap + one queue
-post added.
-SAW: The chapter-status list on the page must be kept true — when
-chapters complete, update /book/ statuses in the same commit.
-ASK → book agent/coordinator: after each new chapter, flip its status
-on site/book/index.html from "In progress" to "Written".
-ASK → writer: sleep articles may link /book/ where genuinely relevant.
-
-### 2026-08-16 — coordinator (BOOK 2 COMPLETE — parallel subagent sprint)
-DID: Finished 《環境比意志力強》 in one session: 5 subagents drafted
-ch05-ch09 in parallel against the ch01/ch04 voice anchor and the
-binding honesty policy; coordinator reviewed every draft, wrote ch10,
-and rendered illustrations for all 10 chapters. Final EPUB
-(~16.5k chars) + cover built; honesty linter extended to
-bookfactory2/chapters and passes. Human has the EPUB, cover, and
-Kobo/Google Play/Gumroad publishing steps.
-SAW: Subagent drafting works when the voice anchor + honesty policy
-ride in every prompt and a human-voiced chapter opens and closes the
-book. Pattern is reusable for future titles the human requests.
-ASK → editor: full accuracy pass over bookfactory2/chapters/ next
-run — it is now a shipped product.
-ASK → writer: nothing.
-
-### 2026-08-16 — coordinator (clipart pack: the honest version of the Etsy-PDF video)
-DID: scripts/make_clipart_pack.py repackages the 13 transparent
-4500px Wildhaven PNGs into dist/Wildhaven-Clipart-Pack.zip with a
-plain-language license (personal + small commercial, no file resale).
-Etsy listing #5 copy delivered to the human. The viral "$39k in 50
-days" claim assessed as bait; the underlying digital-downloads model
-is real and was already our Etsy plan.
-SAW: Board was over the 25-entry cap — trimmed oldest entries.
-ASK → editor: clipart license text is customer-facing — include it
-in your accuracy pass.
-ASK → writer: nothing.
-
+### 2026-08-22 — coordinator (Playgama SDK integration for Critter Tower)
+DID: Owner submitted Critter-Tower-playables.zip to Playgama; their
+QA tool failed it — "SDK initialization check failed" (they require
+their Bridge SDK to send game_ready within 30s; the game itself
+played fine in their tester). Vendored Playgama Bridge v2.1.0 into
+game6/vendor/ (LGPL, from npm), added a guarded init in game.js
+(no-op when SDK absent), and package_game6.py now bundles SDK +
+config + license into the playables zip only — itch zip and site
+stay vanilla. Verified against the exact zip contents: game_ready
+sent ~2s after load, game still plays with SDK active. New zip
+delivered to owner for re-test.
+SAW: Playgama wiki is egress-blocked; the SDK lives on GitHub and
+npm. Lesson recorded in CLAUDE.md.
+ASK → all: if owner reports another Playgama finding, read the
+finding text before touching code — their QA checks are specific.

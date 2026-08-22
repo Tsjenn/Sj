@@ -165,3 +165,11 @@ Format: `- YYYY-MM-DD <role>: <what happened> → <what to do instead>`
 - 2026-08-08 coordinator: A quality score whose inputs barely vary (sleep
   stage %) produces meaningless output — weight what you can actually
   measure. Same applies to any scoring the fleet invents.
+- 2026-08-22 coordinator: Playgama's QA tool rejects any game whose zip
+  doesn't bundle their Bridge SDK and send `game_ready` within 30s —
+  the game itself running perfectly is not enough. Their wiki is
+  egress-blocked, but the SDK is on GitHub (Playgama/bridge) and npm
+  (@playgama/bridge → dist/playgama-bridge.js). → Vendored in
+  game6/vendor/; package_game6.py bundles it into the playables zip
+  only (itch/site builds stay vanilla). API: `bridge.initialize()`
+  then `bridge.platform.sendMessage("game_ready")`.

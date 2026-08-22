@@ -35,6 +35,13 @@ Submit the same three games with the same copy. Their Bridge SDK
 replaces direct ytgame work. ⚠ If their contract asks for
 exclusivity or rights to the IP, STOP and bring it here first.
 
+Status 2026-08-22: their QA tool requires their Bridge SDK to send
+`game_ready` within 30s of load. Critter-Tower-playables.zip now
+bundles Playgama Bridge v2.1.0 (game6/vendor/, LGPL, from npm
+@playgama/bridge) and sends the signal ~2s after load — verified
+locally against the exact zip contents. If their tester fails
+again, screenshot the finding text.
+
 ### Door 3 — the annual fast track (calendar note)
 Gamedev.js Jam each April runs an official "YouTube Playables
 challenge" — winners get fast-tracked. If we build a game DURING

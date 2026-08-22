@@ -282,6 +282,14 @@
   frame();
   sdk(function () { YT && YT.game && YT.game.gameReady && YT.game.gameReady(); });
 
+  // Playgama Bridge (bundled only in the Playgama build; absent elsewhere).
+  // Their platform requires game_ready within 30s of load.
+  if (window.bridge && typeof window.bridge.initialize === "function") {
+    window.bridge.initialize().then(function () {
+      sdk(function () { window.bridge.platform.sendMessage("game_ready"); });
+    }).catch(function () {});
+  }
+
   window.DEV = {
     state: function () { return { state: state, score: score, best: best, combo: combo,
       stack: stack.length, topW: Math.round(stack[stack.length - 1].w), loaded: loaded }; },
