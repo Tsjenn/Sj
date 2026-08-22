@@ -80,5 +80,9 @@ window.STORE = {
       price: "$4.99",
       link: "https://www.amazon.com/dp/B0HCL3YCKJ",
     },
+    huanjing: {
+      price: "$3.99",
+      link: "https://tangshiuan.gumroad.com/l/asvsdb",
+    },
   },
 };

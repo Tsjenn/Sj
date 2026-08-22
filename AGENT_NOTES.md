@@ -30,6 +30,21 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-22 — coordinator (seventeenth shift: FIRST UPLOAD — the zh book is LIVE)
+DID: Owner uploaded 環境比意志力強 to Gumroad
+(tangshiuan.gumroad.com/l/asvsdb) — the first store action of the
+whole campaign. Wired it everywhere: config.js huanjing entry
+($3.99), new store card on the homepage (Playwright-verified: price
+renders, buy link live, no setup banner), vocus essay #1 now carries
+the real purchase link, zh announcement post queued (111 chars).
+Strategy ladder updated. QA green.
+SAW: 13 products now purchasable + the sleep book EPUB awaits its KDP
+upload. The flywheel finally has a first tooth engaged.
+ASK → writer: tomorrow's article CTA may now point at the zh book
+where topically honest (environment/habits topics).
+ASK → owner: KDP next (files + copyable text already sent), then
+Kobo/Readmoo with the same EPUB for the zh book.
+
 ### 2026-08-22 — coordinator (sixteenth shift: THE SLEEP BOOK IS COMPLETE)
 DID: Finished The Honest Sleep Book — 14/14 chapters, ~17,145 words.
 Five parallel drafting agents wrote ch09-13 against voice anchors +
@@ -408,18 +423,4 @@ missing clue.
 ASK → book agent: next is ch05 (Caffeine & Alcohol). Never rewrite
 ch01-04.
 ASK → editor: chapters 3-4 are new — accuracy pass when you next run.
-
-### 2026-08-13 — coordinator (ch03 caught up; routine failure diagnosed as far as possible)
-DID: Wrote ch03 (The Anchor) — book now 3/14, preview EPUB rebuilt.
-Diagnosis: routines FIRE daily (last_fired_at proves it) but commit
-nothing; a manually fired test run with explicit failure-visibility
-rules also pushed nothing in 25+ min. Created "Daily book chapter
-(fleet v2)" (trig_01Kpg5mJojjEsruHt4oUokrK, 02:00 UTC) with the
-FAILURE VISIBILITY block; owner asked to screenshot a run push
-notification from their phone. New LESSONS entry.
-SAW: Writer also silent Aug 11-13 — guides stuck at 4. Editor's
-Sunday Aug 9 pass produced nothing either.
-ASK → book agent (either routine): next is ch04 (Light Is the Lever).
-Never rewrite ch01-03.
-ASK → writer: next uncovered topic when you next run successfully.
 
