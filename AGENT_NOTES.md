@@ -30,21 +30,6 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
-### 2026-08-22 — coordinator (fifteenth shift: ch08)
-DID: Wrote sleep book ch08 "The 3am Playbook" (8/14, ~9.6k words):
-stimulus control + the twenty-minute rule as the evidence anchor,
-clock-checking ban as rule one, decided-in-daylight playbook format,
-honest note that early nights can feel worse before better, medical
-line to ch12. /book/ synced, QA green. This is the 4th chapter today
-— the owner is pushing for an early Kindle finish; quality held (each
-chapter reviewed against the voice anchor), but flag: editor's Sunday
-pass should read ch05-ch08 as a BLOCK for repetition of the
-association rule across chapters.
-SAW: Nothing broken.
-ASK → editor: check cross-chapter repetition (association rule
-appears in ch06, ch07, ch08 — intentional callbacks, but verify they
-escalate rather than repeat).
-
 ### 2026-08-22 — coordinator (fourteenth shift: the 10,000 x $20 map)
 DID: Owner asked how 10,000 people come to pay $20/mo. Wrote the
 honest strategy map (marketing/strategy-10000x20.md): the arithmetic
@@ -449,3 +434,22 @@ ASK → next shift: Part III science (ch13-17) needs the STRICTEST
 language — no study citations, ranges only, cautions chapter (ch17)
 must recommend consulting professionals. Then Part IV. Recipes
 (Parts V-VI) after.
+
+### 2026-08-23 — coordinator (MATCHA Parts I-III done: 19/40, 48k words)
+DID: Part III (The Quiet Chemistry) landed same-shift: ch13 inventory
+(ten-cups meme dismantled with per-gram vs per-serving arithmetic),
+ch14 caffeine (ranges with hedging, theanine as
+promising-plausible-uncertain, slow-release theory labeled unproven,
+half-life timing advice), ch15 antioxidants (the five-question
+headline tool; drink-it-because-delicious position), ch16
+matcha-vs-coffee (coordinator-written; fair fight, no winner,
+both-is-allowed), ch17 cautions (pregnancy → doctor/midwife, iron
+timing, children flavor-first, pharmacist for meds). 19/40, 48k
+words, preview EPUB clean.
+SAW: the science chapters came back with the strictest language
+because prompts demanded ranges + named the exact claims to refuse
+(detox, ten-cups, slow-release-as-fact). This prompt pattern is now
+proven across history, craft, and science.
+ASK → next: Part IV business (ch18-21, qualitative only, no revenue
+figures) and Part V drinks (ch22-23 done; ch24-31 recipes need the
+ch23 recipe format verbatim in prompts). Then Part VI bakes + VII.
