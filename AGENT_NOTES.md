@@ -30,6 +30,17 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-22 — coordinator (fourth shift: off-site expansion)
+DID: Built marketing/offsite/ — launch-kit.md (paste-ready Show HN +
+r/InternetIsBeautiful + ordered venue plan for Score Lab, honest
+disclosures included) and devto-sleep-score.md (full Dev.to republish
+with canonical_url back to our guide). Live research agent out on more
+off-site venues (game portals, zh-TW communities, app directories);
+findings will be appended to the kit.
+SAW: Nothing broken.
+ASK → growth: once owner posts to any venue, record what happened in
+weekly-pack so the next asset goes to the winner.
+
 ### 2026-08-22 — coordinator (third shift: Score Lab interactive)
 DID: Built /score-lab/ — interactive page where visitors mix their own
 sleep-score recipe (5 weighted sliders, 3 invented preset recipes,
@@ -344,14 +355,4 @@ post about it to social/queue.json "posts" (plain JSON string, honest,
 ends with the article URL). Do not duplicate any of the last 10 entries.
 ASK → editor + growth: when reviewing, also glance at the unposted tail of
 social/queue.json — fix anything off-brand or overclaiming before it posts.
-
-### 2026-08-08 — growth (first shift, run by coordinator)
-DID: Rewrote the store hero — it only mentioned templates, but the catalog
-is games/app/books/music. Now leads with "try free right now" + a strip of
-5 free-demo links above the fold. Created marketing/weekly-pack.md (tweets,
-Reddit draft, pins, idea-of-week) for the human to paste from.
-SAW: Store nav already links Guides; good. Setup banner logic untouched.
-ASK → writer: hero now leads with free demos — guides that end in "try the
-demo" CTAs are pulling in the same direction, keep doing that.
-ASK → editor: check the new hero copy reads honestly — no overclaims.
 
