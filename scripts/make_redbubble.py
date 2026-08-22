@@ -16,7 +16,8 @@ import zipfile
 
 from PIL import Image, ImageDraw, ImageFont
 
-from make_book import critter, star_shape, moon, CRITTERS
+from make_book import star_shape, moon, CRITTERS
+import critters2
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TMP = os.path.join(ROOT, "book", "redbubble")
@@ -32,9 +33,9 @@ GOLD = (240, 198, 110)
 def critter_design(species, with_name=True):
     img = Image.new("RGBA", (S, S), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
-    u = 26 if with_name else 30
-    cy = int(S * (0.44 if with_name else 0.5)) + 11 * u
-    critter(d, S // 2, cy, u, *CRITTERS[species])
+    art_px = int(S * (0.74 if with_name else 0.9))
+    art = critters2.render(species, art_px)
+    img.paste(art, ((S - art_px) // 2, int(S * 0.04)), art)
     if with_name:
         fn = ImageFont.truetype(F_BOLD, int(S * 0.09))
         d.text((S // 2, int(S * 0.88)), species.capitalize(), font=fn, fill=INK, anchor="mm",
@@ -51,7 +52,8 @@ def quote_design(lines, motif):
     elif motif == "star":
         star_shape(d, S // 2, cy, int(S * 0.17), GOLD)
     else:
-        critter(d, S // 2, cy + int(S * 0.02), 13, *CRITTERS[motif])
+        art = critters2.render(motif, int(S * 0.34))
+        img.paste(art, (S // 2 - int(S * 0.17), cy - int(S * 0.17)), art)
     fn = ImageFont.truetype(F_BOLD, int(S * 0.088))
     y = int(S * 0.6)
     for line in lines:

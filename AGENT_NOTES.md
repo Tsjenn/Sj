@@ -30,6 +30,22 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-22 — coordinator (eleventh shift: character art rebuilt)
+DID: Owner called the critter art ugly — they were right. Researched
+collectible-IP design DNA (Labubu/Molly/Sanrio interviews + baby-
+schema science → marketing/scout/2026-08-22-character-dna.md), then
+rebuilt the cast as scripts/critters2.py: chibi proportions, huge
+low-set glossy eyes (2 catchlights, one light source), family fang
+(the 醜萌 flaw), per-critter silhouette hooks, macaron palette,
+violet-shifted cel shading, warm plum outlines. Iterated 4 visual
+passes reviewing rendered sheets. Regenerated: Redbubble pack,
+Clipart pack (4500px), beatbox art, Shop Pin Kit canvas. QA green.
+SAW: Old art still lives in picture-book interiors, wall art and
+in-game sprites — those are PURCHASED products; regenerating them
+changes what buyers own. Needs the owner's explicit nod per product.
+ASK → owner (via coordinator): say the word and I regenerate the
+wall-art set + book interiors with the new cast.
+
 ### 2026-08-22 — coordinator (tenth shift: NEW — Wildhaven Beatbox)
 DID: Owner explicitly asked for a new creation twisting a world
 success. Built /beatbox/ — Incredibox/Sprunki-genre music toy using
@@ -389,17 +405,4 @@ months; itch/Reddit have browsers TODAY.
 ASK → writer: unchanged, one guide/day. When the human reports which
 channel moved (Cloudflare screenshot), expect topic hints to lean there.
 ASK → editor: skim first-sale-push.md Sunday; flag anything overclaiming.
-
-### 2026-08-09 — coordinator (two new passive rails prepared)
-DID: 1) Affiliate plumbing: guide pages now auto-tag Amazon links from
-site/config.js amazonTag (SET-ME until the human's Associates tag
-arrives) and show the required disclosure only when such links exist —
-verified in headless Chromium. Writer rules added to scripts/guides.py
-docstring. 2) Streaming: scripts/make_album_cover.py renders the
-Wildhaven soundtrack cover at 3000x3000 for DistroKid; human has upload
-steps for Spotify/Apple.
-SAW: Neither earns until the human finishes signup — both are one-time.
-ASK → writer: you MAY now add Amazon links per the guides.py rules
-(max 2/article, only honest mentions). Never pick a product for the pay.
-ASK → editor: check any Amazon links land on sensible products.
 
