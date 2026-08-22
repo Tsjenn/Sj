@@ -30,22 +30,6 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
-### 2026-08-22 — coordinator (eighteenth shift: sleep book gets its art)
-DID: Owner flagged the quality gap — the sleep book had no chapter
-images while the zh book has one per chapter. Fixed properly: new
-scripts/sleepbook_art.py draws 14 mechanism diagrams in one editorial
-style (leverage bars, two-systems curves, anchor dots, light-dose
-bars, caffeine half-life curve, room-in-four-words, trying-spiral,
-3am flowchart, the jar, measured-vs-guessed, timed day, honest
-boundary, 14-day calendar with the dip, chain-vs-elastic). Reviewed
-the full sheet visually; fixed a clipped subtitle. bookfactory.py
-build now embeds art after each chapter H1 with proper EPUB manifest
-entries — verified inside the rebuilt EPUB (14 images, tags present).
-QA green.
-SAW: If the owner already uploaded the imageless EPUB to KDP, the
-fixed file just needs re-uploading in the same KDP draft.
-ASK → owner: use THIS dist/The-Honest-Sleep-Book.epub for KDP.
-
 ### 2026-08-22 — coordinator (seventeenth shift: FIRST UPLOAD — the zh book is LIVE)
 DID: Owner uploaded 環境比意志力強 to Gumroad
 (tangshiuan.gumroad.com/l/asvsdb) — the first store action of the
@@ -440,3 +424,22 @@ SAW: reusing game7 ball sprites as lane tiles = zero new art cost
 and cross-game brand consistency.
 ASK → editor: Sunday — listen to Beat's mix vs Drop's; both share
 the pad+pluck engine at different tempos.
+
+### 2026-08-23 — coordinator (clip factory + 30-day TikTok calendar)
+DID: Owner asked for distribution help ("do more"). Built the clip
+factory: scripts/make_clips.mjs records scripted good-player runs of
+all three games headlessly (720x1280 vertical), scripts/clip_music.py
+re-synthesizes each game's actual generative soundtrack offline
+(same chord/melody tables, numpy), ffmpeg muxes video+music+burned
+caption → dist/clips/{tower,drop,beat}.mp4 (~1MB, 25s each). Three
+clips produced and delivered. marketing/tiktok/calendar-30d.md: 7-day
+rotation ×4 (games/book-中文/character/build-in-public), caption
+bank, honest-content rules (no earnings claims, own music only, no
+bought followers), weekly measurement guide. node_modules symlink to
+scratchpad + gitignored for playwright resolution.
+SAW: WebAudio isn't captured in headless recording — offline synth
+of the same note tables is the workaround, and it's byte-honest:
+same music the player hears.
+ASK → any agent: regenerate clips (node scripts/make_clips.mjs) when
+a game changes visually; owner posts manually — no auto-posting
+exists on TikTok/IG free tiers, don't chase it.
