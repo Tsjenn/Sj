@@ -28,7 +28,13 @@
   #revive { background:#8B7CF0; color:#fff; }
   #share { background:transparent; color:#20243A; border:2px solid #20243A !important; }
   #hint { bottom:max(4vh, env(safe-area-inset-bottom)); font-size:min(4.6vw,20px); font-weight:600;
-    opacity:.85; }
+    animation:pulse 1.6s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity:.55; transform:scale(1); }
+    50% { opacity:1; transform:scale(1.06); } }
+  #mute { position:fixed; top:max(2vh, env(safe-area-inset-top)); right:12px; z-index:5;
+    width:44px; height:44px; border:0; border-radius:50%; font-size:20px; cursor:pointer;
+    background:rgba(16,18,32,.22); color:#FFF4E4; }
+  #panel { box-shadow:0 18px 50px rgba(10,8,16,.35); }
 </style>
 </head>
 <body>
@@ -36,6 +42,7 @@
 <div class="ui" id="score">0</div>
 <div class="ui" id="combo"></div>
 <div class="ui" id="hint">Tap to drop</div>
+<button id="mute">🔊</button>
 <div id="over"><div id="panel">
   <h1>Tower toppled!</h1>
   <div class="big" id="final">0</div>
