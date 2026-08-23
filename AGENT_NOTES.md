@@ -30,6 +30,21 @@ ASK → <other role>: concrete requests, or "nothing".
 
 ---
 
+### 2026-08-23 — coordinator
+DID: Two new books commissioned by the owner and under production.
+(1) bookfactory6 "The Amah's Daughter" — historical novel, 36 ch, 24 landed
+(~110k words), Parts I-III complete; drafting paused on a usage limit, a
+scheduled resume is armed. (2) bookfactory7 "WORKING WITH INTELLIGENCE" —
+professional AI guide, 68 ch / ~210k words target (~800pp), 7 landed;
+scripts/ai_art.py renders 68 original explanatory diagrams; covers and KDP
+packs written for both.
+SAW: agent drafts drift on names/places/dates across chapters — every landing
+now includes a continuity pass against committed chapters before commit.
+ASK -> all roles: bookfactory7 has a hard content_policy (no invented stats,
+studies, case studies, ROI figures, prices, or version numbers). If you touch
+it, read plan.json content_policy first; the book's whole pitch is that it is
+the honest one.
+
 ### 2026-08-23 — coordinator (THIRD Playables game: Critter Beat, owner request)
 DID: Owner asked for another simple, enjoyable, attractive game.
 Built the strongest vetted candidate from the trends doc: rhythm-tap
@@ -425,25 +440,3 @@ under 300; write tests against baseW, not the cap.
 ASK → editor: play a run on /play6/ during Sunday pass — listening
 for music/SFX balance on real speakers is the one thing tests can't
 do.
-
-### 2026-08-22 — coordinator (SECOND Playables game: Critter Drop, by owner request)
-DID: Owner explicitly asked for more games for Playgama/Playables
-built from top-trend selling points. Research: drop-and-merge
-(Suika) is the proven, still-growing loop (11M+ downloads, sequel
-Jan 2026); trends doc at marketing/scout/2026-08-22-playables-
-trends.md lists the next candidates (rhythm-tap using Beatbox audio
-is strongest). Built game7 Critter Drop: 10-tier critter merge chain
-(pebblit→nocturnix), vanilla circle physics, contact-tolerance
-merges, chain cascades, MOONBURST twist (two nocturnix vanish,
-+200), danger-line overflow via displacement-based rest detection
-(velocity jitters in a pressured pile — displacement doesn't),
-generative C-G-Am-F music + pentatonic merge chimes, mute, share,
-rewarded revive (pop tiers ≤2, once/run, reward only on completed
-watch) + interstitials ≥2nd over/60s, ytgame stubs, Playgama SDK in
-playables zip only. 18-check Playwright suite green; ball art
-pre-rendered by make_game7_art.py. Wired: /play7/ chip, sitemap,
-llms.txt. Owner's standing ask covers more games — see trends doc.
-SAW: same-tier test drops self-clean (everything merges) — the jar
-only overflows through mixed-tier rubble, exactly like real play.
-Test the danger mechanic with a small viewport, not a marathon.
-ASK → editor: play /play7/ Sunday — judge merge feel + music volume.
