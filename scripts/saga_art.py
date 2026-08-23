@@ -833,9 +833,11 @@ def make_cover(path):
     d.text((cx - w / 2, 1200), sub, font=f_s, fill=(224, 210, 178))
 
     # --- author
-    d.line([(cx - 330, 2300), (cx + 330, 2300)], fill=GOLD, width=3)
+    d.line([(cx - 330, 2278), (cx + 330, 2278)], fill=GOLD, width=3)
     f_a = _title_font(84, bold=True)
-    _tracked(d, "TANG SHIUAN JENN", f_a, cx, 2340, CREAM, track=10)
+    _tracked(d, "TANG SHIUAN JENN", f_a, cx, 2318, CREAM, track=10)
+    f_c = _title_font(40, bold=False)
+    _tracked(d, "CHARTERED ACCOUNTANT", f_c, cx, 2432, (196, 176, 132), track=9)
 
     im.save(path, "JPEG", quality=94)
     print("cover ->", path)
