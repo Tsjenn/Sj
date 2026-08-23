@@ -871,7 +871,7 @@
             ]
           },
           "brief": "INDUSTRY PLAYBOOK. Fixed structure: (1) what this work actually consists of; (2) the value map — where AI helps most and least; (3) ten concrete use cases, each with what to prompt and what to check; (4) two or three worked prompts in the six-part frame from ch09; (5) the risks specific to this sector; (6) a 30-day starting plan; (7) how to measure whether it worked. Campaign drafting, audience-specific rewriting, proposal support, sales call preparation, content calendars. The honesty line on AI-written testimonials, fake reviews, and undisclosed synthetic media.",
-          "status": "todo",
+          "status": "done",
           "tables": "value map table; ten use cases table; risk table"
         },
         {
