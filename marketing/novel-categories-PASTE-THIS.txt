@@ -1,0 +1,80 @@
+FINDING THE CATEGORIES FOR THE AMAH'S DAUGHTER
+
+WHY YOU COULD NOT FIND THEM
+
+The paths I gave you first were Amazon STOREFRONT names - the way
+categories look when a shopper browses the shop. KDP's upload picker
+uses different wording. That was my mistake, not yours.
+
+In the KDP picker the tree starts at "Fiction", NOT at
+"Literature & Fiction". So searching for "Literature & Fiction" finds
+nothing.
+
+
+CHECK THIS FIRST
+
+Near the top of the categories step KDP asks whether the book is
+fiction or non-fiction. If that is set to Non-fiction, no historical
+fiction category will appear anywhere in the list, no matter what you
+search for.
+
+Set it to FICTION. Then the historical categories appear.
+
+
+HOW TO USE THE PICKER
+
+1. Click "Choose categories" (or Edit categories).
+2. There is a search box at the top of the pop-up. Use it. Do not try
+   to scroll the whole tree - it is very long.
+3. Type: historical
+4. Tick up to THREE. You cannot pick more than three at upload.
+5. Click Save.
+
+
+WHAT TO TICK - in order of preference
+
+  1.  Fiction > Historical > World War II
+      The occupation years are the heart of the book, and this is one
+      of the most actively browsed fiction categories on Amazon.
+
+  2.  Fiction > Sagas
+      Search the box for: sagas
+      A smaller category, which is the point. Fewer competitors means
+      a handful of sales can put you on its bestseller list.
+
+  3.  Fiction > World Literature > Asia
+      Search the box for: world literature
+      If you do not see an Asia entry, use one of these instead:
+          Fiction > Family Life
+          Fiction > Historical > General
+
+If "Historical > World War II" does not appear on your marketplace,
+take "Fiction > Historical > General" as the first pick instead.
+
+
+ONE THING TO AVOID
+
+Do not spend all three picks inside Historical. Three historical
+categories compete with each other. One historical + one saga + one
+world-literature or family-life reaches three different sets of
+readers.
+
+
+AFTER YOU PUBLISH
+
+Amazon also assigns extra browse categories on its own, based on your
+keywords and description. Those appear over the following days and you
+do not control them directly.
+
+If you later want to be listed in more categories than three, you can
+email kdp-support through the KDP Help page and ask. That is a normal
+request and they usually action it.
+
+
+NOTE
+
+Category names and the exact tree differ slightly between marketplaces
+(Amazon.com, Amazon.co.uk and so on) and Amazon changes them from time
+to time. The search box is the reliable route. Pick the closest match
+to the names above from whatever your screen actually offers - the
+choice does not have to be word-for-word identical to be right.
