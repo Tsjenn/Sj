@@ -16,10 +16,32 @@ generative AI guide
 AI productivity
 business technology
 
-=== CATEGORIES (choose 2-3) ===
-Computers & Technology > AI & Machine Learning
-Business & Money > Management & Leadership
-Computers & Technology > Business Technology
+=== CATEGORIES (KDP lets you pick 3) ===
+The picker is a search box. Type the words and take the nearest match
+Amazon offers - it renames these shelves from time to time.
+
+Do NOT spend all three slots on AI categories. That shelf is crowded.
+Use one for reach, two for shelves you can realistically chart on.
+
+  1. Computers & Technology > Computer Science > AI & Machine Learning
+     (big traffic, hard to rank - worth one slot)
+
+  2. Business & Money > Processes & Infrastructure > Information Management
+     (thin shelf, genuine fit - your best chance of ranking)
+
+  3. Business & Money > Management & Leadership
+     (catches the adoption / policy / training reader)
+
+BACKUPS if one is missing from the picker:
+  Computers & Technology > Business Technology
+  Business & Money > Small Business & Entrepreneurship
+  Business & Money > Job Hunting & Careers
+  Education & Teaching > Computers & Technology
+
+BEFORE YOU CHOOSE: search each category on Amazon and look at the books
+ranked 10 to 20. Hundreds of reviews = out of reach for now. Several under
+fifty = a shelf you can climb. Five minutes of this beats any advice,
+because the answer changes month to month.
 
 === AI CONTENT DISCLOSURE ===
 YES - tick it. Text: AI-generated with review and edits by the author.
