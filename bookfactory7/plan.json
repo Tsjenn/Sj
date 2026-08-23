@@ -1014,7 +1014,7 @@
             ]
           },
           "brief": "A ready-to-run internal training curriculum: four levels, the competencies at each, exercises, and a simple assessment. Written so a reader can teach it next week.",
-          "status": "todo",
+          "status": "done",
           "tables": "table: level vs competencies vs exercises"
         },
         {
