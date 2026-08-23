@@ -1141,7 +1141,7 @@
             ]
           },
           "brief": "The defensive chapter. How AI raises the quality of fraud — especially payment fraud and impersonation — and what controls actually help: verification channels, callback procedures, and staff training. Prompt injection explained for non-technical readers whose assistants now have tools.",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch63",
