@@ -63,7 +63,7 @@ uses this technology well — and knows exactly where to stop.
 
 ## What is in the book (for your own reference)
 
-- 8 parts, 68 chapters, ~262,000 words
+- 8 parts, 68 chapters, ~266,600 words (roughly 850–900 printed pages)
 - 68 original diagrams, one per chapter, generated from the book's own plan
 - 16 industry playbooks, each following the same seven-part structure
 - ~40 reusable prompts in the library chapter, plus worked prompts in most playbooks
