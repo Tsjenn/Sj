@@ -1,0 +1,29 @@
+=== TITLE BOX ===
+AI Without the Hype
+
+=== SUBTITLE BOX ===
+The Professional's Complete Guide to Artificial Intelligence at Work — Prompting, Verification, Agents, and 16 Industry Playbooks
+
+=== AUTHOR ===
+Tang Shiuan Jenn
+
+=== 7 KEYWORDS (one per box) ===
+artificial intelligence
+AI for business
+prompt engineering
+AI at work
+generative AI guide
+AI productivity
+business technology
+
+=== CATEGORIES (choose 2-3) ===
+Computers & Technology > AI & Machine Learning
+Business & Money > Management & Leadership
+Computers & Technology > Business Technology
+
+=== AI CONTENT DISCLOSURE ===
+YES - tick it. Text: AI-generated with review and edits by the author.
+
+=== FILES TO UPLOAD ===
+Manuscript: AI-Without-The-Hype.epub
+Cover:      AI-Without-The-Hype-cover.jpg

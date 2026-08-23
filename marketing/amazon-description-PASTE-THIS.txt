@@ -1,0 +1,37 @@
+Everyone is using AI. Almost nobody is using it well.
+
+You have typed a question into an AI assistant, received something impressive, and quietly wondered two things: how much of this can I trust, and am I being left behind?
+
+This book answers both — and it does something most books on the subject do not. It contains no invented statistics, no fabricated case studies, no borrowed vendor figures, and no promises about your income. Every claim in it is one a careful reader could check.
+
+Written by a chartered accountant for working professionals, it teaches the skill from the ground up.
+
+WHAT YOU WILL LEARN
+
+How the machine actually works — a five-minute mental model that predicts, in advance, where AI will impress you and where it will quietly embarrass you.
+
+The craft of prompting — the six-part frame behind every good prompt, twelve failure patterns with their fixes, and a reference library of forty reusable professional prompts.
+
+Beyond the chat box — projects, your own documents, agents, tools, and assistants that work directly in your files. What each is for, and when each is overkill.
+
+How to make it reliable — grounding, evaluation, and the Three-Check Rule: a verification habit light enough that busy people actually keep it.
+
+Sixteen industry playbooks — finance, audit, tax, banking, insurance, manufacturing, supply chain, retail, healthcare administration, legal, property, education, marketing, HR, customer service, and the solo professional. Each with a value map, ten concrete use cases, worked prompts, the sector's real risks, and a 30-day starting plan.
+
+How to roll it out — a 90-day adoption plan, a four-level training curriculum you could teach next week, honest measurement, and a full sample AI policy you can adapt.
+
+Risk, ethics and the law — bias, ownership and copyright, the regulatory picture, AI-enabled fraud and deepfakes, and a chapter on when NOT to use AI at all.
+
+Your career — what actually gets automated, the skills that get more valuable as generation gets cheap, and a thirty-day plan to start on Monday.
+
+WHO IT IS FOR
+
+Accountants, lawyers, doctors and clinical administrators, engineers, teachers, bankers, insurers, consultants, managers, and anyone who runs their own practice. It assumes no technical background. It does assume you are busy and that being wrong has consequences for you.
+
+WHY THIS ONE
+
+Most AI books are written by enthusiasts and sell you a future. This one is written for people whose name goes on the work — and it is as clear about where to stop as it is about where to start. One full chapter is devoted to the situations where the honest professional answer is to close the laptop and do it yourself.
+
+68 chapters. 8 parts. A diagram in every chapter, and tables throughout.
+
+No miracle claims. No invented research. Just an honest, thorough, practical guide to becoming the person in your organisation who uses this technology well — and knows exactly where it stops.
