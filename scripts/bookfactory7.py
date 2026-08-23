@@ -149,7 +149,7 @@ XHTML = """<?xml version="1.0" encoding="utf-8"?>
 <body>%s</body>
 </html>"""
 
-ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII"]
+ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"]
 
 
 def word_count(md):
