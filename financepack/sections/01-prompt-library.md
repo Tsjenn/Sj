@@ -1,8 +1,8 @@
-A prompt is a briefing, not a spell. Paste one, take whatever comes back and put your name on it, and this will go badly. Every prompt below assumes you know things the model does not: what your entity does, which numbers matter this period, what your reviewer will ask, and what happens if the answer is wrong. The prompt's job is to get that out of your head in an orderly way. Yours is everything after.
+A prompt is a briefing, not a spell. Paste one, take whatever comes back and put your name on it, and this will go badly. Every prompt below assumes you know things the model does not: what your entity does, which numbers matter this period, and what happens if the answer is wrong. The prompt gets that out of your head in an orderly way. You do everything after.
 
-Change three things in almost every prompt here. The role line, because "assisting a finance team in a group with overseas subsidiaries and a manual consolidation" produces different work from "assisting a finance team". The constraints, so they carry your house rules and thresholds — anything a new joiner would get wrong. And the format, so the output feeds your template instead of being retyped into it.
+Change three things in almost every prompt here. The role line, because "assisting a finance team in a group with overseas subsidiaries and a manual consolidation" produces different work from "assisting a finance team". The constraints, so they carry your house rules — anything a new joiner would get wrong. And the format, so the output feeds your template rather than being retyped into it.
 
-Leave two things alone: the instruction to mark uncertainty and refuse to guess, and the ban on inventing figures. Remove either and you get confident filler, the expensive failure in this work. Before any of it, settle a separate question — whether you may put this information into this tool at all. Client data, staff data, unpublished results and anything confidential are decisions for whoever owns that policy, not for you at your desk on a Tuesday. If nobody has decided, assume not.
+Leave two things alone: the instruction to mark uncertainty and refuse to guess, and the ban on inventing figures. Remove either and you get confident filler, the expensive failure in this work. First, though, settle a separate question — whether you may put this information into this tool at all. Client data, staff data and anything confidential are decisions for whoever owns that policy, not for you at your desk. If nobody has decided, assume not.
 
 | Change this | Keep this |
 |---|---|
@@ -16,34 +16,33 @@ Leave two things alone: the instruction to mark uncertainty and refuse to guess,
 *Use when:* you have unexplained differences and little time.
 *Paste this:*
 ```
-You are assisting a finance team at month-end with the reconciling items
-on [ACCOUNT] for [PERIOD].
+You are assisting a finance team at month-end on [ACCOUNT], [PERIOD].
 
-Task: group them by likely cause and say what evidence would confirm or
-rule out each.
+Task: group the reconciling items below by likely cause and say what
+evidence would confirm or rule out each.
 
 Constraints: use only what I paste. Invent no amount, date or
 counterparty.
 
-Format: a table — Item, Amount as given, Likely cause, Confirming
-evidence, Who to ask. Then a list headed "Cannot classify".
+Format: a table — Item, Amount, Likely cause, Confirming evidence, Who
+to ask. Then a list headed "Cannot classify".
 
-Anything you are unsure about goes in that list. Never guess.
+Anything you are unsure about goes there. Never guess.
 
 Items:
 [PASTE]
 ```
-*Check before you use the output:* the groups are inference, not findings. Watch for items given a cause because they resembled the one above.
+*Check before you use the output:* the groups are inference, not findings. Confirm each against the source document.
 
 **P1.2 — Break explanation, written up**
-*Use when:* you know why a difference arose and must write it for the file.
+*Use when:* you must write up a difference you have explained.
 *Paste this:*
 ```
-You are helping a qualified accountant write a file note. Below are my
-rough notes on a difference on [ACCOUNT] for [PERIOD].
+You are helping an accountant write a file note on a difference on
+[ACCOUNT], [PERIOD].
 
-Task: turn them into a note another accountant could follow in a year
-without asking me anything.
+Task: turn my notes below into a note another accountant could follow in
+a year without asking me anything.
 
 Constraints: use only my facts. Add no causes or conclusions, and
 neither soften nor strengthen mine.
@@ -56,37 +55,36 @@ Fill no gaps; list them under "Questions I could not answer".
 Notes:
 [PASTE]
 ```
-*Check before you use the output:* the "remains open" paragraph. Models tidy loose ends into resolutions; if something is unresolved, the note must still say so.
+*Check before you use the output:* the "remains open" paragraph. Models tidy loose ends away.
 
 **P1.3 — Close checklist builder**
 *Use when:* your close runs on memory and one person's spreadsheet.
 *Paste this:*
 ```
-You are documenting a finance team's month-end close. Below are our
-tasks in my own words, roughly in order.
+You are documenting the month-end close at [ENTITY].
 
-Task: turn this into a checklist someone who has never run our close
-could follow.
+Task: turn the tasks below into a checklist someone who has never run
+our close could follow.
 
 Constraints: include only tasks I describe. Add no standard tasks you
 assume we perform, and no deadlines I have not given.
 
-Format: a table — Working day, Task, Owner, Depends on, Evidence
-retained. Then a list of tasks I did not mention, as questions.
+Format: a table — Working day, Task, Owner, Depends on, Evidence. Then
+any task I did not mention, as a question.
 
 Where sequence or ownership is ambiguous, write UNCLEAR.
 
-Description:
+Our tasks, in my own words:
 [PASTE]
 ```
-*Check before you use the output:* the dependency column. A checklist that puts a task before what it depends on is worse than none.
+*Check before you use the output:* the dependency column. A task placed before its dependency is worse than no checklist.
 
 **P1.4 — Intercompany mismatch plan**
-*Use when:* two entities disagree and you need a plan before the calls start.
+*Use when:* two entities disagree and you need a plan before the calls.
 *Paste this:*
 ```
 [ENTITY A] and [ENTITY B] disagree on the intercompany balance for
-[PERIOD]. Below is what each reports.
+[PERIOD].
 
 Task: an investigation plan — causes to test in order, cheapest and
 likeliest first.
@@ -99,10 +97,10 @@ the cause, and what to do if it does not.
 
 End with "Assumptions I had to make". If you need more, ask.
 
-Situation:
+What each entity reports:
 [PASTE]
 ```
-*Check before you use the output:* the assumptions list, then every step resting on it. Currency and cut-off conventions are what it invents most readily.
+*Check before you use the output:* the assumptions list, then every step resting on it.
 
 **P1.5 — Accrual and prepayment review questions**
 *Use when:* you are reviewing someone else's schedule.
@@ -125,16 +123,16 @@ Where the schedule gives too little for a real question, say so.
 Schedule:
 [PASTE]
 ```
-*Check before you use the output:* whether the questions are specific to your schedule. Generic ones mean it lacked context.
+*Check before you use the output:* whether the questions are specific to your schedule. Generic ones mean thin context.
 
 ## 2. Variance analysis and management commentary
 
 **P2.1 — First-pass variance questions**
-*Use when:* the variance report has landed and you have not yet spoken to the business.
+*Use when:* the variance report has landed and nobody has spoken to the business.
 *Paste this:*
 ```
-You are assisting a financial controller investigating variances for
-[ENTITY], [PERIOD].
+You are assisting a controller investigating variances for [ENTITY],
+[PERIOD].
 
 Task: for each line I flag, the questions to put to the budget holder —
 those separating timing, volume, price, misposting and real change.
@@ -150,15 +148,15 @@ If a line is too small to be worth a conversation, say so.
 Table:
 [PASTE]
 ```
-*Check before you use the output:* leading questions. "Why did costs rise due to the new hires?" gets the answer you suggested, not the true one.
+*Check before you use the output:* leading questions. A question naming a cause returns the answer you suggested.
 
 **P2.2 — Commentary from your explanations**
-*Use when:* you have the reasons and need them written for the pack.
+*Use when:* you have the reasons and need them written up.
 *Paste this:*
 ```
 You are drafting management commentary for [ENTITY], [PERIOD], for
-[AUDIENCE]. My notes give each account, figure and the explanation
-obtained from the business — the only permitted source of cause.
+[AUDIENCE]. My notes give each account, its figure and the business's
+explanation — the only permitted source of cause.
 
 Task: write the commentary.
 
@@ -173,15 +171,14 @@ Flag any explanation that does not account for its movement.
 Notes:
 [PASTE]
 ```
-*Check before you use the output:* every causal phrase — "because", "driven by", "reflecting". Each must trace to something a named person told you.
+*Check before you use the output:* every causal phrase. Each must trace to a named person.
 
 **P2.3 — The walk from last period to this**
-*Use when:* you need a bridge a reader can follow without the chart.
+*Use when:* you need a bridge a reader can follow without a chart.
 *Paste this:*
 ```
 You are explaining a movement in [MEASURE] from [PRIOR PERIOD] to
-[CURRENT PERIOD] at [ENTITY]. Below are the opening and closing figures
-and the components.
+[CURRENT PERIOD] at [ENTITY].
 
 Task: write the bridge as prose, in the order that reads clearest.
 
@@ -196,43 +193,41 @@ Say plainly if you cannot reconcile my components to my movement.
 Inputs:
 [PASTE]
 ```
-*Check before you use the output:* whether it reported a reconciliation failure. Smooth prose over components that do not add up hides your error.
+*Check before you use the output:* whether it reported a reconciliation failure rather than writing around it.
 
 **P2.4 — De-waffling a draft**
 *Use when:* the commentary reads like a press release.
 *Paste this:*
 ```
-You are an unsentimental editor of finance writing, working on the draft
-management commentary below.
+You are an unsentimental editor of finance writing.
 
-Task: rewrite it so every sentence carries information. Cut hedging and
-adjectives that assert rather than describe.
+Task: rewrite the draft below so every sentence carries information. Cut
+hedging and adjectives that assert rather than describe.
 
 Constraints: change no figure, cause or conclusion, and add no facts. If
 cutting would lose a fact, keep the fact and cut the decoration.
 
 Format: the rewritten text, then the sentences you could not tighten
-because they made a claim you could not verify from the draft.
+because they made a claim the draft does not support.
 
 Never invent a stronger version of a weak claim. Flag it.
 
 Draft:
 [PASTE]
 ```
-*Check before you use the output:* the figures, line by line. Editors of every kind round numbers to make a sentence sit better.
+*Check before you use the output:* the figures, line by line. Editors round numbers to make sentences sit better.
 
 **P2.5 — Attack my explanation**
-*Use when:* you are about to present a reason and want it tested first.
+*Use when:* you are about to present a reason and want it tested.
 *Paste this:*
 ```
-You are a sceptical audit committee member with a finance background.
-Below is my explanation for a movement in [MEASURE] at [ENTITY].
+You are a sceptical audit committee member.
 
-Task: attack it. Find the questions that would expose it if it were
-wrong, incomplete, or an artefact of how the numbers were prepared.
+Task: attack the explanation below. Find the questions that would expose
+it if it were wrong, incomplete, or an artefact of the numbers.
 
 Constraints: do not present alternatives as fact, and invent no figures.
-Frame each challenge as a question I can go and answer.
+Frame each challenge as a question I can answer.
 
 Format: three groups — size, timing, simpler explanation. Maximum ten,
 hardest first.
@@ -242,7 +237,7 @@ If you cannot fault it, say so rather than manufacture objections.
 My explanation:
 [PASTE]
 ```
-*Check before you use the output:* whether each challenge is answerable with evidence you can actually obtain. Park the rest.
+*Check before you use the output:* whether each challenge is answerable with evidence you can obtain. Park the rest.
 
 ## 3. Budgeting and forecasting
 
@@ -253,8 +248,8 @@ My explanation:
 You are making assumptions explicit for [BUDGET LINE] at [ENTITY] for
 [PERIOD].
 
-Task: break the line into the drivers you would have to estimate to
-build it from scratch, and say what source normally holds each answer.
+Task: break the line into the drivers needed to build it from scratch,
+and say what source holds each answer.
 
 Constraints: give no values, ranges, percentages or benchmarks — not one
 number. Where a driver depends on a decision, say whose.
@@ -262,58 +257,57 @@ number. Where a driver depends on a decision, say whose.
 Format: a table — Driver, Unit, Type (fact / estimate / decision), Where
 the answer lives, Question to ask.
 
-If the line could sensibly be built two ways, show both.
+If the line could be built two ways, show both.
 ```
-*Check before you use the output:* that the drivers actually rebuild your line. A tidy list that does not reconstruct the number is decoration.
+*Check before you use the output:* that the drivers actually rebuild your line.
 
 **P3.2 — Budget holder briefing**
 *Use when:* the budget pack goes out to non-finance managers.
 *Paste this:*
 ```
 You are briefing non-financial managers who must submit figures for
-[PERIOD]. Their cost lines are [LIST]. The deadline is [DATE].
+[PERIOD]. Their cost lines are [LIST]; the deadline is [DATE].
 
 Task: write the note that accompanies the template.
 
-Constraints: no jargon without a plain gloss on first use. No threats
-and no cheerleading. State no figure, limit or target.
+Constraints: no jargon without a plain gloss. No threats and no
+cheerleading. State no figure, limit or target.
 
 Format: a short opening on what we need and when; a numbered list of
-what to submit; a numbered list of what not to do. Under 500 words.
+what to submit; another of what not to do.
 
 Leave a marked [ ] wherever a figure or name is needed.
 ```
-*Check before you use the output:* that every placeholder is still empty. A helpfully filled-in number ends up in a manager's spreadsheet.
+*Check before you use the output:* that every placeholder is still empty.
 
 **P3.3 — Forecast assumption challenge**
 *Use when:* the forecast is built and you want the weak joints found.
 *Paste this:*
 ```
 You are reviewing the assumptions behind a forecast for [ENTITY] over
-[PERIOD], pasted below with their values.
+[PERIOD].
 
 Task: identify which assumptions the outcome is most sensitive to, which
-are mutually inconsistent, and which are too vague to test later.
+are mutually inconsistent, and which cannot be tested.
 
 Constraints: never tell me an assumption is too high or too low — you
-have no basis for that. Compute no revised outcomes.
+have no basis. Compute no revised outcomes.
 
 Format: three sections — Most sensitive, Mutually inconsistent, Not
-testable as written. Name the assumption and state the problem.
+testable as written. Name each and state the problem.
 
-Where something might be reconciled by facts I have withheld, ask.
+Where facts I have withheld might reconcile something, ask.
 
-Assumptions:
+Assumptions and values:
 [PASTE]
 ```
-*Check before you use the output:* the sensitivity claims. Without your model it reasons from structure alone, so treat them as a list to test.
+*Check before you use the output:* the sensitivity claims. Without your model they are a list to test, not a finding.
 
 **P3.4 — Scenario definitions, without numbers**
-*Use when:* scenarios have been asked for and nobody has defined them.
+*Use when:* scenarios were asked for and nobody has defined them.
 *Paste this:*
 ```
-You are defining scenarios for [ENTITY] over [PERIOD]. Below is the
-business and the uncertainties that actually worry management.
+You are defining scenarios for [ENTITY] over [PERIOD].
 
 Task: define [NUMBER] scenarios. Each is a coherent story about the
 world, not a percentage applied to a base case.
@@ -326,33 +320,33 @@ assumptions move and which way, and the earliest observable sign.
 
 If two uncertainties cannot vary independently, say so.
 
-Description:
+Business and uncertainties:
 [PASTE]
 ```
-*Check before you use the output:* the early-warning signs. They are the part that gets used, and the part most often written as a platitude.
+*Check before you use the output:* the early-warning signs — the part that gets used, and the likeliest platitude.
 
 **P3.5 — Budget submission review**
 *Use when:* submissions are in and you must review many quickly.
 *Paste this:*
 ```
 You are reviewing a budget submission from [DEPARTMENT] for [PERIOD]
-against our submission rules. Both are below.
+against our rules.
 
-Task: list every breach of the rules, and every required explanation
-missing or too vague to be one.
+Task: list every breach, and every required explanation missing or too
+vague.
 
 Constraints: do not assess whether the figures are reasonable — that is
-mine to judge. Quote the submission's exact wording when you flag it.
+mine. Quote the submission's exact wording when you flag it.
 
 Format: a table — Rule, What the submission says, Problem, What to
-request. Then one line: ready for review, or return to sender.
+request. Then: ready for review, or return to sender.
 
-If a rule is ambiguous, flag the rule rather than choose a reading.
+If a rule is ambiguous, flag the rule rather than choose.
 
 Rules, then submission:
 [PASTE]
 ```
-*Check before you use the output:* the quotations. If one does not appear verbatim in the submission, discard the review and run it again.
+*Check before you use the output:* the quotations. If one is not verbatim, discard the review and run it again.
 
 ## 4. Audit and assurance support
 
@@ -360,15 +354,15 @@ Rules, then submission:
 *Use when:* the auditor's list has arrived and you must allocate work.
 *Paste this:*
 ```
-You are planning a finance team's response to the auditor's information
-request list below, for [ENTITY], [PERIOD].
+You are planning a response to an auditor's request list for [ENTITY],
+[PERIOD].
 
-Task: for each item, say plainly what is likely being established, what
-document would satisfy it, and which team role holds it.
+Task: for each item, say what is likely being established, what document
+satisfies it, and which role holds it.
 
 Constraints: this is general information about how such requests are
 framed, not advice on what any standard requires — say so at the top.
-Never tell me an item is unnecessary or can be refused.
+Never call an item unnecessary.
 
 Format: a table — Request, Likely purpose, Document, Owner, Effort.
 
@@ -377,20 +371,20 @@ Where you cannot tell what is asked, write "ask them to clarify".
 List:
 [PASTE]
 ```
-*Check before you use the output:* the "likely purpose" column. It is inference, and a wrong inference means doing the work twice.
+*Check before you use the output:* the "likely purpose" column. It is inference, and a wrong one doubles the work.
 
 **P4.2 — Response to an audit query**
 *Use when:* you have the facts and need the reply written cleanly.
 *Paste this:*
 ```
-You are helping a qualified accountant respond to an audit query on
-[TOPIC] for [ENTITY], [PERIOD]. Below are the query and our facts.
+You are helping an accountant respond to an audit query on [TOPIC] for
+[ENTITY], [PERIOD].
 
 Task: draft the response.
 
-Constraints: use only my facts. Never assert that a treatment is correct
-or compliant — state what was done and why, and let the auditor form
-their view. Name no standard or authority.
+Constraints: use only my facts. Never assert a treatment is correct or
+compliant — state what was done and why, and let the auditor judge. Name
+no standard.
 
 Format: our position in short; the facts in order; the documents
 attached; any point that remains a matter of judgement.
@@ -400,40 +394,38 @@ If my facts do not fully answer the query, say what is missing.
 Query and facts:
 [PASTE]
 ```
-*Check before you use the output:* any sentence asserting compliance. Delete it and say what you did instead. Your position is what happened, not a claim about the rules.
+*Check before you use the output:* any sentence asserting compliance. Replace it with what you actually did.
 
 **P4.3 — Control description write-up**
-*Use when:* a control exists in practice but has never been written down.
+*Use when:* a control exists in practice but was never written down.
 *Paste this:*
 ```
-You are documenting an internal control at [ENTITY]. Below is what
-actually happens, including the informal parts.
+You are documenting an internal control at [ENTITY].
 
 Task: write the control description.
 
 Constraints: describe only what I say happens, weaknesses included.
 Never write the control as it ought to be, and add no threshold or
-approver I have not stated. Never use the word "ensures".
+approver I have not stated.
 
 Format: What it is; Who performs it; How often; What evidence it leaves;
 What it would catch; What it would not catch.
 
 If you cannot complete the last section honestly, ask me questions.
 
-What happens:
+What actually happens, informal parts included:
 [PASTE]
 ```
-*Check before you use the output:* the "would not catch" section. If it is short or reassuring it is wrong — that section is the reason for writing the description.
+*Check before you use the output:* the "would not catch" section. If it is short or reassuring, it is wrong.
 
 **P4.4 — Walkthrough interview questions**
-*Use when:* you are about to sit with a process owner and trace a transaction.
+*Use when:* you are about to trace a transaction with its process owner.
 *Paste this:*
 ```
 You are preparing a walkthrough of the [PROCESS] process at [ENTITY].
-Below is what we believe the process is.
 
-Task: write the questions for the person who actually performs it,
-designed to reveal where the documented process and the real one differ.
+Task: write the questions for the person who performs it, designed to
+reveal where the documented process and the real one differ.
 
 Constraints: open questions only, nothing answerable with yes. Do not
 presume the process is followed. Assess nothing.
@@ -441,47 +433,45 @@ presume the process is followed. Assess nothing.
 Format: questions in the order the transaction flows, each with a note
 on what a concerning answer sounds like.
 
-End with the questions that surface undocumented workarounds.
+End with the questions that surface undocumented workarounds. Where my
+description is too vague to build a question on, say so.
 
 Believed process:
 [PASTE]
 ```
-*Check before you use the output:* that it does not read as an interrogation. People stop describing reality the moment they feel tested.
+*Check before you use the output:* that it does not read as an interrogation. People stop describing reality when tested.
 
 **P4.5 — Evidence gaps in a testing plan**
-*Use when:* you have drafted a testing approach and want the holes found.
+*Use when:* you have drafted a testing approach and want its holes found.
 *Paste this:*
 ```
-You are reviewing the draft testing approach below for [AREA] at
-[ENTITY] — what we test, how, and over what population.
+You are reviewing a draft testing approach for [AREA] at [ENTITY].
 
-Task: find where the evidence obtained would not support the conclusion
-drawn.
+Task: find where the evidence would not support the conclusion drawn.
 
 Constraints: this is a logical review, not a professional or regulatory
-one; say so at the top. Never say whether it meets any standard, and
-propose no sample sizes.
+one; say so at the top. Name no standard.
 
 Format: for each gap — what the test does, what conclusion is drawn, why
-the first does not support the second, what would close it.
+it does not follow, what would close it.
 
 If it is sound as far as you can tell, say so.
 
-Approach:
+What we test, how, and over what population:
 [PASTE]
 ```
-*Check before you use the output:* whether it stayed inside logic. Once it starts telling you what is required, it has left the ground it can be trusted on.
+*Check before you use the output:* whether it stayed inside logic. Telling you what is required is outside its competence.
 
 ## 5. Tax and compliance preparation
 
-Everything here is preparation, not advice, and no output should reach a filing without a qualified person in your jurisdiction reviewing it. Tax rules differ between countries, differ within them, and change — often with effect from a date already past. Use these to get organised, not to reach conclusions.
+Everything here is preparation, not advice. No output should reach a filing without a qualified person in your jurisdiction reviewing it: tax rules differ between countries, differ within them, and change. Use these to get organised, not to reach conclusions.
 
 **P5.1 — Information gathering checklist**
 *Use when:* a filing is coming and the documents are scattered.
 *Paste this:*
 ```
-You are helping a finance team organise itself before a [FILING TYPE]
-for [ENTITY] covering [PERIOD]. Below are the activities carried out.
+You are organising a finance team before a [FILING TYPE] for [ENTITY],
+[PERIOD].
 
 Task: a checklist of documents to gather for whoever prepares the
 filing.
@@ -495,24 +485,23 @@ Status.
 
 Where treatment depends on local rules, write "for your adviser".
 
-Activities:
+Activities carried out:
 [PASTE]
 ```
-*Check before you use the output:* that nothing drifted from "gather this" into "this is treated as". Strike any line stating a treatment.
+*Check before you use the output:* that nothing drifted from "gather this" into "this is treated as". Strike any treatment.
 
 **P5.2 — Categorisation queries**
 *Use when:* you are cleaning a transaction listing before it goes to an adviser.
 *Paste this:*
 ```
-You are preparing the transaction listing below for [ENTITY], [PERIOD],
-before it goes to our tax adviser.
+You are preparing a transaction listing for [ENTITY], [PERIOD], for our
+tax adviser.
 
-Task: identify the transactions described too vaguely for someone else
-to categorise, and write the question to put to whoever incurred them.
+Task: identify transactions described too vaguely for someone else to
+categorise, and write the question for whoever incurred them.
 
-Constraints: categorise nothing yourself and state no tax treatment —
-this is preparation, not advice. Never infer purpose from a supplier
-name.
+Constraints: categorise nothing and state no tax treatment; this is
+preparation, not advice. Never infer purpose from a supplier name.
 
 Format: a table — Reference, Description as given, Why it is unclear,
 Question to ask, Who to ask.
@@ -522,22 +511,21 @@ Leave out anything adequately described. A short list is a good outcome.
 Listing:
 [PASTE]
 ```
-*Check before you use the output:* whether purpose has been inferred from vendor names. "Software supplier, therefore software cost" needs unwinding later.
+*Check before you use the output:* whether purpose was inferred from vendor names. That assumption unwinds badly later.
 
 **P5.3 — Understanding a letter you have received**
-*Use when:* correspondence arrives and you need to know what is being asked.
+*Use when:* correspondence arrives and you need to know what it asks.
 *Paste this:*
 ```
-You are helping a finance professional understand the letter below,
-received by [ENTITY].
+You are helping a finance professional understand a letter received by
+[ENTITY].
 
-Task: tell me plainly what it appears to ask for, what it appears to
-require by when, and what it does not say.
+Task: say plainly what it appears to ask for, what it requires by when,
+and what it omits.
 
-Constraints: this is a reading aid and general information only, not
-legal or tax advice; procedures differ by jurisdiction and change. Never
-tell me how to respond, whether the position is correct, or what my
-obligations are. Work only from the words in the letter.
+Constraints: this is a reading aid and general information, not legal or
+tax advice; procedures differ by jurisdiction and change. Never tell me
+how to respond or what my obligations are.
 
 Format: What it asks for; Dates it states; What is unclear.
 
@@ -546,14 +534,14 @@ Quote ambiguous passages rather than resolving them.
 Letter:
 [PASTE]
 ```
-*Check before you use the output:* the deadlines, word for word against the letter. A misread date is the one error here with an irreversible consequence.
+*Check before you use the output:* the deadlines, word for word. A misread date is the one irreversible error here.
 
 **P5.4 — Questions for your adviser**
 *Use when:* you have adviser time booked and want to use it well.
 *Paste this:*
 ```
-You are preparing a finance team for a meeting with its tax adviser
-about [TOPIC] at [ENTITY]. Our situation is below.
+You are preparing a finance team to meet its tax adviser about [TOPIC]
+at [ENTITY].
 
 Task: the questions to ask, ordered so the answers build on each other,
 with the documents to have to hand for each.
@@ -563,51 +551,50 @@ state a rule. This is meeting preparation only.
 
 Format: numbered questions, each with a sub-line "Bring:".
 
-End with "Things we should tell them without being asked" — facts an
-adviser would want early.
+End with "Things we should tell them without being asked". Where my
+description leaves a gap, ask rather than assume.
 
 Our situation:
 [PASTE]
 ```
-*Check before you use the output:* the final section. It is the most valuable part and depends on facts you may not have mentioned.
+*Check before you use the output:* the final section — the most valuable part, resting on facts you may have omitted.
 
 **P5.5 — Obligations calendar**
 *Use when:* deadlines live in several people's heads.
 *Paste this:*
 ```
-You are building an internal compliance calendar for [ENTITY]. Below are
-the obligations we know of, with deadlines as we understand them.
+You are building an internal compliance calendar for [ENTITY].
 
-Task: turn the list into a calendar, with the internal milestones that
-must happen before each external deadline.
+Task: turn the obligations below into a calendar, with the internal
+milestones before each external deadline.
 
-Constraints: use only my obligations and dates. Correct none of my dates
-— you do not know my jurisdiction. Anything you think I omitted goes in
-a separate list, phrased as questions.
+Constraints: use only my obligations and dates, and correct none of them
+— you do not know my jurisdiction. List anything you think I omitted as
+questions.
 
 Format: a table — External deadline, Obligation, Internal milestone,
 Days before, Owner. Sorted by date.
 
-Open with a line saying the dates come from me and need confirming.
+Open by saying the dates come from me and need confirming.
 
-Obligations:
+Obligations, with deadlines as we understand them:
 [PASTE]
 ```
-*Check before you use the output:* that no deadline has been silently adjusted and no obligation has appeared that you did not list.
+*Check before you use the output:* that no deadline was silently adjusted and no obligation added.
 
 ## 6. Contracts, agreements and policy documents
 
-Reading a contract for its finance consequences is not the same as advising on it. These prompts extract and organise. They do not interpret, and none replaces your legal adviser.
+Reading a contract for its finance consequences is not the same as advising on it. These prompts extract and organise; they do not interpret, and none replaces your legal adviser.
 
 **P6.1 — Finance summary of an agreement**
-*Use when:* a signed agreement lands and you need to know what it does to your numbers.
+*Use when:* a signed agreement lands and you need its effect on the numbers.
 *Paste this:*
 ```
-You are helping a finance team understand the financial mechanics of the
-agreement below, involving [ENTITY].
+You are explaining the financial mechanics of an agreement involving
+[ENTITY].
 
-Task: summarise only the provisions affecting money moving, timing, or
-what must be recorded and tracked.
+Task: summarise only the provisions affecting money, timing, or what
+must be tracked.
 
 Constraints: this is a reading aid, not legal advice; law differs by
 jurisdiction. Quote the clause reference and wording for every point,
@@ -621,46 +608,44 @@ End with "Clauses I could not interpret with confidence", quoting each.
 Agreement:
 [PASTE]
 ```
-*Check before you use the output:* every clause reference against the document. If the references drift, nothing else in the summary is safe.
+*Check before you use the output:* every clause reference. If the references drift, nothing else is safe.
 
 **P6.2 — Payment terms extraction**
-*Use when:* you are loading terms into a system or comparing across a portfolio.
+*Use when:* you are loading terms into a system or comparing a portfolio.
 *Paste this:*
 ```
-You are extracting data from the contract below for [ENTITY].
+You are extracting data from a contract for [ENTITY].
 
 Task: extract the payment terms into a table for system entry.
 
-Constraints: extract only. Never normalise into categories of your own
-or fill an empty field with what is usual. Every value must appear in
-the text, with its clause reference. If a field is not addressed, write
-"not stated" — never a default.
+Constraints: extract only; never normalise into your own categories.
+Every value must appear with its clause reference. If a field is not
+addressed, write "not stated" — never a default.
 
-Format: a table — Field, Value, Clause reference. Fields: currency,
-amount basis, invoicing frequency, payment period, late payment, price
-adjustment, discounts, expenses, disputed amounts.
+Format: a table — Field, Value, Clause. Fields: currency, amount basis,
+invoicing frequency, payment period, late payment, price adjustment,
+discounts, expenses, disputes.
 
-Below it, list any payment provision that did not fit.
+Then list any payment provision that did not fit.
 
 Contract:
 [PASTE]
 ```
-*Check before you use the output:* every "not stated", and any field with an odd clause reference. Extraction fails most in documents with unusual numbering.
+*Check before you use the output:* every "not stated", and any odd clause reference.
 
 **P6.3 — Obligations and dates register**
 *Use when:* the contract creates things somebody must remember to do.
 *Paste this:*
 ```
-You are building an obligations register from the agreement below,
-involving [ENTITY].
+You are building an obligations register from an agreement involving
+[ENTITY].
 
-Task: list every obligation falling on us, every deadline, notice
-period, renewal and expiry date, and every condition that triggers one.
+Task: list every obligation falling on us, with every deadline, notice
+period, renewal date and triggering condition.
 
 Constraints: quote the clause reference and wording for each entry.
-Calculate a date only where the contract states both the reference point
-and the period, and show the working. Never interpret conditional
-wording — quote it.
+Calculate a date only where the contract gives both the reference point
+and the period. Never interpret conditional wording — quote it.
 
 Format: a table — Obligation, Owner function, Trigger or date, Notice
 period, Clause, Wording quoted.
@@ -670,56 +655,54 @@ Flag any obligation whose trigger you could not determine.
 Agreement:
 [PASTE]
 ```
-*Check before you use the output:* every calculated date. Notice periods interact with business-day and month-end definitions, and that is where the arithmetic goes quietly wrong.
+*Check before you use the output:* every calculated date. Business-day and month-end definitions break the arithmetic.
 
 **P6.4 — Questions for legal review**
-*Use when:* legal budget is limited and you want it spent on the right clauses.
+*Use when:* legal budget is limited and you want it spent well.
 *Paste this:*
 ```
-You are preparing a finance team for legal review of the draft agreement
-below, involving [ENTITY], together with the commercial deal we believe
-we agreed.
+You are preparing for legal review of a draft agreement involving
+[ENTITY].
 
-Task: find where the drafting and my description do not obviously match,
-and write the questions for our legal adviser.
+Task: find where the draft and the deal I describe diverge, and write
+the questions for counsel.
 
 Constraints: give no legal advice and never say whether a term is
-standard or reasonable. Confine yourself to: this is what you said, this
-is what the words say, here is the question.
+standard or reasonable. Confine yourself to: what I said the deal is,
+what the words say, the question.
 
 Format: a table — Commercial expectation, Clause and wording, The
-mismatch, Question for counsel. Ordered by exposure.
+mismatch, Question for counsel.
 
-Where drafting matches my description, say so rather than invent a
+Where drafting matches my description, say so rather than invent
 concern.
 
 The deal, then the draft:
 [PASTE]
 ```
-*Check before you use the output:* that the expectation column reflects what you actually said, not a tidier version of it.
+*Check before you use the output:* that the expectation column reflects what you said, not a tidier version of it.
 
 **P6.5 — Internal policy drafting**
 *Use when:* you need a policy people will actually follow.
 *Paste this:*
 ```
-You are drafting an internal [POLICY TYPE] policy for [ENTITY]. Below
-are the rules we have decided and the limits we have set.
+You are drafting an internal [POLICY TYPE] policy for [ENTITY].
 
 Task: write the policy.
 
 Constraints: include only my rules. Add no thresholds, approval levels
-or exceptions of your own — if one seems missing, list it as a question.
-Reference no law. No sentence over 25 words.
+or exceptions — if one seems missing, list it as a question. Reference
+no law. No sentence over 25 words.
 
 Format: Purpose; Who it applies to; The rules as numbered clauses; What
-to do if the rules do not cover your situation; Who owns this policy.
+to do if they do not cover your situation; Who owns it.
 
 End with "Decisions you have not made yet".
 
-Our decisions:
+Rules and limits we have decided:
 [PASTE]
 ```
-*Check before you use the output:* the gaps list, before circulating anything. A policy with an unmade decision inside it gets tested by whoever finds the gap.
+*Check before you use the output:* the gaps list, before circulating anything.
 
 ## 7. Board papers, reports and written communication
 
@@ -727,8 +710,7 @@ Our decisions:
 *Use when:* you know what to say and not yet how to arrange it.
 *Paste this:*
 ```
-You are structuring a board paper on [TOPIC] for [ENTITY]. Below are the
-decision required, what the board knows, and the facts I hold.
+You are structuring a board paper on [TOPIC] for [ENTITY].
 
 Task: propose the structure — sections, what belongs in each, roughly
 how long each should be.
@@ -739,43 +721,41 @@ no recommendation.
 Format: a numbered outline. For each section: purpose in one line, what
 goes in it, target length, and whether it belongs in an appendix.
 
-End with "Facts you will need that you have not mentioned" — as
-questions.
+End with "Facts you will need that you have not mentioned".
 
 Background:
 [PASTE]
 ```
-*Check before you use the output:* the gaps list against your own knowledge. It is the closest thing here to a rehearsal.
+*Check before you use the output:* the gaps list against your own knowledge — the closest thing here to a rehearsal.
 
 **P7.2 — One page from twenty**
 *Use when:* the paper is written and the summary is due.
 *Paste this:*
 ```
-You are writing the executive summary of the paper below. The audience is
-[AUDIENCE]; the decision required is [DECISION].
+You are summarising the paper below for [AUDIENCE]. The decision
+required is [DECISION].
 
 Task: a summary of no more than one page.
 
-Constraints: every statement must appear in the paper. Where the paper
-qualifies a key point, the qualification must survive — never simplify a
-hedged conclusion into a firm one. Change no figure.
+Constraints: every statement must appear in the paper. Where it
+qualifies a key point, the qualification must survive — never harden a
+hedged conclusion. Change no figure.
 
 Format: the decision in one sentence; three to five bullets of what the
-reader must know; the main uncertainty; what happens next.
+reader must know; the main uncertainty; next steps.
 
-List any point where the paper is unclear about its own conclusion.
+List any point where the paper is unclear about its conclusion.
 
 Paper:
 [PASTE]
 ```
-*Check before you use the output:* the hedges. Summarising flattens qualified statements into confident ones, and the summary is what gets quoted back at you.
+*Check before you use the output:* the hedges. Summarising turns qualified statements into confident ones.
 
 **P7.3 — The difficult email**
 *Use when:* you must tell someone something they will not like.
 *Paste this:*
 ```
-You are helping a finance professional write a difficult message. Below
-are the situation, the recipient and the outcome I want.
+You are helping a finance professional write a difficult message.
 
 Task: draft the message.
 
@@ -785,192 +765,182 @@ add one I have not. No flattery and no exclamation marks.
 
 Format: subject line, then the message, under 200 words.
 
-Then one alternative opening with a different balance of directness, and
-a line on when each is better.
+Then one alternative opening with a different balance of directness. If
+my description leaves the outcome unclear, ask.
 
-The situation:
+Situation, recipient, outcome I want:
 [PASTE]
 ```
-*Check before you use the output:* whether a commitment has crept in. Awkward drafts acquire offers of help you did not intend to make.
+*Check before you use the output:* whether a commitment crept in that you did not intend to make.
 
 **P7.4 — Anticipating the questions**
 *Use when:* you present tomorrow.
 *Paste this:*
 ```
-You are preparing a finance presenter for questions on [TOPIC] at
-[ENTITY]. Below are my paper and the audience.
+You are preparing a presenter for questions on [TOPIC] at [ENTITY].
 
-Task: predict the questions, hardest first — from someone who read only
-the summary, and from someone who read the appendix closely.
+Task: predict the questions, hardest first — from a summary-only reader
+and from one who read the appendix.
 
 Constraints: never answer them or draft my answers; I need to know what
-I do not know. Invent no facts about our business in a question's
-framing.
+I do not know. Invent no facts about our business.
 
-Format: three groups — questions the paper answers, questions it raises
-but does not answer, questions it does not anticipate at all.
+Format: three groups — what the paper answers, what it raises but leaves
+unanswered, what it does not anticipate.
 
-Say plainly where a likely question has no available answer.
+Say plainly where a likely question has no answer available.
 
 Paper and audience:
 [PASTE]
 ```
-*Check before you use the output:* the middle group. Those are the questions you will be asked and are least prepared for.
+*Check before you use the output:* the middle group — the questions you will be asked and are least ready for.
 
 **P7.5 — Plain-English pass**
 *Use when:* a document must be read by people outside finance.
 *Paste this:*
 ```
-You are rewriting the finance document below for readers who are
-competent professionals but not accountants.
+You are rewriting a finance document for readers who are competent
+professionals but not accountants.
 
-Task: rewrite it so it can be read once and understood.
+Task: rewrite it to be read once and understood.
 
-Constraints: keep every figure and every qualification intact. Where a
-technical term is unavoidable, keep it and gloss it in brackets on first
-use — never swap in a loose synonym. Never simplify a conditional
-statement into an unconditional one.
+Constraints: keep every figure and qualification intact. Keep
+unavoidable technical terms and gloss them in brackets on first use —
+never a loose synonym, and never make a conditional statement
+unconditional.
 
-Format: the rewritten document, then a list of the terms you glossed and
-the gloss used, so I can check each.
+Format: the rewritten document, then the terms you glossed and the gloss
+used.
 
-Where a passage cannot be made plainer without changing its meaning,
-leave it under "Kept as written".
+Where a passage cannot be plainer without changing meaning, leave it
+under "Kept as written".
 
 Document:
 [PASTE]
 ```
-*Check before you use the output:* every gloss. A slightly wrong definition, in a document going to non-specialists, is harder to correct later than the jargon was.
+*Check before you use the output:* every gloss. A wrong definition is harder to correct later than the jargon was.
 
 ## 8. Process documentation and team training
 
 **P8.1 — Procedure from your own narration**
-*Use when:* the process exists only in the hands of the person who does it.
+*Use when:* the process lives only in the head of the person who does it.
 *Paste this:*
 ```
-You are turning a spoken description into a written procedure. Below are
-notes of someone describing how they perform [PROCESS] at [ENTITY].
+You are turning a spoken description of [PROCESS] at [ENTITY] into a
+written procedure.
 
 Task: write the procedure as numbered steps a competent newcomer could
 follow.
 
-Constraints: include only steps in the source, and add no system names
-or approvals not mentioned. Where the speaker says "usually" or "it
-depends", preserve the conditionality — never turn it into a rule. Flag
-any reordering.
+Constraints: include only steps in the source; add no system names or
+approvals not mentioned. Where the speaker says "usually" or "it
+depends", preserve the conditionality. Flag any reordering.
 
 Format: numbered steps starting with a verb; sub-steps where the source
 gives detail; a "Before you start" list.
 
 End with "Points the description left open".
 
-Source:
+Notes of the description:
 [PASTE]
 ```
-*Check before you use the output:* the conditionals. Turning "usually we check with the manager" into "check with the manager" changes the process; deleting it changes it more.
+*Check before you use the output:* the conditionals. Turning "usually we check" into "check" changes the process.
 
 **P8.2 — Desk instructions for a new joiner**
 *Use when:* somebody starts on Monday.
 *Paste this:*
 ```
 You are writing desk instructions for a new joiner at [ENTITY], covering
-[TASK]. Below are our procedure and what the joiner already knows.
+[TASK].
 
-Task: rewrite it for someone doing this for the first time, without our
+Task: rewrite the procedure below for a first-timer, without our
 internal shorthand.
 
 Constraints: change no step and no sequence. Expand an abbreviation only
-where I have told you what it means — otherwise mark it [EXPAND THIS].
-Invent no screen names or menu paths.
+where I have said what it means — otherwise mark it [EXPAND THIS].
 
-Format: the instructions, with a "what this step is for" line under
-each; then "When to stop and ask".
+Format: the instructions, each step with a "what this is for" line, then
+"When to stop and ask".
 
 List anything in our procedure you could not make sense of.
 
-Procedure and context:
+Procedure, and what the joiner knows:
 [PASTE]
 ```
-*Check before you use the output:* the "when to stop and ask" section, with the person who currently does the job. Only they can write it.
+*Check before you use the output:* the "when to stop and ask" section, with whoever does the job now.
 
 **P8.3 — Training exercises**
 *Use when:* you are teaching a technique rather than a task.
 *Paste this:*
 ```
-You are designing practice exercises for a finance team learning
-[TECHNIQUE] at [ENTITY]. Below are the team's level and their current
-mistakes.
+You are designing exercises for a team learning [TECHNIQUE] at [ENTITY].
 
-Task: design [NUMBER] exercises that surface exactly those mistakes, in
+Task: design [NUMBER] exercises surfacing exactly the mistakes below, in
 increasing difficulty.
 
-Constraints: use fictional data, clearly labelled as fictional. Never
-present invented figures as real market or benchmark data, and reference
-no real organisation. Each needs a definite right answer, or a definite
-list of what a good answer must address.
+Constraints: use fictional data, clearly labelled. Never present
+invented figures as real market or benchmark data, and name no real
+organisation. Each needs a definite right answer or marking list.
 
 Format: for each, the scenario, what the learner produces, the mistake
-it surfaces, and the marking notes.
+it surfaces, marking notes.
 
 If a mistake cannot be surfaced by an exercise, say so.
 
-Team and mistakes:
+Their level and current mistakes:
 [PASTE]
 ```
-*Check before you use the output:* the marking notes. Vague ones produce an argument rather than learning.
+*Check before you use the output:* the marking notes. Vague ones produce arguments, not learning.
 
 **P8.4 — Handover note**
 *Use when:* somebody is leaving, or going on long leave.
 *Paste this:*
 ```
-You are building a handover note for [ROLE] at [ENTITY]. Below is what
-the role does, in whatever order it came to me.
+You are building a handover note for [ROLE] at [ENTITY].
 
-Task: organise it into a handover document and identify what is missing.
+Task: organise the notes below into a handover document and identify
+what is missing.
 
 Constraints: use only what I give you. Never assume responsibilities
-from the job title or assign contacts I have not named. Where I have
-been vague, keep my words and mark it "needs detail".
+from the job title or name contacts I have not given. Where I was vague,
+mark "needs detail".
 
-Format: Recurring tasks by frequency; One-off items in progress; Who to
-contact for what; Access required; Known workarounds; Things only this
-person knows.
+Format: Recurring tasks by frequency; One-off items in progress;
+Contacts; Access required; Known workarounds; Things only this person
+knows.
 
 Prompt me with questions to fill the last section.
 
 What the role does:
 [PASTE]
 ```
-*Check before you use the output:* the questions it puts to you, and answer them before the person leaves. Afterwards, the note is whatever it is.
+*Check before you use the output:* the questions it puts to you, and answer them before the person leaves.
 
 **P8.5 — Explaining a spreadsheet to its future maintainer**
 *Use when:* a model has grown and one person understands it.
 *Paste this:*
 ```
-You are documenting a spreadsheet formula for a future maintainer. Below
-are the formula, the sheet layout, and what it is meant to achieve.
+You are documenting a spreadsheet formula for its future maintainer.
 
-Task: explain what the formula actually does, step by step, and whether
-that matches my description of the intent.
+Task: explain what the formula does, step by step, and whether that
+matches my intent.
 
 Constraints: work only from the formula text and the layout described.
-Assume no ranges or sheet contents I have not given. Where an edge case
-cannot be determined from what I provided, say so.
+Assume no ranges or sheet contents I have not given.
 
-Format: what it does in one sentence; a numbered breakdown from the
-innermost operation outwards; then Edge cases — blanks, errors, text
-where a number is expected, growing ranges.
+Format: one sentence on what it does; a numbered breakdown from the
+inside out; then Edge cases — blanks, errors, wrong types, growth.
 
-End with "Where this may not match your stated intent".
+Say so where an edge case cannot be determined from what I gave.
 
-Formula, layout and intent:
+Formula, layout and intended result:
 [PASTE]
 ```
-*Check before you use the output:* the edge cases, by testing them in a copy of the file. An explanation of a formula is a hypothesis until the spreadsheet agrees.
+*Check before you use the output:* the edge cases, by testing them in a copy of the file.
 
 ## Building your own
 
-Every prompt above is the same six parts in the same order. Once you see the frame you can write your own in about two minutes.
+Every prompt above is the same six parts in the same order. Once you see the frame, your own take about two minutes.
 
 | Part | What it does | Typical failure if you omit it |
 |---|---|---|
@@ -981,6 +951,6 @@ Every prompt above is the same six parts in the same order. Once you see the fra
 | Format | Names the shape of the output | Retyping it by hand afterwards |
 | Uncertainty rule | Says what to do when it does not know | Confident, fluent, wrong |
 
-The last is the part people leave out, and the part that separates a tool from a liability. "If you are unsure, say so" is the weak version. The strong ones name the behaviour: put unclassifiable items in a separate list; quote the clause you could not interpret; state what information you would need; say plainly that you cannot reconcile the components to the total. Give it somewhere to put its ignorance and it will use it. Give it nowhere and it will smooth the gap over with something that reads well.
+The last is the part people leave out, and the part that separates a tool from a liability. "If you are unsure, say so" is the weak version. The strong ones name the behaviour: put unclassifiable items in a separate list; quote the clause you could not interpret; say plainly that you cannot reconcile the components to the total. Give it somewhere to put its ignorance and it will use it. Give it nowhere and it will smooth the gap over with something that reads well.
 
-Two habits are worth forming. Write the check before you write the prompt — decide what would be wrong in the output and how you would spot it. If you cannot answer that, you are not ready to use the output for anything that matters. And keep your prompts in a file the team can see and improve, with a line under each recording what went wrong the last time someone used it. A prompt library nobody edits is a library of first attempts.
+Two habits are worth forming. Write the check before you write the prompt — decide what would be wrong in the output and how you would spot it. If you cannot answer that, you are not ready to use the output for anything that matters. And keep your prompts where the team can improve them, with a line under each recording what went wrong last time. A prompt library nobody edits is a library of first attempts.
