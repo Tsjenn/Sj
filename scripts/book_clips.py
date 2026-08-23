@@ -84,6 +84,22 @@ BOOKS = {
             ("History, craft, science —\nand 63 recipes.", 80),
         ],
     },
+    "ledger": {
+        "cover": "The-Silicon-Ledger-cover.jpg",
+        "title": "THE SILICON LEDGER",
+        "face": "bold",
+        "bg": [(10, 10, 14), (30, 20, 13)],
+        "accent": (240, 185, 106),
+        "mood": "clean",
+        "cards": [
+            ("In a single day,\none company lost\n589 billion dollars.", 88),
+            ("No factory closed.\nNo product failed.\nNothing physical\nchanged.", 82),
+            ("That is what a market\ncapitalisation is.\nA price, not a fact.", 78),
+            ("Two AI companies with\nno audited accounts\nare worth about a\ntrillion each.", 72),
+            ("One assumption —\nhow long a server lasts —\nmoves billions of profit\nwithout moving\na cent of cash.", 64),
+            ("I am a chartered\naccountant.\nI read the filings.", 86),
+        ],
+    },
     "novel": {
         "cover": "AmahsDaughter-cover.jpg",
         "title": "THE AMAH'S DAUGHTER",

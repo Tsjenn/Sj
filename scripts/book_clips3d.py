@@ -36,6 +36,7 @@ W, H, FPS = 1080, 1920, 30
 # Amazon ASINs, filled in as the owner confirms each one. A book with no
 # ASIN here simply gets no URL bar on its end card.
 ASIN = {
+    "ledger": "B0HG7RHNL4",
     "ai":     "B0HG6VFYXP",
     "matcha": "B0HG5ZY46K",
     "novel":  "B0HG6VGHDM",
@@ -43,6 +44,7 @@ ASIN = {
 
 
 LOOK = {
+    "ledger": {"bg": ["#1c1207", "#07070a"], "accent": "#e8b56a", "spine": "#2a1a0c"},
     "ai":     {"bg": ["#1b3career", "#070d18"], "accent": "#e0a33e", "spine": "#0f2438"},
     "matcha": {"bg": ["#2f5c3a", "#08130c"],    "accent": "#c6d678", "spine": "#2b4f33"},
     "novel":  {"bg": ["#23456e", "#060b16"],    "accent": "#c9a84c", "spine": "#16294a"},
