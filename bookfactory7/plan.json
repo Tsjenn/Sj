@@ -248,7 +248,7 @@
             ]
           },
           "brief": "How specifying the output shape improves both usability and accuracy. Asking for tables with named columns, for a fixed template, for a machine-readable format. Why a defined shape reduces waffle and makes verification faster.",
-          "status": "todo",
+          "status": "done",
           "tables": "table: output format vs when to use it"
         },
         {
@@ -281,7 +281,7 @@
             ]
           },
           "brief": "Teach the loop that turns a mediocre first draft into a strong final one: draft, then critique with explicit criteria, then revise, then verify. Include prompt patterns for 'attack this as a hostile reviewer' and 'list what is missing'. Be honest about the ceiling: a model cannot catch what it does not know.",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch15",
@@ -298,7 +298,7 @@
             ]
           },
           "brief": "How to make AI write in your voice or your firm's. Building a reusable style instruction from samples of your own writing. Where personas genuinely help (audience-shifting, explaining to a lay reader) and where they are theatre.",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch16",
@@ -315,7 +315,7 @@
             ]
           },
           "brief": "Contracts, annual reports, policy manuals, transcripts. Chunking, hierarchical summarising, extraction into tables, and the crucial habit of verifying extracted figures against the source page. Why 'summarise this 200-page document' in one shot is the wrong instruction.",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch17",
@@ -400,7 +400,7 @@
             ]
           },
           "brief": "Retrieval explained for non-technical readers: why attaching your own documents beats hoping the model 'knows', how semantic search differs from keyword search, and why retrieval reduces but does not eliminate invention. When a project is enough and when a proper retrieval system is warranted.",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch21",
@@ -417,7 +417,7 @@
             ]
           },
           "brief": "Writing the personal or firm-level standing instruction: the single page that makes every future conversation better. Include a full worked example for a finance professional and one for a small business owner.",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch22",
@@ -489,7 +489,7 @@
             ]
           },
           "brief": "The decision framework for moving from assistance to automation, scheduled runs, and pipelines. The reversibility test. Designing the human checkpoint. Failure modes of unattended automation and how to notice them early.",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch26",
@@ -524,7 +524,7 @@
             ]
           },
           "brief": "A decision tree that closes Part III: chat, project, knowledge base, working assistant, agent, or custom build. Cost, effort, control, and risk compared honestly.",
-          "status": "todo",
+          "status": "done",
           "tables": "table: surface vs setup effort vs control vs typical cost"
         }
       ]
@@ -667,7 +667,7 @@
             ]
           },
           "brief": "INDUSTRY PLAYBOOK. Fixed structure: (1) what this work actually consists of; (2) the value map — where AI helps most and least; (3) ten concrete use cases, each with what to prompt and what to check; (4) two or three worked prompts in the six-part frame from ch09; (5) the risks specific to this sector; (6) a 30-day starting plan; (7) how to measure whether it worked. Month-end close, management reporting, variance commentary, reconciliations support, budget drafting, policy interpretation, board packs. Emphasise the arithmetic-reliability warning from ch03 — the model drafts the commentary, the spreadsheet does the maths.",
-          "status": "todo",
+          "status": "done",
           "tables": "value map table; ten use cases table; risk table"
         },
         {
@@ -735,7 +735,7 @@
             ]
           },
           "brief": "INDUSTRY PLAYBOOK. Fixed structure: (1) what this work actually consists of; (2) the value map — where AI helps most and least; (3) ten concrete use cases, each with what to prompt and what to check; (4) two or three worked prompts in the six-part frame from ch09; (5) the risks specific to this sector; (6) a 30-day starting plan; (7) how to measure whether it worked. Claims triage support, policy wording comparison, underwriting file summarisation, customer correspondence, fraud pattern flagging as a support tool. Fairness and explainability duties; never automated decline decisions without human review.",
-          "status": "todo",
+          "status": "done",
           "tables": "value map table; ten use cases table; risk table"
         },
         {
@@ -922,7 +922,7 @@
             ]
           },
           "brief": "INDUSTRY PLAYBOOK. Fixed structure: (1) what this work actually consists of; (2) the value map — where AI helps most and least; (3) ten concrete use cases, each with what to prompt and what to check; (4) two or three worked prompts in the six-part frame from ch09; (5) the risks specific to this sector; (6) a 30-day starting plan; (7) how to measure whether it worked. The chapter for the reader with no IT department: the ten highest-value uses, a realistic weekly routine, the cheapest workable setup, and what to do yourself versus hand over.",
-          "status": "todo",
+          "status": "done",
           "tables": "value map table; ten use cases table; risk table"
         }
       ]
