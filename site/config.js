@@ -99,6 +99,10 @@ window.STORE = {
       price: "SET-ME",
       link: "https://www.amazon.com/dp/B0HG6VGHDM",
     },
+    ledger: {
+      price: "SET-ME",
+      link: "https://www.amazon.com/dp/B0HG7RHNL4",
+    },
     // AI for Finance Teams — The Working Pack.
     // Upload dist/AI-For-Finance-Teams.zip to Gumroad, then paste the link
     // and YOUR chosen price here. Priced for firms, not individuals — this
