@@ -36,6 +36,7 @@ W, H, FPS = 1080, 1920, 30
 # Amazon ASINs, filled in as the owner confirms each one. A book with no
 # ASIN here simply gets no URL bar on its end card.
 ASIN = {
+    "ai":     "B0HG6VFYXP",
     "matcha": "B0HG5ZY46K",
 }
 
