@@ -1,0 +1,77 @@
+AI WITHOUT THE HYPE - PAPERBACK SETUP ON KDP
+
+WHY THE UPLOAD FAILED BEFORE
+You were in the Paperback flow but uploading the ebook files.
+Paperback will not accept an EPUB interior, and it will not accept a JPG
+cover. It wants a PDF interior and a single PDF wrap cover. Those two
+files are now attached. Nothing was wrong with your account.
+
+DO THE EBOOK FIRST (it is already ready)
+Bookshelf > Create > Kindle eBook
+Manuscript: AI-Without-The-Hype.epub
+Cover:      AI-Without-The-Hype-cover.jpg
+Publish. Then come back and do the paperback.
+
+THEN THE PAPERBACK
+On the finished ebook, click "Create Paperback". That copies the title,
+subtitle, author, description, keywords and categories across, so you do
+not retype anything.
+
+SETTINGS TO CHOOSE - these must match the files exactly
+
+Print options
+  Ink and paper       Black & white interior with white paper
+  Trim size           7 x 10 in  (choose "Select a different size")
+  Bleed settings      Bleed (PDF only)
+  Cover finish        Matte   (glossy also fine - your taste; matte suits
+                      a dark navy cover and hides fingerprints)
+
+Manuscript
+  Upload              AI-Without-The-Hype-INTERIOR.pdf
+  Page count          795 (KDP reads this itself; do not type it anywhere)
+
+Cover
+  Choose              "Upload a cover you already have (print-ready PDF)"
+  Upload              AI-Without-The-Hype-WRAP-cover.pdf
+  Do NOT open Cover Creator - it will overwrite this file.
+
+ISBN
+  Take the free KDP-assigned ISBN unless you already own one.
+
+AI content disclosure
+  YES. Say AI was used for text and images, and that you reviewed and
+  edited the work. Tick it on the paperback too, not just the ebook.
+
+WHAT THE FILES ALREADY HANDLE FOR YOU
+  Trim              7 x 10 in
+  Interior margins  0.875 in left and right (KDP requires 0.875 in gutter
+                    for books of 601-828 pages), 0.75 in top, 0.85 in bottom
+  Page numbers      centred in the footer
+  Diagrams          all 68 converted to greyscale for black ink printing
+  Spine width       1.79 in, calculated from 795 pages on white paper
+  Bleed             0.125 in on all four outside edges
+  Cover size        16.04 x 10.25 in at 300 dpi
+  Barcode area      left clear on the lower right of the back cover, which
+                    is where KDP prints its own barcode
+
+TWO THINGS TO EXPECT
+1. KDP may report the page count as 796. It pads odd page counts by one
+   blank leaf. That is normal and does not require a new file.
+2. The limit for black ink on white paper is 828 pages. At 795 you are
+   inside it with room to spare. If you ever add material and cross 828,
+   the fix is cream paper or splitting the book into two volumes.
+
+BEFORE YOU HIT PUBLISH
+Open the KDP Print Previewer and check four things:
+  - the title page
+  - one part divider
+  - one diagram (any chapter opening)
+  - Chapter 18 or Chapter 35, which are the table-heavy stress tests
+If the previewer flags anything, tell me the exact wording and I will
+regenerate the file.
+
+PRICE
+Your decision. KDP will show you the minimum list price it will allow,
+because a 795-page paperback has a high printing cost. It will be higher
+than the ebook by a wide margin. Set it wherever you want above that
+floor.
