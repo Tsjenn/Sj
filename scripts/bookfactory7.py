@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""WORKING WITH INTELLIGENCE factory (bookfactory7).
+"""AI WITHOUT THE HYPE factory (bookfactory7).
 
     python3 scripts/bookfactory7.py status   # progress + next chapter brief
     python3 scripts/bookfactory7.py build    # EPUB + cover into dist/
@@ -164,14 +164,14 @@ def build():
     complete = len(done) == len(chs)
     os.makedirs(DIST, exist_ok=True)
 
-    cover_path = os.path.join(DIST, "WorkingWithIntelligence-cover.jpg")
+    cover_path = os.path.join(DIST, "AI-Without-The-Hype-cover.jpg")
     if not os.path.exists(cover_path):
         sys.path.insert(0, os.path.join(ROOT, "scripts"))
         import ai_art
         ai_art.make_cover(cover_path)
 
     suffix = "" if complete else "-PREVIEW-%dof%d" % (len(done), len(chs))
-    epub_path = os.path.join(DIST, "Working-With-Intelligence%s.epub" % suffix)
+    epub_path = os.path.join(DIST, "AI-Without-The-Hype%s.epub" % suffix)
 
     uid = "urn:uuid:%08x-wwi7-4000-8000-%012x" % (abs(hash(plan["title"])) % 2**32,
                                                   abs(hash(plan["subtitle"])) % 2**48)
@@ -295,7 +295,7 @@ def build():
     print("Built %s (%d/%d chapters, ~%d words, %d illustrations)"
           % (epub_path, len(done), len(chs), words, len(art_files)))
     if complete:
-        print("COMPLETE — ready for KDP upload (EPUB + dist/WorkingWithIntelligence-cover.jpg).")
+        print("COMPLETE — ready for KDP upload (EPUB + dist/AI-Without-The-Hype-cover.jpg).")
     return complete
 
 

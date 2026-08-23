@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Diagrams for WORKING WITH INTELLIGENCE (bookfactory7).
+"""Diagrams for AI WITHOUT THE HYPE (bookfactory7).
 
     python3 scripts/ai_art.py          # render bookfactory7/art/chNN.png
-    python3 scripts/ai_art.py cover    # dist/WorkingWithIntelligence-cover.jpg
+    python3 scripts/ai_art.py cover    # dist/AI-Without-The-Hype-cover.jpg
 
 Every chapter declares an art spec in plan.json:
     {"type": "flow", "title": "...", "labels": [...]}
@@ -224,57 +224,80 @@ TYPES = {"flow":t_flow,"cycle":t_cycle,"matrix":t_matrix,"playbook":t_matrix,"st
          "checklist":t_checklist,"network":t_network,"ladder":t_ladder,"timeline":t_timeline}
 
 def make_cover(path):
+    """Bestseller shape: one huge typographic title, one accent colour, no clutter."""
     CW,CH=1600,2560
-    im=Image.new("RGB",(CW,CH),NAVY); d=ImageDraw.Draw(im)
+    DEEP=(9,18,32); MID=(19,36,60)
+    im=Image.new("RGB",(CW,CH),DEEP); d=ImageDraw.Draw(im)
     for y in range(CH):
-        t=y/CH; d.line([(0,y),(CW,y)], fill=(int(15+26*t),int(36+30*t),int(56+34*t)))
-    # constellation motif: an evenly spread, connected network (not a brain)
-    import random, math
-    rnd=random.Random(11)
-    X0,X1,Y0,Y1=130,CW-130,170,1040
-    cols,rows=8,5
-    cw=(X1-X0)/cols; chh=(Y1-Y0)/rows
-    pts=[]
-    for r in range(rows):
-        for c in range(cols):
-            if rnd.random()<0.10:      # a few gaps, so it is not a lattice
-                continue
-            x=X0+cw*(c+0.5)+rnd.uniform(-cw*0.34,cw*0.34)
-            y=Y0+chh*(r+0.5)+rnd.uniform(-chh*0.34,chh*0.34)
-            pts.append((x,y))
-    # link each node to its three nearest neighbours -> one connected web
-    seen=set()
-    for i,(x,y) in enumerate(pts):
-        order=sorted(range(len(pts)), key=lambda j:(pts[j][0]-x)**2+(pts[j][1]-y)**2)
-        for j in order[1:4]:
-            k=(min(i,j),max(i,j))
-            if k in seen: continue
-            seen.add(k)
-            d.line([(x,y),pts[j]], fill=(40,78,108), width=2)
-    for i,(x,y) in enumerate(pts):
-        r=5 if i%4 else 10
-        col=AMBER if i%6==0 else CYAN
-        d.ellipse([x-r,y-r,x+r,y+r], fill=col)
-    d.rectangle([0,1120,CW,1128], fill=CYAN)
-    ft=font(150,True)
-    for i,wd in enumerate(["WORKING","WITH","INTELLIGENCE"]):
-        sz=150
-        while d.textlength(wd,font=font(sz,True))>CW-200 and sz>60: sz-=4
-        f=font(sz,True); d.text(((CW-d.textlength(wd,font=f))/2, 1230+i*182), wd, font=f, fill=WHITE)
-    sub="The Professional's Complete Guide to AI"
-    sz=58
-    while d.textlength(sub,font=font(sz))>CW-260 and sz>28: sz-=2
-    f=font(sz); d.text(((CW-d.textlength(sub,font=f))/2, 1830), sub, font=f, fill=(196,214,226))
-    sub2="Prompting · Projects · Agents · Industry Playbooks"
-    sz=44
-    while d.textlength(sub2,font=font(sz))>CW-260 and sz>24: sz-=2
-    f2=font(sz); d.text(((CW-d.textlength(sub2,font=f2))/2, 1912), sub2, font=f2, fill=CYAN)
-    d.line([(CW/2-320,2210),(CW/2+320,2210)], fill=AMBER, width=4)
-    fa=font(76,True); auth="TANG SHIUAN JENN"
-    d.text(((CW-d.textlength(auth,font=fa))/2, 2250), auth, font=fa, fill=WHITE)
-    fb=font(38); bl="Chartered Accountant"
-    d.text(((CW-d.textlength(bl,font=fb))/2, 2350), bl, font=fb, fill=(176,196,210))
-    im.save(path,"JPEG",quality=92); print("cover ->", path)
+        t=y/CH
+        d.line([(0,y),(CW,y)], fill=(int(DEEP[0]+(MID[0]-DEEP[0])*t),
+                                     int(DEEP[1]+(MID[1]-DEEP[1])*t),
+                                     int(DEEP[2]+(MID[2]-DEEP[2])*t)))
+
+    # --- restrained circuit band across the top; suggests the subject, does not shout
+    import random
+    rnd=random.Random(5)
+    trace=(34,58,88)
+    for _ in range(22):
+        x=rnd.randint(60,CW-260); y=rnd.randint(130,620); L=rnd.choice([110,170,230])
+        if rnd.random()<0.5:
+            d.line([(x,y),(x+L,y)], fill=trace, width=4)
+            d.line([(x+L,y),(x+L,y+L//2)], fill=trace, width=4)
+            d.ellipse([x+L-8,y+L//2-8,x+L+8,y+L//2+8], fill=CYAN if rnd.random()<0.3 else trace)
+        else:
+            d.line([(x,y),(x,y+L//2)], fill=trace, width=4)
+            d.line([(x,y+L//2),(x+L,y+L//2)], fill=trace, width=4)
+            d.ellipse([x+L-8,y+L//2-8,x+L+8,y+L//2+8], fill=AMBER if rnd.random()<0.2 else trace)
+
+    # --- the title, read as one unit: AI (amber) / WITHOUT / THE HYPE (white)
+    def fit(word, cap, bold=True):
+        sz=cap; f=font(sz,bold)
+        while d.textlength(word,font=f)>CW-150 and sz>60:
+            sz-=6; f=font(sz,bold)
+        return f,sz
+
+    y=700
+    fA,szA=fit("AI",470)
+    d.text(((CW-d.textlength("AI",font=fA))/2, y), "AI", font=fA, fill=AMBER)
+    y+=szA+30
+    for wd in ("WITHOUT","THE HYPE"):
+        f,sz=fit(wd,215)
+        d.text(((CW-d.textlength(wd,font=f))/2, y), wd, font=f, fill=WHITE)
+        y+=sz+26
+
+    y+=70
+    d.line([(CW/2-330,y),(CW/2+330,y)], fill=AMBER, width=6)
+
+    # --- subtitle
+    y+=80
+    sub="The Professional's Complete Guide to"
+    sub2="Artificial Intelligence at Work"
+    for line,col,base,bold in ((sub,(198,214,228),60,False),(sub2,WHITE,72,True)):
+        sz=base; f=font(sz,bold)
+        while d.textlength(line,font=f)>CW-180 and sz>26:
+            sz-=2; f=font(sz,bold)
+        d.text(((CW-d.textlength(line,font=f))/2, y), line, font=f, fill=col)
+        y+=sz+20
+
+    # --- what is inside, in three beats
+    y+=62
+    for line in ("PROMPTING  ·  VERIFICATION  ·  AGENTS",
+                 "16 INDUSTRY PLAYBOOKS  ·  68 DIAGRAMS"):
+        sz=42; f=font(sz,True)
+        while d.textlength(line,font=f)>CW-180 and sz>20: sz-=2; f=font(sz,True)
+        d.text(((CW-d.textlength(line,font=f))/2, y), line, font=f, fill=CYAN)
+        y+=sz+18
+
+    # --- author block, anchored to the foot
+    d.rectangle([0,2318,CW,CH], fill=(12,24,40))
+    d.rectangle([0,2318,CW,2326], fill=AMBER)
+    fa=font(82,True); auth="TANG SHIUAN JENN"
+    while d.textlength(auth,font=fa)>CW-150: fa=font(fa.size-4,True)
+    d.text(((CW-d.textlength(auth,font=fa))/2, 2384), auth, font=fa, fill=WHITE)
+    fb=font(40); bl="Chartered Accountant"
+    d.text(((CW-d.textlength(bl,font=fb))/2, 2488), bl, font=fb, fill=(170,192,210))
+
+    im.save(path,"JPEG",quality=94); print("cover ->", path)
 
 def main():
     plan=json.load(open(os.path.join(BF,"plan.json")))
@@ -289,5 +312,5 @@ def main():
 if __name__=="__main__":
     if len(sys.argv)>1 and sys.argv[1]=="cover":
         os.makedirs(os.path.join(ROOT,"dist"),exist_ok=True)
-        make_cover(os.path.join(ROOT,"dist","WorkingWithIntelligence-cover.jpg"))
+        make_cover(os.path.join(ROOT,"dist","AI-Without-The-Hype-cover.jpg"))
     else: main()
