@@ -308,14 +308,21 @@ def render_index(arts):
         '<a class="gcard" href="%s/guides/%s/"><h2>%s</h2><p>%s</p></a>'
         % (SITE, a["slug"], esc(a["title"]), esc(a["description"]))
         for a in arts)
+    tool = ('<div class="cards"><a class="gcard" href="%s/tools/ai-policy/">'
+            '<h2>Free tool: AI use policy builder</h2>'
+            '<p>Answer nine questions and get a one-page AI policy your team can '
+            'follow. No signup, and nothing you type leaves your device.</p>'
+            '</a></div>' % SITE)
     return (head + '<article class="wrap"><h1>Guides</h1>'
             '<p class="lede">Straight answers on sleep, games and getting organised. '
             'Written to be worth your time.</p>'
+            + tool +
             '<div class="cards">' + cards + "</div></article>" + FOOTER.format(root=SITE))
 
 
 def render_sitemap(arts):
     urls = [(SITE + "/", "1.0"), (SITE + "/guides/", "0.8"),
+            (SITE + "/tools/ai-policy/", "0.9"),
             (SITE + "/sleep/", "0.9"), (SITE + "/skyline/", "0.8"),
             (SITE + "/book/", "0.8"), (SITE + "/score-lab/", "0.8"),
             (SITE + "/beatbox/", "0.8"),

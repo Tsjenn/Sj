@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free AI Use Policy Builder for Firms and Finance Teams</title>
+<meta name="description" content="Answer nine questions and get a one-page AI use policy your team can actually follow. Free, no signup, nothing leaves your device. Written for accounting firms, finance teams and professional practices.">
+<meta property="og:title" content="AI Use Policy Builder — free, one page, no signup">
+<meta property="og:description" content="A starting-draft AI policy for professional teams. Nine questions, one page, nothing sent anywhere.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://tsjenn.github.io/Sj/tools/ai-policy/">
+<style>
+:root{--accent:#2A6F6A;--accent-dark:#1E524E;--accent-light:#E4F0EF;--ink:#26282B;
+--grey:#6B7280;--bg:#FAFAF8;--card:#FFFFFF;--border:#E5E7EB}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+color:var(--ink);background:var(--bg);line-height:1.6}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+header{background:var(--card);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.logo{font-weight:800;font-size:1.15rem;color:var(--accent);text-decoration:none}
+.nav a.back{color:var(--grey);text-decoration:none;font-size:.9rem}
+.hero{padding:48px 0 24px;max-width:720px}
+.hero h1{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.15;font-weight:800;letter-spacing:-.02em}
+.hero p{margin-top:16px;font-size:1.08rem;color:var(--grey)}
+.badges{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px}
+.badge{background:var(--accent-light);color:var(--accent-dark);font-size:.82rem;
+font-weight:600;padding:6px 12px;border-radius:99px}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:32px;
+align-items:start;padding:32px 0 64px}
+@media(max-width:900px){.cols{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+.card h2{font-size:1.15rem;margin-bottom:4px}
+.card .sub{font-size:.88rem;color:var(--grey);margin-bottom:20px}
+.f{margin-bottom:20px}
+.f label{display:block;font-weight:600;font-size:.92rem;margin-bottom:6px}
+.f .hint{font-size:.82rem;color:var(--grey);margin-bottom:8px}
+input[type=text],select,textarea{width:100%;padding:10px 12px;border:1px solid var(--border);
+border-radius:8px;font:inherit;font-size:.95rem;background:#fff;color:var(--ink)}
+textarea{min-height:70px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+.checks{display:grid;gap:8px}
+.checks label{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:.94rem}
+.checks input{margin-top:4px;flex:none}
+.out{position:sticky;top:24px}
+.outhead{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center;
+margin-bottom:16px}
+.btn{background:var(--accent);color:#fff;border:0;padding:10px 18px;border-radius:8px;
+font:inherit;font-weight:700;font-size:.92rem;cursor:pointer}
+.btn:hover{background:var(--accent-dark)}
+.btn.ghost{background:#fff;color:var(--accent-dark);border:1px solid var(--border)}
+.btn.ghost:hover{background:var(--accent-light)}
+#policy{white-space:pre-wrap;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+font-size:.75rem;line-height:1.7;overflow-x:auto;background:#fff;border:1px solid var(--border);
+border-radius:10px;padding:22px;max-height:70vh;overflow:auto}
+.note{background:#FEF3C7;color:#7C4E09;border-radius:10px;padding:16px 18px;
+font-size:.9rem;margin-top:24px}
+.note strong{display:block;margin-bottom:4px}
+.about{border-top:1px solid var(--border);padding:32px 0 64px;font-size:.92rem;color:var(--grey);
+max-width:720px}
+.about h2{color:var(--ink);font-size:1.05rem;margin-bottom:10px}
+.about p{margin-bottom:12px}
+.about a{color:var(--accent-dark)}
+footer{border-top:1px solid var(--border);padding:24px 0;font-size:.85rem;color:var(--grey)}
+@media print{header,.hero,form,.note,.about,footer,.outhead{display:none}
+.cols{display:block;padding:0}.card{border:0;padding:0}
+#policy{border:0;padding:0;max-height:none;font-size:10.5pt;font-family:Georgia,serif}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="logo" href="../../">Clarity</a>
+  <a class="back" href="../../guides/">Guides</a>
+</div></header>
+
+<div class="wrap">
+  <section class="hero">
+    <h1>AI use policy builder</h1>
+    <p>Most teams are already using AI without a written rule about it. Answer nine
+    questions and get a one-page policy your people can actually read and follow —
+    then edit it to fit.</p>
+    <div class="badges">
+      <span class="badge">Free, no signup</span>
+      <span class="badge">Nothing leaves your device</span>
+      <span class="badge">Plain English, one page</span>
+    </div>
+  </section>
+
+  <div class="cols">
+    <form class="card" id="form">
+      <h2>Your answers</h2>
+      <p class="sub">The policy updates as you type.</p>
+
+      <div class="f">
+        <label for="org">Organisation name</label>
+        <input type="text" id="org" placeholder="e.g. Lim &amp; Partners" value="">
+      </div>
+
+      <div class="f">
+        <label for="kind">What kind of team is this?</label>
+        <select id="kind">
+          <option value="accounting">Accounting or audit firm</option>
+          <option value="finance">In-house finance team</option>
+          <option value="tax">Tax practice</option>
+          <option value="legal">Legal practice</option>
+          <option value="consult">Consultancy or advisory</option>
+          <option value="general">Other professional team</option>
+        </select>
+      </div>
+
+      <div class="f">
+        <label for="size">How many people does it cover?</label>
+        <select id="size">
+          <option value="solo">Just me</option>
+          <option value="small" selected>2–10</option>
+          <option value="mid">11–50</option>
+          <option value="large">More than 50</option>
+        </select>
+      </div>
+
+      <div class="f">
+        <label>Which tools are approved?</label>
+        <p class="hint">Tick what your team may use. Anything unticked is treated as
+        not yet approved.</p>
+        <div class="checks" id="tools">
+          <label><input type="checkbox" value="a general-purpose AI assistant on a paid business or enterprise plan" checked> A paid business/enterprise AI assistant</label>
+          <label><input type="checkbox" value="AI features built into the firm's existing software"> AI features inside software we already pay for</label>
+          <label><input type="checkbox" value="an AI coding or spreadsheet assistant"> A coding or spreadsheet assistant</label>
+          <label><input type="checkbox" value="a transcription or meeting-notes tool"> Transcription / meeting notes</label>
+        </div>
+        <div class="f" style="margin-top:12px;margin-bottom:0">
+          <input type="text" id="othertool" placeholder="Anything else, comma separated">
+        </div>
+      </div>
+
+      <div class="f">
+        <label for="data">What may be typed into these tools?</label>
+        <select id="data">
+          <option value="never">No client or personal data, ever — not even initials</option>
+          <option value="approved" selected>Client data only in approved tools that do not train on our input</option>
+          <option value="anon">Only anonymised or redacted material</option>
+        </select>
+      </div>
+
+      <div class="f">
+        <label for="verify">How much checking is required before work goes out?</label>
+        <select id="verify">
+          <option value="light">Light — check anything that states a fact or a figure</option>
+          <option value="standard" selected>Standard — check every figure, quotation and reference</option>
+          <option value="strict">Strict — a second person reviews anything AI helped produce</option>
+        </select>
+      </div>
+
+      <div class="f">
+        <label for="disclose">Do you tell clients?</label>
+        <select id="disclose">
+          <option value="internal">Internal use only — no routine disclosure</option>
+          <option value="onask" selected>Tell any client who asks, honestly and specifically</option>
+          <option value="always">State it in engagement terms and deliverables</option>
+        </select>
+      </div>
+
+      <div class="f">
+        <label for="owner">Who owns this policy?</label>
+        <input type="text" id="owner" placeholder="e.g. Managing Partner, or a name">
+      </div>
+
+      <div class="f">
+        <label for="review">Review it how often?</label>
+        <select id="review">
+          <option value="3">Every 3 months</option>
+          <option value="6" selected>Every 6 months</option>
+          <option value="12">Once a year</option>
+        </select>
+      </div>
+    </form>
+
+    <div class="out">
+      <div class="outhead">
+        <h2 style="font-size:1.15rem">Your policy</h2>
+        <div>
+          <button class="btn" id="copy" type="button">Copy</button>
+          <button class="btn ghost" id="print" type="button">Print / PDF</button>
+        </div>
+      </div>
+      <div id="policy" aria-live="polite"></div>
+      <div class="note">
+        <strong>Read this before you use it.</strong>
+        This is a starting draft, not legal advice, and it is not a compliance
+        certificate. Rules differ by country and profession and they change. Have
+        it read by whoever is responsible for risk in your organisation, and check
+        it against your regulator's guidance and your own client engagement terms
+        before you adopt it.
+      </div>
+    </div>
+  </div>
+
+  <section class="about">
+    <h2>Why this exists</h2>
+    <p>Teams tend to write an AI policy after something has already gone wrong.
+    The useful version is short enough that people read it, specific enough that
+    it answers the question someone actually has at 4pm on a Thursday, and honest
+    about the fact that it will need changing.</p>
+    <p>Nothing you type here is sent anywhere. The policy is assembled in your
+    browser. There is no account, no email box, and no analytics on your answers.</p>
+    <p>Made by the same author as the guides on this site — a chartered accountant
+    who writes about using AI at work without the hype.</p>
+  </section>
+</div>
+
+<footer><div class="wrap">A free tool. No signup, no data collected.</div></footer>
+
+<script>
+(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  var KIND = {
+    accounting:{noun:"firm", work:"client engagements, working papers and reports"},
+    finance:{noun:"team", work:"management reporting, analysis and finance operations"},
+    tax:{noun:"practice", work:"client filings, computations and advice"},
+    legal:{noun:"practice", work:"client matters, drafting and research"},
+    consult:{noun:"practice", work:"client deliverables, research and analysis"},
+    general:{noun:"team", work:"our professional work"}
+  };
+  var DATA = {
+    never:"No client information, personal data or confidential material of any kind may be entered into an AI tool. This includes names, initials, account numbers, identification numbers, addresses, salary figures and anything that could identify a person or a client when combined with something else. If you cannot do the task without that information, do the task yourself.",
+    approved:"Client information may be entered only into the approved tools listed above, and only where the provider's terms state that our input is not used to train their models. It may never be entered into a personal account, a free consumer tier, or any tool not on the approved list. Identification numbers, bank account numbers and payroll figures for named individuals stay out regardless of the tool.",
+    anon:"Only anonymised or redacted material may be entered. Remove names, company names, account numbers, identification numbers and dates that would identify a matter before you paste anything. If anonymising the material would take longer than doing the work, do the work."
+  };
+  var VERIFY = {
+    light:["Check anything the tool states as a fact, a figure, a date or a rule before it leaves your hands.","Never pass on a citation, a standard reference or a statutory reference you have not opened yourself."],
+    standard:["Check every figure, every quotation, every reference and every claim about a rule against its source before the work goes out.","Recalculate anything numerical independently. A confident total is still a guess.","Never cite a standard, a case or a section you have not read in the original."],
+    strict:["Check every figure, quotation, reference and claim against its source before the work goes out.","Recalculate anything numerical independently.","A second qualified person reviews any deliverable that AI materially helped produce, and records that they did.","Never cite a standard, a case or a section you have not read in the original."]
+  };
+  var DISCLOSE = {
+    internal:"These tools are an internal working aid. We do not routinely disclose their use, in the same way we do not itemise which software produced a schedule. We never deny using them, and we never describe AI-assisted work as though no tool was involved.",
+    onask:"If a client asks whether we use AI in their work, we answer honestly and specifically: what it was used for, what it was not used for, and who checked the result. We do not volunteer a disclosure on every deliverable, and we never deny use.",
+    always:"We state in our engagement terms that AI tools may be used as a working aid under this policy, and we say so plainly in deliverables where a tool did substantial drafting. The reviewer named on the work remains fully responsible for it."
+  };
+  var SIZEWORD = { solo:"me", small:"everyone in the team", mid:"everyone in the team", large:"everyone in the organisation, including contractors and temporary staff" };
+
+  function tools(){
+    var out = [];
+    Array.prototype.forEach.call($("tools").querySelectorAll("input:checked"), function(c){ out.push(c.value); });
+    var extra = $("othertool").value.trim();
+    if (extra) extra.split(",").forEach(function(t){ t = t.trim(); if (t) out.push(t); });
+    return out;
+  }
+  function wrap(s, w){
+    var words = s.split(" "), line = "", out = [];
+    words.forEach(function(word){
+      if ((line + " " + word).trim().length > w) { out.push(line.trim()); line = word; }
+      else { line += " " + word; }
+    });
+    if (line.trim()) out.push(line.trim());
+    return out.join("\n");
+  }
+  function build(){
+    var org = $("org").value.trim() || "[Organisation name]";
+    var k = KIND[$("kind").value];
+    var owner = $("owner").value.trim() || "[Name and role]";
+    var months = $("review").value;
+    var t = tools();
+    var n = 0, L = [];
+    function head(title){ n++; L.push(""); L.push(n + ". " + title.toUpperCase()); L.push(""); }
+    function para(s){ if (L.length && L[L.length-1] !== "") L.push(""); L.push(wrap(s, 72)); }
+    function bullet(s){ L.push(wrap("   - " + s, 68).replace(/\n/g, "\n     ")); }
+
+    L.push("ARTIFICIAL INTELLIGENCE USE POLICY");
+    L.push(org);
+    L.push("");
+    L.push("Applies to: " + SIZEWORD[$("size").value] + ".");
+    L.push("Owner: " + owner);
+    L.push("Next review: every " + months + " months.");
+    L.push("");
+    L.push("-".repeat(72));
+
+    head("Why we have this");
+    para("We use AI tools in " + k.work + " because they save real time. They also produce confident, well-written output that is sometimes wrong. This policy exists so that the time saved is not paid back later with interest, and so that nobody has to guess what is allowed.");
+    para("The rule underneath every clause below is simple. Whoever signs the work owns the work. A tool is never the reason something went out wrong.");
+
+    head("Which tools are approved");
+    if (!t.length) {
+      para("No tool has been approved yet. Until this section is filled in, AI tools may not be used for " + k.work + ". Ask the policy owner before using anything.");
+    } else {
+      para("Only the following may be used for " + k.work + ":");
+      L.push("");
+      t.forEach(bullet);
+      L.push("");
+      para("Anything not on this list is not approved yet. That is not a refusal — ask the policy owner and the list can grow. Personal accounts and free consumer tiers are not approved for any work involving client material.");
+    }
+
+    head("What may go into them");
+    para(DATA[$("data").value]);
+    para("If you are unsure whether something counts, it counts. Ask first.");
+
+    head("What you must check before it goes out");
+    VERIFY[$("verify").value].forEach(bullet);
+    L.push("");
+    para("An AI tool does not know when it is wrong, and it will not warn you. It is at its most persuasive on the things it has invented. Treat fluent output as a draft from a fast, well-read colleague who has never once said \"I am not sure\".");
+
+    head("What we tell clients");
+    para(DISCLOSE[$("disclose").value]);
+
+    head("Where AI is not to be used");
+    bullet("Any final decision that affects a person's employment, pay, credit or standing. A tool may help you prepare; it does not decide.");
+    bullet("Anything you cannot check. If you would not be able to verify the answer, you cannot use the answer.");
+    bullet("Anything under legal privilege, live dispute or regulatory investigation, unless the policy owner has approved it in writing for that specific matter.");
+    bullet("Signing off, approving or certifying anything. Those are acts of a person.");
+
+    head("Records");
+    para("Where AI materially helped produce a deliverable, note it in the working papers: which tool, what it was used for, and who checked it. One line is enough. This is not bureaucracy — it is what lets you answer a question about the work in two years' time.");
+
+    head("If something goes wrong");
+    para("If AI-assisted work goes out with an error in it, or client material went somewhere it should not have, tell " + owner + " the same day. Say what happened plainly. Nobody is disciplined for reporting quickly. The only thing that gets treated seriously is concealment.");
+
+    head("Review");
+    para("This policy is reviewed every " + months + " months by " + owner + ", or sooner if a tool changes materially, if our regulator issues guidance, or if something on the list above stops being true. It is a working document, not a monument.");
+
+    L.push("");
+    L.push("-".repeat(72));
+    L.push(wrap("This policy is a starting draft prepared from a free template. It is general information, not legal advice, and it is not a statement of compliance with any law or professional standard. Rules differ by jurisdiction and profession and they change. Have it reviewed before adopting it.", 72));
+
+    return L.join("\n");
+  }
+  function render(){ $("policy").textContent = build(); }
+  $("form").addEventListener("input", render);
+  $("form").addEventListener("change", render);
+  $("copy").addEventListener("click", function(){
+    var txt = $("policy").textContent, btn = $("copy");
+    function done(ok){ btn.textContent = ok ? "Copied" : "Select and copy"; setTimeout(function(){ btn.textContent = "Copy"; }, 1800); }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(txt).then(function(){ done(true); }, function(){ done(false); });
+    } else {
+      var r = document.createRange(); r.selectNodeContents($("policy"));
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); done(false);
+    }
+  });
+  $("print").addEventListener("click", function(){ window.print(); });
+  render();
+})();
+</script>
+</body>
+</html>
