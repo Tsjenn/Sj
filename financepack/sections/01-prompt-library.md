@@ -16,19 +16,19 @@ Leave two things alone: the instruction to mark uncertainty and refuse to guess,
 *Use when:* you have unexplained differences and little time.
 *Paste this:*
 ```
-You are assisting a finance team at month-end. I will paste the
-reconciling items on [ACCOUNT] for [PERIOD].
+You are assisting a finance team at month-end with the reconciling items
+on [ACCOUNT] for [PERIOD].
 
-Task: group them by likely cause and say what evidence would confirm
-or rule out each.
+Task: group them by likely cause and say what evidence would confirm or
+rule out each.
 
-Constraints: use only what I paste; invent no amount, date or
-counterparty. Where an item fits two groups, say so.
+Constraints: use only what I paste. Invent no amount, date or
+counterparty.
 
 Format: a table — Item, Amount as given, Likely cause, Confirming
 evidence, Who to ask. Then a list headed "Cannot classify".
 
-Anything you are unsure about goes in that list. Do not guess.
+Anything you are unsure about goes in that list. Never guess.
 
 Items:
 [PASTE]
@@ -39,20 +39,19 @@ Items:
 *Use when:* you know why a difference arose and must write it for the file.
 *Paste this:*
 ```
-You are helping a qualified accountant write a file note. I will
-describe roughly why a difference on [ACCOUNT] for [PERIOD] arose and
-what I did.
+You are helping a qualified accountant write a file note. Below are my
+rough notes on a difference on [ACCOUNT] for [PERIOD].
 
-Task: turn my notes into a note another accountant could follow in a
-year without asking me anything.
+Task: turn them into a note another accountant could follow in a year
+without asking me anything.
 
-Constraints: use only my facts. Add no causes, amounts or conclusions,
-and neither soften nor strengthen mine. Plain British English.
+Constraints: use only my facts. Add no causes or conclusions, and
+neither soften nor strengthen mine.
 
 Format: four short paragraphs — what the difference was, why it arose,
 what was done, what remains open. Under 300 words.
 
-Fill no gaps. List them under "Questions I could not answer".
+Fill no gaps; list them under "Questions I could not answer".
 
 Notes:
 [PASTE]
@@ -63,18 +62,17 @@ Notes:
 *Use when:* your close runs on memory and one person's spreadsheet.
 *Paste this:*
 ```
-You are documenting a finance team's month-end close. I will describe
-our tasks in my own words, roughly in order.
+You are documenting a finance team's month-end close. Below are our
+tasks in my own words, roughly in order.
 
 Task: turn this into a checklist someone who has never run our close
 could follow.
 
 Constraints: include only tasks I describe. Add no standard tasks you
-assume we perform. Assign no deadlines I have not given.
+assume we perform, and no deadlines I have not given.
 
 Format: a table — Working day, Task, Owner, Depends on, Evidence
-retained. Then a separate list, "Tasks you did not mention that teams
-often include — confirm whether these apply".
+retained. Then a list of tasks I did not mention, as questions.
 
 Where sequence or ownership is ambiguous, write UNCLEAR.
 
@@ -88,20 +86,18 @@ Description:
 *Paste this:*
 ```
 [ENTITY A] and [ENTITY B] disagree on the intercompany balance for
-[PERIOD]. I will describe what each reports and what I know.
+[PERIOD]. Below is what each reports.
 
 Task: an investigation plan — causes to test in order, cheapest and
 likeliest first.
 
 Constraints: work only from what I tell you. Assume nothing about our
-systems, currencies or cut-off conventions. Calculate no difference I
-have not given.
+systems, currencies or cut-off conventions.
 
-Format: numbered steps, each stating what to check, what result
-confirms the cause, and what to do if it does not.
+Format: numbered steps, each stating what to check, what result confirms
+the cause, and what to do if it does not.
 
-End with "Assumptions I had to make". If you need information I have
-not given, ask rather than proceed.
+End with "Assumptions I had to make". If you need more, ask.
 
 Situation:
 [PASTE]
@@ -113,20 +109,18 @@ Situation:
 *Paste this:*
 ```
 You are reviewing a schedule of accruals and prepayments for [ENTITY],
-[PERIOD], pasted below as text.
+[PERIOD].
 
 Task: the questions a careful reviewer would ask — aimed at what would
 be wrong if the preparer had been rushing.
 
 Constraints: recalculate nothing and call no figure wrong; you cannot
-see the evidence. Name no accounting standard. Where a point turns on
-recognition, mark it "judgement — confirm against your own sources".
+see the evidence. Name no accounting standard.
 
 Format: questions under Completeness, Cut-off, Basis of estimate and
 Reversal. Maximum 20, ordered by money at stake.
 
-Where the schedule gives too little for a real question, say so rather
-than asking a generic one.
+Where the schedule gives too little for a real question, say so.
 
 Schedule:
 [PASTE]
@@ -140,20 +134,18 @@ Schedule:
 *Paste this:*
 ```
 You are assisting a financial controller investigating variances for
-[ENTITY], [PERIOD]. I will paste actual, comparative and difference.
+[ENTITY], [PERIOD].
 
 Task: for each line I flag, the questions to put to the budget holder —
-those separating a timing difference, a volume difference, a price or
-rate difference, a misposting, and a real change in the business.
+those separating timing, volume, price, misposting and real change.
 
 Constraints: do not explain the variances yourself; you do not know our
-business. Calculate nothing. Let no presumed cause appear in a
-question's wording.
+business. Let no presumed cause appear in a question's wording.
 
 Format: for each flagged line, the account name then three to six
 questions.
 
-If a line is too small or ambiguous to be worth a conversation, say so.
+If a line is too small to be worth a conversation, say so.
 
 Table:
 [PASTE]
@@ -165,16 +157,13 @@ Table:
 *Paste this:*
 ```
 You are drafting management commentary for [ENTITY], [PERIOD], for
-[AUDIENCE]. For each variance I give the account, the figure and the
-explanation obtained from the business — the only permitted source of
-cause.
+[AUDIENCE]. My notes give each account, figure and the explanation
+obtained from the business — the only permitted source of cause.
 
 Task: write the commentary.
 
-Constraints: every cause must come from my notes. Add no context,
-market conditions, forward-looking statements or figures. Do not use
-"significant", "material", "strong" or "challenging". Do not tell the
-reader how to feel.
+Constraints: add no context, market conditions, forward-looking
+statements or figures. Do not tell the reader how to feel.
 
 Format: one short paragraph per variance, largest first, opening with
 the account name in bold. Maximum [WORD LIMIT] words.
@@ -191,17 +180,16 @@ Notes:
 *Paste this:*
 ```
 You are explaining a movement in [MEASURE] from [PRIOR PERIOD] to
-[CURRENT PERIOD] at [ENTITY]. I give opening and closing figures and
-the components, with amounts and my explanation of each.
+[CURRENT PERIOD] at [ENTITY]. Below are the opening and closing figures
+and the components.
 
 Task: write the bridge as prose, in the order that reads clearest.
 
 Constraints: the components must sum to the movement as given. If they
-do not, stop and tell me the difference — adjust nothing, insert no
-balancing item, add no components or causes of your own.
+do not, stop and tell me the difference. Insert no balancing item.
 
-Format: a lead sentence stating the movement, one sentence per
-component, a closing sentence only if I have told you what comes next.
+Format: a lead sentence stating the movement, then one sentence per
+component.
 
 Say plainly if you cannot reconcile my components to my movement.
 
@@ -214,20 +202,19 @@ Inputs:
 *Use when:* the commentary reads like a press release.
 *Paste this:*
 ```
-You are an unsentimental editor of finance writing. I will paste a
-draft of management commentary.
+You are an unsentimental editor of finance writing, working on the draft
+management commentary below.
 
-Task: rewrite it so every sentence carries information. Cut hedging,
-throat-clearing and adjectives that assert rather than describe.
+Task: rewrite it so every sentence carries information. Cut hedging and
+adjectives that assert rather than describe.
 
-Constraints: change no figure, cause or conclusion, and add no facts.
-If cutting a sentence would lose a fact, keep the fact and cut the
-decoration. Preserve anything marked [DO NOT CHANGE].
+Constraints: change no figure, cause or conclusion, and add no facts. If
+cutting would lose a fact, keep the fact and cut the decoration.
 
 Format: the rewritten text, then the sentences you could not tighten
-because they made a claim you could not verify from the draft itself.
+because they made a claim you could not verify from the draft.
 
-Never invent a stronger version of a weak claim. Leave it and flag it.
+Never invent a stronger version of a weak claim. Flag it.
 
 Draft:
 [PASTE]
@@ -238,21 +225,19 @@ Draft:
 *Use when:* you are about to present a reason and want it tested first.
 *Paste this:*
 ```
-You are a sceptical audit committee member with a finance background. I
-give my explanation for a movement in [MEASURE] at [ENTITY], [PERIOD].
+You are a sceptical audit committee member with a finance background.
+Below is my explanation for a movement in [MEASURE] at [ENTITY].
 
 Task: attack it. Find the questions that would expose it if it were
 wrong, incomplete, or an artefact of how the numbers were prepared.
 
-Constraints: do not present alternative explanations as fact and invent
-no figures to support a challenge. Frame each challenge as a question I
-can go and answer.
+Constraints: do not present alternatives as fact, and invent no figures.
+Frame each challenge as a question I can go and answer.
 
-Format: three groups — does the cause explain the size, does it explain
-the timing, is there a simpler explanation. Maximum ten, hardest first.
+Format: three groups — size, timing, simpler explanation. Maximum ten,
+hardest first.
 
-If you cannot fault it on the information given, say so rather than
-manufacturing objections.
+If you cannot fault it, say so rather than manufacture objections.
 
 My explanation:
 [PASTE]
@@ -269,16 +254,13 @@ You are making assumptions explicit for [BUDGET LINE] at [ENTITY] for
 [PERIOD].
 
 Task: break the line into the drivers you would have to estimate to
-build it from scratch, and say what source inside a business normally
-holds each answer.
+build it from scratch, and say what source normally holds each answer.
 
-Constraints: give no values, ranges, percentages or benchmarks — not
-one number. You do not know our sector or size. Where a driver depends
-on a decision rather than a fact, mark it "decision required" and say
-whose.
+Constraints: give no values, ranges, percentages or benchmarks — not one
+number. Where a driver depends on a decision, say whose.
 
-Format: a table — Driver, Unit, Type (fact / estimate / decision),
-Where the answer lives, Question to ask.
+Format: a table — Driver, Unit, Type (fact / estimate / decision), Where
+the answer lives, Question to ask.
 
 If the line could sensibly be built two ways, show both.
 ```
@@ -289,18 +271,15 @@ If the line could sensibly be built two ways, show both.
 *Paste this:*
 ```
 You are briefing non-financial managers who must submit figures for
-[PERIOD]. Their cost lines are [LIST]. The deadline is [DATE]. Last
-cycle's problems were [LIST].
+[PERIOD]. Their cost lines are [LIST]. The deadline is [DATE].
 
 Task: write the note that accompanies the template.
 
 Constraints: no jargon without a plain gloss on first use. No threats
-and no cheerleading. State no figure, limit or target. Promise nothing
-about what finance will do with the numbers.
+and no cheerleading. State no figure, limit or target.
 
 Format: a short opening on what we need and when; a numbered list of
-what to submit; a numbered list of what not to do; who to contact.
-Under 500 words.
+what to submit; a numbered list of what not to do. Under 500 words.
 
 Leave a marked [ ] wherever a figure or name is needed.
 ```
@@ -311,21 +290,18 @@ Leave a marked [ ] wherever a figure or name is needed.
 *Paste this:*
 ```
 You are reviewing the assumptions behind a forecast for [ENTITY] over
-[PERIOD]. I will paste them with their values.
+[PERIOD], pasted below with their values.
 
-Task: identify which assumptions the outcome is most sensitive to,
-which are inconsistent with each other, and which are too vague to be
-tested later.
+Task: identify which assumptions the outcome is most sensitive to, which
+are mutually inconsistent, and which are too vague to test later.
 
-Constraints: do not tell me an assumption is too high or too low — you
-have no basis for that. Confine yourself to sensitivity, consistency
-and testability. Compute no revised outcomes.
+Constraints: never tell me an assumption is too high or too low — you
+have no basis for that. Compute no revised outcomes.
 
 Format: three sections — Most sensitive, Mutually inconsistent, Not
 testable as written. Name the assumption and state the problem.
 
-Where an apparent inconsistency might be reconciled by something I have
-not told you, phrase it as a question.
+Where something might be reconciled by facts I have withheld, ask.
 
 Assumptions:
 [PASTE]
@@ -336,20 +312,17 @@ Assumptions:
 *Use when:* scenarios have been asked for and nobody has defined them.
 *Paste this:*
 ```
-You are defining scenarios for [ENTITY] over [PERIOD]. I will describe
-the business and the uncertainties that actually worry management.
+You are defining scenarios for [ENTITY] over [PERIOD]. Below is the
+business and the uncertainties that actually worry management.
 
 Task: define [NUMBER] scenarios. Each is a coherent story about the
 world, not a percentage applied to a base case.
 
 Constraints: no numbers, no probabilities, no likelihoods. Each must
-say which of my named uncertainties resolve which way and stay
-internally consistent — if demand falls, do not also assume prices hold
-unless you say why.
+stay internally consistent and use only my uncertainties.
 
-Format: for each — a name, a paragraph of description, bullets showing
-which assumptions move and in which direction, and the earliest
-observable sign it is happening.
+Format: for each — a name, a paragraph, bullets showing which
+assumptions move and which way, and the earliest observable sign.
 
 If two uncertainties cannot vary independently, say so.
 
@@ -362,21 +335,19 @@ Description:
 *Use when:* submissions are in and you must review many quickly.
 *Paste this:*
 ```
-You are reviewing a budget submission from [DEPARTMENT] for [PERIOD]. I
-will paste the submission and, separately, our submission rules.
+You are reviewing a budget submission from [DEPARTMENT] for [PERIOD]
+against our submission rules. Both are below.
 
-Task: check it against the rules only. List every breach, and every
-required explanation missing or too vague to be one.
+Task: list every breach of the rules, and every required explanation
+missing or too vague to be one.
 
 Constraints: do not assess whether the figures are reasonable — that is
-mine to judge. Do not compare to prior year unless I give it. Quote the
-submission's exact wording whenever you flag something.
+mine to judge. Quote the submission's exact wording when you flag it.
 
 Format: a table — Rule, What the submission says, Problem, What to
 request. Then one line: ready for review, or return to sender.
 
-If a rule is ambiguous as written, flag the rule rather than choose a
-reading.
+If a rule is ambiguous, flag the rule rather than choose a reading.
 
 Rules, then submission:
 [PASTE]
@@ -389,22 +360,19 @@ Rules, then submission:
 *Use when:* the auditor's list has arrived and you must allocate work.
 *Paste this:*
 ```
-You are helping a finance team plan its response to an auditor's
-information request list for [ENTITY], [PERIOD].
+You are planning a finance team's response to the auditor's information
+request list below, for [ENTITY], [PERIOD].
 
 Task: for each item, say plainly what is likely being established, what
 document would satisfy it, and which team role holds it.
 
 Constraints: this is general information about how such requests are
-usually framed, not advice on what any standard or regulator requires —
-say so at the top. Cite no standard or regulation. Never tell me an
-item is unnecessary or can be refused.
+framed, not advice on what any standard requires — say so at the top.
+Never tell me an item is unnecessary or can be refused.
 
-Format: a table — Request, Likely purpose, Document to provide, Owner,
-Effort (low / medium / high).
+Format: a table — Request, Likely purpose, Document, Owner, Effort.
 
-Where you cannot tell what is being asked, write "ask the audit team to
-clarify".
+Where you cannot tell what is asked, write "ask them to clarify".
 
 List:
 [PASTE]
@@ -416,15 +384,13 @@ List:
 *Paste this:*
 ```
 You are helping a qualified accountant respond to an audit query on
-[TOPIC] for [ENTITY], [PERIOD]. I give the query and the facts and
-documents we hold.
+[TOPIC] for [ENTITY], [PERIOD]. Below are the query and our facts.
 
 Task: draft the response.
 
-Constraints: use only my facts. Do not assert that a treatment is
-correct, compliant or in accordance with anything — state what was done
-and why, and let the auditor form their view. Name no standard,
-regulation or authority. Commit us to nothing I have not said.
+Constraints: use only my facts. Never assert that a treatment is correct
+or compliant — state what was done and why, and let the auditor form
+their view. Name no standard or authority.
 
 Format: our position in short; the facts in order; the documents
 attached; any point that remains a matter of judgement.
@@ -440,21 +406,19 @@ Query and facts:
 *Use when:* a control exists in practice but has never been written down.
 *Paste this:*
 ```
-You are documenting an internal control at [ENTITY]. I will describe
-what actually happens, including the informal parts.
+You are documenting an internal control at [ENTITY]. Below is what
+actually happens, including the informal parts.
 
 Task: write the control description.
 
 Constraints: describe only what I say happens, weaknesses included.
-Never write the control as it ought to be. Add no frequency, threshold,
-approver or evidence I have not stated. Name no control framework.
-Never use the word "ensures".
+Never write the control as it ought to be, and add no threshold or
+approver I have not stated. Never use the word "ensures".
 
-Format: What it is; Who performs it; When and how often; What evidence
-it leaves; What it would catch; What it would not catch.
+Format: What it is; Who performs it; How often; What evidence it leaves;
+What it would catch; What it would not catch.
 
-The last section is the point. If my description does not let you
-complete it honestly, ask me the questions that would.
+If you cannot complete the last section honestly, ask me questions.
 
 What happens:
 [PASTE]
@@ -465,22 +429,19 @@ What happens:
 *Use when:* you are about to sit with a process owner and trace a transaction.
 *Paste this:*
 ```
-You are preparing a walkthrough of the [PROCESS] process at [ENTITY]. I
-will describe what we believe the process is.
+You are preparing a walkthrough of the [PROCESS] process at [ENTITY].
+Below is what we believe the process is.
 
 Task: write the questions for the person who actually performs it,
-designed to reveal where the documented process and the real one
-differ.
+designed to reveal where the documented process and the real one differ.
 
 Constraints: open questions only, nothing answerable with yes. Do not
-presume the process is followed. Assess nothing — you are writing
-questions, not conclusions. No framework references.
+presume the process is followed. Assess nothing.
 
-Format: questions in the order the transaction flows, each with a
-one-line note on what a concerning answer sounds like.
+Format: questions in the order the transaction flows, each with a note
+on what a concerning answer sounds like.
 
-End with a group headed "Questions to ask if they seem to be describing
-the manual rather than their day".
+End with the questions that surface undocumented workarounds.
 
 Believed process:
 [PASTE]
@@ -491,22 +452,20 @@ Believed process:
 *Use when:* you have drafted a testing approach and want the holes found.
 *Paste this:*
 ```
-You are reviewing a draft testing approach for [AREA] at [ENTITY],
-[PERIOD] — what we intend to test, how, and over what population.
+You are reviewing the draft testing approach below for [AREA] at
+[ENTITY] — what we test, how, and over what population.
 
 Task: find where the evidence obtained would not support the conclusion
 drawn.
 
 Constraints: this is a logical review, not a professional or regulatory
-one; say so at the top. Do not say whether the approach meets any
-standard, and name none. Propose no sample sizes. Assume nothing about
-our population.
+one; say so at the top. Never say whether it meets any standard, and
+propose no sample sizes.
 
-Format: for each gap — what the test does, what conclusion is drawn,
-why the first does not support the second, what would close it.
+Format: for each gap — what the test does, what conclusion is drawn, why
+the first does not support the second, what would close it.
 
-If it is sound as far as you can tell, say so, and say what further
-information would raise your confidence.
+If it is sound as far as you can tell, say so.
 
 Approach:
 [PASTE]
@@ -522,21 +481,19 @@ Everything here is preparation, not advice, and no output should reach a filing 
 *Paste this:*
 ```
 You are helping a finance team organise itself before a [FILING TYPE]
-for [ENTITY] covering [PERIOD]. I will list the activities carried out.
+for [ENTITY] covering [PERIOD]. Below are the activities carried out.
 
-Task: a checklist of documents and records to gather for whoever
-prepares the filing.
+Task: a checklist of documents to gather for whoever prepares the
+filing.
 
-Constraints: this is a gathering aid and general information only, not
-tax advice; rules differ by jurisdiction and change, and a qualified
-adviser will review it. Never state what is deductible, taxable,
-claimable or reportable. Reference no tax law, regulator or form.
+Constraints: this is a gathering aid and general information, not tax
+advice; rules differ by jurisdiction and change. Never state what is
+deductible, taxable or claimable, and reference no law or form.
 
-Format: a table — Activity, Records to gather, Where they usually live,
-Owner, Status.
+Format: a table — Activity, Records to gather, Where they live, Owner,
+Status.
 
-Where treatment depends on local rules, write "jurisdiction-dependent —
-for your adviser" instead of a conclusion.
+Where treatment depends on local rules, write "for your adviser".
 
 Activities:
 [PASTE]
@@ -547,21 +504,20 @@ Activities:
 *Use when:* you are cleaning a transaction listing before it goes to an adviser.
 *Paste this:*
 ```
-You are preparing a transaction listing for [ENTITY], [PERIOD], before
-it goes to our tax adviser.
+You are preparing the transaction listing below for [ENTITY], [PERIOD],
+before it goes to our tax adviser.
 
 Task: identify the transactions described too vaguely for someone else
 to categorise, and write the question to put to whoever incurred them.
 
 Constraints: categorise nothing yourself and state no tax treatment —
-this is preparation, not advice. Change and recalculate no amount.
-Never infer a purpose from a supplier name.
+this is preparation, not advice. Never infer purpose from a supplier
+name.
 
 Format: a table — Reference, Description as given, Why it is unclear,
 Question to ask, Who to ask.
 
-Leave out anything adequately described. A short list is a good
-outcome.
+Leave out anything adequately described. A short list is a good outcome.
 
 Listing:
 [PASTE]
@@ -572,21 +528,18 @@ Listing:
 *Use when:* correspondence arrives and you need to know what is being asked.
 *Paste this:*
 ```
-You are helping a finance professional understand correspondence
+You are helping a finance professional understand the letter below,
 received by [ENTITY].
 
 Task: tell me plainly what it appears to ask for, what it appears to
 require by when, and what it does not say.
 
 Constraints: this is a reading aid and general information only, not
-legal or tax advice; procedures differ by jurisdiction and change, and
-I must confirm my position with a qualified adviser. Do not tell me how
-to respond, whether the position stated is correct, or what my rights
-or obligations are. Name no law or authority. Work only from the words
-in the letter.
+legal or tax advice; procedures differ by jurisdiction and change. Never
+tell me how to respond, whether the position is correct, or what my
+obligations are. Work only from the words in the letter.
 
-Format: What it asks for; Dates and deadlines it states; What is
-unclear or unstated.
+Format: What it asks for; Dates it states; What is unclear.
 
 Quote ambiguous passages rather than resolving them.
 
@@ -600,19 +553,18 @@ Letter:
 *Paste this:*
 ```
 You are preparing a finance team for a meeting with its tax adviser
-about [TOPIC] at [ENTITY]. I will describe our situation.
+about [TOPIC] at [ENTITY]. Our situation is below.
 
 Task: the questions to ask, ordered so the answers build on each other,
 with the documents to have to hand for each.
 
-Constraints: answer none of them. Do not hint at the likely answer, and
-state no rule or treatment. This is meeting preparation only; rules
-differ by jurisdiction and change.
+Constraints: answer none of them. Never hint at the likely answer or
+state a rule. This is meeting preparation only.
 
 Format: numbered questions, each with a sub-line "Bring:".
 
-End with "Things we should tell them without being asked" — facts in my
-description an adviser would want early.
+End with "Things we should tell them without being asked" — facts an
+adviser would want early.
 
 Our situation:
 [PASTE]
@@ -623,23 +575,20 @@ Our situation:
 *Use when:* deadlines live in several people's heads.
 *Paste this:*
 ```
-You are building an internal compliance calendar for [ENTITY]. I will
-list the obligations we know we have, with deadlines as we understand
-them.
+You are building an internal compliance calendar for [ENTITY]. Below are
+the obligations we know of, with deadlines as we understand them.
 
-Task: turn the list into a working calendar, with the internal
-preparation milestones that must happen before each external deadline.
+Task: turn the list into a calendar, with the internal milestones that
+must happen before each external deadline.
 
-Constraints: use only my obligations and dates. Add no obligations you
-assume apply to us, and correct none of my dates — you do not know my
-jurisdiction and requirements change. Anything you think I may have
-omitted goes in a separate list, phrased as questions.
+Constraints: use only my obligations and dates. Correct none of my dates
+— you do not know my jurisdiction. Anything you think I omitted goes in
+a separate list, phrased as questions.
 
 Format: a table — External deadline, Obligation, Internal milestone,
 Days before, Owner. Sorted by date.
 
-Open with a line stating the dates come from me and must be confirmed
-each year.
+Open with a line saying the dates come from me and need confirming.
 
 Obligations:
 [PASTE]
@@ -654,20 +603,18 @@ Reading a contract for its finance consequences is not the same as advising on i
 *Use when:* a signed agreement lands and you need to know what it does to your numbers.
 *Paste this:*
 ```
-You are helping a finance team understand the financial mechanics of an
-agreement involving [ENTITY].
+You are helping a finance team understand the financial mechanics of the
+agreement below, involving [ENTITY].
 
 Task: summarise only the provisions affecting money moving, timing, or
 what must be recorded and tracked.
 
 Constraints: this is a reading aid, not legal advice; law differs by
-jurisdiction and an adviser will review the legal questions. Quote the
-clause reference and operative wording for every point. Do not
-interpret ambiguous drafting — flag it. State no accounting treatment.
+jurisdiction. Quote the clause reference and wording for every point,
+never interpret ambiguous drafting, and state no accounting treatment.
 
-Format: Amounts payable or receivable; Timing and triggers; Variation
-and escalation; Termination and its financial consequences; Ongoing
-obligations to track.
+Format: Amounts payable or receivable; Timing and triggers; Variation;
+Termination and its financial consequences; Obligations to track.
 
 End with "Clauses I could not interpret with confidence", quoting each.
 
@@ -680,21 +627,20 @@ Agreement:
 *Use when:* you are loading terms into a system or comparing across a portfolio.
 *Paste this:*
 ```
-You are extracting data from a contract for [ENTITY].
+You are extracting data from the contract below for [ENTITY].
 
 Task: extract the payment terms into a table for system entry.
 
-Constraints: extract only. Do not interpret, do not normalise into
-categories of your own, and never fill an empty field with what is
-usual. Every value must appear in the text, with its clause reference.
-If a field is not addressed, write "not stated" — never a default.
+Constraints: extract only. Never normalise into categories of your own
+or fill an empty field with what is usual. Every value must appear in
+the text, with its clause reference. If a field is not addressed, write
+"not stated" — never a default.
 
 Format: a table — Field, Value, Clause reference. Fields: currency,
-amount basis, invoicing frequency, payment period, late payment
-consequence, price adjustment, discounts or rebates, expenses, disputed
-amounts.
+amount basis, invoicing frequency, payment period, late payment, price
+adjustment, discounts, expenses, disputed amounts.
 
-Below it, list any payment provision that did not fit these fields.
+Below it, list any payment provision that did not fit.
 
 Contract:
 [PASTE]
@@ -705,22 +651,21 @@ Contract:
 *Use when:* the contract creates things somebody must remember to do.
 *Paste this:*
 ```
-You are building an obligations register from an agreement involving
-[ENTITY].
+You are building an obligations register from the agreement below,
+involving [ENTITY].
 
 Task: list every obligation falling on us, every deadline, notice
 period, renewal and expiry date, and every condition that triggers one.
 
 Constraints: quote the clause reference and wording for each entry.
-Calculate a date only where the contract states both the reference
-point and the period, and show the working. Omit the other party's
-obligations unless they trigger ours. Do not interpret conditional
+Calculate a date only where the contract states both the reference point
+and the period, and show the working. Never interpret conditional
 wording — quote it.
 
 Format: a table — Obligation, Owner function, Trigger or date, Notice
 period, Clause, Wording quoted.
 
-Flag separately any obligation whose trigger you could not determine.
+Flag any obligation whose trigger you could not determine.
 
 Agreement:
 [PASTE]
@@ -731,20 +676,19 @@ Agreement:
 *Use when:* legal budget is limited and you want it spent on the right clauses.
 *Paste this:*
 ```
-You are preparing a finance team for legal review of a draft agreement
-involving [ENTITY]. I will paste the draft and describe the commercial
-deal we believe we agreed.
+You are preparing a finance team for legal review of the draft agreement
+below, involving [ENTITY], together with the commercial deal we believe
+we agreed.
 
-Task: find where the drafting and my description do not obviously
-match, and write the questions for our legal adviser.
+Task: find where the drafting and my description do not obviously match,
+and write the questions for our legal adviser.
 
-Constraints: give no legal advice, state what no clause means as a
-matter of law, and never say whether a term is standard or reasonable.
-Confine yourself to: this is what you said the deal is, this is what
-the words say, here is the question.
+Constraints: give no legal advice and never say whether a term is
+standard or reasonable. Confine yourself to: this is what you said, this
+is what the words say, here is the question.
 
 Format: a table — Commercial expectation, Clause and wording, The
-mismatch, Question for counsel. Ordered by exposure as I described it.
+mismatch, Question for counsel. Ordered by exposure.
 
 Where drafting matches my description, say so rather than invent a
 concern.
@@ -758,16 +702,14 @@ The deal, then the draft:
 *Use when:* you need a policy people will actually follow.
 *Paste this:*
 ```
-You are drafting an internal [POLICY TYPE] policy for [ENTITY]. I give
-the rules we have decided, the limits we have set, and the behaviour we
-are trying to change.
+You are drafting an internal [POLICY TYPE] policy for [ENTITY]. Below
+are the rules we have decided and the limits we have set.
 
 Task: write the policy.
 
-Constraints: include only my rules. Add no limits, thresholds, approval
-levels or exceptions of your own — if one seems missing, list it as a
-question. Reference no law or regulation. Write for someone reading it
-once, in a hurry. No sentence over 25 words.
+Constraints: include only my rules. Add no thresholds, approval levels
+or exceptions of your own — if one seems missing, list it as a question.
+Reference no law. No sentence over 25 words.
 
 Format: Purpose; Who it applies to; The rules as numbered clauses; What
 to do if the rules do not cover your situation; Who owns this policy.
@@ -785,23 +727,20 @@ Our decisions:
 *Use when:* you know what to say and not yet how to arrange it.
 *Paste this:*
 ```
-You are structuring a board paper on [TOPIC] for [ENTITY]. I will give
-the decision required, what the board already knows, and the facts I
-hold.
+You are structuring a board paper on [TOPIC] for [ENTITY]. Below are the
+decision required, what the board knows, and the facts I hold.
 
 Task: propose the structure — sections, what belongs in each, roughly
 how long each should be.
 
 Constraints: structure only. Draft no content, supply no facts, suggest
-no recommendation. Assume the board reads the first page properly and
-the rest selectively.
+no recommendation.
 
 Format: a numbered outline. For each section: purpose in one line, what
-goes in it, target length, and whether it belongs in the paper or an
-appendix.
+goes in it, target length, and whether it belongs in an appendix.
 
 End with "Facts you will need that you have not mentioned" — as
-questions, not assumptions.
+questions.
 
 Background:
 [PASTE]
@@ -812,21 +751,19 @@ Background:
 *Use when:* the paper is written and the summary is due.
 *Paste this:*
 ```
-You are writing the executive summary of the paper below. The audience
-is [AUDIENCE]; the decision required is [DECISION].
+You are writing the executive summary of the paper below. The audience is
+[AUDIENCE]; the decision required is [DECISION].
 
 Task: a summary of no more than one page.
 
-Constraints: every statement must appear in the paper. Add nothing.
-Where the paper qualifies a key point, the qualification must survive —
-never simplify a hedged conclusion into a firm one. Change no figure.
-Add no recommendation the paper does not make.
+Constraints: every statement must appear in the paper. Where the paper
+qualifies a key point, the qualification must survive — never simplify a
+hedged conclusion into a firm one. Change no figure.
 
 Format: the decision in one sentence; three to five bullets of what the
-reader must know to make it; the main uncertainty; what happens next.
+reader must know; the main uncertainty; what happens next.
 
-List separately any point where the paper is unclear about its own
-conclusion.
+List any point where the paper is unclear about its own conclusion.
 
 Paper:
 [PASTE]
@@ -837,22 +774,19 @@ Paper:
 *Use when:* you must tell someone something they will not like.
 *Paste this:*
 ```
-You are helping a finance professional write a difficult message. I
-will describe the situation, the recipient, the relationship and the
-outcome I want.
+You are helping a finance professional write a difficult message. Below
+are the situation, the recipient and the outcome I want.
 
 Task: draft the message.
 
 Constraints: state the substance in the first three sentences — no
-warm-up. Do not apologise for facts. Do not soften a deadline or
-consequence I have given, and add none I have not. No flattery, no
-false warmth, no exclamation marks. Do not characterise the recipient's
-likely feelings.
+warm-up. Never apologise for facts, soften a deadline I have given, or
+add one I have not. No flattery and no exclamation marks.
 
 Format: subject line, then the message, under 200 words.
 
-Then one alternative opening paragraph with a different balance of
-directness, and a line on when each is better.
+Then one alternative opening with a different balance of directness, and
+a line on when each is better.
 
 The situation:
 [PASTE]
@@ -864,16 +798,14 @@ The situation:
 *Paste this:*
 ```
 You are preparing a finance presenter for questions on [TOPIC] at
-[ENTITY]. I will paste my paper and describe the audience.
+[ENTITY]. Below are my paper and the audience.
 
-Task: predict the questions, hardest first — including those from
-someone who read only the summary, and those from someone who read the
-appendix closely.
+Task: predict the questions, hardest first — from someone who read only
+the summary, and from someone who read the appendix closely.
 
-Constraints: do not answer them and do not draft my answers; I need to
-know what I do not know. Invent no facts about our business in the
-framing of a question. Where a question is prompted by something absent
-from my paper, say what is absent.
+Constraints: never answer them or draft my answers; I need to know what
+I do not know. Invent no facts about our business in a question's
+framing.
 
 Format: three groups — questions the paper answers, questions it raises
 but does not answer, questions it does not anticipate at all.
@@ -889,19 +821,18 @@ Paper and audience:
 *Use when:* a document must be read by people outside finance.
 *Paste this:*
 ```
-You are rewriting a finance document for readers who are competent
-professionals but not accountants.
+You are rewriting the finance document below for readers who are
+competent professionals but not accountants.
 
 Task: rewrite it so it can be read once and understood.
 
-Constraints: keep every figure exactly as written and every
-qualification intact. Where a technical term is unavoidable, keep it
-and gloss it in brackets on first use — do not swap in a loose synonym.
-Never simplify a conditional statement into an unconditional one. Add
-no examples or analogies of your own.
+Constraints: keep every figure and every qualification intact. Where a
+technical term is unavoidable, keep it and gloss it in brackets on first
+use — never swap in a loose synonym. Never simplify a conditional
+statement into an unconditional one.
 
-Format: the rewritten document, then a list of the terms you glossed
-and the gloss used, so I can check each.
+Format: the rewritten document, then a list of the terms you glossed and
+the gloss used, so I can check each.
 
 Where a passage cannot be made plainer without changing its meaning,
 leave it under "Kept as written".
@@ -917,17 +848,16 @@ Document:
 *Use when:* the process exists only in the hands of the person who does it.
 *Paste this:*
 ```
-You are turning a spoken description into a written procedure. Below
-are notes of someone describing how they perform [PROCESS] at [ENTITY].
+You are turning a spoken description into a written procedure. Below are
+notes of someone describing how they perform [PROCESS] at [ENTITY].
 
 Task: write the procedure as numbered steps a competent newcomer could
 follow.
 
-Constraints: include only steps described in the source. Add no steps
-that seem obvious. Do not reorder into a more logical sequence without
-flagging it. Add no system names, field names or approvals not
-mentioned. Where the speaker says "usually" or "it depends", preserve
-the conditionality — do not turn it into a rule.
+Constraints: include only steps in the source, and add no system names
+or approvals not mentioned. Where the speaker says "usually" or "it
+depends", preserve the conditionality — never turn it into a rule. Flag
+any reordering.
 
 Format: numbered steps starting with a verb; sub-steps where the source
 gives detail; a "Before you start" list.
@@ -943,17 +873,15 @@ Source:
 *Use when:* somebody starts on Monday.
 *Paste this:*
 ```
-You are writing desk instructions for a new joiner in a finance team at
-[ENTITY], covering [TASK]. I will paste our procedure and say what the
-joiner already knows.
+You are writing desk instructions for a new joiner at [ENTITY], covering
+[TASK]. Below are our procedure and what the joiner already knows.
 
 Task: rewrite it for someone doing this for the first time, without our
 internal shorthand.
 
-Constraints: change no step and no sequence. Expand an abbreviation
-only where I have told you what it means — otherwise mark it [EXPAND
-THIS]. Invent no screen names, menu paths or system behaviour. Add no
-reassurance and no encouragement.
+Constraints: change no step and no sequence. Expand an abbreviation only
+where I have told you what it means — otherwise mark it [EXPAND THIS].
+Invent no screen names or menu paths.
 
 Format: the instructions, with a "what this step is for" line under
 each; then "When to stop and ask".
@@ -970,17 +898,16 @@ Procedure and context:
 *Paste this:*
 ```
 You are designing practice exercises for a finance team learning
-[TECHNIQUE OR TASK] at [ENTITY]. I will describe the team's level and
-the mistakes they currently make.
+[TECHNIQUE] at [ENTITY]. Below are the team's level and their current
+mistakes.
 
 Task: design [NUMBER] exercises that surface exactly those mistakes, in
 increasing difficulty.
 
-Constraints: use fictional data, clearly labelled as fictional. No
-exercise may present invented figures as real market, industry or
-benchmark data. Reference no real organisation. Each needs a definite
-right answer, or — for a judgement exercise — a definite list of what a
-good answer must address.
+Constraints: use fictional data, clearly labelled as fictional. Never
+present invented figures as real market or benchmark data, and reference
+no real organisation. Each needs a definite right answer, or a definite
+list of what a good answer must address.
 
 Format: for each, the scenario, what the learner produces, the mistake
 it surfaces, and the marking notes.
@@ -996,21 +923,20 @@ Team and mistakes:
 *Use when:* somebody is leaving, or going on long leave.
 *Paste this:*
 ```
-You are building a handover note for [ROLE] at [ENTITY]. I will
-describe what the role does, in whatever order it comes to me.
+You are building a handover note for [ROLE] at [ENTITY]. Below is what
+the role does, in whatever order it came to me.
 
-Task: organise it into a handover document and identify what is
-missing.
+Task: organise it into a handover document and identify what is missing.
 
-Constraints: use only what I give you. Do not assume responsibilities
-from the job title. Assign no deadlines or contacts I have not named.
-Where I have been vague, keep my words and mark it "needs detail".
+Constraints: use only what I give you. Never assume responsibilities
+from the job title or assign contacts I have not named. Where I have
+been vague, keep my words and mark it "needs detail".
 
-Format: Recurring tasks by frequency; One-off items in progress with
-status; Who to contact for what; Access required; Known problems and
-workarounds; Things only this person knows.
+Format: Recurring tasks by frequency; One-off items in progress; Who to
+contact for what; Access required; Known workarounds; Things only this
+person knows.
 
-The last section matters most. Prompt me with questions to fill it.
+Prompt me with questions to fill the last section.
 
 What the role does:
 [PASTE]
@@ -1021,21 +947,19 @@ What the role does:
 *Use when:* a model has grown and one person understands it.
 *Paste this:*
 ```
-You are documenting a spreadsheet formula for a future maintainer.
-Below are the formula, the sheet layout, and what the calculation is
-meant to achieve.
+You are documenting a spreadsheet formula for a future maintainer. Below
+are the formula, the sheet layout, and what it is meant to achieve.
 
 Task: explain what the formula actually does, step by step, and whether
 that matches my description of the intent.
 
 Constraints: work only from the formula text and the layout described.
-Assume no ranges, named ranges or sheet contents I have not given. Do
-not rewrite the formula unless asked. Where an edge case cannot be
-determined from what I provided, say so.
+Assume no ranges or sheet contents I have not given. Where an edge case
+cannot be determined from what I provided, say so.
 
 Format: what it does in one sentence; a numbered breakdown from the
 innermost operation outwards; then Edge cases — blanks, errors, text
-where a number is expected, ranges that grow.
+where a number is expected, growing ranges.
 
 End with "Where this may not match your stated intent".
 

@@ -100,7 +100,7 @@ scope grows in a fortnight from two use cases to "a strategy". You end up
 with a deck, no baseline and no policy, while the team carries on as
 before. The defence is the written pair of use cases: everything else goes
 on a list marked "after day 90", and the list is shown, not argued with.
-Watch also for a policy written to be safe rather than followed — if it
+A policy written to be safe rather than followed fails the same way: if it
 would turn the honest answers you got in week 1 into sackable offences,
 people will comply by not telling you things.
 
@@ -531,9 +531,9 @@ screen, then run it end to end with real anonymised data while somebody
 times each step, including review, and writes the numbers where everyone
 can see them. Then ask the only question that matters: knowing these
 numbers, would you do this next month? Sometimes the answer is no. Let it
-be no — a session ending in a documented decision not to automate
-something does more for your credibility with the sceptics than three that
-end in enthusiasm. Use this as the workflow's fixed step:
+be no — a documented decision not to automate something does more for your
+credibility with the sceptics than three sessions that end in enthusiasm.
+Use this as the workflow's fixed step:
 
 ```
 You are producing the [PERIOD] management commentary for [ENTITY], following
@@ -588,8 +588,7 @@ because the cure differs entirely by cause.
 - **It stalled because the output was not good enough.** The most useful
   outcome available to you. Write it down specifically — not "it isn't
   accurate" but "it could not reconcile the intercompany balances without
-  more instruction than the task saved". That sentence is worth more than
-  a successful pilot on a task you did not care about.
+  more instruction than the task saved".
 - **It stalled because verification cost too much.** Legitimate. Narrow
   the task so the check is cheaper, or stop. Do not solve it by checking
   less.
