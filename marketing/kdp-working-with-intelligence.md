@@ -61,6 +61,28 @@ uses this technology well — and knows exactly where to stop.
 - Business & Money > Management & Leadership
 - Computers & Technology > Business Technology
 
+## What is in the book (for your own reference)
+
+- 8 parts, 68 chapters, ~262,000 words
+- 68 original diagrams, one per chapter, generated from the book's own plan
+- 16 industry playbooks, each following the same seven-part structure
+- ~40 reusable prompts in the library chapter, plus worked prompts in most playbooks
+- A sample one-page team policy (Ch 34) and a full two-page firm policy (Ch 57)
+- A 90-day adoption plan, a four-level training curriculum, and a closing 30-day plan
+
+## How to upload it
+
+1. Go to kdp.amazon.com and sign in. Bookshelf → Create → Kindle eBook.
+2. Paste the title, subtitle, author, description, 7 keywords and categories from
+   this file.
+3. Tick the AI-content disclosure. Say that AI was used for text, and that you
+   reviewed and edited it.
+4. Upload dist/Working-With-Intelligence.epub as the manuscript.
+5. Upload dist/WorkingWithIntelligence-cover.jpg as the cover.
+6. Use the KDP previewer and check: the title page, the part dividers, one diagram,
+   and one table-heavy chapter (Ch 18 or Ch 35 are the stress tests).
+7. Set territories, royalty and price. Publish.
+
 ## Settings
 
 - Language: English
@@ -89,5 +111,12 @@ verified.
   figures, and no fabricated case studies. Keep it that way in all marketing copy.
 - Do not claim endorsement, partnership, or certification by any AI vendor.
 - Do not claim the book guarantees income, savings, or job security.
-- Chapter openings use generic professional anecdotes in the author's voice; they name
-  no real person, client, or firm.
+- Chapter openings are second-person scenes ("It is half past four and...") or generic
+  professional situations. They claim no specific experience for the author and name no
+  real person, client, or firm. This was a deliberate policy decision partway through
+  drafting; earlier first-person anecdotes were removed.
+- Every legal, regulatory, tax, clinical and professional passage carries a stated
+  disclaimer that it is general information, that rules differ by jurisdiction and
+  change, and that the reader must check their own position.
+- Chapter 61 (regulation) deliberately names no statute, regulator or case anywhere, so
+  the book stays true across jurisdictions and does not date.
