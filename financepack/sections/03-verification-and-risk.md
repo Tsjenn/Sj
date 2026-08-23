@@ -11,7 +11,7 @@ humans make: transposed digits, a stale opening balance, a paragraph
 copied from last year and not updated. AI output fails differently. It
 fails smoothly. The wrong number is formatted correctly, sits in the
 right column, and is surrounded by three that are right. The invented
-source has a plausible title.
+source has a plausible title. The reasoning reads like reasoning.
 
 So the habit needs a small extension, not a replacement. Three checks,
 in order, every time output leaves your hands: **the figures, the
@@ -22,9 +22,9 @@ downstream irrelevant. Sources second: that is where fabrication hides.
 Reasoning last, because it takes the most thought, and you should not
 spend that on a document that has already failed.
 
-The whole thing should take a few minutes on short work and under half
-an hour on something substantial. If it would take longer, the work was
-the wrong shape to give to a tool.
+It should take a few minutes on short work and under half an hour on
+something substantial. If it would take longer, the work was the wrong
+shape to give to a tool.
 
 ### Check one — the figures
 
@@ -62,20 +62,19 @@ show its own working:
 ```
 Before the answer, produce a table of every number you are about to
 use. Columns: the number, the exact label or cell reference it came
-from in the material I gave you, and one of these two words —
-"supplied" if it came from my material, "derived" if you calculated
-it. For anything derived, show the calculation. Do not include any
-number you cannot place in one of those two categories. If a figure I
-need is missing from my material, say so and leave it blank rather
-than estimating it.
+from in my material, and one word — "supplied" if it came from my
+material, "derived" if you calculated it. For anything derived, show
+the calculation. Do not include any number you cannot place in one of
+those two categories. If a figure is missing from my material, say so
+and leave it blank rather than estimating it.
 
 Material: [PASTE OR ATTACH]
 Task: [WHAT YOU WANT PRODUCED]
 ```
 
-You still trace the figures, but now against a list the tool has
-committed to, which is faster than hunting through prose. The "derived"
-rows tell you which calculations to re-perform.
+You still trace the figures, but against a list the tool has committed
+to, which is faster than hunting through prose. The "derived" rows tell
+you which calculations to re-perform.
 
 ### Check two — the sources
 
@@ -92,10 +91,9 @@ as a hypothesis to prove or drop.
 **What it catches.** Confident references to things that do not exist,
 or that exist but say something else. Rules described as they were years
 ago. Guidance from one jurisdiction presented as though it applies in
-yours — common, and easy to miss, because the language of finance is
-shared across borders while the rules are not. Thresholds and dates that
-have moved. Requirements that apply to a class of entity yours is not
-in.
+yours — easy to miss, because the language of finance is shared across
+borders while the rules are not. Thresholds that have moved.
+Requirements that apply to a class of entity yours is not in.
 
 **What it misses.** A source that is real, current, correctly quoted
 and beside the point — relevance is a judgement no check automates. Also
@@ -146,10 +144,9 @@ slightly different question from the one asked — the most common
 failure, and the hardest to see, because the answer is good.
 
 **What it misses.** Anything that depends on knowing the client, the
-history, the personalities and the thing the last auditor flagged. It
-misses reasoning that is sound in general and wrong here. And it misses
-your own blind spots — you are checking with the head that approved the
-approach.
+history, the personalities and the thing the last auditor flagged.
+Reasoning that is sound in general and wrong here. And your own blind
+spots — you are checking with the head that approved the approach.
 
 **How long.** Five to ten minutes on anything carrying a
 recommendation; less on descriptive work. It is the check people skip
@@ -162,9 +159,8 @@ The prompt that helps here is the one that argues with you:
 ```
 Argue against the conclusion in the text below. Give the three
 strongest objections a well-informed sceptic would raise, the
-assumption each objection attacks, and what evidence would settle it.
-Do not soften them and do not offer a balanced view. Do not rewrite the
-text.
+assumption each attacks, and what evidence would settle it. Do not
+soften them, do not offer a balanced view, and do not rewrite the text.
 
 Text: [PASTE THE DRAFT]
 ```
@@ -175,9 +171,9 @@ visible so you can test it.
 
 ### The verification card
 
-Print this. Pin it where the work gets reviewed. It is deliberately
-short, because a checklist nobody completes is worse than no checklist —
-it produces the paperwork of assurance without the assurance.
+Print this and pin it where work gets reviewed. It is deliberately
+short: a checklist nobody completes is worse than none, because it
+produces the paperwork of assurance without the assurance.
 
 ---
 
@@ -217,29 +213,27 @@ Checked by: `[NAME]`  Date: `[DATE]`  Time taken: `[MINUTES]`
 
 ---
 
-Log the time taken — for you, not for anyone else. After a fortnight
-you will know which work is genuinely faster with a tool and which is
-only faster until the checking starts. It is the only productivity
-figure in this pack, and the only one worth having, because you measured
-it yourself.
+Log the time taken — for you, not anyone else. After a fortnight you
+will know which work is genuinely faster with a tool and which is only
+faster until the checking starts. It is the only productivity figure in
+this pack, and the only one worth having, because you measured it.
 
 ### What the three checks do not catch
 
-They do not catch everything, and a pack that claimed otherwise would be
-the sort of thing this pack exists to be an alternative to. What remains
+They do not catch everything, and a pack claiming otherwise would be the
+sort of thing this pack exists to be an alternative to. What remains
 after all three checks are done properly:
 
-**The plausible omission.** The checks look at what is on the page. None
-looks for what should be there and is not. A tool that summarises fifty
-documents and silently drops the one that matters produces output that
-passes every check.
+**The plausible omission.** The checks look at what is on the page, not
+at what should be there and is not. A tool that summarises fifty
+documents and silently drops the one that matters passes every check.
 
 **The correct-but-inapplicable.** Right rule, right numbers, wrong
 client. Nothing in the checks tests fit.
 
 **Compounding.** Verified output becomes input to the next piece of
 work, and the check does not repeat. Three steps on, the assumption is
-load-bearing and nobody remembers it was an assumption.
+load-bearing and nobody remembers it was one.
 
 **Drift.** The tenth document of the day gets a thinner check than the
 first, and reviewing fluent output is not the same mental act as writing
@@ -248,18 +242,15 @@ without your deciding it should.
 
 Three things to do about the residual risk, none of which eliminates it:
 
-1. **Write down what you assumed, and keep the input.** A short
-   assumptions block at the top of anything you pass on, and the
-   material you supplied stored alongside the output. If you cannot
-   reconstruct what the tool was given, you cannot later work out how it
-   went wrong.
-2. **Vary who checks.** The person who framed the task is the worst
-   person to check it, and the second-worst is anyone who agrees with
-   them. Get fresh eyes on anything that carries real consequence.
-3. **Set a ceiling.** Decide, in advance and in writing, the value or
+1. **Record your assumptions, and keep the input.** An assumptions block
+   at the top of anything you pass on, with the material you supplied
+   stored beside the output. If you cannot reconstruct what the tool was
+   given, you cannot work out how it went wrong.
+2. **Vary who checks.** Whoever framed the task is the worst person to
+   check it; the second-worst is anyone who agrees with them.
+3. **Set a ceiling.** Decide in advance, in writing, the value or
    sensitivity of work above which the tool is not used at all. Deciding
-   in the moment, under deadline, is deciding badly. Part Two is a
-   starting draft of that ceiling.
+   under deadline is deciding badly. Part Two is a starting draft.
 
 ## Part Two — Ten Places Not to Use It
 
@@ -268,8 +259,7 @@ temporary inconvenience soon to be engineered away. This is not that.
 Some of what follows may change; most will not, because the reason is
 not capability. It is that a duty sits on a person, and cannot be
 delegated to something that cannot be held to it. For each: the
-situation, why the tool fails there in particular, and what to do
-instead.
+situation, why the tool fails there, and what to do instead.
 
 ### 1. Signing, certifying or expressing an opinion
 
@@ -286,8 +276,8 @@ false, whether or not the content turns out to be right.
 
 **Instead.** Use a tool, if at all, on drafting and checking well before
 signature — never on the substance of what is certified. If a tool
-touched the draft, the person signing must have re-performed the
-underlying work themselves, not reviewed the prose.
+touched the draft, the signatory must have re-performed the underlying
+work, not reviewed the prose.
 
 ### 2. Anything you cannot verify
 
@@ -301,15 +291,15 @@ do not know reads *more* convincing, because you cannot see the joins.
 
 **Instead.** Either learn enough to check it, find someone who can, or
 do not send it. A tool used to orient yourself in an unfamiliar area
-gives you a list of things to look up, never the answer. The tell: if
-you could not answer a follow-up question without going back to the
-tool, you do not own the work.
+gives you things to look up, never the answer. The tell: if you could
+not answer a follow-up question without going back to the tool, you do
+not own the work.
 
 ### 3. Live disputes, investigations and privileged matters
 
 **The situation.** Litigation, arbitration, a regulatory investigation,
-a disciplinary process, a dispute with a former employee, anything where
-a lawyer is involved or is about to be.
+a disciplinary process, a dispute with a former employee — anything
+where a lawyer is involved or about to be.
 
 **Why it fails.** Two reasons, both serious. In a contested matter the
 working papers may become visible to the other side, and a tool-produced
@@ -322,8 +312,8 @@ jurisdiction.
 **Instead.** Take instructions from the lawyers on the matter, in
 writing, before anything goes near a tool. Assume until told otherwise
 that nothing about a live dispute goes into any external system. This is
-general information, not legal advice; the rules are jurisdiction-
-specific and consequential.
+general information, not legal advice; the rules here are specific to
+your jurisdiction, and consequential.
 
 ### 4. Decisions about a named individual
 
@@ -332,13 +322,12 @@ ratings, discipline, creditworthiness, a reference, a decision to end
 someone's contract.
 
 **Why it fails.** The decision has to be explicable to the person
-affected and possibly to a tribunal or a regulator, and "the system
-suggested it" is not an explanation. The tool has no access to the
-context that matters — the year they had, the thing their manager did,
-the reason the numbers look like that. And several jurisdictions place
+affected, and possibly to a tribunal or a regulator; "the system
+suggested it" is not an explanation. The tool cannot see the context
+that matters — the year they had, the thing their manager did, the
+reason the numbers look like that. And several jurisdictions place
 obligations around automated processing of personal data and decisions
-that significantly affect people; those vary, and you need to know your
-own.
+affecting people; those vary, and you need to know your own.
 
 **Instead.** Make the decision yourself, on evidence you can point to,
 and write your reasons before drafting any communication. A tool may
@@ -351,9 +340,8 @@ data.
 **The situation.** Data covered by a confidentiality undertaking, a data
 processing agreement naming permitted sub-processors, a client policy
 prohibiting external processing, or a requirement to keep information
-in-jurisdiction. In practice also: identifiable personal data, bank
-details, board material before it is public, price-sensitive
-information.
+in-jurisdiction. In practice also: personal data, bank details, board
+material before it is public, price-sensitive information.
 
 **Why it fails.** Not because the tool is careless. Because pasting the
 data into it is a disclosure to a third party, and you either had
@@ -452,15 +440,14 @@ your position.
 
 **Instead.** Either do the work until you can defend it, or say plainly
 that you have not. "I have not verified this — it is a starting point"
-is a perfectly professional sentence, and the honest one. Most of the
-trouble people get into with these tools starts with an unwillingness to
-say it.
+is a perfectly professional sentence. Most of the trouble people get
+into with these tools starts with an unwillingness to say it.
 
 ## Part Three — Assessing a Tool Before It Touches Client Data
 
 Marketing pages are written to be reassuring. Contracts are written to
-be enforceable. They are different documents and routinely say different
-things. This section is about getting answers in the second kind.
+be enforceable. They routinely say different things. This section is
+about getting answers in the second kind.
 
 Work through the table below with the vendor, or with your own IT team
 if the tool is deployed internally. Two rules make it worth doing. Get
@@ -539,10 +526,10 @@ have a tool extract, not interpret:
 
 ```
 Read the attached terms and produce a table with three columns: the
-question below, the exact quoted wording from the document that
-addresses it, and the clause number. If the document does not address a
-question, write "not addressed" — do not infer, summarise or fill the
-gap. Quote verbatim. Do not tell me whether the terms are good.
+question below, the exact wording from the document that addresses it,
+and the clause number. If the document does not address a question,
+write "not addressed" — do not infer or fill the gap. Quote verbatim.
+Do not tell me whether the terms are good.
 
 Questions:
 [PASTE THE QUESTIONS FROM THE TABLE ABOVE]
@@ -552,7 +539,7 @@ Document: [ATTACH THE TERMS]
 That gives you a map of where to read. You still read the clauses
 yourself, and anything that matters commercially or legally goes to
 someone qualified to advise on it. Extraction is a task a tool does
-well. Judging whether a liability cap is acceptable is not.
+well. Judging a liability cap is not.
 
 ### The assessment has a shelf life
 
@@ -560,9 +547,8 @@ An assessment describes a supplier on the day you did it, and nothing
 more. Terms are revised. Sub-processors are added. Features arrive that
 handle data differently from the feature you assessed, and they arrive
 switched on. Free and paid tiers can differ on exactly the points you
-cared about, so an upgrade changes your position without anyone deciding
-to change it. Companies are bought. Retention settings get reset by a
-migration.
+cared about, so an upgrade changes your position. Companies are bought.
+Retention settings get reset by a migration.
 
 None of this is bad faith; it is what happens to software companies. The
 consequence is that a one-off assessment filed away is a record of a
@@ -572,9 +558,9 @@ So repeat it. Once a year for anything touching client data, and
 immediately on any of these triggers: the terms change, the ownership
 changes, you start using a materially new feature, your plan changes, a
 client asks where their data goes, or you take on work under a stricter
-confidentiality regime than usual. Keep the completed tables with the
-date and the name of the person who filled them in, so the next review
-is a comparison rather than a fresh start.
+confidentiality regime than usual. Keep the completed tables, dated and
+signed by whoever filled them in, so the next review is a comparison
+rather than a fresh start.
 
 And keep one thing in your own hands whatever the assessment says: know
 which of your clients' information must never be submitted to an

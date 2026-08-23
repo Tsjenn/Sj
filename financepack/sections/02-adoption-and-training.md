@@ -22,48 +22,45 @@ your regulator and whoever handles your data obligations.
 Four decisions, in writing, in about an hour. Skipping them causes most of
 the mess later.
 
-**Who owns this.** One named person, not a committee. Not your busiest
+**Who owns this.** One named person, not a committee, and not your busiest
 month-end resource. They need enough standing to say "not yet" to a
 partner.
 
-**What you will measure.** Two things: the time a task takes end to end,
-and whether the output needed rework. Not logins. Not prompt counts.
-Enthusiasm is not a measure; it is a mood, and it evaporates around the
-twentieth of the month.
+**What you will measure.** The time a task takes end to end, and whether
+the output needed rework. Not logins, not prompt counts. Enthusiasm is a
+mood, not a measure, and it evaporates around the twentieth of the month.
 
 **The one rule that applies immediately**, before any policy exists:
 nothing produced with an assistant leaves the team — not to a client, a
 board, a regulator or a colleague outside finance — without a named human
-who has checked it and will put their name on it. That sentence can go out
-in an email this afternoon.
+who has checked it and will put their name on it. That can go out in an
+email this afternoon.
 
-**What is not going in.** Decide now what data nobody pastes anywhere
-until the policy exists. A starting position: client-identifiable
+**What data is not going in** until the policy exists: client-identifiable
 information, personal data, anything under an NDA, anything price-
-sensitive. Whether that is right for you depends on your tool's terms,
-your contracts and your local rules. Read the terms; do not assume them.
+sensitive. Whether that starting position is right for you depends on your
+tool's terms, your contracts and your local rules. Read the terms.
 
-| Role | Who it usually is | What they own | Realistic time cost |
-|---|---|---|---|
-| Sponsor | FD, controller, managing partner | Approves the pilot, protects the time, hears the results | 1 hour a month |
-| Owner | A manager with credibility | The plan, the log, the policy, the sessions | Half a day a week |
-| Pilot group | 3–5 people across levels | Doing the two use cases and recording honestly | 2–3 hours a week |
-| Reviewer | Whoever is already the quality backstop | Signing off pilot output, reporting what they fixed | Their normal review time |
-| Data/IT contact | Whoever handles systems and contracts | Tool terms, access, what data may go where | 2 hours in month one |
+| Role | What they own | Realistic time cost |
+|---|---|---|
+| Sponsor | Approves the pilot, protects the time, hears the results | 1 hour a month |
+| Owner | The plan, the log, the policy, the sessions | Half a day a week |
+| Pilot group (3–5 people) | The two use cases, recorded honestly | 2–3 hours a week each |
+| Reviewer | Signing off pilot output, reporting what they fixed | Their normal review time |
+| Data/IT contact | Tool terms, access, what data may go where | 2 hours in month one |
 
 ### Phase one — Days 1 to 30: contain it, then choose
 
-**The goal.** Two things by day 30: a policy people have read, and two
-chosen use cases with a baseline. You are not trying to produce results
-this month. You are trying to stop the uncontrolled version of this
-happening while you think.
+**The goal.** A policy people have read, and two chosen use cases with a
+baseline. You are not trying to produce results this month. You are trying
+to stop the uncontrolled version of this happening while you think.
 
 **Week 1 — find out what is already happening.** The owner asks every
 person, individually and without consequence, what they have used and for
 what. In person, not in a form. Say plainly that nobody is in trouble and
-that you need the truth to write a sensible policy. You will usually find
-more than you expected. Respond with a fix, not a disciplinary — this is
-the only week you get the truth cheaply.
+that you need the truth to write a sensible policy. Respond to what you
+hear with a fix, not a disciplinary — this is the only week you get the
+truth cheaply.
 *Who:* owner. *Done when:* you have a written list of current use, and the
 whole team has the one rule above.
 
@@ -80,10 +77,10 @@ and sent, with a request to reply "read".
 **Week 3 — choose two use cases.** Two, not ten. Starting ten produces ten
 half-finished experiments and evidence about none of them. Four tests: the
 task happens at least monthly; it eats time you can name; a wrong answer
-is caught by someone before it does damage; and you can tell within a week
-whether the output was good. Good early candidates are drafting and
-summarising work that already has a review step around it. Poor ones are
-anything where an error goes straight out of the door.
+is caught before it does damage; and you can tell within a week whether
+the output was good. Good early candidates are drafting and summarising
+work that already has a review step around it. Poor ones are anything
+where an error goes straight out of the door.
 *Who:* owner and pilot group; sponsor breaks ties. *Done when:* two use
 cases written in one sentence each, with a named reviewer for each.
 
@@ -103,10 +100,9 @@ scope grows in a fortnight from two use cases to "a strategy". You end up
 with a deck, no baseline and no policy, while the team carries on as
 before. The defence is the written pair of use cases: everything else goes
 on a list marked "after day 90", and the list is shown, not argued with.
-The second failure is a policy written to be safe rather than followed. If
-it would turn the honest answers you got in week 1 into sackable offences,
-you have written the wrong policy, and people will comply by not telling
-you things.
+Watch also for a policy written to be safe rather than followed — if it
+would turn the honest answers you got in week 1 into sackable offences,
+people will comply by not telling you things.
 
 ### Phase two — Days 31 to 60: run a real pilot
 
@@ -122,29 +118,27 @@ is how a pilot lies to you.
 **Week 6 — the first honest look.** Thirty minutes with the pilot group.
 Not a status update: ask each person to show you the worst output they got
 this week, and what they had to fix. The reviewer reports what they
-corrected before sign-off. Write down the failure types. You are building
+corrected before sign-off. Write the failure types down. You are building
 a list of what this tool gets wrong *on your work*, which is worth more
 than any general warning.
 *Who:* owner chairs, reviewer contributes. *Done when:* a written failure
 list has been circulated.
 
 **Week 7 — tighten, do not widen.** Improve the prompts, not the scope.
-This is the week the pilot group does Level 3. If a use case is clearly
-not working, say so now and either fix the prompt once or drop it.
-Dropping one of two at week 7 is normal, and far cheaper than dropping it
-at week 12.
+The pilot group does Level 3 this week. If a use case is clearly not
+working, say so now and either fix the prompt once or drop it. Dropping
+one of two at week 7 is normal, and far cheaper than at week 12.
 *Who:* pilot group. *Done when:* one agreed prompt per use case, saved
 where everyone can reach it, placeholders written out.
 
-**Week 8 — the honest read.** Compare the log against the baseline. Answer
-three questions in writing. Did the task get faster *once review time is
-included*? A draft produced in two minutes that takes forty to check has
-not saved you thirty-eight. Did rework go up, down or stay flat? Would the
-reviewer be comfortable with this going out under their name every month?
-Good answers mean widen. Mixed answers mean extend the pilot a month,
-which is a legitimate decision and makes the eventual answer stronger.
-Poor answers mean stop that use case and say why, in a paragraph, to
-everyone.
+**Week 8 — the honest read.** Compare the log against the baseline and
+answer three questions in writing. Did the task get faster *once review
+time is included*? A draft produced in two minutes that takes forty to
+check has not saved you thirty-eight. Did rework go up, down or stay flat?
+Would the reviewer be comfortable with this going out under their name
+every month? Good answers mean widen. Mixed answers mean extend the pilot
+a month, which makes the eventual answer stronger. Poor answers mean stop
+that use case and say why, in a paragraph, to everyone.
 *Who:* owner writes, sponsor reads. *Done when:* a one-page finding exists
 with the log attached.
 
@@ -154,10 +148,9 @@ worked, skip logging the three that did not, and by week 8 the data says
 the pilot went beautifully while the reviewer is quietly rewriting
 everything. Two defences: ask for the worst output every week, and treat
 the reviewer's correction time as the real measure, because it is the one
-number nobody can flatter. The other failure is the reviewer being cut
-out: once output is "usually fine", the check gets skipped under deadline
-pressure, and you find out when something wrong has left the building.
-Make sign-off a recorded step, not a habit.
+number nobody can flatter. Watch also for the review step being skipped
+under deadline pressure once output is "usually fine". Make sign-off a
+recorded step, not a habit.
 
 ### Phase three — Days 61 to 90: widen only what held
 
@@ -192,8 +185,8 @@ re-circulated.
 **Week 13 — decide what happens next.** One page to the sponsor: what you
 tried, what the log says, what you have stopped doing, the next two use
 cases, and what you are deliberately not doing yet. Add the standing
-arrangement — who keeps the log, how often it is reviewed, when the policy
-is next examined.
+arrangement — who keeps the log, and when it and the policy are next
+reviewed.
 *Who:* owner. *Done when:* the sponsor has the page and the next review
 date is in a calendar.
 
@@ -201,9 +194,9 @@ date is in a calendar.
 two use cases with five trained, watched people; it gets treated as
 general permission, quality drops, and the whole thing is banned in month
 five after one bad incident. Widen the use cases you tested, with the
-training you tested. The quieter failure: nothing sticks because the owner
-was the only person who cared. If nobody else can run the workflow from
-the run sheet by week 13, you have a hobby, not a process.
+training you tested. Watch also for the quieter failure: if nobody but the
+owner can run the workflow from the run sheet by week 13, you have a
+hobby, not a process.
 
 ### The senior who will not engage
 
@@ -214,11 +207,10 @@ Do not put them in the pilot group and do not sit them in a
 demonstration. Both read as pressure and produce a public position they
 then defend for a year. Give them the role they are already good at:
 reviewer. Ask them to check the pilot output and tell you what is wrong
-with it. That uses their scepticism as an asset, and it puts them in
-contact with the quality of the output rather than the claims about it.
-Some people who start out opposed adopt parts of it once they know where
-it fails. Some do not, which is a legitimate outcome as long as they are
-not blocking others.
+with it. That uses their scepticism as an asset and puts them in contact
+with the quality of the output rather than the claims about it. Some
+people who start out opposed adopt parts of it once they know where it
+fails. Some do not, which is fine as long as they are not blocking others.
 
 Hold firm on two things. They do not get to veto other people's use inside
 the policy. And they do get to say "not on my client work" for a period if
@@ -227,28 +219,26 @@ obstruction. Where work is regulated, whose name is on the file matters
 more than your adoption plan does.
 
 What does not work: making it a performance objective, mocking them in
-front of juniors, or going round them to their staff. All three convert a
-sceptic into an opponent.
+front of juniors, or going round them to their staff.
 
 ### The junior who has already raced ahead
 
-You will have one of these too: competent, recently qualified, six months
-of private practice with an assistant, genuinely faster at some things.
+You will have one of these too: competent, recently qualified, months of
+private practice with an assistant, genuinely faster at some things.
 
 Your instinct will be to slow them down. Half-resist it. What you need
 first is honesty about what they have already put into which tool, because
 you cannot manage exposure you do not know about. Ask directly, once, with
 the same no-consequences framing as week 1. Then give them a real job:
 writing prompts and run sheets for the pilot, and teaching Level 2. That
-turns private practice into a documented team asset and gives them
-standing for doing what they were going to do anyway.
+turns private practice into a documented team asset.
 
-The line you hold is review. The risk with a fast, confident junior is not
-that they use the tool; it is that they produce more finished-looking work
-than the reviewer's normal capacity. Say this to the reviewer out loud:
-the drafts now look better than they used to, and the appearance of the
-work no longer tells you much about the care behind it. Check the numbers
-and the sources, not the prose.
+The line you hold is review. The risk is not that they use the tool; it is
+that they produce more finished-looking work than the reviewer's normal
+capacity. Say this to the reviewer out loud: the drafts now look better
+than they used to, and the appearance of the work no longer tells you much
+about the care behind it. Check the numbers and the sources, not the
+prose.
 
 If they have used an unapproved tool on client data, treat it as an
 exposure to assess and report per your own obligations, not as a character
@@ -287,13 +277,6 @@ prompting looks like the practical part. Without Level 1, people write
 better prompts and trust the answers more, which is the worst combination
 available.
 
-| Level | For | Length | The point |
-|---|---|---|---|
-| 1 | Everyone | 45 minutes | What it is, and why it is confident when wrong |
-| 2 | Everyone who will use it | 90 minutes, two sessions | Writing a prompt that produces usable work |
-| 3 | Anyone reviewed, and everyone who reviews | 2 × 60 minutes | Verification, and working with your own documents |
-| 4 | Managers and process owners | 3 × 60 minutes plus follow-up | Repeatable workflows, and when to stop |
-
 ### Level 1 — What the thing actually is, and why it is confident when wrong
 
 **Who it is for.** Everyone, including people who will never use it, and
@@ -304,9 +287,9 @@ demonstration does the work.
 
 **Learning outcomes.** Each person can say in their own words that the
 tool produces plausible text rather than looking up facts; that fluency is
-not evidence of accuracy; that it will invent a reference, a figure or a
-paragraph number in exactly the tone it uses when right; and that its
-confidence is a property of how it writes, not a signal of how sure it is.
+not evidence of accuracy; and that it will invent a reference or a figure
+in exactly the tone it uses when right, because its confidence is a
+property of how it writes, not a signal of how sure it is.
 
 **Session outline.**
 
@@ -316,9 +299,8 @@ confidence is a property of how it writes, not a signal of how sure it is.
    being right tells you nothing about the contents.
 2. *Fifteen minutes — the exercise below.* This is the session.
 3. *Ten minutes — where it is strong.* Rewriting, summarising a document
-   you supply, first drafts, explaining something in simpler words,
-   spotting what is missing from a list. You supply the substance, it
-   supplies the form.
+   you supply, first drafts, spotting what is missing from a list. You
+   supply the substance, it supplies the form.
 4. *Five minutes — where it is weak.* Anything needing a fact you did not
    give it. Arithmetic you have not checked. Anything current. Anything
    where 95% right is the same as wrong.
@@ -369,25 +351,25 @@ once on their own before the second half is useful.
 
 **Learning outcomes.** Each person can write a prompt stating role,
 context, task, constraints and output format; can supply source material
-instead of expecting the tool to know things; can ask it to flag its
-assumptions; and can tell a bad prompt from a bad tool.
+instead of expecting the tool to know things; and can tell a bad prompt
+from a bad tool.
 
 **Session outline.**
 
 *Session A.* Five minutes on the failure they have all seen: someone types
 "write a variance analysis", gets something generic, concludes it is
 useless. Fifteen minutes on the five parts — role, context, task,
-constraints, format — with finance examples. The part finance people skip
-is context: the entity, the framework, the period, materiality, who reads
-it. Twenty minutes on the exercise below. Five minutes setting homework:
-one real task, the prompt written for it, and the output, good or bad.
+constraints, format. The part finance people skip is context: the entity,
+the framework, the period, materiality, who reads it. Twenty minutes on
+the exercise below. Five minutes setting homework: one real task, the
+prompt written for it, and the output, good or bad.
 
 *Session B.* Twenty-five minutes workshopping the homework anonymously on
 screen and fixing prompts as a group — the most valuable half hour in the
 curriculum. Ten minutes on iteration: the second and third messages do
-more than the first ("too long", "drop the introduction", "you have
-assumed [X], I meant [Y]"). Ten minutes building the shared prompt list,
-so nobody rewrites the same prompt next month.
+more than the first ("too long", "you have assumed [X], I meant [Y]"). Ten
+minutes building the shared prompt list, so nobody rewrites the same
+prompt next month.
 
 **The live exercise: two prompts, one task.** Run the thin version first:
 
@@ -436,9 +418,8 @@ reviews. In practice, most of the team.
 
 **Learning outcomes.** Each person can name what must be checked in a
 given output and check it rather than redo the work; can ground a request
-in supplied documents and require quoted source lines; can recognise a
-confident summary of a document that says something slightly different;
-and can say out loud when verification costs more than the drafting saved.
+in supplied documents and require quoted source lines; and can say out
+loud when verification costs more than the drafting saved.
 
 **Session outline.**
 
@@ -449,17 +430,16 @@ Fifteen minutes on the four checks. Numbers: recalculate, do not read.
 Sources: does the quoted line exist, in those words? Omissions: what is
 missing, which no output will tell you. Claims: any sentence asserting a
 fact you did not supply is unverified until you verify it. Twenty-five
-minutes on the exercise below. Ten minutes deciding how your team evidences
-that a review happened, using your existing file conventions.
+minutes on the exercise below. Ten minutes on how your team evidences that
+a review happened, using your existing file conventions.
 
 *Session B — your own documents.* Fifteen minutes on grounding: the
 difference between asking it about a policy and giving it the policy.
 Twenty minutes on the quoting technique below. Fifteen minutes on limits:
 long documents get summarised unevenly and the middle is where things go
 missing, so split them and ask about one section at a time. Ten minutes on
-which documents may be uploaded at all under your policy and your
-obligations — the most-asked question in the curriculum, so have the
-answer written down.
+which documents may be uploaded at all under your policy — the most-asked
+question in the curriculum, so have the answer written down.
 
 **The live exercise: find the planted errors.** Beforehand, take a real
 piece of assisted output — a summary of an internal policy, or commentary
@@ -467,7 +447,7 @@ on a set of figures — and plant exactly three errors: one arithmetic, one
 a quoted phrase that does not appear in the source, one material omission.
 Do not say how many there are, or that they were planted, until
 afterwards. Hand out the output and the source documents. Fifteen minutes,
-in pairs. Then compare findings.
+in pairs, then compare findings.
 
 Almost every group finds the arithmetic error and misses the omission.
 That is the lesson, and it is better felt than told: what is missing does
@@ -496,9 +476,9 @@ paraphrase-instead-of-quote is a failure to watch for, and move on.
 **How you tell whether it landed.** Look at the pilot log. If the "rework
 needed?" column gets *more* entries after Level 3, the training worked:
 people are catching what they used to accept. A pilot whose error rate
-appears to fall straight after verification training is usually one that
-has stopped looking properly. Say that in advance, so that finding errors
-reads as doing the job well rather than as a bad week.
+appears to fall straight after verification training has usually stopped
+looking properly. Say that in advance, so that finding errors reads as
+doing the job well rather than as a bad week.
 
 ### Level 4 — Designing a repeatable workflow, and knowing when to stop
 
@@ -511,16 +491,15 @@ later to review what was built.
 **Learning outcomes.** Each person can convert an ad hoc use into a
 documented workflow with a fixed prompt, defined inputs, a checking step
 and a named sign-off; can judge whether it is worth it once review time is
-counted; can recognise a task that should not be automated at all; and can
-retire a workflow that has stopped earning its place.
+counted; and can retire a workflow that has stopped earning its place.
 
 **Session outline.**
 
 *Session A — from ad hoc to repeatable.* What makes a task suitable:
 frequency, stable inputs, an existing check, a tolerable failure mode. The
-anatomy of a run sheet — trigger, inputs, prompt with placeholders,
-processing steps, checks, sign-off, storage. Each attendee picks a
-candidate from their own work.
+anatomy of a run sheet — trigger, inputs, prompt with placeholders, steps,
+checks, sign-off, storage. Each attendee picks a candidate from their own
+work.
 
 *Session B — build one.* Attendees write their run sheet in the room, then
 swap with a neighbour, who follows it exactly as written and marks every
@@ -529,9 +508,9 @@ not finished.
 
 *Session C — knowing when to stop.* Four stop signals:
 
-1. Verification costs more than the drafting saved. Count review minutes
-   honestly. If they exceed the time saved, stop: the workflow is moving
-   effort, not reducing it.
+1. Verification costs more than the drafting saved. If review minutes
+   exceed the time saved, stop: the workflow is moving effort, not
+   reducing it.
 2. The failure mode is intolerable regardless of frequency. If a wrong
    output goes straight out with no human in between, the error rate does
    not need to be high to be unacceptable.
@@ -540,8 +519,7 @@ not finished.
    you something you will not notice for two years. Make that call
    deliberately rather than by default.
 4. Nobody can explain the output. If the person signing cannot say how the
-   result was arrived at, they are signing something they do not
-   understand, and their name is still on it.
+   result was arrived at, their name is still on it.
 
 *Follow-up, four weeks later.* Each attendee reports on their workflow
 using the log, and the group retires at least one thing. A curriculum that
@@ -550,13 +528,12 @@ never retires anything is accumulating obligations.
 **The live exercise: build and run the month-end commentary workflow.** Do
 it as a group, on the real task, in the session. Write the run sheet on
 screen, then run it end to end with real anonymised data while somebody
-times each step and writes the numbers where everyone can see them,
-including review time. Then ask the only question that matters: knowing
-these numbers, would you do this next month? Sometimes the answer is no.
-Let it be no — a session ending in a documented decision not to automate
+times each step, including review, and writes the numbers where everyone
+can see them. Then ask the only question that matters: knowing these
+numbers, would you do this next month? Sometimes the answer is no. Let it
+be no — a session ending in a documented decision not to automate
 something does more for your credibility with the sceptics than three that
-end in enthusiasm. Use this as the workflow's fixed step, filled in and
-saved:
+end in enthusiasm. Use this as the workflow's fixed step:
 
 ```
 You are producing the [PERIOD] management commentary for [ENTITY], following
@@ -598,8 +575,7 @@ taught enthusiasm rather than judgement.
 
 Adoption commonly stalls between weeks six and ten. The novelty has worn
 off, month-end has arrived, and the people who were logging diligently
-have gone quiet. This is normal enough to plan for rather than treat as a
-verdict.
+have gone quiet. Plan for it rather than treating it as a verdict.
 
 A stall is information. Read what it is telling you before reacting,
 because the cure differs entirely by cause.
@@ -618,8 +594,7 @@ because the cure differs entirely by cause.
   the task so the check is cheaper, or stop. Do not solve it by checking
   less.
 - **It stalled because one person was carrying it.** The most common cause
-  and the least discussed. The owner got busy and nothing had been handed
-  over. Fix the handover, not the enthusiasm.
+  and the least discussed. Fix the handover, not the enthusiasm.
 - **It stalled because nobody was ever asked to.** There was a policy and a
   licence and no instruction. If you want a task done a particular way,
   ask for it the way you ask for anything else.
