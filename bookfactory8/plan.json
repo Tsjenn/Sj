@@ -26,7 +26,7 @@
         {
           "id": "ch01",
           "title": "The Four Layers",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "stack",
             "title": "The AI stack, bottom to top",
@@ -42,7 +42,7 @@
         {
           "id": "ch02",
           "title": "What a Market Capitalisation Actually Is",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "anatomy",
             "title": "Inside a market capitalisation",
@@ -58,7 +58,7 @@
         {
           "id": "ch03",
           "title": "Reading a Chip Company's Accounts",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "checklist",
             "title": "What to look at first in a semiconductor company",
@@ -76,7 +76,7 @@
         {
           "id": "ch04",
           "title": "Reading a Cloud Company's Accounts",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "flow",
             "title": "How cloud capex becomes cloud profit",
@@ -93,7 +93,7 @@
         {
           "id": "ch05",
           "title": "Reading a Company With No Accounts",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "compare",
             "title": "Public company vs private lab",
@@ -109,7 +109,7 @@
         {
           "id": "ch06",
           "title": "Every Number in This Book Has a Date",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "timeline",
             "title": "Why a figure needs a timestamp",
