@@ -81,29 +81,23 @@ KEYWORDS - 7 boxes, one phrase in each
 CATEGORIES - choose three
 ================================================================
 
-IMPORTANT: in KDP's upload picker the tree starts at "Fiction", not at
-"Literature & Fiction". And there is a fiction/non-fiction switch above
-it - if that is set to Non-fiction, no historical fiction category will
-appear at all. Set it to Fiction first, then use the picker's SEARCH
-box rather than scrolling.
+In KDP's picker, choose "Literature & Fiction" in the Category
+drop-down. NOT "History" - that is the non-fiction history shelf and
+it will offer you centuries instead of genres.
 
-  1.  Fiction > Historical > World War II
-  2.  Fiction > Sagas
-  3.  Fiction > World Literature > Asia
-      (if that is not offered: Fiction > Family Life, or
-       Fiction > Historical > General)
+  1.  Literature & Fiction > Genre Fiction > Historical Fiction
+      (if a World War II or 20th Century placement is offered
+       underneath it, take that one)
+  2.  Literature & Fiction > Genre Fiction > Sagas
+  3.  Literature & Fiction > World Literature > Asian
+      (if not offered: Genre Fiction > Family Life)
 
-Why this spread: the occupation years are the heart of the book and
-World War II fiction is heavily browsed; Sagas is a small category, so
-a handful of sales can reach its bestseller list; the third pick
-reaches a different reader again.
+You get three placements in total. Use Reset or the breadcrumb at the
+top of the pop-up to come back up and take the next branch.
 
-Do not spend all three picks inside Historical - they would compete
-with each other. Avoid plain "Historical > General" as your only
-historical pick if the World War II option exists; the general one is
-enormous and a new book disappears in it.
-
-See marketing/novel-categories-PASTE-THIS.txt for the step-by-step.
+Do not spend all three inside Historical Fiction - they compete with
+each other. See marketing/novel-categories-PASTE-THIS.txt for the
+step-by-step.
 
 ================================================================
 ALL THE UPLOAD SETTINGS

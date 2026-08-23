@@ -1,80 +1,83 @@
-FINDING THE CATEGORIES FOR THE AMAH'S DAUGHTER
+CATEGORIES FOR THE AMAH'S DAUGHTER
+How to work the KDP picker you have on screen
 
-WHY YOU COULD NOT FIND THEM
+THE PROBLEM
 
-The paths I gave you first were Amazon STOREFRONT names - the way
-categories look when a shopper browses the shop. KDP's upload picker
-uses different wording. That was my mistake, not yours.
+You have "History" selected in the Category drop-down. That is the
+NON-FICTION history shelf - books about real events. That is why the
+Placement panel is offering you 16th Century, 17th Century, 20th
+Century and so on.
 
-In the KDP picker the tree starts at "Fiction", NOT at
-"Literature & Fiction". So searching for "Literature & Fiction" finds
-nothing.
-
-
-CHECK THIS FIRST
-
-Near the top of the categories step KDP asks whether the book is
-fiction or non-fiction. If that is set to Non-fiction, no historical
-fiction category will appear anywhere in the list, no matter what you
-search for.
-
-Set it to FICTION. Then the historical categories appear.
+Your book is a novel. It does not belong there.
 
 
-HOW TO USE THE PICKER
+WHAT TO DO
 
-1. Click "Choose categories" (or Edit categories).
-2. There is a search box at the top of the pop-up. Use it. Do not try
-   to scroll the whole tree - it is very long.
-3. Type: historical
-4. Tick up to THREE. You cannot pick more than three at upload.
-5. Click Save.
+1. In the Category drop-down (the long list on the left), scroll down
+   and choose:
 
+        Literature & Fiction
 
-WHAT TO TICK - in order of preference
+   It sits between "Law" and "Medical eBooks" in your list.
 
-  1.  Fiction > Historical > World War II
-      The occupation years are the heart of the book, and this is one
-      of the most actively browsed fiction categories on Amazon.
+2. More drop-downs will appear to the right as you go deeper. Follow
+   this path:
 
-  2.  Fiction > Sagas
-      Search the box for: sagas
-      A smaller category, which is the point. Fewer competitors means
-      a handful of sales can put you on its bestseller list.
+        Literature & Fiction  >  Genre Fiction  >  Historical Fiction
 
-  3.  Fiction > World Literature > Asia
-      Search the box for: world literature
-      If you do not see an Asia entry, use one of these instead:
-          Fiction > Family Life
-          Fiction > Historical > General
+3. The Placement panel on the right will fill with tick boxes. Tick the
+   one closest to the book. If you are offered a "20th Century" or
+   "World War II" placement under Historical Fiction, take it - the
+   occupation years are the heart of the book. Otherwise tick the
+   general Historical Fiction placement.
 
-If "Historical > World War II" does not appear on your marketplace,
-take "Fiction > Historical > General" as the first pick instead.
+4. You are allowed THREE placements in total. To add the next one,
+   click "Reset" or use the breadcrumb at the top to go back up, then
+   come down a different branch.
 
+5. For the second and third, take:
 
-ONE THING TO AVOID
+        Literature & Fiction  >  Genre Fiction  >  Sagas
 
-Do not spend all three picks inside Historical. Three historical
-categories compete with each other. One historical + one saga + one
-world-literature or family-life reaches three different sets of
-readers.
+        Literature & Fiction  >  World Literature  >  Asian
+
+   If "Asian" is not offered under World Literature, use:
+
+        Literature & Fiction  >  Genre Fiction  >  Family Life
+
+6. Click "Save categories" when three are ticked.
 
 
-AFTER YOU PUBLISH
+WHY THIS SPREAD
 
-Amazon also assigns extra browse categories on its own, based on your
-keywords and description. Those appear over the following days and you
-do not control them directly.
-
-If you later want to be listed in more categories than three, you can
-email kdp-support through the KDP Help page and ask. That is a normal
-request and they usually action it.
+Historical Fiction is where readers of Lisa See and Min Jin Lee browse.
+Sagas is a small category - fewer competitors, so a handful of sales
+can reach its bestseller list. World Literature > Asian reaches a
+different reader again. Three picks inside Historical would only
+compete with each other.
 
 
-NOTE
+A NOTE ON WHAT I CAN AND CANNOT SEE
 
-Category names and the exact tree differ slightly between marketplaces
-(Amazon.com, Amazon.co.uk and so on) and Amazon changes them from time
-to time. The search box is the reliable route. Pick the closest match
-to the names above from whatever your screen actually offers - the
-choice does not have to be word-for-word identical to be right.
+I can see your current screen but not the levels below it. The exact
+sub-levels under Literature & Fiction differ a little between
+marketplaces and Amazon changes them from time to time. If a name
+above is not on your screen, take the closest match - it does not have
+to be word-for-word identical to be right.
+
+
+WHILE YOU ARE ON THAT PAGE
+
+Your seven keyword boxes were still empty in the screenshot. Fill them:
+
+    historical fiction
+    family saga
+    World War 2 fiction
+    Malaysia
+    multigenerational saga
+    Asian historical fiction
+    secrets and lies novel
+
+One phrase per box. Keywords are what Amazon uses to place your book in
+extra browse categories beyond the three you pick here, so do not skip
+them.
