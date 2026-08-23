@@ -137,7 +137,7 @@ def make_cover(path):
     # --- the cross-section, drawn oversized then downsampled for fine detail
     S = 2
     x0, x1 = 150, CW - 150
-    ty, by = 1252, 2214
+    ty, by = 1288, 2216
     tile = Image.new("RGB", ((x1 - x0) * S, (by - ty) * S), (0, 0, 0))
     _cross_section(tile, 0, 0, (x1 - x0) * S, (by - ty) * S - 40 * S,
                    random.Random(20260823))
@@ -159,22 +159,25 @@ def make_cover(path):
     cx = CW // 2
     tracked(d, "THE", _cover_font(64, False), cx, 372, (150, 158, 170), track=38)
 
-    for j, word in enumerate(["FOUR", "LAYERS"]):
+    for j, word in enumerate(["SILICON", "LEDGER"]):
         sz = 300
         while sz > 120:
             f = _cover_font(sz, True)
-            if d.textlength(word, font=f) + 4 * (len(word) - 1) <= CW - 220:
+            if d.textlength(word, font=f) + 4 * (len(word) - 1) <= CW - 200:
                 break
             sz -= 6
-        tracked(d, word, f, cx, 486 + j * 288, CREAM, track=4)
+        tracked(d, word, f, cx, 490 + j * 286, CREAM, track=4)
 
     d.rectangle([cx - 130, 1104, cx + 130, 1109], fill=COPPER_HI)
 
     f = _cover_font(40, False)
-    sub = "Silicon, capital, and who owns artificial intelligence"
+    sub = "Who really owns artificial intelligence"
     while d.textlength(sub, font=f) > CW - 240:
         f = _cover_font(f.size - 2, False)
-    d.text((cx - d.textlength(sub, font=f) / 2, 1160), sub, font=f, fill=(168, 176, 188))
+    d.text((cx - d.textlength(sub, font=f) / 2, 1152), sub, font=f, fill=(178, 186, 198))
+    f2 = _cover_font(36, False)
+    sub2 = "and what the accounts say"
+    d.text((cx - d.textlength(sub2, font=f2) / 2, 1206), sub2, font=f2, fill=COPPER_HI)
 
     # --- author, on a plate lifted just clear of the substrate
     d.rectangle([0, 2318, CW, CH], fill=(6, 6, 8))
@@ -208,6 +211,6 @@ def main():
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "cover":
         os.makedirs(os.path.join(ROOT, "dist"), exist_ok=True)
-        make_cover(os.path.join(ROOT, "dist", "The-Four-Layers-cover.jpg"))
+        make_cover(os.path.join(ROOT, "dist", "The-Silicon-Ledger-cover.jpg"))
     else:
         main()

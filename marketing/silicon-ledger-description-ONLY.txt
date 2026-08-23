@@ -1,0 +1,41 @@
+Nvidia is the most valuable company in the world. Almost nobody can explain, in accounting terms, why.
+
+Two private companies with no audited accounts are each worth close to a trillion dollars. A single assumption about how long a server lasts moves billions of reported profit without moving a cent of cash. The same company appears in the same deal as supplier, customer and shareholder — and every part of that is disclosed, if you know which note to open.
+
+This book follows the money through the machine. Not the technology. The invoices.
+
+Someone types a question at eleven at night. Between the click and the answer, that payment passes through four separate businesses, each with its own accounts, its own margins, and its own reason to believe it holds the scarce thing. Application, where the user pays. Model, where intelligence is made. Compute, where it runs. Silicon, where it is physically possible.
+
+The value has been moving down, not up.
+
+Written by a chartered accountant, THE SILICON LEDGER is a financial history of the AI and semiconductor industry read from the filings rather than the press releases.
+
+WHAT IS INSIDE
+
+The bottom of the stack — TSMC, the company almost everything runs through. ASML, one machine with no substitute. Nvidia in three acts: the graphics years, the decade nobody noticed while CUDA was being built, and the four years that made it the largest company on earth. AMD's near-death and return. How Intel lost a thirty-year lead. Broadcom's quiet trillion. Arm, and what SoftBank actually bought.
+
+Why memory share prices went up — the question everyone asks and few answer properly. DRAM was for decades the worst business in semiconductors. High-bandwidth memory turned a commodity into a qualified, contracted, sold-out component. Whether that breaks the cycle or merely lengthens it is argued from the record.
+
+The compute layer — Azure, AWS, Google Cloud and the TPU, Oracle's second act, the neoclouds that borrow against their own hardware, and the power constraint now replacing chip supply as the binding one.
+
+The model layer — OpenAI from non-profit to a valuation approaching a trillion dollars, Anthropic from founding to briefly the most valuable private company in the world, and the giants trying to catch them.
+
+The web of ownership — who holds stakes in whom, why two competing cloud providers fund the same laboratory, what circular revenue actually is in accounting terms, and how vendor financing ended the last time an industry tried it. Drawn as one map, with its date on it.
+
+And two chapters no other book on this subject contains: one on depreciation, and one on what auditors see — where the hard judgements sit, and why every decisive judgement in this industry rests on the weakest tier of evidence.
+
+WHAT IS DELIBERATELY NOT INSIDE
+
+No price targets. No recommendation to buy or sell anything. No prediction of where any share price is going. This is not investment advice, and it says so.
+
+Every figure carries the date it refers to and the source it came from, because a market capitalisation is a photograph, not a fact. Where a number is not disclosed, the book says so rather than reaching for an estimate. Where sources disagree, it shows you the disagreement instead of averaging it away.
+
+The bull case and the bear case are each stated at full strength, in their own chapters, by an author who then declines to adjudicate and hands you the observable tests instead.
+
+WHO IT IS FOR
+
+Anyone who owns a piece of this industry directly or through a pension, anyone who works in it, and anyone tired of commentary that quotes a market capitalisation as though it were money in a bank account. No technical background assumed.
+
+77 chapters. 8 parts. A diagram in every chapter.
+
+The numbers in this book will go out of date. It tells you where to find today's version yourself. That is the point.

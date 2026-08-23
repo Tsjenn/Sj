@@ -164,14 +164,14 @@ def build():
     complete = len(done) == len(chs)
     os.makedirs(DIST, exist_ok=True)
 
-    cover_path = os.path.join(DIST, "The-Four-Layers-cover.jpg")
+    cover_path = os.path.join(DIST, "The-Silicon-Ledger-cover.jpg")
     if not os.path.exists(cover_path):
         sys.path.insert(0, os.path.join(ROOT, "scripts"))
         import layers_art
         layers_art.make_cover(cover_path)
 
     suffix = "" if complete else "-PREVIEW-%dof%d" % (len(done), len(chs))
-    epub_path = os.path.join(DIST, "The-Four-Layers%s.epub" % suffix)
+    epub_path = os.path.join(DIST, "The-Silicon-Ledger%s.epub" % suffix)
 
     uid = "urn:uuid:%08x-wwi7-4000-8000-%012x" % (abs(hash(plan["title"])) % 2**32,
                                                   abs(hash(plan["subtitle"])) % 2**48)
@@ -295,7 +295,7 @@ def build():
     print("Built %s (%d/%d chapters, ~%d words, %d illustrations)"
           % (epub_path, len(done), len(chs), words, len(art_files)))
     if complete:
-        print("COMPLETE — ready for KDP upload (EPUB + dist/The-Four-Layers-cover.jpg).")
+        print("COMPLETE — ready for KDP upload (EPUB + dist/The-Silicon-Ledger-cover.jpg).")
     return complete
 
 

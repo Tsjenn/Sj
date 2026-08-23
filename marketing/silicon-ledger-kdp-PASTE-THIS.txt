@@ -1,22 +1,21 @@
 ================================================================
-THE FOUR LAYERS — KDP LISTING PACK
+THE SILICON LEDGER — KDP LISTING PACK
 ================================================================
 
 FULL NAME OF THE BOOK
 
-   The Four Layers: Silicon, Capital and the Companies That Own
-   Artificial Intelligence
+   The Silicon Ledger: Who Really Owns Artificial Intelligence —
+   and What the Accounts Say
 
 KDP has separate boxes. Split it like this:
 
-   Title box     ->  The Four Layers
-   Subtitle box  ->  Silicon, Capital and the Companies That Own
-                     Artificial Intelligence
+   Title box     ->  The Silicon Ledger
+   Subtitle box  ->  Who Really Owns Artificial Intelligence and What
+                     the Accounts Say
    Author box    ->  Tang Shiuan Jenn
 
-The plan file carries a longer subtitle. Use the short one above in the
-subtitle box — long subtitles get truncated in search results and on
-phone screens. The longer version is fine inside the book.
+Drop the dash in the subtitle box. Amazon's search results render
+punctuation inconsistently and a stray em dash can look like an error.
 
 
 ================================================================
@@ -64,17 +63,21 @@ KEYWORDS — 7 boxes, one phrase in each
 2. AI industry analysis
 3. Nvidia
 4. technology investing
-5. financial analysis
+5. financial statement analysis
 6. chip war
 7. business history
+
+Note on keyword 5: "financial statement analysis" beats plain
+"financial analysis" here. It is what the book actually does, and it is
+a phrase people search when they want to learn to read accounts.
 
 
 ================================================================
 DESCRIPTION
 ================================================================
 
-In the separate file four-layers-description-ONLY.txt. Select all,
-copy, paste. It is 3,775 characters, inside Amazon's 4,000 limit.
+In the separate file silicon-ledger-description-ONLY.txt. Select all,
+copy, paste. It is 3,879 characters, inside Amazon's 4,000 limit.
 
 
 ================================================================
@@ -92,8 +95,8 @@ Pre-order           No. Publish now.
 AI content          YES — tick it. Say AI was used for text and images,
                     and that you reviewed and edited the work.
 
-Manuscript file     The-Four-Layers.epub
-Cover file          The-Four-Layers-cover.jpg
+Manuscript file     The-Silicon-Ledger.epub
+Cover file          The-Silicon-Ledger-cover.jpg
                     Choose "Upload a cover you already have".
                     Do NOT open Cover Creator — it overwrites your file.
 
@@ -115,8 +118,8 @@ Before publishing   Open the KDP previewer and check the title page,
 BOOK FACTS (your reference, not for the listing)
 ================================================================
 
-Full name    The Four Layers: Silicon, Capital and the Companies That
-             Own Artificial Intelligence
+Full name    The Silicon Ledger: Who Really Owns Artificial
+             Intelligence — and What the Accounts Say
 Author       Tang Shiuan Jenn, Chartered Accountant
 Length       ~340,000 words
 Structure    8 parts, 77 chapters
@@ -130,9 +133,9 @@ Figures as at August 2026, each dated and sourced in the text
 AUTHOR BIO
 ================================================================
 
-Tang Shiuan Jenn is a qualified chartered accountant. The Four Layers
-is a financial history of the AI and semiconductor industry, written
-from the filings.
+Tang Shiuan Jenn is a qualified chartered accountant. The Silicon
+Ledger is a financial history of the AI and semiconductor industry,
+written from the filings rather than the press releases.
 
 
 ================================================================
