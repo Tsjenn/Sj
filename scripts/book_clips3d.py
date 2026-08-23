@@ -33,6 +33,13 @@ CHROME = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
 W, H, FPS = 1080, 1920, 30
 
 # Scene styling per book: background gradient, rim/accent colour, board colour.
+# Amazon ASINs, filled in as the owner confirms each one. A book with no
+# ASIN here simply gets no URL bar on its end card.
+ASIN = {
+    "matcha": "B0HG5ZY46K",
+}
+
+
 LOOK = {
     "ai":     {"bg": ["#1b3career", "#070d18"], "accent": "#e0a33e", "spine": "#0f2438"},
     "matcha": {"bg": ["#2f5c3a", "#08130c"],    "accent": "#c6d678", "spine": "#2b4f33"},
@@ -114,7 +121,9 @@ def build(name):
     for variant in ("coming", "live"):
         label, sub = END_CARDS[variant]
         card = os.path.join(TMP, "%s-end-%s.png" % (name, variant))
-        cover_card(spec, cover, label, sub).save(card)
+        asin = ASIN.get(name)
+        url = "amazon.com/dp/%s" % asin if asin else None
+        cover_card(spec, cover, label, sub, url).save(card)
 
         hold, xf = 4.0, 0.6
         total = dur + hold - xf

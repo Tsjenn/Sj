@@ -153,13 +153,13 @@ END_CARDS = {
 }
 
 
-def cover_card(spec, cover_path, label, sub):
+def cover_card(spec, cover_path, label, sub, url=None):
     im = vignette(gradient(*spec["bg"]))
     d = ImageDraw.Draw(im)
     cov = Image.open(cover_path).convert("RGB")
-    tw = int(W * 0.60)
+    tw = int(W * 0.52)
     cov = cov.resize((tw, int(cov.height * tw / cov.width)), Image.LANCZOS)
-    cx, cy = (W - cov.width) // 2, int(H * 0.30)
+    cx, cy = (W - cov.width) // 2, int(H * 0.14)
     sh = Image.new("L", (W, H), 0)
     ImageDraw.Draw(sh).rectangle([cx + 14, cy + 22, cx + cov.width + 14,
                                   cy + cov.height + 22], fill=150)
@@ -171,11 +171,18 @@ def cover_card(spec, cover_path, label, sub):
                 outline=(255, 255, 255), width=3)
     f = font("bold", 62)
     w = d.textlength(label, font=f)
-    y = cy + cov.height + 90
+    y = cy + cov.height + 96
     d.text(((W - w) / 2, y), label, font=f, fill=spec["accent"], anchor="lm")
     f2 = font("reg", 40)
     w2 = d.textlength(sub, font=f2)
     d.text(((W - w2) / 2, y + 70), sub, font=f2, fill=(210, 218, 228), anchor="lm")
+    if url:
+        f3 = font("bold", 44)
+        w3 = d.textlength(url, font=f3)
+        by = y + 152
+        d.rounded_rectangle([(W - w3) / 2 - 34, by - 40, (W + w3) / 2 + 34, by + 40],
+                            radius=20, fill=(255, 255, 255))
+        d.text(((W - w3) / 2, by), url, font=f3, fill=(18, 22, 30), anchor="lm")
     return im
 
 
