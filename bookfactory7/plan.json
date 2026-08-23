@@ -1,0 +1,1260 @@
+{
+  "title": "WORKING WITH INTELLIGENCE",
+  "subtitle": "The Professional's Complete Guide to AI — Prompting, Projects, Agents, and Playbooks for Every Industry",
+  "author": "Tang Shiuan Jenn",
+  "target_words": 210000,
+  "content_policy": {
+    "no_invented_evidence": "No invented statistics, studies, surveys, percentages, adoption rates, ROI figures, salary data, or job-loss numbers ANYWHERE. If a claim would need a citation, either state it as a general observation or leave it out. Never write 'studies show', 'research proves', or 'X% of companies'.",
+    "no_fake_cases": "No fabricated case studies and no named real company doing a specific thing. Illustrative scenarios are allowed only when clearly generic and clearly labelled as illustrative ('imagine a mid-sized insurer').",
+    "no_promises": "No income promises, no guaranteed savings, no 'this will make you indispensable'. Benefits are described as possible and conditional.",
+    "product_facts": "Describe AI products by durable capability, not version numbers or prices. Where a product is named (Claude, Claude Code, Claude Projects, ChatGPT, Copilot, Gemini, MCP), describe what the category does and add that details change and readers should check current documentation. No vendor endorsement, no affiliate framing, no claims about any vendor's internal data.",
+    "not_advice": "Legal, tax, medical, and regulatory content is general information only, never advice; every such chapter says so plainly and tells the reader to check their own jurisdiction, regulator, employer policy, and professional body.",
+    "honesty_about_limits": "Every capability claim is paired with its limit. The book's credibility rests on saying plainly what AI cannot do and when not to use it.",
+    "author_bio": "The author is described as a qualified chartered accountant (a factual credential) who works with AI systems daily. Do NOT claim an academic degree in AI, vendor certification, employment by any AI company, or any consulting engagement that has not happened."
+  },
+  "style_rules": {
+    "voice": "Second person, direct, warm, unhurried. A senior colleague explaining something useful over coffee — never a hype merchant, never a lecturer. Short sentences carry the important points. British-Malaysian professional English.",
+    "openings": "Every chapter opens with a concrete scene or a specific question a working person actually has — never 'In today's fast-paced world'.",
+    "structure": "Each chapter: opening scene, the idea, how it works, worked examples with real prompt text, what to watch for, and a short 'Do this today' close.",
+    "prompts": "Prompt examples are shown as indented blocks introduced by a line ending in a colon, in the six-part frame from ch09 wherever practical.",
+    "tables": "At least one genuine table per chapter where the material supports it. Tables use the pipe format.",
+    "length": "3000-3400 words per chapter.",
+    "no_products": "The book never mentions the author's other books or any URL."
+  },
+  "art_palette": {
+    "navy": "#0F2438",
+    "ink": "#16213A",
+    "cyan": "#1FA8C7",
+    "amber": "#E0A33E",
+    "slate": "#5B6B7C",
+    "paper": "#F4F6F8"
+  },
+  "parts": [
+    {
+      "n": 1,
+      "title": "How the Machine Actually Thinks",
+      "chapters": [
+        {
+          "id": "ch01",
+          "title": "The Five-Minute Mental Model",
+          "art": {
+            "type": "flow",
+            "title": "What actually happens when you press Enter",
+            "labels": [
+              "Your words",
+              "Broken into tokens",
+              "Model predicts",
+              "Next token",
+              "Repeat",
+              "Answer"
+            ]
+          },
+          "brief": "The foundation chapter. What a large language model actually does: predicts the next piece of text, over and over, at enormous scale. No database lookup, no search of a filing cabinet, no understanding in the human sense — and yet genuinely useful. Kill the two opposite myths in one chapter: it is not a magic oracle, and it is not 'just autocomplete' in the dismissive sense. End with why this single mental model predicts almost every strength and every failure in the rest of the book.",
+          "status": "done",
+          "tables": "one table: What it is / What it is not"
+        },
+        {
+          "id": "ch02",
+          "title": "From Software You Instruct to Software You Converse With",
+          "art": {
+            "type": "compare",
+            "title": "Two eras of using a computer",
+            "labels": [
+              "TRADITIONAL SOFTWARE|Exact commands|Fails loudly|Same input, same output|You adapt to it",
+              "AI SYSTEMS|Natural language|Fails quietly|Same input, varied output|It adapts to you"
+            ]
+          },
+          "brief": "Why this technology feels different from every tool the reader has used. Deterministic software versus probabilistic systems. The professional consequences: you can no longer test once and trust forever; you must verify. Introduce the book's spine — fluency is a skill, not a purchase.",
+          "status": "todo"
+        },
+        {
+          "id": "ch03",
+          "title": "The Capability Map: What It Is Genuinely Good At",
+          "art": {
+            "type": "matrix",
+            "title": "Where AI earns its keep",
+            "labels": [
+              "High volume",
+              "Low volume",
+              "Tolerant of variation",
+              "Needs exactness",
+              "SWEET SPOT: drafting, summarising, translating, restructuring",
+              "GOOD: research support, brainstorming",
+              "CAUTION: analysis with numbers",
+              "DANGER: final authority, compliance sign-off"
+            ]
+          },
+          "brief": "An honest capability map built on the ch01 model. Strong: language transformation, summarising, drafting, explaining, restructuring, classification, first-pass analysis. Weak: arithmetic reliability, current facts, private facts, its own certainty, anything requiring accountability. Give the reader a test they can apply to any new task in 10 seconds.",
+          "status": "todo"
+        },
+        {
+          "id": "ch04",
+          "title": "Hallucination: Why Fluency Is Not Knowledge",
+          "art": {
+            "type": "anatomy",
+            "title": "Anatomy of a confident wrong answer",
+            "labels": [
+              "Plausible structure",
+              "Correct-sounding names",
+              "Invented citation",
+              "Confident tone",
+              "No signal of doubt"
+            ]
+          },
+          "brief": "The single most important professional risk chapter. Why a model generates false things in the same voice as true things, why it invents citations and figures, and why confidence is not correlated with accuracy. Practical detection: which categories of claim to distrust by default. The Three-Check Rule introduced here and used throughout the book.",
+          "status": "todo"
+        },
+        {
+          "id": "ch05",
+          "title": "Context Is Everything",
+          "art": {
+            "type": "stack",
+            "title": "The four layers the model can actually see",
+            "labels": [
+              "System instruction (who it is)",
+              "Knowledge you attached",
+              "Conversation so far",
+              "Your current message"
+            ]
+          },
+          "brief": "The concept that explains most user frustration. What the context window is, why the model 'forgets', why a long chat degrades, why it cannot see the file you did not attach or the meeting you did not describe. Practical: what to put in context and what to leave out; context as the reader's main lever of control.",
+          "status": "todo"
+        },
+        {
+          "id": "ch06",
+          "title": "Tokens, Cost, and Speed: The Physics of the Thing",
+          "art": {
+            "type": "flow",
+            "title": "Where the money and the seconds go",
+            "labels": [
+              "Input tokens",
+              "Processing",
+              "Thinking (optional)",
+              "Output tokens",
+              "Cost + latency"
+            ]
+          },
+          "brief": "Demystify tokens, pricing per million tokens, and why long documents cost more and take longer. Cover reasoning/thinking modes as a cost-quality dial. Practical budgeting for a professional or small firm: which work justifies the slow expensive setting and which does not. Use ranges and principles, never invented vendor prices.",
+          "status": "todo",
+          "tables": "table: task type vs recommended setting"
+        },
+        {
+          "id": "ch07",
+          "title": "The Model Zoo: Telling the Tools Apart",
+          "art": {
+            "type": "tree",
+            "title": "Families of AI system",
+            "labels": [
+              "AI SYSTEMS",
+              "Chat assistants",
+              "Reasoning models",
+              "Multimodal (image, voice)",
+              "Embeddings & search",
+              "Image/video generators",
+              "Coding agents"
+            ]
+          },
+          "brief": "A field guide to the categories a professional will meet — chat assistants, reasoning models, multimodal, embeddings/search, generators, coding agents — described by what they DO, not by brand or version, so the chapter stays true as products change. How to read a model's stated context window and capabilities. One page on how fast this field moves and how to check current facts rather than trusting a book's version numbers.",
+          "status": "todo"
+        },
+        {
+          "id": "ch08",
+          "title": "What Must Never Go In: Confidentiality and Professional Duty",
+          "art": {
+            "type": "checklist",
+            "title": "The pre-paste checklist",
+            "labels": [
+              "Client names and identifiers",
+              "Bank/account/ID numbers",
+              "Unreleased financials",
+              "Personal data of third parties",
+              "Anything under NDA",
+              "Credentials and keys"
+            ]
+          },
+          "brief": "The professional's red-line chapter, written for people with duties of confidentiality — accountants, lawyers, doctors, HR, bankers. How consumer chat, business tiers, and enterprise deployments differ in what happens to your data. Redaction and anonymisation as a working habit. Written as general professional guidance, not legal advice: readers must check their own regulator, employer policy, and engagement terms.",
+          "status": "todo",
+          "tables": "table: deployment type vs data handling questions to ask"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "title": "The Craft of Prompting",
+      "chapters": [
+        {
+          "id": "ch09",
+          "title": "The Anatomy of a Good Prompt",
+          "art": {
+            "type": "anatomy",
+            "title": "The six parts of a prompt that works",
+            "labels": [
+              "ROLE: who it should be",
+              "TASK: the one job",
+              "CONTEXT: what it must know",
+              "CONSTRAINTS: rules and limits",
+              "FORMAT: shape of the answer",
+              "EXAMPLE: what good looks like"
+            ]
+          },
+          "brief": "The book's core teaching chapter. Introduce the six-part frame and build one real professional prompt from a one-line wish to a working instruction, showing the output improving at each step. This frame is referenced by every later chapter and the industry playbooks.",
+          "status": "todo",
+          "tables": "before/after table of the same prompt at three levels"
+        },
+        {
+          "id": "ch10",
+          "title": "Specificity: The Difference Between a Wish and an Instruction",
+          "art": {
+            "type": "compare",
+            "title": "Wish versus instruction",
+            "labels": [
+              "WISH|'Summarise this report'|'Make it professional'|'Analyse the numbers'|'Write something about AI'",
+              "INSTRUCTION|'Summarise in 200 words for a non-financial board member, five bullets, flag any figure you are unsure of'|'Rewrite in plain formal English, no exclamation marks, Malaysian business register'|'List the three largest variances and what each would cost'|'Write a 600-word briefing for staff on our new AI policy'"
+            ]
+          },
+          "brief": "Teach precision. The five dimensions of specificity: audience, length, tone, scope, and success criteria. Why vague prompts produce generic writing, and why 'be more professional' fails while a named register succeeds.",
+          "status": "todo"
+        },
+        {
+          "id": "ch11",
+          "title": "Show, Don't Tell: Examples and Patterns",
+          "art": {
+            "type": "flow",
+            "title": "Teaching by example",
+            "labels": [
+              "Give 1-3 examples",
+              "Model infers the pattern",
+              "Apply to new input",
+              "Consistent output"
+            ]
+          },
+          "brief": "Few-shot prompting for non-technical readers: give it two or three examples of what you want and it will match them better than any description. Practical uses: matching house style, standard email replies, consistent categorisation. When examples hurt (too narrow, contradictory, biased).",
+          "status": "todo"
+        },
+        {
+          "id": "ch12",
+          "title": "Give It a Shape: Formats, Tables, and Schemas",
+          "art": {
+            "type": "grid",
+            "title": "Asking for the output you can actually use",
+            "labels": [
+              "Prose",
+              "Bullets",
+              "Table",
+              "Numbered steps",
+              "JSON/CSV",
+              "Template"
+            ]
+          },
+          "brief": "How specifying the output shape improves both usability and accuracy. Asking for tables with named columns, for a fixed template, for a machine-readable format. Why a defined shape reduces waffle and makes verification faster.",
+          "status": "todo",
+          "tables": "table: output format vs when to use it"
+        },
+        {
+          "id": "ch13",
+          "title": "Make It Think Before It Answers",
+          "art": {
+            "type": "cycle",
+            "title": "Plan, draft, check",
+            "labels": [
+              "Ask for a plan",
+              "Approve or correct the plan",
+              "Then ask for the work",
+              "Ask it to check its own work"
+            ]
+          },
+          "brief": "The highest-leverage habit in the book: separating thinking from answering. Ask for an approach before the deliverable; ask for reasoning steps on analytical work; use reasoning modes where available. Why this reduces (not eliminates) errors, and why you must still verify.",
+          "status": "todo"
+        },
+        {
+          "id": "ch14",
+          "title": "The Critique Loop: Making AI Grade Its Own Work",
+          "art": {
+            "type": "cycle",
+            "title": "The four-move loop",
+            "labels": [
+              "Draft",
+              "Critique against named criteria",
+              "Revise",
+              "Verify against source"
+            ]
+          },
+          "brief": "Teach the loop that turns a mediocre first draft into a strong final one: draft, then critique with explicit criteria, then revise, then verify. Include prompt patterns for 'attack this as a hostile reviewer' and 'list what is missing'. Be honest about the ceiling: a model cannot catch what it does not know.",
+          "status": "todo"
+        },
+        {
+          "id": "ch15",
+          "title": "Voice, Persona, and House Style",
+          "art": {
+            "type": "stack",
+            "title": "Layers of a consistent voice",
+            "labels": [
+              "Register (formal/plain)",
+              "Vocabulary rules",
+              "Sentence rhythm",
+              "Forbidden words",
+              "Worked example"
+            ]
+          },
+          "brief": "How to make AI write in your voice or your firm's. Building a reusable style instruction from samples of your own writing. Where personas genuinely help (audience-shifting, explaining to a lay reader) and where they are theatre.",
+          "status": "todo"
+        },
+        {
+          "id": "ch16",
+          "title": "Working With Long Documents",
+          "art": {
+            "type": "flow",
+            "title": "The long-document pipeline",
+            "labels": [
+              "Split by section",
+              "Summarise each",
+              "Extract to a table",
+              "Synthesise",
+              "Verify against original"
+            ]
+          },
+          "brief": "Contracts, annual reports, policy manuals, transcripts. Chunking, hierarchical summarising, extraction into tables, and the crucial habit of verifying extracted figures against the source page. Why 'summarise this 200-page document' in one shot is the wrong instruction.",
+          "status": "todo"
+        },
+        {
+          "id": "ch17",
+          "title": "Twelve Ways It Goes Wrong, and the Fix for Each",
+          "art": {
+            "type": "grid",
+            "title": "Failure patterns and their fixes",
+            "labels": [
+              "Too generic",
+              "Invented facts",
+              "Ignores a rule",
+              "Wrong length",
+              "Wrong audience",
+              "Drifts off-brief",
+              "Repeats itself",
+              "Refuses unnecessarily",
+              "Loses earlier context",
+              "Over-hedges",
+              "Formats badly",
+              "Flatters you"
+            ]
+          },
+          "brief": "A diagnostic chapter organised as a clinic: the symptom, the cause in terms of the ch01 model, and the specific fix. Include sycophancy — the model agreeing with a wrong premise — and how to prompt against it.",
+          "status": "todo",
+          "tables": "big diagnostic table: symptom / likely cause / fix"
+        },
+        {
+          "id": "ch18",
+          "title": "The Professional Prompt Library",
+          "art": {
+            "type": "grid",
+            "title": "Forty prompts you will actually reuse",
+            "labels": [
+              "Drafting",
+              "Summarising",
+              "Analysis",
+              "Meetings",
+              "Email",
+              "Review",
+              "Research",
+              "Teaching"
+            ]
+          },
+          "brief": "A large reference chapter: roughly forty ready-to-use prompts across eight professional categories, each written in the six-part frame, each with a one-line note on what to check in the output. Written so a reader can copy, adapt, and keep.",
+          "status": "todo",
+          "tables": "prompts presented as labelled blocks with usage notes"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "title": "Beyond the Chat Box",
+      "chapters": [
+        {
+          "id": "ch19",
+          "title": "Projects: Giving AI a Permanent Workspace",
+          "art": {
+            "type": "stack",
+            "title": "What a project holds",
+            "labels": [
+              "Standing instructions",
+              "Reference documents",
+              "Shared conventions",
+              "Every conversation inside it"
+            ]
+          },
+          "brief": "The step most users never take. A project (Claude Projects and equivalents) keeps instructions and reference material permanently in context so you stop re-explaining yourself. How to design one: what belongs in instructions versus knowledge. Worked example: a month-end close project, an engagement project, a policy-drafting project. Describe capabilities durably; note that product details change and readers should check current documentation.",
+          "status": "todo"
+        },
+        {
+          "id": "ch20",
+          "title": "Knowledge and Retrieval Without the Jargon",
+          "art": {
+            "type": "flow",
+            "title": "How AI searches your own documents",
+            "labels": [
+              "Your documents",
+              "Split into passages",
+              "Indexed by meaning",
+              "Question retrieves passages",
+              "Model answers from them"
+            ]
+          },
+          "brief": "Retrieval explained for non-technical readers: why attaching your own documents beats hoping the model 'knows', how semantic search differs from keyword search, and why retrieval reduces but does not eliminate invention. When a project is enough and when a proper retrieval system is warranted.",
+          "status": "todo"
+        },
+        {
+          "id": "ch21",
+          "title": "Standing Instructions and the House Manual",
+          "art": {
+            "type": "anatomy",
+            "title": "One page that improves every answer",
+            "labels": [
+              "Who I am",
+              "Who I serve",
+              "How I write",
+              "What I never want",
+              "How to handle uncertainty"
+            ]
+          },
+          "brief": "Writing the personal or firm-level standing instruction: the single page that makes every future conversation better. Include a full worked example for a finance professional and one for a small business owner.",
+          "status": "todo"
+        },
+        {
+          "id": "ch22",
+          "title": "What 'Agentic' Actually Means",
+          "art": {
+            "type": "cycle",
+            "title": "The agent loop",
+            "labels": [
+              "Goal",
+              "Plan",
+              "Act with a tool",
+              "Observe result",
+              "Continue or finish"
+            ]
+          },
+          "brief": "Demystify agents: a model in a loop with tools and a goal. The four honest questions before building one — is the task hard to specify in advance, is the value worth the cost, is the model capable, can errors be caught and reversed. Why most work should NOT be an agent.",
+          "status": "todo"
+        },
+        {
+          "id": "ch23",
+          "title": "Tools: How AI Reaches the Outside World",
+          "art": {
+            "type": "network",
+            "title": "Model, tools, and the world",
+            "labels": [
+              "MODEL",
+              "Search",
+              "Files",
+              "Database",
+              "Email/calendar",
+              "Internal system"
+            ]
+          },
+          "brief": "Tool use explained plainly: the model asks for an action, something else performs it, the result comes back. Introduce MCP as the emerging standard plug — a common way to connect assistants to systems — described conceptually, since implementations move fast. Security implications of giving an assistant hands.",
+          "status": "todo"
+        },
+        {
+          "id": "ch24",
+          "title": "Claude Code and the Rise of the Working Assistant",
+          "art": {
+            "type": "flow",
+            "title": "AI that works in your files",
+            "labels": [
+              "Describe the outcome",
+              "It reads the real files",
+              "It proposes changes",
+              "You review",
+              "It applies and verifies"
+            ]
+          },
+          "brief": "A whole chapter on the category that surprises non-programmers most: assistants that operate on real files and run real commands. What Claude Code actually is, what it is genuinely good at beyond programming (data cleaning, document generation, repetitive file work, analysis pipelines), and how a non-programmer can use it safely. Emphasise review-before-apply and reversibility. Keep to durable behaviour, not version specifics.",
+          "status": "todo"
+        },
+        {
+          "id": "ch25",
+          "title": "Automation: When to Hand Over the Wheel",
+          "art": {
+            "type": "matrix",
+            "title": "What to automate first",
+            "labels": [
+              "Repetitive",
+              "One-off",
+              "Low consequence",
+              "High consequence",
+              "AUTOMATE",
+              "ASSIST",
+              "REVIEW EVERY TIME",
+              "KEEP HUMAN"
+            ]
+          },
+          "brief": "The decision framework for moving from assistance to automation, scheduled runs, and pipelines. The reversibility test. Designing the human checkpoint. Failure modes of unattended automation and how to notice them early.",
+          "status": "todo"
+        },
+        {
+          "id": "ch26",
+          "title": "Many Hands: Multi-Agent Patterns",
+          "art": {
+            "type": "network",
+            "title": "Five patterns that work",
+            "labels": [
+              "Fan-out",
+              "Reviewer",
+              "Pipeline",
+              "Judge panel",
+              "Verifier"
+            ]
+          },
+          "brief": "The patterns that genuinely improve quality: splitting work across parallel workers, an independent reviewer, an adversarial verifier, a judge panel for hard choices. Presented so a reader can apply the same patterns manually, with no code, using separate chats or windows.",
+          "status": "todo"
+        },
+        {
+          "id": "ch27",
+          "title": "Choosing Your Setup",
+          "art": {
+            "type": "tree",
+            "title": "Which surface for which job",
+            "labels": [
+              "THE JOB",
+              "One question -> chat",
+              "Recurring work -> project",
+              "Your documents -> knowledge base",
+              "Real files -> working assistant",
+              "Unattended -> agent"
+            ]
+          },
+          "brief": "A decision tree that closes Part III: chat, project, knowledge base, working assistant, agent, or custom build. Cost, effort, control, and risk compared honestly.",
+          "status": "todo",
+          "tables": "table: surface vs setup effort vs control vs typical cost"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "title": "Making AI Better at Your Work",
+      "chapters": [
+        {
+          "id": "ch28",
+          "title": "Write the Test First: How to Know It Is Any Good",
+          "art": {
+            "type": "flow",
+            "title": "Evaluation you can actually run",
+            "labels": [
+              "Define good",
+              "Collect 10 real cases",
+              "Run them",
+              "Score against criteria",
+              "Fix the weakest link"
+            ]
+          },
+          "brief": "Bring engineering discipline to everyday use: define what good looks like before you prompt, keep a small set of real test cases, and re-run them when you change anything. The single habit that separates professionals from dabblers.",
+          "status": "todo"
+        },
+        {
+          "id": "ch29",
+          "title": "Grounding: Give It the Truth to Work From",
+          "art": {
+            "type": "compare",
+            "title": "Ungrounded versus grounded",
+            "labels": [
+              "UNGROUNDED|Answers from training|Invents specifics|Cannot cite|Confident either way",
+              "GROUNDED|Answers from your documents|Quotes real passages|Can cite the source|Says when it cannot find it"
+            ]
+          },
+          "brief": "The most reliable single upgrade: stop asking the model what it knows, start giving it what it must use. Practical grounding methods for professionals — attach the standard, paste the clause, supply the file, require quotation with page references.",
+          "status": "todo"
+        },
+        {
+          "id": "ch30",
+          "title": "The Three-Check Rule",
+          "art": {
+            "type": "cycle",
+            "title": "Verification that fits in a working day",
+            "labels": [
+              "Check the numbers",
+              "Check the sources",
+              "Check the reasoning"
+            ]
+          },
+          "brief": "A verification discipline light enough that people actually do it. What to check always, what to check by sampling, and what to trust. Includes a short verification checklist for financial, legal, and factual output.",
+          "status": "todo"
+        },
+        {
+          "id": "ch31",
+          "title": "Iteration: Getting to Good in Four Turns",
+          "art": {
+            "type": "flow",
+            "title": "The four-turn method",
+            "labels": [
+              "Turn 1: attempt",
+              "Turn 2: diagnose the gap",
+              "Turn 3: constrain",
+              "Turn 4: polish"
+            ]
+          },
+          "brief": "Most people accept the first answer or start over. Teach the disciplined middle path: name the specific gap, add one constraint at a time, and keep the version that worked. Include how to save and reuse the winning prompt.",
+          "status": "todo"
+        },
+        {
+          "id": "ch32",
+          "title": "Prompting, Retrieval, or Training: Which Lever",
+          "art": {
+            "type": "ladder",
+            "title": "Levers in order of effort",
+            "labels": [
+              "Better prompt",
+              "Add examples",
+              "Add your documents",
+              "Build a workflow",
+              "Fine-tune a model"
+            ]
+          },
+          "brief": "How to choose the cheapest lever that solves the problem. When fine-tuning is genuinely warranted (rare for most professionals) and when it is an expensive way to avoid writing a better prompt.",
+          "status": "todo",
+          "tables": "table: symptom vs correct lever"
+        },
+        {
+          "id": "ch33",
+          "title": "Your Personal AI System",
+          "art": {
+            "type": "stack",
+            "title": "The four things to build once",
+            "labels": [
+              "Your standing instruction",
+              "Your prompt library",
+              "Your reference knowledge",
+              "Your verification habit"
+            ]
+          },
+          "brief": "Assemble everything so far into a personal operating system the reader builds in a weekend and improves for years. Include a one-page build plan.",
+          "status": "todo"
+        },
+        {
+          "id": "ch34",
+          "title": "Teams: Shared Prompts, Shared Standards",
+          "art": {
+            "type": "grid",
+            "title": "What a team standardises",
+            "labels": [
+              "House style",
+              "Approved use cases",
+              "Prompt library",
+              "Review rules",
+              "Data rules",
+              "Escalation path"
+            ]
+          },
+          "brief": "Moving from individual to team practice: shared libraries, agreed standards, a common vocabulary, and the difference between a policy that gets read and one that gets used.",
+          "status": "todo"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "title": "The Industry Playbooks",
+      "chapters": [
+        {
+          "id": "ch35",
+          "title": "Finance and Accounting",
+          "art": {
+            "type": "playbook",
+            "title": "Where the value sits in finance",
+            "labels": [
+              "High value / Low risk",
+              "High value / High risk",
+              "Low value / Low risk",
+              "Low value / High risk"
+            ]
+          },
+          "brief": "INDUSTRY PLAYBOOK. Fixed structure: (1) what this work actually consists of; (2) the value map — where AI helps most and least; (3) ten concrete use cases, each with what to prompt and what to check; (4) two or three worked prompts in the six-part frame from ch09; (5) the risks specific to this sector; (6) a 30-day starting plan; (7) how to measure whether it worked. Month-end close, management reporting, variance commentary, reconciliations support, budget drafting, policy interpretation, board packs. Emphasise the arithmetic-reliability warning from ch03 — the model drafts the commentary, the spreadsheet does the maths.",
+          "status": "todo",
+          "tables": "value map table; ten use cases table; risk table"
+        },
+        {
+          "id": "ch36",
+          "title": "Audit and Assurance",
+          "art": {
+            "type": "playbook",
+            "title": "Where the value sits in audit",
+            "labels": [
+              "High value / Low risk",
+              "High value / High risk",
+              "Low value / Low risk",
+              "Low value / High risk"
+            ]
+          },
+          "brief": "INDUSTRY PLAYBOOK. Fixed structure: (1) what this work actually consists of; (2) the value map — where AI helps most and least; (3) ten concrete use cases, each with what to prompt and what to check; (4) two or three worked prompts in the six-part frame from ch09; (5) the risks specific to this sector; (6) a 30-day starting plan; (7) how to measure whether it worked. Working paper drafting, evidence summarisation, control walkthrough documentation, standards research support, sampling documentation. Absolute clarity that AI supports the auditor's judgement and never replaces it, and that independence, documentation and professional scepticism rules still bind.",
+          "status": "todo",
+          "tables": "value map table; ten use cases table; risk table"
+        },
+        {
+          "id": "ch37",
+          "title": "Tax",
+          "art": {
+            "type": "playbook",
+            "title": "Where the value sits in tax",
+            "labels": [
+              "High value / Low risk",
+              "High value / High risk",
+              "Low value / Low risk",
+              "Low value / High risk"
+            ]
+          },
+          "brief": "INDUSTRY PLAYBOOK. Fixed structure: (1) what this work actually consists of; (2) the value map — where AI helps most and least; (3) ten concrete use cases, each with what to prompt and what to check; (4) two or three worked prompts in the six-part frame from ch09; (5) the risks specific to this sector; (6) a 30-day starting plan; (7) how to measure whether it worked. Research support, memo drafting, computation checking as a second pair of eyes, correspondence, client explanation letters. Heavy verification warning: tax rules are jurisdictional and change; the model must be grounded in the actual legislation or guidance.",
+          "status": "todo",
+          "tables": "value map table; ten use cases table; risk table"
+        },
+        {
+          "id": "ch38",
+          "title": "Banking and Capital Markets",
+          "art": {
+            "type": "playbook",
+            "title": "Where the value sits in banking",
+            "labels": [
+              "High value / Low risk",
+              "High value / High risk",
+              "Low value / Low risk",
+              "Low value / High risk"
+            ]
+          },
+          "brief": "INDUSTRY PLAYBOOK. Fixed structure: (1) what this work actually consists of; (2) the value map — where AI helps most and least; (3) ten concrete use cases, each with what to prompt and what to check; (4) two or three worked prompts in the six-part frame from ch09; (5) the risks specific to this sector; (6) a 30-day starting plan; (7) how to measure whether it worked. Credit memo drafting, KYC file summarisation, policy Q and A, product explanation, complaint handling. Regulatory and model-risk considerations at a general level.",
+          "status": "todo",
+          "tables": "value map table; ten use cases table; risk table"
+        },
+        {
+          "id": "ch39",
+          "title": "Insurance",
+          "art": {
+            "type": "playbook",
+            "title": "Where the value sits in insurance",
+            "labels": [
+              "High value / Low risk",
+              "High value / High risk",
+              "Low value / Low risk",
+              "Low value / High risk"
+            ]
+          },
+          "brief": "INDUSTRY PLAYBOOK. Fixed structure: (1) what this work actually consists of; (2) the value map — where AI helps most and least; (3) ten concrete use cases, each with what to prompt and what to check; (4) two or three worked prompts in the six-part frame from ch09; (5) the risks specific to this sector; (6) a 30-day starting plan; (7) how to measure whether it worked. Claims triage support, policy wording comparison, underwriting file summarisation, customer correspondence, fraud pattern flagging as a support tool. Fairness and explainability duties; never automated decline decisions without human review.",
+          "status": "todo",
+          "tables": "value map table; ten use cases table; risk table"
+        },
+        {
+          "id": "ch40",
+          "title": "Manufacturing and Operations",
+          "art": {
+            "type": "playbook",
+            "title": "Where the value sits in manufacturing",
+            "labels": [
+              "High value / Low risk",
+              "High value / High risk",
+              "Low value / Low risk",
+              "Low value / High risk"
+            ]
+          },
+          "brief": "INDUSTRY PLAYBOOK. Fixed structure: (1) what this work actually consists of; (2) the value map — where AI helps most and least; (3) ten concrete use cases, each with what to prompt and what to check; (4) two or three worked prompts in the six-part frame from ch09; (5) the risks specific to this sector; (6) a 30-day starting plan; (7) how to measure whether it worked. Standard operating procedure drafting, maintenance log analysis, root-cause support, quality documentation, shift handover summaries, supplier correspondence. Where AI meets sensors and machine data honestly — what a language model can and cannot do with time-series data.",
+          "status": "todo",
+          "tables": "value map table; ten use cases table; risk table"
+        },
+        {
+          "id": "ch41",
+          "title": "Supply Chain and Logistics",
+          "art": {
+            "type": "playbook",
+            "title": "Where the value sits in supply chain",
+            "labels": [
+              "High value / Low risk",
+              "High value / High risk",
+              "Low value / Low risk",
+              "Low value / High risk"
+            ]
+          },
+          "brief": "INDUSTRY PLAYBOOK. Fixed structure: (1) what this work actually consists of; (2) the value map — where AI helps most and least; (3) ten concrete use cases, each with what to prompt and what to check; (4) two or three worked prompts in the six-part frame from ch09; (5) the risks specific to this sector; (6) a 30-day starting plan; (7) how to measure whether it worked. Supplier communication, contract summarisation, incident reporting, demand-planning narrative, customs documentation support, exception triage.",
+          "status": "todo",
+          "tables": "value map table; ten use cases table; risk table"
+        },
+        {
+          "id": "ch42",
+          "title": "Retail and E-commerce",
+          "art": {
+            "type": "playbook",
+            "title": "Where the value sits in retail",
+            "labels": [
+              "High value / Low risk",
+              "High value / High risk",
+              "Low value / Low risk",
+              "Low value / High risk"
+            ]
+          },
+          "brief": "INDUSTRY PLAYBOOK. Fixed structure: (1) what this work actually consists of; (2) the value map — where AI helps most and least; (3) ten concrete use cases, each with what to prompt and what to check; (4) two or three worked prompts in the six-part frame from ch09; (5) the risks specific to this sector; (6) a 30-day starting plan; (7) how to measure whether it worked. Product description generation at scale, review synthesis, customer service drafting, merchandising analysis narrative, promotion copy. Include the honesty rule for reviews and claims.",
+          "status": "todo",
+          "tables": "value map table; ten use cases table; risk table"
+        },
+        {
+          "id": "ch43",
+          "title": "Healthcare and Clinical Administration",
+          "art": {
+            "type": "playbook",
+            "title": "Where the value sits in healthcare",
+            "labels": [
+              "High value / Low risk",
+              "High value / High risk",
+              "Low value / Low risk",
+              "Low value / High risk"
+            ]
+          },
+          "brief": "INDUSTRY PLAYBOOK. Fixed structure: (1) what this work actually consists of; (2) the value map — where AI helps most and least; (3) ten concrete use cases, each with what to prompt and what to check; (4) two or three worked prompts in the six-part frame from ch09; (5) the risks specific to this sector; (6) a 30-day starting plan; (7) how to measure whether it worked. Administrative and documentation use only: letters, scheduling, coding support, patient-friendly explanation drafting, literature summarisation for professionals. Explicit boundary: no diagnosis, no treatment decisions, no patient-facing medical advice from a general assistant; strict patient-data rules.",
+          "status": "todo",
+          "tables": "value map table; ten use cases table; risk table"
+        },
+        {
+          "id": "ch44",
+          "title": "Legal and Compliance",
+          "art": {
+            "type": "playbook",
+            "title": "Where the value sits in legal",
+            "labels": [
+              "High value / Low risk",
+              "High value / High risk",
+              "Low value / Low risk",
+              "Low value / High risk"
+            ]
+          },
+          "brief": "INDUSTRY PLAYBOOK. Fixed structure: (1) what this work actually consists of; (2) the value map — where AI helps most and least; (3) ten concrete use cases, each with what to prompt and what to check; (4) two or three worked prompts in the six-part frame from ch09; (5) the risks specific to this sector; (6) a 30-day starting plan; (7) how to measure whether it worked. Contract review support, clause comparison, policy drafting, regulatory horizon summaries, first-draft memos. Privilege, confidentiality, and the professional duty to verify every citation — with the honest warning about invented case references.",
+          "status": "todo",
+          "tables": "value map table; ten use cases table; risk table"
+        },
+        {
+          "id": "ch45",
+          "title": "Real Estate and Construction",
+          "art": {
+            "type": "playbook",
+            "title": "Where the value sits in real estate",
+            "labels": [
+              "High value / Low risk",
+              "High value / High risk",
+              "Low value / Low risk",
+              "Low value / High risk"
+            ]
+          },
+          "brief": "INDUSTRY PLAYBOOK. Fixed structure: (1) what this work actually consists of; (2) the value map — where AI helps most and least; (3) ten concrete use cases, each with what to prompt and what to check; (4) two or three worked prompts in the six-part frame from ch09; (5) the risks specific to this sector; (6) a 30-day starting plan; (7) how to measure whether it worked. Tender documentation, specification comparison, progress reporting, tenancy correspondence, feasibility narrative, safety documentation.",
+          "status": "todo",
+          "tables": "value map table; ten use cases table; risk table"
+        },
+        {
+          "id": "ch46",
+          "title": "Education and Training",
+          "art": {
+            "type": "playbook",
+            "title": "Where the value sits in education",
+            "labels": [
+              "High value / Low risk",
+              "High value / High risk",
+              "Low value / Low risk",
+              "Low value / High risk"
+            ]
+          },
+          "brief": "INDUSTRY PLAYBOOK. Fixed structure: (1) what this work actually consists of; (2) the value map — where AI helps most and least; (3) ten concrete use cases, each with what to prompt and what to check; (4) two or three worked prompts in the six-part frame from ch09; (5) the risks specific to this sector; (6) a 30-day starting plan; (7) how to measure whether it worked. Lesson and curriculum drafting, differentiated materials, assessment design, feedback drafting, administrative load reduction. Academic-integrity discussion handled fairly, and the teacher's judgement kept central.",
+          "status": "todo",
+          "tables": "value map table; ten use cases table; risk table"
+        },
+        {
+          "id": "ch47",
+          "title": "Marketing, Sales, and Communications",
+          "art": {
+            "type": "playbook",
+            "title": "Where the value sits in marketing, sales,",
+            "labels": [
+              "High value / Low risk",
+              "High value / High risk",
+              "Low value / Low risk",
+              "Low value / High risk"
+            ]
+          },
+          "brief": "INDUSTRY PLAYBOOK. Fixed structure: (1) what this work actually consists of; (2) the value map — where AI helps most and least; (3) ten concrete use cases, each with what to prompt and what to check; (4) two or three worked prompts in the six-part frame from ch09; (5) the risks specific to this sector; (6) a 30-day starting plan; (7) how to measure whether it worked. Campaign drafting, audience-specific rewriting, proposal support, sales call preparation, content calendars. The honesty line on AI-written testimonials, fake reviews, and undisclosed synthetic media.",
+          "status": "todo",
+          "tables": "value map table; ten use cases table; risk table"
+        },
+        {
+          "id": "ch48",
+          "title": "Human Resources and Recruiting",
+          "art": {
+            "type": "playbook",
+            "title": "Where the value sits in human resources",
+            "labels": [
+              "High value / Low risk",
+              "High value / High risk",
+              "Low value / Low risk",
+              "Low value / High risk"
+            ]
+          },
+          "brief": "INDUSTRY PLAYBOOK. Fixed structure: (1) what this work actually consists of; (2) the value map — where AI helps most and least; (3) ten concrete use cases, each with what to prompt and what to check; (4) two or three worked prompts in the six-part frame from ch09; (5) the risks specific to this sector; (6) a 30-day starting plan; (7) how to measure whether it worked. Job descriptions, structured interview design, policy drafting, onboarding materials, internal communication. Bias risk in screening handled seriously; why fully automated candidate rejection is the wrong use.",
+          "status": "todo",
+          "tables": "value map table; ten use cases table; risk table"
+        },
+        {
+          "id": "ch49",
+          "title": "Customer Service",
+          "art": {
+            "type": "playbook",
+            "title": "Where the value sits in customer service",
+            "labels": [
+              "High value / Low risk",
+              "High value / High risk",
+              "Low value / Low risk",
+              "Low value / High risk"
+            ]
+          },
+          "brief": "INDUSTRY PLAYBOOK. Fixed structure: (1) what this work actually consists of; (2) the value map — where AI helps most and least; (3) ten concrete use cases, each with what to prompt and what to check; (4) two or three worked prompts in the six-part frame from ch09; (5) the risks specific to this sector; (6) a 30-day starting plan; (7) how to measure whether it worked. Reply drafting, knowledge-base building, tone control, escalation summaries, quality review. Disclosure norms when customers are talking to an assistant.",
+          "status": "todo",
+          "tables": "value map table; ten use cases table; risk table"
+        },
+        {
+          "id": "ch50",
+          "title": "Small Business and the Solo Professional",
+          "art": {
+            "type": "playbook",
+            "title": "Where the value sits in small business",
+            "labels": [
+              "High value / Low risk",
+              "High value / High risk",
+              "Low value / Low risk",
+              "Low value / High risk"
+            ]
+          },
+          "brief": "INDUSTRY PLAYBOOK. Fixed structure: (1) what this work actually consists of; (2) the value map — where AI helps most and least; (3) ten concrete use cases, each with what to prompt and what to check; (4) two or three worked prompts in the six-part frame from ch09; (5) the risks specific to this sector; (6) a 30-day starting plan; (7) how to measure whether it worked. The chapter for the reader with no IT department: the ten highest-value uses, a realistic weekly routine, the cheapest workable setup, and what to do yourself versus hand over.",
+          "status": "todo",
+          "tables": "value map table; ten use cases table; risk table"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "title": "Implementation: From Curiosity to Capability",
+      "chapters": [
+        {
+          "id": "ch51",
+          "title": "The 90-Day Adoption Plan",
+          "art": {
+            "type": "timeline",
+            "title": "Ninety days, three phases",
+            "labels": [
+              "Days 1-30: personal fluency",
+              "Days 31-60: team pilot",
+              "Days 61-90: standardise and measure"
+            ]
+          },
+          "brief": "The practical roadmap for an individual, a department, or a small firm. What to do in each phase, who to involve, and what evidence to gather before spending money.",
+          "status": "todo"
+        },
+        {
+          "id": "ch52",
+          "title": "Choosing the First Use Case",
+          "art": {
+            "type": "matrix",
+            "title": "The value and risk grid",
+            "labels": [
+              "High value",
+              "Low value",
+              "Low risk",
+              "High risk",
+              "START HERE",
+              "Nice to have",
+              "Needs governance first",
+              "Not yet"
+            ]
+          },
+          "brief": "How to pick a first project that proves something: frequent, painful, low-consequence, and measurable. The classic mistakes — starting with the hardest problem, or with a demo nobody needed.",
+          "status": "todo"
+        },
+        {
+          "id": "ch53",
+          "title": "Pilots That Prove Something",
+          "art": {
+            "type": "flow",
+            "title": "A pilot with a spine",
+            "labels": [
+              "Baseline the current way",
+              "Define success",
+              "Run both in parallel",
+              "Measure honestly",
+              "Decide"
+            ]
+          },
+          "brief": "Designing a pilot that produces evidence rather than enthusiasm: baselines, honest comparison, sample sizes a small firm can actually manage, and pre-agreed success criteria.",
+          "status": "todo"
+        },
+        {
+          "id": "ch54",
+          "title": "The Human Side of Change",
+          "art": {
+            "type": "stack",
+            "title": "Why adoption stalls",
+            "labels": [
+              "Fear for the job",
+              "Fear of looking foolish",
+              "No time to learn",
+              "No visible permission",
+              "No shared standard"
+            ]
+          },
+          "brief": "Change management written for people, not slides. Addressing job fear honestly rather than with reassurance, creating permission to experiment, and why the loudest sceptic is often the best pilot user.",
+          "status": "todo"
+        },
+        {
+          "id": "ch55",
+          "title": "Training Your Team: A Curriculum",
+          "art": {
+            "type": "ladder",
+            "title": "Four levels of fluency",
+            "labels": [
+              "Level 1: safe basic use",
+              "Level 2: structured prompting",
+              "Level 3: projects and knowledge",
+              "Level 4: workflow design"
+            ]
+          },
+          "brief": "A ready-to-run internal training curriculum: four levels, the competencies at each, exercises, and a simple assessment. Written so a reader can teach it next week.",
+          "status": "todo",
+          "tables": "table: level vs competencies vs exercises"
+        },
+        {
+          "id": "ch56",
+          "title": "Measuring Return Honestly",
+          "art": {
+            "type": "flow",
+            "title": "From minutes saved to money",
+            "labels": [
+              "Measure the before",
+              "Measure the after",
+              "Convert to hours",
+              "Value the hours",
+              "Subtract the cost"
+            ]
+          },
+          "brief": "How to measure benefit without inventing numbers: time studies, quality scoring, error rates, and the honest treatment of 'time saved' that is not actually recovered. Warn against the vendor-style ROI claims this book refuses to make.",
+          "status": "todo",
+          "tables": "worked measurement template table"
+        },
+        {
+          "id": "ch57",
+          "title": "Writing an AI Policy People Will Follow",
+          "art": {
+            "type": "checklist",
+            "title": "What a usable policy covers",
+            "labels": [
+              "Approved tools",
+              "Data that may never be entered",
+              "Disclosure rules",
+              "Verification duty",
+              "Ownership and review",
+              "Who to ask"
+            ]
+          },
+          "brief": "A practical policy chapter, including a full sample policy the reader can adapt. Written as general guidance with an explicit instruction to have it reviewed against local law, regulator rules, and employment terms.",
+          "status": "todo"
+        },
+        {
+          "id": "ch58",
+          "title": "Choosing Tools and Vendors",
+          "art": {
+            "type": "grid",
+            "title": "Questions before you sign",
+            "labels": [
+              "Where does data go",
+              "Retention and training use",
+              "Access control",
+              "Audit logs",
+              "Exit and portability",
+              "Support and roadmap"
+            ]
+          },
+          "brief": "A buyer's chapter: the questions to ask any vendor, the difference between consumer and business terms, lock-in, and why capability comparisons date fast while these questions do not.",
+          "status": "todo",
+          "tables": "vendor question checklist table"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "title": "Risk, Ethics, and the Law",
+      "chapters": [
+        {
+          "id": "ch59",
+          "title": "Bias, Fairness, and Who Gets Hurt",
+          "art": {
+            "type": "flow",
+            "title": "Where bias enters",
+            "labels": [
+              "Training data",
+              "Prompt framing",
+              "Use context",
+              "Decision use",
+              "Outcome"
+            ]
+          },
+          "brief": "How bias actually arises and where it does real damage in professional settings — hiring, lending, claims, education. Practical mitigations and the limits of them. No hand-waving in either direction.",
+          "status": "todo"
+        },
+        {
+          "id": "ch60",
+          "title": "Ownership, Copyright, and What Is Yours",
+          "art": {
+            "type": "compare",
+            "title": "Two questions people confuse",
+            "labels": [
+              "INPUT SIDE|What was the model trained on|Are your inputs used for training|Is your confidential data safe",
+              "OUTPUT SIDE|Who owns the output|Can it be copyrighted|Could it infringe someone else's work"
+            ]
+          },
+          "brief": "The intellectual property questions professionals ask, answered as an honest map of the debate rather than settled law: the input-side and output-side questions, why jurisdictions differ, and what a careful professional does while it remains unsettled. Explicitly not legal advice.",
+          "status": "todo"
+        },
+        {
+          "id": "ch61",
+          "title": "The Regulatory Landscape",
+          "art": {
+            "type": "timeline",
+            "title": "How rules are arriving",
+            "labels": [
+              "Sector rules already apply",
+              "General AI acts emerging",
+              "Disclosure duties spreading",
+              "Enforcement beginning"
+            ]
+          },
+          "brief": "A durable treatment of regulation: the principles regulators converge on — transparency, human oversight, data protection, accountability, record-keeping — rather than a list of statutes that will date. How to keep a compliance file that survives whichever rules arrive.",
+          "status": "todo"
+        },
+        {
+          "id": "ch62",
+          "title": "Deepfakes, Fraud, and the Security Side",
+          "art": {
+            "type": "grid",
+            "title": "New attack surfaces",
+            "labels": [
+              "Voice cloning",
+              "Fake invoices and emails",
+              "Prompt injection",
+              "Data leakage",
+              "Fake documents",
+              "Impersonated approval"
+            ]
+          },
+          "brief": "The defensive chapter. How AI raises the quality of fraud — especially payment fraud and impersonation — and what controls actually help: verification channels, callback procedures, and staff training. Prompt injection explained for non-technical readers whose assistants now have tools.",
+          "status": "todo"
+        },
+        {
+          "id": "ch63",
+          "title": "When Not to Use AI",
+          "art": {
+            "type": "checklist",
+            "title": "Ten situations to keep human",
+            "labels": [
+              "Final professional judgement",
+              "Regulated decisions about a person",
+              "Anything you cannot verify",
+              "Confidential data without a compliant tool",
+              "Emotional and pastoral conversations",
+              "Where accountability cannot be transferred"
+            ]
+          },
+          "brief": "The chapter that earns the book its credibility. A clear list of situations where the honest answer is to do it yourself, and the professional reasoning behind each.",
+          "status": "todo"
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "title": "The Next Ten Years of Your Career",
+      "chapters": [
+        {
+          "id": "ch64",
+          "title": "What Actually Gets Automated",
+          "art": {
+            "type": "matrix",
+            "title": "Tasks, not jobs",
+            "labels": [
+              "Routine + language-heavy",
+              "Routine + physical",
+              "Judgement + language-heavy",
+              "Judgement + relational",
+              "MOST EXPOSED",
+              "LEAST EXPOSED",
+              "PARTLY EXPOSED",
+              "LEAST EXPOSED"
+            ]
+          },
+          "brief": "Replace the jobs-versus-AI frame with a task-level analysis the reader can apply to their own week. What actually changes in a professional role, what does not, and why the honest answer is neither 'nothing' nor 'everything'. No invented statistics about job losses.",
+          "status": "todo"
+        },
+        {
+          "id": "ch65",
+          "title": "Becoming the Person Who Uses It Well",
+          "art": {
+            "type": "ladder",
+            "title": "The fluency ladder",
+            "labels": [
+              "Curious",
+              "Competent",
+              "Fluent",
+              "Designer",
+              "Leader"
+            ]
+          },
+          "brief": "Career strategy: the five stages of AI fluency, what to learn at each, and the skills that compound — judgement, verification, domain depth, and the ability to specify work clearly.",
+          "status": "todo"
+        },
+        {
+          "id": "ch66",
+          "title": "The Skills That Get More Valuable",
+          "art": {
+            "type": "stack",
+            "title": "What rises as generation gets cheap",
+            "labels": [
+              "Judgement and taste",
+              "Verification",
+              "Domain depth",
+              "Clear specification",
+              "Relationships and trust",
+              "Accountability"
+            ]
+          },
+          "brief": "The counterintuitive chapter: when producing text becomes cheap, the value moves to deciding what is worth producing and standing behind it. What professionals should invest their learning hours in.",
+          "status": "todo"
+        },
+        {
+          "id": "ch67",
+          "title": "Building an AI-Assisted Practice",
+          "art": {
+            "type": "flow",
+            "title": "From employee to practice",
+            "labels": [
+              "Choose the service",
+              "Design the assisted workflow",
+              "Price the outcome",
+              "Prove quality",
+              "Scale carefully"
+            ]
+          },
+          "brief": "For the reader who wants to build something: how a solo professional or small firm can offer services at a scale that used to require staff, and the honest limits and obligations of doing so. No income promises anywhere in this chapter.",
+          "status": "todo"
+        },
+        {
+          "id": "ch68",
+          "title": "Start Monday: A Thirty-Day Plan",
+          "art": {
+            "type": "timeline",
+            "title": "Four weeks to fluency",
+            "labels": [
+              "Week 1: one task a day",
+              "Week 2: build your instruction and library",
+              "Week 3: a project and your documents",
+              "Week 4: a workflow and a measurement"
+            ]
+          },
+          "brief": "The closing chapter: a specific thirty-day plan with daily actions, a final checklist, and the book's argument in one page — that fluency is a practice, not a purchase, and the professionals who thrive will be the ones who kept their judgement while learning to direct the machine.",
+          "status": "todo"
+        }
+      ]
+    }
+  ]
+}
