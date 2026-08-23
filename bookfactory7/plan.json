@@ -156,7 +156,7 @@
             ]
           },
           "brief": "A field guide to the categories a professional will meet — chat assistants, reasoning models, multimodal, embeddings/search, generators, coding agents — described by what they DO, not by brand or version, so the chapter stays true as products change. How to read a model's stated context window and capabilities. One page on how fast this field moves and how to check current facts rather than trusting a book's version numbers.",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch08",
@@ -174,7 +174,7 @@
             ]
           },
           "brief": "The professional's red-line chapter, written for people with duties of confidentiality — accountants, lawyers, doctors, HR, bankers. How consumer chat, business tiers, and enterprise deployments differ in what happens to your data. Redaction and anonymisation as a working habit. Written as general professional guidance, not legal advice: readers must check their own regulator, employer policy, and engagement terms.",
-          "status": "todo",
+          "status": "done",
           "tables": "table: deployment type vs data handling questions to ask"
         }
       ]
@@ -265,7 +265,7 @@
             ]
           },
           "brief": "The highest-leverage habit in the book: separating thinking from answering. Ask for an approach before the deliverable; ask for reasoning steps on analytical work; use reasoning modes where available. Why this reduces (not eliminates) errors, and why you must still verify.",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch14",
@@ -434,7 +434,7 @@
             ]
           },
           "brief": "Demystify agents: a model in a loop with tools and a goal. The four honest questions before building one — is the task hard to specify in advance, is the value worth the cost, is the model capable, can errors be caught and reversed. Why most work should NOT be an agent.",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch23",
@@ -452,7 +452,7 @@
             ]
           },
           "brief": "Tool use explained plainly: the model asks for an action, something else performs it, the result comes back. Introduce MCP as the emerging standard plug — a common way to connect assistants to systems — described conceptually, since implementations move fast. Security implications of giving an assistant hands.",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch24",
@@ -469,7 +469,7 @@
             ]
           },
           "brief": "A whole chapter on the category that surprises non-programmers most: assistants that operate on real files and run real commands. What Claude Code actually is, what it is genuinely good at beyond programming (data cleaning, document generation, repetitive file work, analysis pipelines), and how a non-programmer can use it safely. Emphasise review-before-apply and reversibility. Keep to durable behaviour, not version specifics.",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch25",
