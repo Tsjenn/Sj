@@ -228,18 +228,33 @@ def make_cover(path):
     im=Image.new("RGB",(CW,CH),NAVY); d=ImageDraw.Draw(im)
     for y in range(CH):
         t=y/CH; d.line([(0,y),(CW,y)], fill=(int(15+26*t),int(36+30*t),int(56+34*t)))
-    # constellation motif: nodes and links (a network, not a brain)
-    import random
-    rnd=random.Random(7)
-    pts=[(rnd.randint(120,CW-120), rnd.randint(150,1080)) for _ in range(46)]
+    # constellation motif: an evenly spread, connected network (not a brain)
+    import random, math
+    rnd=random.Random(11)
+    X0,X1,Y0,Y1=130,CW-130,170,1040
+    cols,rows=8,5
+    cw=(X1-X0)/cols; chh=(Y1-Y0)/rows
+    pts=[]
+    for r in range(rows):
+        for c in range(cols):
+            if rnd.random()<0.10:      # a few gaps, so it is not a lattice
+                continue
+            x=X0+cw*(c+0.5)+rnd.uniform(-cw*0.34,cw*0.34)
+            y=Y0+chh*(r+0.5)+rnd.uniform(-chh*0.34,chh*0.34)
+            pts.append((x,y))
+    # link each node to its three nearest neighbours -> one connected web
+    seen=set()
     for i,(x,y) in enumerate(pts):
-        for j in range(i+1,len(pts)):
-            x2,y2=pts[j]
-            if (x-x2)**2+(y-y2)**2 < 235**2:
-                d.line([(x,y),(x2,y2)], fill=(38,74,102), width=2)
+        order=sorted(range(len(pts)), key=lambda j:(pts[j][0]-x)**2+(pts[j][1]-y)**2)
+        for j in order[1:4]:
+            k=(min(i,j),max(i,j))
+            if k in seen: continue
+            seen.add(k)
+            d.line([(x,y),pts[j]], fill=(40,78,108), width=2)
     for i,(x,y) in enumerate(pts):
-        r=5 if i%4 else 9
-        d.ellipse([x-r,y-r,x+r,y+r], fill=CYAN if i%5 else AMBER)
+        r=5 if i%4 else 10
+        col=AMBER if i%6==0 else CYAN
+        d.ellipse([x-r,y-r,x+r,y+r], fill=col)
     d.rectangle([0,1120,CW,1128], fill=CYAN)
     ft=font(150,True)
     for i,wd in enumerate(["WORKING","WITH","INTELLIGENCE"]):
