@@ -277,9 +277,8 @@ task, different organisation, different answer.
 
 *Variance commentary* (row 21) is the single most requested use case in
 finance, and it scores 14. The figures are verifiable; the explanation is
-not. Say distribution costs are up on last month. A tool can see the
-movement. It cannot know that you changed courier in week three, and on
-its own it will not say
+not. A tool can see that distribution costs moved. It cannot know that
+you changed courier in week three, and it will not say
 "I don't know" — it will produce a plausible reason. Plausible reasons in
 management commentary are worse than blank space, because someone will
 act on one. If you use a tool here at all, use it to draft the
@@ -363,11 +362,10 @@ everyone already understands.
 
 ### Rules for the room
 
-- **Silent listing first.** If you open with discussion, the most senior
-  or most talkative person sets the agenda and you will end up scoring
-  their three tasks.
-- **Score by role, not by consensus.** The doer's time score stands. The
-  reviewer's verifiability score stands. Consensus scoring drifts towards
+- **Silent listing first.** Open with discussion and the most senior or
+  most talkative person sets the agenda; you will score their three tasks.
+- **Score by role, not by consensus.** The doer's time score stands, the
+  reviewer's verifiability score stands. Consensus drifts towards
   whatever the room already wanted.
 - **No scoring your own task alone.** If you do the task and review it,
   someone else scores verifiability.

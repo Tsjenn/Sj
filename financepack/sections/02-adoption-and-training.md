@@ -3,19 +3,17 @@ enough that one person can hold the whole thing in their head. What
 follows is a plan for that period, then a curriculum you can teach in your
 own meeting room with no outside help and no budget beyond people's time.
 
-The plan assumes a finance function of between five and fifty people.
-Smaller, and you compress the phases; larger, and you run this in one
-department and treat the rest of the organisation as a later problem. It
-assumes you already have access to some tool. Choosing the tool is a
-separate exercise; this is about what happens after the licence exists.
+The plan assumes a finance function of between five and fifty people, and
+that you already have access to some tool. Choosing the tool is a separate
+exercise; this is what happens after the licence exists.
 
 None of the numbers here are benchmarks, because there are none worth
-quoting. The only numbers that will matter are the ones your team records.
-And this is general guidance on running a change in a team: anything
-touching confidentiality, client consent, professional standards, data
-protection or your engagement terms differs by jurisdiction and changes
-over time. Check your own position with your professional body, your
-regulator and whoever handles your data obligations.
+quoting — the only numbers that will matter are the ones your team
+records. And this is general guidance on running a change in a team:
+anything touching confidentiality, client consent, professional standards,
+data protection or your engagement terms differs by jurisdiction and
+changes over time. Check your own position with your professional body,
+your regulator and whoever handles your data obligations.
 
 ## Part one: the ninety-day plan
 
@@ -42,9 +40,8 @@ in an email this afternoon.
 **What is not going in.** Decide now what data nobody pastes anywhere
 until the policy exists. A starting position: client-identifiable
 information, personal data, anything under an NDA, anything price-
-sensitive, anything you would not send to an external printer. Whether
-that is right for you depends on your tool's terms, your contracts and
-your local rules. Read the terms; do not assume them.
+sensitive. Whether that is right for you depends on your tool's terms,
+your contracts and your local rules. Read the terms; do not assume them.
 
 | Role | Who it usually is | What they own | Realistic time cost |
 |---|---|---|---|
@@ -65,40 +62,36 @@ happening while you think.
 person, individually and without consequence, what they have used and for
 what. In person, not in a form. Say plainly that nobody is in trouble and
 that you need the truth to write a sensible policy. You will usually find
-more than you expected, including someone who has pasted things they
-should not have. Respond with a fix, not a disciplinary — this is the only
-week you get the truth cheaply.
+more than you expected. Respond with a fix, not a disciplinary — this is
+the only week you get the truth cheaply.
 *Who:* owner. *Done when:* you have a written list of current use, and the
 whole team has the one rule above.
 
 **Week 2 — draft the policy.** Two pages at most; nobody reads four. It
 covers: approved and unapproved tools; what data may never be entered;
 that a named human reviews everything before it leaves; how you record
-that the review happened; what to do when the tool gets something wrong;
-and who to ask when the policy does not cover the situation. Have your
-data/IT contact check it against the tool's terms and your obligations. If
-you owe clients confidentiality, get the consent question answered rather
-than assumed.
+that the review happened; and who to ask when the policy does not cover
+the situation. Have your data/IT contact check it against the tool's terms
+and your obligations. If you owe clients confidentiality, get the consent
+question answered rather than assumed.
 *Who:* owner drafts, sponsor approves, data/IT checks. *Done when:* signed
 and sent, with a request to reply "read".
 
-**Week 3 — choose two use cases.** Two, not ten. Listing every candidate
-and starting them all produces ten half-finished experiments and evidence
-about none of them. Four tests: the task happens at least monthly; it eats
-time you can name; a wrong answer is caught by someone before it does
-damage; and you can tell within a week whether the output was good. Good
-early candidates are drafting and summarising work that already has a
-strong review step around it. Poor ones are anything where an error goes
-straight out of the door.
+**Week 3 — choose two use cases.** Two, not ten. Starting ten produces ten
+half-finished experiments and evidence about none of them. Four tests: the
+task happens at least monthly; it eats time you can name; a wrong answer
+is caught by someone before it does damage; and you can tell within a week
+whether the output was good. Good early candidates are drafting and
+summarising work that already has a review step around it. Poor ones are
+anything where an error goes straight out of the door.
 *Who:* owner and pilot group; sponsor breaks ties. *Done when:* two use
 cases written in one sentence each, with a named reviewer for each.
 
 **Week 4 — measure the "before".** Record how long each use case takes now
-and how much rework it needs, using the log below. Be honest that the
-baseline is an estimate: people recall duration poorly, and measuring
-changes the number. Record it anyway and label it as an estimate wherever
-you quote it. A soft baseline you admit is soft beats a precise-sounding
-figure you invented.
+and how much rework it needs, using the log below. The baseline is an
+estimate: people recall duration poorly, and measuring changes the number.
+Label it as an estimate wherever you quote it — a soft baseline you admit
+is soft beats a precise-sounding figure you invented.
 *Who:* pilot group. *Done when:* three baseline observations per use case,
 and the pilot group has done Level 1 of the curriculum.
 
@@ -107,13 +100,13 @@ and the pilot group has done Level 1 of the curriculum.
 
 **How this phase fails.** Someone senior sees a demonstration and the
 scope grows in a fortnight from two use cases to "a strategy". You end up
-with a deck, no baseline and no policy, while the team quietly carries on
-as before. The defence is the written pair of use cases: everything else
-goes on a list marked "after day 90", and the list is shown, not argued
-with. The second failure is a policy written to be safe rather than
-followed. If your policy would turn the honest answers you got in week 1
-into sackable offences, you have written the wrong policy, and people will
-comply by not telling you things.
+with a deck, no baseline and no policy, while the team carries on as
+before. The defence is the written pair of use cases: everything else goes
+on a list marked "after day 90", and the list is shown, not argued with.
+The second failure is a policy written to be safe rather than followed. If
+it would turn the honest answers you got in week 1 into sackable offences,
+you have written the wrong policy, and people will comply by not telling
+you things.
 
 ### Phase two — Days 31 to 60: run a real pilot
 
@@ -133,13 +126,13 @@ corrected before sign-off. Write down the failure types. You are building
 a list of what this tool gets wrong *on your work*, which is worth more
 than any general warning.
 *Who:* owner chairs, reviewer contributes. *Done when:* a written failure
-list exists and has been circulated.
+list has been circulated.
 
 **Week 7 — tighten, do not widen.** Improve the prompts, not the scope.
 This is the week the pilot group does Level 3. If a use case is clearly
 not working, say so now and either fix the prompt once or drop it.
-Dropping one of two at week 7 is a normal outcome and far cheaper than
-dropping it at week 12.
+Dropping one of two at week 7 is normal, and far cheaper than dropping it
+at week 12.
 *Who:* pilot group. *Done when:* one agreed prompt per use case, saved
 where everyone can reach it, placeholders written out.
 
@@ -148,9 +141,10 @@ three questions in writing. Did the task get faster *once review time is
 included*? A draft produced in two minutes that takes forty to check has
 not saved you thirty-eight. Did rework go up, down or stay flat? Would the
 reviewer be comfortable with this going out under their name every month?
-If the answers are good, widen. If mixed, extend the pilot a month — an
-extension is a legitimate decision and makes the eventual answer stronger.
-If poor, stop that use case and say why, in a paragraph, to everyone.
+Good answers mean widen. Mixed answers mean extend the pilot a month,
+which is a legitimate decision and makes the eventual answer stronger.
+Poor answers mean stop that use case and say why, in a paragraph, to
+everyone.
 *Who:* owner writes, sponsor reads. *Done when:* a one-page finding exists
 with the log attached.
 
@@ -162,8 +156,8 @@ everything. Two defences: ask for the worst output every week, and treat
 the reviewer's correction time as the real measure, because it is the one
 number nobody can flatter. The other failure is the reviewer being cut
 out: once output is "usually fine", the check gets skipped under deadline
-pressure, and you learn about it when something wrong has left the
-building. Make sign-off a recorded step, not a habit.
+pressure, and you find out when something wrong has left the building.
+Make sign-off a recorded step, not a habit.
 
 ### Phase three — Days 61 to 90: widen only what held
 
@@ -189,10 +183,9 @@ the new workflow and the owner not intervening. Log it. The interesting
 output is the list of questions the run sheet did not answer.
 *Who:* the new cohort. *Done when:* the run sheet has been amended.
 
-**Week 12 — review the policy against reality.** You now know things you
-did not know on day 14. Update the approved tools list, the data rules
-that proved unworkable or too loose, the sign-off record, and the failure
-types you found. Two-page limit still applies.
+**Week 12 — review the policy against reality.** Update the approved tools
+list, the data rules that proved unworkable or too loose, the sign-off
+record, and the failure types you found. The two-page limit still applies.
 *Who:* owner and data/IT contact. *Done when:* version two is signed and
 re-circulated.
 
@@ -206,12 +199,11 @@ date is in a calendar.
 
 **How this phase fails.** Everything widens at once. The pilot held for
 two use cases with five trained, watched people; it gets treated as
-general permission, thirty people start using it for whatever they like,
-quality drops, and the whole thing is banned in month five after one bad
-incident. Widen the use cases you tested, with the training you tested.
-The quieter failure: nothing sticks because the owner was the only person
-who cared. If nobody else can run the workflow from the run sheet by week
-13, you have a hobby, not a process.
+general permission, quality drops, and the whole thing is banned in month
+five after one bad incident. Widen the use cases you tested, with the
+training you tested. The quieter failure: nothing sticks because the owner
+was the only person who cared. If nobody else can run the workflow from
+the run sheet by week 13, you have a hobby, not a process.
 
 ### The senior who will not engage
 
@@ -222,11 +214,11 @@ Do not put them in the pilot group and do not sit them in a
 demonstration. Both read as pressure and produce a public position they
 then defend for a year. Give them the role they are already good at:
 reviewer. Ask them to check the pilot output and tell you what is wrong
-with it. That is honest work, it uses their scepticism as an asset, and it
-puts them in contact with the actual quality of the output rather than the
-claims about it. Some people who start out opposed adopt parts of it once
-they know where it fails. Some do not, which is a legitimate outcome as
-long as they are not blocking others.
+with it. That uses their scepticism as an asset, and it puts them in
+contact with the quality of the output rather than the claims about it.
+Some people who start out opposed adopt parts of it once they know where
+it fails. Some do not, which is a legitimate outcome as long as they are
+not blocking others.
 
 Hold firm on two things. They do not get to veto other people's use inside
 the policy. And they do get to say "not on my client work" for a period if
@@ -236,7 +228,7 @@ more than your adoption plan does.
 
 What does not work: making it a performance objective, mocking them in
 front of juniors, or going round them to their staff. All three convert a
-sceptic into an opponent, and opponents are expensive.
+sceptic into an opponent.
 
 ### The junior who has already raced ahead
 
@@ -246,11 +238,10 @@ of private practice with an assistant, genuinely faster at some things.
 Your instinct will be to slow them down. Half-resist it. What you need
 first is honesty about what they have already put into which tool, because
 you cannot manage exposure you do not know about. Ask directly, once, with
-the same no-consequences framing as week 1.
-
-Then give them a real job: writing prompts and run sheets for the pilot,
-and teaching Level 2. That turns private practice into a documented team
-asset and gives them standing for doing what they were going to do anyway.
+the same no-consequences framing as week 1. Then give them a real job:
+writing prompts and run sheets for the pilot, and teaching Level 2. That
+turns private practice into a documented team asset and gives them
+standing for doing what they were going to do anyway.
 
 The line you hold is review. The risk with a fast, confident junior is not
 that they use the tool; it is that they produce more finished-looking work
@@ -285,13 +276,11 @@ professional body's rules and your local law. Ask; do not assume.
 ## Part two: a four-level training curriculum
 
 This is designed to be taught by a manager one step ahead of the room, not
-by a specialist. Each level stands alone. Most of your team will get most
-of the benefit from Levels 1 to 3.
-
-You need a room with a screen, a working licence, and real examples from
-your own work with client-identifiable details removed. Invented examples
-do not land with this audience; they will notice the numbers are not real
-and switch off.
+by a specialist. Each level stands alone, and most of your team will get
+most of the benefit from Levels 1 to 3. You need a room with a screen, a
+working licence, and real examples from your own work with client-
+identifiable details removed — invented examples do not land with this
+audience.
 
 Teach in order. The common mistake is starting at Level 2, because
 prompting looks like the practical part. Without Level 1, people write
@@ -328,8 +317,8 @@ confidence is a property of how it writes, not a signal of how sure it is.
 2. *Fifteen minutes — the exercise below.* This is the session.
 3. *Ten minutes — where it is strong.* Rewriting, summarising a document
    you supply, first drafts, explaining something in simpler words,
-   spotting what is missing from a list. Note what these share: you supply
-   the substance, it supplies the form.
+   spotting what is missing from a list. You supply the substance, it
+   supplies the form.
 4. *Five minutes — where it is weak.* Anything needing a fact you did not
    give it. Arithmetic you have not checked. Anything current. Anything
    where 95% right is the same as wrong.
@@ -347,8 +336,8 @@ each requirement and state which pronouncement it comes from.
 Take whatever it produces to your actual source material and read out what
 is really there. Sometimes it is right. Sometimes it produces a reference
 in the correct format that does not exist, or attaches a real reference to
-the wrong requirement. Either result teaches the lesson, because the tone
-is identical. Then run:
+the wrong requirement. Either way the tone is identical, which is the
+lesson. Then run:
 
 ```
 Here is a trial balance extract. Calculate the movement in each account
@@ -365,10 +354,9 @@ guarantee, which is why the checking step is not optional.
 **How you tell whether it landed.** At the end, ask everyone to write one
 sentence: *why did it produce a confident wrong answer?* Collect the
 slips. If most say the data must be out of date, it did not land — that
-model leads people to trust it on anything historic. Re-run the exercise
-with a different topic. You want people describing text that fits rather
-than text that is true. The real test comes a fortnight later, in the
-question people ask about a colleague's draft. "Is this right?" means
+model leads people to trust it on anything historic, so re-run the
+exercise with a different topic. The real test comes a fortnight later, in
+the question people ask about a colleague's draft. "Is this right?" means
 Level 1 did not land. "What did you check this against?" means it did.
 
 ### Level 2 — Writing a usable prompt
@@ -392,10 +380,10 @@ useless. Fifteen minutes on the five parts — role, context, task,
 constraints, format — with finance examples. The part finance people skip
 is context: the entity, the framework, the period, materiality, who reads
 it. Twenty minutes on the exercise below. Five minutes setting homework:
-bring one real task, the prompt you wrote, and the output, good or bad.
+one real task, the prompt written for it, and the output, good or bad.
 
 *Session B.* Twenty-five minutes workshopping the homework anonymously on
-screen, fixing prompts as a group — the most valuable half hour in the
+screen and fixing prompts as a group — the most valuable half hour in the
 curriculum. Ten minutes on iteration: the second and third messages do
 more than the first ("too long", "drop the introduction", "you have
 assumed [X], I meant [Y]"). Ten minutes building the shared prompt list,
@@ -437,8 +425,7 @@ modes in finance drafting, because they read exactly like knowledge.
 shared prompt list. Entries from more than half the attendees means it
 landed. Three entries, all from the owner, means it did not — usually
 because people are still using it privately for things they do not count
-as "real work". Ask what they used it for yesterday; the answer is more
-informative than the list.
+as "real work". Ask what they used it for yesterday.
 
 ### Level 3 — Verification, and working with your team's own documents
 
@@ -470,9 +457,9 @@ difference between asking it about a policy and giving it the policy.
 Twenty minutes on the quoting technique below. Fifteen minutes on limits:
 long documents get summarised unevenly and the middle is where things go
 missing, so split them and ask about one section at a time. Ten minutes on
-which of your documents may be uploaded at all under your policy and your
-obligations — the most-asked question in the curriculum, so have the answer
-written down.
+which documents may be uploaded at all under your policy and your
+obligations — the most-asked question in the curriculum, so have the
+answer written down.
 
 **The live exercise: find the planted errors.** Beforehand, take a real
 piece of assisted output — a summary of an internal policy, or commentary
@@ -484,8 +471,7 @@ in pairs. Then compare findings.
 
 Almost every group finds the arithmetic error and misses the omission.
 That is the lesson, and it is better felt than told: what is missing does
-not announce itself, and no amount of reading the output reveals it. Only
-knowing what should have been there does.
+not announce itself, and no amount of reading the output reveals it.
 
 Then teach the fix, on the same source material:
 
