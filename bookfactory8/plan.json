@@ -1,0 +1,1391 @@
+{
+  "title": "THE FOUR LAYERS",
+  "subtitle": "Silicon, Capital and the Companies That Own Artificial Intelligence — How Chips, Clouds, Models and Apps Became the World's Most Valuable Industry",
+  "author": "Tang Shiuan Jenn",
+  "author_line": "Chartered Accountant",
+  "target_words": 350000,
+  "words_per_chapter": [
+    4200,
+    4800
+  ],
+  "content_policy": {
+    "sourcing": "EVERY figure — market capitalisation, revenue, valuation, headcount, market share, share-price move, investment amount — must be given WITH the date it refers to AND a named source in the text (e.g. 'as at August 2026, per company filings' or 'reported by CNBC in November 2025'). A figure without a date and a source may not appear.",
+    "no_invention": "Never invent or estimate a figure. If a number is not verifiable, say plainly that it is not disclosed. Do not interpolate, do not round from memory, do not present an estimate as a fact.",
+    "illustrative_examples": "Worked examples using round invented numbers ARE allowed to teach a mechanism, but must be labelled explicitly as illustrative and not attributed to any company.",
+    "no_advice": "This book is not investment advice and says so. It never recommends buying or selling any security, never gives a price target, and never predicts a share price. It teaches the reader to read the numbers themselves.",
+    "no_allegation": "Where a structure invites suspicion (circular revenue, vendor financing, investing in customers), explain the mechanism and what to watch for. Never allege improper conduct by a named company beyond what public disclosure supports.",
+    "staleness": "The book states openly and repeatedly that its figures are snapshots that will be out of date, and shows the reader where to find the current number.",
+    "geopolitics": "Describe export controls, Taiwan and state capital factually. No advocacy, no speculation about conflict, no political sides.",
+    "author_anecdotes": "No first-person anecdotes claiming specific professional experience. Chapter openings are second-person or generic professional scenes."
+  },
+  "parts": [
+    {
+      "title": "How to Read This Industry",
+      "summary": "The tools. Four layers, what the numbers mean, and why every figure in this book carries a date.",
+      "chapters": [
+        {
+          "id": "ch01",
+          "title": "The Four Layers",
+          "status": "todo",
+          "art": {
+            "type": "stack",
+            "title": "The AI stack, bottom to top",
+            "labels": [
+              "Application layer — where users pay",
+              "Model layer — where intelligence is made",
+              "Compute layer — where it runs",
+              "Semiconductor layer — where it is physically possible"
+            ]
+          },
+          "brief": "Open the book on a single machine and follow the money down through it: a person types a question, an application takes the payment, a model answers, a data centre runs it, and somewhere a chip does the arithmetic. Establish the four-layer frame that organises the entire book and explain why the value has been moving DOWN the stack, not up. State the book's method plainly: every company is examined on origin, strategy, accounts, challenge, opportunity. State the honesty rule that governs the book: every figure carries a date and a source, because a market capitalisation is a photograph, not a fact."
+        },
+        {
+          "id": "ch02",
+          "title": "What a Market Capitalisation Actually Is",
+          "status": "todo",
+          "art": {
+            "type": "anatomy",
+            "title": "Inside a market capitalisation",
+            "labels": [
+              "Shares in issue",
+              "Last traded price",
+              "Expectation, not cash",
+              "What it is NOT: money the company has"
+            ]
+          },
+          "brief": "The most quoted number in this industry is the least understood. Explain market cap as price times shares, why it is a claim about the future rather than a measure of the present, why it moves without anything happening inside the company, and why comparing two companies' market caps tells you less than comparing their cash flows. Use the real August 2026 ranking as the worked example. Make the reader permanently sceptical of headlines that lead with market cap."
+        },
+        {
+          "id": "ch03",
+          "title": "Reading a Chip Company's Accounts",
+          "status": "todo",
+          "art": {
+            "type": "checklist",
+            "title": "What to look at first in a semiconductor company",
+            "labels": [
+              "Gross margin and what drives it",
+              "Capital expenditure vs depreciation",
+              "Inventory and days",
+              "Customer concentration",
+              "R&D as a share of revenue",
+              "Cash conversion"
+            ]
+          },
+          "brief": "The accountant's chapter. Walk through the line items that actually matter in a semiconductor business and what each one is trying to tell you: gross margin as the scoreboard of pricing power, capex as a bet placed years before revenue, inventory as the earliest warning of a turn, customer concentration as the risk nobody puts on the front page. Teach the reader to open a real filing and know where to look. No company-specific figures here — this is the toolkit."
+        },
+        {
+          "id": "ch04",
+          "title": "Reading a Cloud Company's Accounts",
+          "status": "todo",
+          "art": {
+            "type": "flow",
+            "title": "How cloud capex becomes cloud profit",
+            "labels": [
+              "Capex spent today",
+              "Assets capitalised",
+              "Depreciated over a useful life",
+              "Charged against future revenue",
+              "Margin depends on the life assumed"
+            ]
+          },
+          "brief": "Cloud businesses are accounting businesses. Explain how a data centre becomes a balance-sheet asset, how the assumed useful life of a server changes reported profit without changing a single dollar of cash, why extending server life flattered earnings across the industry, and what to watch now that AI hardware may age faster than the assumptions. This chapter is the book's sharpest analytical tool and it belongs to the author's profession."
+        },
+        {
+          "id": "ch05",
+          "title": "Reading a Company With No Accounts",
+          "status": "todo",
+          "art": {
+            "type": "compare",
+            "title": "Public company vs private lab",
+            "labels": [
+              "Public: audited, filed, comparable",
+              "Private: selective, unaudited, negotiated",
+              "Public: market sets the price",
+              "Private: the last round sets the price"
+            ]
+          },
+          "brief": "Two of the most important companies in this book publish no audited accounts. Explain what a private valuation actually is — the price of the last shares sold, on terms you cannot see — why post-money valuation overstates worth when preferences and ratchets are attached, and how to read reported revenue run-rates that nobody has audited. Set the standard the book will apply to OpenAI and Anthropic: report what is disclosed, name who disclosed it, and never present it as equivalent to a filing."
+        },
+        {
+          "id": "ch06",
+          "title": "Every Number in This Book Has a Date",
+          "status": "todo",
+          "art": {
+            "type": "timeline",
+            "title": "Why a figure needs a timestamp",
+            "labels": [
+              "A price is a moment",
+              "A quarter is a period",
+              "A filing is a snapshot",
+              "A book is printed once"
+            ]
+          },
+          "brief": "A short, honest chapter that would not appear in most books on this subject. Explain the problem directly: this industry re-prices weekly, and a printed book cannot keep up. Set out the convention used throughout — figures are given with the date and the source, and the reader is shown where to look up the current number themselves. Argue that a book's job here is the durable part: structure, economics, incentives and history. The numbers are illustration, not foundation."
+        }
+      ],
+      "n": 1
+    },
+    {
+      "title": "The Semiconductor Layer",
+      "summary": "The bottom of the stack, where the physical limits live and where the whole industry's capacity is decided years in advance.",
+      "chapters": [
+        {
+          "id": "ch07",
+          "title": "The Bottom of the Stack",
+          "status": "todo",
+          "art": {
+            "type": "stack",
+            "title": "Who does what in making a chip",
+            "labels": [
+              "Design (fabless)",
+              "Equipment (lithography, deposition, etch)",
+              "Manufacture (foundry)",
+              "Packaging and test",
+              "Memory (its own world)"
+            ]
+          },
+          "brief": "Establish the division of labour that most readers have never seen: the company that designs a chip usually does not make it, the company that makes it does not make the machines, and the company that makes the machines has no competitor. Explain fabless, foundry, IDM and OSAT plainly. Show why this structure creates chokepoints rather than a supply chain, and why a chokepoint is worth more than a market share."
+        },
+        {
+          "id": "ch08",
+          "title": "TSMC: The Company Everything Runs Through",
+          "status": "todo",
+          "art": {
+            "type": "network",
+            "title": "What depends on one foundry",
+            "labels": [
+              "TSMC leading-edge capacity",
+              "Nvidia",
+              "Apple",
+              "AMD",
+              "Broadcom",
+              "Qualcomm",
+              "Almost everyone else"
+            ]
+          },
+          "brief": "The single most important company most people cannot name. History from 1987 and Morris Chang's insight that manufacturing could be a service rather than a by-product of design. Explain the pure-play foundry model, why it won, and how the leading edge became a natural monopoly. Give TSMC's position with dated figures — market capitalisation around 2.17 trillion US dollars as at August 2026, and 2026 capital expenditure guided to 52 to 56 billion dollars, above analyst expectations — and source both. Cover the challenge chapter: geographic concentration, Arizona and Japan expansion, cost of building outside Taiwan."
+        },
+        {
+          "id": "ch09",
+          "title": "How a Foundry Actually Makes Money",
+          "status": "todo",
+          "art": {
+            "type": "flow",
+            "title": "Foundry economics",
+            "labels": [
+              "Customer books capacity years ahead",
+              "Fab built with borrowed and retained cash",
+              "Yield climbs, cost per wafer falls",
+              "Price falls more slowly than cost",
+              "Node matures, price falls hard"
+            ]
+          },
+          "brief": "The economics that decide the whole industry's capacity. Explain the wafer-price/yield curve, why a fab must run full, why the leading edge earns and the trailing edge grinds, and why capacity decisions taken today set the ceiling on AI three years out. Include a worked, clearly-labelled illustrative example with invented round numbers, stated plainly as illustrative and not as any company's figures."
+        },
+        {
+          "id": "ch10",
+          "title": "ASML: One Machine, No Substitute",
+          "status": "todo",
+          "art": {
+            "type": "anatomy",
+            "title": "Why EUV has no second source",
+            "labels": [
+              "Extreme ultraviolet light source",
+              "Optics from a single supplier",
+              "Decades of accumulated process knowledge",
+              "Export licences",
+              "No competing machine at the leading edge"
+            ]
+          },
+          "brief": "The most extreme chokepoint in modern industry. History from Philips spin-off to the EUV bet that took two decades and nearly failed. Explain why no competitor exists and why that is a technical fact rather than a commercial one. Dated figures: ASML crossed 500 billion US dollars in market value for the first time in January 2026; give the source. Cover export controls as an existential political exposure."
+        },
+        {
+          "id": "ch11",
+          "title": "The Machines Behind the Machines",
+          "status": "todo",
+          "art": {
+            "type": "grid",
+            "title": "The equipment layer",
+            "labels": [
+              "Lithography",
+              "Deposition",
+              "Etch",
+              "Metrology and inspection",
+              "Ion implantation",
+              "Cleaning",
+              "Test",
+              "Packaging"
+            ]
+          },
+          "brief": "The suppliers nobody outside the industry can name and every fab depends on. Applied Materials, Lam Research, KLA, Tokyo Electron. Explain what each step does in terms a non-engineer can follow, why this layer is a quiet oligopoly, why its revenue leads the foundries by roughly a year, and why watching equipment orders is the best early signal of the cycle turning."
+        },
+        {
+          "id": "ch12",
+          "title": "Nvidia I: The Graphics Years, 1993 to 2006",
+          "status": "todo",
+          "art": {
+            "type": "timeline",
+            "title": "Nvidia's first act",
+            "labels": [
+              "1993 founded",
+              "1995 NV1 fails",
+              "1997 RIVA 128 saves the company",
+              "1999 GeForce and the term GPU",
+              "2006 CUDA released"
+            ]
+          },
+          "brief": "The origin story, told without hindsight. Three founders, a diner, and a company that nearly died on its first product. Correct the record on early backing: Nvidia's early investors were Sequoia Capital and Sutter Hill Ventures, not SoftBank. Cover the 1995 near-death, the RIVA 128 rescue, the GeForce launch and the naming of the GPU. End on CUDA in 2006 with the reader not yet knowing why it matters."
+        },
+        {
+          "id": "ch13",
+          "title": "Nvidia II: The Decade Nobody Noticed",
+          "status": "todo",
+          "art": {
+            "type": "flow",
+            "title": "How CUDA became a moat",
+            "labels": [
+              "A GPU is a parallel machine",
+              "CUDA lets ordinary programmers use it",
+              "Researchers adopt it because it is there",
+              "Libraries accumulate",
+              "Rewriting elsewhere becomes unthinkable"
+            ]
+          },
+          "brief": "The most valuable strategic decision of the period, made when it looked like an expensive distraction. Explain what CUDA is in plain terms, why a decade of unglamorous software investment created a switching cost that silicon alone never could, and how the 2012 deep-learning moment found the tooling already waiting. This is the chapter that explains the moat, and it is a software chapter in a hardware book."
+        },
+        {
+          "id": "ch14",
+          "title": "Nvidia III: To the Largest Company on Earth",
+          "status": "todo",
+          "art": {
+            "type": "timeline",
+            "title": "2022 to 2026",
+            "labels": [
+              "2022 crypto collapse and inventory writedown",
+              "2023 data-centre revenue overtakes gaming",
+              "2024 Hopper shortage",
+              "2025 Blackwell",
+              "2026 largest company in the world"
+            ]
+          },
+          "brief": "The four years that re-rated the company. Cover the 2022 collapse honestly — the crypto bust and the inventory charge — because the book's credibility depends on including the bad years. Then the inflection. Dated: Nvidia was the world's most valuable company at roughly 5.3 to 5.4 trillion US dollars in August 2026; source it and state plainly that it will have moved by the time this is read."
+        },
+        {
+          "id": "ch15",
+          "title": "Nvidia's Accounts, Line by Line",
+          "status": "todo",
+          "art": {
+            "type": "checklist",
+            "title": "Reading Nvidia's filings as an accountant",
+            "labels": [
+              "Gross margin and what it implies about pricing power",
+              "Customer concentration disclosure",
+              "Inventory and purchase commitments",
+              "Investments in customers",
+              "Share-based payment",
+              "Cash generation"
+            ]
+          },
+          "brief": "Apply chapter three's toolkit to the most valuable company in the world. Walk the reader through what to look for in the filings, what the concentration disclosure means, why purchase commitments matter more than most readers realise, and why an investment in a customer deserves a second look. Teach the reading, do not simply report the numbers; and give the figures that are given with dates and a source."
+        },
+        {
+          "id": "ch16",
+          "title": "AMD: The Long Second Place",
+          "status": "todo",
+          "art": {
+            "type": "timeline",
+            "title": "AMD's near-death and return",
+            "labels": [
+              "1969 founded",
+              "2006 ATI acquisition",
+              "2012 near insolvency",
+              "2014 Su becomes CEO",
+              "2017 Zen",
+              "2020s data-centre and AI accelerators"
+            ]
+          },
+          "brief": "The best turnaround story in the industry and a lesson in what second place is worth. Cover the 2012 near-death, the balance-sheet repair, the decision to go all-in on a new architecture, and the strategic question of whether a credible second source can break a software moat. Dated market capitalisation with source."
+        },
+        {
+          "id": "ch17",
+          "title": "Intel: How the Leader Lost the Lead",
+          "status": "todo",
+          "art": {
+            "type": "flow",
+            "title": "How a process lead is lost",
+            "labels": [
+              "Integrated model wins for thirty years",
+              "Delay at one node",
+              "Customers qualify a second source",
+              "Scale advantage inverts",
+              "Rebuilding costs more than defending"
+            ]
+          },
+          "brief": "The cautionary tale the rest of the book needs. Explain the integrated device manufacturer model and why it was a genuine advantage, then how a process delay compounds into a structural loss. Treat Intel seriously and without mockery — this is a company that built the industry. Cover the foundry strategy and the government money honestly, and set out what would have to be true for it to work."
+        },
+        {
+          "id": "ch18",
+          "title": "Broadcom: The Quiet Trillion",
+          "status": "todo",
+          "art": {
+            "type": "matrix",
+            "title": "Broadcom's two businesses",
+            "labels": [
+              "Custom silicon for hyperscalers",
+              "Networking silicon",
+              "Infrastructure software",
+              "Acquisition and margin discipline"
+            ]
+          },
+          "brief": "The trillion-dollar company almost no consumer has heard of. Explain the roll-up strategy, the custom accelerator business that makes it the main alternative to buying merchant GPUs, and why the networking silicon matters as much as the accelerators once clusters get large. Dated market capitalisation with source. Cover the strategic question: is a customer that designs its own chip a customer or a future competitor?"
+        },
+        {
+          "id": "ch19",
+          "title": "Arm and SoftBank",
+          "status": "todo",
+          "art": {
+            "type": "timeline",
+            "title": "SoftBank's real semiconductor bet",
+            "labels": [
+              "1990 Arm founded",
+              "2016 SoftBank acquires Arm",
+              "2020 Nvidia deal agreed",
+              "2022 deal abandoned",
+              "2023 Arm IPO",
+              "2026 SoftBank exits Nvidia entirely"
+            ]
+          },
+          "brief": "Correct the record and tell the better story. SoftBank's foundational chip bet was Arm in 2016, not an early stake in Nvidia. Explain the licensing model and why owning the instruction set is a different kind of asset. Then the Nvidia thread told accurately: the Vision Fund built a roughly 4.9 per cent stake in 2017 and sold it in January 2019 for about 3.3 billion dollars, a profit of roughly 2.6 billion; a later stake was sold in full in November 2025 for 5.83 billion to fund investment in OpenAI and Stargate. Source each. Draw the lesson about conviction, timing and what an exit costs."
+        },
+        {
+          "id": "ch20",
+          "title": "Memory I: Why DRAM Was Always a Bad Business",
+          "status": "todo",
+          "art": {
+            "type": "cycle",
+            "title": "The classic memory cycle",
+            "labels": [
+              "Shortage",
+              "Prices spike",
+              "Everyone adds capacity",
+              "Glut",
+              "Prices collapse",
+              "Capex cut",
+              "Shortage"
+            ]
+          },
+          "brief": "Before the supercycle, the history. Explain why memory was for decades the worst business in semiconductors: a commodity with brutal capital intensity, a cycle that destroyed more capital than it created, and a consolidation from dozens of makers to three that survived. This chapter exists so the reader understands exactly what changed."
+        },
+        {
+          "id": "ch21",
+          "title": "Memory II: HBM and the Supercycle",
+          "status": "todo",
+          "art": {
+            "type": "flow",
+            "title": "Why AI broke the memory cycle",
+            "labels": [
+              "Accelerators are memory-bandwidth bound",
+              "HBM stacks solve bandwidth",
+              "HBM is hard to make and yields poorly",
+              "Capacity sells out years ahead",
+              "A commodity becomes a specified component"
+            ]
+          },
+          "brief": "The answer to the question the reader has been asking: why did memory share prices go up so much? Explain high-bandwidth memory in plain terms, why AI accelerators are limited by memory bandwidth rather than raw arithmetic, and why that turned a commodity into a qualified, contracted, sold-out component. Dated: the 2026 HBM market estimated at about 54.6 billion dollars, up roughly 58 per cent year on year; SK Hynix holding the largest share; HBM capacity reported sold out through 2026 across the major suppliers. Source each figure."
+        },
+        {
+          "id": "ch22",
+          "title": "Three Companies, One Cycle",
+          "status": "todo",
+          "art": {
+            "type": "compare",
+            "title": "Samsung, SK Hynix and Micron",
+            "labels": [
+              "Samsung: scale, breadth, its own foundry",
+              "SK Hynix: HBM leadership",
+              "Micron: the American supplier",
+              "All three: capacity sold out, capex rising"
+            ]
+          },
+          "brief": "The three survivors examined side by side on strategy, position and exposure. Dated share-price moves for 2026 with their source, and the honest counterweight: memory is historically the most cyclical business in the industry, and a supercycle is still a cycle. Include SK Hynix's reported 38 billion dollar plant investment as the illustration of how the industry responds to a shortage — and what that response has always meant next."
+        }
+      ],
+      "n": 2
+    },
+    {
+      "title": "The Compute Layer",
+      "summary": "Where the chips are assembled into machines, financed, powered, and rented by the hour.",
+      "chapters": [
+        {
+          "id": "ch23",
+          "title": "What Compute Means on a Balance Sheet",
+          "status": "todo",
+          "art": {
+            "type": "anatomy",
+            "title": "Inside a data centre's economics",
+            "labels": [
+              "Land and shell",
+              "Power and cooling",
+              "Servers and accelerators",
+              "Networking",
+              "The depreciation assumption"
+            ]
+          },
+          "brief": "Translate a building full of machines into an accountant's view. What is capitalised, over what life, and how each assumption flows to reported profit. Establish the number that will recur through the rest of the book: assumed useful life. Explain in plain terms how a small change to it moves billions of reported earnings without moving a cent of cash."
+        },
+        {
+          "id": "ch24",
+          "title": "Microsoft Azure",
+          "status": "todo",
+          "art": {
+            "type": "flow",
+            "title": "Microsoft's AI position",
+            "labels": [
+              "Enterprise relationships already in place",
+              "Azure capacity",
+              "OpenAI partnership",
+              "Copilot across the product estate",
+              "Custom silicon as a hedge"
+            ]
+          },
+          "brief": "The company that turned an incumbent position into an AI position. History of the cloud pivot, why enterprise distribution is the hardest asset to replicate, and how the OpenAI relationship shaped the capex plan. Dated market capitalisation with source. Challenge chapter: capex intensity, the return question, and the strategic risk of depending on a partner that is also becoming a competitor."
+        },
+        {
+          "id": "ch25",
+          "title": "Amazon Web Services",
+          "status": "todo",
+          "art": {
+            "type": "timeline",
+            "title": "AWS from internal tool to profit engine",
+            "labels": [
+              "2006 launch",
+              "2010s dominance",
+              "2020s margin pressure",
+              "Trainium and Inferentia",
+              "2024-2026 Anthropic relationship"
+            ]
+          },
+          "brief": "The business that funded a retailer's entire strategy. Explain how AWS was built, why being first mattered less than being cheapest and most complete, and how the AI wave arrived with Amazon holding infrastructure but not a frontier model. Cover the Anthropic relationship and the custom-silicon strategy as two answers to the same problem."
+        },
+        {
+          "id": "ch26",
+          "title": "Google Cloud and the TPU",
+          "status": "todo",
+          "art": {
+            "type": "compare",
+            "title": "Buying accelerators vs building them",
+            "labels": [
+              "Merchant GPU: fast to adopt, priced by the seller",
+              "Custom silicon: years of investment, no seller's margin",
+              "Merchant: broad software support",
+              "Custom: your own software stack"
+            ]
+          },
+          "brief": "The only company that designed its own AI accelerator a decade before it needed one. Explain the Tensor Processing Unit, why Google built it, and what owning your own silicon does to your cost structure when demand explodes. Cover the strategic oddity of being simultaneously the most vertically integrated player and a large customer of the layer below."
+        },
+        {
+          "id": "ch27",
+          "title": "Oracle's Second Act",
+          "status": "todo",
+          "art": {
+            "type": "timeline",
+            "title": "An incumbent finds a new business",
+            "labels": [
+              "Database incumbent",
+              "Cloud latecomer",
+              "Aggressive AI capacity build",
+              "Large contracted backlog",
+              "Financing and leverage questions"
+            ]
+          },
+          "brief": "How a company written off as a legacy vendor became a serious infrastructure player by taking a risk the larger clouds would not. Explain the strategy honestly, including the balance-sheet question: capacity built against contracted future revenue is a bet on the customer's survival as much as on demand."
+        },
+        {
+          "id": "ch28",
+          "title": "The Neoclouds",
+          "status": "todo",
+          "art": {
+            "type": "matrix",
+            "title": "A new category of company",
+            "labels": [
+              "Own or lease the buildings",
+              "Buy accelerators at scale",
+              "Rent them by the hour",
+              "Finance against the hardware",
+              "Concentrated customer base"
+            ]
+          },
+          "brief": "The companies that did not exist before this cycle. Explain the business model, the financing structures that make it possible, why lenders accept accelerators as collateral, and the risks that creates if the residual value of that collateral falls. Treat it analytically, not as either a scandal or a miracle."
+        },
+        {
+          "id": "ch29",
+          "title": "Stargate and the Megaproject Era",
+          "status": "todo",
+          "art": {
+            "type": "flow",
+            "title": "How a multi-hundred-billion project is assembled",
+            "labels": [
+              "An operator with demand",
+              "A financier with capital",
+              "A landowner with power",
+              "A chip supplier with allocation",
+              "A construction timeline nobody has attempted"
+            ]
+          },
+          "brief": "The scale that broke the old vocabulary. Explain what these joint ventures are structurally, who bears which risk, and why the capital comes from consortia rather than one balance sheet. Include SoftBank's stated funding of its participation partly from the November 2025 sale of its Nvidia stake, with source. Be clear about what is announced versus what is built."
+        },
+        {
+          "id": "ch30",
+          "title": "Custom Silicon Everywhere",
+          "status": "todo",
+          "art": {
+            "type": "grid",
+            "title": "Who is designing their own",
+            "labels": [
+              "Google TPU",
+              "Amazon Trainium",
+              "Microsoft Maia",
+              "Meta MTIA",
+              "OpenAI with Broadcom",
+              "Others in development"
+            ]
+          },
+          "brief": "Every large buyer is trying to become a maker. Explain why: not to beat the merchant supplier on performance but to escape its margin. Assess honestly what each programme has actually achieved versus announced, and what it takes to displace an incumbent whose real moat is software."
+        },
+        {
+          "id": "ch31",
+          "title": "The Power Problem",
+          "status": "todo",
+          "art": {
+            "type": "flow",
+            "title": "From grid to gate",
+            "labels": [
+              "Generation",
+              "Transmission",
+              "Substation",
+              "Data centre",
+              "Cooling",
+              "Chip"
+            ]
+          },
+          "brief": "The constraint that is replacing chip supply as the binding one. Explain interconnection queues, why a signed power contract is now a strategic asset, why nuclear and gas re-entered the conversation, and how power availability is starting to decide where compute gets built. Avoid advocacy on energy policy; describe the engineering and the economics."
+        },
+        {
+          "id": "ch32",
+          "title": "Depreciation: The Number That Decides Everything",
+          "status": "todo",
+          "art": {
+            "type": "anatomy",
+            "title": "One assumption, three consequences",
+            "labels": [
+              "Assumed useful life",
+              "Annual depreciation charge",
+              "Reported operating margin",
+              "Return on invested capital"
+            ]
+          },
+          "brief": "The book's central accounting chapter, and the one only an accountant would write. Explain how the industry extended assumed server lives, what that did to reported margins, and why AI hardware may not age the way general-purpose servers did. Set out precisely what the reader should watch in the disclosures and what a shortening of assumed life would do to reported profit across the sector. No prediction; a method."
+        }
+      ],
+      "n": 3
+    },
+    {
+      "title": "The Model Layer",
+      "summary": "Two private companies worth close to a trillion dollars each, and the giants trying to catch them.",
+      "chapters": [
+        {
+          "id": "ch33",
+          "title": "What a Model Company Actually Sells",
+          "status": "todo",
+          "art": {
+            "type": "flow",
+            "title": "Where a model company's money comes from",
+            "labels": [
+              "Consumer subscriptions",
+              "Business seats",
+              "API usage",
+              "Enterprise agreements",
+              "Licensing to a cloud"
+            ]
+          },
+          "brief": "Before the histories, the business model. Explain the revenue lines, why gross margin depends on the cost of inference rather than the cost of training, why training is a capitalisable-looking cost that mostly is not capitalised, and why revenue growth and cash burn can both be enormous at once. Establish the reporting standard: these are private companies, and what is known is what they or their investors have chosen to say."
+        },
+        {
+          "id": "ch34",
+          "title": "OpenAI I: 2015 to 2022",
+          "status": "todo",
+          "art": {
+            "type": "timeline",
+            "title": "From non-profit to product company",
+            "labels": [
+              "2015 founded as a non-profit",
+              "2019 capped-profit structure",
+              "2019 first Microsoft investment",
+              "2020 GPT-3 and the API",
+              "2022 the consumer moment"
+            ]
+          },
+          "brief": "The founding and the structure that would later cause so much difficulty. Explain the original mission, why the non-profit form could not raise what training required, and what the capped-profit structure was designed to do. End at the consumer launch that changed the industry's clock speed."
+        },
+        {
+          "id": "ch35",
+          "title": "OpenAI II: The Microsoft Relationship",
+          "status": "todo",
+          "art": {
+            "type": "network",
+            "title": "What each side supplied",
+            "labels": [
+              "Microsoft: capital",
+              "Microsoft: Azure capacity",
+              "Microsoft: distribution",
+              "OpenAI: models",
+              "OpenAI: brand",
+              "Both: a dependency neither fully controls"
+            ]
+          },
+          "brief": "The most consequential commercial relationship of the period, examined as a deal rather than a story. What each party contributed, what each received, how the exclusivity worked and how it loosened. Explain why a partnership between a supplier and a competitor is inherently unstable, and how both sides hedged."
+        },
+        {
+          "id": "ch36",
+          "title": "OpenAI III: Restructuring and the Road to a Trillion",
+          "status": "todo",
+          "art": {
+            "type": "timeline",
+            "title": "The capital ladder",
+            "labels": [
+              "Capped-profit structure",
+              "Restructuring",
+              "2026 round at 852 billion post-money",
+              "Amazon's 50 billion participation",
+              "IPO speculation"
+            ]
+          },
+          "brief": "The corporate and capital history brought current. Dated and sourced: OpenAI closed a 122 billion dollar round in March 2026 at an 852 billion dollar valuation, with Amazon reported as investing 50 billion in that round. Explain what a post-money valuation of that size does and does not tell you, why a rival cloud investing in it is strategically remarkable, and what an IPO would force into daylight."
+        },
+        {
+          "id": "ch37",
+          "title": "Anthropic I: The Founding",
+          "status": "todo",
+          "art": {
+            "type": "flow",
+            "title": "Why a company splits",
+            "labels": [
+              "Disagreement on approach",
+              "Departure",
+              "New company formed",
+              "Safety-first positioning",
+              "Enterprise-first commercial strategy"
+            ]
+          },
+          "brief": "The founding, the reasons given for it, and the deliberate strategic differences: a safety-forward research posture and an enterprise-first commercial approach rather than a consumer land grab. Describe the positioning accurately and without taking a side on the underlying disagreement."
+        },
+        {
+          "id": "ch38",
+          "title": "Anthropic II: Two Clouds, Two Investors",
+          "status": "todo",
+          "art": {
+            "type": "network",
+            "title": "An unusual ownership position",
+            "labels": [
+              "Amazon: capital and Trainium",
+              "Google: capital and TPUs",
+              "Anthropic: models",
+              "Neither investor controls",
+              "Both investors compete"
+            ]
+          },
+          "brief": "The strangest ownership structure in the industry: two competing hyperscalers as major investors in the same company. Dated and sourced: Amazon with up to 33 billion dollars committed, Google with up to 43 billion including 10 billion in April 2026. Explain how such a structure is negotiated, what governance protections a company seeks, and why both investors accepted a minority position."
+        },
+        {
+          "id": "ch39",
+          "title": "Anthropic III: Nearly a Trillion, and the IPO Question",
+          "status": "todo",
+          "art": {
+            "type": "timeline",
+            "title": "Valuation history",
+            "labels": [
+              "Early rounds",
+              "Successive raises",
+              "May 2026: 65 billion Series H at 965 billion post-money",
+              "Briefly the most valuable private company",
+              "IPO speculation"
+            ]
+          },
+          "brief": "Bring it current with sources. Anthropic closed a 65 billion dollar Series H at a 965 billion dollar post-money valuation in May 2026, briefly surpassing OpenAI as the most valuable private company. Explain what such a round implies about expected revenue, what preferences attached to late rounds mean for the headline number, and what public reporting would change."
+        },
+        {
+          "id": "ch40",
+          "title": "Google DeepMind and Gemini",
+          "status": "todo",
+          "art": {
+            "type": "stack",
+            "title": "The only fully integrated player",
+            "labels": [
+              "Own research lab",
+              "Own model",
+              "Own accelerator",
+              "Own cloud",
+              "Own distribution"
+            ]
+          },
+          "brief": "The company that owns every layer of the stack, and why that has been both an advantage and an obstacle. Cover the merger of research groups, the strategic cost of moving late in consumer AI while holding the strongest research position, and the question of whether integration or focus wins."
+        },
+        {
+          "id": "ch41",
+          "title": "Meta, xAI and the Open-Weight Camp",
+          "status": "todo",
+          "art": {
+            "type": "compare",
+            "title": "Two strategies for the model layer",
+            "labels": [
+              "Closed weights: sold access, protected margin",
+              "Open weights: given away, commoditises the rival",
+              "Closed: revenue from the model",
+              "Open: revenue from somewhere else"
+            ]
+          },
+          "brief": "Why a company would spend billions training a model and then give the weights away. Explain the strategic logic of commoditising your complement, Meta's position as a company that monetises attention rather than tokens, and xAI's different bet. Assess honestly what open weights have and have not achieved commercially."
+        },
+        {
+          "id": "ch42",
+          "title": "The Chinese Labs",
+          "status": "todo",
+          "art": {
+            "type": "matrix",
+            "title": "A parallel stack under constraint",
+            "labels": [
+              "Domestic models",
+              "Domestic accelerators",
+              "Export controls on equipment",
+              "Efficiency-driven research",
+              "A separate ecosystem forming"
+            ]
+          },
+          "brief": "The part of the industry most Western coverage handles badly. Describe the labs, the constraint that export controls place on the layer beneath them, and the research consequence: efficiency becomes the priority when capacity is capped. Report what is disclosed, avoid geopolitical advocacy, and be explicit about what is not verifiable from outside."
+        }
+      ],
+      "n": 4
+    },
+    {
+      "title": "The Application Layer",
+      "summary": "The top of the stack, where a user finally pays, and where the margin is fought over.",
+      "chapters": [
+        {
+          "id": "ch43",
+          "title": "Where the Money Meets the User",
+          "status": "todo",
+          "art": {
+            "type": "flow",
+            "title": "Following one payment down the stack",
+            "labels": [
+              "User pays a subscription",
+              "Application keeps a margin",
+              "Model provider takes a fee",
+              "Cloud takes the compute cost",
+              "Chip vendor took its margin years earlier"
+            ]
+          },
+          "brief": "Trace a single monthly subscription all the way down the four layers and show who keeps what. This is the chapter that makes the book's structure concrete, and it sets up the margin argument that runs through this part."
+        },
+        {
+          "id": "ch44",
+          "title": "Microsoft",
+          "status": "todo",
+          "art": {
+            "type": "matrix",
+            "title": "Microsoft at every layer",
+            "labels": [
+              "Applications: Office, Copilot",
+              "Model: partnership and in-house",
+              "Compute: Azure",
+              "Silicon: Maia and partnerships"
+            ]
+          },
+          "brief": "The company positioned at every layer of the stack. Financial position with dated figures and sources — roughly 3.66 trillion dollars market capitalisation in August 2026. Strategy, challenge and opportunity: distribution as the deepest moat, capex as the biggest question, and the tension of partnering with a company that competes with you."
+        },
+        {
+          "id": "ch45",
+          "title": "Alphabet",
+          "status": "todo",
+          "art": {
+            "type": "matrix",
+            "title": "Alphabet at every layer",
+            "labels": [
+              "Applications: Search, Workspace",
+              "Model: Gemini",
+              "Compute: Google Cloud",
+              "Silicon: TPU"
+            ]
+          },
+          "brief": "Dated market capitalisation with source — roughly 4.20 trillion dollars in August 2026. The strategic problem of defending a business that AI could disrupt while building the thing that disrupts it. Cover the integration advantage, the regulatory overhang, and the Anthropic stake as a hedge."
+        },
+        {
+          "id": "ch46",
+          "title": "Amazon",
+          "status": "todo",
+          "art": {
+            "type": "matrix",
+            "title": "Amazon at every layer",
+            "labels": [
+              "Applications: retail, Alexa",
+              "Model: Anthropic stake and in-house",
+              "Compute: AWS",
+              "Silicon: Trainium and Inferentia"
+            ]
+          },
+          "brief": "The company that owns the most infrastructure and the least frontier research, and how it bought its way to a position. Cover the Anthropic investment, the reported 50 billion dollar participation in OpenAI's 2026 round, and what it means to be a major investor in both leading labs. Source both."
+        },
+        {
+          "id": "ch47",
+          "title": "Meta",
+          "status": "todo",
+          "art": {
+            "type": "flow",
+            "title": "Meta's different equation",
+            "labels": [
+              "Revenue comes from advertising",
+              "AI improves ad targeting and ranking",
+              "Models given away weaken rivals",
+              "Capex justified internally, not sold"
+            ]
+          },
+          "brief": "The only giant whose AI spending is justified almost entirely by internal returns. Explain why that changes the analysis, why Meta can rationally give models away, and the risk of a capex programme whose payback is measured in engagement rather than invoices."
+        },
+        {
+          "id": "ch48",
+          "title": "Apple: The Quiet One",
+          "status": "todo",
+          "art": {
+            "type": "compare",
+            "title": "Apple's position against the others",
+            "labels": [
+              "Others: sell compute and models",
+              "Apple: sells devices",
+              "Others: capex-heavy",
+              "Apple: comparatively capital-light",
+              "Others: race to frontier",
+              "Apple: waits and integrates"
+            ]
+          },
+          "brief": "The most valuable company for years, and the least visible in this cycle. Dated market capitalisation with source — roughly 4.41 trillion dollars in August 2026. Explain the strategy of arriving late deliberately, the on-device argument, the silicon capability, and the genuine risk of being a distribution channel for someone else's intelligence."
+        },
+        {
+          "id": "ch49",
+          "title": "The Incumbent Software Companies",
+          "status": "todo",
+          "art": {
+            "type": "matrix",
+            "title": "How incumbents are responding",
+            "labels": [
+              "Embed AI in the existing product",
+              "Reprice per seat or per outcome",
+              "Buy capability",
+              "Defend the data they already hold"
+            ]
+          },
+          "brief": "Salesforce, Adobe, SAP, ServiceNow and the rest. The strategic problem of being a software company when the software can increasingly be generated, and the defence that customer data and workflow, not features, are the moat."
+        },
+        {
+          "id": "ch50",
+          "title": "The Application Startups",
+          "status": "todo",
+          "art": {
+            "type": "flow",
+            "title": "The thin-wrapper problem",
+            "labels": [
+              "Build on a model API",
+              "Grow fast on a good interface",
+              "Model provider ships the same feature",
+              "Margin compresses",
+              "Survivors own the workflow"
+            ]
+          },
+          "brief": "Why so many application companies grew quickly and then struggled, and what distinguishes the ones that lasted. Explain the wrapper critique fairly, then the counter-argument: workflow, data and distribution are real assets even when the model is not yours."
+        },
+        {
+          "id": "ch51",
+          "title": "What Users Actually Pay For",
+          "status": "todo",
+          "art": {
+            "type": "checklist",
+            "title": "What a buyer is really buying",
+            "labels": [
+              "A saved hour",
+              "A removed headcount",
+              "A capability they could not buy before",
+              "A compliance obligation met",
+              "A fear of being left behind"
+            ]
+          },
+          "brief": "An honest chapter about demand. Distinguish durable purchase reasons from cyclical ones, and be candid that some current spending is driven by competitive anxiety rather than measured return. This matters, because the whole capex programme below rests on this layer's revenue proving real."
+        },
+        {
+          "id": "ch52",
+          "title": "The Margin Question",
+          "status": "todo",
+          "art": {
+            "type": "compare",
+            "title": "Where the profit ends up",
+            "labels": [
+              "Chip vendor: high margin, taken first",
+              "Cloud: margin depends on depreciation",
+              "Model layer: margin depends on inference cost",
+              "Application: margin depends on switching cost"
+            ]
+          },
+          "brief": "Close the part by asking the question the whole book circles: in the long run, which layer keeps the profit? Set out the arguments for each layer honestly, note that the answer has changed before in computing history, and refuse to predict. Give the reader the framework instead."
+        }
+      ],
+      "n": 5
+    },
+    {
+      "title": "The Web of Ownership",
+      "summary": "Who owns whom, what the cross-holdings mean, and how money moves in circles.",
+      "chapters": [
+        {
+          "id": "ch53",
+          "title": "How to Read a Cross-Holding",
+          "status": "todo",
+          "art": {
+            "type": "anatomy",
+            "title": "Anatomy of a strategic stake",
+            "labels": [
+              "Size of the stake",
+              "Rights attached",
+              "Commercial agreement alongside",
+              "Accounting treatment",
+              "What it obliges each side to do"
+            ]
+          },
+          "brief": "The toolkit for this part. Explain the difference between a passive investment, an equity method holding and control, why the accounting treatment changes the reported earnings of the investor, and why a stake accompanied by a supply agreement is a different animal from a stake alone."
+        },
+        {
+          "id": "ch54",
+          "title": "Microsoft and OpenAI",
+          "status": "todo",
+          "art": {
+            "type": "network",
+            "title": "The most examined relationship in technology",
+            "labels": [
+              "Capital in",
+              "Compute committed",
+              "Revenue share",
+              "Distribution rights",
+              "Model access"
+            ]
+          },
+          "brief": "The relationship examined clause by clause as far as public disclosure allows. What was invested, what was contributed in kind, what each side received, and how the arrangement changed. Be explicit about what is not public."
+        },
+        {
+          "id": "ch55",
+          "title": "Amazon, Google and Anthropic",
+          "status": "todo",
+          "art": {
+            "type": "network",
+            "title": "Two rivals, one investee",
+            "labels": [
+              "Amazon: up to 33 billion committed",
+              "Google: up to 43 billion committed",
+              "Anthropic: independent governance",
+              "Both: compute supply agreements",
+              "Neither: control"
+            ]
+          },
+          "brief": "How two competitors ended up funding the same company. Dated and sourced. Explain the commercial logic for each investor, what the compute commitments mean in practice, and the reported effect on the investors' own earnings — noting that stakes in Anthropic and OpenAI have been reported as distorting the corporate earnings picture for the companies holding them."
+        },
+        {
+          "id": "ch56",
+          "title": "Nvidia as an Investor",
+          "status": "todo",
+          "art": {
+            "type": "grid",
+            "title": "A supplier with equity in its customers",
+            "labels": [
+              "Cloud providers",
+              "Model labs",
+              "Infrastructure companies",
+              "Robotics and tools",
+              "Its own ecosystem"
+            ]
+          },
+          "brief": "The chapter that requires the most care. Nvidia has taken equity positions across its own customer base. Set out what is disclosed, explain neutrally why a dominant supplier might invest in demand for its product, and explain what an analyst should watch for without alleging anything the filings do not support."
+        },
+        {
+          "id": "ch57",
+          "title": "Circular Revenue",
+          "status": "todo",
+          "art": {
+            "type": "flow",
+            "title": "When money goes round",
+            "labels": [
+              "Supplier invests in customer",
+              "Customer buys supplier's product",
+              "Supplier books revenue",
+              "Both report growth",
+              "Cash has moved in a circle"
+            ]
+          },
+          "brief": "The pattern that most worries careful readers of this industry. Explain the mechanism in accounting terms, why it is not automatically improper, what disclosure and revenue-recognition rules require, and what specifically to look for. Reference the historical precedent from the telecom equipment era. Make claims about mechanism, not about any named company's conduct."
+        },
+        {
+          "id": "ch58",
+          "title": "Vendor Financing, Old and New",
+          "status": "todo",
+          "art": {
+            "type": "timeline",
+            "title": "A pattern that has happened before",
+            "labels": [
+              "1990s telecom equipment vendor financing",
+              "2001 collapse",
+              "2020s accelerator-backed lending",
+              "Residual value assumptions",
+              "What is different this time"
+            ]
+          },
+          "brief": "The historical rhyme, examined properly. What vendor financing did to the telecom equipment industry, how today's structures differ, and where they are similar. Be even-handed: state the case that it is different, and the case that it is not."
+        },
+        {
+          "id": "ch59",
+          "title": "SoftBank",
+          "status": "todo",
+          "art": {
+            "type": "timeline",
+            "title": "One investor across the whole stack",
+            "labels": [
+              "2016 Arm acquisition",
+              "2017 Nvidia stake",
+              "2019 Nvidia exit",
+              "2023 Arm IPO",
+              "2025 full Nvidia exit for 5.83 billion",
+              "2026 OpenAI and Stargate"
+            ]
+          },
+          "brief": "The single most instructive investor case study in the book, told accurately with every figure sourced. The Arm acquisition, the Nvidia stake bought in 2017 and sold in 2019 for about 3.3 billion at a 2.6 billion profit, the later stake sold entirely in November 2025 for 5.83 billion to fund OpenAI and Stargate. Draw the lessons about conviction, timing, and the difference between being early and being right."
+        },
+        {
+          "id": "ch60",
+          "title": "Sovereign Money",
+          "status": "todo",
+          "art": {
+            "type": "matrix",
+            "title": "State capital in the stack",
+            "labels": [
+              "Sovereign wealth funds",
+              "State-backed data centres",
+              "National champions",
+              "Export controls as industrial policy",
+              "Subsidy programmes"
+            ]
+          },
+          "brief": "How state capital entered the industry at scale, what it wants, and what it changes. Cover subsidy programmes and sovereign investment vehicles descriptively. Avoid taking political sides; describe the mechanisms and the incentives."
+        },
+        {
+          "id": "ch61",
+          "title": "What the Auditors See",
+          "status": "todo",
+          "art": {
+            "type": "checklist",
+            "title": "Where the hard judgements sit",
+            "labels": [
+              "Useful life of hardware",
+              "Revenue recognition on complex deals",
+              "Impairment of strategic investments",
+              "Purchase commitments",
+              "Related-party disclosure",
+              "Going concern for the cash-hungry"
+            ]
+          },
+          "brief": "The chapter no other book on this subject will contain, and the author's home ground. Walk through the specific areas where auditors must exercise judgement in these companies, why each is difficult, and what a reader can infer from how a company discloses them. Written as general practice, naming no standard and no regulator, so it holds across jurisdictions."
+        },
+        {
+          "id": "ch62",
+          "title": "The Map",
+          "status": "todo",
+          "art": {
+            "type": "network",
+            "title": "The web of ownership, drawn",
+            "labels": [
+              "Chip vendors",
+              "Clouds",
+              "Labs",
+              "Applications",
+              "Investors",
+              "The lines between them"
+            ]
+          },
+          "brief": "Draw the whole picture in one place: who owns stakes in whom, who supplies whom, and where the same company appears as supplier, customer and shareholder. State the date of the map explicitly and tell the reader plainly that it will be out of date, and how to redraw it themselves."
+        }
+      ],
+      "n": 6
+    },
+    {
+      "title": "Cycles, Risk and What Would Break It",
+      "summary": "The industry's own history is the best available guide to what happens next.",
+      "chapters": [
+        {
+          "id": "ch63",
+          "title": "The Semiconductor Cycle",
+          "status": "todo",
+          "art": {
+            "type": "cycle",
+            "title": "The cycle that has never stopped",
+            "labels": [
+              "Demand exceeds supply",
+              "Prices rise",
+              "Capacity ordered",
+              "Capacity arrives late",
+              "Demand normalises",
+              "Glut",
+              "Capex cut"
+            ]
+          },
+          "brief": "Explain the cycle properly, why it is structural rather than a failure of management, why capacity always arrives late, and why the industry has never escaped it despite believing several times that it had. This is the chapter that arms the reader against both euphoria and doom."
+        },
+        {
+          "id": "ch64",
+          "title": "Four Previous Times People Were Certain",
+          "status": "todo",
+          "art": {
+            "type": "timeline",
+            "title": "Prior convictions",
+            "labels": [
+              "1999 internet infrastructure",
+              "2000 telecom equipment",
+              "2018 crypto GPU demand",
+              "2022 the post-pandemic correction"
+            ]
+          },
+          "brief": "Four episodes when this industry was certain demand was structural, and what happened. Tell each accurately and without smugness. The point is not that booms always end; it is that the arguments made now have been made before, and the reader should recognise them."
+        },
+        {
+          "id": "ch65",
+          "title": "The Case That This Is a Bubble",
+          "status": "todo",
+          "art": {
+            "type": "checklist",
+            "title": "The bear argument, stated at its strongest",
+            "labels": [
+              "Capex far ahead of end revenue",
+              "Circular financing",
+              "Depreciation assumptions untested",
+              "Concentration in a few buyers",
+              "Valuations discounting flawless execution"
+            ]
+          },
+          "brief": "State the bear case as strongly and fairly as its most serious proponents make it. No strawmen. The book's credibility depends on this chapter being genuinely persuasive."
+        },
+        {
+          "id": "ch66",
+          "title": "The Case That It Is Not",
+          "status": "todo",
+          "art": {
+            "type": "checklist",
+            "title": "The bull argument, stated at its strongest",
+            "labels": [
+              "Revenue is real and growing",
+              "Buyers are cash-generative, not leveraged startups",
+              "Capacity is contracted years ahead",
+              "Capability still improving",
+              "Adoption is early in the enterprise"
+            ]
+          },
+          "brief": "State the bull case with equal force and fairness. Then decline to adjudicate, and explain precisely which observable facts would move a careful reader toward one side or the other. Give the reader the test, not the verdict."
+        },
+        {
+          "id": "ch67",
+          "title": "Concentration Risk",
+          "status": "todo",
+          "art": {
+            "type": "network",
+            "title": "How much depends on how little",
+            "labels": [
+              "One foundry at the leading edge",
+              "One lithography supplier",
+              "A handful of buyers",
+              "A single island",
+              "A few power markets"
+            ]
+          },
+          "brief": "Lay out the concentration honestly across every layer. This is not a prediction of failure; it is a description of how narrow the base of the pyramid is, and why that matters to anyone holding any part of it."
+        },
+        {
+          "id": "ch68",
+          "title": "Taiwan",
+          "status": "todo",
+          "art": {
+            "type": "flow",
+            "title": "What depends on one place",
+            "labels": [
+              "Leading-edge capacity",
+              "Advanced packaging",
+              "Skilled workforce",
+              "Diversification efforts",
+              "Time required to replicate"
+            ]
+          },
+          "brief": "Handle the most sensitive subject in the book with care and without speculation about politics or conflict. Describe what is manufactured there, why it cannot be moved quickly, what diversification has actually achieved, and how long a genuine alternative would take to build. Facts and timelines only."
+        },
+        {
+          "id": "ch69",
+          "title": "Export Controls",
+          "status": "todo",
+          "art": {
+            "type": "timeline",
+            "title": "Policy as an industrial force",
+            "labels": [
+              "Equipment restrictions",
+              "Chip performance thresholds",
+              "Entity listings",
+              "Domestic substitution responses",
+              "Second-order effects"
+            ]
+          },
+          "brief": "Describe the mechanisms and their observable effects on company strategy and supply chains, without advocating a position. Cover the second-order effects that are usually missed: acceleration of domestic substitution, and the incentive to design around a threshold rather than beneath it."
+        },
+        {
+          "id": "ch70",
+          "title": "What Would Actually Break It",
+          "status": "todo",
+          "art": {
+            "type": "checklist",
+            "title": "Failure modes worth watching",
+            "labels": [
+              "End demand disappoints",
+              "Power becomes the hard cap",
+              "A depreciation reset",
+              "Credit tightens for the financed buyers",
+              "A capability plateau",
+              "A supply shock"
+            ]
+          },
+          "brief": "The chapter that replaces prediction with a watch list. Six specific, observable failure modes, what each would look like early, and where it would show up in the disclosures first. Practical, unsensational, and genuinely useful to someone holding any of these shares."
+        }
+      ],
+      "n": 7
+    },
+    {
+      "title": "The Future",
+      "summary": "What is durable in this analysis, and what a reader should watch after the numbers in this book have gone stale.",
+      "chapters": [
+        {
+          "id": "ch71",
+          "title": "Where the Bottleneck Goes Next",
+          "status": "todo",
+          "art": {
+            "type": "flow",
+            "title": "The moving constraint",
+            "labels": [
+              "Chips were the constraint",
+              "Memory became a constraint",
+              "Advanced packaging is a constraint",
+              "Power is becoming the constraint",
+              "The next one will be something else"
+            ]
+          },
+          "brief": "The single most useful framework for the future: the binding constraint moves, and the profit follows it. Trace where it has already moved, explain why it moves, and give the reader a way to spot the next one before the headlines do."
+        },
+        {
+          "id": "ch72",
+          "title": "The Memory Decade",
+          "status": "todo",
+          "art": {
+            "type": "cycle",
+            "title": "What a supercycle usually does next",
+            "labels": [
+              "Shortage and record prices",
+              "Record capex committed",
+              "Capacity arrives together",
+              "Prices normalise",
+              "The cycle resumes"
+            ]
+          },
+          "brief": "Return to memory with the reader now equipped. Assess seriously whether HBM's qualification requirements and technical difficulty genuinely break the historical cycle or merely lengthen it. Present both cases with the historical record in front of the reader, and note the capacity being committed now — including SK Hynix's reported 38 billion dollar investment — as the thing to watch."
+        },
+        {
+          "id": "ch73",
+          "title": "Inference Economics",
+          "status": "todo",
+          "art": {
+            "type": "flow",
+            "title": "Why the cost per answer decides everything",
+            "labels": [
+              "Training is a one-off cost",
+              "Inference is a per-use cost",
+              "Cost per token falls with efficiency",
+              "Falling cost expands demand",
+              "Margin depends on which moves faster"
+            ]
+          },
+          "brief": "The economics that will determine whether the model layer becomes profitable. Explain the relationship between falling unit costs and expanding usage, why cheaper inference does not automatically mean lower revenue, and the conditions under which the model layer keeps margin rather than passing it all through."
+        },
+        {
+          "id": "ch74",
+          "title": "Who Could Still Enter",
+          "status": "todo",
+          "art": {
+            "type": "matrix",
+            "title": "Barriers by layer",
+            "labels": [
+              "Semiconductor: capital and physics — very high",
+              "Compute: capital and power — high",
+              "Model: capital and talent — falling",
+              "Application: low, and getting lower"
+            ]
+          },
+          "brief": "Assess entry barriers layer by layer, and explain why the lowest barrier sits at the layer closest to the customer — which is exactly why margin there is hardest to defend. Cover realistic entrants and the conditions each would need."
+        },
+        {
+          "id": "ch75",
+          "title": "What the Stack Might Look Like in 2030",
+          "status": "todo",
+          "art": {
+            "type": "stack",
+            "title": "Three scenarios, not a forecast",
+            "labels": [
+              "Concentration deepens",
+              "Commoditisation spreads upward",
+              "Constraint shifts to energy",
+              "In all three: someone owns the bottleneck"
+            ]
+          },
+          "brief": "Three coherent scenarios, each argued properly, with the indicators that would distinguish them. Explicitly not a prediction. Explain what all three have in common, and why that common element is the durable insight."
+        },
+        {
+          "id": "ch76",
+          "title": "A Reader's Watch List",
+          "status": "todo",
+          "art": {
+            "type": "checklist",
+            "title": "What to check, and how often",
+            "labels": [
+              "Capex guidance against revenue",
+              "Assumed useful lives",
+              "Customer concentration disclosures",
+              "Equipment orders as a leading signal",
+              "Memory contract prices",
+              "Power interconnection queues"
+            ]
+          },
+          "brief": "The practical payoff of the whole book. Six things a reader can check themselves, where to find each, how often it updates, and what a change in it would mean. Turn the reader from a consumer of headlines into someone who can read the industry directly."
+        },
+        {
+          "id": "ch77",
+          "title": "What the Numbers Cannot Tell You",
+          "status": "todo",
+          "art": {
+            "type": "flow",
+            "title": "The limits of the analysis",
+            "labels": [
+              "Accounts describe the past",
+              "Valuations describe expectation",
+              "Neither describes capability",
+              "Judgement remains yours"
+            ]
+          },
+          "brief": "The closing chapter. Return to the book's founding discipline: every figure had a date, every claim had a source, and none of it removes the need for judgement. State plainly what this analysis can and cannot do, and end on the reader's own responsibility for any decision they take. No prediction, no exhortation, no sales pitch."
+        }
+      ],
+      "n": 8
+    }
+  ]
+}
