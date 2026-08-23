@@ -1,3 +1,23 @@
+### 2026-08-23 — coordinator (four books shipped; a lesson about parallel drafting)
+DID: Finished THE AMAH'S DAUGHTER (36ch/161k), AI WITHOUT THE HYPE ebook +
+paperback (795pp interior + wrap cover), the AI for Finance Teams pack
+(62pp), and THE SILICON LEDGER (77ch/340k, retitled from THE FOUR
+LAYERS). Built a free AI-policy tool at site/tools/ai-policy/ and the
+/ai-finance/ landing page. Three Kindle titles now live with links in
+site/config.js.
+SAW: Drafting 77 chapters in parallel propagates a wrong figure faster
+than it propagates a right one. Nvidia's data-centre revenue was wrong in
+ch01, spread to five chapters, and CAME BACK TWICE in chapters drafted
+later from stale reads. Same for the customer-concentration figure
+(annual filing shows two >10% customers; the four-customer/61% figure is
+the QUARTERLY filing). → For any multi-agent book with figures: keep a
+single verified anchor list in the preamble, and after the final chapter
+lands run a book-wide grep for each anchor figure. Do not trust that a
+correction made mid-run stayed corrected.
+ASK → any future book agent: never write a figure from memory. Search it,
+date it, name the source in the sentence, or leave it out and say it is
+not disclosed.
+
 ## 2026-08-23 — coordinator
 
 DID: Completed WORKING WITH INTELLIGENCE (bookfactory7) — 68/68 chapters,
@@ -428,39 +448,3 @@ npm. Lesson recorded in CLAUDE.md.
 ASK → all: if owner reports another Playgama finding, read the
 finding text before touching code — their QA checks are specific.
 
-### 2026-08-22 — coordinator (Playgama check 2: rewarded ads integrated)
-DID: Playgama QA advanced to 64% then flagged "rewarded ad not
-triggered during early close test". Added an honest rewarded-revive:
-after a topple, an optional "Watch ad — keep stacking" button (once
-per run) that revives ONLY on the SDK's `rewarded` state — an
-early-closed ad grants nothing and the game resumes cleanly. Also
-interstitials at restarts (from 2nd topple, ≥60s apart) with pause
-handling. All inert outside the Playgama build (button hidden, no ad
-calls, site/itch untouched). 16-check Playwright suite passes incl.
-early-close, once-per-run, and pause/unpause; real-SDK game_ready
-re-verified.
-SAW: Their QA drives `rewarded_state_changed` exactly as documented
-in Playgama/bridge source — read QaToolPlatformBridge.ts when a
-finding is unclear.
-ASK → all: keep ads OUT of site/play6 and the itch build — free web
-version stays ad-free; ads exist only where the platform requires
-them.
-
-### 2026-08-22 — coordinator (Critter Tower quality pass: sound, feel, look)
-DID: Owner asked for good sound, longer/easier runs, high-class
-graphics. Added a WebAudio engine: generative background loop
-(Am-F-C-G pads + pentatonic plucks, 84 BPM), layered SFX (pentatonic
-combo chimes, noise-filter slice crunch, topple womp, new-best
-fanfare) and a persistent mute button. Tuning: perfect window now
-15px→7px as score climbs, slower start swing, +6 regrow, every 5th
-perfect fully restores width ("TOWER POWER!"). Graphics: gradient-lit
-blocks, squash-and-stretch landing, parallax hills, drifting clouds,
-sun/moon crossfade, twinkling stars, shockwave rings, vignette, drawn
-title screen with best-score badge. All 16 ad-flow checks re-pass;
-tuning verified (combo ×12 run, window shrink, milestone regrow);
-screenshots checked at title/sunset/night.
-SAW: baseW is min(W*0.62, 300) — on narrow screens "full width" is
-under 300; write tests against baseW, not the cap.
-ASK → editor: play a run on /play6/ during Sunday pass — listening
-for music/SFX balance on real speakers is the one thing tests can't
-do.
