@@ -11,8 +11,9 @@
         text-shadow:0 6px 40px rgba(0,0,0,.75)}
   #vig{position:absolute;inset:0;pointer-events:none;
        background:radial-gradient(ellipse at 50% 52%,rgba(0,0,0,0) 42%,rgba(0,0,0,.72) 100%)}
-  #scrim{position:absolute;left:0;top:0;width:1080px;height:660px;pointer-events:none;
-       background:linear-gradient(180deg,rgba(0,0,0,.80) 0%,rgba(0,0,0,.62) 45%,rgba(0,0,0,0) 100%)}
+  #scrim{position:absolute;left:0;top:0;width:1080px;height:820px;pointer-events:none;
+       background:linear-gradient(180deg,rgba(0,0,0,.90) 0%,rgba(0,0,0,.84) 38%,
+                                  rgba(0,0,0,.55) 72%,rgba(0,0,0,0) 100%)}
   #grain{position:absolute;inset:0;pointer-events:none;opacity:.05}
 </style></head>
 <body><div id="wrap"><div id="vig"></div><div id="scrim"></div><div id="grain"></div></div>
@@ -161,11 +162,11 @@ window.setFrame = function(i){
   // camera: swing from a low three-quarter on the spine round to face-on,
   // dollying back the whole time
   const p = ease(Math.min(1, t / T));
-  const ang = THREE.MathUtils.lerp(-0.92, 0.06, p);
-  const dist = THREE.MathUtils.lerp(4.30, 6.60, p);
-  const hgt  = THREE.MathUtils.lerp(-0.55, 0.62, smooth(Math.min(1,t/T)));
+  const ang = THREE.MathUtils.lerp(-0.54, 0.05, p);
+  const dist = THREE.MathUtils.lerp(5.85, 6.70, p);
+  const hgt  = THREE.MathUtils.lerp(0.55, 0.72, smooth(Math.min(1,t/T)));
   camera.position.set(Math.sin(ang)*dist, hgt, Math.cos(ang)*dist);
-  camera.lookAt(0, THREE.MathUtils.lerp(-0.62, -0.46, p), 0);
+  camera.lookAt(0, THREE.MathUtils.lerp(-0.86, -0.60, p), 0);
 
   // book: slow counter-rotation and a gentle float
   book.rotation.y = THREE.MathUtils.lerp(0.42, -0.03, p) + Math.sin(t*0.55)*0.028;
