@@ -84,5 +84,13 @@ window.STORE = {
       price: "$3.99",
       link: "https://tangshiuan.gumroad.com/l/asvsdb",
     },
+    // AI for Finance Teams — The Working Pack.
+    // Upload dist/AI-For-Finance-Teams.zip to Gumroad, then paste the link
+    // and YOUR chosen price here. Priced for firms, not individuals — this
+    // is a team artefact, not a $9 template. The price is your decision.
+    financepack: {
+      price: "SET-ME",
+      link: "SET-ME",
+    },
   },
 };

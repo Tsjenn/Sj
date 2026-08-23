@@ -1,0 +1,609 @@
+Everything in this section is general information for professional people
+thinking about how they work. It is not legal, regulatory, tax or
+professional advice. Rules differ by jurisdiction, firms differ in what
+they permit, and both change. Check your own position with your regulator,
+your professional body and, where it matters, your own advisers.
+
+## Part One — The Three-Check Rule
+
+You already have a review habit. You built it over years, and it is
+tuned to the mistakes humans make: transposed digits, a stale opening
+balance, a paragraph copied from last year and not updated. AI output
+fails differently. It fails smoothly. The wrong number is formatted
+correctly, sits in the right column, and is surrounded by three numbers
+that are right. The invented source has a plausible title. The reasoning
+reads like reasoning.
+
+So the habit needs a small extension, not a replacement. Three checks,
+in order, every time output leaves your hands: **the figures, the
+sources, the reasoning.**
+
+The order matters. Figures first, because a wrong figure makes
+everything downstream irrelevant. Sources second, because that is where
+fabrication hides. Reasoning last, because it takes the most thought and
+you should not spend that thought on a document that has already failed.
+
+The whole thing should take a few minutes on a short piece of work and
+under half an hour on something substantial. If a check would take
+longer than that, the work was the wrong shape to give to a tool, and
+Part Two is about that.
+
+### Check one — the figures
+
+**What you do.** Take every number in the output and trace it back to
+where it came from. Not "does it look right" — trace it. Open the
+source file. Find the figure. Match it. Then check that the arithmetic
+between figures holds: the components add to the total, the variance
+equals the difference, the percentages are of the base you think they
+are of, the periods compared are the same length.
+
+Numbers you did not supply get harder treatment. If a figure appears in
+the output that was not in your input, it came from somewhere you cannot
+see. Delete it or verify it independently. There is no third option.
+
+**What it catches.** Numbers that were altered in transit — rounded
+when they should not have been, pulled from the wrong row, carried from
+one entity to another, restated to a different currency without saying
+so. Totals that do not foot. Percentage changes calculated the wrong way
+round. Prior-period figures that quietly became current-period figures.
+Numbers that were simply invented to fill a sentence that needed one.
+
+**What it misses.** A number that is faithfully copied from a source
+that is itself wrong. The check verifies transmission, not truth. It
+also misses the number that should be there and is not — an omitted
+provision, a missing intercompany line, a segment left out of a total
+you did not think to foot. Absence is much harder to see than error.
+
+**How long.** Aim for a minute or two per page of numbers. If you cannot
+trace a figure inside about thirty seconds, that is not a slow check,
+that is a finding — write it down and go back to whoever produced it.
+
+A prompt that makes this check faster, because it forces the output to
+show its own working:
+
+```
+Before the answer, produce a table of every number you are about to
+use. Columns: the number, the exact label or cell reference it came
+from in the material I gave you, and one of these two words —
+"supplied" if it came from my material, "derived" if you calculated
+it. For anything derived, show the calculation. Do not include any
+number you cannot place in one of those two categories. If a figure I
+need is missing from my material, say so and leave it blank rather
+than estimating it.
+
+Material: [PASTE OR ATTACH]
+Task: [WHAT YOU WANT PRODUCED]
+```
+
+You still trace the figures. But you are now tracing against a list the
+tool has committed to, which is faster than hunting through prose, and
+the "derived" rows tell you exactly which calculations to re-perform.
+
+### Check two — the sources
+
+**What you do.** For every factual claim that is not a figure — a
+statement about a rule, a treatment, a deadline, a definition, a
+contractual term, "the standard requires", "the guidance says", "market
+practice is" — find the actual source and read it yourself. The primary
+document, not a summary of it. If the output names a source, confirm the
+source exists, confirm it says what the output says it says, and confirm
+it is current.
+
+If the output does not name a source, that claim has no source. Treat it
+as a hypothesis you now have to prove or drop.
+
+**What it catches.** Confident references to things that do not exist,
+or that exist but say something else. Rules described as they were
+several years ago. Guidance from one jurisdiction presented as though it
+applies in yours — this one is common and easy to miss, because the
+language of finance is shared across borders while the rules are not.
+Thresholds and dates that have moved. Requirements that apply to a class
+of entity yours is not in.
+
+**What it misses.** A source that is real, current, correctly quoted,
+and beside the point. Relevance is a judgement no check can automate.
+It also misses the source that is right for your jurisdiction and wrong
+for your client's, and the well-known position that has an exception
+your client happens to sit inside.
+
+**How long.** Budget two to five minutes per claim you actually intend
+to rely on. That sounds heavy until you notice how few claims in a
+typical document you truly rely on. Most sentences carry no weight. Mark
+the ones that do — the ones a reader would act on, or that would appear
+in a complaint if they were wrong — and check those properly. Skimming
+twelve claims is worth less than checking three.
+
+A useful move here is to separate the drafting from the sourcing:
+
+```
+List every factual assertion in the text below that is not a number,
+one per line. For each, mark it "verifiable" if a reader could check it
+against a document, or "judgement" if it is an opinion or an inference.
+For each verifiable assertion, state what kind of document would settle
+it. Do not tell me the answer, do not cite anything, and do not add
+assertions that are not already in the text.
+
+Text: [PASTE THE DRAFT]
+```
+
+That gives you a checking list rather than a citation list. It is more
+honest, because it does not invite the tool to produce references, which
+is exactly where fabrication lives.
+
+### Check three — the reasoning
+
+**What you do.** Close the output. In your own words, out loud or on
+paper, state the argument: what the conclusion is, what it depends on,
+and what would have to be true for it to hold. Then reopen the output
+and compare. You are looking for three things — a step that is asserted
+rather than argued, an assumption that was never stated, and a
+conclusion that is wider than the evidence under it.
+
+Then run the inversion. Ask yourself what the strongest argument against
+the conclusion is. If you cannot construct one, you do not yet
+understand the position well enough to send it.
+
+**What it catches.** Confident conclusions built on a single
+unrepresentative period. Correlation dressed as cause — "margin fell
+because of the pricing change", when three things changed that quarter.
+Recommendations that quietly assume the reader's circumstances. Analysis
+that answers a slightly different question from the one asked, which is
+the most common failure of all and the hardest to see, because the
+answer is good.
+
+**What it misses.** Anything that depends on knowing the client, the
+history, the personalities and the thing the last auditor flagged. It
+misses the reasoning that is sound in general and wrong here. And it
+misses your own blind spots — you are checking with the same head that
+approved the approach.
+
+**How long.** Five to ten minutes on anything that carries a
+recommendation. Less on descriptive work. It is the check people skip
+when they are busy, and it is the one that catches the errors that
+actually embarrass people, because figure errors get found by the next
+person and reasoning errors get found by the client.
+
+The prompt that helps here is the one that argues with you:
+
+```
+Argue against the conclusion in the text below. Give the three
+strongest objections a well-informed sceptic would raise, the
+assumption each objection attacks, and what evidence would settle it.
+Do not soften them and do not offer a balanced view. Do not rewrite the
+text.
+
+Text: [PASTE THE DRAFT]
+```
+
+Read the objections as prompts for your own thinking, not as findings.
+Some will be weak. The point is to make the shape of the argument
+visible so you can test it yourself.
+
+### The verification card
+
+Print this. Pin it where the work gets reviewed. It is deliberately
+short, because a checklist nobody completes is worse than no checklist —
+it produces the paperwork of assurance without the assurance.
+
+---
+
+**THE THREE-CHECK CARD**
+
+*Before this leaves my hands.*
+
+**1. FIGURES** — *trace, do not glance*
+
+- Every number traced to a named source file, cell or document
+- Totals footed; variances re-performed; percentages checked against the right base
+- Periods, entities and currencies confirmed to be the ones stated
+- Any number I did not supply: verified independently, or deleted
+
+**2. SOURCES** — *read the original, not the summary*
+
+- Every claim I am relying on has a source I have opened myself
+- The source is current, and applies in this jurisdiction and to this entity
+- Unsourced claims: proved or removed
+- Nothing quoted that I have not read in full
+
+**3. REASONING** — *state it without looking*
+
+- I can state the conclusion and what it depends on, in my own words
+- Every assumption is on the page, not in my head
+- The conclusion is no wider than the evidence under it
+- I can make the strongest case against it — and it still stands
+
+**SIGN-OFF**
+
+- This answers the question that was actually asked
+- I can defend every line of it, unaided, to someone who challenges it
+- Where I am uncertain, the document says so
+- If this is wrong, I am the one who is wrong. That is correct.
+
+Checked by: `[NAME]`  Date: `[DATE]`  Time taken: `[MINUTES]`
+
+---
+
+Log the time taken. Not for anyone else — for you. After a fortnight you
+will know which kinds of work are genuinely faster with a tool and which
+are only faster until the checking starts. That is the only productivity
+measurement in this pack, and it is the only one worth having, because
+it is yours and it is measured.
+
+### What the three checks do not catch
+
+They do not catch everything, and a pack that claimed otherwise would be
+the sort of thing this pack exists to be an alternative to.
+
+Here is what remains after all three checks are done properly.
+
+**The plausible omission.** The checks are all directed at what is on
+the page. None of them looks for what should be there and is not. A tool
+that summarises fifty documents and silently drops the one that matters
+produces output that passes every check.
+
+**The correct-but-inapplicable.** Right rule, right numbers, wrong
+client. Nothing in the checks tests fit.
+
+**Compounding.** Verified output becomes input to the next piece of
+work, and the check does not repeat. Three steps down the chain, the
+assumption is load-bearing and nobody remembers it was an assumption.
+
+**Your own drift.** The tenth document of the day gets a thinner check
+than the first. Everyone knows this and everyone does it anyway.
+
+**The tool's effect on you.** Reviewing fluent output is not the same
+mental act as writing. Read enough finished-looking work and the reading
+becomes lighter without you deciding to make it lighter.
+
+Four things to do about the residual risk, none of which eliminates it:
+
+1. **Write down what you assumed.** A short assumptions block at the top
+   of anything you pass on. It costs a minute and it survives you moving
+   on to something else. It is also the single most useful thing to have
+   when someone queries the work six months later.
+2. **Keep the input.** Store the material you supplied alongside the
+   output. If you cannot reconstruct what the tool was given, you cannot
+   later work out how it went wrong.
+3. **Vary who checks.** The person who framed the task is the worst
+   person to check it, and the second-worst is anyone who agrees with
+   them. Get fresh eyes on anything that carries real consequence.
+4. **Set a ceiling.** Decide, in advance and in writing, the value or
+   sensitivity of work above which the tool is not used at all. Deciding
+   in the moment, under deadline, is deciding badly. Part Two is a
+   starting draft of that ceiling.
+
+## Part Two — Ten Places Not to Use It
+
+There is a way of writing about this that treats every limitation as a
+temporary inconvenience soon to be engineered away. This is not that.
+Some of what follows may change. Most of it will not, because the reason
+is not capability. The reason is that a duty sits on a person, and a
+duty cannot be delegated to something that cannot be held to it.
+
+For each: the situation, why the tool fails there in particular, and
+what to do instead.
+
+### 1. Signing, certifying or expressing an opinion
+
+**The situation.** Anything where your name, signature or firm goes on a
+document as the person vouching for it — accounts, certificates,
+confirmations, formal opinions, representations to a third party who
+will act on them.
+
+**Why it fails.** Your signature is not a statement that the words are
+good. It is a statement that *you* have done the work and *you* stand
+behind it. A tool cannot do the work in the sense the signature means,
+because the signature is about accountability, not about text. If you
+sign something you did not verify, the signature is false regardless of
+whether the content turns out to be right.
+
+**Instead.** Use a tool, if you use one at all, on the drafting and the
+checking that happens well before signature — never on the substance of
+what is certified. And keep the gap visible: if a tool touched the
+draft, the person signing must have re-performed the underlying work
+themselves, not reviewed the prose.
+
+### 2. Anything you cannot verify
+
+**The situation.** The output is in a subject, language, jurisdiction or
+technical area where you have no way to check whether it is right.
+
+**Why it fails.** Every safeguard in Part One assumes a checker who can
+tell good from bad. Remove that and the tool is not an assistant, it is
+an oracle. Worse, fluency scales with unfamiliarity: output in an area
+you do not know reads *more* convincing than output in an area you do,
+because you cannot see the joins.
+
+**Instead.** Either learn enough to check it, or find someone who can,
+or do not send it. If you use a tool to orient yourself in an unfamiliar
+area, treat what it gives you as a list of things to look up — never as
+the answer. The tell is simple: if you would not be able to answer a
+follow-up question without going back to the tool, you do not own the
+work.
+
+### 3. Live disputes, investigations and privileged matters
+
+**The situation.** Litigation, arbitration, a regulatory investigation,
+a disciplinary process, a dispute with a former employee, anything where
+a lawyer is involved or is about to be.
+
+**Why it fails.** Two reasons, and both are serious. First, in a
+contested matter the working papers themselves may become visible to the
+other side, and a draft produced by a tool — including the discarded
+versions and the framing of your questions — is a record of how you
+thought about the case. Second, protections that attach to
+communications with your lawyers can be fragile, and putting the same
+material through a third-party system may affect them. How, and whether,
+depends entirely on your jurisdiction and your circumstances.
+
+**Instead.** Take instructions from the lawyers on the matter before
+anything goes near a tool, and get the answer in writing. Assume, until
+told otherwise, that nothing about a live dispute goes into any external
+system. This is general information, not legal advice; the rules here
+are jurisdiction-specific and consequential.
+
+### 4. Decisions about a named individual
+
+**The situation.** Pay, promotion, redundancy, hiring, performance
+ratings, discipline, creditworthiness, a reference, a decision to end
+someone's contract.
+
+**Why it fails.** Three ways. The decision has to be explicable to the
+person affected and possibly to a tribunal or a regulator, and "the
+system suggested it" is not an explanation. The tool has no access to
+the context that actually matters — the year they had, the thing their
+manager did, the reason the numbers look like that. And several
+jurisdictions place specific obligations around automated processing of
+personal data and decisions that significantly affect people; those
+obligations vary and change, and you need to know your own.
+
+**Instead.** Make the decision yourself, on evidence you can point to,
+and write your reasons before you draft any communication. A tool may
+help you make an already-made decision clearer or kinder in the telling.
+It must not help you reach it, and it must not receive the person's
+personal data to do so.
+
+### 5. Anything where the client's data cannot leave your control
+
+**The situation.** Data covered by a confidentiality undertaking, a data
+processing agreement that names permitted sub-processors, a client
+policy prohibiting external processing, or a regulatory requirement to
+keep information within a jurisdiction. Also, in practice: anything
+containing identifiable personal data, bank details, board material
+before it is public, or price-sensitive information.
+
+**Why it fails.** Not because the tool is careless. Because pasting the
+data into it is a disclosure to a third party, and you either had
+permission for that disclosure or you did not. The tool's own security
+is not the question. The question is whether you were allowed to send
+it, and that is settled by contracts you signed before the tool existed.
+
+**Instead.** Check the engagement terms and the data agreements first —
+before the work starts, not during it. Where the answer is no, either
+work without the tool or use one deployed inside your own environment
+under terms you have actually read. And when in doubt, redact: much
+analytical work can be done on structure and anonymised figures without
+names, account numbers or identifiers ever leaving your systems.
+
+### 6. Matters where a professional duty attaches to you personally
+
+**The situation.** Independence and conflict assessments. Ethical
+judgements. Deciding whether to accept or resign from an engagement.
+Deciding whether something must be reported, and to whom. Anything your
+professional body would describe as a matter for your own judgement.
+
+**Why it fails.** These duties are placed on you as a person, precisely
+because they exist to be exercised when it is uncomfortable — when the
+client is large, the fee is significant and the easy answer is
+available. A tool produces the conventional answer, which is usually the
+comfortable one, and it has nothing at stake. That is the whole problem:
+the duty exists because you have something at stake.
+
+**Instead.** Decide it yourself, document the reasoning contemporaneously
+in your own words, and consult a human — a partner, an ethics helpline,
+your professional body — where you are unsure. The written record of
+your reasoning is the point. It has to be yours.
+
+### 7. Suspicions of fraud, error or dishonesty
+
+**The situation.** Something looks wrong and a person may have done it
+deliberately.
+
+**Why it fails.** These situations carry reporting obligations that vary
+by jurisdiction and that can be time-critical, and some of them carry
+prohibitions on telling anyone what you suspect. A drafting tool does
+not know your obligations and cannot know who you are permitted to
+speak to. There is also a practical trap: writing up a suspicion in a
+system you do not control creates a record you may not be able to
+retrieve, delete or explain.
+
+**Instead.** Follow your firm's escalation procedure immediately, and if
+you do not know it, find out today rather than the day you need it. Take
+advice on your reporting obligations from someone qualified to give it.
+Keep your own contemporaneous handwritten or locally stored note.
+Nothing external, nothing informal.
+
+### 8. Advice that turns on the specific rules of a place
+
+**The situation.** Tax positions, filing obligations, statutory
+deadlines, entity-specific reporting requirements, licensing, anything
+where the answer changes when you cross a border or a threshold.
+
+**Why it fails.** These rules are numerous, local, and revised often.
+Material describing them ages badly and is not evenly available across
+jurisdictions, so the answer you get tends to reflect the places most
+written about rather than the place you are in. The failure is
+particularly dangerous because the *structure* of the answer is usually
+right — the right considerations, in the right order — while the
+threshold, rate or date inside it is wrong or foreign.
+
+**Instead.** Use the primary source published by the relevant authority,
+or a subscription service your firm pays for and that states its
+currency date. A general-purpose tool may help you frame the question or
+draft the covering letter. The rule itself comes from the source, every
+time, and you note the date you checked it.
+
+### 9. The record of what happened
+
+**The situation.** Minutes, file notes, records of a conversation,
+attendance notes, evidence of what was said and decided.
+
+**Why it fails.** A record is not a summary. Its value is that it is a
+first-hand account by someone who was present, which is exactly what a
+generated version is not. A tool asked to tidy up rough notes will
+smooth them, fill gaps with what usually happens, and turn the awkward
+half-sentence someone actually said into a clean sentence they did not.
+In a dispute, that difference is everything, and the smoothing is
+invisible once it is done.
+
+**Instead.** Write records yourself, close to the event, in plain
+language, including the parts that are unresolved or unflattering. If
+you use a transcription tool, keep the transcript as the record and mark
+it as such — and check what your policy and the law in your jurisdiction
+say about recording people, which is a genuine question and not a
+formality.
+
+### 10. Anything you would not be able to defend line by line
+
+**The situation.** The general case. You are about to send work you
+could not walk through, unaided, if the recipient rang and asked why.
+
+**Why it fails.** Not a limitation of the tool at all. A limitation of
+the arrangement. Work you cannot defend is work you have not done, and
+whether it was a tool, a junior or a template that produced it changes
+nothing about your position.
+
+**Instead.** Either do the work until you can defend it, or say plainly
+that you have not done it. "I have not verified this — it is a starting
+point" is a perfectly professional sentence, and it is the honest one.
+Most of the trouble people get into with these tools starts with an
+unwillingness to say it.
+
+## Part Three — Assessing a Tool Before It Touches Client Data
+
+Marketing pages are written to be reassuring. Contracts are written to
+be enforceable. They are different documents and they routinely say
+different things. The purpose of this section is to get answers in the
+second kind of document.
+
+Work through the table below with the vendor, or with your own IT team
+if the tool is being deployed internally. Two rules make it worth doing.
+First, get the answers in writing, and get the clause reference. "Yes,
+of course" is not an answer; "clause 8.3 of the data processing
+addendum" is. Second, if a question comes back vague after you have
+asked twice, record the vagueness as the answer. It is information.
+
+Fill in the third column with what they said and the fourth with your
+own decision. The fourth column is a judgement your firm makes, not one
+a checklist makes for you.
+
+### What happens to our input
+
+| # | Question to ask | Their answer | Acceptable? |
+|---|---|---|---|
+| 1 | Is anything we submit used to train, tune or improve your models, or anyone else's? | | |
+| 2 | If it is, how do we switch that off, is the switch on our plan, and does it apply to every feature or only some? | | |
+| 3 | Is our input processed by any third party — an underlying model provider, a hosting provider, a subcontractor? Name them all. | | |
+| 4 | Do you keep our input to review it for safety, abuse or quality? Who reviews it and for how long is it kept? | | |
+| 5 | Does any of this change for uploaded files, images or connected data sources, as against typed text? | | |
+
+### Where it is stored, and for how long
+
+| # | Question to ask | Their answer | Acceptable? |
+|---|---|---|---|
+| 6 | In which countries is our data stored, processed and backed up? List every one. | | |
+| 7 | Can we require it to stay in a named region, and is that a contractual commitment or a setting you can change? | | |
+| 8 | How long is our input retained by default, and can we shorten it? | | |
+| 9 | How long does it persist in backups, logs and caches after deletion? | | |
+| 10 | Is it encrypted at rest and in transit, and who holds the keys? | | |
+
+### Who at your end can see it
+
+| # | Question to ask | Their answer | Acceptable? |
+|---|---|---|---|
+| 11 | Which of your staff can access our content, under what circumstances, and with what approval? | | |
+| 12 | Is that access logged, and can we see the log? | | |
+| 13 | Do your staff sign confidentiality undertakings that would cover our clients' information? | | |
+| 14 | Can government or law-enforcement requests reach our data, and do you commit to telling us when one does, where you are permitted to? | | |
+| 15 | Have you had a security incident affecting customer content, and what is your contractual notification period if you do? | | |
+
+### What happens when we leave
+
+| # | Question to ask | Their answer | Acceptable? |
+|---|---|---|---|
+| 16 | On termination, what is deleted, when, and how is deletion evidenced? | | |
+| 17 | Can we export everything — content, history, configuration — in a usable format, and is that a right in the contract? | | |
+| 18 | What survives termination in your favour: licences to our content, aggregated data, derived material? | | |
+| 19 | If you suspend or terminate our account, do we still get our data out, and for how long? | | |
+| 20 | If the service is discontinued, what notice do we get? | | |
+
+### The contract versus the marketing page
+
+| # | Question to ask | Their answer | Acceptable? |
+|---|---|---|---|
+| 21 | Which document actually governs: the terms of service, the data processing addendum, the security page, or the sales deck? Point to the order of precedence. | | |
+| 22 | Which of the claims on your website appear as obligations in the contract? Name the clauses. | | |
+| 23 | Can you change the terms unilaterally, with what notice, and can we exit without penalty if you do? | | |
+| 24 | What is your liability cap, and what is excluded from it? | | |
+| 25 | Do you accept the role of processor, on our instructions, for the data we submit — and is that written down? | | |
+| 26 | Do you have current independent security certification or an audit report, and may we see the actual report rather than the badge? | | |
+
+### What changes if you are acquired
+
+| # | Question to ask | Their answer | Acceptable? |
+|---|---|---|---|
+| 27 | On a change of control, do our terms transfer unchanged, and for how long? | | |
+| 28 | Is our data an asset that could be sold or transferred in insolvency or acquisition? | | |
+| 29 | Do we get notice and a right to terminate on a change of control? | | |
+| 30 | If your funding or ownership changes, what happens to the region and retention commitments in questions 6 to 9? | | |
+
+Two practical notes on using this. Question 22 is the one that produces
+the most silence, and the silence is the finding. And a sensible way to
+handle the paperwork is to have a tool extract, not interpret:
+
+```
+Read the attached terms and produce a table with three columns: the
+question below, the exact quoted wording from the document that
+addresses it, and the clause number. If the document does not address a
+question, write "not addressed" — do not infer, summarise or fill the
+gap. Quote verbatim. Do not tell me whether the terms are good.
+
+Questions:
+[PASTE THE QUESTIONS FROM THE TABLE ABOVE]
+Document: [ATTACH THE TERMS]
+```
+
+That gives you a map of where to read. You still read the clauses
+yourself, and anything that matters commercially or legally goes to
+someone qualified to advise on it. Extraction is a task a tool does
+well. Deciding whether a limitation of liability is acceptable is not.
+
+### The assessment has a shelf life
+
+An assessment describes a supplier on the day you did it, and that is
+all it describes. Terms of service are revised. Sub-processors are
+added. Features arrive that handle data differently from the feature you
+assessed, and they arrive switched on. Free tiers and paid tiers can
+differ on exactly the points you cared about, so an upgrade — or a
+downgrade — can change your position without anyone deciding to change
+it. Companies are bought. Retention settings get reset by a migration.
+
+None of this is bad faith on the vendor's part. It is what happens to
+software companies. The consequence for you is that a one-off assessment
+filed away is a record of a decision, not evidence of a current
+position.
+
+So: repeat it. Once a year for anything touching client data, and
+immediately on any of these triggers — you are told the terms have
+changed, the ownership changes, you start using a materially new
+feature, your plan changes, a client asks you a direct question about
+where their data goes, or you take on work with a confidentiality
+regime stricter than your usual one. Keep the completed tables with the
+date and the name of the person who filled them in, so that the next
+review is a comparison rather than a fresh start.
+
+And keep one thing in your own hands regardless of what any assessment
+says: know which of your clients' information must never be submitted to
+an external system at all, write that list down, and make sure everyone
+who could paste something has read it. Vendor assurances describe what
+someone else promises to do. That list describes what you control.

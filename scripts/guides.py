@@ -323,6 +323,7 @@ def render_index(arts):
 def render_sitemap(arts):
     urls = [(SITE + "/", "1.0"), (SITE + "/guides/", "0.8"),
             (SITE + "/tools/ai-policy/", "0.9"),
+            (SITE + "/ai-finance/", "0.9"),
             (SITE + "/sleep/", "0.9"), (SITE + "/skyline/", "0.8"),
             (SITE + "/book/", "0.8"), (SITE + "/score-lab/", "0.8"),
             (SITE + "/beatbox/", "0.8"),
