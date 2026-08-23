@@ -610,7 +610,7 @@
             ]
           },
           "brief": "How to choose the cheapest lever that solves the problem. When fine-tuning is genuinely warranted (rare for most professionals) and when it is an expensive way to avoid writing a better prompt.",
-          "status": "todo",
+          "status": "done",
           "tables": "table: symptom vs correct lever"
         },
         {
