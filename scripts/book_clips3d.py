@@ -38,6 +38,7 @@ W, H, FPS = 1080, 1920, 30
 ASIN = {
     "ai":     "B0HG6VFYXP",
     "matcha": "B0HG5ZY46K",
+    "novel":  "B0HG6VGHDM",
 }
 
 

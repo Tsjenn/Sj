@@ -84,6 +84,21 @@ window.STORE = {
       price: "$3.99",
       link: "https://tangshiuan.gumroad.com/l/asvsdb",
     },
+    // The three 2026 Kindle titles. Links are live; put YOUR Amazon list
+    // price in each price field — SET-ME just hides the price, the link
+    // still works.
+    aibook: {
+      price: "SET-ME",
+      link: "https://www.amazon.com/dp/B0HG6VFYXP",
+    },
+    matcha: {
+      price: "SET-ME",
+      link: "https://www.amazon.com/dp/B0HG5ZY46K",
+    },
+    novel: {
+      price: "SET-ME",
+      link: "https://www.amazon.com/dp/B0HG6VGHDM",
+    },
     // AI for Finance Teams — The Working Pack.
     // Upload dist/AI-For-Finance-Teams.zip to Gumroad, then paste the link
     // and YOUR chosen price here. Priced for firms, not individuals — this
