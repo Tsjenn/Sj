@@ -820,7 +820,7 @@
             ]
           },
           "brief": "INDUSTRY PLAYBOOK. Fixed structure: (1) what this work actually consists of; (2) the value map — where AI helps most and least; (3) ten concrete use cases, each with what to prompt and what to check; (4) two or three worked prompts in the six-part frame from ch09; (5) the risks specific to this sector; (6) a 30-day starting plan; (7) how to measure whether it worked. Contract review support, clause comparison, policy drafting, regulatory horizon summaries, first-draft memos. Privilege, confidentiality, and the professional duty to verify every citation — with the honest warning about invented case references.",
-          "status": "todo",
+          "status": "done",
           "tables": "value map table; ten use cases table; risk table"
         },
         {
@@ -1051,7 +1051,7 @@
             ]
           },
           "brief": "A practical policy chapter, including a full sample policy the reader can adapt. Written as general guidance with an explicit instruction to have it reviewed against local law, regulator rules, and employment terms.",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch58",
