@@ -383,7 +383,7 @@
             ]
           },
           "brief": "The step most users never take. A project (Claude Projects and equivalents) keeps instructions and reference material permanently in context so you stop re-explaining yourself. How to design one: what belongs in instructions versus knowledge. Worked example: a month-end close project, an engagement project, a policy-drafting project. Describe capabilities durably; note that product details change and readers should check current documentation.",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch20",
