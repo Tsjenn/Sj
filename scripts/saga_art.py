@@ -14,7 +14,7 @@ import math
 import os
 import sys
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BF = os.path.join(ROOT, "bookfactory6")
@@ -601,79 +601,243 @@ def font(size, bold=False):
     return ImageFont.load_default()
 
 
+def _title_font(size, bold=True):
+    """Cover type: prefer Liberation Serif (Times-like) over DejaVu's slab."""
+    cands = [
+        "/usr/share/fonts/truetype/liberation/LiberationSerif-%s.ttf" % ("Bold" if bold else "Regular"),
+        "/usr/share/fonts/truetype/dejavu/DejaVuSerif%s.ttf" % ("-Bold" if bold else ""),
+    ]
+    for c in cands:
+        if os.path.exists(c):
+            return ImageFont.truetype(c, size)
+    return ImageFont.load_default()
+
+
+def _tracked(d, text, font, cx, y, fill, track=0):
+    """Draw text centred on cx with extra letter-spacing."""
+    widths = [d.textlength(ch, font=font) for ch in text]
+    total = sum(widths) + track * (len(text) - 1)
+    x = cx - total / 2
+    for ch, w in zip(text, widths):
+        d.text((x, y), ch, font=font, fill=fill)
+        x += w + track
+    return total
+
+
+def _lerp(a, b, t):
+    return tuple(int(a[i] + (b[i] - a[i]) * t) for i in range(3))
+
+
+SOLE_PROFILE = [
+    (0.00, 0.00), (0.04, 0.30), (0.10, 0.42), (0.18, 0.485), (0.28, 0.50),
+    (0.40, 0.455), (0.52, 0.395), (0.62, 0.368), (0.72, 0.385),
+    (0.82, 0.425), (0.90, 0.415), (0.96, 0.30), (1.00, 0.00),
+]
+
+
+def _sole_half(t):
+    """Half-width of the slipper sole at depth t (0 = toe, 1 = heel)."""
+    if t <= 0.0 or t >= 1.0:
+        return 0.0
+    for i in range(len(SOLE_PROFILE) - 1):
+        t0, h0 = SOLE_PROFILE[i]
+        t1, h1 = SOLE_PROFILE[i + 1]
+        if t0 <= t <= t1:
+            k = (t - t0) / (t1 - t0)
+            k = k * k * (3 - 2 * k)              # smoothstep, so no facets
+            return h0 + (h1 - h0) * k
+    return 0.0
+
+
+VAMP_T0, VAMP_T1 = 0.010, 0.455
+
+
+def _vamp_back(u_rel):
+    """Depth of the vamp's opening edge: a shallow arc, deepest at centre."""
+    return VAMP_T1 + 0.085 * (1.0 - u_rel * u_rel)
+
+
+def _bead_colour(u_rel, s):
+    """Colour of one bead. u_rel is -1..1 across the panel, s is 0..1 deep.
+
+    The pattern is the book's 'Malacca pattern': a peony head in rust and
+    gold on a field of white beads, jade leaves below it, an indigo border.
+    """
+    au = abs(u_rel)
+    if au > 0.985 or s > 0.975 or s < 0.02:
+        return (24, 40, 68)                      # indigo border row
+    if au > 0.90 or s > 0.94 or s < 0.055:
+        return (198, 164, 74)                    # gold piping
+
+    px, py = u_rel * 0.46, (s - 0.50) * 0.92
+    r = math.hypot(px, py)
+    if r < 0.052:
+        return (234, 198, 98)                    # gold centre
+    if r < 0.082:
+        return (166, 75, 42)
+    if r < 0.225:
+        petal = math.cos(5 * math.atan2(py, px))
+        if petal > 0.25:
+            return (208, 106, 74)                # lit petal
+        if petal > -0.35:
+            return (162, 72, 40)                 # shadowed petal
+        return (236, 226, 206)
+
+    for sx in (-1, 1):
+        lx, ly = px - sx * 0.30, py - 0.20
+        ang = sx * 0.85
+        rx = lx * math.cos(ang) - ly * math.sin(ang)
+        ry = lx * math.sin(ang) + ly * math.cos(ang)
+        if (rx / 0.055) ** 2 + (ry / 0.175) ** 2 < 1.0:
+            return (78, 124, 89) if abs(rx) > 0.018 else (110, 156, 118)
+
+    if s > 0.70 and au < 0.035:
+        return (198, 164, 74)                    # tendril down the centre
+
+    return (238, 229, 210)                       # white bead field
+
+
+def _draw_slipper(im, cx, cy, length, width, angle=14.0):
+    """One kasut manek seen from above: leather sole, beaded toe panel."""
+    pad = 90
+    TW, TH = int(width + pad * 2), int(length + pad * 2)
+    tile = Image.new("RGBA", (TW, TH), (0, 0, 0, 0))
+    d = ImageDraw.Draw(tile)
+    tcx, y0 = TW / 2.0, float(pad)
+
+    def pt(t, side):
+        return (tcx + side * _sole_half(t) * width, y0 + t * length)
+
+    outline = [pt(i / 200.0, 1) for i in range(201)]
+    outline += [pt(1 - i / 200.0, -1) for i in range(201)]
+
+    d.polygon(outline, fill=(44, 33, 27, 255))
+    d.line(outline + [outline[0]], fill=(178, 144, 72, 255), width=5, joint="curve")
+    inner = [(tcx + (x - tcx) * 0.87, y0 + (y - y0) * 0.965 + length * 0.016)
+             for x, y in outline]
+    d.line(inner + [inner[0]], fill=(116, 92, 50, 255), width=2, joint="curve")
+
+    # the dark crescent where the foot goes in — the cue that says "shoe"
+    ob = [(tcx + u * _sole_half(_vamp_back(u)) * width * 0.95,
+           y0 + _vamp_back(u) * length)
+          for u in [i / 40.0 * 2 - 1 for i in range(41)]]
+    ob += [(tcx + u * _sole_half(_vamp_back(u)) * width * 0.95,
+            y0 + (_vamp_back(u) + 0.055) * length)
+           for u in [1 - i / 40.0 * 2 for i in range(41)]]
+    d.polygon(ob, fill=(26, 18, 14, 255))
+
+    # the beaded toe panel
+    step = 11.0
+    row = 0
+    t = VAMP_T0
+    while t < VAMP_T1 + 0.10:
+        y = y0 + t * length
+        half = _sole_half(t) * width * 0.955
+        if half > step * 0.55:
+            offset = (step / 2.0) if row % 2 else 0.0
+            n = int(half * 2 / step) + 1
+            for c in range(n):
+                x = tcx - half + offset + c * step
+                u_rel = (x - tcx) / half
+                if abs(u_rel) > 1.0:
+                    continue
+                back = _vamp_back(u_rel)
+                if t > back:
+                    continue
+                s = (t - VAMP_T0) / (back - VAMP_T0)
+                col = _bead_colour(u_rel, s)
+                if col is None:
+                    continue
+                r = 4.2
+                d.ellipse([x - r, y - r, x + r, y + r], fill=col + (255,))
+                d.ellipse([x - r * 0.7 - 0.8, y - r * 0.7 - 0.8,
+                           x - r * 0.7 + 1.4, y - r * 0.7 + 1.4],
+                          fill=_lerp(col, (255, 255, 255), 0.5) + (255,))
+        t += step * 0.86 / length
+        row += 1
+
+    tile = tile.rotate(-angle, resample=Image.BICUBIC, expand=True)
+
+    # soft ground shadow cast from the rotated silhouette
+    sh = Image.new("L", im.size, 0)
+    sh.paste(tile.split()[3], (int(cx - tile.width / 2) + 20,
+                               int(cy - tile.height / 2) + 26))
+    sh = sh.point(lambda v: int(v * 0.42))
+    sh = sh.filter(ImageFilter.GaussianBlur(30))
+    im.paste(Image.new("RGB", im.size, (6, 12, 24)), (0, 0), sh)
+
+    im.paste(tile, (int(cx - tile.width / 2), int(cy - tile.height / 2)), tile)
+
+
 def make_cover(path):
     CW, CH = 1600, 2560
     im = Image.new("RGB", (CW, CH), INDIGO)
     d = ImageDraw.Draw(im)
-    # vertical night gradient
+
+    # --- night sky: deep ink at the top, warmer indigo toward the horizon
+    top, mid, bot = (11, 21, 40), (34, 62, 100), (17, 28, 50)
+    horizon = 1700
     for y in range(CH):
-        t = y / CH
-        d.line([(0, y), (CW, y)], fill=(int(31 + 20 * t), int(58 + 14 * t), int(95 + 6 * t)))
-    # scattered small gold stars high up
-    for i in range(60):
-        x, y = (i * 337) % CW, (i * 211) % 700
-        d.ellipse([x, y, x + 4, y + 4], fill=(220, 200, 140))
-    # gold frame with tile corners
-    d.rectangle([60, 60, CW - 60, CH - 60], outline=GOLD, width=8)
-    for cx, cy in [(60, 60), (CW - 60, 60), (60, CH - 60), (CW - 60, CH - 60)]:
-        d.rectangle([cx - 44, cy - 44, cx + 44, cy + 44], fill=INDIGO, outline=GOLD, width=6)
-        for a in range(8):
-            ang = a * math.pi / 4
-            d.line([(cx, cy), (cx + 30 * math.cos(ang), cy + 30 * math.sin(ang))],
-                   fill=GOLD if a % 2 else RUST, width=5)
-    # big peony sprays top corners
-    def spray(cx, cy, flip):
-        for i, (dx, dy, r) in enumerate([(0, 0, 90), (150, 90, 64), (60, 190, 48)]):
-            peony(d, cx + flip * dx, cy + dy, r, (216, 130, 96))
-        for i in range(4):
-            leaf(d, cx + flip * 40, cy + 60 + i * 40, 110, (1.9 if flip > 0 else 1.2) + i * 0.3,
-                 (120, 160, 130))
-    spray(300, 330, 1)
-    spray(CW - 300, 330, -1)
-    # title
-    f_t = font(210, bold=True)
-    for i, word in enumerate(["THE", "AMAH’S", "DAUGHTER"]):
-        w = d.textlength(word, font=f_t)
-        d.text(((CW - w) / 2, 640 + i * 250), word, font=f_t, fill=CREAM)
-    # subtitle (shrink to fit comfortably inside the frame)
+        if y < horizon:
+            col = _lerp(top, mid, (y / horizon) ** 0.85)
+        else:
+            col = _lerp(mid, bot, (y - horizon) / (CH - horizon))
+        d.line([(0, y), (CW, y)], fill=col)
+
+    # --- a scatter of faint stars, high and sparse
+    for i in range(90):
+        x, y = (i * 419) % CW, (i * 277) % 900
+        s = 2 + (i % 3)
+        d.ellipse([x, y, x + s, y + s], fill=(146, 164, 196))
+
+    # --- warm lamp halo, composited through a soft mask so it has no edge
+    gx, gy, gr = CW // 2, 1800, 980
+    mask = Image.new("L", (CW, CH), 0)
+    md = ImageDraw.Draw(mask)
+    for i in range(gr, 0, -3):
+        t = 1.0 - (i / gr)
+        md.ellipse([gx - i, gy - i * 0.86, gx + i, gy + i * 0.86],
+                   fill=int(255 * (t ** 2.4) * 0.62))
+    mask = mask.filter(ImageFilter.GaussianBlur(40))
+    im = Image.composite(Image.new("RGB", (CW, CH), (186, 118, 64)), im, mask)
+
+    # --- the hero object
+    _draw_slipper(im, CW // 2, 1772, 920, 352)
+
+    d = ImageDraw.Draw(im)
+
+    # --- title
+    cx = CW // 2
+    f_small = _title_font(76, bold=False)
+    _tracked(d, "THE", f_small, cx, 440, (212, 198, 166), track=26)
+
+    for i, word in enumerate(["AMAH\u2019S", "DAUGHTER"]):
+        size = 238
+        while size > 90:
+            f_t = _title_font(size, bold=True)
+            if d.textlength(word, font=f_t) + 6 * (len(word) - 1) <= CW - 300:
+                break
+            size -= 6
+        _tracked(d, word, f_t, cx, 570 + i * 262, CREAM, track=6)
+
+    # gold hairline + subtitle
+    d.line([(cx - 250, 1152), (cx + 250, 1152)], fill=GOLD, width=3)
     sub = "A Novel of Secrets, Love, and War in Old Malaya"
-    size = 64
+    size = 60
     while size > 30:
-        f_s = font(size)
-        if d.textlength(sub, font=f_s) <= CW - 320:
+        f_s = _title_font(size, bold=False)
+        if d.textlength(sub, font=f_s) <= CW - 300:
             break
         size -= 2
     w = d.textlength(sub, font=f_s)
-    d.text(((CW - w) / 2, 1455), sub, font=f_s, fill=(226, 214, 182))
-    # central vignette: lit shophouse row at dusk with lantern
-    d.line([(220, 2010), (CW - 220, 2010)], fill=GOLD, width=6)
-    base = 1980
-    x = 340
-    n = 0
-    while x < CW - 380:
-        w2 = 170 + (n * 53) % 90
-        top = base - 220 - (n * 37) % 70
-        d.polygon([(x, top), (x + w2 // 2, top - 52), (x + w2, top)], outline=GOLD, width=5)
-        d.rectangle([x, top, x + w2, base], outline=GOLD, width=5)
-        wx, wy = x + w2 // 2 - 26, top + 44
-        d.rectangle([wx, wy, wx + 52, wy + 74], fill=(252, 226, 150))
-        d.line([(wx + 26, wy), (wx + 26, wy + 74)], fill=INDIGO, width=3)
-        x += w2 + 22
-        n += 1
-    lantern(d, CW // 2, 1780, 95, (216, 110, 80))
-    # ornamental gold medallion between vignette and author
-    my = 2210
-    peony(d, CW // 2, my, 52, GOLD)
-    for flip in (-1, 1):
-        leaf(d, CW // 2 + flip * 70, my + 8, 120, (0.35 if flip > 0 else math.pi - 0.35), GOLD)
-        d.line([(CW // 2 + flip * 200, my), (CW // 2 + flip * 420, my)], fill=GOLD, width=3)
-    # author
-    d.line([(CW // 2 - 300, 2360), (CW // 2 + 300, 2360)], fill=GOLD, width=4)
-    f_a = font(88, bold=True)
-    auth = "TANG SHIUAN JENN"
-    w = d.textlength(auth, font=f_a)
-    d.text(((CW - w) / 2, 2390), auth, font=f_a, fill=CREAM)
-    im.save(path, "JPEG", quality=92)
+    d.text((cx - w / 2, 1200), sub, font=f_s, fill=(224, 210, 178))
+
+    # --- author
+    d.line([(cx - 330, 2300), (cx + 330, 2300)], fill=GOLD, width=3)
+    f_a = _title_font(84, bold=True)
+    _tracked(d, "TANG SHIUAN JENN", f_a, cx, 2340, CREAM, track=10)
+
+    im.save(path, "JPEG", quality=94)
     print("cover ->", path)
 
 
