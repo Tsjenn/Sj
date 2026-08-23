@@ -1,7 +1,26 @@
+================================================================
 THE AMAH'S DAUGHTER
-A Novel of Secrets, Love, and War in Old Malaya
+================================================================
 
---- AMAZON DESCRIPTION (paste this whole block) ---
+FULL NAME OF THE BOOK (title + subtitle together):
+
+   The Amah's Daughter: A Novel of Secrets, Love, and War in
+   Old Malaya
+
+KDP gives you TWO separate boxes. Split it like this:
+
+   Title box     ->  The Amah's Daughter
+   Subtitle box  ->  A Novel of Secrets, Love, and War in Old Malaya
+   Author box    ->  Tang Shiuan Jenn
+
+Do not type the whole thing into the title box. Amazon joins them
+for you, and putting the subtitle in the title box looks like
+keyword stuffing.
+
+
+================================================================
+DESCRIPTION - paste this whole block into the description box
+================================================================
 
 Malacca, 1934. A twelve-year-old girl arrives from Guangdong holding the
 hand of a stern black-and-white amah who tells the great house she is a
@@ -15,7 +34,7 @@ years inside a house that never once calls her by her true name.
 
 Then the war comes. When the Japanese reach Malacca in 1942, the family's
 son does not come home from the screening, and Mei Foong is left with a
-secret larger than the first one — one that will require her to give away
+secret larger than the first one - one that will require her to give away
 the only thing she has ever owned, and to spend the rest of her life
 being called Auntie by her own daughter.
 
@@ -27,74 +46,127 @@ red thread, a wedding photograph with the bride's face folded out of
 frame, one child's beaded slipper, and a birth paper that does not agree
 with anything she has been told about who she is.
 
-Spanning seven decades — the last years of British Malaya, the
-occupation, the Emergency, and the night a country got its name back —
+Spanning seven decades - the last years of British Malaya, the
+occupation, the Emergency, and the night a country got its name back -
 THE AMAH'S DAUGHTER is a novel about the women a household depends on
 and never mentions: the ones who keep the accounts, keep the children
 alive, and keep the secrets that hold everyone else's story together.
 
-For readers of Lisa See, Min Jin Lee, and Kristin Hannah — a sweeping
+For readers of Lisa See, Min Jin Lee, and Kristin Hannah - a sweeping
 family saga of duty, motherhood, and the long cost of a promise kept.
 
 36 chapters. An illustration for each. One tin of letters that finally
 gets read.
 
 A note from the author: this is a work of fiction. The family, the house
-and everyone in it are invented. The history around them — the dates, the
-occupation, the Emergency, merdeka — is treated with care and without
+and everyone in it are invented. The history around them - the dates, the
+occupation, the Emergency, merdeka - is treated with care and without
 invented statistics or borrowed real lives.
 
---- TITLE FIELDS ---
 
-Title:     The Amah's Daughter
-Subtitle:  A Novel of Secrets, Love, and War in Old Malaya
-Author:    Tang Shiuan Jenn
+================================================================
+KEYWORDS - 7 boxes, one phrase in each
+================================================================
 
---- 7 KEYWORDS (one per box) ---
+1. historical fiction
+2. family saga
+3. World War 2 fiction
+4. Malaysia
+5. multigenerational saga
+6. Asian historical fiction
+7. secrets and lies novel
 
-historical fiction
-family saga
-World War 2 fiction
-Malaysia
-multigenerational saga
-Asian historical fiction
-secrets and lies novel
 
---- CATEGORIES ---
-
-Choose three. KDP lets you pick categories at upload; you can ask KDP
-support to add more later.
+================================================================
+CATEGORIES - choose three
+================================================================
 
 1. Literature & Fiction > Genre Fiction > Historical Fiction > Asian
 2. Literature & Fiction > Genre Fiction > Sagas
 3. Literature & Fiction > World Literature > Asian
 
-Why these three: "Historical Fiction > Asian" is where readers of Lisa
-See and Min Jin Lee actually browse. "Sagas" is a smaller category, so a
-handful of sales can put you on its bestseller list, which is what earns
-the orange flag. "World Literature > Asian" catches a different reader
-than the other two, so the three barely overlap.
+Why these three:
+- Historical Fiction > Asian is where readers of Lisa See and Min Jin Lee
+  actually browse.
+- Sagas is a smaller category, so a handful of sales can put you on its
+  bestseller list. That is what earns the orange flag.
+- World Literature > Asian catches a different reader than the other two,
+  so the three barely overlap.
 
-Avoid the top-level "Historical Fiction" category on its own. It is one
-of the largest on Amazon and a new book disappears in it.
+Avoid plain "Historical Fiction" on its own. It is one of the largest
+categories on Amazon and a new book disappears in it.
 
---- AUTHOR BIO ---
+
+================================================================
+ALL THE UPLOAD SETTINGS
+================================================================
+
+Where to start      Bookshelf > Create > Kindle eBook
+
+Language            English
+Title               The Amah's Daughter
+Subtitle            A Novel of Secrets, Love, and War in Old Malaya
+Author              Tang Shiuan Jenn
+Series              Leave blank
+Edition number      Leave blank
+Publisher           Optional. Your own name or an imprint name you invent
+                    is fine. Leave blank if unsure.
+
+Description         The block above
+Publishing rights   "I own the copyright and I hold necessary
+                    publishing rights"
+Keywords            The 7 above
+Categories          The 3 above
+Age / grade range   Leave blank
+Pre-order           No. Publish now.
+
+AI content          YES - tick it. Say AI was used for text and images,
+                    and that you reviewed and edited the work.
+                    (This is required and it does not hurt your listing.)
+
+Manuscript file     The-Amahs-Daughter.epub
+Cover file          AmahsDaughter-cover.jpg
+                    Choose "Upload a cover you already have".
+                    Do NOT open Cover Creator - it overwrites your file.
+
+DRM                 Your choice. Most fiction authors leave DRM off.
+KDP Select          Your choice. Enrolling gives you Kindle Unlimited
+                    page reads but requires ebook exclusivity to Amazon
+                    for 90 days at a time.
+Territories         All territories (worldwide rights)
+Royalty             70% is available between USD 2.99 and USD 9.99.
+                    Below or above that band you get 35%.
+Price               Your decision.
+
+Before publishing   Open the KDP previewer and check the title page, one
+                    part divider, and one chapter illustration.
+
+
+================================================================
+BOOK FACTS (for your own reference, not for the listing)
+================================================================
+
+Full name    The Amah's Daughter: A Novel of Secrets, Love, and War in
+             Old Malaya
+Author       Tang Shiuan Jenn
+Length       161,700 words
+Structure    5 parts, 36 chapters
+Illustration One per chapter, 36 in total, plus the cover
+Timelines    1934-1957 (Mei Foong) and 2005 (Su-Lin)
+Setting      Malacca and Kuala Lumpur, Malaya / Malaysia
+
+
+================================================================
+AUTHOR BIO (for the KDP author field / Author Central)
+================================================================
 
 Tang Shiuan Jenn is a qualified chartered accountant. The Amah's
 Daughter is a novel.
 
---- SETTINGS ---
 
-Language:               English
-AI content disclosure:  YES. Say AI was used for text and images, and
-                        that you reviewed and edited the work.
-Cover:                  dist/AmahsDaughter-cover.jpg
-Manuscript:             dist/The-Amahs-Daughter.epub
-Price:                  Your decision.
-KDP Select:             Your choice. Enrolling requires ebook exclusivity
-                        to Amazon while enrolled.
-
---- HONESTY NOTES (do not delete) ---
+================================================================
+HONESTY NOTES - do not delete
+================================================================
 
 - Never describe this book as a true story, based on real events, or
   inspired by real people. It is fiction with an accurate backdrop.
