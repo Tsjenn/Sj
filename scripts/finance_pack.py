@@ -42,6 +42,9 @@ def inline(s):
     return s
 
 
+LABEL = re.compile(r"^\*{1,2}(P\d|Use when:|Paste this:|Check before)")
+
+
 def md_to_html(text):
     """The markdown subset the sections are written in."""
     out, lines, i = [], text.split("\n"), 0
@@ -116,8 +119,14 @@ def md_to_html(text):
                     r"^(#{2,4}\s|\s*[-*]\s|\s*\d+[.)]\s|\||>\s|```|---+\s*$)", lines[i]):
                 para.append(lines[i].strip())
                 i += 1
+                # Labelled lines ("**P1.2 — ...**", "*Use when:* ...") are their
+                # own paragraph; without this they run together on one line.
+                if i < len(lines) and LABEL.match(lines[i]):
+                    break
             if para:
-                out.append("<p>%s</p>" % inline(" ".join(para)))
+                joined = " ".join(para)
+                cls = " class='label'" if LABEL.match(joined) else ""
+                out.append("<p%s>%s</p>" % (cls, inline(joined)))
             else:
                 i += 1
             continue
@@ -140,6 +149,7 @@ h3 { font-family: Helvetica,Arial,sans-serif; font-size: 11pt; margin: 14pt 0 4p
 h4 { font-family: Helvetica,Arial,sans-serif; font-size: 10pt; margin: 12pt 0 3pt;
      page-break-after: avoid; }
 p { margin: 0 0 8pt; }
+p.label { margin-top: 14pt; page-break-after: avoid; }
 ul,ol { margin: 0 0 8pt 0; padding-left: 18pt; }
 li { margin-bottom: 3pt; }
 code { font-family: "Liberation Mono",monospace; font-size: 9pt;

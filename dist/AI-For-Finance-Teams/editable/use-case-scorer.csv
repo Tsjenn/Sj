@@ -1,0 +1,4 @@
+Task,Frequency (1-5),Time now (1-5),Verifiability (1-5),Error is cheap (1-5),No sensitive data (1-5),Total,Verdict
+"Replace these rows with your own tasks",,,,,,=SUM(B2:F2),
+"Score each factor 1-5 using the definitions in 'Choosing What to Automate First'",,,,,,=SUM(B3:F3),
+"A high total on time but a low score on verifiability is a trap - read the section",,,,,,=SUM(B4:F4),

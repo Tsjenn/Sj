@@ -1,0 +1,94 @@
+GUMROAD LISTING — AI FOR FINANCE TEAMS
+
+FILE TO UPLOAD
+  dist/AI-For-Finance-Teams.zip
+
+PRODUCT NAME
+  AI for Finance Teams — The Working Pack
+
+SUMMARY (the one-line under the title)
+  Prompts, policies, a 90-day plan and a training curriculum, for people
+  whose name goes on the work.
+
+PRICE
+  Your decision, and it matters more here than on your other products.
+  This is a team artefact, not a $9 template — one buyer rolls it out to
+  a whole department. Firms are used to paying for internal material.
+  Whatever you choose, do not price it like the budget tracker.
+
+DESCRIPTION — paste this whole block
+
+Your team is already using AI. There is probably no written rule about it.
+
+This is a working pack, not a book. Nothing in it needs reading cover to
+cover. It is a set of artefacts you can put in front of a team on Monday.
+
+WHAT IS IN IT
+
+40 prompts that work, grouped by workflow — month-end close and
+reconciliations, variance analysis and commentary, budgeting and
+forecasting, audit support, tax and compliance prep, contracts and policy
+documents, board papers, and process documentation. Each one is pasteable
+as written, and each has a line underneath telling you the specific thing
+most likely to be wrong in its output.
+
+Three policy documents. A one-page team note for a team that needs a rule
+by Friday. A full firm policy with drafting options for a practice that
+has clients and a regulator. And the paragraph you put in an engagement
+letter when a client asks how you use these tools.
+
+A 90-day adoption plan. Week by week, in three phases: who does what,
+what "done" looks like, and the way each phase usually fails.
+
+A four-level training curriculum. Session outlines, learning outcomes and
+a live exercise for each level, written so a manager can teach it without
+hiring anyone.
+
+A method for choosing what to automate first. Five factors, thirty
+finance tasks already scored against them, and a spreadsheet for scoring
+your own. Most teams pick the most exciting use case rather than the one
+that would actually pay; this is how you tell the difference.
+
+Ten places not to use AI at all, and a vendor checklist to work through
+before a tool touches client data.
+
+WHAT IS DELIBERATELY NOT IN IT
+
+No statistics about AI adoption. No productivity percentages. No case
+studies about firms that saved a fortune. No promises about your income.
+
+All of that is standard in this market and almost none of it is
+checkable. The moment a pack like this quotes a figure nobody can verify,
+every other claim in it becomes a guess too. What that costs you: it
+cannot tell you what results to expect. What it buys you: everything it
+does tell you, you can check.
+
+WHO IT IS FOR
+
+Finance managers and controllers, partners in small accounting and audit
+firms, tax practitioners, and heads of finance. No technical background
+assumed. It does assume you are busy, sceptical, and personally on the
+hook when work goes out wrong.
+
+FORMAT
+
+84-page PDF, plus every document again as plain text you can paste into
+your own templates and edit, plus the scoring sheet as a CSV that opens
+in Excel, Numbers or Sheets. No analytics, no tracking, nothing phones
+home.
+
+Written by Tang Shiuan Jenn, chartered accountant.
+
+Everything touching law, tax, professional standards or regulatory duty
+is general information, not legal advice. Rules differ by country and
+profession and they change. Have the policy read by whoever carries risk
+in your organisation before you adopt it.
+
+TAGS
+  ai, finance, accounting, prompts, policy, templates, cfo, audit
+
+AFTER YOU UPLOAD
+  Paste the Gumroad link and your price into site/config.js under
+  "financepack" (both currently say SET-ME). The buy button on
+  /ai-finance/ stays disabled until you do — that is deliberate, so the
+  page can never show a broken checkout.
