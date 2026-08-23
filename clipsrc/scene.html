@@ -1,0 +1,202 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  html,body{margin:0;padding:0;background:#000;overflow:hidden}
+  #wrap{position:relative;width:1080px;height:1920px;overflow:hidden}
+  canvas{display:block}
+  .ov{position:absolute;left:0;width:1080px;text-align:center;
+      font-family:"DejaVu Sans","Liberation Sans",sans-serif;
+      color:#fff;opacity:0;will-change:opacity,transform}
+  .ov b{display:block;font-weight:700;line-height:1.16;
+        text-shadow:0 6px 40px rgba(0,0,0,.75)}
+  #vig{position:absolute;inset:0;pointer-events:none;
+       background:radial-gradient(ellipse at 50% 52%,rgba(0,0,0,0) 42%,rgba(0,0,0,.72) 100%)}
+  #scrim{position:absolute;left:0;top:0;width:1080px;height:660px;pointer-events:none;
+       background:linear-gradient(180deg,rgba(0,0,0,.80) 0%,rgba(0,0,0,.62) 45%,rgba(0,0,0,0) 100%)}
+  #grain{position:absolute;inset:0;pointer-events:none;opacity:.05}
+</style></head>
+<body><div id="wrap"><div id="vig"></div><div id="scrim"></div><div id="grain"></div></div>
+<script src="three.min.js"></script>
+<script>
+const CFG = window.__CFG__;
+const W = 1080, H = 1920, FPS = 30;
+const wrap = document.getElementById('wrap');
+
+const renderer = new THREE.WebGLRenderer({antialias:true, alpha:false});
+renderer.setPixelRatio(1);
+renderer.setSize(W, H);
+renderer.outputEncoding = THREE.sRGBEncoding;
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.15;
+wrap.insertBefore(renderer.domElement, wrap.firstChild);
+
+const scene = new THREE.Scene();
+const bgTop = new THREE.Color(CFG.bg[0]), bgBot = new THREE.Color(CFG.bg[1]);
+scene.background = bgBot.clone();
+scene.fog = new THREE.Fog(bgBot.getHex(), 9, 30);
+
+const camera = new THREE.PerspectiveCamera(34, W/H, 0.1, 100);
+
+// ---- backdrop: a big gradient wall behind everything
+{
+  const g = new THREE.PlaneGeometry(90, 120);
+  const m = new THREE.ShaderMaterial({
+    uniforms:{a:{value:bgTop},b:{value:bgBot}},
+    vertexShader:'varying vec2 v; void main(){v=uv; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',
+    fragmentShader:'uniform vec3 a,b; varying vec2 v; void main(){gl_FragColor=vec4(mix(b,a,pow(v.y,.85)),1.);}',
+    depthWrite:false
+  });
+  const p = new THREE.Mesh(g,m); p.position.set(0,0,-18); scene.add(p);
+}
+
+// ---- lights
+const key = new THREE.DirectionalLight(0xffffff, 2.5);
+key.position.set(3.2, 5.4, 4.2);
+key.castShadow = true;
+key.shadow.mapSize.set(2048,2048);
+key.shadow.camera.near = 1; key.shadow.camera.far = 25;
+key.shadow.camera.left = -6; key.shadow.camera.right = 6;
+key.shadow.camera.top = 6; key.shadow.camera.bottom = -6;
+key.shadow.bias = -0.0012;
+scene.add(key);
+const rim = new THREE.DirectionalLight(new THREE.Color(CFG.accent), 3.2);
+rim.position.set(-4.5, 1.8, -3.5); scene.add(rim);
+const fill = new THREE.DirectionalLight(0x9fc4ff, 0.5);
+fill.position.set(-2.5, 1.0, 4.0); scene.add(fill);
+scene.add(new THREE.HemisphereLight(0xbfd4ff, 0x0a0e16, 0.55));
+
+// ---- ground
+{
+  const g = new THREE.PlaneGeometry(60, 60);
+  const m = new THREE.MeshStandardMaterial({
+    color: new THREE.Color(CFG.bg[1]).multiplyScalar(0.75),
+    roughness: 0.34, metalness: 0.28 });
+  const p = new THREE.Mesh(g,m);
+  p.rotation.x = -Math.PI/2; p.position.y = -1.78; p.receiveShadow = true;
+  scene.add(p);
+}
+
+// ---- the book
+const BW = 1.30, BH = 2.05, BD = 0.20;
+const book = new THREE.Group(); scene.add(book);
+const loader = new THREE.TextureLoader();
+let ready = false;
+loader.load(CFG.cover, function(tex){
+  tex.encoding = THREE.sRGBEncoding;
+  tex.anisotropy = 8;
+  const paper = new THREE.MeshStandardMaterial({color:0xf3efe6, roughness:0.95});
+  const edge  = new THREE.MeshStandardMaterial({color:0xe8e2d5, roughness:0.9});
+  const boardC = new THREE.Color(CFG.spine || CFG.bg[0]).multiplyScalar(0.85);
+  const board = new THREE.MeshStandardMaterial({color:boardC, roughness:0.62, metalness:0.06});
+  const cover = new THREE.MeshStandardMaterial({map:tex, roughness:0.46, metalness:0.05});
+  // BoxGeometry face order: +x, -x, +y, -y, +z, -z
+  const mats = [edge, board, edge, edge, cover, board];
+  const mesh = new THREE.Mesh(new THREE.BoxGeometry(BW, BH, BD), mats);
+  mesh.castShadow = true; mesh.receiveShadow = true;
+  book.add(mesh);
+  // page block, slightly inset, so the edge reads as paper not plastic
+  const pg = new THREE.Mesh(
+    new THREE.BoxGeometry(BW*0.975, BH*0.965, BD*0.80),
+    new THREE.MeshStandardMaterial({color:0xfbf7ee, roughness:0.99}));
+  pg.position.x = -0.012; pg.castShadow = true; book.add(pg);
+  ready = true;
+});
+
+// ---- dust motes
+const motes = (function(){
+  const n = 340, pos = new Float32Array(n*3), seed = [];
+  for (let i=0;i<n;i++){
+    pos[i*3]   = (Math.random()-0.5)*11;
+    pos[i*3+1] = (Math.random()-0.5)*9;
+    pos[i*3+2] = (Math.random()-0.5)*7 - 1;
+    seed.push(Math.random()*Math.PI*2);
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.BufferAttribute(pos,3));
+  const m = new THREE.PointsMaterial({
+    color: new THREE.Color(CFG.accent), size: 0.035,
+    transparent:true, opacity:0.55, depthWrite:false,
+    blending: THREE.AdditiveBlending });
+  const p = new THREE.Points(g,m); scene.add(p);
+  p.userData = {seed, base: pos.slice(0)};
+  return p;
+})();
+
+// ---- text overlays
+const beats = CFG.beats.map(function(b){
+  const d = document.createElement('div');
+  d.className = 'ov';
+  d.style.top = (b.top || 0.40) * H + 'px';
+  d.innerHTML = '<b style="font-size:' + b.size + 'px;padding:0 70px">' +
+                b.text.replace(/\n/g,'<br>') + '</b>';
+  wrap.appendChild(d);
+  return d;
+});
+
+// film grain, drawn once as a data texture over the top
+(function(){
+  const c = document.createElement('canvas'); c.width = 220; c.height = 390;
+  const x = c.getContext('2d'), im = x.createImageData(c.width, c.height);
+  for (let i=0;i<im.data.length;i+=4){
+    const v = 120 + Math.random()*135;
+    im.data[i]=im.data[i+1]=im.data[i+2]=v; im.data[i+3]=255;
+  }
+  x.putImageData(im,0,0);
+  document.getElementById('grain').style.background =
+    'url(' + c.toDataURL() + ') repeat';
+})();
+
+function ease(t){ return t<0.5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2; }
+function smooth(t){ return t*t*(3-2*t); }
+function seg(t, a, b){ return Math.max(0, Math.min(1, (t-a)/(b-a))); }
+
+window.__ready = function(){ return ready; };
+
+window.setFrame = function(i){
+  const t = i / FPS;
+  const T = CFG.duration;
+
+  // camera: swing from a low three-quarter on the spine round to face-on,
+  // dollying back the whole time
+  const p = ease(Math.min(1, t / T));
+  const ang = THREE.MathUtils.lerp(-0.92, 0.06, p);
+  const dist = THREE.MathUtils.lerp(4.30, 6.60, p);
+  const hgt  = THREE.MathUtils.lerp(-0.55, 0.62, smooth(Math.min(1,t/T)));
+  camera.position.set(Math.sin(ang)*dist, hgt, Math.cos(ang)*dist);
+  camera.lookAt(0, THREE.MathUtils.lerp(-0.62, -0.46, p), 0);
+
+  // book: slow counter-rotation and a gentle float
+  book.rotation.y = THREE.MathUtils.lerp(0.42, -0.03, p) + Math.sin(t*0.55)*0.028;
+  book.rotation.z = Math.sin(t*0.42)*0.016;
+  book.position.y = -0.42 + Math.sin(t*0.72)*0.045;
+
+  // motes drift
+  const a = motes.geometry.attributes.position, base = motes.userData.base;
+  for (let k=0;k<a.count;k++){
+    const s = motes.userData.seed[k];
+    a.array[k*3]   = base[k*3]   + Math.sin(t*0.28 + s)*0.20;
+    a.array[k*3+1] = base[k*3+1] + Math.sin(t*0.20 + s*1.7)*0.26 + t*0.045;
+    a.array[k*3+2] = base[k*3+2] + Math.cos(t*0.24 + s)*0.16;
+  }
+  a.needsUpdate = true;
+
+  // beats fade in, hold, fade out, with a small rise
+  CFG.beats.forEach(function(b, idx){
+    const el = beats[idx];
+    const fin = 0.42, fout = 0.42;
+    let o = 0, rise = 22;
+    if (t >= b.in - fin && t <= b.out + fout){
+      if (t < b.in)        { o = seg(t, b.in-fin, b.in); }
+      else if (t > b.out)  { o = 1 - seg(t, b.out, b.out+fout); }
+      else                 { o = 1; }
+      rise = 22 * (1 - smooth(seg(t, b.in-fin, b.in+0.30)));
+    }
+    el.style.opacity = o.toFixed(3);
+    el.style.transform = 'translateY(' + rise.toFixed(1) + 'px)';
+  });
+
+  renderer.render(scene, camera);
+};
+</script></body></html>
