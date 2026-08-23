@@ -1,0 +1,145 @@
+TIKTOK POSTS FOR THE THREE BOOKS
+
+================================================================
+READ THIS FIRST — TWO THINGS YOU NEED TO KNOW
+================================================================
+
+1. I CANNOT POST TO TIKTOK FOR YOU.
+   There is no TikTok connection in this session. I can make the videos
+   and write the posts; you upload them from your phone. It takes about
+   two minutes each.
+
+2. NONE OF THESE THREE BOOKS IS ON AMAZON YET.
+   I checked. The only two live Amazon links in your store are the two
+   toddler books. The AI book, MATCHA and the novel are all built and
+   waiting on your upload, so there is no Kindle link to put anywhere.
+
+   That is why each video comes in two versions:
+
+       book-<name>-coming.mp4   says "Coming to Kindle"
+       book-<name>-live.mp4     says "On Kindle now"
+
+   Post the "coming" one today if you want. Post the "live" one the day
+   the book goes up. Do not post the "live" one before the book exists.
+
+3. ABOUT THE LINK. TikTok captions do not make links clickable. A URL
+   pasted into a caption is just grey text nobody can tap. The link goes
+   in your BIO, and the caption says "link in bio". Set your bio link to
+   your Amazon author page once you have one, so all three books sit
+   behind a single link you never have to change.
+
+
+================================================================
+POST 1 — AI WITHOUT THE HYPE
+Video: book-ai-coming.mp4  /  book-ai-live.mp4
+================================================================
+
+CAPTION
+
+I'm a chartered accountant. I wrote the AI book I actually wanted to
+read: no invented statistics, no fake case studies, no promises about
+your income.
+
+68 chapters. 40 prompts you can paste. 16 industry playbooks. And a
+whole chapter on when NOT to use it.
+
+Link in bio.
+
+HASHTAGS
+#ai #aitools #accounting #accountant #finance #booktok #writertok
+#promptengineering #aiatwork #newbook
+
+BEST TIME TO POST (Malaysia time)
+Evenings, 8–11pm, when your audience is off work.
+
+
+================================================================
+POST 2 — MATCHA
+Video: book-matcha-coming.mp4  /  book-matcha-live.mp4
+================================================================
+
+CAPTION
+
+Matcha is the only tea you drink whole. The entire leaf, stone-ground,
+whisked into water.
+
+That one fact explains the colour, the caffeine, the price and the
+queue outside every cafe. I wrote the whole story down — history,
+craft, the science, and 63 recipes.
+
+Link in bio.
+
+HASHTAGS
+#matcha #matchalatte #matchatok #tea #greentea #japanesetea #booktok
+#cookbook #foodhistory #newbook
+
+BEST TIME TO POST
+Mornings, 7–9am, next to everyone's first drink of the day.
+
+
+================================================================
+POST 3 — THE AMAH'S DAUGHTER
+Video: book-novel-coming.mp4  /  book-novel-live.mp4
+================================================================
+
+CAPTION
+
+She raised her own daughter — as the servant.
+
+Malacca, 1934. A girl arrives from China with a secret she does not know
+she is carrying. Then a war takes the one person who knew the truth, and
+she spends seventy years being called Auntie by her own child.
+
+In 2005 her great-great-niece opens a biscuit tin of letters.
+
+A novel. Link in bio.
+
+HASHTAGS
+#booktok #historicalfiction #familysaga #malaysia #malacca #wwii
+#peranakan #newbook #writertok #asianfiction
+
+BEST TIME TO POST
+Evenings, 9–11pm. BookTok is a night-time habit.
+
+
+================================================================
+HOW TO POST — one video, about two minutes
+================================================================
+
+1. Save the .mp4 to your iPad Photos (tap the file, then Share > Save
+   Video).
+2. Open TikTok, tap +, tap Upload, pick the video.
+3. Skip all the editing screens — the video is finished.
+4. Paste the caption, then the hashtags after it.
+5. Cover image: TikTok will ask you to pick a frame. Choose a frame from
+   the FIRST three seconds — that is the hook line. Do not pick the book
+   cover; the cover is the payoff, not the opener.
+6. Post.
+
+Do not post all three on the same day. One a day, three days running,
+is better — TikTok spreads your reach across them instead of making
+them compete.
+
+
+================================================================
+WHAT IS AND IS NOT CLAIMED IN THESE VIDEOS
+================================================================
+
+Every line in the videos is checkable against the actual books:
+chapter counts, prompt counts, playbook counts, recipe count, and the
+plot of the novel. There are no sales figures, no rankings, no review
+quotes, and the word "bestseller" appears nowhere.
+
+The music is original and generated for these clips, so nothing here
+can be muted for a copyright claim.
+
+
+================================================================
+IF YOU WANT THEM CHANGED
+================================================================
+
+The words are in scripts/book_clips.py under CARDS. Change a line, run
+
+    python3 scripts/book_clips.py ai
+
+and both versions of that book's video rebuild in about a minute.
