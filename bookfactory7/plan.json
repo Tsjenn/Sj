@@ -506,7 +506,7 @@
             ]
           },
           "brief": "The patterns that genuinely improve quality: splitting work across parallel workers, an independent reviewer, an adversarial verifier, a judge panel for hard choices. Presented so a reader can apply the same patterns manually, with no code, using separate chats or windows.",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch27",
@@ -562,7 +562,7 @@
             ]
           },
           "brief": "The most reliable single upgrade: stop asking the model what it knows, start giving it what it must use. Practical grounding methods for professionals — attach the standard, paste the clause, supply the file, require quotation with page references.",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch30",
@@ -577,7 +577,7 @@
             ]
           },
           "brief": "A verification discipline light enough that people actually do it. What to check always, what to check by sampling, and what to trust. Includes a short verification checklist for financial, legal, and factual output.",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch31",
@@ -752,7 +752,7 @@
             ]
           },
           "brief": "INDUSTRY PLAYBOOK. Fixed structure: (1) what this work actually consists of; (2) the value map — where AI helps most and least; (3) ten concrete use cases, each with what to prompt and what to check; (4) two or three worked prompts in the six-part frame from ch09; (5) the risks specific to this sector; (6) a 30-day starting plan; (7) how to measure whether it worked. Standard operating procedure drafting, maintenance log analysis, root-cause support, quality documentation, shift handover summaries, supplier correspondence. Where AI meets sensors and machine data honestly — what a language model can and cannot do with time-series data.",
-          "status": "todo",
+          "status": "done",
           "tables": "value map table; ten use cases table; risk table"
         },
         {
