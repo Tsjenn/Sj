@@ -593,7 +593,7 @@
             ]
           },
           "brief": "Most people accept the first answer or start over. Teach the disciplined middle path: name the specific gap, add one constraint at a time, and keep the version that worked. Include how to save and reuse the winning prompt.",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch32",
@@ -701,7 +701,7 @@
             ]
           },
           "brief": "INDUSTRY PLAYBOOK. Fixed structure: (1) what this work actually consists of; (2) the value map — where AI helps most and least; (3) ten concrete use cases, each with what to prompt and what to check; (4) two or three worked prompts in the six-part frame from ch09; (5) the risks specific to this sector; (6) a 30-day starting plan; (7) how to measure whether it worked. Research support, memo drafting, computation checking as a second pair of eyes, correspondence, client explanation letters. Heavy verification warning: tax rules are jurisdictional and change; the model must be grounded in the actual legislation or guidance.",
-          "status": "todo",
+          "status": "done",
           "tables": "value map table; ten use cases table; risk table"
         },
         {
