@@ -66,7 +66,7 @@
             ]
           },
           "brief": "Why this technology feels different from every tool the reader has used. Deterministic software versus probabilistic systems. The professional consequences: you can no longer test once and trust forever; you must verify. Introduce the book's spine — fluency is a skill, not a purchase.",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch03",
@@ -86,7 +86,7 @@
             ]
           },
           "brief": "An honest capability map built on the ch01 model. Strong: language transformation, summarising, drafting, explaining, restructuring, classification, first-pass analysis. Weak: arithmetic reliability, current facts, private facts, its own certainty, anything requiring accountability. Give the reader a test they can apply to any new task in 10 seconds.",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch04",
@@ -103,7 +103,7 @@
             ]
           },
           "brief": "The single most important professional risk chapter. Why a model generates false things in the same voice as true things, why it invents citations and figures, and why confidence is not correlated with accuracy. Practical detection: which categories of claim to distrust by default. The Three-Check Rule introduced here and used throughout the book.",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch05",
@@ -119,7 +119,7 @@
             ]
           },
           "brief": "The concept that explains most user frustration. What the context window is, why the model 'forgets', why a long chat degrades, why it cannot see the file you did not attach or the meeting you did not describe. Practical: what to put in context and what to leave out; context as the reader's main lever of control.",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch06",
@@ -136,7 +136,7 @@
             ]
           },
           "brief": "Demystify tokens, pricing per million tokens, and why long documents cost more and take longer. Cover reasoning/thinking modes as a cost-quality dial. Practical budgeting for a professional or small firm: which work justifies the slow expensive setting and which does not. Use ranges and principles, never invented vendor prices.",
-          "status": "todo",
+          "status": "done",
           "tables": "table: task type vs recommended setting"
         },
         {
@@ -199,7 +199,7 @@
             ]
           },
           "brief": "The book's core teaching chapter. Introduce the six-part frame and build one real professional prompt from a one-line wish to a working instruction, showing the output improving at each step. This frame is referenced by every later chapter and the industry playbooks.",
-          "status": "todo",
+          "status": "done",
           "tables": "before/after table of the same prompt at three levels"
         },
         {
@@ -214,7 +214,7 @@
             ]
           },
           "brief": "Teach precision. The five dimensions of specificity: audience, length, tone, scope, and success criteria. Why vague prompts produce generic writing, and why 'be more professional' fails while a named register succeeds.",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch11",
@@ -230,7 +230,7 @@
             ]
           },
           "brief": "Few-shot prompting for non-technical readers: give it two or three examples of what you want and it will match them better than any description. Practical uses: matching house style, standard email replies, consistent categorisation. When examples hurt (too narrow, contradictory, biased).",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch12",
@@ -339,7 +339,7 @@
             ]
           },
           "brief": "A diagnostic chapter organised as a clinic: the symptom, the cause in terms of the ch01 model, and the specific fix. Include sycophancy — the model agreeing with a wrong premise — and how to prompt against it.",
-          "status": "todo",
+          "status": "done",
           "tables": "big diagnostic table: symptom / likely cause / fix"
         },
         {
