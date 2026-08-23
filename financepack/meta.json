@@ -1,0 +1,14 @@
+{
+  "title": "AI for Finance Teams",
+  "subtitle": "The Working Pack",
+  "author": "Tang Shiuan Jenn",
+  "author_line": "Chartered Accountant",
+  "sections": [
+    {"file": "00-how-to-use.md",           "title": "How to Use This Pack"},
+    {"file": "04-use-case-selection.md",   "title": "Choosing What to Automate First"},
+    {"file": "01-prompt-library.md",       "title": "The Prompt Library"},
+    {"file": "03-verification-and-risk.md","title": "Verification, Red Lines and Choosing a Tool"},
+    {"file": "05-policy-documents.md",     "title": "Your Policy Documents"},
+    {"file": "02-adoption-and-training.md","title": "The 90-Day Plan and the Training Curriculum"}
+  ]
+}
