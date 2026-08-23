@@ -132,7 +132,7 @@
         {
           "id": "ch07",
           "title": "The Bottom of the Stack",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "stack",
             "title": "Who does what in making a chip",
@@ -149,7 +149,7 @@
         {
           "id": "ch08",
           "title": "TSMC: The Company Everything Runs Through",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "network",
             "title": "What depends on one foundry",
@@ -168,7 +168,7 @@
         {
           "id": "ch09",
           "title": "How a Foundry Actually Makes Money",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "flow",
             "title": "Foundry economics",
@@ -185,7 +185,7 @@
         {
           "id": "ch10",
           "title": "ASML: One Machine, No Substitute",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "anatomy",
             "title": "Why EUV has no second source",
@@ -202,7 +202,7 @@
         {
           "id": "ch11",
           "title": "The Machines Behind the Machines",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "grid",
             "title": "The equipment layer",
@@ -222,7 +222,7 @@
         {
           "id": "ch12",
           "title": "Nvidia I: The Graphics Years, 1993 to 2006",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "timeline",
             "title": "Nvidia's first act",
@@ -239,7 +239,7 @@
         {
           "id": "ch13",
           "title": "Nvidia II: The Decade Nobody Noticed",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "flow",
             "title": "How CUDA became a moat",
@@ -256,7 +256,7 @@
         {
           "id": "ch14",
           "title": "Nvidia III: To the Largest Company on Earth",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "timeline",
             "title": "2022 to 2026",
@@ -273,7 +273,7 @@
         {
           "id": "ch15",
           "title": "Nvidia's Accounts, Line by Line",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "checklist",
             "title": "Reading Nvidia's filings as an accountant",
@@ -291,7 +291,7 @@
         {
           "id": "ch16",
           "title": "AMD: The Long Second Place",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "timeline",
             "title": "AMD's near-death and return",
@@ -309,7 +309,7 @@
         {
           "id": "ch17",
           "title": "Intel: How the Leader Lost the Lead",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "flow",
             "title": "How a process lead is lost",
@@ -326,7 +326,7 @@
         {
           "id": "ch18",
           "title": "Broadcom: The Quiet Trillion",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "matrix",
             "title": "Broadcom's two businesses",
@@ -342,7 +342,7 @@
         {
           "id": "ch19",
           "title": "Arm and SoftBank",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "timeline",
             "title": "SoftBank's real semiconductor bet",
@@ -360,7 +360,7 @@
         {
           "id": "ch20",
           "title": "Memory I: Why DRAM Was Always a Bad Business",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "cycle",
             "title": "The classic memory cycle",
@@ -379,7 +379,7 @@
         {
           "id": "ch21",
           "title": "Memory II: HBM and the Supercycle",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "flow",
             "title": "Why AI broke the memory cycle",
@@ -396,7 +396,7 @@
         {
           "id": "ch22",
           "title": "Three Companies, One Cycle",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "compare",
             "title": "Samsung, SK Hynix and Micron",
@@ -419,7 +419,7 @@
         {
           "id": "ch23",
           "title": "What Compute Means on a Balance Sheet",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "anatomy",
             "title": "Inside a data centre's economics",
@@ -436,7 +436,7 @@
         {
           "id": "ch24",
           "title": "Microsoft Azure",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "flow",
             "title": "Microsoft's AI position",
@@ -453,7 +453,7 @@
         {
           "id": "ch25",
           "title": "Amazon Web Services",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "timeline",
             "title": "AWS from internal tool to profit engine",
@@ -470,7 +470,7 @@
         {
           "id": "ch26",
           "title": "Google Cloud and the TPU",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "compare",
             "title": "Buying accelerators vs building them",
@@ -486,7 +486,7 @@
         {
           "id": "ch27",
           "title": "Oracle's Second Act",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "timeline",
             "title": "An incumbent finds a new business",
@@ -503,7 +503,7 @@
         {
           "id": "ch28",
           "title": "The Neoclouds",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "matrix",
             "title": "A new category of company",
@@ -520,7 +520,7 @@
         {
           "id": "ch29",
           "title": "Stargate and the Megaproject Era",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "flow",
             "title": "How a multi-hundred-billion project is assembled",
@@ -537,7 +537,7 @@
         {
           "id": "ch30",
           "title": "Custom Silicon Everywhere",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "grid",
             "title": "Who is designing their own",
@@ -555,7 +555,7 @@
         {
           "id": "ch31",
           "title": "The Power Problem",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "flow",
             "title": "From grid to gate",
@@ -573,7 +573,7 @@
         {
           "id": "ch32",
           "title": "Depreciation: The Number That Decides Everything",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "anatomy",
             "title": "One assumption, three consequences",
@@ -596,7 +596,7 @@
         {
           "id": "ch33",
           "title": "What a Model Company Actually Sells",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "flow",
             "title": "Where a model company's money comes from",
@@ -613,7 +613,7 @@
         {
           "id": "ch34",
           "title": "OpenAI I: 2015 to 2022",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "timeline",
             "title": "From non-profit to product company",
@@ -630,7 +630,7 @@
         {
           "id": "ch35",
           "title": "OpenAI II: The Microsoft Relationship",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "network",
             "title": "What each side supplied",
@@ -648,7 +648,7 @@
         {
           "id": "ch36",
           "title": "OpenAI III: Restructuring and the Road to a Trillion",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "timeline",
             "title": "The capital ladder",
@@ -665,7 +665,7 @@
         {
           "id": "ch37",
           "title": "Anthropic I: The Founding",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "flow",
             "title": "Why a company splits",
@@ -682,7 +682,7 @@
         {
           "id": "ch38",
           "title": "Anthropic II: Two Clouds, Two Investors",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "network",
             "title": "An unusual ownership position",
@@ -699,7 +699,7 @@
         {
           "id": "ch39",
           "title": "Anthropic III: Nearly a Trillion, and the IPO Question",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "timeline",
             "title": "Valuation history",
@@ -716,7 +716,7 @@
         {
           "id": "ch40",
           "title": "Google DeepMind and Gemini",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "stack",
             "title": "The only fully integrated player",
@@ -733,7 +733,7 @@
         {
           "id": "ch41",
           "title": "Meta, xAI and the Open-Weight Camp",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "compare",
             "title": "Two strategies for the model layer",
@@ -749,7 +749,7 @@
         {
           "id": "ch42",
           "title": "The Chinese Labs",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "matrix",
             "title": "A parallel stack under constraint",
@@ -773,7 +773,7 @@
         {
           "id": "ch43",
           "title": "Where the Money Meets the User",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "flow",
             "title": "Following one payment down the stack",
@@ -790,7 +790,7 @@
         {
           "id": "ch44",
           "title": "Microsoft",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "matrix",
             "title": "Microsoft at every layer",
@@ -806,7 +806,7 @@
         {
           "id": "ch45",
           "title": "Alphabet",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "matrix",
             "title": "Alphabet at every layer",
@@ -822,7 +822,7 @@
         {
           "id": "ch46",
           "title": "Amazon",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "matrix",
             "title": "Amazon at every layer",
@@ -838,7 +838,7 @@
         {
           "id": "ch47",
           "title": "Meta",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "flow",
             "title": "Meta's different equation",
@@ -854,7 +854,7 @@
         {
           "id": "ch48",
           "title": "Apple: The Quiet One",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "compare",
             "title": "Apple's position against the others",
@@ -872,7 +872,7 @@
         {
           "id": "ch49",
           "title": "The Incumbent Software Companies",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "matrix",
             "title": "How incumbents are responding",
@@ -888,7 +888,7 @@
         {
           "id": "ch50",
           "title": "The Application Startups",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "flow",
             "title": "The thin-wrapper problem",
@@ -905,7 +905,7 @@
         {
           "id": "ch51",
           "title": "What Users Actually Pay For",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "checklist",
             "title": "What a buyer is really buying",
@@ -922,7 +922,7 @@
         {
           "id": "ch52",
           "title": "The Margin Question",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "compare",
             "title": "Where the profit ends up",
@@ -945,7 +945,7 @@
         {
           "id": "ch53",
           "title": "How to Read a Cross-Holding",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "anatomy",
             "title": "Anatomy of a strategic stake",
@@ -962,7 +962,7 @@
         {
           "id": "ch54",
           "title": "Microsoft and OpenAI",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "network",
             "title": "The most examined relationship in technology",
@@ -979,7 +979,7 @@
         {
           "id": "ch55",
           "title": "Amazon, Google and Anthropic",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "network",
             "title": "Two rivals, one investee",
@@ -996,7 +996,7 @@
         {
           "id": "ch56",
           "title": "Nvidia as an Investor",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "grid",
             "title": "A supplier with equity in its customers",
@@ -1013,7 +1013,7 @@
         {
           "id": "ch57",
           "title": "Circular Revenue",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "flow",
             "title": "When money goes round",
@@ -1030,7 +1030,7 @@
         {
           "id": "ch58",
           "title": "Vendor Financing, Old and New",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "timeline",
             "title": "A pattern that has happened before",
@@ -1047,7 +1047,7 @@
         {
           "id": "ch59",
           "title": "SoftBank",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "timeline",
             "title": "One investor across the whole stack",
@@ -1065,7 +1065,7 @@
         {
           "id": "ch60",
           "title": "Sovereign Money",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "matrix",
             "title": "State capital in the stack",
@@ -1082,7 +1082,7 @@
         {
           "id": "ch61",
           "title": "What the Auditors See",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "checklist",
             "title": "Where the hard judgements sit",
@@ -1100,7 +1100,7 @@
         {
           "id": "ch62",
           "title": "The Map",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "network",
             "title": "The web of ownership, drawn",
@@ -1125,7 +1125,7 @@
         {
           "id": "ch63",
           "title": "The Semiconductor Cycle",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "cycle",
             "title": "The cycle that has never stopped",
@@ -1144,7 +1144,7 @@
         {
           "id": "ch64",
           "title": "Four Previous Times People Were Certain",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "timeline",
             "title": "Prior convictions",
@@ -1160,7 +1160,7 @@
         {
           "id": "ch65",
           "title": "The Case That This Is a Bubble",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "checklist",
             "title": "The bear argument, stated at its strongest",
@@ -1177,7 +1177,7 @@
         {
           "id": "ch66",
           "title": "The Case That It Is Not",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "checklist",
             "title": "The bull argument, stated at its strongest",
@@ -1194,7 +1194,7 @@
         {
           "id": "ch67",
           "title": "Concentration Risk",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "network",
             "title": "How much depends on how little",
@@ -1211,7 +1211,7 @@
         {
           "id": "ch68",
           "title": "Taiwan",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "flow",
             "title": "What depends on one place",
@@ -1228,7 +1228,7 @@
         {
           "id": "ch69",
           "title": "Export Controls",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "timeline",
             "title": "Policy as an industrial force",
@@ -1245,7 +1245,7 @@
         {
           "id": "ch70",
           "title": "What Would Actually Break It",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "checklist",
             "title": "Failure modes worth watching",
@@ -1270,7 +1270,7 @@
         {
           "id": "ch71",
           "title": "Where the Bottleneck Goes Next",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "flow",
             "title": "The moving constraint",
@@ -1287,7 +1287,7 @@
         {
           "id": "ch72",
           "title": "The Memory Decade",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "cycle",
             "title": "What a supercycle usually does next",
@@ -1304,7 +1304,7 @@
         {
           "id": "ch73",
           "title": "Inference Economics",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "flow",
             "title": "Why the cost per answer decides everything",
@@ -1321,7 +1321,7 @@
         {
           "id": "ch74",
           "title": "Who Could Still Enter",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "matrix",
             "title": "Barriers by layer",
@@ -1337,7 +1337,7 @@
         {
           "id": "ch75",
           "title": "What the Stack Might Look Like in 2030",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "stack",
             "title": "Three scenarios, not a forecast",
@@ -1353,7 +1353,7 @@
         {
           "id": "ch76",
           "title": "A Reader's Watch List",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "checklist",
             "title": "What to check, and how often",
@@ -1371,7 +1371,7 @@
         {
           "id": "ch77",
           "title": "What the Numbers Cannot Tell You",
-          "status": "todo",
+          "status": "done",
           "art": {
             "type": "flow",
             "title": "The limits of the analysis",
