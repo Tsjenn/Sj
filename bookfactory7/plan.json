@@ -360,7 +360,7 @@
             ]
           },
           "brief": "A large reference chapter: roughly forty ready-to-use prompts across eight professional categories, each written in the six-part frame, each with a one-line note on what to check in the output. Written so a reader can copy, adapt, and keep.",
-          "status": "todo",
+          "status": "done",
           "tables": "prompts presented as labelled blocks with usage notes"
         }
       ]
