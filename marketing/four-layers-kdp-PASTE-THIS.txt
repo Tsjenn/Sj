@@ -1,0 +1,155 @@
+================================================================
+THE FOUR LAYERS — KDP LISTING PACK
+================================================================
+
+FULL NAME OF THE BOOK
+
+   The Four Layers: Silicon, Capital and the Companies That Own
+   Artificial Intelligence
+
+KDP has separate boxes. Split it like this:
+
+   Title box     ->  The Four Layers
+   Subtitle box  ->  Silicon, Capital and the Companies That Own
+                     Artificial Intelligence
+   Author box    ->  Tang Shiuan Jenn
+
+The plan file carries a longer subtitle. Use the short one above in the
+subtitle box — long subtitles get truncated in search results and on
+phone screens. The longer version is fine inside the book.
+
+
+================================================================
+CATEGORIES — this is NOT a fiction book, so the path is different
+================================================================
+
+In the KDP picker, set the fiction/non-fiction switch to NON-FICTION.
+Then use the picker's SEARCH box rather than scrolling.
+
+Take these three:
+
+  1.  Business & Money > Industries > Computers & Technology
+      Search for: industries
+
+  2.  Computers & Technology > Business Technology
+      Search for: business technology
+
+  3.  Business & Money > Economics
+      Search for: economics
+
+If your marketplace offers it, "Business & Money > Investing >
+Analysis & Strategy" is a strong substitute for the third — but only
+take it if you are comfortable that the book sits near investing
+titles. It is NOT investment advice and says so throughout, which is a
+selling point on that shelf rather than a problem.
+
+WHY THIS SPREAD, AND WHAT TO AVOID
+
+Avoid "Computers & Technology > AI & Machine Learning". It sounds
+right and it is wrong for this book. That shelf is full of technical
+and how-to titles, the readers there want to build things, and your AI
+book already sits on it. Two of your own titles competing on one shelf
+helps neither.
+
+The reader for this book browses business and industry, not machine
+learning. "Industries > Computers & Technology" is where books about
+how an industry actually works get found.
+
+
+================================================================
+KEYWORDS — 7 boxes, one phrase in each
+================================================================
+
+1. semiconductor industry
+2. AI industry analysis
+3. Nvidia
+4. technology investing
+5. financial analysis
+6. chip war
+7. business history
+
+
+================================================================
+DESCRIPTION
+================================================================
+
+In the separate file four-layers-description-ONLY.txt. Select all,
+copy, paste. It is 3,775 characters, inside Amazon's 4,000 limit.
+
+
+================================================================
+ALL THE UPLOAD SETTINGS
+================================================================
+
+Where to start      Bookshelf > Create > Kindle eBook
+
+Language            English
+Publishing rights   "I own the copyright and I hold necessary
+                    publishing rights"
+Age / grade range   Leave blank
+Pre-order           No. Publish now.
+
+AI content          YES — tick it. Say AI was used for text and images,
+                    and that you reviewed and edited the work.
+
+Manuscript file     The-Four-Layers.epub
+Cover file          The-Four-Layers-cover.jpg
+                    Choose "Upload a cover you already have".
+                    Do NOT open Cover Creator — it overwrites your file.
+
+DRM                 Your choice.
+KDP Select          Your choice. Enrolling requires ebook exclusivity
+                    to Amazon for 90 days at a time.
+Territories         All territories (worldwide rights)
+Royalty             70% is available between USD 2.99 and USD 9.99.
+                    Outside that band you get 35%.
+Price               Your decision.
+
+Before publishing   Open the KDP previewer and check the title page,
+                    one part divider, one chapter diagram, and a
+                    table-heavy chapter (ch 62, "The Map", is the
+                    stress test — it has two large tables).
+
+
+================================================================
+BOOK FACTS (your reference, not for the listing)
+================================================================
+
+Full name    The Four Layers: Silicon, Capital and the Companies That
+             Own Artificial Intelligence
+Author       Tang Shiuan Jenn, Chartered Accountant
+Length       ~340,000 words
+Structure    8 parts, 77 chapters
+Illustration One diagram per chapter, 77 in total, plus the cover
+Subject      The AI and semiconductor industry read through its
+             accounts, organised on a four-layer stack
+Figures as at August 2026, each dated and sourced in the text
+
+
+================================================================
+AUTHOR BIO
+================================================================
+
+Tang Shiuan Jenn is a qualified chartered accountant. The Four Layers
+is a financial history of the AI and semiconductor industry, written
+from the filings.
+
+
+================================================================
+HONESTY NOTES — do not delete
+================================================================
+
+- This book contains no price targets, no recommendations to buy or
+  sell any security, and no share-price predictions. Never market it
+  as investment advice or imply that it is. That restraint is the
+  product, not a limitation of it.
+- Every figure in the book carries a date and a named source. Do not
+  quote a figure from it in marketing copy without carrying the date
+  across.
+- Do not claim endorsement by, or a relationship with, any company
+  named in the book.
+- Do not quote reviews, rankings or sales figures the book does not
+  have.
+- The figures are snapshots as at August 2026 and will date. The book
+  says so openly and tells the reader where to find current numbers.
+  Marketing copy should not imply the data stays current.
