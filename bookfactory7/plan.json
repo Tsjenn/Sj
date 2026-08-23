@@ -1069,7 +1069,7 @@
             ]
           },
           "brief": "A buyer's chapter: the questions to ask any vendor, the difference between consumer and business terms, lock-in, and why capability comparisons date fast while these questions do not.",
-          "status": "todo",
+          "status": "done",
           "tables": "vendor question checklist table"
         }
       ]
