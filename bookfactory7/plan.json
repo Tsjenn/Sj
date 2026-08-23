@@ -548,7 +548,7 @@
             ]
           },
           "brief": "Bring engineering discipline to everyday use: define what good looks like before you prompt, keep a small set of real test cases, and re-run them when you change anything. The single habit that separates professionals from dabblers.",
-          "status": "todo"
+          "status": "done"
         },
         {
           "id": "ch29",
