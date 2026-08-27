@@ -1,0 +1,172 @@
+================================================================
+GETTING EYES ON THE SILICON LEDGER
+amazon.com/dp/B0HG7RHNL4
+================================================================
+
+THE HONEST MECHANICS FIRST
+
+Amazon shows books that already sell. A brand-new book with no reviews
+gets almost no organic visibility no matter how good its keywords are.
+That is the cold-start problem and it is real.
+
+So there are exactly three ways to get seen:
+
+  1. PAY for it (Amazon Ads). Reliable. Costs money.
+  2. BRING your own traffic (LinkedIn, your site). Free. Costs time.
+  3. CONVERT better when someone does land. Free. This is A+ Content.
+
+There is no fourth way, and nothing here is automatic. I cannot run
+your ads, post to your accounts, or get you reviews — those need your
+account, your money and your name. What I have done is make each of
+them a copy-paste job instead of an afternoon.
+
+Do them in this order: 3, then 2, then 1. Fix the page before you send
+anyone to it, or you pay to send people to a page that does not sell.
+
+
+================================================================
+STEP 3 FIRST — A+ CONTENT (FREE, 20 MINUTES, DO IT TODAY)
+================================================================
+
+Most self-published authors never do this. It is free and it directly
+raises the share of visitors who buy.
+
+WHERE: KDP Bookshelf > the three dots next to the book > Edit A+
+Content. Or go to KDP > Marketing > A+ Content Manager.
+
+Choose "Basic" A+ Content. Add these modules in this order:
+
+MODULE 1 — "Standard Image Header with Text"
+  Image:  marketing/aplus/01-header-970x600.jpg
+  Headline: (leave blank — the image carries it)
+
+MODULE 2 — "Standard Three Images with Text"
+  Image 1: marketing/aplus/02-tile-a-300x300.jpg
+  Image 2: marketing/aplus/03-tile-b-300x300.jpg
+  Image 3: marketing/aplus/04-tile-c-300x300.jpg
+
+MODULE 3 — "Standard Image & Light Text Overlay"
+  Image:  marketing/aplus/05-banner-970x300.jpg
+
+Submit. Amazon reviews it in about 7 days. Do the same for the AI book
+and MATCHA afterwards — the images are reusable in style.
+
+WHILE YOU ARE THERE — AUTHOR CENTRAL (FREE, 10 MINUTES)
+  author.amazon.com. Claim all your books. Add a photo and this bio:
+
+  Tang Shiuan Jenn is a qualified chartered accountant. He writes about
+  artificial intelligence and the semiconductor industry from the
+  filings rather than the press releases, and about the people a
+  household depends on and never mentions.
+
+  Active author pages rank better than abandoned ones. Update it when
+  you publish.
+
+
+================================================================
+STEP 2 — BRING YOUR OWN TRAFFIC (FREE, 10 MIN A DAY)
+================================================================
+
+Not TikTok. LinkedIn. The buyer for this book is a finance
+professional, and on LinkedIn "chartered accountant who read all the
+filings" is credible in a way it can never be on TikTok.
+
+Ten posts are written for you in LINKEDIN-POSTS.txt. One a day. Do not
+sell the book in the post — post the useful fact, and let the book sit
+in your profile. People who find you useful will go looking.
+
+Rules that matter on LinkedIn:
+  - No external link in the post itself. It suppresses reach. Put the
+    Amazon link in the FIRST COMMENT, and in your profile's Featured
+    section.
+  - First two lines are everything — the rest is hidden behind
+    "see more".
+  - Reply to every comment within the first hour.
+
+
+================================================================
+STEP 1 LAST — AMAZON ADS (COSTS MONEY, ONLY AFTER A+ IS LIVE)
+================================================================
+
+Do not start until the A+ content is approved and live.
+
+CAMPAIGN SETUP
+  Type:            Sponsored Products
+  Targeting:       Manual
+  Bid strategy:    Dynamic bids — down only
+  Daily budget:    Start at USD 5. Not more. This is a test, not a
+                   launch.
+  Default bid:     USD 0.30
+  Run for:         14 days before you judge anything
+
+KEYWORD TARGETS — paste these as PHRASE match
+
+  chip war
+  semiconductor industry
+  nvidia book
+  ai bubble
+  artificial intelligence business
+  technology investing
+  financial statement analysis
+  how to read financial statements
+  taiwan semiconductor
+  ai infrastructure
+  data center investing
+  openai book
+  silicon valley business book
+  tech industry analysis
+  asml
+
+PRODUCT TARGETS — target the detail pages of books your reader already
+buys. Search each on Amazon, copy its ASIN, paste into Product
+Targeting:
+
+  Chip War (Chris Miller)
+  The Everything Store
+  Too Big to Fail
+  The Big Short
+  Barbarians at the Gate
+
+This is the highest-intent targeting available to you: people already
+looking at exactly this kind of book.
+
+WHAT TO WATCH AFTER 14 DAYS
+  Impressions under 1,000  -> your bid is too low, raise to 0.45
+  Clicks but no sales      -> the PAGE is the problem, not the ad
+  ACOS above 100%          -> normal at first for a new book; it means
+                              you are paying more than you earn per
+                              sale. Decide if that is worth it for the
+                              ranking, or stop.
+
+BUDGET DISCIPLINE
+  Set a hard monthly cap you would not mind losing entirely. Treat the
+  first month as tuition, not investment. If USD 150 over a month
+  produces no sales, stop and put the money nowhere — do not double it.
+
+
+================================================================
+WHAT I WILL NOT SUGGEST, AND WHY
+================================================================
+
+Buying reviews, review-swap groups, or asking friends to post verified
+reviews they did not earn. All of it violates Amazon's terms, gets
+books delisted, and it is the one thing that would genuinely destroy a
+chartered accountant's credibility if it surfaced.
+
+The book's whole positioning is that it does not fake numbers. Faking
+its reviews would be the exact same lie, one level up.
+
+
+================================================================
+THE HONEST EXPECTATION
+================================================================
+
+A+ content will lift conversion. LinkedIn will bring dozens, not
+thousands. Ads will cost more than they return at first, and may never
+break even on a single title.
+
+None of that adds up to a living. It adds up to a book that sells
+occasionally and a name that becomes known in a small professional
+circle — which is worth something, but as a credential, not an income.
+
+The income is in the plan in INCOME-PLAN.txt, and it is not on Amazon.

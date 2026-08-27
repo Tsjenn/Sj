@@ -1,0 +1,191 @@
+================================================================
+TEN LINKEDIN POSTS — ONE A DAY
+Copy, paste, post. Amazon link goes in the FIRST COMMENT, never in
+the post body (external links suppress reach).
+================================================================
+
+Every fact below is verified and sourced inside the book. Do not
+embellish any of them. The restraint is the reason people will believe
+the next one.
+
+
+---------- DAY 1 ----------
+
+In one trading session, Nvidia lost about 589 billion dollars of market
+value.
+
+No fab closed. No product failed. Headcount barely moved.
+
+That day taught me most people — including many finance people — have
+never been told what a market capitalisation actually is. It is the
+last traded price multiplied by every share in issue. It is a price, not
+a pile of money, and it is set at the margin by whoever traded last.
+
+27 January 2025. Reported by CNBC and Bloomberg the same day.
+
+If you hold tech shares in a fund, you own a piece of that number.
+
+
+---------- DAY 2 ----------
+
+Reported profit is partly an assumption. Here is the one that matters
+most right now.
+
+A data centre is full of servers. Those servers are capitalised as
+assets and depreciated over an assumed useful life. Extend that assumed
+life from four years to six, and the annual depreciation charge falls.
+Reported profit rises.
+
+Not a cent of cash has moved. Nothing has been sold. The machines are
+the same machines.
+
+Several large operators extended those assumed lives over the past few
+years, disclosed it properly in the notes, and reported the effect.
+
+The question nobody can answer yet: does AI hardware actually age the
+way general-purpose servers did?
+
+
+---------- DAY 3 ----------
+
+Two of the most important companies in artificial intelligence publish
+no audited accounts at all.
+
+Anthropic closed a round at a 965 billion dollar valuation in May 2026.
+OpenAI at 852 billion in March 2026.
+
+A private valuation is not a market price. It is the price of the last
+shares sold, on terms you cannot see, often with preferences attached
+that mean the headline number overstates what ordinary shares are worth.
+
+We quote those figures next to Apple's and Microsoft's as though they
+were the same kind of number. They are not.
+
+
+---------- DAY 4 ----------
+
+The most important company in the world is one most people cannot name.
+
+TSMC manufactures the leading-edge chips for Nvidia, Apple, AMD,
+Broadcom and Qualcomm. Not some of them. Effectively all of them.
+
+Its 2026 capital expenditure guidance was raised to 60–64 billion
+dollars. That single company's spending decision sets the ceiling on
+how much AI compute the world can have in 2029, because a fab takes
+about three years to build.
+
+Capacity is decided years before demand shows up. That is why this
+industry has never escaped its cycle.
+
+
+---------- DAY 5 ----------
+
+Amazon and Google are both major investors in Anthropic.
+
+They compete directly. They both put capital into the same laboratory,
+alongside compute agreements, without either taking control.
+
+Once you start drawing these lines, the same companies appear three
+times in one diagram: as supplier, as customer, and as shareholder.
+
+None of that is hidden. All of it is disclosed. But it is disclosed in
+three different places, on three different timetables, and almost
+nobody assembles it.
+
+
+---------- DAY 6 ----------
+
+Why memory shares moved so much, in plain terms.
+
+DRAM was for decades the worst business in semiconductors — a
+commodity, brutally capital-intensive, with a cycle that destroyed more
+capital than it made. Dozens of makers became three.
+
+Then AI accelerators turned out to be limited by memory bandwidth, not
+raw arithmetic. High-bandwidth memory solves that. It is hard to make,
+yields poorly, and has to be qualified by the customer.
+
+A commodity became a specified, contracted, sold-out component.
+
+Whether that breaks the cycle or merely lengthens it is the open
+question. Every protection in that list has an expiry date.
+
+
+---------- DAY 7 ----------
+
+A supplier that holds equity in its own customers is not doing anything
+improper. But it is worth understanding what it does to the numbers.
+
+If a supplier invests in a customer, and the customer buys the
+supplier's product, both companies report growth. The cash has moved in
+a circle. Revenue recognition rules exist precisely for this, and
+disclosure requirements exist precisely for this.
+
+The point is not suspicion. The point is that a circle carries less
+information than a straight line, and you should know which one you
+are looking at.
+
+The telecom equipment industry learned this in 2001.
+
+
+---------- DAY 8 ----------
+
+The constraint on AI has already moved twice, and most commentary is
+still on the first one.
+
+It was chips. Then it was memory. Then advanced packaging.
+
+It is now becoming electricity — interconnection queues, transformer
+lead times, and whether a site can actually get power this decade.
+
+Profit follows the binding constraint. Whoever owns the current
+bottleneck earns the rent, until the bottleneck moves.
+
+Watch where it goes next. That is the whole game.
+
+
+---------- DAY 9 ----------
+
+The hardest numbers in any set of accounts are the ones nobody can
+observe.
+
+Not the transactions — those have invoices. The estimates. How long a
+machine will earn its keep. What a minority stake in a private company
+is worth. Whether a contract with a company that is simultaneously
+customer, supplier and shareholder created one performance obligation
+or four.
+
+Every decisive judgement in this industry rests on the weakest tier of
+evidence available to an auditor.
+
+That is not a scandal. It is the job. But it should change how you read
+a headline profit figure.
+
+
+---------- DAY 10 ----------
+
+I spent months reading the filings of the AI and semiconductor industry
+instead of the coverage of it, and wrote down what the accounts
+actually say.
+
+77 chapters. Every figure carries the date it refers to and the source
+it came from, because a market capitalisation is a photograph, not a
+fact.
+
+No price targets. No predictions. No recommendation to buy or sell
+anything — the bull case and the bear case are each argued at full
+strength and then left with the reader.
+
+It is called THE SILICON LEDGER. Link in the comments.
+
+
+================================================================
+HOW TO POST
+================================================================
+
+- One a day. Same time each day if you can.
+- First two lines decide everything; the rest hides behind "see more".
+- Amazon link in the FIRST COMMENT, not the post.
+- Reply to every comment in the first hour.
+- Do not post all ten in a week. Ten days, then repeat the format with
+  new facts from the book — you have 77 chapters of material.
