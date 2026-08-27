@@ -1,0 +1,234 @@
+================================================================
+GETTING YOUR FIRST PAYING CLIENT
+Everything except the sending. That part is yours.
+================================================================
+
+WHY THIS AND NOT ANOTHER PRODUCT
+
+Three clients at a professional day rate is a real second income.
+Three thousand strangers buying a nine-dollar file is not achievable
+without an audience you do not have.
+
+You need three yeses. You have not yet asked three people.
+
+Attach: dist/AI-Training-One-Pager.pdf
+
+
+================================================================
+BEFORE YOU SEND ANYTHING — ONE EMAIL
+================================================================
+
+To MIA, in writing, and keep the reply:
+
+  "I am a member without a practising certificate, employed in
+  industry. I intend to deliver paid training workshops to finance
+  teams on the use of AI tools — no audit, no assurance, no tax or
+  accounting services, no signing of anything, and no representation
+  that I am in public practice. Please confirm whether this falls
+  outside public practice for the purposes of the By-Laws, and
+  whether any restriction applies to how I describe myself."
+
+Do not advertise anything until that reply is in your inbox. You know
+this area better than I do; I am flagging it because it is the one
+thing that could turn a business into a disciplinary matter.
+
+
+================================================================
+WHO TO ASK — MAKE THIS LIST TONIGHT
+================================================================
+
+Twenty names. Not a market. People who already know you:
+
+  - Every finance manager or controller you have worked with
+  - Ex-colleagues who moved to other companies
+  - Your university cohort — some of them run teams now
+  - Anyone in your professional body's local circle
+  - Your own company's suppliers, customers and auditors
+  - Family friends who own a business
+
+Rank them by how likely they are to reply, NOT by how big the company
+is. Your first paying client will almost certainly be someone who
+already trusts you. Start with the easy five.
+
+
+================================================================
+MESSAGE 1 — THE OPENER (send this to five people this week)
+================================================================
+
+Do not pitch. Ask a question you genuinely want the answer to.
+
+  Hi [name],
+
+  A question rather than a favour. Is your finance team using AI tools
+  yet — and if they are, is there a written rule about what can be
+  typed into them?
+
+  I have been looking at this for a while and almost every team I ask
+  says the same thing: people are already using it, and nobody has
+  written anything down.
+
+  Curious what it looks like on your side.
+
+  [your name]
+
+WHY IT WORKS: it is a real question, it costs them nothing to answer,
+and the answer is almost always "yes, and no" — which opens the door
+without you having pushed on it.
+
+
+================================================================
+MESSAGE 2 — IF THEY REPLY "YES, AND NO WRITTEN RULE"
+================================================================
+
+  That is what I keep hearing.
+
+  I have put together a half-day session for finance teams on exactly
+  this — how the tools work, how to write a prompt that is actually
+  useful, how to check the output, where not to use them at all, and
+  we draft your one-page policy in the room so you leave with it
+  written.
+
+  One-pager attached in case it is useful to you or someone else.
+
+  Happy to run through it in fifteen minutes if you want — no
+  obligation either way.
+
+ATTACH THE ONE-PAGER HERE. Not before.
+
+
+================================================================
+MESSAGE 3 — IF THEY SAY "SEND ME SOMETHING" OR GO QUIET
+================================================================
+
+  No rush on this at all.
+
+  If it is easier, I can do a free thirty-minute version for your team
+  — no policy drafting, just the part on what these tools get wrong
+  and how to check them. It is genuinely useful on its own, and you
+  can decide afterwards whether the full session is worth it.
+
+  Either way, good to hear from you.
+
+WHY A FREE THIRTY MINUTES: your problem is not price, it is that
+nobody has seen you teach. One free session in front of a real team
+gives you a reference, a testimonial you actually earned, and the
+confidence that the material lands. Do this two or three times, then
+stop giving it away.
+
+
+================================================================
+MESSAGE 4 — THE ONE THAT USUALLY WORKS BEST
+================================================================
+
+To someone who is NOT the buyer but knows one:
+
+  Hi [name],
+
+  Do you know anyone running a finance team who would find a session
+  on using AI properly useful? I have built one — practical, half a
+  day, and it is as clear about where not to use these tools as where
+  to start.
+
+  Not asking you to sell anything. Just a name, if one comes to mind.
+
+Referrals convert far better than approaches. Ask ten people for a
+name and you will get more meetings than from a hundred cold messages.
+
+
+================================================================
+MESSAGE 5 — AFTER A SESSION, TO THE PERSON WHO BOOKED IT
+================================================================
+
+  Thanks for having me — the questions from your team were better
+  than most.
+
+  Two things. First, the follow-up answers I promised are attached.
+
+  Second, if it was useful, the single most helpful thing you could do
+  is introduce me to one other person who runs a team like yours. That
+  is how this grows.
+
+Ask every time. Most people are willing and simply never thought of it.
+
+
+================================================================
+PRICING — YOUR DECISION, BUT HERE IS THE STRUCTURE
+================================================================
+
+I will not put a number on your work. What I can give you is the
+shape most professional training is priced on, so you are not
+inventing it under pressure:
+
+  TIER 1  Free 30-minute taster        First 2-3 only. Then never again.
+  TIER 2  Half day, up to 20 people    Your core offer.
+  TIER 3  Full day with live workshop  Roughly double Tier 2.
+  TIER 4  Half day + policy review
+          + follow-up session at 30 days   Your premium.
+
+THREE RULES
+
+  1. Quote a fee, never an hourly rate. You are being paid for what
+     the team leaves with, not for the hours you stand there.
+  2. Price the second client higher than the first. You will be better
+     and you will have a reference.
+  3. Never discount. If they cannot afford Tier 2, sell Tier 2 with
+     fewer people — do not sell the same thing for less.
+
+Benchmark it against what a decent professional-body course costs in
+Malaysia per delegate, multiplied by the number of delegates, and set
+your fee somewhere sensible below that. You know that market. I do not.
+
+
+================================================================
+WHAT YOU ACTUALLY DELIVER — THE HALF-DAY AGENDA
+================================================================
+
+You already own all of this. It is in dist/AI-For-Finance-Teams.zip.
+
+  0:00  What this is, and one honest warning
+        The tool is most persuasive on the things it invented.
+
+  0:15  A working mental model
+        No maths. Why it predicts, why it is confident when wrong.
+
+  0:45  Writing a prompt that works
+        The six-part frame. Live: rewrite one of THEIR real tasks.
+
+  1:30  Break
+
+  1:45  Checking the output
+        Figures, sources, reasoning. The one-page card.
+        Live: hand out an answer with a planted error, let them find it.
+
+  2:30  Where not to use it
+        Ten situations. This is the part they remember.
+
+  3:00  Draft your policy, together
+        Nine questions on screen, filled in as a group.
+        They leave with it written.
+
+  3:45  What to do first
+        Score two tasks against the five factors. Assign an owner.
+
+  4:00  Close
+
+THE PLANTED-ERROR EXERCISE IS THE ONE THAT SELLS THE NEXT BOOKING.
+Give them a confident, fluent, wrong answer and watch how long it
+takes the room to catch it. It usually takes a while. That moment is
+worth more than an hour of your explaining.
+
+
+================================================================
+THE HONEST ODDS
+================================================================
+
+Ask twenty people. Expect maybe six replies, two conversations, and
+one yes. That one yes is a real client and a reference, and the second
+is far easier than the first.
+
+If you ask twenty and get nothing, tell me and we will look at the
+messages rather than assume the market said no.
+
+But do not tell me it did not work until you have actually asked
+twenty people. That is the whole job, and it is the only part I
+cannot do for you.
