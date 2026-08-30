@@ -312,7 +312,12 @@ def render_index(arts):
             '<h2>Free tool: AI use policy builder</h2>'
             '<p>Answer nine questions and get a one-page AI policy your team can '
             'follow. No signup, and nothing you type leaves your device.</p>'
-            '</a></div>' % SITE)
+            '</a><a class="gcard" href="%s/tools/jb-sg-pay/">'
+            '<h2>Free tool: Singapore offer vs Johor offer</h2>'
+            '<p>A Singapore salary and a Johor salary are not comparable numbers. '
+            'Put both in and read the take-home in ringgit, after tax, EPF and the '
+            'commute. Every rate is editable and sourced.</p>'
+            '</a></div>' % (SITE, SITE))
     return (head + '<article class="wrap"><h1>Guides</h1>'
             '<p class="lede">Straight answers on sleep, games and getting organised. '
             'Written to be worth your time.</p>'
@@ -323,6 +328,7 @@ def render_index(arts):
 def render_sitemap(arts):
     urls = [(SITE + "/", "1.0"), (SITE + "/guides/", "0.8"),
             (SITE + "/tools/ai-policy/", "0.9"),
+            (SITE + "/tools/jb-sg-pay/", "0.9"),
             (SITE + "/ai-finance/", "0.9"),
             (SITE + "/sleep/", "0.9"), (SITE + "/skyline/", "0.8"),
             (SITE + "/book/", "0.8"), (SITE + "/score-lab/", "0.8"),

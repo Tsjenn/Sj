@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Singapore Job vs Johor Job — What Actually Lands in Your Pocket</title>
+<meta name="description" content="A free cross-border pay model. Enter a Singapore offer and a Johor offer, and see the take-home in ringgit after tax, EPF, and the daily commute. Every rate is editable and sourced.">
+<meta property="og:title" content="Causeway Pay Check — Singapore offer vs Johor offer, in ringgit">
+<meta property="og:description" content="Enter the offer. See what actually lands after tax, EPF and the commute. Free, nothing leaves your device, every assumption editable.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://tsjenn.github.io/Sj/tools/jb-sg-pay/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --paper:#F2F3F7; --surface:#FFFFFF; --surface-2:#FAFAFD;
+  --line:#DCDEE9; --line-soft:#E9EAF2;
+  --ink:#14161F; --muted:#666C82;
+  --accent:#2E3A73; --accent-ink:#2E3A73; --accent-soft:#E6E8F4;
+  --amber:#9A5410; --amber-soft:#FBEEDD;
+  --pos:#1C6349; --neg:#95292C;
+  --shadow:0 1px 2px rgba(20,22,31,.05),0 8px 24px -18px rgba(20,22,31,.35);
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1016; --surface:#171A23; --surface-2:#1D202B;
+    --line:#2A2E3C; --line-soft:#22262F;
+    --ink:#E9EAF1; --muted:#9AA0B6;
+    --accent:#93A2E8; --accent-ink:#AEB9F0; --accent-soft:#1E2340;
+    --amber:#DFA35C; --amber-soft:#2E2415;
+    --pos:#63C098; --neg:#E2908F;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -20px rgba(0,0,0,.9);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1016; --surface:#171A23; --surface-2:#1D202B;
+  --line:#2A2E3C; --line-soft:#22262F;
+  --ink:#E9EAF1; --muted:#9AA0B6;
+  --accent:#93A2E8; --accent-ink:#AEB9F0; --accent-soft:#1E2340;
+  --amber:#DFA35C; --amber-soft:#2E2415;
+  --pos:#63C098; --neg:#E2908F;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -20px rgba(0,0,0,.9);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);
+  line-height:1.6;font-size:16px;padding-bottom:96px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* ---------- masthead ---------- */
+.top{border-bottom:1px solid var(--line);background:var(--surface)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:14px 20px}
+.brand{font-family:var(--display);font-weight:700;font-size:1.1rem;
+  color:var(--accent-ink);text-decoration:none;letter-spacing:-.01em}
+.top nav{display:flex;gap:18px}
+.top nav a{color:var(--muted);text-decoration:none;font-size:.88rem}
+.top nav a:hover{color:var(--ink)}
+
+/* ---------- hero ---------- */
+.hero{padding:52px 0 8px;max-width:44rem}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(2rem,5.2vw,3.1rem);
+  line-height:1.06;letter-spacing:-.025em;text-wrap:balance}
+h1 em{font-style:italic;color:var(--accent-ink)}
+.lede{margin-top:18px;font-size:1.06rem;color:var(--muted);max-width:36rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tag{font-size:.78rem;font-weight:500;padding:5px 11px;border-radius:2px;
+  background:var(--accent-soft);color:var(--accent-ink);
+  font-family:var(--mono);letter-spacing:.01em}
+
+/* ---------- layout ---------- */
+.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.02fr);
+  gap:28px;align-items:start;padding:36px 0 24px}
+@media(max-width:920px){.cols{grid-template-columns:minmax(0,1fr);padding-top:28px}}
+
+.panel{min-width:0;background:var(--surface);border:1px solid var(--line);
+  border-radius:4px;box-shadow:var(--shadow)}
+.panel > h2{font-family:var(--display);font-weight:600;font-size:1.18rem;
+  letter-spacing:-.01em;padding:20px 22px 0}
+.panel > .sub{padding:2px 22px 0;font-size:.87rem;color:var(--muted)}
+.stack{display:flex;flex-direction:column;gap:26px;padding:20px 22px 24px}
+
+fieldset{min-width:0;border:0;display:flex;flex-direction:column;gap:14px}
+legend{font-family:var(--mono);font-size:.72rem;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--accent-ink);padding-bottom:10px;
+  border-bottom:1px solid var(--line-soft);width:100%;margin-bottom:4px}
+.row{display:grid;grid-template-columns:minmax(0,1fr) 128px;gap:12px;align-items:center}
+@media(max-width:560px){.row{grid-template-columns:minmax(0,1fr);gap:7px}
+  .row > .pre,.row > input,.row > select{max-width:180px}}
+.row.wide{grid-template-columns:1fr}
+.row label{font-size:.92rem;font-weight:500}
+.row .hint{display:block;font-weight:400;font-size:.79rem;color:var(--muted);
+  margin-top:1px;line-height:1.45}
+input[type=number],input[type=text],select{width:100%;padding:9px 10px;
+  border:1px solid var(--line);border-radius:3px;background:var(--surface-2);
+  color:var(--ink);font-family:var(--mono);font-size:.94rem;
+  font-variant-numeric:tabular-nums;text-align:right}
+select{font-family:var(--body);text-align:left}
+input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visible{
+  outline:2px solid var(--accent);outline-offset:2px}
+.pre{position:relative}
+.pre input{padding-left:34px;text-align:right}
+.pre span{position:absolute;left:10px;top:50%;transform:translateY(-50%);
+  font-family:var(--mono);font-size:.8rem;color:var(--muted);pointer-events:none}
+.checks{display:flex;flex-direction:column;gap:9px}
+.checks label{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:flex-start;
+  font-size:.9rem;font-weight:400;line-height:1.45}
+.checks label > span.hint{flex-basis:100%;margin-top:0;padding-left:26px}
+.checks label > input + *{flex:1 1 auto;min-width:0}
+.checks input{margin-top:4px;flex:none;width:16px;height:16px;accent-color:var(--accent)}
+
+/* ---------- results ---------- */
+.results{position:sticky;top:20px}
+@media(max-width:920px){.results{position:static}}
+.ledger{width:100%;border-collapse:collapse;font-size:.9rem}
+.ledger th,.ledger td{padding:9px 10px;text-align:right;
+  border-bottom:1px solid var(--line-soft);font-variant-numeric:tabular-nums}
+.ledger thead th{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted);vertical-align:bottom;
+  border-bottom:1px solid var(--line);font-weight:500;line-height:1.3}
+.ledger th:first-child,.ledger td:first-child{text-align:left;font-weight:400}
+.ledger td{font-family:var(--mono)}
+.ledger td:first-child{font-family:var(--body);color:var(--muted)}
+.ledger tr.total td{font-weight:600;font-size:1rem;color:var(--ink);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ledger tr.total td:first-child{color:var(--ink);font-weight:600}
+.ledger tr.gap td{padding-top:12px;border-bottom:0}
+.ledger .delta{font-weight:600}
+.pos{color:var(--pos)}.neg{color:var(--neg)}
+.tblwrap{overflow-x:auto;padding:16px 22px 6px}
+
+.headline{padding:20px 22px 0}
+.headline .big{font-family:var(--mono);font-size:clamp(1.5rem,4.6vw,2.05rem);
+  font-weight:600;letter-spacing:-.02em;line-height:1.15;
+  font-variant-numeric:tabular-nums;color:var(--amber)}
+.headline .cap{font-size:.85rem;color:var(--muted);margin-top:4px;max-width:30rem}
+
+.flag{margin:14px 22px 0;padding:12px 14px;border-radius:3px;font-size:.85rem;
+  line-height:1.5;background:var(--amber-soft);color:var(--ink);
+  border-left:3px solid var(--amber)}
+.flag strong{display:block;font-size:.78rem;font-family:var(--mono);
+  letter-spacing:.09em;text-transform:uppercase;color:var(--amber);margin-bottom:3px}
+.flag:last-of-type{margin-bottom:20px}
+.flag[hidden]{display:none}
+
+details{border-top:1px solid var(--line-soft)}
+details summary{cursor:pointer;padding:14px 22px;font-size:.88rem;font-weight:500;
+  list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";font-family:var(--mono);color:var(--muted);font-size:1.1rem}
+details[open] summary::after{content:"−"}
+details .body{padding:0 22px 20px;font-size:.87rem;color:var(--muted)}
+details .body p{margin-bottom:10px}
+details .body a{color:var(--accent-ink)}
+.srcs{list-style:none;display:flex;flex-direction:column;gap:9px;
+  font-size:.83rem;line-height:1.5}
+.srcs li{padding-left:14px;position:relative}
+.srcs li::before{content:"—";position:absolute;left:0;color:var(--muted);
+  font-family:var(--mono)}
+.srcs b{color:var(--ink);font-weight:600}
+
+/* ---------- prose ---------- */
+.notes{padding:8px 0 64px;max-width:40rem}
+.notes h2{font-family:var(--display);font-weight:600;font-size:1.45rem;
+  letter-spacing:-.015em;margin:36px 0 12px}
+.notes h3{font-size:1rem;font-weight:600;margin:22px 0 6px}
+.notes p{margin-bottom:14px;color:var(--muted)}
+.notes p strong{color:var(--ink);font-weight:600}
+.notes ul{margin:0 0 14px 18px;color:var(--muted)}
+.notes li{margin-bottom:7px}
+.notes a{color:var(--accent-ink)}
+
+/* ---------- sticky mobile summary ---------- */
+.dock{position:fixed;left:0;right:0;bottom:0;background:var(--surface);
+  border-top:1px solid var(--line);padding:10px 20px;display:none;
+  box-shadow:0 -8px 24px -20px rgba(0,0,0,.6);z-index:20}
+.dock .inner{max-width:1080px;margin:0 auto;display:flex;gap:18px;
+  justify-content:space-between;font-size:.8rem}
+.dock .cell{flex:1;min-width:0}
+.dock .k{color:var(--muted);font-size:.72rem;font-family:var(--mono);
+  letter-spacing:.07em;text-transform:uppercase}
+.dock .v{font-family:var(--mono);font-weight:600;font-size:1rem;
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+@media(max-width:920px){.dock{display:block}}
+
+footer{border-top:1px solid var(--line);padding:22px 0 40px;
+  font-size:.82rem;color:var(--muted)}
+footer a{color:var(--accent-ink)}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap">
+  <a class="brand" href="../../">Clarity</a>
+  <nav><a href="../../guides/">Guides</a><a href="../ai-policy/">AI policy tool</a></nav>
+</div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <p class="eyebrow">Cross-border pay model · Johor ⇄ Singapore</p>
+    <h1>The offer looks bigger. <em>Does it land bigger?</em></h1>
+    <p class="lede">A Singapore salary and a Johor salary are not comparable numbers.
+      Different tax, different retirement deductions, a currency in between, and — if you
+      keep sleeping in Johor — a commute you pay for twice a day. Put all three offers in,
+      and read the answer in ringgit.</p>
+    <div class="tags">
+      <span class="tag">Free, no signup</span>
+      <span class="tag">Nothing leaves your device</span>
+      <span class="tag">Every rate editable + sourced</span>
+    </div>
+  </section>
+
+  <div class="cols">
+
+    <!-- ============ INPUTS ============ -->
+    <form class="panel" id="form" autocomplete="off">
+      <h2>Your three columns</h2>
+      <p class="sub">Everything recalculates as you type.</p>
+      <div class="stack">
+
+        <fieldset>
+          <legend>Column 1 — the job you have now (Malaysia)</legend>
+          <div class="row">
+            <label for="myGross">Monthly gross pay
+              <span class="hint">Basic plus fixed allowances, before deductions.</span></label>
+            <div class="pre"><span>RM</span><input type="number" id="myGross" value="9000" min="0" step="100"></div>
+          </div>
+          <div class="row">
+            <label for="myMonths">Months paid per year
+              <span class="hint">12, plus any contractual bonus months.</span></label>
+            <input type="number" id="myMonths" value="12" min="1" max="24" step="0.5">
+          </div>
+          <div class="row">
+            <label for="myEpf">EPF — your share
+              <span class="hint">Statutory employee rate.</span></label>
+            <div class="pre"><span>%</span><input type="number" id="myEpf" value="11" min="0" max="20" step="0.5"></div>
+          </div>
+          <div class="row">
+            <label for="myOther">Other tax reliefs you claim
+              <span class="hint">Beyond the automatic RM9,000 personal relief and the RM4,000 EPF relief — life insurance, lifestyle, medical, children, and so on.</span></label>
+            <div class="pre"><span>RM</span><input type="number" id="myOther" value="0" min="0" step="500"></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Column 2 — a Singapore job, still living in Johor</legend>
+          <div class="row">
+            <label for="sgGross">Monthly gross pay
+              <span class="hint">In Singapore dollars.</span></label>
+            <div class="pre"><span>S$</span><input type="number" id="sgGross" value="4500" min="0" step="100"></div>
+          </div>
+          <div class="row">
+            <label for="sgMonths">Months paid per year
+              <span class="hint">12, plus AWS or a contractual bonus if the offer includes one.</span></label>
+            <input type="number" id="sgMonths" value="12" min="1" max="24" step="0.5">
+          </div>
+          <div class="row">
+            <label for="sgRelief">Singapore tax reliefs
+              <span class="hint">Earned income relief is S$1,000 for most people under 55. Total reliefs are capped at S$80,000.</span></label>
+            <div class="pre"><span>S$</span><input type="number" id="sgRelief" value="1000" min="0" step="500"></div>
+          </div>
+          <div class="row">
+            <label for="fare">Commute — one-way fare
+              <span class="hint">Rail, bus, or the running cost of driving. In ringgit.</span></label>
+            <div class="pre"><span>RM</span><input type="number" id="fare" value="18.60" min="0" step="0.1"></div>
+          </div>
+          <div class="row">
+            <label for="trips">Crossings per working day</label>
+            <input type="number" id="trips" value="2" min="0" max="4" step="1">
+          </div>
+          <div class="row">
+            <label for="days">Working days per year
+              <span class="hint">Roughly 240 after weekends and leave.</span></label>
+            <input type="number" id="days" value="240" min="0" max="365" step="5">
+          </div>
+          <div class="row">
+            <label for="mins">Door-to-door, one way
+              <span class="hint">Minutes. Not costed — shown so you can see the hours.</span></label>
+            <input type="number" id="mins" value="75" min="0" max="300" step="5">
+          </div>
+          <div class="row">
+            <label for="fx">Exchange rate used
+              <span class="hint">One Singapore dollar, in ringgit.</span></label>
+            <input type="number" id="fx" value="3.168" min="0.1" step="0.001">
+          </div>
+          <div class="row wide">
+            <div class="checks">
+              <label><input type="checkbox" id="myTax">
+                Also assessed in Malaysia, with credit for the Singapore tax paid
+                <span class="hint">Leave this off if the foreign-source exemption applies to you. Tick it to see the case where it does not — see the note below on where you are actually tax resident.</span></label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Column 3 — a Johor job inside the JS-SEZ</legend>
+          <div class="row">
+            <label for="sezGross">Monthly gross pay
+              <span class="hint">In ringgit. A Johor-based employer, paid in Malaysia.</span></label>
+            <div class="pre"><span>RM</span><input type="number" id="sezGross" value="21000" min="0" step="500"></div>
+          </div>
+          <div class="row">
+            <label for="sezMonths">Months paid per year</label>
+            <input type="number" id="sezMonths" value="12" min="1" max="24" step="0.5">
+          </div>
+          <div class="row wide">
+            <div class="checks">
+              <label><input type="checkbox" id="sezClean">
+                I have had no Malaysian employment income in the last 24 months</label>
+              <label><input type="checkbox" id="sezRole">
+                My occupation is on Malaysia's critical occupations list, in a qualifying JS-SEZ sector, for a JS-SEZ approved employer</label>
+            </div>
+          </div>
+        </fieldset>
+
+      </div>
+    </form>
+
+    <!-- ============ RESULTS ============ -->
+    <div class="results">
+      <div class="panel">
+        <div class="headline">
+          <p class="big" id="bigline">—</p>
+          <p class="cap" id="bigcap">Fill in the offers on the left.</p>
+          <p class="cap" style="margin-top:8px;font-size:.8rem">The fields start with sample
+            figures. Replace every one of them with the real offer before you read anything
+            into this.</p>
+        </div>
+
+        <div class="tblwrap">
+          <table class="ledger">
+            <thead><tr>
+              <th>Per year, in ringgit</th>
+              <th>Now<br>Malaysia</th>
+              <th>Singapore<br>live in JB</th>
+              <th>JS-SEZ<br>Johor</th>
+            </tr></thead>
+            <tbody id="body"></tbody>
+          </table>
+        </div>
+
+        <div class="flag" id="sezFlag" hidden></div>
+        <div class="flag" id="resFlag"></div>
+
+        <details>
+          <summary>The rates this is using, and where they come from</summary>
+          <div class="body">
+            <ul class="srcs">
+              <li><b>Malaysian resident tax, YA2025.</b> Bands of 0%, 1%, 3%, 6%, 11%, 19%, 25%, 26%, 28% and 30%, with the 30% band starting above RM2,000,000. A RM400 rebate applies where chargeable income is RM35,000 or less. Rates unchanged since YA2023. Source: <a href="https://www.hasil.gov.my/en/individual/individual-life-cycle/income-declaration/tax-rate/" rel="nofollow noopener" target="_blank">LHDN rate table</a>, checked August 2026.</li>
+              <li><b>Malaysian reliefs.</b> RM9,000 automatic personal relief, plus up to RM4,000 for EPF. Life insurance and takaful is a separate relief of up to RM3,000 — put that, and everything else you claim, in the "other reliefs" field.</li>
+              <li><b>EPF.</b> Employee share 11%. Below RM20,000 a month the actual contribution follows the rounded bands in the Third Schedule of the EPF Act 1991, so the real figure can differ from a flat percentage by a few ringgit.</li>
+              <li><b>Singapore resident tax, YA2026.</b> Thirteen bands: nothing on the first S$20,000, rising to 24% above S$1,000,000. Unchanged from YA2024. No rebate was announced for YA2026. Total reliefs are capped at S$80,000. Source: <a href="https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-residency-and-tax-rates/individual-income-tax-rates" rel="nofollow noopener" target="_blank">IRAS individual income tax rates</a>, checked August 2026.</li>
+              <li><b>CPF.</b> Foreigners on an Employment Pass or S Pass neither pay CPF nor receive employer CPF. That is a large part of why a Singapore gross converts so favourably — and it also means no forced retirement saving on that side. Source: <a href="https://www.cpf.gov.sg/employer/employer-obligations/who-should-receive-cpf-contributions" rel="nofollow noopener" target="_blank">CPF Board</a>, checked August 2026.</li>
+              <li><b>JS-SEZ knowledge worker rate.</b> A flat 15% personal income tax for up to 10 years, in force from 1 January 2025. Announced conditions include monthly pay above RM20,000, no Malaysian employment income in the preceding 24 months, and an occupation on the critical occupations list within a qualifying sector. Source: <a href="https://www.mof.gov.my/portal/en/news/press-release/js-sez-incentive-package-to-drive-high-value-investments-into-johor" rel="nofollow noopener" target="_blank">Ministry of Finance Malaysia</a> incentive package announcement, checked August 2026.</li>
+              <li><b>Foreign-source income.</b> The exemption for foreign-source income received by resident individuals has been extended to 31 December 2036, conditional on the income having been taxed in the country of origin. Source: Budget 2026 measures, checked August 2026.</li>
+              <li><b>Exchange rate.</b> S$1 = RM3.168, mid-market, 28 August 2026. It moves; the field above is editable for a reason.</li>
+              <li><b>Commute fare.</b> The RTS Link is targeted to open on 1 January 2027, and its fares had <em>not</em> been gazetted as at August 2026 — a proposal was due to both governments in the second half of 2026. Reported estimates put a one-way trip around RM15.50 to RM21.70. The RM18.60 default is the midpoint of that reported range, and it is an estimate, not a published fare.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>If you banked the difference instead of spending it</summary>
+          <div class="body">
+            <div class="row" style="margin-bottom:12px">
+              <label for="years" style="font-size:.9rem">Years</label>
+              <input type="number" id="years" value="5" min="1" max="40" step="1">
+            </div>
+            <div class="row" style="margin-bottom:14px">
+              <label for="rate" style="font-size:.9rem">Annual return you assume
+                <span class="hint">Left at zero on purpose. Put in your own number.</span></label>
+              <div class="pre"><span>%</span><input type="number" id="rate" value="0" min="0" max="20" step="0.5"></div>
+            </div>
+            <p id="compound" style="font-family:var(--mono);font-size:1.05rem;color:var(--ink);
+              font-variant-numeric:tabular-nums">—</p>
+            <p style="margin-top:10px">This is arithmetic on a rate you chose. It is not a
+              forecast, not a return anyone is offering you, and not investment advice.
+              A higher salary only compounds if the difference is actually saved rather
+              than absorbed by a bigger life.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ NOTES ============ -->
+  <section class="notes">
+    <h2>What this model does not know</h2>
+    <p>A take-home figure is the easy half of the decision. These are the parts the
+      arithmetic cannot settle, and they are usually the parts that decide it.</p>
+
+    <h3>Where you are actually tax resident</h3>
+    <p>Sleeping in Johor and working in Singapore puts you in the awkward middle. Singapore
+      generally treats a foreigner as tax resident once employment and presence there reach
+      183 days in a calendar year; Malaysia looks at 182 days of physical presence. A daily
+      commuter can plausibly meet the Singapore test while failing to be clearly resident in
+      Malaysia in the way an ordinary employee is — or can be caught by both systems' rules at
+      once. <strong>This model assumes you are taxed as a Singapore resident and that the
+      Malaysian foreign-source exemption covers the income when you bring it home.</strong>
+      That assumption is doing a lot of work. Tick the box in column 2 to see the version
+      where it does not hold, and get the position confirmed by someone in practice before
+      you sign anything.</p>
+
+    <h3>The JS-SEZ 24-month rule is the sharp edge</h3>
+    <p>The 15% rate was designed to draw people <em>back</em>, which is why the announced
+      conditions include having had no Malaysian employment income for the previous two years.
+      If you are employed in Malaysia today, you do not qualify on the day you switch jobs —
+      and this tool falls back to the ordinary resident rates when you say so. That single
+      condition is what turns column 3 from a headline into a plan with a two-year gap in it.</p>
+
+    <h3>The commute is a cost the payslip never shows</h3>
+    <p>The model charges you the fare. It does not charge you the hours, which it shows
+      separately, or what those hours do to a family, a body, or the energy left for anything
+      else. It also cannot know what happens on a bad morning at the checkpoint. Before the RTS
+      Link opens, the crossing is a road crossing, with all the variance that implies.</p>
+
+    <h3>Currency runs both ways</h3>
+    <p>Earning in Singapore dollars while your mortgage, your car loan, your parents and your
+      groceries are in ringgit is a genuine advantage while the ringgit is weak, and a genuine
+      exposure if it strengthens. The rate field is editable so you can run the version you are
+      afraid of, not only the one you are hoping for.</p>
+
+    <h3>And the things with no number at all</h3>
+    <ul>
+      <li>No CPF means no forced retirement saving on the Singapore side. Whatever EPF was quietly doing for you, you now have to do deliberately.</li>
+      <li>Employment protection, notice periods, medical cover and dependant passes differ, and none of it is in the gross.</li>
+      <li>Housing, childcare and schooling stay on the Johor side in column 2 — which is the whole point of that column, and also the reason its numbers look as good as they do.</li>
+    </ul>
+
+    <h2>A note on what this is</h2>
+    <p>This is a planning model, not tax advice, and it is not a substitute for a professional
+      opinion on your own facts. It rounds, it makes the assumptions listed above, and rates
+      change — the ones here were checked in August 2026 and every one of them is editable so
+      the tool stays useful after they move. Nothing you type is sent anywhere; the whole
+      calculation runs in your browser.</p>
+  </section>
+</main>
+
+<div class="dock"><div class="inner">
+  <div class="cell"><div class="k">Singapore vs now</div><div class="v" id="dockA">—</div></div>
+  <div class="cell"><div class="k">JS-SEZ vs now</div><div class="v" id="dockB">—</div></div>
+</div></div>
+
+<footer><div class="wrap">
+  Built as a free tool by <a href="../../">Clarity</a>. See also the
+  <a href="../ai-policy/">AI use policy builder</a> and the
+  <a href="../../guides/">guides</a>.
+</div></footer>
+
+<script>
+(function(){
+  "use strict";
+
+  // --- rate tables: [threshold at which the band starts, rate on the excess] ---
+  // Malaysia, resident individual, YA2025 (unchanged since YA2023).
+  var MY = [[0,0],[5000,.01],[20000,.03],[35000,.06],[50000,.11],[70000,.19],
+            [100000,.25],[400000,.26],[600000,.28],[2000000,.30]];
+  // Singapore, resident individual, YA2026 (unchanged from YA2024).
+  var SG = [[0,0],[20000,.02],[30000,.035],[40000,.07],[80000,.115],[120000,.15],
+            [160000,.18],[200000,.19],[240000,.195],[280000,.20],[320000,.22],
+            [500000,.23],[1000000,.24]];
+
+  function progressive(income, table){
+    if (!(income > 0)) return 0;
+    var tax = 0;
+    for (var i = 0; i < table.length; i++){
+      var from = table[i][0];
+      var to = (i + 1 < table.length) ? table[i+1][0] : Infinity;
+      if (income <= from) break;
+      tax += (Math.min(income, to) - from) * table[i][1];
+    }
+    return tax;
+  }
+  function myTax(chargeable){
+    var t = progressive(chargeable, MY);
+    if (chargeable > 0 && chargeable <= 35000) t = Math.max(0, t - 400); // YA2025 rebate
+    return t;
+  }
+  function sgTax(chargeable){ return progressive(chargeable, SG); }
+
+  var $ = function(id){ return document.getElementById(id); };
+  var num = function(id){ var v = parseFloat($(id).value); return isFinite(v) ? v : 0; };
+
+  var rm = new Intl.NumberFormat('en-MY',{maximumFractionDigits:0});
+  var money = function(n){ return (n < 0 ? '−RM' : 'RM') + rm.format(Math.abs(Math.round(n))); };
+
+  function calc(){
+    var fx = num('fx') || 1;
+
+    // ---------- column 1: current Malaysian job ----------
+    var a = {};
+    a.gross = num('myGross') * num('myMonths');
+    a.epf   = a.gross * num('myEpf') / 100;
+    a.relief = 9000 + Math.min(4000, a.epf) + num('myOther');
+    a.tax   = myTax(Math.max(0, a.gross - a.relief));
+    a.commute = 0;
+    a.net   = a.gross - a.epf - a.tax;
+
+    // ---------- column 2: Singapore job, living in Johor ----------
+    var b = {};
+    var sgGrossSgd = num('sgGross') * num('sgMonths');
+    b.gross = sgGrossSgd * fx;
+    b.epf = 0;                                   // no CPF for work-pass holders
+    var sgChargeable = Math.max(0, sgGrossSgd - Math.min(80000, num('sgRelief')));
+    b.tax = sgTax(sgChargeable) * fx;
+    if ($('myTax').checked){
+      // Downside case: also assessed in Malaysia. The Malaysia–Singapore treaty
+      // relieves double taxation by credit, so charge only the excess of the
+      // Malaysian liability over the Singapore tax already paid.
+      var myLiability = myTax(Math.max(0, b.gross - 9000 - num('myOther')));
+      b.tax += Math.max(0, myLiability - b.tax);
+    }
+    b.commute = num('fare') * num('trips') * num('days');
+    b.net = b.gross - b.tax - b.commute;
+    var hours = num('mins') * num('trips') * num('days') / 60;
+
+    // ---------- column 3: Johor job inside the JS-SEZ ----------
+    var c = {};
+    c.gross = num('sezGross') * num('sezMonths');
+    c.epf = c.gross * num('myEpf') / 100;
+    var qualifiesPay  = num('sezGross') > 20000;
+    var qualifies = qualifiesPay && $('sezClean').checked && $('sezRole').checked;
+    if (qualifies){
+      c.tax = c.gross * 0.15;                    // announced flat rate
+    } else {
+      c.tax = myTax(Math.max(0, c.gross - 9000 - Math.min(4000, c.epf) - num('myOther')));
+    }
+    c.commute = 0;
+    c.net = c.gross - c.epf - c.tax;
+
+    // ---------- render the ledger ----------
+    var rows = [
+      ['Gross pay',        a.gross,   b.gross,   c.gross,   false],
+      ['EPF (your share)', -a.epf,    -b.epf,    -c.epf,    false],
+      ['Income tax',       -a.tax,    -b.tax,    -c.tax,    false],
+      ['Commute',          -a.commute,-b.commute,-c.commute,false],
+      ['Lands in your pocket', a.net, b.net,     c.net,     true]
+    ];
+    var html = '';
+    rows.forEach(function(r){
+      html += '<tr' + (r[4] ? ' class="total"' : '') + '><td>' + r[0] + '</td>' +
+              '<td>' + money(r[1]) + '</td><td>' + money(r[2]) + '</td>' +
+              '<td>' + money(r[3]) + '</td></tr>';
+    });
+    html += '<tr class="total"><td>Per month</td><td>' + money(a.net/12) + '</td><td>' +
+            money(b.net/12) + '</td><td>' + money(c.net/12) + '</td></tr>';
+
+    function delta(x){
+      var d = x - a.net;
+      var cls = d >= 0 ? 'pos' : 'neg';
+      return '<td class="delta ' + cls + '">' + (d >= 0 ? '+' : '') + money(d/12) + '</td>';
+    }
+    html += '<tr class="gap"><td>Difference a month, vs now</td><td>—</td>' +
+            delta(b.net) + delta(c.net) + '</tr>';
+    $('body').innerHTML = html;
+
+    // ---------- headline ----------
+    var d = b.net - a.net;
+    $('bigline').textContent = (d >= 0 ? '+' : '') + money(d / 12) + ' a month';
+    $('bigcap').textContent = (d >= 0
+      ? 'is what the Singapore job would add to what actually reaches you each month, '
+      : 'is what the Singapore job would cost you each month against the job you already have, ')
+      + 'after tax and the commute. The JS-SEZ column is in the table below.';
+
+    // ---------- commute hours ----------
+    var cf = $('resFlag');
+    cf.innerHTML = '<strong>The part with no ringgit sign</strong>' +
+      'At ' + num('mins') + ' minutes each way, the Singapore column also costs you about <b>' +
+      rm.format(Math.round(hours)) + ' hours a year</b> — roughly ' +
+      rm.format(Math.round(hours / 8)) + ' working days spent crossing. ' +
+      'This model does not put a price on that, and you should.';
+
+    // ---------- JS-SEZ eligibility ----------
+    var f = $('sezFlag');
+    if (qualifies){
+      f.hidden = false;
+      f.innerHTML = '<strong>Column 3 uses the 15% flat rate</strong>' +
+        'On the conditions you have ticked. The rate runs for up to 10 years and the ' +
+        'employer and role must both be approved — confirm your specific case before ' +
+        'you rely on it.';
+    } else {
+      f.hidden = false;
+      var why = [];
+      if (!qualifiesPay) why.push('pay above RM20,000 a month');
+      if (!$('sezClean').checked) why.push('no Malaysian employment income for 24 months');
+      if (!$('sezRole').checked) why.push('a listed critical occupation with an approved employer');
+      f.innerHTML = '<strong>Column 3 is at ordinary rates</strong>' +
+        'The 15% rate needs ' + why.join(', ') + '. Until that is met, a Johor job is ' +
+        'taxed like any other Malaysian job — which is what column 3 is showing.';
+    }
+
+    // ---------- compounding ----------
+    var yrs = num('years'), r = num('rate') / 100, fv = 0, annual = d;
+    for (var i = 0; i < yrs; i++){ fv = (fv + annual) * (1 + r); }
+    $('compound').textContent = money(annual) + ' a year, banked for ' + yrs +
+      (yrs === 1 ? ' year' : ' years') + (r ? ' at ' + num('rate') + '%' : ' with no return') +
+      ', comes to ' + money(fv) + '.';
+
+    // ---------- mobile dock ----------
+    var fmt = function(x){ var v = (x - a.net) / 12;
+      return (v >= 0 ? '+' : '') + money(v); };
+    $('dockA').textContent = fmt(b.net);
+    $('dockA').className = 'v ' + (b.net >= a.net ? 'pos' : 'neg');
+    $('dockB').textContent = fmt(c.net);
+    $('dockB').className = 'v ' + (c.net >= a.net ? 'pos' : 'neg');
+  }
+
+  document.addEventListener('input', calc);
+  document.addEventListener('change', calc);
+  calc();
+})();
+</script>
+</body>
+</html>
