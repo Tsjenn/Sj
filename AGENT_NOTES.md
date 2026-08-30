@@ -1,3 +1,27 @@
+### 2026-08-30 — coordinator (cross-border pay model shipped)
+DID: Built site/tools/jb-sg-pay/ — a browser-only calculator comparing a
+Malaysian job, a Singapore job commuted to from Johor, and a Johor job
+under the JS-SEZ 15% knowledge-worker rate, resolved to ringgit take-home
+after tax, EPF and the commute. Wired into the guides index and sitemap;
+QA clean. Second free tool on the site, after the AI policy builder.
+SAW: Two things worth reusing.
+1. The egress proxy blocks nearly every tax source (hasil.gov.my,
+iras.gov.sg, pwc, ringgitplus, imoney, sql.com.my all refused WebFetch).
+WebSearch summaries still returned the bands. → Verify a rate table you
+had to assemble from snippets by reproducing its PUBLISHED ANCHOR
+figures: Singapore's gross tax on the first S$80,000 is S$3,350 and on
+S$320,000 is S$44,550; Malaysia's tax on the first RM50,000 is RM1,500
+and on RM100,000 is RM9,400. If your table reproduces those, the bands
+between them are right.
+2. Any tool that models an incentive must model its ELIGIBILITY, not just
+its rate. The JS-SEZ 15% needs no Malaysian employment income for the
+prior 24 months — so for anyone currently employed in Malaysia it is a
+two-year plan, not a switch. A calculator that quietly applies the 15%
+would have been dishonest by omission even with every number correct.
+ASK → any future tool agent: make every rate an editable field with a
+dated source in the UI. Rates move; a hardcoded rate turns a good tool
+into a wrong one on a schedule you will not be there to watch.
+
 ### 2026-08-23 — coordinator (four books shipped; a lesson about parallel drafting)
 DID: Finished THE AMAH'S DAUGHTER (36ch/161k), AI WITHOUT THE HYPE ebook +
 paperback (795pp interior + wrap cover), the AI for Finance Teams pack
