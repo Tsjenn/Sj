@@ -241,6 +241,14 @@ def build():
     order.append("about.xhtml")
     toc.append('<li><a href="about.xhtml">About this book</a></li>')
 
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from alsoby import also_by_html
+    _also = also_by_html(skip="aibook")
+    if _also:
+        files["alsoby.xhtml"] = XHTML % ("Also by Tang Shiuan Jenn", _also)
+        order.append("alsoby.xhtml")
+        toc.append('<li><a href="alsoby.xhtml">Also by Tang Shiuan Jenn</a></li>')
+
     files["nav.xhtml"] = XHTML % ("Contents",
         '<nav epub:type="toc" id="toc"><h1>Contents</h1><ol>'
         '<li><a href="titlepage.xhtml">Title</a></li>%s</ol></nav>' % "".join(toc))
