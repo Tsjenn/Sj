@@ -1,0 +1,16 @@
+{
+  "name": "Causeway — the commuter's money companion",
+  "short_name": "Causeway",
+  "description": "Your Singapore pay in ringgit at today's rate, what the commute really costs each month, and where you stand on Malaysia's 182-day and Singapore's 183-day residency tests. Everything stays on your phone.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F2F3F7",
+  "theme_color": "#2E3A73",
+  "categories": ["finance", "productivity", "travel"],
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

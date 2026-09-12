@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Causeway — the commuter's money companion</title>
+<meta name="description" content="For people whose pay crosses the Johor–Singapore Causeway. Your Singapore salary in ringgit as the rate moves, what the commute really costs each month, and where you stand on Malaysia's 182-day and Singapore's 183-day residency tests. Everything stays on your phone.">
+<meta property="og:title" content="Causeway — the commuter's money companion">
+<meta property="og:description" content="Salary in ringgit at today's rate, monthly commute cost, and a residency day counter that understands you are in both countries on the same day.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://tsjenn.github.io/Sj/causeway/">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Causeway">
+<meta name="theme-color" content="#2E3A73">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#F2F3F7; --surface:#FFFFFF; --surface-2:#F7F7FB;
+  --line:#DCDEE9; --line-soft:#EAEBF2;
+  --ink:#14161F; --muted:#666C82;
+  --accent:#2E3A73; --accent-ink:#2E3A73; --accent-soft:#E6E8F4; --on-accent:#FFFFFF;
+  --amber:#9A5410; --amber-soft:#FBEEDD;
+  --pos:#1C6349; --pos-soft:#E1F1EA; --neg:#95292C; --neg-soft:#F8E4E4;
+  --my:#1C6349; --sg:#2E3A73; --both:#9A5410; --away:#8A8FA3;
+  --display:"Fraunces",Georgia,serif;
+  --body:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1016; --surface:#171A23; --surface-2:#1D202B;
+    --line:#2A2E3C; --line-soft:#22262F;
+    --ink:#E9EAF1; --muted:#9AA0B6;
+    --accent:#93A2E8; --accent-ink:#AEB9F0; --accent-soft:#1E2340; --on-accent:#0E1016;
+    --amber:#DFA35C; --amber-soft:#2E2415;
+    --pos:#63C098; --pos-soft:#15291F; --neg:#E2908F; --neg-soft:#2E1A1A;
+    --my:#63C098; --sg:#93A2E8; --both:#DFA35C; --away:#6E7388;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1016; --surface:#171A23; --surface-2:#1D202B;
+  --line:#2A2E3C; --line-soft:#22262F;
+  --ink:#E9EAF1; --muted:#9AA0B6;
+  --accent:#93A2E8; --accent-ink:#AEB9F0; --accent-soft:#1E2340; --on-accent:#0E1016;
+  --amber:#DFA35C; --amber-soft:#2E2415;
+  --pos:#63C098; --pos-soft:#15291F; --neg:#E2908F; --neg-soft:#2E1A1A;
+  --my:#63C098; --sg:#93A2E8; --both:#DFA35C; --away:#6E7388;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.5;
+  font-size:16px;min-height:100vh;min-height:100dvh;
+  padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+.wrap{max-width:560px;margin:0 auto;padding:0 18px}
+h1,h2{font-family:var(--display);font-weight:600;letter-spacing:-.02em;text-wrap:balance}
+.eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.muted{color:var(--muted)}
+.small{font-size:.84rem}
+a{color:var(--accent-ink)}
+
+/* top */
+.top{padding:calc(14px + env(safe-area-inset-top)) 0 6px;display:flex;justify-content:space-between;align-items:baseline}
+.top .brand{font-family:var(--display);font-weight:700;font-size:1.25rem;color:var(--accent-ink)}
+.top .date{font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+
+/* views */
+.view{display:none;padding:10px 0 24px}
+.view.on{display:block}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px;margin-top:12px}
+.card h2{font-size:1.05rem;margin-bottom:2px}
+.big{font-family:var(--mono);font-weight:600;font-size:clamp(1.9rem,9vw,2.6rem);letter-spacing:-.02em;
+  line-height:1.1;font-variant-numeric:tabular-nums;color:var(--ink);margin-top:6px}
+.big.amber{color:var(--amber)}
+.delta{font-family:var(--mono);font-weight:600;font-variant-numeric:tabular-nums}
+.pos{color:var(--pos)}.neg{color:var(--neg)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--line-soft)}
+.row:last-child{border-bottom:0}
+.row .k{font-size:.92rem}
+.row .k .small{display:block;color:var(--muted)}
+.row .v{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:.95rem;white-space:nowrap}
+
+/* controls */
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 16px;border-radius:6px;
+  font-weight:600;font-size:.92rem;background:var(--accent);color:var(--on-accent);min-height:44px}
+.btn.ghost{background:var(--surface);color:var(--accent-ink);border:1px solid var(--line)}
+.btn.soft{background:var(--accent-soft);color:var(--accent-ink)}
+.btn.danger{background:var(--neg-soft);color:var(--neg)}
+.btn:disabled{opacity:.5;cursor:default}
+.btn:focus-visible,input:focus-visible,select:focus-visible,.cell:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.actions .btn{flex:1 1 auto}
+input[type=number],input[type=text],input[type=date],select{width:100%;padding:10px 11px;border:1px solid var(--line);
+  border-radius:5px;background:var(--surface-2);color:var(--ink);font-family:var(--mono);font-size:1rem;
+  font-variant-numeric:tabular-nums;min-height:44px}
+select{font-family:var(--body)}
+input[type=date]{font-family:var(--body)}
+.field{margin-top:12px}
+.field label{display:block;font-size:.86rem;font-weight:500;margin-bottom:5px}
+.field .hint{display:block;font-size:.78rem;color:var(--muted);margin-top:4px;line-height:1.4}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chip{padding:8px 12px;border-radius:99px;border:1px solid var(--line);background:var(--surface);font-size:.86rem;
+  font-family:var(--mono);min-height:38px}
+.chip.on{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-ink)}
+.seg{display:flex;border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-top:8px}
+.seg button{flex:1;padding:10px 4px;font-size:.84rem;font-weight:600;background:var(--surface);color:var(--muted);min-height:44px;border-right:1px solid var(--line)}
+.seg button:last-child{border-right:0}
+.seg button.on{background:var(--accent-soft);color:var(--accent-ink)}
+.note{margin-top:12px;padding:12px 14px;border-radius:5px;font-size:.86rem;line-height:1.5;
+  background:var(--amber-soft);border-left:3px solid var(--amber)}
+.note strong{display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--amber);margin-bottom:3px}
+.note.calm{background:var(--accent-soft);border-left-color:var(--accent)}
+.note.calm strong{color:var(--accent-ink)}
+.status{display:inline-block;padding:3px 9px;border-radius:99px;font-family:var(--mono);font-size:.72rem;font-weight:600;letter-spacing:.04em}
+.status.met{background:var(--pos-soft);color:var(--pos)}
+.status.open{background:var(--accent-soft);color:var(--accent-ink)}
+.status.out{background:var(--neg-soft);color:var(--neg)}
+
+/* progress */
+.bar{height:8px;border-radius:99px;background:var(--line-soft);overflow:hidden;margin-top:8px}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:99px;width:0;transition:width .25s}
+.bar.my i{background:var(--my)} .bar.sg i{background:var(--sg)}
+@media (prefers-reduced-motion: reduce){.bar i{transition:none}}
+
+/* month nav */
+.mnav{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.mnav .btn{min-width:44px;padding:8px 12px}
+.mnav h2{font-size:1.05rem}
+
+/* list */
+.list{margin-top:6px}
+.item{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line-soft)}
+.item:last-child{border-bottom:0}
+.item .l{font-size:.9rem}
+.item .l .small{display:block;color:var(--muted)}
+.item .r{display:flex;align-items:center;gap:10px}
+.item .r .v{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.item .x{color:var(--muted);padding:8px;min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+.item .x:hover{color:var(--neg)}
+.empty{padding:22px 0;text-align:center;color:var(--muted);font-size:.9rem}
+
+/* calendar */
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:10px}
+.cal .dow{font-family:var(--mono);font-size:.66rem;text-align:center;color:var(--muted);letter-spacing:.06em;padding-bottom:2px}
+.cell{aspect-ratio:1;border-radius:5px;border:1px solid var(--line-soft);background:var(--surface-2);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--mono);
+  font-size:.8rem;color:var(--ink);position:relative;min-height:38px}
+.cell.pad{background:transparent;border-color:transparent}
+.cell.today{border-color:var(--accent);border-width:2px}
+.cell.MY{background:var(--my);color:#fff;border-color:var(--my)}
+.cell.SG{background:var(--sg);color:#fff;border-color:var(--sg)}
+.cell.BOTH{background:linear-gradient(135deg,var(--my) 50%,var(--sg) 50%);color:#fff;border-color:var(--both)}
+.cell.AWAY{background:var(--away);color:#fff;border-color:var(--away)}
+.cell.future{opacity:.55}
+.legend{display:flex;flex-wrap:wrap;gap:10px 14px;margin-top:10px;font-size:.8rem;color:var(--muted)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:5px}
+
+/* tests */
+.test{margin-top:10px}
+.test .h{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.test .h .n{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:1.25rem;font-weight:600}
+.test .h .n span{font-size:.85rem;color:var(--muted);font-weight:400}
+
+/* tabbar */
+.tabs{position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);
+  padding:6px 0 calc(6px + env(safe-area-inset-bottom));z-index:30}
+.tabs .inner{max-width:560px;margin:0 auto;display:flex}
+.tabs button{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 2px;
+  font-size:.7rem;font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-height:52px}
+.tabs button.on{color:var(--accent-ink)}
+.tabs svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* sheet */
+.sheet{position:fixed;inset:0;background:rgba(10,12,20,.45);display:none;align-items:flex-end;justify-content:center;z-index:40}
+.sheet.on{display:flex}
+.sheet .panel{background:var(--surface);width:100%;max-width:560px;border-radius:14px 14px 0 0;padding:18px 18px calc(18px + env(safe-area-inset-bottom));max-height:88vh;overflow:auto}
+.sheet h2{font-size:1.1rem}
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--ink);color:var(--paper);
+  padding:9px 14px;border-radius:6px;font-size:.86rem;opacity:0;pointer-events:none;transition:opacity .2s;z-index:50;white-space:nowrap}
+.toast.on{opacity:1}
+details{margin-top:12px;border-top:1px solid var(--line-soft)}
+details summary{cursor:pointer;padding:12px 0;font-size:.9rem;font-weight:500;list-style:none;display:flex;justify-content:space-between}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";font-family:var(--mono);color:var(--muted)}
+details[open] summary::after{content:"−"}
+details .b{padding:0 0 12px;font-size:.86rem;color:var(--muted)}
+details .b p{margin-bottom:9px}
+details .b b{color:var(--ink);font-weight:600}
+.install{display:none}
+.install.on{display:block}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="top">
+    <div class="brand">Causeway</div>
+    <div class="date" id="topDate"></div>
+  </div>
+
+  <!-- ================= TODAY ================= -->
+  <section class="view on" id="v-today">
+    <div class="card" id="setupCard">
+      <p class="eyebrow">First, one number</p>
+      <h2>What do you earn in Singapore?</h2>
+      <p class="small muted" style="margin-top:4px">Monthly gross, in Singapore dollars. It stays on this phone.</p>
+      <div class="field"><label for="s_salary">Monthly pay (S$)</label><input type="number" id="s_salary" inputmode="decimal" placeholder="e.g. 4500"></div>
+      <div class="grid2">
+        <div class="field"><label for="s_signRate">Rate when you signed
+          <span class="hint">RM per S$1. Leave blank to use today's.</span></label><input type="number" id="s_signRate" inputmode="decimal" step="0.001" placeholder="3.15"></div>
+        <div class="field"><label for="s_signDate">Signed on</label><input type="date" id="s_signDate"></div>
+      </div>
+      <div class="actions"><button class="btn" id="saveSetup">Start</button></div>
+    </div>
+
+    <div id="todayMain" hidden>
+      <div class="card">
+        <p class="eyebrow">This month's pay, in ringgit</p>
+        <p class="big" id="payRm">—</p>
+        <p class="small muted" id="payCap">—</p>
+        <div class="row" style="margin-top:10px"><div class="k">Since the day you signed<span class="small" id="signCap"></span></div><div class="v delta" id="signDelta">—</div></div>
+        <div class="row"><div class="k">Rate used<span class="small" id="rateCap"></span></div><div class="v"><span id="rateVal">—</span></div></div>
+        <div class="actions">
+          <button class="btn soft" id="refreshRate">Fetch today's rate</button>
+          <button class="btn ghost" id="manualRate">Enter a rate</button>
+        </div>
+        <div id="rateForm" hidden>
+          <div class="field"><label for="rateIn">RM per S$1</label><input type="number" id="rateIn" inputmode="decimal" step="0.0001"></div>
+          <div class="actions"><button class="btn" id="rateSave">Use this rate</button></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <p class="eyebrow">Today</p>
+        <h2 id="todayH">Where did today count?</h2>
+        <p class="small muted">Tap once. This feeds the residency counters.</p>
+        <div class="seg" id="todaySeg">
+          <button data-v="BOTH">Crossed (both)</button>
+          <button data-v="MY">Malaysia only</button>
+          <button data-v="SG">Singapore only</button>
+          <button data-v="AWAY">Away</button>
+        </div>
+        <div class="actions"><button class="btn ghost" id="quickCross">+ Log a crossing cost</button></div>
+      </div>
+
+      <div class="card">
+        <div class="row"><div class="k">Commute this month</div><div class="v" id="tMonthCommute">RM0</div></div>
+        <div class="row"><div class="k">Malaysia days this year<span class="small">182 needed</span></div><div class="v" id="tMy">0</div></div>
+        <div class="row"><div class="k">Singapore days this year<span class="small">183 needed</span></div><div class="v" id="tSg">0</div></div>
+      </div>
+
+      <div class="card install" id="installCard">
+        <p class="eyebrow">Keep it on your phone</p>
+        <p class="small" id="installHow">Add this page to your home screen and it opens like an app, works offline, and keeps your data on the device.</p>
+        <div class="actions"><button class="btn soft" id="installBtn" hidden>Install</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COMMUTE ================= -->
+  <section class="view" id="v-commute">
+    <div class="mnav">
+      <button class="btn ghost" id="cPrev" aria-label="Previous month">‹</button>
+      <h2 id="cMonthH">—</h2>
+      <button class="btn ghost" id="cNext" aria-label="Next month">›</button>
+    </div>
+    <div class="card">
+      <p class="eyebrow">Crossing costs</p>
+      <p class="big amber" id="cTotal">RM0</p>
+      <div class="row"><div class="k">Crossings logged</div><div class="v" id="cCount">0</div></div>
+      <div class="row"><div class="k">Average per crossing</div><div class="v" id="cAvg">—</div></div>
+      <div class="row"><div class="k">Share of this month's pay</div><div class="v" id="cShare">—</div></div>
+      <div class="actions"><button class="btn" id="addCross">+ Add a crossing</button></div>
+    </div>
+    <div class="card">
+      <h2>This month</h2>
+      <div class="list" id="cList"></div>
+    </div>
+    <div class="note">
+      <strong>RTS Link fares</strong>
+      Not gazetted as at August 2026 — a proposal was due to both governments in the second half of 2026. Reported estimates were RM15.50–RM21.70 one way. Log what you actually pay; the app never guesses a fare for you.
+    </div>
+  </section>
+
+  <!-- ================= DAYS ================= -->
+  <section class="view" id="v-days">
+    <div class="mnav">
+      <button class="btn ghost" id="yPrev" aria-label="Previous year">‹</button>
+      <h2 id="yH">—</h2>
+      <button class="btn ghost" id="yNext" aria-label="Next year">›</button>
+    </div>
+    <div class="card">
+      <p class="eyebrow">Residency tests, this calendar year</p>
+      <div class="test">
+        <div class="h"><div><b>Malaysia</b> <span class="small muted">182 days present</span></div><div class="n"><span id="myN">0</span><span> / 182</span></div></div>
+        <div class="bar my"><i id="myBar"></i></div>
+        <p class="small" style="margin-top:6px" id="myMsg"></p>
+      </div>
+      <div class="test">
+        <div class="h"><div><b>Singapore</b> <span class="small muted">183 days present</span></div><div class="n"><span id="sgN">0</span><span> / 183</span></div></div>
+        <div class="bar sg"><i id="sgBar"></i></div>
+        <p class="small" style="margin-top:6px" id="sgMsg"></p>
+      </div>
+      <div id="dualNote"></div>
+    </div>
+
+    <div class="mnav">
+      <button class="btn ghost" id="dPrev" aria-label="Previous month">‹</button>
+      <h2 id="dMonthH">—</h2>
+      <button class="btn ghost" id="dNext" aria-label="Next month">›</button>
+    </div>
+    <div class="card">
+      <p class="small muted">Tap a day to cycle: blank → both → Malaysia → Singapore → away.</p>
+      <div class="cal" id="cal"></div>
+      <div class="legend">
+        <span><i style="background:linear-gradient(135deg,var(--my) 50%,var(--sg) 50%)"></i>Crossed (both count)</span>
+        <span><i style="background:var(--my)"></i>Malaysia</span>
+        <span><i style="background:var(--sg)"></i>Singapore</span>
+        <span><i style="background:var(--away)"></i>Away</span>
+      </div>
+      <div class="actions">
+        <button class="btn soft" id="fillCommute">Fill month as a commuter</button>
+        <button class="btn ghost" id="clearMonth">Clear month</button>
+      </div>
+      <p class="small muted" style="margin-top:8px">"Fill as a commuter" marks weekdays up to today as crossed and weekends as Malaysia. Fix any day by tapping it.</p>
+    </div>
+
+    <div class="card">
+      <h2>How the counting works</h2>
+      <details open><summary>Malaysia — 182 days</summary><div class="b">
+        <p>Resident when physically present in Malaysia for <b>182 days or more</b> in the calendar year. Days of arrival and departure count in full, and the days need not be consecutive. Source: Income Tax Act 1967, section 7, as summarised by practitioners; checked September 2026.</p>
+        <p>Three further tests can also make you resident — a linked period of 182 days straddling two years, 90 days in a year after being resident in three of the previous four, and residence in the three preceding years. This app counts only the first test; if the others might apply to you, they need a person, not an app.</p>
+      </div></details>
+      <details><summary>Singapore — 183 days</summary><div class="b">
+        <p>A foreigner is treated as tax resident when present in Singapore for <b>183 days or more</b> in the calendar year. Weekends, public holidays and leave all count. Source: IRAS, "Working out my tax residency"; checked September 2026.</p>
+        <p>Two administrative concessions can also confer residency — a continuous 183-day period straddling two calendar years, and three consecutive years of work. Not counted here.</p>
+      </div></details>
+      <details><summary>Why "crossed" counts for both</summary><div class="b">
+        <p>A daily commuter is physically present in both countries on the same day. Each country counts that day for its own test, so a full year of commuting meets <b>both</b> tests at once. That is not an error in the app; it is the situation.</p>
+        <p>When both countries treat you as resident, the Malaysia–Singapore tax treaty's tie-breaker decides — permanent home first, then centre of vital interests, then habitual abode. Where you sleep, where your family is and where your assets are matter more than the day count. <b>This is a planning aid, not advice.</b> Take the year's log to a practitioner before relying on it.</p>
+      </div></details>
+    </div>
+  </section>
+
+  <!-- ================= MORE ================= -->
+  <section class="view" id="v-more">
+    <div class="card">
+      <h2>Your numbers</h2>
+      <div class="field"><label for="m_salary">Monthly pay (S$)</label><input type="number" id="m_salary" inputmode="decimal"></div>
+      <div class="grid2">
+        <div class="field"><label for="m_signRate">Rate when you signed</label><input type="number" id="m_signRate" inputmode="decimal" step="0.001"></div>
+        <div class="field"><label for="m_signDate">Signed on</label><input type="date" id="m_signDate"></div>
+      </div>
+      <div class="actions"><button class="btn" id="saveMore">Save</button></div>
+    </div>
+    <div class="card">
+      <h2>Weighing an offer?</h2>
+      <p class="small muted" style="margin-top:4px">The pay-check tool compares a Singapore offer, a Johor offer and the job you have now — tax, EPF, commute and the exchange rate — in ringgit.</p>
+      <div class="actions"><a class="btn soft" href="../tools/jb-sg-pay/">Open the pay check</a></div>
+    </div>
+    <div class="card">
+      <h2>Your data</h2>
+      <p class="small muted" style="margin-top:4px">Everything lives in this browser on this phone. Export a copy before you change phones.</p>
+      <div class="actions">
+        <button class="btn ghost" id="exportBtn">Export file</button>
+        <button class="btn ghost" id="importBtn">Import file</button>
+        <input type="file" id="importFile" accept="application/json" hidden>
+      </div>
+      <div class="actions"><button class="btn danger" id="wipeBtn">Delete everything on this phone</button></div>
+    </div>
+    <div class="card">
+      <h2>About</h2>
+      <p class="small muted" style="margin-top:6px">Causeway is a money companion for people who live on one side of the Johor–Singapore border and earn on the other. It is not tax advice and it does not hold out to be. The only thing it ever sends over the network is a request for the day's exchange rate; your salary, your crossings and your day log never leave the device.</p>
+      <p class="small muted" style="margin-top:8px">Exchange rate: European Central Bank reference rates via frankfurter.app, when you tap "Fetch today's rate". Banks and money-changers will give you a worse rate than this — it is a reference, not a quote.</p>
+      <p class="small muted" style="margin-top:8px">Residency rules and RTS fare status checked September 2026. Rates and rules change; the sources are named in the Days tab so you can check them yourself.</p>
+      <p class="small muted" style="margin-top:8px"><a href="../">Clarity</a> · <a href="../guides/">Guides</a></p>
+    </div>
+  </section>
+</div>
+
+<!-- crossing sheet -->
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetH">
+  <div class="panel">
+    <h2 id="sheetH">Log a crossing</h2>
+    <div class="grid2">
+      <div class="field"><label for="x_date">Date</label><input type="date" id="x_date"></div>
+      <div class="field"><label for="x_cost">Cost (RM)</label><input type="number" id="x_cost" inputmode="decimal" step="0.1" placeholder="0.00"></div>
+    </div>
+    <div class="field"><label>How</label>
+      <div class="chips" id="modeChips">
+        <button class="chip" data-m="bus">Bus</button>
+        <button class="chip" data-m="rts">RTS</button>
+        <button class="chip" data-m="car">Car</button>
+        <button class="chip" data-m="bike">Motorbike</button>
+        <button class="chip" data-m="train">KTM</button>
+        <button class="chip" data-m="other">Other</button>
+      </div>
+      <span class="hint">Cost is the round trip if you log once a day: fares, fuel, tolls, VEP, parking — whatever the crossing actually cost.</span>
+    </div>
+    <div class="field" id="recentWrap" hidden><label>Same as last time</label><div class="chips" id="recentChips"></div></div>
+    <div class="actions">
+      <button class="btn" id="x_save">Save</button>
+      <button class="btn ghost" id="x_cancel">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<nav class="tabs" aria-label="Sections"><div class="inner">
+  <button data-view="today" class="on"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Today</button>
+  <button data-view="commute"><svg viewBox="0 0 24 24"><path d="M3 17h18M5 17V9a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8M8 21h.01M16 21h.01"/></svg>Commute</button>
+  <button data-view="days"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Days</button>
+  <button data-view="more"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg>More</button>
+</div></nav>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

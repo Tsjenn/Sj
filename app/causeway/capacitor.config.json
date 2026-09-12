@@ -1,0 +1,7 @@
+{
+  "appId": "my.tangshiuanjenn.causeway",
+  "appName": "Causeway",
+  "webDir": "../../site/causeway",
+  "server": { "androidScheme": "https" },
+  "ios": { "contentInset": "always" }
+}
