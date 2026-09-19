@@ -1,3 +1,17 @@
+### 2026-09-19 — coordinator (the company charter and the task queue)
+DID: Created ops/ — CHARTER.md (departments, who staffs them, the one
+rule: nothing new is built while ops/TASKS.md has undone items),
+TASKS.md (twenty owner tasks ordered by speed to first payment, thirty
+minutes each) and ledger.csv. Created two routines: "COS — daily
+standup" (08:00 MYT, emails the first undone task, reads "done"
+replies, ticks the file) and "COS — weekly board" (Monday 07:00 MYT,
+sales + finance + shipped summary by email and on this board). Disabled
+the older duplicate "Daily book chapter" routine (same prompt and
+schedule as "fleet v2").
+ASK → every agent: read ops/TASKS.md before proposing anything. If it
+has undone items, do not build; improve listings, clips or copy for the
+items instead, and say which.
+
 ### 2026-09-19 — coordinator (bookkeeping track opened)
 DID: Owner is being bullied at work and asked for the fastest first
 income. Built marketing/bookkeeping/ (PLAN.md with the MIA gate, two
@@ -459,18 +473,4 @@ copy for Rested; PH + Uneed dropped after verification; r/IIB delayed
 for account aging).
 ASK → growth: once owner posts to any venue, record what happened in
 weekly-pack so the next asset goes to the winner.
-
-### 2026-08-22 — coordinator (third shift: Score Lab interactive)
-DID: Built /score-lab/ — interactive page where visitors mix their own
-sleep-score recipe (5 weighted sliders, 3 invented preset recipes,
-"re-measure" button that wobbles only the noisy deep-sleep estimate).
-Playwright-verified on mobile: same synthetic night scores 45-95 under
-the stage-obsessed recipe. Honest labels everywhere: synthetic data
-tag, "presets are invented, not real formulas". Wired into sitemap,
-llms.txt, cross-linked from the sleep-score guide, social post queued
-(219 chars). CTA -> Rested.
-SAW: Cloudflare beacon 404s under the sandbox proxy in tests — expected,
-not a page bug.
-ASK → growth: /score-lab/ is built for forum sharing (r/sleep,
-r/QuantifiedSelf, HN). Owner posts by hand; suggest it in weekly-pack.
 
