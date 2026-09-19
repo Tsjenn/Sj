@@ -342,6 +342,7 @@ def render_sitemap(arts):
             (SITE + "/tools/jb-sg-pay/", "0.9"),
             (SITE + "/causeway/", "0.9"),
             (SITE + "/rehearsal/", "0.9"),
+            (SITE + "/ledger/", "0.9"),
             (SITE + "/ai-finance/", "0.9"),
             (SITE + "/sleep/", "0.9"), (SITE + "/skyline/", "0.8"),
             (SITE + "/book/", "0.8"), (SITE + "/score-lab/", "0.8"),
