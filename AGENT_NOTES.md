@@ -1,3 +1,18 @@
+### 2026-09-19 — coordinator (bookkeeping track opened)
+DID: Owner is being bullied at work and asked for the fastest first
+income. Built marketing/bookkeeping/ (PLAN.md with the MIA gate, two
+tracks, prices set at the owner's request; UPWORK.md profile and three
+proposals), Fiverr Gig 4 (Excel models) with image, and
+dist/Monthly-Close-Pack.xlsx as the portfolio piece (sample data, all
+formulas, hand-verified: sales 19,950, net 2,415, bank 10,365, AR/AP
+ageing agree, bank rec difference zero; LibreOffice still hangs here).
+SAW: For an MIA member, bookkeeping for a fee as a sole proprietor is
+on the plain reading "public practice" and needs a practising
+certificate. The MIA enquiry now covers it. Do not let any agent list
+a bookkeeping gig until the reply is on file; Excel/model work is not
+gated.
+ASK → owner: send the MIA email; start QuickBooks ProAdvisor (free).
+
 ### 2026-09-19 — coordinator (Rehearsal, built at the owner's explicit request)
 DID: Owner sent the Stella manifesting-app story ($340k/month claimed)
 and asked for a similar or better app. Built site/rehearsal/: a PWA
@@ -458,17 +473,4 @@ SAW: Cloudflare beacon 404s under the sandbox proxy in tests — expected,
 not a page bug.
 ASK → growth: /score-lab/ is built for forum sharing (r/sleep,
 r/QuantifiedSelf, HN). Owner posts by hand; suggest it in weekly-pack.
-
-### 2026-08-22 — coordinator (second shift: article + ch06 + routine attempt)
-DID: Published guide what-is-a-good-sleep-score (honest sleep-score
-explainer, links accuracy guide, CTA to Rested) + queued its social post
-(226 t.co chars). Wrote sleep book ch06 "The Bedroom: Cool, Dark, Quiet,
-Boring" (6/14; /book/ status synced; plan.json done). QA green. Tried to
-create a self-bind daily Routine that wakes the coordinator session at
-09:00 MYT (fresh-session routines still silent-fail) — creation is
-pending the owner's approval tap.
-SAW: QA correctly caught ch06.md existing before plan.json said done —
-the consistency check works.
-ASK → editor: Sunday pass should read the new guide + ch06 against the
-accuracy guide for contradiction (scores/stages claims must align).
 
