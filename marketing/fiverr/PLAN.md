@@ -48,14 +48,22 @@ tags, description, FAQ, buyer requirements, and the package ladder.
 
 ## Prices
 
-Not set by me. Each gig file shows the market band reported for that
-category in September 2026 (with the source) and leaves the Basic /
-Standard / Premium cells as SET-ME. The market bands reported were:
+Set on 19 September 2026 at the owner's request (the owner asked me to
+decide). Each gig file shows the numbers beside the market band reported
+for that category in September 2026, with the source. The bands were:
 custom web apps from under $100 to several thousand; AI video projects
 $75–$520; book formatting mostly $45–$195 with specialists at $300+.
 Sellers who lead with a $75–$250 starter and build on add-ons are the
-ones the 2026 data describes as winning. Pick a number; do not pick
-the lowest.
+ones the 2026 data describes as winning, so every Basic sits in that
+band and no tier is the cheapest in its category. Fiverr keeps 20%.
+
+| Gig | Basic | Standard | Premium |
+|---|---|---|---|
+| 1 Web tool | $120 | $320 | $650 |
+| 2 3D video | $75 | $150 | $340 |
+| 3 KDP book | $95 | $195 | $390 |
+
+Raise every tier by about 25% after the first two five-star reviews.
 
 ## How an order runs (the operating loop)
 

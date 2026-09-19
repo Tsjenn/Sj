@@ -48,7 +48,11 @@ for anything unusual.
 | Scope | 1 vertical clip up to 15 s, title + hook + end card | 1 clip up to 30 s in vertical AND landscape, music | 3 clips (launch, "out now", quote card) in both formats, music, source frames |
 | Delivery | 2 days | 3 days | 5 days |
 | Revisions | 1 | 2 | 3 |
-| Price | SET-ME | SET-ME | SET-ME |
+| Price | $75 | $150 | $340 |
+
+Extras: 24-hour delivery on Basic +$40 · one extra clip +$60 · landscape version added to Basic +$30.
+
+Prices set on 19 September 2026 at the owner's request; raise every tier by about 25% after the first two five-star reviews, and again after ten.
 
 Market band reported September 2026: AI video gigs from $75 upward; AI
 project averages $75–$520 (Fiverr AI video pricing playbooks). Video &

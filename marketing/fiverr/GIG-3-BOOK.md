@@ -49,7 +49,11 @@ first about picture books and fixed-layout formats.
 | Scope | EPUB up to 60,000 words, TOC, front/back matter | Basic plus paperback PDF at your trim size | Standard plus ebook cover and full paperback wrap, KDP listing checklist, up to 150,000 words |
 | Delivery | 3 days | 5 days | 7 days |
 | Revisions | 2 | 3 | 5 |
-| Price | SET-ME | SET-ME | SET-ME |
+| Price | $95 | $195 | $390 |
+
+Extras: 48-hour delivery +$60 · paperback wrap cover added to Standard +$120 · hardcover interior and wrap +$90.
+
+Prices set on 19 September 2026 at the owner's request; raise every tier by about 25% after the first two five-star reviews, and again after ten.
 
 Market band reported September 2026: most formatting gigs sit between
 $45 and $195, with specialists at $300+ (publishing.co.uk review of

@@ -48,7 +48,11 @@ that need a database server. Ask first if you are not sure.
 | Scope | One calculator or form, up to 8 inputs, one result panel | Up to 4 screens, saves data on the device, export to CSV | Everything in Standard plus offline install on iPhone/Android, icon, dark and light theme |
 | Delivery | 3 days | 5 days | 7 days |
 | Revisions | 2 | 3 | Unlimited for 14 days |
-| Price | SET-ME | SET-ME | SET-ME |
+| Price | $120 | $320 | $650 |
+
+Extras: 24-hour delivery on Basic +$60 · extra revision +$25 · a second language for all labels +$40.
+
+Prices set on 19 September 2026 at the owner's request; raise every tier by about 25% after the first two five-star reviews, and again after ten.
 
 Market band reported September 2026: entry gigs under $100; custom
 development into the thousands; average hourly $50–$165 (Fiverr web
