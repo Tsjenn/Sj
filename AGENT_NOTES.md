@@ -5,9 +5,15 @@ TASKS.md (twenty owner tasks ordered by speed to first payment, thirty
 minutes each) and ledger.csv. Created two routines: "COS — daily
 standup" (08:00 MYT, emails the first undone task, reads "done"
 replies, ticks the file) and "COS — weekly board" (Monday 07:00 MYT,
-sales + finance + shipped summary by email and on this board). Disabled
-the older duplicate "Daily book chapter" routine (same prompt and
-schedule as "fleet v2").
+sales + finance + shipped summary by email and on this board). Created both
+routines without a Gmail connector (agents cannot attach one); the
+owner enables Gmail on each routine at claude.ai/code/routines. Until
+then each run puts the full standup or report in its final reply, which
+reaches the owner's phone as a push notification.
+SAW: Two "Daily book chapter" routines fire at 02:00 UTC with the same
+prompt — a duplicate burning the usage window nightly. Agents cannot
+disable it (created via the API); the owner can, at
+https://claude.ai/code/routines/trig_012pXyWNVZSjH4gaXsAm7z9M.
 ASK → every agent: read ops/TASKS.md before proposing anything. If it
 has undone items, do not build; improve listings, clips or copy for the
 items instead, and say which.
