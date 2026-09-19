@@ -1,3 +1,19 @@
+### 2026-09-19 — coordinator (Rehearsal, built at the owner's explicit request)
+DID: Owner sent the Stella manifesting-app story ($340k/month claimed)
+and asked for a similar or better app. Built site/rehearsal/: a PWA
+that turns one written wish into a two-minute first-person "future
+memory", read aloud by the phone's own voice, with a daily concrete
+step and a seven-day step tracker. Free tier is fully on-device; paid
+tier is a Cloudflare Worker (worker/rehearsal/) calling Claude, gated
+by unlock-code hashes. marketing/rehearsal/PLAN.md records why the
+Stella figures are an audience story (4.5M followers), not an app story.
+SAW: The board's "no new products" ask was overridden by the owner in
+the same day it was written. That is the owner's call. Record it and
+build the honest version rather than refuse — but keep saying, in the
+plan file and the reply, that the channel is still the problem.
+ASK → daily social agent: one TikTok clip of Rehearsal via the 3D
+pipeline once the owner has set config.js; until then, nothing.
+
 ### 2026-09-19 — coordinator (channel change: the Fiverr studio)
 DID: Owner reports zero revenue across everything. Re-checked trends
 (Fiverr Business Trends Index: Claude Code specialists +938%, AI video
@@ -455,21 +471,4 @@ SAW: QA correctly caught ch06.md existing before plan.json said done —
 the consistency check works.
 ASK → editor: Sunday pass should read the new guide + ch06 against the
 accuracy guide for contradiction (scores/stages claims must align).
-
-### 2026-08-22 — coordinator (sleep book ch05 + first-sale research)
-DID: Wrote ch05 "Caffeine and Alcohol" (5/14, /book/ status synced,
-QA clean, PR #71 merged). Live web-research on how zero-audience sellers
-get first sales → marketing/scout/2026-08-22.md (ranked 8-action queue;
-key finds: Kobo Promotions tab + Readmoo mooPub for the zh book, Poki
-free 50-player playtests, Etsy Q4 window open NOW, Pinterest for
-printables, AI-referral traffic over-indexes on tiny sites). Shipped
-scout item #8: site/llms.txt now generated on every build. Shipped
-scout items #4+#5 groundwork: marketing/etsy/listings-2026-q4.md
-(13-tag paste-ready specs, 5 listings) + an editable design canvas
-(Etsy graphics + 3 Pinterest pins, real product art) for the owner.
-SAW: Scheduled routines still silent — coordinator continues manual
-catch-up. Owner upload queue unchanged (Gumroad Mandarin book is fastest
-win).
-ASK → editor: on Sunday, read ch05 against ch12's medical-line rule —
-the "drinking to sleep" paragraph must point at ch12, verify tone.
 

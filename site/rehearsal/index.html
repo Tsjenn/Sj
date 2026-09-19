@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rehearsal — hear the day it has already happened</title>
+<meta name="description" content="Write down one thing you want. Rehearsal turns it into a two-minute story of the day it has already happened, read aloud in your own words, and asks for the first step. A focus tool, not a promise. Everything stays on your phone.">
+<meta property="og:title" content="Rehearsal — hear the day it has already happened">
+<meta property="og:description" content="A daily three-minute rehearsal of the life you are working toward, read aloud, and one concrete step. Free. Nothing leaves your phone.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://tsjenn.github.io/Sj/rehearsal/">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Rehearsal">
+<meta name="theme-color" content="#3B2A3E">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --paper:#F7F2EE; --surface:#FFFCFA; --surface-2:#F1EAE6;
+  --line:#E4D9D4; --line-soft:#EEE6E1;
+  --ink:#2A1F2C; --muted:#7A6C79;
+  --plum:#3B2A3E; --plum-ink:#3B2A3E; --plum-soft:#EBE1EA; --on-plum:#FFF8F4;
+  --rose:#B5566A; --rose-soft:#F6E3E7;
+  --apricot:#D98C5A; --apricot-soft:#FBEADF;
+  --pos:#3D6B4F; --pos-soft:#E2EEE6;
+  --display:"Newsreader",Georgia,"Times New Roman",serif;
+  --body:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#171219; --surface:#211A24; --surface-2:#2A2130;
+    --line:#3A2F3E; --line-soft:#2F2634;
+    --ink:#F1E8EC; --muted:#A9979F;
+    --plum:#D9BFD8; --plum-ink:#E3CDE2; --plum-soft:#2E2334; --on-plum:#171219;
+    --rose:#E38DA0; --rose-soft:#3A2429;
+    --apricot:#EBAA7B; --apricot-soft:#3A2A20;
+    --pos:#8BC7A1; --pos-soft:#1F2F25;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#171219; --surface:#211A24; --surface-2:#2A2130;
+  --line:#3A2F3E; --line-soft:#2F2634;
+  --ink:#F1E8EC; --muted:#A9979F;
+  --plum:#D9BFD8; --plum-ink:#E3CDE2; --plum-soft:#2E2334; --on-plum:#171219;
+  --rose:#E38DA0; --rose-soft:#3A2429;
+  --apricot:#EBAA7B; --apricot-soft:#3A2A20;
+  --pos:#8BC7A1; --pos-soft:#1F2F25;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.55;font-size:16px;
+  min-height:100dvh;padding-bottom:calc(74px + env(safe-area-inset-bottom))}
+.wrap{max-width:560px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:500;letter-spacing:-.01em;text-wrap:balance}
+.eyebrow{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.muted{color:var(--muted)} .small{font-size:.86rem}
+a{color:var(--plum-ink)}
+.top{padding:calc(16px + env(safe-area-inset-top)) 0 8px;display:flex;justify-content:space-between;align-items:baseline}
+.top .brand{font-family:var(--display);font-style:italic;font-size:1.5rem;color:var(--plum-ink)}
+.top .date{font-size:.8rem;color:var(--muted)}
+.view{display:none;padding:8px 0 24px}.view.on{display:block}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:14px}
+.card h2{font-size:1.35rem;margin-bottom:4px}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:999px;
+  font-weight:700;font-size:.92rem;background:var(--plum);color:var(--on-plum);min-height:46px}
+.btn.soft{background:var(--plum-soft);color:var(--plum-ink)}
+.btn.ghost{background:var(--surface);color:var(--plum-ink);border:1px solid var(--line)}
+.btn.rose{background:var(--rose);color:#fff}
+.btn:disabled{opacity:.5;cursor:default}
+.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--rose);outline-offset:2px}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.actions .btn{flex:1 1 auto}
+input[type=text],textarea,select{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:10px;
+  background:var(--surface-2);color:var(--ink);font:inherit;font-size:1rem;min-height:46px}
+textarea{min-height:76px;resize:vertical;line-height:1.5}
+.field{margin-top:14px}.field label{display:block;font-weight:600;font-size:.9rem;margin-bottom:6px}
+.field .hint{display:block;font-size:.8rem;color:var(--muted);margin-top:5px;line-height:1.4}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chip{padding:9px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-size:.88rem;font-weight:600;min-height:40px}
+.chip.on{background:var(--plum);color:var(--on-plum);border-color:var(--plum)}
+.note{margin-top:12px;padding:12px 14px;border-radius:10px;font-size:.86rem;line-height:1.5;background:var(--apricot-soft);border-left:3px solid var(--apricot)}
+.note strong{display:block;font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--apricot);margin-bottom:3px}
+.note.calm{background:var(--plum-soft);border-left-color:var(--plum)}.note.calm strong{color:var(--plum-ink)}
+/* story */
+.story{font-family:var(--display);font-size:1.22rem;line-height:1.62;color:var(--ink);margin-top:10px}
+.story p{margin-bottom:1em}
+.story p.now{background:var(--rose-soft);border-radius:6px;padding:0 4px;margin-left:-4px;margin-right:-4px}
+.story-title{font-family:var(--display);font-style:italic;font-size:1.5rem;line-height:1.25;margin-top:6px}
+.player{display:flex;align-items:center;gap:10px;margin-top:14px;padding:10px 12px;border-radius:14px;background:var(--surface-2)}
+.player .pp{width:54px;height:54px;border-radius:50%;background:var(--plum);color:var(--on-plum);display:inline-flex;align-items:center;justify-content:center;flex:none}
+.player .pp svg{width:22px;height:22px;fill:currentColor}
+.player .meta{flex:1;min-width:0}
+.player .meta .t{font-weight:700;font-size:.9rem}
+.player .meta .s{font-size:.78rem;color:var(--muted)}
+.player select{width:auto;min-height:38px;padding:6px 8px;font-size:.8rem;border-radius:8px}
+.step{margin-top:14px;padding:14px;border-radius:12px;background:var(--pos-soft);display:flex;gap:12px;align-items:flex-start}
+.step input{width:22px;height:22px;margin-top:2px;flex:none;accent-color:var(--pos)}
+.step .k{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--pos);font-weight:700}
+.step .v{font-weight:600;margin-top:2px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line-soft)}
+.row:last-child{border-bottom:0}
+.row .l{min-width:0}.row .l .t{font-family:var(--display);font-size:1.05rem;line-height:1.3}
+.row .l .s{font-size:.78rem;color:var(--muted)}
+.row .r{display:flex;gap:4px;flex:none}
+.row .r button{padding:8px;min-width:40px;min-height:40px;border-radius:10px;color:var(--muted)}
+.row .r button.on{color:var(--rose)}
+.empty{padding:24px 0;text-align:center;color:var(--muted)}
+.streak{display:flex;gap:6px;margin-top:10px}
+.streak i{flex:1;height:8px;border-radius:99px;background:var(--line-soft)}
+.streak i.on{background:var(--pos)}
+.pill{display:inline-block;padding:3px 10px;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.04em}
+.pill.ai{background:var(--rose-soft);color:var(--rose)}.pill.free{background:var(--plum-soft);color:var(--plum-ink)}
+/* onboarding */
+.hero{padding:26px 0 6px}
+.hero h1{font-size:clamp(2rem,8vw,2.7rem);line-height:1.1}
+.hero h1 em{font-style:italic;color:var(--rose)}
+.hero p{margin-top:12px;color:var(--muted);font-size:1.02rem;max-width:32rem}
+.steps{counter-reset:s;margin-top:14px}
+.steps .card{position:relative}
+/* tabs */
+.tabs{position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);padding:6px 0 calc(6px + env(safe-area-inset-bottom));z-index:30}
+.tabs .inner{max-width:560px;margin:0 auto;display:flex}
+.tabs button{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 2px;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-height:52px}
+.tabs button.on{color:var(--rose)}
+.tabs svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.toast{position:fixed;left:50%;bottom:calc(86px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:9px 14px;border-radius:999px;font-size:.86rem;opacity:0;pointer-events:none;transition:opacity .2s;z-index:50;max-width:90vw;text-align:center}
+.toast.on{opacity:1}
+details{margin-top:10px;border-top:1px solid var(--line-soft)}
+details summary{cursor:pointer;padding:12px 0;font-weight:600;font-size:.9rem;list-style:none;display:flex;justify-content:space-between}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";color:var(--muted)}details[open] summary::after{content:"−"}
+details .b{padding:0 0 12px;font-size:.88rem;color:var(--muted)}details .b p{margin-bottom:9px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><div class="brand">Rehearsal</div><div class="date" id="topDate"></div></div>
+
+  <!-- ============ ONBOARDING ============ -->
+  <section class="view on" id="v-start">
+    <div class="hero">
+      <p class="eyebrow">A two-minute daily practice</p>
+      <h1>Hear the day it has <em>already happened.</em></h1>
+      <p>Write down one thing you want. Rehearsal turns it into a two-minute story of the day it came true — first person, present tense, read aloud — and then asks for one step you can take today. A focus tool, not a promise. Nothing you type leaves your phone.</p>
+    </div>
+    <div class="card">
+      <div class="field"><label for="o_name">What should the story call you?</label><input type="text" id="o_name" placeholder="Your first name" autocomplete="given-name"></div>
+      <div class="field"><label for="o_wish">The one thing. Be specific.</label>
+        <textarea id="o_wish" placeholder="e.g. I have a Singapore job offer at S$6,000 a month that I said yes to"></textarea>
+        <span class="hint">Write it as a fact that has happened, not a hope. "I have…", "I am…", "We live…".</span></div>
+      <div class="field"><label>When does the story take place?</label>
+        <div class="chips" id="o_when">
+          <button class="chip" data-v="three months from now">3 months</button>
+          <button class="chip on" data-v="six months from now">6 months</button>
+          <button class="chip" data-v="a year from now">1 year</button>
+          <button class="chip" data-v="three years from now">3 years</button>
+        </div></div>
+      <div class="field"><label for="o_why">Why does it matter to you?</label>
+        <textarea id="o_why" placeholder="e.g. my parents stop worrying, and I can pay off the car"></textarea></div>
+      <div class="field"><label>Where does the day happen?</label>
+        <div class="chips" id="o_setting">
+          <button class="chip on" data-v="kitchen">My kitchen</button>
+          <button class="chip" data-v="train">On the train</button>
+          <button class="chip" data-v="office">At work</button>
+          <button class="chip" data-v="cafe">A café</button>
+          <button class="chip" data-v="sea">By the sea</button>
+          <button class="chip" data-v="home">Our living room</button>
+        </div></div>
+      <div class="field"><label>Who notices?</label>
+        <div class="chips" id="o_witness">
+          <button class="chip on" data-v="my mother">My mother</button>
+          <button class="chip" data-v="my partner">My partner</button>
+          <button class="chip" data-v="an old friend">An old friend</button>
+          <button class="chip" data-v="a colleague">A colleague</button>
+          <button class="chip" data-v="a stranger">A stranger</button>
+        </div></div>
+      <div class="field"><label for="o_step">The first real step. Small enough to do today.</label>
+        <input type="text" id="o_step" placeholder="e.g. update my LinkedIn headline">
+        <span class="hint">This is the part that does the work. Research on mental contrasting and implementation intentions (Gabriele Oettingen, Peter Gollwitzer) found that pairing a vivid picture of the outcome with a concrete if-then plan is what moves people — the picture alone does not.</span></div>
+      <div class="actions"><button class="btn" id="o_go">Write today's rehearsal</button></div>
+    </div>
+  </section>
+
+  <!-- ============ TODAY ============ -->
+  <section class="view" id="v-today">
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
+        <p class="eyebrow">Today's rehearsal</p><span id="srcPill" class="pill free">written on device</span>
+      </div>
+      <p class="story-title" id="sTitle">—</p>
+      <div class="player">
+        <button class="pp" id="pp" aria-label="Play">
+          <svg id="icoPlay" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="icoPause" viewBox="0 0 24 24" hidden><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+        </button>
+        <div class="meta"><div class="t" id="pT">Listen</div><div class="s" id="pS">read aloud by your phone</div></div>
+      </div>
+      <div class="story" id="sBody"></div>
+      <div class="step"><input type="checkbox" id="stepDone"><div><div class="k">The step for today</div><div class="v" id="stepText">—</div></div></div>
+      <div class="actions">
+        <button class="btn soft" id="another">Another version</button>
+        <button class="btn ghost" id="fav">♡ Keep</button>
+        <button class="btn rose" id="aiBtn">Write it with AI</button>
+      </div>
+      <div id="aiNote" class="note calm" hidden></div>
+    </div>
+    <div class="card">
+      <p class="eyebrow">The step, seven days</p>
+      <div class="streak" id="streak"></div>
+      <p class="small muted" style="margin-top:8px" id="streakCap"></p>
+    </div>
+  </section>
+
+  <!-- ============ LIBRARY ============ -->
+  <section class="view" id="v-library">
+    <div class="card"><h2>Kept</h2><div id="favList"></div></div>
+    <div class="card"><h2>Every rehearsal</h2><div id="allList"></div></div>
+  </section>
+
+  <!-- ============ ME ============ -->
+  <section class="view" id="v-me">
+    <div class="card">
+      <h2>What you are rehearsing</h2>
+      <div class="field"><label for="m_wish">The one thing</label><textarea id="m_wish"></textarea></div>
+      <div class="field"><label for="m_why">Why it matters</label><textarea id="m_why"></textarea></div>
+      <div class="field"><label for="m_step">Today's step</label><input type="text" id="m_step"></div>
+      <div class="field"><label for="m_name">Name</label><input type="text" id="m_name"></div>
+      <div class="actions"><button class="btn" id="m_save">Save</button><button class="btn ghost" id="m_restart">Start a new rehearsal</button></div>
+    </div>
+    <div class="card">
+      <h2>AI-written rehearsals</h2>
+      <p class="small muted" style="margin-top:4px">The free stories are assembled on your phone from what you wrote. AI-written ones are composed fresh each day from your exact words by Claude, through a small server that keeps no copy. They need an unlock code.</p>
+      <div class="field"><label for="code">Unlock code</label><input type="text" id="code" placeholder="paste it here" autocapitalize="characters" autocomplete="off"></div>
+      <div class="actions"><button class="btn" id="codeSave">Unlock</button><a class="btn ghost" id="buyLink" href="#" hidden>Get a code</a></div>
+      <p class="small muted" id="codeState" style="margin-top:8px"></p>
+    </div>
+    <div class="card">
+      <h2>Voice</h2>
+      <div class="field"><label for="voice">Voice</label><select id="voice" aria-label="Voice"></select></div>
+      <div class="field"><label for="rate">Reading pace</label>
+        <div class="chips" id="rateChips"><button class="chip" data-v="0.85">Slow</button><button class="chip on" data-v="0.95">Natural</button><button class="chip" data-v="1.1">Brisk</button></div>
+        <span class="hint">The voice is your phone's own. On iPhone, Settings → Accessibility → Spoken Content → Voices lets you download a better one.</span></div>
+    </div>
+    <div class="card">
+      <h2>Your data</h2>
+      <div class="actions"><button class="btn ghost" id="exportBtn">Export</button><button class="btn ghost" id="importBtn">Import</button><input type="file" id="importFile" accept="application/json" hidden></div>
+      <div class="actions"><button class="btn ghost" id="wipe" style="color:var(--rose)">Delete everything on this phone</button></div>
+    </div>
+    <div class="card">
+      <h2>What this is, and isn't</h2>
+      <details open><summary>A focus tool, not a promise</summary><div class="b">
+        <p>Rehearsal does not claim that picturing something makes it arrive. It gives you a vivid, first-person picture of the outcome and then asks for one concrete step — because that pairing is what the research on mental contrasting and implementation intentions found to be useful, and the picture on its own was not.</p>
+        <p>It is not therapy, not medical or financial advice, and not a substitute for either. If what you are working toward involves money, health or another person, the step matters more than the story.</p>
+      </div></details>
+      <details><summary>Privacy</summary><div class="b">
+        <p>Everything you type stays in this browser on this phone. The free stories are assembled on the device. If you unlock AI-written stories, your wish, why, step and first name are sent to a small server that forwards them to Claude and returns the story; the server keeps no copy and there is no account.</p>
+      </div></details>
+      <p class="small muted" style="margin-top:10px"><a href="../">Clarity</a> · <a href="../guides/">Guides</a></p>
+    </div>
+  </section>
+</div>
+
+<nav class="tabs" aria-label="Sections"><div class="inner">
+  <button data-view="today" class="on"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Today</button>
+  <button data-view="library"><svg viewBox="0 0 24 24"><path d="M4 5h5a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-5a3 3 0 0 0-3 3v11a2 2 0 0 1 2-2h6z"/></svg>Library</button>
+  <button data-view="me"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Me</button>
+</div></nav>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="../config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

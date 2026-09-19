@@ -72,6 +72,13 @@ window.STORE = {
       price: "$5+",
       link: "https://sjsjsj.bandcamp.com/album/sj",
     },
+    // Rehearsal — free on-device tier; the unlock code sells the AI-written tier.
+    // writer = the deployed Cloudflare Worker URL (worker/rehearsal/); SET-ME hides the AI button.
+    rehearsal: {
+      price: "SET-ME",
+      link: "SET-ME",
+      writer: "SET-ME",
+    },
     book: {
       price: "$4.99",
       link: "https://www.amazon.com/dp/B0HCKYM617",

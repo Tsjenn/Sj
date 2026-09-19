@@ -1,0 +1,16 @@
+{
+  "name": "Rehearsal — hear the day it has already happened",
+  "short_name": "Rehearsal",
+  "description": "A three-minute daily rehearsal of the life you are working toward, read aloud, and one concrete step. Everything stays on your phone.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F7F2EE",
+  "theme_color": "#3B2A3E",
+  "categories": ["lifestyle", "health", "productivity"],
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
