@@ -1,0 +1,16 @@
+{
+  "name": "Ember — a dragon that grows when you focus",
+  "short_name": "Ember",
+  "description": "A focus timer with a dragon. Stay with the session and it is fed; leave and the ember fades. Free, offline, nothing leaves your phone.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#120C14",
+  "theme_color": "#120C14",
+  "categories": ["productivity", "lifestyle", "games"],
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
