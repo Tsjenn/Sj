@@ -87,6 +87,20 @@ pages, old posts, or your own recollection:
   of the last 10; honest.
 - Prices are the human's decision. Never change them.
 
+## How sessions are run (cost and judgement)
+
+- Main session runs on Sonnet with Opus as advisor (`.claude/settings.json`).
+  **Consult the advisor before locking a plan, after the same error
+  twice, and before calling a task done.** Routine turns do not need it.
+- Three read-only Haiku subagents live in `.claude/agents/`: `search`
+  (maps the repo), `grep` (finds call sites), `docs` (pulls the exact
+  API reference). Delegate exploration to them instead of reading the
+  repo yourself; they never edit. Opus or Fable is for the work that
+  needs it, not for finding files.
+- Switch the main model up (`/model opus` or `/model fable`) only for
+  work where every turn needs the strongest model — long book drafting
+  with sourced figures, or a design pass. Switch back afterwards.
+
 ## Hard-won gotchas (save yourself an hour)
 
 - GitHub Pages deploys ONLY from the default branch above; workflows on
